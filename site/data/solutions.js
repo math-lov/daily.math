@@ -1,7 +1,7 @@
 // 自動生成，請勿手改（來源：data/；重新生成：python tools/make_site_data.py）
 window.SOLUTIONS = {
  "version": 1,
- "_note": "解答資料（人工／AI 編輯，不會被自動管線覆蓋）。id 必須存在於 bank.json。answer 只寫 A-D。steps 由網站按序播放動畫；traps 指向易錯選項；tip 是一句話技巧。",
+ "_note": "解答資料（人工／AI 編輯，不會被自動管線覆蓋）。id 必須存在於 bank.json。answer 只寫 A-D。steps 由網站按序播放動畫；traps 指向易錯選項；tip 是一句話技巧。文字欄位可用 $...$ 寫行內數學（網站會用 KaTeX 渲染）。",
  "solutions": {
   "2025-p2-q01": {
    "answer": "C",
@@ -14,8 +14,8 @@ window.SOLUTIONS = {
        "zh": "第 1 步 · 統一度數"
       },
       "math": "(27x)^{5} = (3^{3}x)^{5} = 3^{15}x^{5}",
-      "en": "27 = 3^3, so the numerator becomes 3^15 x^5.",
-      "zh": "27 = 3³，所以分子化為 3¹⁵x⁵。",
+      "en": "$27=3^{3}$, so the numerator becomes $3^{15}x^{5}$.",
+      "zh": "$27=3^{3}$，所以分子化為 $3^{15}x^{5}$。",
       "highlight": [
        "27 = 3^{3}",
        "3^{15}x^{5}"
@@ -27,8 +27,8 @@ window.SOLUTIONS = {
        "zh": "第 2 步 · 展開分母"
       },
       "math": "(3x^{-2})^{4} = 3^{4}x^{-8}",
-      "en": "Raise every factor inside the bracket to the 4th power — including the 3.",
-      "zh": "括號內每個因式都要 4 次方——包括那個 3。",
+      "en": "Raise every factor inside the bracket to the 4th power — including the $3$.",
+      "zh": "括號內每個因式都要 4 次方——包括那個 $3$。",
       "highlight": [
        "3^{4}",
        "x^{-8}"
@@ -40,8 +40,8 @@ window.SOLUTIONS = {
        "zh": "第 3 步 · 相除（指數相減）"
       },
       "math": "\\frac{3^{15}x^{5}}{3^{4}x^{-8}} = 3^{15-4}x^{5-(-8)} = 3^{11}x^{13}",
-      "en": "Subtracting a negative index means adding: 5 − (−8) = 13.",
-      "zh": "減負指數等於加：5 − (−8) = 13。",
+      "en": "Subtracting a negative index means adding: $5-(-8)=13$.",
+      "zh": "減負指數等於加：$5-(-8)=13$。",
       "highlight": [
        "3^{11}x^{13}"
       ]
@@ -62,23 +62,23 @@ window.SOLUTIONS = {
     "traps": [
      {
       "opt": "D",
-      "en": "3^14 x^13 — you forgot to raise the 3 in the denominator to the 4th power (used 3^1 instead of 3^4), giving 15 − 1 = 14.",
-      "zh": "3¹⁴x¹³ —— 忘記把分母的 3 一併 4 次方（把 3⁴ 當成 3¹），於是 15 − 1 = 14。"
+      "en": "$3^{14}x^{13}$ — you forgot to raise the $3$ in the denominator to the 4th power (used $3^{1}$ instead of $3^{4}$), giving $15-1=14$.",
+      "zh": "$3^{14}x^{13}$ —— 忘記把分母的 $3$ 一併 4 次方（把 $3^{4}$ 當成 $3^{1}$），於是 $15-1=14$。"
      },
      {
       "opt": "A",
-      "en": "3^2 x^3 — dividing the bases (27 ÷ 3 = 9) instead of subtracting indices.",
-      "zh": "3²x³ —— 直接相除底數（27 ÷ 3 = 9），而不是指數相減。"
+      "en": "$3^{2}x^{3}$ — dividing the bases ($27\\div3=9=3^{2}$) instead of subtracting the indices.",
+      "zh": "$3^{2}x^{3}$ —— 直接相除底數（$27\\div3=9=3^{2}$），而不是指數相減。"
      },
      {
       "opt": "B",
-      "en": "3^4 x^3 — only the indices of x were handled correctly by accident; the base 3 was treated as 3^4.",
-      "zh": "3⁴x³ —— x 的指數碰巧對了，但把 3 的指數誤當成 4。"
+      "en": "$3^{4}x^{3}$ — the index of $x$ came out right by accident, but the base $3$ was left as $3^{4}$.",
+      "zh": "$3^{4}x^{3}$ —— $x$ 的指數碰巧對了，但 $3$ 的指數誤當成 $4$。"
      }
     ],
     "tip": {
-     "en": "In a division of powers: same base → subtract indices; negative index in the denominator → add.",
-     "zh": "同底數相除 → 指數相減；分母是負指數 → 變相加。"
+     "en": "$a^{m}\\div a^{n}=a^{m-n}$; a negative index below the line becomes positive when it moves up.",
+     "zh": "$a^{m}\\div a^{n}=a^{m-n}$；分母的負指數搬到分子就變正。"
     }
    }
   },
@@ -96,7 +96,7 @@ window.SOLUTIONS = {
       "en": "Bring the right-hand side over so the equation is in standard form.",
       "zh": "把右邊移過來，寫成標準形式。",
       "highlight": [
-       "(k^{2} - 2k - 3)"
+       "-(k^{2}-2k-3)"
       ]
      },
      {
@@ -105,8 +105,8 @@ window.SOLUTIONS = {
        "zh": "第 2 步 · 兩邊配方"
       },
       "math": "x^{2}+4x+4 = k^{2}-2k+1 \\;\\Rightarrow\\; (x+2)^{2} = (k-1)^{2}",
-      "en": "Add 4 to both sides: the left becomes (x+2)^2; the right is a perfect square in k.",
-      "zh": "兩邊加 4：左邊成 (x+2)²，右邊正好是關於 k 的完全平方。",
+      "en": "Add $4$ to both sides: the left becomes $(x+2)^{2}$, and the right is a perfect square in $k$.",
+      "zh": "兩邊加 $4$：左邊成 $(x+2)^{2}$，右邊正好是關於 $k$ 的完全平方。",
       "highlight": [
        "(x+2)^{2} = (k-1)^{2}"
       ]
@@ -117,7 +117,7 @@ window.SOLUTIONS = {
        "zh": "第 3 步 · 開方（正負都要）"
       },
       "math": "x+2 = \\pm(k-1)",
-      "en": "Do not drop the negative root — that is where most marks are lost.",
+      "en": "Do not drop the negative root — that is where most of the marks are lost.",
       "zh": "千萬不要漏掉負根——這是最常見的失分位。",
       "highlight": [
        "\\pm"
@@ -129,8 +129,8 @@ window.SOLUTIONS = {
        "zh": "第 4 步 · 分兩個情況解"
       },
       "math": "x = k-3 \\quad \\text{or} \\quad x = -k-1",
-      "en": "Case +: x = k − 1 − 2 = k − 3. Case −: x = −(k − 1) − 2 = −k − 1.",
-      "zh": "取正：x = k − 1 − 2 = k − 3；取負：x = −(k − 1) − 2 = −k − 1。",
+      "en": "Positive case: $x=k-1-2=k-3$. Negative case: $x=-(k-1)-2=-k-1$.",
+      "zh": "取正：$x=k-1-2=k-3$；取負：$x=-(k-1)-2=-k-1$。",
       "highlight": [
        "x = k-3",
        "x = -k-1"
@@ -152,23 +152,23 @@ window.SOLUTIONS = {
     "traps": [
      {
       "opt": "B",
-      "en": "x = −k + 1 — the sign of the constant was flipped when expanding −(k − 1).",
-      "zh": "x = −k + 1 —— 展開 −(k − 1) 時符號寫反。"
+      "en": "$x=-k+1$ — the sign of the constant was flipped when expanding $-(k-1)$.",
+      "zh": "$x=-k+1$ —— 展開 $-(k-1)$ 時符號寫反。"
      },
      {
       "opt": "C",
-      "en": "x = k + 3 — a sign slip on the −2 after taking the positive root.",
-      "zh": "x = k + 3 —— 取正根後 −2 的符號出錯。"
+      "en": "$x=k+3$ — a sign slip on the $-2$ after taking the positive root.",
+      "zh": "$x=k+3$ —— 取正根後 $-2$ 的符號出錯。"
      },
      {
       "opt": "D",
-      "en": "x = k + 3 or x = −k + 1 — both sign errors at once.",
-      "zh": "x = k + 3 或 x = −k + 1 —— 兩個符號錯誤同時出現。"
+      "en": "$x=k+3$ or $x=-k+1$ — both sign errors at once.",
+      "zh": "$x=k+3$ 或 $x=-k+1$ —— 兩個符號錯誤同時出現。"
      }
     ],
     "tip": {
-     "en": "x² + bx = (something)² is solved fastest by completing the square — and always keep ±.",
-     "zh": "見到 x² + bx =（某式）²，配方最快——而且一定要保留 ±。"
+     "en": "$x^{2}+bx=(\\text{something})^{2}$ is solved fastest by completing the square — and always keep $\\pm$.",
+     "zh": "見到 $x^{2}+bx=(\\text{某式})^{2}$，配方最快——而且一定要保留 $\\pm$。"
     }
    }
   },
@@ -179,24 +179,24 @@ window.SOLUTIONS = {
     "steps": [
      {
       "title": {
-       "en": "Step 1 · Substitute x = 4",
-       "zh": "第 1 步 · 代入 x = 4"
+       "en": "Step 1 · Substitute $x=4$",
+       "zh": "第 1 步 · 代入 $x=4$"
       },
       "math": "f(4) = 4^{2} + 7(4) + k = 44 + k",
-      "en": "16 + 28 = 44.",
-      "zh": "16 + 28 = 44。",
+      "en": "$16+28=44$.",
+      "zh": "$16+28=44$。",
       "highlight": [
        "44 + k"
       ]
      },
      {
       "title": {
-       "en": "Step 2 · Substitute x = −4",
-       "zh": "第 2 步 · 代入 x = −4"
+       "en": "Step 2 · Substitute $x=-4$",
+       "zh": "第 2 步 · 代入 $x=-4$"
       },
       "math": "f(-4) = (-4)^{2} + 7(-4) + k = -12 + k",
-      "en": "The (−4)² is +16, and 7(−4) = −28.",
-      "zh": "(−4)² 是 +16，而 7(−4) = −28。",
+      "en": "$(-4)^{2}=+16$, and $7(-4)=-28$.",
+      "zh": "$(-4)^{2}=+16$，而 $7(-4)=-28$。",
       "highlight": [
        "-12 + k"
       ]
@@ -207,8 +207,8 @@ window.SOLUTIONS = {
        "zh": "第 3 步 · 相加求解"
       },
       "math": "(44+k) + (-12+k) = 38 \\;\\Rightarrow\\; 2k + 32 = 38",
-      "en": "The two k terms combine to 2k.",
-      "zh": "兩個 k 合併成 2k。",
+      "en": "The two $k$ terms combine to $2k$.",
+      "zh": "兩個 $k$ 合併成 $2k$。",
       "highlight": [
        "2k + 32 = 38"
       ]
@@ -229,23 +229,23 @@ window.SOLUTIONS = {
     "traps": [
      {
       "opt": "D",
-      "en": "6 — you forgot the two k's give 2k and solved k + 32 = 38.",
-      "zh": "6 —— 忘記兩個 k 相加是 2k，直接當成 k + 32 = 38。"
+      "en": "$6$ — you forgot the two $k$'s add up to $2k$ and solved $k+32=38$.",
+      "zh": "$6$ —— 忘記兩個 $k$ 相加是 $2k$，直接當成 $k+32=38$。"
      },
      {
       "opt": "B",
-      "en": "−3 — 32 was subtracted from the wrong side (32 − 38 = −6).",
-      "zh": "−3 —— 32 減錯方向（32 − 38 = −6）。"
+      "en": "$-3$ — $32$ was subtracted from the wrong side ($32-38=-6$).",
+      "zh": "$-3$ —— $32$ 減錯方向（$32-38=-6$）。"
      },
      {
       "opt": "A",
-      "en": "−6 — sign error on the constant term as well as the 2k slip.",
-      "zh": "−6 —— 常數項符號與 2k 兩處同時出錯。"
+      "en": "$-6$ — a sign error on the constant term on top of the $2k$ slip.",
+      "zh": "$-6$ —— 常數項符號與 $2k$ 兩處同時出錯。"
      }
     ],
     "tip": {
-     "en": "For f(a) + f(−a) with an even power and a linear term, the linear parts almost cancel — compute each side carefully first.",
-     "zh": "遇到 f(a) + f(−a)（含偶次方與一次項），一次項通常會部分抵消——先老實算兩邊。"
+     "en": "For $f(a)+f(-a)$ with an even power and a linear term, the linear parts partly cancel — substitute carefully first, simplify second.",
+     "zh": "遇到 $f(a)+f(-a)$（含偶次方與一次項），一次項通常會部分抵消——先老實代入，再化簡。"
     }
    }
   },
@@ -260,8 +260,8 @@ window.SOLUTIONS = {
        "zh": "第 1 步 · 讀出柱狀圖數據"
       },
       "math": "3\\to4,\\; 4\\to8,\\; 5\\to6,\\; 6\\to2,\\; 7\\to2",
-      "en": "Books read (value) : number of teachers (frequency). Total = 4+8+6+2+2 = 22 teachers.",
-      "zh": "閱讀本數（值）：教師人數（頻數）。合共 4+8+6+2+2 = 22 位教師。",
+      "en": "Books read (value) : number of teachers (frequency). Total $=4+8+6+2+2=22$ teachers.",
+      "zh": "閱讀本數（值）：教師人數（頻數）。合共 $4+8+6+2+2=22$ 位教師。",
       "highlight": [
        "22"
       ]
@@ -271,9 +271,9 @@ window.SOLUTIONS = {
        "en": "Step 2 · Locate the quartiles by position",
        "zh": "第 2 步 · 用位置定位四分位數"
       },
-      "math": "Q_{1}: \\frac{n+1}{4} = \\frac{23}{4} = 5.75;\\quad Q_{3}: \\frac{3(n+1)}{4} = \\frac{69}{4} = 17.25",
-      "en": "Cumulative counts: 3's occupy positions 1–4, 4's occupy 5–12, 5's occupy 13–18, 6's 19–20, 7's 21–22.",
-      "zh": "累積計數：3 佔第 1–4 位、4 佔第 5–12 位、5 佔第 13–18 位、6 佔 19–20 位、7 佔 21–22 位。",
+      "math": "Q_{1}:\\frac{n+1}{4}=\\frac{23}{4}=5.75;\\quad Q_{3}:\\frac{3(n+1)}{4}=\\frac{69}{4}=17.25",
+      "en": "Cumulative counts: the 3's occupy positions 1–4, the 4's 5–12, the 5's 13–18, the 6's 19–20 and the 7's 21–22.",
+      "zh": "累積計數：$3$ 佔第 1–4 位、$4$ 佔第 5–12 位、$5$ 佔第 13–18 位、$6$ 佔 19–20 位、$7$ 佔 21–22 位。",
       "highlight": [
        "5.75",
        "17.25"
@@ -281,15 +281,15 @@ window.SOLUTIONS = {
      },
      {
       "title": {
-       "en": "Step 3 · Evaluate Q1 and Q3",
-       "zh": "第 3 步 · 求 Q₁ 與 Q₃"
+       "en": "Step 3 · Evaluate Q₁ and Q₃",
+       "zh": "第 3 步 · 求 $Q_{1}$ 與 $Q_{3}$"
       },
-      "math": "Q_{1} = 4 \\;\\text{(positions 5,6 both 4)};\\quad Q_{3} = 5 \\;\\text{(positions 17,18 both in the 5's)}",
+      "math": "Q_{1}=4 \\;\\text{(positions 5,6 both 4)};\\quad Q_{3}=5 \\;\\text{(positions 17,18 both 5)}",
       "en": "Both surrounding positions fall in the same block, so no interpolation is needed.",
       "zh": "前後兩個位置都落在同一組，所以無需插值。",
       "highlight": [
-       "Q_{1} = 4",
-       "Q_{3} = 5"
+       "Q_{1}=4",
+       "Q_{3}=5"
       ]
      },
      {
@@ -308,23 +308,23 @@ window.SOLUTIONS = {
     "traps": [
      {
       "opt": "D",
-      "en": "4 — that is the RANGE (7 − 3 = 4), not the inter-quartile range.",
-      "zh": "4 —— 那是全距（7 − 3 = 4），不是四分位距。"
+      "en": "$4$ — that is the RANGE ($7-3=4$), not the inter-quartile range.",
+      "zh": "$4$ —— 那是全距（$7-3=4$），不是四分位距。"
      },
      {
       "opt": "C",
-      "en": "3 — using n/4 = 5.5 and 3n/4 = 16.5 positions (which bracket 4 and 7) instead of the (n+1)/4 convention.",
-      "zh": "3 —— 用了 n/4 = 5.5 與 3n/4 = 16.5 的位置（夾住 4 和 7），而非 (n+1)/4 慣例。"
+      "en": "$3$ — using $n/4=5.5$ and $3n/4=16.5$ as positions (which bracket 4 and 7) instead of the $(n+1)/4$ convention.",
+      "zh": "$3$ —— 用了 $n/4=5.5$ 與 $3n/4=16.5$ 的位置（夾住 $4$ 和 $7$），而非 $(n+1)/4$ 慣例。"
      },
      {
       "opt": "B",
-      "en": "2 — subtracting the number of categories instead of the quartile values.",
-      "zh": "2 —— 用組別數相減而非四分位數值相減。"
+      "en": "$2$ — subtracting the number of categories instead of the quartile values.",
+      "zh": "$2$ —— 用組別數相減而非四分位數值相減。"
      }
     ],
     "tip": {
-     "en": "For a frequency table, always build cumulative counts first — quartiles are positions, never the x-values themselves.",
-     "zh": "頻數表一定要先做累積計數——四分位數是「位置」，不是 x 值本身。"
+     "en": "For a frequency table, build the cumulative counts first — quartiles are positions, never the $x$-values themselves.",
+     "zh": "頻數表一定要先做累積計數——四分位數是「位置」，不是 $x$ 值本身。"
     }
    }
   }

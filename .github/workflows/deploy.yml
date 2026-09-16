@@ -23,8 +23,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Site data & syntax check
-        run: node tools/site_check.js
+      - name: Install tooling
+        run: npm install --no-audit --no-fund
+      - name: Data integrity + LaTeX check
+        run: npm run check
+      - name: Student-flow smoke test
+        run: npm test
 
   deploy:
     needs: verify

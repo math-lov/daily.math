@@ -79,13 +79,7 @@
         });
       } catch (e) {}
     });
-    if (window.renderMathInElement) {
-      qsa("[data-tex-inline]").forEach(function (node) {
-        try {
-          renderMathInElement(node, { delimiters: [{ left: "$", right: "$", display: false }], throwOnError: false, strict: false });
-        } catch (e) {}
-      });
-    }
+    qsa("[data-tex-inline]").forEach(autoRender);
     return true;
   }
   function el(tag, cls, html) {
@@ -93,6 +87,22 @@
     if (cls) d.className = cls;
     if (html != null) d.innerHTML = html;
     return d;
+  }
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+  /* Editorial text may contain inline maths wrapped in $...$ (e.g. "$x=-k+1$").
+     Escape the HTML, keep the $ delimiters for KaTeX auto-render. */
+  function rich(s) { return esc(s); }
+  function autoRender(node) {
+    if (!window.renderMathInElement || !node) return;
+    try {
+      renderMathInElement(node, {
+        delimiters: [{ left: "$", right: "$", display: false }],
+        throwOnError: false, strict: false
+      });
+    } catch (e) {}
   }
   function L(obj) { return obj ? (obj[store.lang] || obj.en || obj.zh || "") : ""; }
 
@@ -147,7 +157,8 @@
 
     // header row
     var top = el("div", "q-top");
-    top.appendChild(el("span", "q-no", "Q" + (idx + 1) + " · " + q.id.replace("2025-p2-", "").toUpperCase()));
+    top.appendChild(el("span", "q-no", "Q" + q.no));                       // the paper's question number
+    top.appendChild(el("span", "chip chip-diff", (idx + 1) + " of 3 today"));
     top.appendChild(el("span", "stars", stars(q.difficulty)));
     top.appendChild(el("span", "chip chip-topic", q.topic.en + (store.lang === "zh" ? " · " + q.topic.zh : "")));
     top.appendChild(el("span", "chip chip-time", Math.round(q.timeSec / 60 * 10) / 10 + " min"));
@@ -294,9 +305,9 @@
     var stepNodes = [];
     s.solution.steps.forEach(function (st) {
       var node = el("div", "step");
-      if (st.title) node.appendChild(el("div", "s-title", L(st.title)));
+      if (st.title) node.appendChild(el("div", "s-title", rich(L(st.title))));
       if (st.math) { var mm = el("div", "s-math"); tex(mm, st.math, true); node.appendChild(mm); }
-      node.appendChild(el("div", "s-note", isZh ? (st.zh || st.en) : (st.en || st.zh)));
+      node.appendChild(el("div", "s-note", rich(isZh ? (st.zh || st.en) : (st.en || st.zh))));
       if (st.highlight && st.highlight.length) {
         var hs = el("div", "s-hi");
         st.highlight.forEach(function (h) {
@@ -316,7 +327,7 @@
       tr.appendChild(el("h4", null, isZh ? "常見錯誤" : "Common mistakes"));
       var ul = document.createElement("ul");
       s.solution.traps.forEach(function (t) {
-        ul.appendChild(el("li", null, "<b>" + t.opt + "</b> · " + (isZh ? (t.zh || t.en) : (t.en || t.zh))));
+        ul.appendChild(el("li", null, "<b>" + t.opt + "</b> · " + rich(isZh ? (t.zh || t.en) : (t.en || t.zh))));
       });
       tr.appendChild(ul);
       host.appendChild(tr);
@@ -324,12 +335,13 @@
     if (s.solution.tip) {
       var tp = el("div", "callout tip");
       tp.appendChild(el("h4", null, isZh ? "一句話技巧" : "One-line tip"));
-      tp.appendChild(el("p", null, isZh ? (s.solution.tip.zh || s.solution.tip.en) : (s.solution.tip.en || s.solution.tip.zh)));
+      tp.appendChild(el("p", null, rich(isZh ? (s.solution.tip.zh || s.solution.tip.en) : (s.solution.tip.en || s.solution.tip.zh))));
       host.appendChild(tp);
     }
     host.appendChild(el("div", "answer-line", (isZh ? "答案：" : "Answer: ") + "<b>" + s.answer + "</b>  ·  " + (s.verify === "checked" ? (isZh ? "已核對" : "verified") : (isZh ? "待核對" : "unverified"))));
 
-    host.dataset.steps = "1";
+    if (window.renderMathInElement) autoRender(host);   // inline maths in notes / traps / tip
+    host.setAttribute("data-tex-inline", "1");           // retried by rerenderAll if KaTeX loads late
     var timer = null;
     function stop() { if (timer) { clearTimeout(timer); timer = null; } }
     function showAll() { stop(); stepNodes.forEach(function (n) { n.classList.add("in"); }); }

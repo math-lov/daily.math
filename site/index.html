@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daily 3 · DSE Maths MC</title>
 <meta name="description" content="Three DSE Maths MC questions a day, with animated bilingual solutions.">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<!-- KaTeX is self-hosted (site/vendor/katex) so the maths fonts never depend on a CDN -->
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -75,9 +76,9 @@
   </footer>
 </div>
 
-<!-- KaTeX + auto-render (defer) -->
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<!-- KaTeX + auto-render (self-hosted, defer) -->
+<script defer src="vendor/katex/katex.min.js"></script>
+<script defer src="vendor/katex/auto-render.min.js"></script>
 
 <!-- Version stamp changes hourly: GitHub Pages sends max-age=600 for static files,
      so a same-hour visit may use the cached copy (fast), a later visit always refetches. -->

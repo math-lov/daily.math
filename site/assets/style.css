@@ -179,10 +179,14 @@ body {
 .step .s-math { font-size: 19px; margin: 7px 0; overflow-x: auto; }
 .step .s-note { font-size: 14.5px; color: var(--tx2); }
 .step .s-hi { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
-.step .s-hi span {
+/* NOTE: must be a direct child selector — a plain ".s-hi span" also matches every
+   span KaTeX generates inside the formula, which turned each glyph into a chip. */
+.step .s-hi > span {
   font-size: 12px; padding: 3px 9px; border-radius: 7px;
   background: rgba(245,165,36,.14); color: #8a5a00; border: 1px solid rgba(245,165,36,.30);
+  display: inline-block; line-height: 1.5;
 }
+.step .s-hi > span .katex { font-size: 1em; color: #8a5a00; }
 
 .callout { margin-top: 12px; padding: 13px 14px; border-radius: 13px; }
 .callout h4 { font-size: 13px; font-weight: 700; margin: 0 0 8px; }
