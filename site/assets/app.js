@@ -162,6 +162,7 @@
   function questionCard(q, idx) {
     var card = el("div", "q-card glass");
     card.id = "card-" + q.id;
+    card.dataset.qid = q.id;          // used by the smoke test / debugging
 
     // header row
     var top = el("div", "q-top");

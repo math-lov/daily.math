@@ -91,7 +91,8 @@ ok(/Indices|Algebra|Statistics|Coordinate|Geometry|Mensuration/i.test($("#wrongL
 ok($$("#topicStats .topic-row").length >= 1, "per-topic stats rendered");
 
 console.log("\n— 存檔導航 —");
-ok($$("#archive a").length === 2, "archive lists both batches");
+const nReleases = (ctx.window.RELEASES || {}).releases.length;
+ok($$("#archive a").length === nReleases, `archive lists every batch (${nReleases})`);
 ok(!!$("#archive a.now"), "current batch is highlighted");
 
 console.log("\n— 語言切換 —");
@@ -106,33 +107,47 @@ ok(!hasCJK(after) && !hasCJK(afterTitle), "EN mode shows English-only solution t
 ok(/Step 1/.test(afterTitle), "step titles are localised too (got: " + afterTitle + ")");
 ok(cardsAfter[0].querySelector(".feedback").classList.contains("ok"), "attempt state survives re-render");
 
-console.log("\n— 無解答題目（Batch 2）—");
-const dom2 = new JSDOM(html, { url: "https://example.test/?batch=2", pretendToBeVisual: true, runScripts: "outside-only" });
-const ctx2 = dom2.getInternalVMContext();
-// real KaTeX here: these assertions are about how the maths is laid out inside the wording
-vm.runInContext(fs.readFileSync(path.join(site, "vendor", "katex", "katex.min.js"), "utf8"), ctx2, { filename: "katex.min.js" });
-vm.runInContext(fs.readFileSync(path.join(site, "vendor", "katex", "auto-render.min.js"), "utf8"), ctx2, { filename: "auto-render.min.js" });
-["bank", "solutions", "releases", "app"].forEach((n) => {
-  const p = n === "app" ? path.join(site, "assets", "app.js") : path.join(site, "data", n + ".js");
-  vm.runInContext(fs.readFileSync(p, "utf8"), ctx2, { filename: n + ".js" });
-});
-const doc2 = ctx2.document;
-const $$2 = (s) => Array.prototype.slice.call(doc2.querySelectorAll(s));
-const cards2 = Array.prototype.slice.call(doc2.querySelectorAll(".q-card"));
+/* Helper: boot a jsdom on a given batch with real KaTeX, optionally removing one solution
+ * (so the "solution not released yet" path can be tested no matter what the data holds). */
+function boot(url, stripQid) {
+  const dom = new JSDOM(html, { url, pretendToBeVisual: true, runScripts: "outside-only" });
+  const c = dom.getInternalVMContext();
+  vm.runInContext(fs.readFileSync(path.join(site, "vendor", "katex", "katex.min.js"), "utf8"), c, { filename: "katex.min.js" });
+  vm.runInContext(fs.readFileSync(path.join(site, "vendor", "katex", "auto-render.min.js"), "utf8"), c, { filename: "auto-render.min.js" });
+  ["bank", "solutions"].forEach((n) => {
+    vm.runInContext(fs.readFileSync(path.join(site, "data", n + ".js"), "utf8"), c, { filename: n + ".js" });
+  });
+  if (stripQid && c.window.SOLUTIONS && c.window.SOLUTIONS.solutions) {
+    delete c.window.SOLUTIONS.solutions[stripQid];
+  }
+  ["releases"].forEach((n) => {
+    vm.runInContext(fs.readFileSync(path.join(site, "data", n + ".js"), "utf8"), c, { filename: n + ".js" });
+  });
+  vm.runInContext(fs.readFileSync(path.join(site, "assets", "app.js"), "utf8"), c, { filename: "app.js" });
+  return {
+    ctx: c, doc: dom.window.document,
+    cards: Array.prototype.slice.call(dom.window.document.querySelectorAll(".q-card")),
+    $$: (s) => Array.prototype.slice.call(dom.window.document.querySelectorAll(s)),
+    card: (qid) => Array.prototype.slice.call(dom.window.document.querySelectorAll('.q-card[data-qid="' + qid + '"]'))[0],
+  };
+}
 
-console.log("\n— 題幹排版（batch 2 全部是文字題）—");
-// Note text + figure description should not be repeated: the wording carries the maths inline,
-// and a formula must render as ONE KaTeX run (fragmented runs gave mixed fonts).
-const wording = $$2(".q-card .q-stem-text");
-ok(wording.length === 3, "each card shows the wording block (got " + wording.length + ")");
-ok(wording[0].querySelectorAll(".katex").length === 1,
-  "the whole formula renders as a single KaTeX run (got " + wording[0].querySelectorAll(".katex").length + ")");
-ok(/x2\+4x=k2/.test(wording[0].textContent.replace(/\s/g, "")), "the formula sits inline in the wording");
-ok(cards2.every((c) => !c.querySelector(".q-stem")), "no duplicated display formula above the wording");
-ok($$2(".q-card details.fig-note").length <= 3 && $$2(".q-card details.fig-note[open]").length === 0,
-  "figure description is present but collapsed");
+console.log("\n— 題幹排版（batch 2 全是文字題）—");
+const b2 = boot("https://example.test/?batch=2");
+ok(b2.$$(".q-card .q-stem-text").length === 3, "each card shows the wording block");
+const q5Card = boot("https://example.test/?batch=4").card("2025-p2-q05");
+ok(!!q5Card, "batch 4 shows Q5");
+const q5Tex = q5Card.querySelector(".q-stem-text");
+ok(q5Tex.querySelectorAll(".katex").length === 1,
+  "the whole formula renders as a single KaTeX run (got " + q5Tex.querySelectorAll(".katex").length + ")");
+ok(/x2\+4x=k2/.test(q5Tex.textContent.replace(/\s/g, "")), "the formula sits inline in the wording");
+ok(b2.cards.every((c) => !c.querySelector(".q-stem")), "no duplicated display formula above the wording");
 
-const pendingCard = cards2[1]; // q03 has no solution yet
+console.log("\n— 未發佈解答的題目 —");
+// Strip one solution so this path is always exercised, whatever the current data contains.
+const b2p = boot("https://example.test/?batch=2", "2025-p2-q06");
+const pendingCard = b2p.card("2025-p2-q06");
+ok(!!pendingCard, "found the question whose solution was withheld");
 pendingCard.querySelectorAll(".opt")[0].click();
 const fb = pendingCard.querySelector(".feedback");
 ok(fb.classList.contains("pending"), "question without a solution shows a 'pending' state (not wrong)");

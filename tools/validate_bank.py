@@ -96,8 +96,11 @@ def main() -> int:
                     diffs.add(questions[qid]["difficulty"])
                     if qid not in solved:
                         warnings.append(f"release {r.get('date')}: {qid} 尚無解答")
-            if len(diffs) < 2:
-                warnings.append(f"release {r.get('date')}: 難度單一（建議涵蓋 2 種以上）")
+            # 全部中等可以接受；全部「易」或全部「難」則提醒（學生會覺得太淺或太挫敗）
+            if len(diffs) == 1 and next(iter(diffs)) in (1, 3):
+                warnings.append(
+                    f"release {r.get('date')}: 三題都是難度 {next(iter(diffs))}，建議混合不同難度"
+                )
     else:
         warnings.append("尚無 data/releases.json")
 

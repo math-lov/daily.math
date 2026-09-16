@@ -29,6 +29,11 @@ jobs:
         run: npm run check
       - name: Student-flow smoke test
         run: npm test
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Independently verify the answers (pure stdlib)
+        run: python tools/verify_answers.py
 
   deploy:
     needs: verify

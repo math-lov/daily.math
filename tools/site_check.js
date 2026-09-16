@@ -77,7 +77,11 @@ for (const r of RELEASES) {
     diffs.add(q.difficulty);
     if (!SOLUTIONS[qid]) warn(`release ${r.date}: ${qid} has no solution yet`);
   }
-  if (diffs.size < 2) warn(`release ${r.date}: single difficulty (mixed is recommended)`);
+  // An all-medium day is fine; an all-easy or all-hard day is not (students get either a
+  // trivial set or a demoralising one). Mixed is still preferred.
+  if (diffs.size === 1 && (diffs.has(1) || diffs.has(3))) {
+    warn(`release ${r.date}: every question is difficulty ${[...diffs][0]} — mix them or move some`);
+  }
 }
 
 // 5) 圖片

@@ -103,7 +103,8 @@ def _is_math_token(tok: str, strong_only: bool = False) -> bool:
     core_nb = core.lstrip("\\")
     if STRONG_MARK.search(core) or NUM_STRONG.match(core) or CMP_ONLY.match(core):
         return True
-    if any(ch.isdigit() for ch in core_nb) and any(ch in "+-*/" for ch in core_nb):
+    # "x=5.67"、"2y-3<7" 這類：有數字又有運算符（含等號／不等號）就算數學
+    if any(ch.isdigit() for ch in core_nb) and any(ch in "+-*/=<>" for ch in core_nb):
         return True
     if not strong_only and (NUM_PLAIN.match(core) or SINGLE_LETTER.match(core)):
         return True   # 只有緊貼其他數學 token 時才會被合併

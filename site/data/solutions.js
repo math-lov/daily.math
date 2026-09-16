@@ -82,6 +82,238 @@ window.SOLUTIONS = {
     }
    }
   },
+  "2025-p2-q02": {
+   "answer": "B",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Spot a difference of two squares",
+       "zh": "第 1 步 · 認出平方差"
+      },
+      "math": "36-(3m+4n)^{2} = 6^{2}-(3m+4n)^{2}",
+      "en": "$36=6^{2}$, so this is $a^{2}-b^{2}$ with $a=6$ and $b=3m+4n$.",
+      "zh": "$36=6^{2}$，所以這是 $a^{2}-b^{2}$，其中 $a=6$、$b=3m+4n$。",
+      "highlight": [
+       "6^{2}-(3m+4n)^{2}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Apply the identity",
+       "zh": "第 2 步 · 套用公式"
+      },
+      "math": "a^{2}-b^{2} = (a-b)(a+b)",
+      "en": "The two brackets differ only in the sign in the middle.",
+      "zh": "兩個括號只在「中間的符號」不同。",
+      "highlight": [
+       "(a-b)(a+b)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Remove the brackets carefully",
+       "zh": "第 3 步 · 小心去括號"
+      },
+      "math": "(6-(3m+4n))(6+(3m+4n)) = (6-3m-4n)(6+3m+4n)",
+      "en": "The minus sign applies to BOTH $3m$ and $4n$ inside the bracket.",
+      "zh": "負號要作用於括號內**每一項**：$3m$ 和 $4n$ 都要變號。",
+      "highlight": [
+       "(6-3m-4n)(6+3m+4n)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "(6-3m-4n)(6+3m+4n)",
+      "en": "Option B.",
+      "zh": "選項 B。",
+      "highlight": [
+       "(6-3m-4n)(6+3m+4n)"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "en": "$(6+3m+4n)(6-3m+4n)$ — only $3m$ changed sign; the $-4n$ should also have become $-4n$. Expanding this gives $(6+4n)^{2}-9m^{2}$, not the required expression.",
+      "zh": "$(6+3m+4n)(6-3m+4n)$ —— 只有 $3m$ 變號，$4n$ 忘了變。展開後其實是 $(6+4n)^{2}-9m^{2}$，不是原式。"
+     },
+     {
+      "opt": "C",
+      "en": "$(6+3m-4n)(6-3m+4n)$ — the signs of the wrong pair were flipped (this factorises $(6-4n)^{2} \\cdot \\ldots$ incorrectly).",
+      "zh": "$(6+3m-4n)(6-3m+4n)$ —— 變錯了一項的符號，展開後不符合原式。"
+     },
+     {
+      "opt": "D",
+      "en": "$(6+3m-4n)(6-3m-4n)$ — grouping $(6-4n)\\pm3m$ instead: this expands to $(6-4n)^{2}-9m^{2}$.",
+      "zh": "$(6+3m-4n)(6-3m-4n)$ —— 錯誤地以 $(6-4n)\\pm3m$ 分組，展開是 $(6-4n)^{2}-9m^{2}$。"
+     }
+    ],
+    "tip": {
+     "en": "For $a^{2}-b^{2}$ when $b$ has several terms: the minus bracket must negate every term of $b$.",
+     "zh": "平方差裡 $b$ 是多項式時：減號括號要讓 $b$ 的**每一項**都變號。"
+    }
+   }
+  },
+  "2025-p2-q03": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Expand the left-hand side",
+       "zh": "第 1 步 · 展開左邊"
+      },
+      "math": "(x+8)(x+a)+b = x^{2}+(8+a)x+(8a+b)",
+      "en": "Multiply out the two brackets, then add $b$ to the constant term.",
+      "zh": "先把兩個括號相乘，再把 $b$ 加進常數項。",
+      "highlight": [
+       "x^{2}+(8+a)x+(8a+b)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Compare the x-coefficients",
+       "zh": "第 2 步 · 比較 x 的係數"
+      },
+      "math": "8+a = 5a \\;\\Rightarrow\\; a = 2",
+      "en": "The right-hand side is $x^{2}+5ax+15a$, so the coefficients of $x$ must agree.",
+      "zh": "右邊是 $x^{2}+5ax+15a$，所以 $x$ 的係數要相等。",
+      "highlight": [
+       "a = 2"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Compare the constant terms",
+       "zh": "第 3 步 · 比較常數項"
+      },
+      "math": "8a+b = 15a \\;\\Rightarrow\\; b = 7a = 14",
+      "en": "Substitute $a=2$: $b=7(2)=14$.",
+      "zh": "代入 $a=2$：$b=7(2)=14$。",
+      "highlight": [
+       "b = 7a",
+       "b = 14"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "b = 14",
+      "en": "Option D.",
+      "zh": "選項 D。",
+      "highlight": [
+       "14"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "$2$ — that is the value of $a$. The question asks for $b$, so you must go one step further.",
+      "zh": "$2$ —— 那是 $a$ 的值。題目問的是 $b$，要再走一步。"
+     },
+     {
+      "opt": "B",
+      "en": "$-2$ — $a$ with the sign flipped.",
+      "zh": "$-2$ —— 把 $a$ 的符號弄反。"
+     },
+     {
+      "opt": "A",
+      "en": "$-14$ — a sign slip when moving $8a$ across: $b=15a-8a$ gives $+14$, not $-14$.",
+      "zh": "$-14$ —— 移項時符號出錯：$b=15a-8a$ 得 $+14$，不是 $-14$。"
+     }
+    ],
+    "tip": {
+     "en": "In a polynomial identity, equate the coefficients of each power separately — then re-read which unknown is being asked.",
+     "zh": "多項式恆等式要「同次項係數相等」逐項比較；最後再看清題目問哪個未知數。"
+    }
+   }
+  },
+  "2025-p2-q04": {
+   "answer": "A",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Expand both sides",
+       "zh": "第 1 步 · 展開兩邊"
+      },
+      "math": "3cd-12c+d-4 = 10cd-2d",
+      "en": "$(3c+1)(d-4)=3cd-12c+d-4$ and $2d(5c-1)=10cd-2d$.",
+      "zh": "$(3c+1)(d-4)=3cd-12c+d-4$；$2d(5c-1)=10cd-2d$。",
+      "highlight": [
+       "3cd-12c+d-4 = 10cd-2d"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Collect the c-terms",
+       "zh": "第 2 步 · 把含 c 的項集中"
+      },
+      "math": "3d-4 = c(7d+12)",
+      "en": "Move everything with $c$ to one side: $10cd-3cd+12c = 7cd+12c = c(7d+12)$.",
+      "zh": "把所有含 $c$ 的項移到同一邊：$10cd-3cd+12c=7cd+12c=c(7d+12)$。",
+      "highlight": [
+       "c(7d+12)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Make c the subject",
+       "zh": "第 3 步 · 以 c 為主項"
+      },
+      "math": "c = \\frac{3d-4}{7d+12}",
+      "en": "Divide both sides by $(7d+12)$.",
+      "zh": "兩邊同除以 $(7d+12)$。",
+      "highlight": [
+       "\\frac{3d-4}{7d+12}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "c = \\frac{3d-4}{7d+12}",
+      "en": "Option A.",
+      "zh": "選項 A。",
+      "highlight": [
+       "\\frac{3d-4}{7d+12}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "$\\frac{7d-12}{3d+4}$ — the fraction was inverted (that would be solving for $d$, not $c$).",
+      "zh": "$\\frac{7d-12}{3d+4}$ —— 分子分母倒置（那是在解 $d$ 而不是 $c$）。"
+     },
+     {
+      "opt": "D",
+      "en": "$\\frac{7d+12}{3d-4}$ — inverted as well as sign errors in the numerator and denominator.",
+      "zh": "$\\frac{7d+12}{3d-4}$ —— 除了倒置，分子分母的符號也不對。"
+     },
+     {
+      "opt": "B",
+      "en": "$\\frac{3d+4}{7d-12}$ — sign errors when moving terms across the equals sign ($d-4$ and $-2d$).",
+      "zh": "$\\frac{3d+4}{7d-12}$ —— 移項時符號出錯（$d-4$ 與 $-2d$）。"
+     }
+    ],
+    "tip": {
+     "en": "To change the subject: expand, gather every term containing the wanted letter, factorise it out, then divide.",
+     "zh": "更換主項：展開 → 把含目標字母的項集中 → 抽公因數 → 相除。"
+    }
+   }
+  },
   "2025-p2-q05": {
    "answer": "A",
    "verify": "checked",
@@ -172,6 +404,148 @@ window.SOLUTIONS = {
     }
    }
   },
+  "2025-p2-q06": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · How much can x differ from 5.67?",
+       "zh": "第 1 步 · x 可以偏離 5.67 多少？"
+      },
+      "math": "\\text{max error} = \\tfrac{1}{2}\\times 0.01 = 0.005",
+      "en": "Round to 2 decimal places, so the place value is $0.01$ and the maximum error is half of it, $0.005$.",
+      "zh": "「準確至 2 位小數」的位值是 $0.01$，最大誤差是它的一半：$0.005$。",
+      "highlight": [
+       "0.005"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Build the interval",
+       "zh": "第 2 步 · 寫出區間"
+      },
+      "math": "5.67-0.005 \\le x < 5.67+0.005",
+      "en": "$5.665$ still rounds up to $5.67$, so the lower end is included; $5.675$ would round to $5.68$, so the upper end is excluded.",
+      "zh": "$5.665$ 仍會入到 $5.67$，所以下界取等號；$5.675$ 會進位到 $5.68$，所以上界不取。",
+      "highlight": [
+       "5.665 \\le x < 5.675"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "5.665 \\le x < 5.675",
+      "en": "Option D.",
+      "zh": "選項 D。",
+      "highlight": [
+       "5.665 \\le x < 5.675"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "en": "$5.66 \\le x < 5.68$ — used the whole place value $0.01$ instead of half of it.",
+      "zh": "$5.66 \\le x < 5.68$ —— 用了整整一個位值 $0.01$，而不是它的一半。"
+     },
+     {
+      "opt": "A",
+      "en": "$5.66 < x \\le 5.68$ — same size error, and the two inequality signs are also the wrong way round.",
+      "zh": "$5.66 < x \\le 5.68$ —— 誤差大小錯了，兩個不等號也放反。"
+     },
+     {
+      "opt": "C",
+      "en": "$5.665 < x \\le 5.675$ — correct half-unit, but the ends are the wrong way round: $5.665$ must be included and $5.675$ excluded.",
+      "zh": "$5.665 < x \\le 5.675$ —— 半個單位對了，但兩端放反：應該包含 $5.665$、排除 $5.675$。"
+     }
+    ],
+    "tip": {
+     "en": "Range of values = the rounded value $\\pm$ half of one unit of the last significant place; lower bound inclusive, upper bound exclusive.",
+     "zh": "取值範圍 = 近似值 $\\pm$ 最後一個位值的一半；下界取等號、上界不取。"
+    }
+   }
+  },
+  "2025-p2-q07": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Solve the left inequality",
+       "zh": "第 1 步 · 解左邊的不等式"
+      },
+      "math": "4y+1 < 5y-3 \\;\\Rightarrow\\; 4 < y",
+      "en": "Move $4y$ to the right and $-3$ to the left: $1+3 < 5y-4y$.",
+      "zh": "把 $4y$ 移到右邊、$-3$ 移到左邊：$1+3 < 5y-4y$。",
+      "highlight": [
+       "y > 4"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Solve the right inequality",
+       "zh": "第 2 步 · 解右邊的不等式"
+      },
+      "math": "5y-3 \\le 8y-9 \\;\\Rightarrow\\; 6 \\le 3y \\;\\Rightarrow\\; y \\ge 2",
+      "en": "This part allows $y=4$, so it uses $\\le$.",
+      "zh": "這一段容許 $y=4$，所以用 $\\le$。",
+      "highlight": [
+       "y \\ge 2"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Intersect the two conditions",
+       "zh": "第 3 步 · 取交集"
+      },
+      "math": "y > 4 \\;\\text{and}\\; y \\ge 2 \\;\\Rightarrow\\; y > 4",
+      "en": "The stricter condition wins: every $y>4$ satisfies both.",
+      "zh": "取較嚴的一段：所有 $y>4$ 都同時滿足兩式。",
+      "highlight": [
+       "y > 4"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "y > 4",
+      "en": "Option D.",
+      "zh": "選項 D。",
+      "highlight": [
+       "y > 4"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "$y \\ge 2$ — only the second inequality was solved; the two conditions must hold at the same time, so the intersection is $y>4$.",
+      "zh": "$y \\ge 2$ —— 只解了第二段。兩段要**同時**成立，交集才是答案 $y>4$。"
+     },
+     {
+      "opt": "A",
+      "en": "$y > -4$ — sign slip when moving terms in the first inequality.",
+      "zh": "$y > -4$ —— 第一段移項時符號出錯。"
+     },
+     {
+      "opt": "B",
+      "en": "$y \\ge -2$ — sign slip in the second inequality.",
+      "zh": "$y \\ge -2$ —— 第二段移項時符號出錯。"
+     }
+    ],
+    "tip": {
+     "en": "Solve each part of a compound inequality separately, then take the intersection — and keep $\\le$ where the boundary is allowed.",
+     "zh": "連不等式要分段解，最後取交集；邊界容許的用 $\\le$，不容許的用 $<$。"
+    }
+   }
+  },
   "2025-p2-q08": {
    "answer": "C",
    "verify": "checked",
@@ -246,6 +620,214 @@ window.SOLUTIONS = {
     "tip": {
      "en": "For $f(a)+f(-a)$ with an even power and a linear term, the linear parts partly cancel — substitute carefully first, simplify second.",
      "zh": "遇到 $f(a)+f(-a)$（含偶次方與一次項），一次項通常會部分抵消——先老實代入，再化簡。"
+    }
+   }
+  },
+  "2025-p2-q09": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Use the factor theorem",
+       "zh": "第 1 步 · 用因式定理"
+      },
+      "math": "p(-3) = n(-3)^{3} - 3n(-3) + 36 = 0",
+      "en": "$x+3$ is a factor, so $p(-3)=0$.",
+      "zh": "$x+3$ 是因式，所以 $p(-3)=0$。",
+      "highlight": [
+       "p(-3) = 0"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Find n",
+       "zh": "第 2 步 · 求 n"
+      },
+      "math": "-27n + 9n + 36 = 0 \\;\\Rightarrow\\; -18n = -36 \\;\\Rightarrow\\; n = 2",
+      "en": "Collect the $n$ terms.",
+      "zh": "合併 $n$ 的項。",
+      "highlight": [
+       "n = 2"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Evaluate p(3)",
+       "zh": "第 3 步 · 計算 $p(3)$"
+      },
+      "math": "p(3) = 2(27) - 3(2)(3) + 36 = 54 - 18 + 36 = 72",
+      "en": "Substitute $n=2$ and $x=3$.",
+      "zh": "代入 $n=2$、$x=3$。",
+      "highlight": [
+       "72"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "p(3) = 72",
+      "en": "Option D.",
+      "zh": "選項 D。",
+      "highlight": [
+       "72"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "$2$ — that is the value of $n$, not of $p(3)$.",
+      "zh": "$2$ —— 那是 $n$ 的值，不是 $p(3)$。"
+     },
+     {
+      "opt": "B",
+      "en": "$0$ — that is $p(-3)$, the factor condition. The question asks for $p(3)$.",
+      "zh": "$0$ —— 那是因式條件 $p(-3)$，題目問的是 $p(3)$。"
+     },
+     {
+      "opt": "A",
+      "en": "$-2$ — $n$ with the sign flipped ($-18n=-36$ gives $n=+2$).",
+      "zh": "$-2$ —— $n$ 的符號弄反（$-18n=-36$ 得 $n=+2$）。"
+     }
+    ],
+    "tip": {
+     "en": "The factor theorem gives an equation for the unknown coefficient; check what the question actually asks for afterwards.",
+     "zh": "因式定理只是拿來求未知係數的方程；求完之後要看清題目問的究竟是什麼。"
+    }
+   }
+  },
+  "2025-p2-q12": {
+   "answer": "C",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Write the variation statement",
+       "zh": "第 1 步 · 寫出變分關係"
+      },
+      "math": "z = \\frac{kx^{3}}{y^{2}}",
+      "en": "Directly as the cube of $x$ → $x^{3}$ on top; inversely as the square of $y$ → $y^{2}$ below.",
+      "zh": "與 $x$ 的立方成正比 → $x^{3}$ 在分子；與 $y$ 的平方成反比 → $y^{2}$ 在分母。",
+      "highlight": [
+       "z = \\frac{kx^{3}}{y^{2}}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Find k from the given data",
+       "zh": "第 2 步 · 用已知數據求 k"
+      },
+      "math": "3 = \\frac{k(3)^{3}}{6^{2}} = \\frac{27k}{36} \\;\\Rightarrow\\; k = 4",
+      "en": "$3 \\times 36 \\div 27 = 4$.",
+      "zh": "$3 \\times 36 \\div 27 = 4$。",
+      "highlight": [
+       "k = 4"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Substitute the new values",
+       "zh": "第 3 步 · 代入新的數值"
+      },
+      "math": "z = \\frac{4(5)^{3}}{2^{2}} = \\frac{4 \\times 125}{4} = 125",
+      "en": "Option C.",
+      "zh": "選項 C。",
+      "highlight": [
+       "125"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "en": "$25$ — used the square of $x$ instead of the cube ($5^{2}$ appears in the working).",
+      "zh": "$25$ —— 把 $x$ 的立方誤當平方（算式中出現 $5^{2}$）。"
+     },
+     {
+      "opt": "A",
+      "en": "$5$ — that is just the given $x$; the work of finding $k$ and substituting was skipped.",
+      "zh": "$5$ —— 那只是題目給的 $x$，沒有真正求 $k$ 與代入。"
+     },
+     {
+      "opt": "D",
+      "en": "$243=3^{5}$ — the relation was treated as a power of 3 instead of the formula $z=\\frac{kx^{3}}{y^{2}}$.",
+      "zh": "$243=3^{5}$ —— 把變分關係當成 $3$ 的次方硬算，而非用 $z=\\frac{kx^{3}}{y^{2}}$。"
+     }
+    ],
+    "tip": {
+     "en": "Variation questions: write the formula with $k$, find $k$ from the given pair, then substitute — never skip finding $k$.",
+     "zh": "變分題三步：寫出含 $k$ 的公式 → 用已知一組數據求 $k$ → 代入新數據。不能跳過求 $k$。"
+    }
+   }
+  },
+  "2025-p2-q13": {
+   "answer": "A",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Write what the recurrence gives",
+       "zh": "第 1 步 · 寫出遞推關係"
+      },
+      "math": "a_{4} = 2a_{3}+a_{2}, \\quad a_{5} = 2a_{4}+a_{3}",
+      "en": "With $a_{2}=3$, let the unknown $a_{3}=t$.",
+      "zh": "已知 $a_{2}=3$，設未知的 $a_{3}=t$。",
+      "highlight": [
+       "a_{2}=3"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Solve for t using a_5",
+       "zh": "第 2 步 · 用 $a_{5}$ 解 t"
+      },
+      "math": "a_{4} = 2t+3, \\quad a_{5} = 2(2t+3)+t = 5t+6 = 41 \\;\\Rightarrow\\; t = 7",
+      "en": "So $a_{3}=7$ and $a_{4}=2(7)+3=17$.",
+      "zh": "所以 $a_{3}=7$，而 $a_{4}=2(7)+3=17$。",
+      "highlight": [
+       "a_{3}=7",
+       "a_{4}=17"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Compute a_6",
+       "zh": "第 3 步 · 計算 $a_{6}$"
+      },
+      "math": "a_{6} = 2a_{5}+a_{4} = 2(41)+17 = 99",
+      "en": "Option A.",
+      "zh": "選項 A。",
+      "highlight": [
+       "a_{6} = 99"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "en": "$101$ — an arithmetic slip in $a_{4}$ (using $a_{4}=19$ gives $2(41)+19=101$).",
+      "zh": "$101$ —— 算 $a_{4}$ 時出錯（若誤得 $a_{4}=19$，則 $2(41)+19=101$）。"
+     },
+     {
+      "opt": "C",
+      "en": "$239$ — the recurrence was used one step too far ($2(99)+41$).",
+      "zh": "$239$ —— 遞推多用了一步（$2(99)+41$）。"
+     },
+     {
+      "opt": "D",
+      "en": "$243$ — the follow-through from the $101$ error ($2(101)+41=243$).",
+      "zh": "$243$ —— 由 $101$ 那個錯誤一路延伸（$2(101)+41=243$）。"
+     }
+    ],
+    "tip": {
+     "en": "For recurrence sequences, fill in the missing terms first (from the known terms), then step forward to the term asked.",
+     "zh": "遞推數列先「補齊中間項」（由已知項反推），再一步步推到題目要的那一項。"
     }
    }
   },

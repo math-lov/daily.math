@@ -184,7 +184,7 @@ window.BANK = {
    "timeSec": 60,
    "stem": {
     "text": "If x=5.67 (correct to 2 decimal places), find the range of values of x.",
-    "html": "If x=5.67 (correct to 2 decimal places), find the range of values of x.",
+    "html": "If $x=5.67$ (correct to 2 decimal places), find the range of values of x.",
     "latex": "x=5.67"
    },
    "figure": null,
@@ -277,7 +277,7 @@ window.BANK = {
    "timeSec": 90,
    "stem": {
     "text": "Let p(x)=nx^{3}-3nx+36, where n is a constant. If x+3 is a factor of p(x), then p(3)=",
-    "html": "Let $p(x)=nx^{3}-3nx+36$, where n is a constant. If $x+3$ is a factor of p(x), then p(3)=",
+    "html": "Let $p(x)=nx^{3}-3nx+36$, where n is a constant. If $x+3$ is a factor of p(x), then $p(3)=$",
     "latex": "p(x)=nx^{3}-3nx+36"
    },
    "figure": null,
@@ -370,7 +370,7 @@ window.BANK = {
    "timeSec": 90,
    "stem": {
     "text": "It is given that z varies directly as the cube of x and inversely as the square of y. When x=3 and y=6, z=3. When x=5 and y=2, z=",
-    "html": "It is given that z varies directly as the cube of x and inversely as the square of y. When x=3 and y=6, z=3. When x=5 and y=2, z=",
+    "html": "It is given that z varies directly as the cube of x and inversely as the square of y. When $x=3$ and $y=6, z=3$. When $x=5$ and $y=2$, z=",
     "latex": null
    },
    "figure": null,
@@ -432,7 +432,7 @@ window.BANK = {
    "timeSec": 90,
    "stem": {
     "text": "In the figure, the equation of the straight line L is px+qy=7. Which of the following is/are true?\nI. p > 7\nII. q > 7\nIII. q > p",
-    "html": "In the figure, the equation of the straight line L is $px+qy=7$. Which of the following is/are true?<br>I. p &gt; 7<br>II. q &gt; 7<br>III. q &gt; p",
+    "html": "In the figure, the equation of the straight line L is $px+qy=7$. Which of the following is/are true?<br>I. p &gt; $7<br>II. q$ &gt; $7<br>III. q$ &gt; p",
     "latex": "px+qy=7"
    },
    "figure": "Rectangular coordinate plane with x-axis and y-axis intersecting at origin O. A straight line L with negative slope cuts the positive y-axis at a point higher than 1 (a tick mark labeled '1' is marked on the y-axis below the y-intercept) and cuts the positive x-axis at a point less than 1 (a tick mark labeled '1' is marked on the x-axis to the right of the x-intercept).",
@@ -525,7 +525,7 @@ window.BANK = {
    "timeSec": 120,
    "stem": {
     "text": "In the figure, ABCD is a parallelogram. Let E, F and G be points lying on AB, AD and CD respectively such that BE=3AE, 2DF=3AF and DG=2CG. It is given that BC produced and EG produced meet at the point H. If the area of \\Delta CGH is 16\\text{ cm}^{2}, then the area of the quadrilateral DFEG is",
-    "html": "In the figure, ABCD is a parallelogram. Let E, F and G be points lying on AB, AD and CD respectively such that BE=3AE, 2DF=3AF and DG=2CG. It is given that BC produced and EG produced meet at the point H. If the area of $\\Delta$ CGH is $16\\text{ cm}^{2}$, then the area of the quadrilateral DFEG is",
+    "html": "In the figure, ABCD is a parallelogram. Let E, F and G be points lying on AB, AD and CD respectively such that $BE=3AE, 2DF=3AF$ and $DG=2CG$. It is given that BC produced and EG produced meet at the point H. If the area of $\\Delta$ CGH is $16\\text{ cm}^{2}$, then the area of the quadrilateral DFEG is",
     "latex": "BE=3AE,\\quad 2DF=3AF,\\quad DG=2CG"
    },
    "figure": "Parallelogram ABCD with vertices labeled counterclockwise starting from bottom-left: A (bottom-left), B (bottom-right), C (top-right), D (top-left). E lies on side AB with BE > AE. F lies on AD with DF > AF. G lies on CD with DG > CG. Line segments FE and EG are drawn inside ABCD. Segment EG is extended beyond G and side BC is extended beyond C, intersecting outside the parallelogram at point H.",
@@ -866,7 +866,7 @@ window.BANK = {
    "timeSec": 90,
    "stem": {
     "text": "A box contains six cards numbered 2, 2, 2, 3, 4 and 5 respectively. In a game, a number is randomly drawn from the box and a certain number of tokens will be got according to the following table:\n\nNumber drawn: 2 | 3 | 4 | 5\nNumber of tokens got: 10 | 15 | 25 | 50\n\nFind the expected number of tokens got in the game.",
-    "html": "A box contains six cards numbered 2, 2, 2, 3, 4 and 5 respectively. In a game, a number is randomly drawn from the box and a certain number of tokens will be got according to the following table:<br><br>Number drawn: 2 | 3 | 4 | 5<br>Number of tokens got: 10 | 15 | 25 | 50<br><br>Find the expected number of tokens got in the game.",
+    "html": "A box contains six cards numbered 2, 2, 2, 3, 4 and 5 respectively. In a game, a number is randomly drawn from the box and a certain number of tokens will be got according to the following table:<br><br>Number drawn: 2 | 3 | 4 | $5<br>Number$ of tokens got: 10 | 15 | 25 | $50<br><br>Find$ the expected number of tokens got in the game.",
     "latex": null
    },
    "figure": "Table with two rows: Row 1 'Number drawn' with values 2, 3, 4, 5; Row 2 'Number of tokens got' with corresponding values 10, 15, 25, 50.",
@@ -928,7 +928,7 @@ window.BANK = {
    "timeSec": 120,
    "stem": {
     "text": "Consider the following data:\n\\alpha, \\beta, -4, -3, 1, 1, 1, 4\nDenote the mode and the median of the above data by s and t respectively. If the mean and the range of the above data are 0 and 10 respectively, which of the following are true?\nI. s = 1\nII. t = -1\nIII. \\alpha + \\beta = 0",
-    "html": "Consider the following $data:<br>\\alpha, \\beta, -4, -3$, 1, 1, 1, 4<br>Denote the mode and the median of the above data by s and t respectively. If the mean and the range of the above data are 0 and 10 respectively, which of the following are true?<br>I. $s =$ 1<br>II. $t = -1<br>III. \\alpha$ + $\\beta = 0$",
+    "html": "Consider the following $data:<br>\\alpha, \\beta, -4, -3$, 1, 1, 1, $4<br>Denote$ the mode and the median of the above data by s and t respectively. If the mean and the range of the above data are 0 and 10 respectively, which of the following are true?<br>I. $s = 1<br>II. t = -1<br>III. \\alpha$ + $\\beta = 0$",
     "latex": "\\alpha,\\quad \\beta,\\quad -4,\\quad -3,\\quad 1,\\quad 1,\\quad 1,\\quad 4"
    },
    "figure": null,
@@ -1052,7 +1052,7 @@ window.BANK = {
    "timeSec": 120,
    "stem": {
     "text": "On the same rectangular coordinate system, the graph of y=\\log_{a}x cuts the graph of y=a^{x} and the x-axis at the points P and Q respectively, where a is a positive constant. Denote the origin by O. Which of the following are true?\nI. a < 1\nII. OQ > a\nIII. \\angle POQ = 45^{\\circ}",
-    "html": "On the same rectangular coordinate system, the graph of $y=\\log_{a}x$ cuts the graph of $y=a^{x}$ and the x-axis at the points P and Q respectively, where a is a positive constant. Denote the origin by O. Which of the following are true?<br>I. a &lt; 1<br>II. OQ &gt; a<br>III. $\\angle$ POQ $= 45^{\\circ}$",
+    "html": "On the same rectangular coordinate system, the graph of $y=\\log_{a}x$ cuts the graph of $y=a^{x}$ and the x-axis at the points P and Q respectively, where a is a positive constant. Denote the origin by O. Which of the following are true?<br>I. a &lt; $1<br>II$. OQ &gt; a<br>III. $\\angle$ POQ $= 45^{\\circ}$",
     "latex": "y=\\log_{a}x,\\quad y=a^{x}"
    },
    "figure": null,
@@ -1114,7 +1114,7 @@ window.BANK = {
    "timeSec": 120,
    "stem": {
     "text": "Consider the following system of inequalities:\n\\begin{cases}x \\le 11 \\\\ 4x+5y-19 \\ge 0 \\\\ 7x-6y+11 \\le 0\\end{cases}\nLet D be the region which represents the solution of the above system of inequalities. If (x, y) is a point lying in D, then the greatest value of 8x-6y+11 is",
-    "html": "Consider the following system of inequalities:<br>x $\\le 11$ <br> $4x+5y-19 \\ge 0$ <br> $7x-6y+11 \\le$ 0<br>Let D be the region which represents the solution of the above system of inequalities. If (x, y) is a point lying in D, then the greatest value of $8x-6y+11$ is",
+    "html": "Consider the following system of inequalities:<br>x $\\le 11$ <br> $4x+5y-19 \\ge 0$ <br> $7x-6y+11 \\le 0<br>Let D$ be the region which represents the solution of the above system of inequalities. If (x, y) is a point lying in D, then the greatest value of $8x-6y+11$ is",
     "latex": "\\begin{cases}x \\le 11 \\\\ 4x+5y-19 \\ge 0 \\\\ 7x-6y+11 \\le 0\\end{cases},\\quad 8x-6y+11"
    },
    "figure": null,
