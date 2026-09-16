@@ -958,8 +958,8 @@ window.SOLUTIONS = {
        "zh": "答案"
       },
       "math": "40000\\times1.160541\\approx\\$46\\,422",
-      "en": "Correct to the nearest dollar the amount is $46 422 — option C.",
-      "zh": "取至最接近的元，本利和為 $46 422 —— 答案 C。",
+      "en": "Correct to the nearest dollar the amount is 46 422 — option C.",
+      "zh": "取至最接近的元，本利和為 46 422 —— 答案 C。",
       "highlight": [
        "\\$46\\,422"
       ]

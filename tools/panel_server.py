@@ -213,6 +213,7 @@ ACTIONS = {
         py_tool("validate_bank.py"),
         py_tool("verify_answers.py", "--json"),
         [node_exe(), os.path.join("tools", "site_check.js")],
+        [node_exe(), os.path.join("tools", "katex_check.js")],
         [node_exe(), os.path.join("tools", "smoke_test.js")],
     ],
     "publish": lambda p: [
@@ -220,6 +221,7 @@ ACTIONS = {
         py_tool("verify_answers.py"),
         py_tool("make_site_data.py"),
         [node_exe(), os.path.join("tools", "site_check.js")],
+        [node_exe(), os.path.join("tools", "katex_check.js")],
         [node_exe(), os.path.join("tools", "smoke_test.js")],
         ["git", "add", "-A"],
         ["git", "commit", "-m", f"發布：批次 {p.get('batch') or ''}（本機面板）".strip()],

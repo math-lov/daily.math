@@ -93,6 +93,110 @@ window.RELEASES = {
     "2025-p2-q25",
     "2025-p2-q26"
    ]
+  },
+  {
+   "date": "2026-09-23",
+   "batch": 8,
+   "title": {
+    "en": "Junior Math · More about Probability · Equations of Circles",
+    "zh": "初中數學 · 概率續論 · 圓的方程"
+   },
+   "ids": [
+    "2025-p2-q16",
+    "2025-p2-q28",
+    "2025-p2-q27"
+   ]
+  },
+  {
+   "date": "2026-09-24",
+   "batch": 9,
+   "title": {
+    "en": "Junior Math · More about Polynomials · Exponential and Logarithmic Functions",
+    "zh": "初中數學 · 多項式續論 · 指數與對數函數"
+   },
+   "ids": [
+    "2025-p2-q21",
+    "2025-p2-q32",
+    "2025-p2-q33"
+   ]
+  },
+  {
+   "date": "2026-09-25",
+   "batch": 10,
+   "title": {
+    "en": "Junior Math · Exponential and Logarithmic Functions · Inequalities and Linear Programming",
+    "zh": "初中數學 · 指數與對數函數 · 不等式與線性規劃"
+   },
+   "ids": [
+    "2025-p2-q17",
+    "2025-p2-q34",
+    "2025-p2-q36"
+   ]
+  },
+  {
+   "date": "2026-09-26",
+   "batch": 11,
+   "title": {
+    "en": "Junior Math · Arithmetic and Geometric Sequences · Basic Properties of Circles",
+    "zh": "初中數學 · 等差等比數列 · 圓的基本性質"
+   },
+   "ids": [
+    "2025-p2-q18",
+    "2025-p2-q37",
+    "2025-p2-q38"
+   ]
+  },
+  {
+   "date": "2026-09-27",
+   "batch": 12,
+   "title": {
+    "en": "Junior Math · More about Trigonometry · Equations of Straight Lines",
+    "zh": "初中數學 · 三角學續論 · 直線方程"
+   },
+   "ids": [
+    "2025-p2-q19",
+    "2025-p2-q39",
+    "2025-p2-q41"
+   ]
+  },
+  {
+   "date": "2026-09-28",
+   "batch": 13,
+   "title": {
+    "en": "Junior Math · More about Trigonometry · Permutations and Combinations",
+    "zh": "初中數學 · 三角學續論 · 排列與組合"
+   },
+   "ids": [
+    "2025-p2-q24",
+    "2025-p2-q40",
+    "2025-p2-q42"
+   ]
+  },
+  {
+   "date": "2026-09-29",
+   "batch": 14,
+   "title": {
+    "en": "Junior Math · More about Probability · Measures of Dispersion",
+    "zh": "初中數學 · 概率續論 · 離差的度量"
+   },
+   "ids": [
+    "2025-p2-q30",
+    "2025-p2-q43",
+    "2025-p2-q44"
+   ]
+  },
+  {
+   "date": "2026-09-30",
+   "batch": 15,
+   "title": {
+    "en": "Junior Math · Measures of Dispersion",
+    "zh": "初中數學 · 離差的度量"
+   },
+   "ids": [
+    "2025-p2-q31",
+    "2025-p2-q45",
+    "2025-p2-q35"
+   ]
   }
  ]
 };

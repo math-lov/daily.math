@@ -36,6 +36,7 @@ $py = "C:\Users\t073\.workbuddy\binaries\python\envs\default\Scripts\python.exe"
    ```powershell
    & $py tools\verify_answers.py     # 必須「失敗 0」
    & $py tools\validate_bank.py      # 必須「0 個錯誤」
+   & $node tools\katex_check.js      # 必須「all LaTeX renders cleanly」
    ```
 7. **回報**：題號、答案、驗算方式、是否需要人工看圖。**不 push、不改 `releases.json`。**
 
@@ -68,6 +69,8 @@ $py = "C:\Users\t073\.workbuddy\binaries\python\envs\default\Scripts\python.exe"
 * `traps` **必須指向該題真正印出來的干擾選項**，說明「學生為何會選它、錯在哪」。
 * `tip` 要是可帶走的技巧，不是答案的重述。
 * `en`/`zh` 內可用 `$...$` 寫行內數學。
+* ⚠ **貨幣符號**：文字欄位裡的 `$` 會被當成數學定界符。**絕不裸寫** `$`（例如 `$46 422` 會讓 `katex_check.js` 判定「unbalanced $ delimiters」並讓 CI 擋住發佈）。
+  金額請寫成純數字（`46 422`），或整段放進數學式並轉義：`$\$46\,422$`。
 
 ---
 

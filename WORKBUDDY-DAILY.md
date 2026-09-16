@@ -33,6 +33,7 @@ $node = "C:\Users\t073\.workbuddy\binaries\node\versions\22.22.2-3\node.exe"
 & $py tools\pick_batch.py --apply   # 自動挑 1 易 1 中 1 難（不同單元）→ 寫入 releases.json
 & $py tools\make_site_data.py       # data/*.json → site/data/*.js
 & $node tools\site_check.js         # 資料完整性 + JS 語法
+& $node tools\katex_check.js        # 逐條用 KaTeX 解析所有數學式（CI 也會跑）
 & $node tools\smoke_test.js         # 模擬學生完整流程（必須 all passed）
 git add -A
 git commit -m "Batch N: <主題>"
