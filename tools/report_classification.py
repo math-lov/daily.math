@@ -23,7 +23,7 @@ def main() -> int:
 
     bank = json.load(open(os.path.join(BASE, "data", "bank.json"), encoding="utf-8"))
     sol_path = os.path.join(BASE, "data", "solutions.json")
-    solved = set(json.load(open(sol_path, encoding="utf-8"))["solutions"]) if os.path.exists(sol_path) else set()
+    solved = set(json.load(open(sol_path, encoding="utf-8-sig"))["solutions"]) if os.path.exists(sol_path) else set()
 
     print(f"{'Q':>3}  {'unit':<6} {'diff':<5} {'time':>5}  {'answer':<7} topic")
     print("-" * 92)
@@ -38,7 +38,7 @@ def main() -> int:
             label = "Junior Math / 初中數學（不屬 20 個高中單元）"
         ans = "-"
         if q["id"] in solved:
-            s = json.load(open(sol_path, encoding="utf-8"))["solutions"][q["id"]]
+            s = json.load(open(sol_path, encoding="utf-8-sig"))["solutions"][q["id"]]
             ans = s["answer"]
         print(f"{q['no']:>3}  {tag:<6} {'★' * q['difficulty']:<5} {q['timeSec']:>4}s  {ans:<7} {label}")
         counts[tag] = counts.get(tag, 0) + 1

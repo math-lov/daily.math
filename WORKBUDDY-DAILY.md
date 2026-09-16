@@ -139,6 +139,31 @@ senior secondary Maths syllabus; anything outside them is tagged **Junior Math**
   student's per-unit accuracy in the progress panel — so a wrong unit sends students to the
   wrong revision topic. Check it when you first solve a question.
 
+### Calibrating the classification with an AI (round trip, ~10 min per paper)
+
+The keyword rules in `build_bank.py` are only a first guess. To classify a whole paper
+properly, let a vision model read the questions and then merge its suggestions:
+
+```powershell
+& $py tools\export_for_ai.py                 # -> data/ai/classification_input.json (questions + unit definitions)
+# paste that file together with prompts/gemini_classification.md into Gemini,
+# save the reply as data/ai/classification.json, then:
+& $py tools\merge_classification.py --only-changed   # diff report (dry run, changes nothing)
+& $py tools\merge_classification.py --apply          # write into data/overrides.json
+& $py tools\build_bank.py; & $py tools\make_site_data.py
+& $node tools\site_check.js; & $node tools\smoke_test.js
+```
+
+* The prompt restricts the answer to `unit: 0-20`, `difficulty: 1-3`, `timeSec: 60|90|120|150`,
+  and asks for a one-line bilingual reason — which lands in
+  `data/ai/classification_review.md` for a fast teacher review.
+* The merge tool refuses anything that fails validation (unknown id, unit out of range…) and
+  only touches `unit` / `difficulty` / `timeSec`.
+* **Always skim the review report before `--apply`.** A wrong unit sends students to the wrong
+  revision topic, which is worse than no unit at all.
+* Commit `data/ai/classification.json` and `data/ai/classification_review.md` (audit trail);
+  `classification_input.json` is regenerated and is git-ignored.
+
 ---
 
 ## 4. Adding a new paper (one-off, ~30 min)

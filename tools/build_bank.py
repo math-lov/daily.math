@@ -262,7 +262,7 @@ def main() -> int:
     ov_path = os.path.join(OUT_DIR, "overrides.json")
     n_ov = 0
     if os.path.exists(ov_path):
-        overrides = json.load(open(ov_path, encoding="utf-8")).get("overrides", {})
+        overrides = json.load(open(ov_path, encoding="utf-8-sig")).get("overrides", {})
         by_id = {q["id"]: q for q in questions}
         for qid, ov in overrides.items():
             q = by_id.get(qid)

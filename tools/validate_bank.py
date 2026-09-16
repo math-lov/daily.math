@@ -33,7 +33,7 @@ def main() -> int:
     if not os.path.exists(BANK):
         print("缺少 data/bank.json，請先執行 tools/build_bank.py")
         return 1
-    bank = json.load(open(BANK, encoding="utf-8"))
+    bank = json.load(open(BANK, encoding="utf-8-sig"))
     questions = {q["id"]: q for q in bank["questions"]}
 
     # 1) 結構
@@ -55,7 +55,7 @@ def main() -> int:
     # 3) 解答
     solutions = {}
     if os.path.exists(SOLUTIONS):
-        solutions = json.load(open(SOLUTIONS, encoding="utf-8")).get("solutions", {})
+        solutions = json.load(open(SOLUTIONS, encoding="utf-8-sig")).get("solutions", {})
         for qid, s in solutions.items():
             if qid not in questions:
                 errors.append(f"solutions: {qid} 不在題庫中")
@@ -81,7 +81,7 @@ def main() -> int:
 
     # 5) 排程
     if os.path.exists(RELEASES):
-        releases = json.load(open(RELEASES, encoding="utf-8")).get("releases", [])
+        releases = json.load(open(RELEASES, encoding="utf-8-sig")).get("releases", [])
         for r in releases:
             if not DATE_RE.match(r.get("date", "")):
                 errors.append(f"release {r.get('batch')}: date 格式錯誤")

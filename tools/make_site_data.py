@@ -29,7 +29,7 @@ def load(name: str, default):
     path = os.path.join(DATA, name)
     if not os.path.exists(path):
         return default
-    return json.load(open(path, encoding="utf-8"))
+    return json.load(open(path, encoding="utf-8-sig"))
 
 
 def write_js(path: str, var: str, obj) -> None:
