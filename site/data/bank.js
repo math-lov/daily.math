@@ -52,9 +52,9 @@ window.BANK = {
     "images/questions/2025-p2-q02.png"
    ],
    "topic": {
-    "unit": 4,
-    "en": "More about Polynomials",
-    "zh": "多項式續論"
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
    },
    "difficulty": 1,
    "timeSec": 60,
@@ -641,9 +641,9 @@ window.BANK = {
     "images/questions/2025-p2-q21.png"
    ],
    "topic": {
-    "unit": 14,
-    "en": "More about Trigonometry",
-    "zh": "三角學續論"
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
    },
    "difficulty": 2,
    "timeSec": 90,
@@ -920,9 +920,9 @@ window.BANK = {
     "images/questions/2025-p2-q30.png"
    ],
    "topic": {
-    "unit": 17,
-    "en": "Measures of Dispersion",
-    "zh": "離差的度量"
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
    },
    "difficulty": 3,
    "timeSec": 120,

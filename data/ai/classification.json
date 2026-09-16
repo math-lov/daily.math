@@ -1,0 +1,364 @@
+{
+"classifications": [
+{
+"id": "2025-p2-q01",
+"unit": 3,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Simplifying algebraic expression using index laws / 運用指數定律化簡代數式"
+},
+{
+"id": "2025-p2-q02",
+"unit": 0,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Factorisation using difference of two squares / 運用平方差公式進行因式分解"
+},
+{
+"id": "2025-p2-q03",
+"unit": 4,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Comparing coefficients in polynomial identity / 比較多項式恆等式對應係數"
+},
+{
+"id": "2025-p2-q04",
+"unit": 5,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Change of subject of algebraic formula / 進行代數公式的主體變換"
+},
+{
+"id": "2025-p2-q05",
+"unit": 1,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Solving quadratic equation by factorisation / 透過因式分解法解一元二次方程"
+},
+{
+"id": "2025-p2-q06",
+"unit": 0,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Finding limits of rounded decimal values / 求小數捨入後的取值範圍"
+},
+{
+"id": "2025-p2-q07",
+"unit": 8,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Solving compound linear inequality in one unknown / 解一元一次複合不等式"
+},
+{
+"id": "2025-p2-q08",
+"unit": 2,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Evaluating function values to find constant / 代入函數值求解未知常數"
+},
+{
+"id": "2025-p2-q09",
+"unit": 4,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Applying factor theorem to evaluate polynomial / 運用因式定理解未知數並求值"
+},
+{
+"id": "2025-p2-q10",
+"unit": 0,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Calculating compound interest amount / 計算複利息的本利和"
+},
+{
+"id": "2025-p2-q11",
+"unit": 0,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Solving linear system for ratio of variables / 建立聯立方程求變量之比"
+},
+{
+"id": "2025-p2-q12",
+"unit": 6,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Joint variation formulation and calculation / 聯變關係式的建立與求值"
+},
+{
+"id": "2025-p2-q13",
+"unit": 7,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Finding terms using recurrence relation / 運用數列遞推關係求解項"
+},
+{
+"id": "2025-p2-q14",
+"unit": 10,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Interpreting intercepts of a straight line / 根據直線截距判斷係數大小"
+},
+{
+"id": "2025-p2-q15",
+"unit": 0,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Sector perimeter, area and arc mensuration / 計算扇形周長、面積及圓心角"
+},
+{
+"id": "2025-p2-q16",
+"unit": 0,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Mensuration of cylinder and sphere volume / 圓柱表面積及球體體積求值"
+},
+{
+"id": "2025-p2-q17",
+"unit": 0,
+"difficulty": 3,
+"timeSec": 150,
+"confidence": "high",
+"why": "Area ratios and similar triangles in plane / 相似三角形與平面幾何面積比"
+},
+{
+"id": "2025-p2-q18",
+"unit": 0,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Similar triangles and Pythagoras theorem / 相似三角形比例與勾股定理"
+},
+{
+"id": "2025-p2-q19",
+"unit": 0,
+"difficulty": 3,
+"timeSec": 120,
+"confidence": "high",
+"why": "Deductive geometry of quadrilaterals and similarity / 平面幾何演繹推理與相似判定"
+},
+{
+"id": "2025-p2-q20",
+"unit": 14,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Using right-angled trigonometry in a trapezium / 在梯形中利用基本三角比求邊長"
+},
+{
+"id": "2025-p2-q21",
+"unit": 0,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Right-angled triangle projection and rectangle geometry / 直角三角形投影與矩形邊長計算"
+},
+{
+"id": "2025-p2-q22",
+"unit": 11,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Angle in same segment and circle properties / 運用同弓形內的圓周角及圓性質"
+},
+{
+"id": "2025-p2-q23",
+"unit": 14,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Trigonometric ratios in composite right triangles / 複合直角三角形中的正切比關係"
+},
+{
+"id": "2025-p2-q24",
+"unit": 0,
+"difficulty": 3,
+"timeSec": 120,
+"confidence": "high",
+"why": "Distance between polar points and equilateral triangle / 極坐標距離公式與等邊三角形"
+},
+{
+"id": "2025-p2-q25",
+"unit": 12,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Geometric definition of circle as a locus / 點到定點等距之軌跡幾何定義"
+},
+{
+"id": "2025-p2-q26",
+"unit": 10,
+"difficulty": 3,
+"timeSec": 120,
+"confidence": "high",
+"why": "Perpendicular lines and triangle area / 互相垂直直線及坐標三角形面積"
+},
+{
+"id": "2025-p2-q27",
+"unit": 13,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Circle equation from centre and chord length / 根據圓心及弦長求圓方程"
+},
+{
+"id": "2025-p2-q28",
+"unit": 16,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Calculating mathematical expectation of discrete variable / 計算離散隨機變量的數學期望值"
+},
+{
+"id": "2025-p2-q29",
+"unit": 17,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Finding inter-quartile range from frequency chart / 從頻數分佈圖求四分位數間距"
+},
+{
+"id": "2025-p2-q30",
+"unit": 0,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Elementary statistics: mean, median, mode and range / 初中統計：平均數、中位數與全距"
+},
+{
+"id": "2025-p2-q31",
+"unit": 0,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Converting hexadecimal number to binary expansion / 十六進制轉二進制與指數表示"
+},
+{
+"id": "2025-p2-q32",
+"unit": 4,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Finding LCM of factorised polynomials / 求因式分解後多項式的最小公倍式"
+},
+{
+"id": "2025-p2-q33",
+"unit": 3,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Linear relation between logarithmic terms / 對數函數變量之間的線性關係圖像"
+},
+{
+"id": "2025-p2-q34",
+"unit": 3,
+"difficulty": 3,
+"timeSec": 120,
+"confidence": "high",
+"why": "Graphs of exponential and logarithmic functions / 指數與對數函數圖像的交點與性質"
+},
+{
+"id": "2025-p2-q35",
+"unit": 0,
+"difficulty": 2,
+"timeSec": 60,
+"confidence": "high",
+"why": "Evaluating cyclic powers of imaginary unit i / 虛數單位 i 的週期冪次求和"
+},
+{
+"id": "2025-p2-q36",
+"unit": 8,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Linear programming optimal value on feasible region / 線性規劃可行域求目標函數極值"
+},
+{
+"id": "2025-p2-q37",
+"unit": 7,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Properties of arithmetic and geometric progressions / 判斷等差與等比數列的代數性質"
+},
+{
+"id": "2025-p2-q38",
+"unit": 11,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Alternate segment theorem and circle properties / 交錯弓形的圓周角與切線性質"
+},
+{
+"id": "2025-p2-q39",
+"unit": 14,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Solving trigonometric equation and root counting / 解三角方程並判斷特定區間根數"
+},
+{
+"id": "2025-p2-q40",
+"unit": 14,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Angle between line and plane in regular tetrahedron / 正四面體中線與平面的交角計算"
+},
+{
+"id": "2025-p2-q41",
+"unit": 10,
+"difficulty": 3,
+"timeSec": 120,
+"confidence": "high",
+"why": "In-centre coordinates and triangle area / 坐標平面內心性質與直角三角形面積"
+},
+{
+"id": "2025-p2-q42",
+"unit": 15,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Combinations with complementary counting / 組合計數與至少包含一人的反面計算法"
+},
+{
+"id": "2025-p2-q43",
+"unit": 16,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Combinatorial probability with complementary event / 組合概率計算與對立事件應用"
+},
+{
+"id": "2025-p2-q44",
+"unit": 17,
+"difficulty": 1,
+"timeSec": 60,
+"confidence": "high",
+"why": "Standard score and standard deviation formula / 標籤標準分與標準差之定義運算"
+},
+{
+"id": "2025-p2-q45",
+"unit": 17,
+"difficulty": 2,
+"timeSec": 90,
+"confidence": "high",
+"why": "Effects of data transformation on dispersion / 數據線性變換對離差度量的影響"
+}
+]
+}

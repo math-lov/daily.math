@@ -52,6 +52,9 @@ def main() -> int:
     ap.add_argument("--review", default=os.path.join(BASE, "data", "ai", "classification_review.md"))
     ap.add_argument("--apply", action="store_true", help="寫入 overrides.json（預設只出報告）")
     ap.add_argument("--only-changed", action="store_true")
+    ap.add_argument("--units-only", action="store_true",
+                    help="只採用 unit，保留現有的 difficulty / timeSec"
+                         "（建議：難度與時間等實際寫完解答時再定案）")
     args = ap.parse_args()
 
     if not os.path.exists(args.input):
@@ -104,6 +107,9 @@ def main() -> int:
         cur_unit = cur.get("unit", q["topic"].get("unit"))
         cur_diff = cur.get("difficulty", q["difficulty"])
         cur_time = cur.get("timeSec", q["timeSec"])
+        changed = (unit != cur_unit) if args.units_only else (
+            (unit != cur_unit) or (diff != cur_diff) or (tsec != cur_time)
+        )
         rows.append({
             "id": qid, "no": q["no"],
             "unit": unit, "unit_name": UNITS.get(unit, "?"),
@@ -112,12 +118,14 @@ def main() -> int:
             "timeSec": tsec, "cur_time": cur_time,
             "confidence": s.get("confidence") or "-",
             "why": (s.get("why") or "").strip(),
-            "changed": (unit != cur_unit) or (diff != cur_diff) or (tsec != cur_time),
+            "changed": changed,
         })
 
     rows.sort(key=lambda r: r["no"])
     n_changed = sum(1 for r in rows if r["changed"])
 
+    mode = "只套用 unit（難度／時間保留）" if args.units_only else "unit + 難度 + 時間"
+    print(f"模式：{mode}")
     print(f"建議 {len(rows)} 條，其中 {n_changed} 條與現況不同"
           + (f"；{len(errors)} 條校驗失敗" if errors else ""))
     print(f"\n{'Q':>3}  {'unit':>10} → {'':<10} {'diff':>6}   {'time':>9}  conf   why")
@@ -128,8 +136,8 @@ def main() -> int:
         u_from = str(r["cur_unit"]) if r["cur_unit"] is not None else "-"
         u_to = f"{r['unit']} {r['unit_name']}"
         flag_u = " *" if r["cur_unit"] != r["unit"] else "  "
-        flag_d = "*" if r["cur_difficulty"] != r["difficulty"] else " "
-        flag_t = "*" if r["cur_time"] != r["timeSec"] else " "
+        flag_d = "" if args.units_only else ("*" if r["cur_difficulty"] != r["difficulty"] else " ")
+        flag_t = "" if args.units_only else ("*" if r["cur_time"] != r["timeSec"] else " ")
         print(f"{r['no']:>3}  {u_from:>10} →{u_to:<22}{flag_u} "
               f"{r['cur_difficulty']}→{r['difficulty']} {flag_d}  "
               f"{r['cur_time']:>4}→{r['timeSec']:<4} {flag_t}  {r['confidence']:<6} {r['why'][:46]}")
@@ -142,9 +150,11 @@ def main() -> int:
     os.makedirs(os.path.dirname(args.review), exist_ok=True)
     with open(args.review, "w", encoding="utf-8") as f:
         f.write("# AI 分類建議覆核報告\n\n")
-        f.write(f"來源：`{os.path.relpath(args.input, BASE)}`　建議 {len(rows)} 條，"
-                f"與現況不同 {n_changed} 條\n\n")
+        f.write(f"來源：`{os.path.relpath(args.input, BASE)}`　模式：{mode}\n\n")
+        f.write(f"建議 {len(rows)} 條，與現況不同 {n_changed} 條。\n\n")
         f.write("「→」左邊是現況（含 overrides），右邊是 AI 建議。標 * 表示有改動。\n\n")
+        if args.units_only:
+            f.write("> 本輪**只採用 unit**；難度與時間欄位僅供參考，待實際寫完解答後定案。\n\n")
         f.write("| Q | 現況 unit | AI unit | unit 名稱 | 難度 | 時間 | 信心 | AI 理由 |\n")
         f.write("|---|---|---|---|---|---|---|---|\n")
         for r in rows:
@@ -165,12 +175,13 @@ def main() -> int:
     for r in rows:
         entry = overrides.setdefault(r["id"], {})
         entry["unit"] = r["unit"]
-        entry["difficulty"] = r["difficulty"]
-        entry["timeSec"] = r["timeSec"]
-    ov_doc["_note"] = ov_doc.get("_note", "")
+        if not args.units_only:
+            entry["difficulty"] = r["difficulty"]
+            entry["timeSec"] = r["timeSec"]
     with open(ov_path, "w", encoding="utf-8") as f:
         json.dump(ov_doc, f, ensure_ascii=False, indent=2)
-    print(f"\n已寫入 {os.path.relpath(ov_path, BASE)}（{len(rows)} 條）")
+    scope = "（只套用 unit，難度／時間維持原值）" if args.units_only else "（unit + 難度 + 時間）"
+    print(f"\n已寫入 {os.path.relpath(ov_path, BASE)}{scope}：{len(rows)} 條")
     print("下一步：\n  python tools/build_bank.py\n  python tools/make_site_data.py\n  node tools/site_check.js")
     return 1 if errors else 0
 
