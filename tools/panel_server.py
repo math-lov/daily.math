@@ -212,6 +212,7 @@ ACTIONS = {
     "check": lambda p: [
         py_tool("validate_bank.py"),
         py_tool("verify_answers.py", "--json"),
+        py_tool("audit_crops.py", "--strict"),
         [node_exe(), os.path.join("tools", "site_check.js")],
         [node_exe(), os.path.join("tools", "katex_check.js")],
         [node_exe(), os.path.join("tools", "smoke_test.js")],
@@ -219,6 +220,7 @@ ACTIONS = {
     "publish": lambda p: [
         py_tool("validate_bank.py"),
         py_tool("verify_answers.py"),
+        py_tool("audit_crops.py", "--strict"),
         py_tool("make_site_data.py"),
         [node_exe(), os.path.join("tools", "site_check.js")],
         [node_exe(), os.path.join("tools", "katex_check.js")],

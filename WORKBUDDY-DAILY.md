@@ -34,6 +34,7 @@ $node = "C:\Users\t073\.workbuddy\binaries\node\versions\22.22.2-3\node.exe"
 & $py tools\make_site_data.py       # data/*.json → site/data/*.js
 & $node tools\site_check.js         # 資料完整性 + JS 語法
 & $node tools\katex_check.js        # 逐條用 KaTeX 解析所有數學式（CI 也會跑）
+& $py  tools\audit_crops.py --strict # 題目圖邊緣體檢（有圖被切就拒絕發佈）
 & $node tools\smoke_test.js         # 模擬學生完整流程（必須 all passed）
 git add -A
 git commit -m "Batch N: <主題>"
@@ -89,10 +90,17 @@ git push                            # GitHub Pages 1 分鐘後自動上線
 ### 3b. 用指令（等價）
 ```powershell
 & $py tools\cut_questions.py --pdf ".\inbox\2026 paper 2 eng.pdf" --paper 2026-p2
+& $py tools\audit_crops.py          # 邊緣體檢：列出被切到的題目
+& $py tools\recut_figures.py --apply  # 有被切就重裁（正確題帶 + 圖形續接）
 & $py tools\build_bank.py          # 讀 data/transcripts/*.json
 & $py tools\validate_bank.py
 & $py tools\make_site_data.py
 ```
+
+> **圖形被切怎麼回事**：題目圖的邊界是「下一題題號 −6pt」，但畫在右側的高圖形會越過這條線，
+> 舊版只裁到「最後一行文字」就會切掉圖形下半。`audit_crops.py` 用圖片邊緣的墨跡偵測出來
+> （例：2025 卷的 q14/q17/q18/q19/q21/q22/q38/q39 都中過），`recut_figures.py` 用正確題帶重裁。
+> 發佈閘門（面板與 CI 之外的本地檢查）已包含這一步，被切到就不准發佈。
 
 轉寫檔格式（`data/transcripts/<paper>.json`，由 Gemini 產生）：
 
