@@ -62,6 +62,8 @@
     for (var i = 1; i <= 3; i++) s += '<span class="' + (i <= n ? "" : "off") + '">★</span>';
     return s;
   }
+  /* Question label: bank gives "25-P2Q03"; fall back to "Q3" for older data. */
+  function qcode(q) { return q && q.code ? q.code : ("Q" + (q ? q.no : "?")); }
   function tex(el, src, display) {
     if (!src) { el.textContent = "—"; return; }
     // KaTeX is loaded with defer → it may not be ready yet. Record the source on the
@@ -166,7 +168,7 @@
 
     // header row
     var top = el("div", "q-top");
-    top.appendChild(el("span", "q-no", "Q" + q.no));                       // the paper's question number
+    top.appendChild(el("span", "q-no", qcode(q)));                         // e.g. 25-P2Q03 (year · paper · question)
     top.appendChild(el("span", "chip chip-diff", (idx + 1) + " of 3 today"));
     top.appendChild(el("span", "stars", stars(q.difficulty)));
     top.appendChild(el("span", "chip chip-topic", topicLabel(q.topic)));
@@ -460,7 +462,7 @@
       if (!q) return;
       var item = el("div", "wrong-item");
       item.appendChild(el("div", "wi-l",
-        "<b>" + topicLabel(q.topic) + "</b> · Q" + q.no +
+        "<b>" + topicLabel(q.topic) + "</b> · " + qcode(q) +
         " — you: " + store.attempts[id].picked + (s ? ", answer: " + s.answer : "")));
       if (r) {
         var a = document.createElement("a");

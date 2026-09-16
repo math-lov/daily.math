@@ -8,6 +8,11 @@ node_modules/
 __pycache__/
 *.pyc
 
+# 本機面板：上載暫存與隊列（可再生，不入庫）
+inbox/
+data/queue.json
+review/
+
 # 助手／IDE 資料
 .workbuddy/
 .wbapp_*

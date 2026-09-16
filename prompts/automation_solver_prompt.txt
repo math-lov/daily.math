@@ -1,0 +1,23 @@
+【CodeBuddy 自動化任務 · 請貼到「自動化 / Automations」新增任務的提示詞欄】
+排程建議：每 6 小時（FREQ=HOURLY;INTERVAL=6）
+工作目錄（cwd）：C:\Code Buddy\HKDSE
+名稱建議：HKDSE 自動解題批次
+
+────────────────────────────────────────────────────────
+依 C:\Code Buddy\HKDSE\prompts\solver_playbook.md 執行一批解題工作：
+
+1. 比對 data/bank.json 與 data/solutions.json，找出尚未有解答的題目；每次最多解 6 題（題號由小到大）。
+   若沒有未解題目，直接結束並簡短說明「無待解題目」。
+2. 逐題：讀 data/transcripts/*.json 的轉寫（含 figure 圖表描述與 notes）與 data/bank.json 的選項，
+   推導答案並寫出中英雙語 steps / traps / tip，寫入 data/ai/solutions_batchN.json，
+   再用 tools/merge_solutions.py --file 合併進 data/solutions.json。
+3. 每一題都要在 tools/verify_answers.py 登記一個「獨立驗算」函式（用與解答不同的路徑算出答案，
+   例如數值代入、精確解方程、幾何坐標、命題真值表、窮舉計數），並加入 CHECKS 表。
+4. 跑 tools/verify_answers.py（必須「失敗 0」）與 tools/validate_bank.py（必須「0 個錯誤」）；
+   有 MISMATCH 就修到達標，不要略過。
+5. 若某題的圖表描述不足以判斷，跳過該題並列為「需人工看圖」，不要猜。
+6. 禁止修改 data/transcripts/*、data/releases.json、site/**；禁止 git commit 或 git push。
+7. 完成後輸出一段簡短報告：本批題號與答案、驗算結果、需人工看圖或轉寫可疑的題目。
+────────────────────────────────────────────────────────
+
+備註：本檔僅供人手貼上使用；若日後 CodeBuddy 支援以 API 建立自動化，可直接讀取本檔內容建立任務。

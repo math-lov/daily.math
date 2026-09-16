@@ -1,0 +1,116 @@
+{
+  "2025-p2-q27": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Distance from the centre to the chord", "zh": "第 1 步 · 圓心到弦的距離" },
+          "math": "d=|{-5}|=5",
+          "en": "The centre is $(7,-5)$ and the chord $PQ$ lies on the $x$-axis, so the perpendicular distance is $5$.",
+          "zh": "圓心為 $(7,-5)$，弦 $PQ$ 在 $x$ 軸上，故垂直距離為 $5$。",
+          "highlight": ["d=5"]
+        },
+        {
+          "title": { "en": "Step 2 · Pythagoras on the half-chord", "zh": "第 2 步 · 半弦的勾股定理" },
+          "math": "r^{2}=12^{2}+5^{2}=169 \\;\\Rightarrow\\; r=13",
+          "en": "$PQ=24$ so the half-chord is $12$; $r^{2}=d^{2}+(\\text{half-chord})^{2}$.",
+          "zh": "$PQ=24$，半弦為 $12$；$r^{2}=d^{2}+(\\text{半弦})^{2}$。",
+          "highlight": ["r=13"]
+        },
+        {
+          "title": { "en": "Step 3 · Write the equation", "zh": "第 3 步 · 寫出方程" },
+          "math": "(x-7)^{2}+(y+5)^{2}=169",
+          "en": "Centre $(7,-5)$, radius $13$ — note the sign flips in both brackets.",
+          "zh": "圓心 $(7,-5)$、半徑 $13$ —— 兩個括號的符號都與坐標相反。",
+          "highlight": ["(x-7)^{2}+(y+5)^{2}=169"]
+        },
+        {
+          "title": { "en": "Step 4 · Expand", "zh": "第 4 步 · 展開" },
+          "math": "x^{2}+y^{2}-14x+10y+(49+25-169)=0",
+          "en": "Constant $=74-169=-95$, so $x^{2}+y^{2}-14x+10y-95=0$ — option A, exactly as printed.",
+          "zh": "常數 $=74-169=-95$，故 $x^{2}+y^{2}-14x+10y-95=0$ —— 與印刷的選項 A 完全一致。",
+          "highlight": ["x^{2}+y^{2}-14x+10y-95=0"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "C",
+          "en": "$-119$ — using the centre's $x$-coordinate as the distance to the $x$-axis: $r^{2}=12^{2}+7^{2}=193$, constant $=74-193=-119$.",
+          "zh": "$-119$ —— 誤把圓心的 $x$ 坐標當成到 $x$ 軸的距離：$r^{2}=12^{2}+7^{2}=193$，常數 $=74-193=-119$。"
+        },
+        {
+          "opt": "B",
+          "en": "$+14x$ — the sign in front of $x$ must be **minus** the centre's $x$-coordinate ($-2\\times7=-14$).",
+          "zh": "$+14x$ —— $x$ 前的符號應是圓心 $x$ 坐標的相反數（$-2\\times7=-14$）。"
+        },
+        {
+          "opt": "D",
+          "en": "$+14x-10y-119$ — both bracket signs flipped (centre taken as $(-7,5)$) **and** the wrong radius.",
+          "zh": "$+14x-10y-119$ —— 兩個括號符號都反了（把圓心當成 $(-7,5)$），半徑也取錯。"
+        }
+      ],
+      "tip": {
+        "en": "Centre $(h,k)$ ⇒ $x^{2}+y^{2}-2hx-2ky+(h^{2}+k^{2}-r^{2})=0$: the sign in front of $x$/$y$ is the opposite of the centre's coordinate. For a chord at distance $d$: $r^{2}=d^{2}+(\\text{half-chord})^{2}$.",
+        "zh": "圓心 $(h,k)$ ⇒ $x^{2}+y^{2}-2hx-2ky+(h^{2}+k^{2}-r^{2})=0$：$x$／$y$ 前的符號與圓心坐標相反。弦距 $d$ 時 $r^{2}=d^{2}+(\\text{半弦})^{2}$。"
+      }
+    }
+  },
+  "2025-p2-q44": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · What a standard score means", "zh": "第 1 步 · 標準分的意義" },
+          "math": "z=\\frac{x-\\bar{x}}{\\sigma},\\quad \\sigma=2",
+          "en": "One standard-score unit is worth $2$ marks in this test.",
+          "zh": "在本測驗中，標準分相差 $1$ 即相差 $2$ 分。",
+          "highlight": ["\\sigma=2"]
+        },
+        {
+          "title": { "en": "Step 2 · Turn marks into standard-score units", "zh": "第 2 步 · 把分差換成標準分差" },
+          "math": "\\text{gap}=\\frac{6}{2}=3",
+          "en": "The two raw scores differ by $6$ marks, i.e. $3$ standard-deviation units.",
+          "zh": "兩人原始分相差 $6$ 分，即 $3$ 個標準差單位。",
+          "highlight": ["\\text{gap}=3"]
+        },
+        {
+          "title": { "en": "Step 3 · Solve", "zh": "第 3 步 · 求解" },
+          "math": "|z-(-2)|=3 \\;\\Rightarrow\\; z=1 \\quad\\text{or}\\quad z=-5",
+          "en": "The girl's standard score is $3$ units away from the boy's $-2$; we are not told who scored higher, so two answers.",
+          "zh": "女生的標準分與男生的 $-2$ 相差 $3$ 個單位；因未說明誰較高分，故有兩個可能。",
+          "highlight": ["z=1", "z=-5"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "z=-5 \\quad\\text{or}\\quad z=1",
+          "en": "That is option A.",
+          "zh": "即選項 A。",
+          "highlight": ["\\text{A}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "B",
+          "en": "$-5$ or $3$ — the two values are $8$ and $2$ units from $-2$; they should be equally far from the boy's score.",
+          "zh": "$-5$ 或 $3$ —— 兩值與 $-2$ 分別相差 $8$ 與 $2$ 個單位，應該等距。"
+        },
+        {
+          "opt": "C",
+          "en": "$-3$ or $1$ — a gap of $2$ instead of $3$: dividing $6$ by $3$, or using $\\sigma=3$.",
+          "zh": "$-3$ 或 $1$ —— 間距取成 $2$ 而不是 $3$（把 $6$ 除了 $3$，或誤用 $\\sigma=3$）。"
+        },
+        {
+          "opt": "D",
+          "en": "$-3$ or $3$ — treating the two standard scores as symmetric about $0$, ignoring the boy's own standard score.",
+          "zh": "$-3$ 或 $3$ —— 以為兩人的標準分關於 $0$ 對稱，忽略了男生自己的標準分。"
+        }
+      ],
+      "tip": {
+        "en": "Standard score: raw-score difference $=\\sigma\\times$ (standard-score difference). Divide the marks by $\\sigma$ **first**, then set $|z-z_{\\text{boy}}|=$ that gap.",
+        "zh": "標準分：原始分差 $=\\sigma\\times$（標準分差）。先把分數除以 $\\sigma$，再寫 $|z-z_{\\text{男生}}|=$ 該間距。"
+      }
+    }
+  }
+}

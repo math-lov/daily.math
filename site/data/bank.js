@@ -14,6 +14,7 @@ window.BANK = {
  "questions": [
   {
    "id": "2025-p2-q01",
+   "code": "25-P2Q01",
    "no": 1,
    "paper": "2025-p2",
    "section": "A",
@@ -45,6 +46,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q02",
+   "code": "25-P2Q02",
    "no": 2,
    "paper": "2025-p2",
    "section": "A",
@@ -76,6 +78,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q03",
+   "code": "25-P2Q03",
    "no": 3,
    "paper": "2025-p2",
    "section": "A",
@@ -107,6 +110,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q04",
+   "code": "25-P2Q04",
    "no": 4,
    "paper": "2025-p2",
    "section": "A",
@@ -138,6 +142,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q05",
+   "code": "25-P2Q05",
    "no": 5,
    "paper": "2025-p2",
    "section": "A",
@@ -169,6 +174,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q06",
+   "code": "25-P2Q06",
    "no": 6,
    "paper": "2025-p2",
    "section": "A",
@@ -200,6 +206,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q07",
+   "code": "25-P2Q07",
    "no": 7,
    "paper": "2025-p2",
    "section": "A",
@@ -231,6 +238,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q08",
+   "code": "25-P2Q08",
    "no": 8,
    "paper": "2025-p2",
    "section": "A",
@@ -262,6 +270,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q09",
+   "code": "25-P2Q09",
    "no": 9,
    "paper": "2025-p2",
    "section": "A",
@@ -293,6 +302,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q10",
+   "code": "25-P2Q10",
    "no": 10,
    "paper": "2025-p2",
    "section": "A",
@@ -324,6 +334,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q11",
+   "code": "25-P2Q11",
    "no": 11,
    "paper": "2025-p2",
    "section": "A",
@@ -355,6 +366,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q12",
+   "code": "25-P2Q12",
    "no": 12,
    "paper": "2025-p2",
    "section": "A",
@@ -386,6 +398,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q13",
+   "code": "25-P2Q13",
    "no": 13,
    "paper": "2025-p2",
    "section": "A",
@@ -417,6 +430,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q14",
+   "code": "25-P2Q14",
    "no": 14,
    "paper": "2025-p2",
    "section": "A",
@@ -448,6 +462,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q15",
+   "code": "25-P2Q15",
    "no": 15,
    "paper": "2025-p2",
    "section": "A",
@@ -479,6 +494,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q16",
+   "code": "25-P2Q16",
    "no": 16,
    "paper": "2025-p2",
    "section": "A",
@@ -510,6 +526,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q17",
+   "code": "25-P2Q17",
    "no": 17,
    "paper": "2025-p2",
    "section": "A",
@@ -541,6 +558,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q18",
+   "code": "25-P2Q18",
    "no": 18,
    "paper": "2025-p2",
    "section": "A",
@@ -572,6 +590,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q19",
+   "code": "25-P2Q19",
    "no": 19,
    "paper": "2025-p2",
    "section": "A",
@@ -603,6 +622,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q20",
+   "code": "25-P2Q20",
    "no": 20,
    "paper": "2025-p2",
    "section": "A",
@@ -634,6 +654,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q21",
+   "code": "25-P2Q21",
    "no": 21,
    "paper": "2025-p2",
    "section": "A",
@@ -665,6 +686,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q22",
+   "code": "25-P2Q22",
    "no": 22,
    "paper": "2025-p2",
    "section": "A",
@@ -696,6 +718,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q23",
+   "code": "25-P2Q23",
    "no": 23,
    "paper": "2025-p2",
    "section": "A",
@@ -727,6 +750,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q24",
+   "code": "25-P2Q24",
    "no": 24,
    "paper": "2025-p2",
    "section": "A",
@@ -758,6 +782,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q25",
+   "code": "25-P2Q25",
    "no": 25,
    "paper": "2025-p2",
    "section": "A",
@@ -789,6 +814,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q26",
+   "code": "25-P2Q26",
    "no": 26,
    "paper": "2025-p2",
    "section": "A",
@@ -820,6 +846,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q27",
+   "code": "25-P2Q27",
    "no": 27,
    "paper": "2025-p2",
    "section": "A",
@@ -834,8 +861,8 @@ window.BANK = {
    "difficulty": 3,
    "timeSec": 120,
    "stem": {
-    "text": "The coordinates of the centre of the circle C are (7, 5). If C cuts the x-axis at the points P and Q such that PQ = 24, then the equation of C is",
-    "html": "The coordinates of the centre of the circle C are (7, 5). If C cuts the x-axis at the points P and Q such that PQ $=$ 24, then the equation of C is",
+    "text": "The coordinates of the centre of the circle C are (7, -5). If C cuts the x-axis at the points P and Q such that PQ = 24, then the equation of C is",
+    "html": "The coordinates of the centre of the circle C are (7, $-5)$. If C cuts the x-axis at the points P and Q such that PQ $=$ 24, then the equation of C is",
     "latex": "PQ=24"
    },
    "figure": null,
@@ -851,6 +878,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q28",
+   "code": "25-P2Q28",
    "no": 28,
    "paper": "2025-p2",
    "section": "A",
@@ -882,6 +910,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q29",
+   "code": "25-P2Q29",
    "no": 29,
    "paper": "2025-p2",
    "section": "A",
@@ -913,6 +942,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q30",
+   "code": "25-P2Q30",
    "no": 30,
    "paper": "2025-p2",
    "section": "A",
@@ -944,6 +974,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q31",
+   "code": "25-P2Q31",
    "no": 31,
    "paper": "2025-p2",
    "section": "B",
@@ -975,6 +1006,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q32",
+   "code": "25-P2Q32",
    "no": 32,
    "paper": "2025-p2",
    "section": "B",
@@ -1006,6 +1038,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q33",
+   "code": "25-P2Q33",
    "no": 33,
    "paper": "2025-p2",
    "section": "B",
@@ -1037,6 +1070,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q34",
+   "code": "25-P2Q34",
    "no": 34,
    "paper": "2025-p2",
    "section": "B",
@@ -1068,6 +1102,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q35",
+   "code": "25-P2Q35",
    "no": 35,
    "paper": "2025-p2",
    "section": "B",
@@ -1099,6 +1134,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q36",
+   "code": "25-P2Q36",
    "no": 36,
    "paper": "2025-p2",
    "section": "B",
@@ -1130,6 +1166,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q37",
+   "code": "25-P2Q37",
    "no": 37,
    "paper": "2025-p2",
    "section": "B",
@@ -1161,6 +1198,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q38",
+   "code": "25-P2Q38",
    "no": 38,
    "paper": "2025-p2",
    "section": "B",
@@ -1192,6 +1230,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q39",
+   "code": "25-P2Q39",
    "no": 39,
    "paper": "2025-p2",
    "section": "B",
@@ -1223,6 +1262,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q40",
+   "code": "25-P2Q40",
    "no": 40,
    "paper": "2025-p2",
    "section": "B",
@@ -1254,6 +1294,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q41",
+   "code": "25-P2Q41",
    "no": 41,
    "paper": "2025-p2",
    "section": "B",
@@ -1285,6 +1326,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q42",
+   "code": "25-P2Q42",
    "no": 42,
    "paper": "2025-p2",
    "section": "B",
@@ -1316,6 +1358,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q43",
+   "code": "25-P2Q43",
    "no": 43,
    "paper": "2025-p2",
    "section": "B",
@@ -1347,6 +1390,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q44",
+   "code": "25-P2Q44",
    "no": 44,
    "paper": "2025-p2",
    "section": "B",
@@ -1361,8 +1405,8 @@ window.BANK = {
    "difficulty": 3,
    "timeSec": 120,
    "stem": {
-    "text": "The standard scores of a boy and a girl in a Mathematics test are 2 and z respectively. The standard deviation of the scores of the Mathematics test is 2 marks. If the difference of the test score of the boy and the test score of the girl is 6 marks, find z.",
-    "html": "The standard scores of a boy and a girl in a Mathematics test are 2 and z respectively. The standard deviation of the scores of the Mathematics test is 2 marks. If the difference of the test score of the boy and the test score of the girl is 6 marks, find z.",
+    "text": "The standard scores of a boy and a girl in a Mathematics test are -2 and z respectively. The standard deviation of the scores of the Mathematics test is 2 marks. If the difference of the test score of the boy and the test score of the girl is 6 marks, find z.",
+    "html": "The standard scores of a boy and a girl in a Mathematics test are $-2$ and z respectively. The standard deviation of the scores of the Mathematics test is 2 marks. If the difference of the test score of the boy and the test score of the girl is 6 marks, find z.",
     "latex": null
    },
    "figure": null,
@@ -1378,6 +1422,7 @@ window.BANK = {
   },
   {
    "id": "2025-p2-q45",
+   "code": "25-P2Q45",
    "no": 45,
    "paper": "2025-p2",
    "section": "B",

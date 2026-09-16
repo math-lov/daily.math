@@ -214,6 +214,31 @@ def pick_difficulty(no: int, q: dict) -> int:
 
 TIME_BY_DIFFICULTY = {1: 60, 2: 90, 3: 120}
 
+# ---------- 題目編號（顯示用）----------
+# 歷年試卷：2025-p2 → 前綴 "25-P2" → 題目 "25-P2Q03"
+# 非歷年卷：transcript 的 "paperCode"（如 MOCK-A）→ "MOCK-A-Q03"；沒有就用檔名
+PAPER_ID_RE = re.compile(r"^(\d{4})-p(\d+)$")
+
+
+def paper_prefix(paper_id: str, src: dict) -> str:
+    code = str(src.get("paperCode") or "").strip()
+    if code:
+        return code
+    m = PAPER_ID_RE.match(paper_id)
+    if m:
+        return f"{m.group(1)[2:]}-P{m.group(2)}"
+    return paper_id
+
+
+AUTO_PREFIX_RE = re.compile(r"^\d{2}-P\d+$")
+
+
+def question_code(prefix: str, no: int) -> str:
+    """25-P2 → 25-P2Q03；自訂代碼 MOCK-A → MOCK-A-Q03。"""
+    if AUTO_PREFIX_RE.match(prefix):
+        return f"{prefix}Q{no:02d}"
+    return f"{prefix}-Q{no:02d}"
+
 
 def main() -> int:
     os.makedirs(OUT_DIR, exist_ok=True)
@@ -231,6 +256,7 @@ def main() -> int:
 
     questions = []
     for paper_id, src in papers:
+        prefix = paper_prefix(paper_id, src)
         for q in src.get("questions", []):
             no = int(q["question_number"])
             qid = f"{paper_id}-q{no:02d}"
@@ -240,6 +266,7 @@ def main() -> int:
 
             questions.append({
                 "id": qid,
+                "code": question_code(prefix, no),      # 顯示用編號，如 25-P2Q03
                 "no": no,
                 "paper": paper_id,
                 "section": q.get("section"),

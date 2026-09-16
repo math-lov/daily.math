@@ -1,0 +1,458 @@
+{
+  "2025-p2-q38": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Tangent–chord angle", "zh": "第 1 步 · 切線與弦的夾角" },
+          "math": "\\angle CDT=41^{\\circ} \\;\\Rightarrow\\; \\angle DAC=41^{\\circ}",
+          "en": "The angle between the tangent $TD$ and the chord $DC$ equals the angle in the alternate segment.",
+          "zh": "切線 $TD$ 與弦 $DC$ 的夾角等於另一弓形內的圓周角。",
+          "highlight": ["\\angle DAC=41^{\\circ}"]
+        },
+        {
+          "title": { "en": "Step 2 · $AC$ is a diameter", "zh": "第 2 步 · $AC$ 是直徑" },
+          "math": "\\angle ADC=90^{\\circ} \\;\\Rightarrow\\; \\angle ACD=180^{\\circ}-90^{\\circ}-41^{\\circ}=49^{\\circ}",
+          "en": "Angle in a semicircle is a right angle.",
+          "zh": "半圓上的圓周角是直角。",
+          "highlight": ["\\angle ACD=49^{\\circ}"]
+        },
+        {
+          "title": { "en": "Step 3 · Angles at $E$", "zh": "第 3 步 · $E$ 處的角" },
+          "math": "\\angle CED=180^{\\circ}-\\angle BEC=180^{\\circ}-96^{\\circ}=84^{\\circ}",
+          "en": "$B$, $E$, $D$ are collinear, so the two angles at $E$ are supplementary.",
+          "zh": "$B$、$E$、$D$ 共線，故 $E$ 處兩角互補。",
+          "highlight": ["\\angle CED=84^{\\circ}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\angle CDE=180^{\\circ}-49^{\\circ}-84^{\\circ}=47^{\\circ}",
+          "en": "Angles in $\\Delta CDE$ sum to $180^{\\circ}$ — option A.",
+          "zh": "$\\Delta CDE$ 內角和 $180^{\\circ}$ —— 答案 A。",
+          "highlight": ["47^{\\circ}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "C",
+          "en": "$52^{\\circ}$ — using $\\angle CED=96^{\\circ}$ directly (forgetting that $\\angle BEC$ and $\\angle CED$ are supplementary).",
+          "zh": "$52^{\\circ}$ —— 直接把 $\\angle CED$ 當成 $96^{\\circ}$（忘記與 $\\angle BEC$ 互補）。"
+        },
+        {
+          "opt": "B",
+          "en": "$48^{\\circ}$ — from $\\angle ACD=42^{\\circ}$, i.e. mis-applying the tangent–chord angle to the wrong chord ($\\angle ADT$ instead of $\\angle CDT$).",
+          "zh": "$48^{\\circ}$ —— 把切弦角對錯了弦（取了 $\\angle ADT$ 而非 $\\angle CDT$）。"
+        },
+        {
+          "opt": "D",
+          "en": "$55^{\\circ}$ — dropping the right angle at $D$ (not using $AC$ as a diameter).",
+          "zh": "$55^{\\circ}$ —— 忘了 $AC$ 是直徑（即漏了 $\\angle ADC=90^{\\circ}$）。"
+        }
+      ],
+      "tip": {
+        "en": "Circle toolkit: tangent–chord = alternate segment; diameter ⇒ right angle at the circumference; two chords meeting inside ⇒ vertical/supplementary angles. Chain them from the tangent inwards.",
+        "zh": "圓的三大工具：切弦角 = 另一弓形的圓周角；直徑 ⇒ 圓周角為直角；兩弦相交 ⇒ 對頂角／互補。由切線往內逐層推。"
+      }
+    }
+  },
+  "2025-p2-q39": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Factorise", "zh": "第 1 步 · 因式分解" },
+          "math": "\\tan^{3}\\theta-2\\tan\\theta=\\tan\\theta\\,(\\tan^{2}\\theta-2)=0",
+          "en": "Do not divide by $\\tan\\theta$ — you would lose the $\\tan\\theta=0$ solutions.",
+          "zh": "不要直接除以 $\\tan\\theta$，否則會丟掉 $\\tan\\theta=0$ 的解。",
+          "highlight": ["\\tan\\theta(\\tan^{2}\\theta-2)=0"]
+        },
+        {
+          "title": { "en": "Step 2 · Two families", "zh": "第 2 步 · 兩類解" },
+          "math": "\\tan\\theta=0 \\quad\\text{or}\\quad \\tan\\theta=\\pm\\sqrt{2}",
+          "en": "$\\tan\\theta=0$ gives $\\theta=180^{\\circ}$; $\\tan\\theta=\\pm\\sqrt2$ gives $\\theta\\approx54.7^{\\circ}+180n$ or $125.3^{\\circ}+180n$.",
+          "zh": "$\\tan\\theta=0$ 給 $\\theta=180^{\\circ}$；$\\tan\\theta=\\pm\\sqrt2$ 給 $\\theta\\approx54.7^{\\circ}+180n$ 或 $125.3^{\\circ}+180n$。",
+          "highlight": ["\\tan\\theta=0", "\\tan\\theta=\\pm\\sqrt{2}"]
+        },
+        {
+          "title": { "en": "Step 3 · Keep only $90^{\\circ}<\\theta<270^{\\circ}$", "zh": "第 3 步 · 只取 $90^{\\circ}<\\theta<270^{\\circ}$" },
+          "math": "125.3^{\\circ},\\;180^{\\circ},\\;234.7^{\\circ}",
+          "en": "$54.7^{\\circ}$ is too small and $54.7^{\\circ}+180^{\\circ}=234.7^{\\circ}$ ✓; $125.3^{\\circ}$ ✓; $305.3^{\\circ}$ is too big.",
+          "zh": "$54.7^{\\circ}$ 太小，$234.7^{\\circ}$ ✓；$125.3^{\\circ}$ ✓；$305.3^{\\circ}$ 太大。",
+          "highlight": ["125.3^{\\circ}", "180^{\\circ}", "234.7^{\\circ}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "3\\ \\text{roots}",
+          "en": "Three roots — option B.",
+          "zh": "共三個根 —— 答案 B。",
+          "highlight": ["3"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "A",
+          "en": "$2$ — counting only the $\\tan\\theta=\\pm\\sqrt2$ family and throwing away $\\theta=180^{\\circ}$ (the classic division-by-$\\tan\\theta$ error).",
+          "zh": "$2$ —— 只算了 $\\tan\\theta=\\pm\\sqrt2$ 的一族，丟了 $\\theta=180^{\\circ}$（典型的「直接除以 $\\tan\\theta$」錯誤）。"
+        },
+        {
+          "opt": "C",
+          "en": "$4$ — forgetting that $\\tan\\theta$ has period $180^{\\circ}$, so each of $\\pm\\sqrt2$ gives exactly one solution in the $180^{\\circ}$-wide interval.",
+          "zh": "$4$ —— 忘了 $\\tan\\theta$ 的週期是 $180^{\\circ}$，誤以為 $\\pm\\sqrt2$ 各給兩個解。"
+        },
+        {
+          "opt": "D",
+          "en": "$5$ — counting outside the given range (e.g. including $54.7^{\\circ}$ or $305.3^{\\circ}$).",
+          "zh": "$5$ —— 把範圍外的解也數進去（例如 $54.7^{\\circ}$ 或 $305.3^{\\circ}$）。"
+        }
+      ],
+      "tip": {
+        "en": "Number-of-roots questions: factorise (never divide), then test each branch against the interval. In any $180^{\\circ}$ window, $\\tan\\theta=k$ has exactly **one** solution.",
+        "zh": "問「根的數目」：先分解（切勿直接除），再逐族對區間測試。任何一個 $180^{\\circ}$ 寬的區間內，$\\tan\\theta=k$ 恰有**一**個解。"
+      }
+    }
+  },
+  "2025-p2-q40": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · The projection of $P$", "zh": "第 1 步 · $P$ 的投影" },
+          "math": "G=\\text{centroid of }\\Delta QRS,\\quad PG\\perp\\Delta QRS",
+          "en": "In a regular tetrahedron the foot of the perpendicular from $P$ is the centre of the opposite face.",
+          "zh": "正四面體中，由 $P$ 向對面作的垂足就是該面的中心。",
+          "highlight": ["PG\\perp\\Delta QRS"]
+        },
+        {
+          "title": { "en": "Step 2 · The angle we need", "zh": "第 2 步 · 所求的角" },
+          "math": "\\text{angle}=(PQ,\\Delta QRS)=\\angle PQG",
+          "en": "The angle between a line and a plane is measured between the line and its projection $QG$.",
+          "zh": "直線與平面的夾角，就是直線與其投影 $QG$ 的夾角。",
+          "highlight": ["\\angle PQG"]
+        },
+        {
+          "title": { "en": "Step 3 · Compute $QG$ (edge $=1$)", "zh": "第 3 步 · 算 $QG$（邊長 $=1$）" },
+          "math": "QG=\\frac{2}{3}\\times\\frac{\\sqrt{3}}{2}=\\frac{\\sqrt{3}}{3}",
+          "en": "Centroid divides each median in $2:1$; the median of an equilateral triangle is $\\frac{\\sqrt3}{2}$.",
+          "zh": "重心把中線分成 $2:1$；等邊三角形中線為 $\\frac{\\sqrt3}{2}$。",
+          "highlight": ["QG=\\frac{\\sqrt{3}}{3}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\cos\\angle PQG=\\frac{QG}{PQ}=\\frac{\\sqrt{3}}{3} \\;\\Rightarrow\\; \\angle PQG\\approx54.7^{\\circ}",
+          "en": "Correct to the nearest degree: $55^{\\circ}$ — option B.",
+          "zh": "取至最接近的度數：$55^{\\circ}$ —— 答案 B。",
+          "highlight": ["55^{\\circ}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "C",
+          "en": "$60^{\\circ}$ — that is the angle **inside a face** (e.g. $\\angle PQR$), not the angle between $PQ$ and the plane.",
+          "zh": "$60^{\\circ}$ —— 那是**面內**的角（例如 $\\angle PQR$），不是線與平面的夾角。"
+        },
+        {
+          "opt": "D",
+          "en": "$71^{\\circ}$ — the dihedral angle between two faces (its cosine is $\\frac13$, giving $70.5^{\\circ}$), a different angle entirely.",
+          "zh": "$71^{\\circ}$ —— 那是兩個面之間的二面角（餘弦為 $\\frac13$，即 $70.5^{\\circ}$），並非本題所求。"
+        },
+        {
+          "opt": "A",
+          "en": "$35^{\\circ}$ — using $\\frac{PG}{PQ}$ instead of $\\cos$: $\\frac{\\sqrt{6}}{3}$ would be $\\sin$ of the angle.",
+          "zh": "$35^{\\circ}$ —— 用了 $\\frac{PG}{PQ}$；那是角的正弦而非餘弦。"
+        }
+      ],
+      "tip": {
+        "en": "Regular tetrahedron numbers to memorise: face angle $60^{\\circ}$, line-to-face angle $\\cos^{-1}\\frac{\\sqrt3}{3}\\approx54.7^{\\circ}$, face-to-face (dihedral) $\\cos^{-1}\\frac13\\approx70.5^{\\circ}$.",
+        "zh": "正四面體要記的三個數：面內角 $60^{\\circ}$、線面角 $\\cos^{-1}\\frac{\\sqrt3}{3}\\approx54.7^{\\circ}$、二面角 $\\cos^{-1}\\frac13\\approx70.5^{\\circ}$。"
+      }
+    }
+  },
+  "2025-p2-q41": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Set up the triangle", "zh": "第 1 步 · 設三角形" },
+          "math": "O(0,0),\\;U(20,0),\\;V(0,h)",
+          "en": "The $x$-coordinate of the in-centre is the in-radius $r=6$ only if the right angle is at the origin — which it is here.",
+          "zh": "當直角在原點時，內心的 $x$ 坐標正是內切圓半徑 $r=6$（本例正是如此）。",
+          "highlight": ["O(0,0)", "U(20,0)", "V(0,h)"]
+        },
+        {
+          "title": { "en": "Step 2 · In-radius of a right triangle", "zh": "第 2 步 · 直角三角形的內切圓半徑" },
+          "math": "r=\\frac{a+b-c}{2}=\\frac{20+h-\\sqrt{400+h^{2}}}{2}=6",
+          "en": "$a,b$ are the legs, $c$ the hypotenuse.",
+          "zh": "$a,b$ 為兩直角邊，$c$ 為斜邊。",
+          "highlight": ["\\frac{a+b-c}{2}=6"]
+        },
+        {
+          "title": { "en": "Step 3 · Solve for $h$", "zh": "第 3 步 · 解出 $h$" },
+          "math": "\\sqrt{400+h^{2}}=8+h \\;\\Rightarrow\\; 400=64+16h \\;\\Rightarrow\\; h=21",
+          "en": "Square both sides; the $h^{2}$ terms cancel.",
+          "zh": "兩邊平方，$h^{2}$ 相消。",
+          "highlight": ["h=21"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "[\\Delta OUV]=\\frac{1}{2}\\times20\\times21=210",
+          "en": "Check: $r=\\frac{20+21-29}{2}=6$ ✓ — option C.",
+          "zh": "驗算：$r=\\frac{20+21-29}{2}=6$ ✓ —— 答案 C。",
+          "highlight": ["210"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "D",
+          "en": "$250$ — using area $=r\\times s$ with the wrong semi-perimeter, or $h=25$.",
+          "zh": "$250$ —— 用 $r\\times s$ 時半周界取錯，或取了 $h=25$。"
+        },
+        {
+          "opt": "B",
+          "en": "$87$ — from guessing $h\\approx8.7$ instead of solving the equation.",
+          "zh": "$87$ —— 沒有解方程，只是估了 $h$ 的值。"
+        },
+        {
+          "opt": "A",
+          "en": "$70$ — treating the in-centre's $x$-coordinate as the height or halving the wrong quantity.",
+          "zh": "$70$ —— 把內心的 $x$ 坐標當成高，或把錯的量減半。"
+        }
+      ],
+      "tip": {
+        "en": "Right triangle with legs $a,b$: $r=\\frac{a+b-c}{2}$ and area $=rs$ where $s=\\frac{a+b+c}{2}$. With the right angle at the origin the in-centre is simply $(r,r)$.",
+        "zh": "兩直角邊 $a,b$ 的直角三角形：$r=\\frac{a+b-c}{2}$，面積 $=rs$（$s=\\frac{a+b+c}{2}$）。直角在原點時內心就是 $(r,r)$。"
+      }
+    }
+  },
+  "2025-p2-q42": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Count everyone", "zh": "第 1 步 · 全部人數" },
+          "math": "2+4+12=18,\\quad \\binom{18}{7}=31824",
+          "en": "Choose $7$ out of $18$ with no restriction.",
+          "zh": "不加限制地從 $18$ 人中選 $7$ 人。",
+          "highlight": ["\\binom{18}{7}=31824"]
+        },
+        {
+          "title": { "en": "Step 2 · Subtract the forbidden case", "zh": "第 2 步 · 減去不合條件者" },
+          "math": "\\binom{16}{7}=11440",
+          "en": "'At least $1$ manager' ⇒ exclude the groups with **no** manager (chosen from the other $16$).",
+          "zh": "「至少 $1$ 位經理」⇒ 排除**沒有**經理的情況（只從其餘 $16$ 人中選）。",
+          "highlight": ["\\binom{16}{7}=11440"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "31824-11440=20384",
+          "en": "Option B.",
+          "zh": "答案 B。",
+          "highlight": ["20384"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "D",
+          "en": "$31824$ — the unrestricted total; you forgot to remove the groups with no manager.",
+          "zh": "$31824$ —— 那是未加限制的總數，忘了剔走沒有經理的情況。"
+        },
+        {
+          "opt": "A",
+          "en": "$16016$ — subtracting $\\binom{16}{8}$ or $\\binom{17}{7}$-style wrong counts.",
+          "zh": "$16016$ —— 減錯了數（例如減了 $\\binom{16}{8}$）。"
+        },
+        {
+          "opt": "C",
+          "en": "$22880$ — adding instead of subtracting ($31824-2\\times11440$); remember 'at least one' means *exclude none*.",
+          "zh": "$22880$ —— 用加而非減；「至少一個」的意思是「排除一個都沒有」。"
+        }
+      ],
+      "tip": {
+        "en": "'At least one of $X$' is nearly always total − (none of $X$): $\\binom{18}{7}-\\binom{16}{7}$. Complementary counting beats case-splitting.",
+        "zh": "「$X$ 至少一個」幾乎都寫成「總數 − $X$ 一個都沒有」：$\\binom{18}{7}-\\binom{16}{7}$。用互補計數比分類討論快。"
+      }
+    }
+  },
+  "2025-p2-q43": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Total ways", "zh": "第 1 步 · 總取法" },
+          "math": "\\binom{13}{6}=1716",
+          "en": "$9$ apple $+4$ grape $=13$ cans, choose $6$.",
+          "zh": "$9$ 罐蘋果 $+4$ 罐葡萄 $=13$ 罐，取 $6$ 罐。",
+          "highlight": ["\\binom{13}{6}=1716"]
+        },
+        {
+          "title": { "en": "Step 2 · Count the complementary event (easier)", "zh": "第 2 步 · 算對立事件（較快）" },
+          "math": "P(4\\text{ grape})=\\frac{\\binom{4}{4}\\binom{9}{2}}{1716}=\\frac{36}{1716}",
+          "en": "'At most $3$ grape' is the complement of 'exactly $4$ grape' (there are only $4$ grape cans).",
+          "zh": "「最多 $3$ 罐葡萄」的對立事件是「剛好 $4$ 罐葡萄」（葡萄只有 $4$ 罐）。",
+          "highlight": ["\\frac{36}{1716}"]
+        },
+        {
+          "title": { "en": "Step 3 · Subtract", "zh": "第 3 步 · 相減" },
+          "math": "1-\\frac{36}{1716}=\\frac{1680}{1716}",
+          "en": "Or add the four cases $k=0,1,2,3$: $84+504+756+336=1680$ — the same number.",
+          "zh": "也可把 $k=0,1,2,3$ 四種情況相加：$84+504+756+336=1680$，結果相同。",
+          "highlight": ["\\frac{1680}{1716}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\frac{1680}{1716}=\\frac{140}{143}",
+          "en": "Divide top and bottom by $12$ — option C.",
+          "zh": "分子分母同除 $12$ —— 答案 C。",
+          "highlight": ["\\frac{140}{143}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "B",
+          "en": "$\\frac{133}{143}$ — an arithmetic slip inside the complement ($\\binom{9}{2}=36$, not $\\binom{9}{2}+$…); $143-133=10$, i.e. $120/1716$ instead of $36/1716$.",
+          "zh": "$\\frac{133}{143}$ —— 對立事件的組合數算錯（$\\binom{9}{2}=36$，不是別的數）。"
+        },
+        {
+          "opt": "D",
+          "en": "$\\frac{714}{715}$ — that is $\\frac{1716-6}{1716}$-style (using $\\binom{4}{4}$ with a wrong second factor, or $1-\\frac{6}{1716}$).",
+          "zh": "$\\frac{714}{715}$ —— 相當於只減了 $6/1716$（第二個組合數取錯）。"
+        },
+        {
+          "opt": "A",
+          "en": "$\\frac{9}{13}$ — the ratio of apples to total cans, not a probability of this experiment.",
+          "zh": "$\\frac{9}{13}$ —— 那是蘋果佔比，不是本實驗的概率。"
+        }
+      ],
+      "tip": {
+        "en": "When the favourable event has many cases, use the complement. With $4$ grape cans, 'at most $3$' = $1-$'all $4$ grape' — one combination instead of four.",
+        "zh": "有利情況很多時用對立事件。葡萄只有 $4$ 罐，「最多 $3$ 罐」= $1-$「$4$ 罐全葡萄」—— 只需算一個組合，而非四個。"
+      }
+    }
+  },
+  "2025-p2-q44": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · What a standard score means", "zh": "第 1 步 · 標準分的意義" },
+          "math": "z=\\frac{x-\\bar{x}}{\\sigma},\\quad \\sigma=2",
+          "en": "A difference of $1$ standard score unit is $2$ marks.",
+          "zh": "標準分相差 $1$ 即相差 $2$ 分。",
+          "highlight": ["\\sigma=2"]
+        },
+        {
+          "title": { "en": "Step 2 · Turn marks into standard-score units", "zh": "第 2 步 · 把分差換成標準分差" },
+          "math": "\\text{gap}=\\frac{6}{2}=3 \\;\\Rightarrow\\; |z-2|=3",
+          "en": "The two students' raw scores differ by $6$ marks $=3$ standard-deviation units.",
+          "zh": "兩人原始分相差 $6$ 分 $=3$ 個標準差單位。",
+          "highlight": ["|z-2|=3"]
+        },
+        {
+          "title": { "en": "Step 3 · Solve in general", "zh": "第 3 步 · 一般地求解" },
+          "math": "|z-b|=3 \\;\\Rightarrow\\; z=b+3 \\quad\\text{or}\\quad z=b-3",
+          "en": "Write $b$ for the boy's standard score: the two possible standard scores are $3$ units away from his.",
+          "zh": "設男生的標準分為 $b$：女生的標準分與他相差 $3$ 個單位。",
+          "highlight": ["z=b\\pm3"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "z=-5 \\quad\\text{or}\\quad z=1",
+          "en": "The printed options correspond to $b=-2$ (the scan renders it faintly): $-5$ and $1$ are $3$ units from $-2$ — option A. ⚠ See the tip.",
+          "zh": "印刷的選項對應 $b=-2$（掃描圖上該符號較淡）：$-5$ 與 $1$ 距 $-2$ 各為 $3$ 個單位 —— 答案 A。⚠ 見下方提示。",
+          "highlight": ["\\text{A}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "B",
+          "en": "$-5$ or $3$ — the two values are not symmetrically placed around the boy's standard score (gap $8$ and $2$); a sign slip.",
+          "zh": "$-5$ 或 $3$ —— 兩值與男生標準分不對稱（差 $8$ 與 $2$），正負號出錯。"
+        },
+        {
+          "opt": "C",
+          "en": "$-3$ or $1$ — from dividing $6$ by $2$ twice, or using $\\sigma=3$.",
+          "zh": "$-3$ 或 $1$ —— 把 $6$ 除了兩次 $2$，或誤用 $\\sigma=3$。"
+        },
+        {
+          "opt": "D",
+          "en": "$-3$ or $3$ — treating the two standard scores as symmetric about $0$, ignoring the boy's own standard score.",
+          "zh": "$-3$ 或 $3$ —— 以為兩人的標準分關於 $0$ 對稱，忽略了男生自己的標準分。"
+        }
+      ],
+      "tip": {
+        "en": "Standard score: raw difference $=\\sigma\\times$ (standard-score difference). Divide the marks by $\\sigma$ **first**, then set up $|z-z_{\\text{boy}}|=3$. ⚠ 本題掃描圖上男生的標準分符號較模糊（題幹作 $2$、選項對應 $-2$），已列入需目視確認清單。",
+        "zh": "標準分：原始分差 $=\\sigma\\times$（標準分差）。先把分數除以 $\\sigma$，再寫 $|z-z_{\\text{男生}}|=3$。⚠ 本題掃描圖上男生標準分的正負號較模糊（題幹記作 $2$，但選項對應的是 $-2$），已列入需目視確認清單。"
+      }
+    }
+  },
+  "2025-p2-q45": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Effect of $\\times2$ and $+3$", "zh": "第 1 步 · 乘 $2$ 與加 $3$ 的影響" },
+          "math": "m_{2}=2m_{1},\\;r_{2}=2r_{1},\\;v_{2}=4v_{1}",
+          "en": "Doubling multiplies mean and range by $2$, and variance by $2^{2}$.",
+          "zh": "乘 $2$ 令平均數與全距乘 $2$，方差乘 $2^{2}$。",
+          "highlight": ["m_{2}=2m_{1}", "v_{2}=4v_{1}"]
+        },
+        {
+          "title": { "en": "Step 2 · Effect of $+3$", "zh": "第 2 步 · 加 $3$ 的影響" },
+          "math": "m_{3}=m_{1}+3,\\;r_{3}=r_{1},\\;v_{3}=v_{1}",
+          "en": "Shifting every value does not change range or variance.",
+          "zh": "整體平移不改變全距與方差。",
+          "highlight": ["r_{3}=r_{1}", "v_{3}=v_{1}"]
+        },
+        {
+          "title": { "en": "Step 3 · Statement I", "zh": "第 3 步 · 命題 I" },
+          "math": "m_{1}+m_{3}=2m_{1}+3>2m_{1}=m_{2}",
+          "en": "True, since $3>0$.",
+          "zh": "因 $3>0$，恆成立。",
+          "highlight": ["2m_{1}+3>2m_{1}"]
+        },
+        {
+          "title": { "en": "Step 4 · Statements II and III", "zh": "第 4 步 · 命題 II 與 III" },
+          "math": "r_{1}+r_{3}=2r_{1}=r_{2};\\quad v_{1}+v_{3}=2v_{1}<4v_{1}=v_{2}",
+          "en": "II is true for every data set; III needs $v_{1}>0$, which holds because $a,b,c,d$ are distinct.",
+          "zh": "II 對任何數據都成立；III 需要 $v_{1}>0$，而 $a,b,c,d$ 互異故成立。",
+          "highlight": ["r_{1}+r_{3}=r_{2}", "v_{1}+v_{3}<v_{2}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\text{I, II and III}",
+          "en": "All three — option D.",
+          "zh": "三項皆正確 —— 答案 D。",
+          "highlight": ["\\text{D}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "C",
+          "en": "$\\text{II and III only}$ — you rejected I; but $m_{2}=2m_{1}$ while $m_{1}+m_{3}=2m_{1}+3$, so I always holds.",
+          "zh": "$\\text{II 與 III}$ —— 誤否 I；實際上 $m_{2}=2m_{1}$ 而 $m_{1}+m_{3}=2m_{1}+3$，故 I 恆成立。"
+        },
+        {
+          "opt": "B",
+          "en": "$\\text{I and III only}$ — you thought adding $3$ changes the range; $r_{3}=r_{1}$ (shift-invariant).",
+          "zh": "$\\text{I 與 III}$ —— 誤以為加 $3$ 會改變全距；其實 $r_{3}=r_{1}$（平移不變）。"
+        },
+        {
+          "opt": "A",
+          "en": "$\\text{I and II only}$ — you doubted III by assuming $v_{1}$ could be $0$; but 'distinct' guarantees $v_{1}>0$.",
+          "zh": "$\\text{I 與 II}$ —— 懷疑 III 是因為以為 $v_{1}$ 可能為 $0$；但「互異」保證 $v_{1}>0$。"
+        }
+      ],
+      "tip": {
+        "en": "Transformation rules: $\\times k$ scales mean and range by $k$ and variance by $k^{2}$; $+c$ changes only the mean. So range never grows by shifting, and variance never grows by shifting.",
+        "zh": "變換規則：$\\times k$ 令平均數、全距乘 $k$、方差乘 $k^{2}$；$+c$ 只改變平均數。故平移不會令全距或方差變大。"
+      }
+    }
+  }
+}

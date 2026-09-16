@@ -1,0 +1,237 @@
+{
+  "2025-p2-q25": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Read what is fixed", "zh": "第 1 步 · 看清哪些是固定的" },
+          "math": "OA=\\sqrt{a^{2}+(2a)^{2}}=a\\sqrt{5}\\neq0",
+          "en": "$a>0$, so the distance from the origin to $A$ is a fixed positive number.",
+          "zh": "$a>0$，所以原點到 $A$ 的距離是一個固定的正數。",
+          "highlight": ["OA=a\\sqrt{5}"]
+        },
+        {
+          "title": { "en": "Step 2 · The condition is a fixed distance", "zh": "第 2 步 · 條件是「到定點等距」" },
+          "math": "AP=OA=a\\sqrt{5}\\ \\text{(constant)}",
+          "en": "$A$ is a fixed point and the distance from $P$ to $A$ never changes.",
+          "zh": "$A$ 是定點，而 $P$ 到 $A$ 的距離恆定。",
+          "highlight": ["AP=\\text{constant}"]
+        },
+        {
+          "title": { "en": "Step 3 · Name the locus", "zh": "第 3 步 · 說出軌跡名稱" },
+          "math": "(x-a)^{2}+(y-2a)^{2}=5a^{2}",
+          "en": "A set of points at a fixed distance from a fixed point is a circle centred at $A$.",
+          "zh": "「到定點等距」的點集是以 $A$ 為圓心的圓。",
+          "highlight": ["\\text{circle}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\text{circle}",
+          "en": "Option B. (A 'point' would need $AP=0$; a 'straight line' needs a fixed distance from a *line*.)",
+          "zh": "答案 B。（若 $AP=0$ 才是點；「到直線等距」才是直線。）",
+          "highlight": ["\\text{B}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "A",
+          "en": "$\\text{point}$ — that is the locus of $AP=0$, i.e. only $P=A$.",
+          "zh": "$\\text{point}$ —— 那是 $AP=0$ 的軌跡，即只有 $P=A$。"
+        },
+        {
+          "opt": "D",
+          "en": "$\\text{straight line}$ — that is $AP=$ distance from $P$ to a *line* (e.g. the perpendicular bisector is equidistant from two points).",
+          "zh": "$\\text{straight line}$ —— 那是「到一條**直線**等距」的情況（例如垂直平分線是到兩點等距）。"
+        },
+        {
+          "opt": "C",
+          "en": "$\\text{rhombus}$ — a rhombus comes from $PA=PB=PC=PD$ *to four* fixed points.",
+          "zh": "$\\text{rhombus}$ —— 菱形來自「與**四個**定點等距」。"
+        }
+      ],
+      "tip": {
+        "en": "Locus vocabulary: fixed distance from a fixed **point** → circle; from a fixed **line** → pair of parallel lines; equidistant from two points → perpendicular bisector; equidistant from two lines → angle bisector.",
+        "zh": "軌跡詞彙：與定**點**等距 → 圓；與定**直線**等距 → 兩條平行線；與兩點等距 → 垂直平分線；與兩直線等距 → 角平分線。"
+      }
+    }
+  },
+  "2025-p2-q26": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Perpendicularity relates $m$ and $n$", "zh": "第 1 步 · 垂直關係" },
+          "math": "3m+4n=0 \\;\\Rightarrow\\; m=-\\frac{4n}{3}",
+          "en": "$L_1$ has direction $(3,4)$, $L_2$ has $(m,n)$; their dot product must vanish.",
+          "zh": "$L_1$ 方向為 $(3,4)$，$L_2$ 方向為 $(m,n)$，內積須為 0。",
+          "highlight": ["m=-\\frac{4n}{3}"]
+        },
+        {
+          "title": { "en": "Step 2 · The two $x$-intercepts", "zh": "第 2 步 · 兩個 $x$ 截距" },
+          "math": "A=\\left(\\frac{20}{3},0\\right),\\quad B=\\left(\\frac{20}{m},0\\right)=\\left(-\\frac{15}{n},0\\right)",
+          "en": "Put $y=0$ in each equation.",
+          "zh": "在兩式中令 $y=0$。",
+          "highlight": ["A=\\left(\\frac{20}{3},0\\right)", "B=\\left(-\\frac{15}{n},0\\right)"]
+        },
+        {
+          "title": { "en": "Step 3 · Height of $\\Delta ABC$", "zh": "第 3 步 · $\\Delta ABC$ 的高" },
+          "math": "y_C=3.2+\\frac{7.2}{n}",
+          "en": "Solving the two line equations together gives $B C$'s $y$-coordinate; $C$ above the axis means $y_C>0$.",
+          "zh": "聯立兩直線方程得 $C$ 的 $y$ 坐標；$C$ 在軸上方即 $y_C>0$。",
+          "highlight": ["y_C=3.2+\\frac{7.2}{n}"]
+        },
+        {
+          "title": { "en": "Step 4 · Use the area $=6$", "zh": "第 4 步 · 用面積 $=6$" },
+          "math": "\\frac{1}{2}\\left|\\frac{20}{3}+\\frac{15}{n}\\right|\\left(3.2+\\frac{7.2}{n}\\right)=6 \\;\\Rightarrow\\; n=-9",
+          "en": "Only $n=-9$ satisfies both the area and $y_C>0$ (then $B=(\\frac53,0)$, $y_C=2.4$, area $=\\frac12\\times5\\times2.4=6$ ✓).",
+          "zh": "只有 $n=-9$ 同時符合面積與 $y_C>0$（此時 $B=(\\frac53,0)$、$y_C=2.4$，面積 $=\\frac12\\times5\\times2.4=6$ ✓）。",
+          "highlight": ["n=-9"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "n=-9",
+          "en": "Option B. (Check: $m=12$ gives $36-36=0$ ✓.)",
+          "zh": "答案 B。（驗算：$m=12$，$3(12)+4(-9)=0$ ✓。）",
+          "highlight": ["\\text{B}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "C",
+          "en": "$9$ — the sign is wrong: with $n=9$ the $x$-intercepts are on the same side of the origin ($\\frac{20}{3}$ and $\\frac53$), so the triangle is far too big (area $\\approx16.7$).",
+          "zh": "$9$ —— 符號錯了：$n=9$ 時兩個 $x$ 截距同側（$\\frac{20}{3}$ 與 $\\frac53$），三角形面積變成 $\\approx16.7$。"
+        },
+        {
+          "opt": "D",
+          "en": "$12$ — you mixed up $m$ and $n$: $m=12$ (with $n=-9$) is the perpendicular partner, not the answer.",
+          "zh": "$12$ —— 把 $m$ 與 $n$ 混淆：$m=12$（配 $n=-9$）才是垂直线，題目問的是 $n$。"
+        },
+        {
+          "opt": "A",
+          "en": "$-12$ — using $m=-12$ breaks perpendicularity ($3(-12)+4n\\neq0$) and gives area $\\approx7.0$.",
+          "zh": "$-12$ —— $m=-12$ 破壞了垂直條件，面積也變成 $\\approx7.0$。"
+        }
+      ],
+      "tip": {
+        "en": "Two-family question (perpendicular + area): get one relation from perpendicularity, then *verify* each option by computing the triangle. Sign errors are the whole point of the question, so check $C$ is on the stated side.",
+        "zh": "這類題有兩條線索（垂直 + 面積）：先用垂直得一個關係，再**逐個選項代入**驗證面積。正負號是本題的重點，務必檢查 $C$ 是否在題目所說的一側。"
+      }
+    }
+  },
+  "2025-p2-q27": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Distance from the centre to the chord", "zh": "第 1 步 · 圓心到弦的距離" },
+          "math": "d=5\\ \\text{(centre }(7,5)\\text{ to the }x\\text{-axis)}",
+          "en": "The chord $PQ$ lies on the $x$-axis.",
+          "zh": "弦 $PQ$ 位於 $x$ 軸上。",
+          "highlight": ["d=5"]
+        },
+        {
+          "title": { "en": "Step 2 · Pythagoras on the half-chord", "zh": "第 2 步 · 半弦的勾股定理" },
+          "math": "r^{2}=12^{2}+5^{2}=169 \\;\\Rightarrow\\; r=13",
+          "en": "$PQ=24$ so the half-chord is $12$.",
+          "zh": "$PQ=24$，半弦為 $12$。",
+          "highlight": ["r=13"]
+        },
+        {
+          "title": { "en": "Step 3 · Write the equation", "zh": "第 3 步 · 寫出方程" },
+          "math": "(x-7)^{2}+(y-5)^{2}=169",
+          "en": "Centre $(7,5)$, radius $13$.",
+          "zh": "圓心 $(7,5)$、半徑 $13$。",
+          "highlight": ["(x-7)^{2}+(y-5)^{2}=169"]
+        },
+        {
+          "title": { "en": "Step 4 · Expand", "zh": "第 4 步 · 展開" },
+          "math": "x^{2}+y^{2}-14x-10y+(49+25-169)=0",
+          "en": "The constant is $49+25-169=-95$: $x^{2}+y^{2}-14x-10y-95=0$ — option A.",
+          "zh": "常數項為 $49+25-169=-95$：$x^{2}+y^{2}-14x-10y-95=0$ —— 答案 A。",
+          "highlight": ["x^{2}+y^{2}-14x-10y-95=0"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "C",
+          "en": "$-119$ — comes from using radius $\\sqrt{193}$ (e.g. taking $24$ as the half-chord: $24^{2}+5^{2}=601$).",
+          "zh": "$-119$ —— 半徑取錯（例如把 $24$ 當半弦：$24^{2}+5^{2}=601$）。"
+        },
+        {
+          "opt": "B",
+          "en": "$+14x-10y$ — centre $(-7,5)$: the $x$-term's sign is the opposite of the centre's $x$-coordinate.",
+          "zh": "$+14x-10y$ —— 那是圓心 $(-7,5)$ 的方程；$x$ 項符號與圓心 $x$ 坐標相反。"
+        },
+        {
+          "opt": "D",
+          "en": "$+14x-10y-119$ — two mistakes at once (wrong centre sign and wrong radius).",
+          "zh": "$+14x-10y-119$ —— 同時錯兩處（圓心符號與半徑都錯）。"
+        }
+      ],
+      "tip": {
+        "en": "Centre $(h,k)$ ⇒ $x^{2}+y^{2}-2hx-2ky+(h^{2}+k^{2}-r^{2})=0$. The sign in front of $x$ is *minus* the centre's $x$-coordinate — a favourite DSE trap. (本題掃描圖上 $10y$ 的正負號較模糊，按圓心 $(7,5)$ 應為 $-10y$。)",
+        "zh": "圓心 $(h,k)$ ⇒ $x^{2}+y^{2}-2hx-2ky+(h^{2}+k^{2}-r^{2})=0$：$x$ 前的符號是圓心 $x$ 坐標的相反數，這是 DSE 常見陷阱。（本題掃描圖上 $10y$ 的正負號較模糊，按圓心 $(7,5)$ 應為 $-10y$。）"
+      }
+    }
+  },
+  "2025-p2-q28": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Probability of each number", "zh": "第 1 步 · 各數字的概率" },
+          "math": "P(2)=\\frac{3}{6},\\;P(3)=\\frac{1}{6},\\;P(4)=\\frac{1}{6},\\;P(5)=\\frac{1}{6}",
+          "en": "Six cards: three of them are $2$, plus $3$, $4$, $5$.",
+          "zh": "共 6 張卡：3 張是 $2$，另有 $3$、$4$、$5$。",
+          "highlight": ["P(2)=\\frac{3}{6}"]
+        },
+        {
+          "title": { "en": "Step 2 · Expected value formula", "zh": "第 2 步 · 期望值公式" },
+          "math": "E=\\sum (\\text{tokens})\\times P(\\text{number})",
+          "en": "Multiply each outcome's tokens by how likely that number is.",
+          "zh": "把每個結果的代幣數乘以抽到該數的概率再相加。",
+          "highlight": ["E=\\sum xP(x)"]
+        },
+        {
+          "title": { "en": "Step 3 · Substitute", "zh": "第 3 步 · 代入" },
+          "math": "E=\\frac{3}{6}(10)+\\frac{1}{6}(15)+\\frac{1}{6}(25)+\\frac{1}{6}(50)",
+          "en": "Note the $3$ in front of $10$ — three cards carry the value $2$.",
+          "zh": "留意 $10$ 前面要乘 $3$ —— 有三張卡是 $2$。",
+          "highlight": ["\\frac{3}{6}(10)"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "E=\\frac{30+15+25+50}{6}=\\frac{120}{6}=20",
+          "en": "The expected number of tokens is $20$ — option C.",
+          "zh": "期望代幣數為 $20$ —— 答案 C。",
+          "highlight": ["20"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "A",
+          "en": "$3$ — this is the expected **number drawn** ($\\frac{2+2+2+3+4+5}{6}=3$). The question asks for tokens, not the number.",
+          "zh": "$3$ —— 這是抽到數字的期望值（$\\frac{2+2+2+3+4+5}{6}=3$），題目問的是代幣數。"
+        },
+        {
+          "opt": "B",
+          "en": "$4$ — the average of the four table entries with equal weights: $\\frac{10+15+25+50}{4}=25$… no; $4$ is the **median** of $2,2,2,3,4,5$.",
+          "zh": "$4$ —— 這是 $2,2,2,3,4,5$ 的**中位數**。"
+        },
+        {
+          "opt": "D",
+          "en": "$25$ — the tokens for drawing a $4$, or $\\frac{10+15+25+50}{4}=25$ (treating the four numbers as equally likely).",
+          "zh": "$25$ —— 那是抽到 $4$ 時所得（或把四個數字當成等概率：$\\frac{10+15+25+50}{4}=25$）。"
+        }
+      ],
+      "tip": {
+        "en": "Repeated values in a box (three $2$s here) must carry their full weight: multiply the token value by the count, then divide by the total. DSE always hides a repeated card.",
+        "zh": "箱中有重複數字（這裡三張 $2$）時，必須把重複次數算進去：代幣數 × 張數，再除以總數。DSE 幾乎必設一個重複值。"
+      }
+    }
+  }
+}

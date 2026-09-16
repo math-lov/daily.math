@@ -54,6 +54,45 @@ window.RELEASES = {
     "2025-p2-q03",
     "2025-p2-q09"
    ]
+  },
+  {
+   "date": "2026-09-20",
+   "batch": 5,
+   "title": {
+    "en": "Junior Math · Equations of Straight Lines · More about Trigonometry",
+    "zh": "初中數學 · 直線方程 · 三角學續論"
+   },
+   "ids": [
+    "2025-p2-q10",
+    "2025-p2-q14",
+    "2025-p2-q20"
+   ]
+  },
+  {
+   "date": "2026-09-21",
+   "batch": 6,
+   "title": {
+    "en": "Junior Math · More about Trigonometry · Basic Properties of Circles",
+    "zh": "初中數學 · 三角學續論 · 圓的基本性質"
+   },
+   "ids": [
+    "2025-p2-q11",
+    "2025-p2-q23",
+    "2025-p2-q22"
+   ]
+  },
+  {
+   "date": "2026-09-22",
+   "batch": 7,
+   "title": {
+    "en": "Junior Math · Loci · Equations of Straight Lines",
+    "zh": "初中數學 · 軌跡 · 直線方程"
+   },
+   "ids": [
+    "2025-p2-q15",
+    "2025-p2-q25",
+    "2025-p2-q26"
+   ]
   }
  ]
 };

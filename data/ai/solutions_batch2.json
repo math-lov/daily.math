@@ -1,0 +1,308 @@
+{
+  "2025-p2-q20": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Set up coordinates", "zh": "第 1 步 · 建立坐標" },
+          "math": "S(0,0),\\;R(53,0),\\;PQ\\parallel SR",
+          "en": "Put $SR$ on the $x$-axis; $P$ and $Q$ lie on a line parallel to it.",
+          "zh": "把 $SR$ 放在 $x$ 軸上，$P$、$Q$ 在一條與它平行的直線上。",
+          "highlight": ["S(0,0)", "R(53,0)"]
+        },
+        {
+          "title": { "en": "Step 2 · Find $P$ from $\\angle PSR=120^{\\circ}$", "zh": "第 2 步 · 由 $\\angle PSR=120^{\\circ}$ 定出 $P$" },
+          "math": "P=41(\\cos120^{\\circ},\\sin120^{\\circ})=(-20.5,\\;35.51)",
+          "en": "$SP=41$ at $120^{\\circ}$ to $SR$.",
+          "zh": "$SP=41$，與 $SR$ 成 $120^{\\circ}$。",
+          "highlight": ["P=(-20.5,\\;35.51)"]
+        },
+        {
+          "title": { "en": "Step 3 · Find $Q$ from $\\angle QRS=150^{\\circ}$", "zh": "第 3 步 · 由 $\\angle QRS=150^{\\circ}$ 定出 $Q$" },
+          "math": "RQ\\text{ at }30^{\\circ}\\text{ to }RS \\;\\Rightarrow\\; Q_x=53+\\frac{35.51}{\\sin30^{\\circ}}\\cos30^{\\circ}=114.5",
+          "en": "$RQ$ makes $30^{\\circ}$ with the positive $x$-axis; climb $35.51$ to reach the level of $P$.",
+          "zh": "$RQ$ 與 $x$ 軸正向成 $30^{\\circ}$；升到 $P$ 的高度 $35.51$ 便到達 $Q$。",
+          "highlight": ["Q_x=114.5"]
+        },
+        {
+          "title": { "en": "Step 4 · Length of the parallel side", "zh": "第 4 步 · 平行邊長" },
+          "math": "PQ=114.5-(-20.5)=135\\text{ cm}",
+          "en": "Both points share the same $y$, so $PQ$ is just the difference of the $x$-coordinates — option D.",
+          "zh": "兩點 $y$ 相同，故 $PQ$ 就是 $x$ 坐標之差 —— 答案 D。",
+          "highlight": ["135\\text{ cm}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "A",
+          "en": "$82$ — you added/subtracted the two side lengths ($53+41-12$) instead of using the angles.",
+          "zh": "$82$ —— 把兩邊長直接加減（$53+41$ 之類），沒有用角度投影。"
+        },
+        {
+          "opt": "B",
+          "en": "$100$ — using horizontal projections of both legs ($41\\cos60^{\\circ}+53+41\\cos30^{\\circ}\\cdot$…) and losing a term.",
+          "zh": "$100$ —— 只取兩腰的水平投影再加 $53$，漏了一項。"
+        },
+        {
+          "opt": "C",
+          "en": "$106$ — treating $\\angle PSR=120^{\\circ}$ as $60^{\\circ}$ (using the supplement), which shrinks the top side.",
+          "zh": "$106$ —— 把 $\\angle PSR=120^{\\circ}$ 當成 $60^{\\circ}$（用了補角），上底因此縮短。"
+        }
+      ],
+      "tip": {
+        "en": "For a trapezium with two base angles given, put the base on the $x$-axis and project each leg: horizontal run $=L\\cos\\theta$, vertical rise $=L\\sin\\theta$. The two rises must be equal.",
+        "zh": "梯形給了兩個底角：把底邊放 $x$ 軸，逐腰投影 —— 水平走 $L\\cos\\theta$、垂直升 $L\\sin\\theta$；兩腰的「升」必須相等，這就定出另一點。"
+      }
+    }
+  },
+  "2025-p2-q21": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Area of $\\Delta ADE$ gives $DE$", "zh": "第 1 步 · 由 $\\Delta ADE$ 面積求 $DE$" },
+          "math": "\\frac{1}{2}\\times AE\\times DE=150,\\quad AE=20 \\;\\Rightarrow\\; DE=15",
+          "en": "$\\angle AED=90^{\\circ}$, so $AE$ and $DE$ are the two legs.",
+          "zh": "$\\angle AED=90^{\\circ}$，$AE$ 與 $DE$ 是兩條直角邊。",
+          "highlight": ["DE=15"]
+        },
+        {
+          "title": { "en": "Step 2 · Hypotenuse $AD$", "zh": "第 2 步 · 斜邊 $AD$" },
+          "math": "AD=\\sqrt{20^{2}+15^{2}}=25\\text{ cm}",
+          "en": "$AD$ is also the width of the rectangle.",
+          "zh": "$AD$ 同時是矩形的闊（底邊）。",
+          "highlight": ["AD=25\\text{ cm}"]
+        },
+        {
+          "title": { "en": "Step 3 · Where is the foot of the altitude?", "zh": "第 3 步 · 高的垂足在哪裡" },
+          "math": "AF=\\frac{AE^{2}}{AD}=\\frac{400}{25}=16",
+          "en": "In a right triangle the projection of a leg on the hypotenuse is leg²$\\div$hypotenuse.",
+          "zh": "直角三角形中，一條直角邊在斜邊上的投影 = 該邊² $\\div$ 斜邊。",
+          "highlight": ["AF=16"]
+        },
+        {
+          "title": { "en": "Step 4 · Distance from $E$ to $CD$", "zh": "第 4 步 · $E$ 到 $CD$ 的距離" },
+          "math": "25-16=9\\text{ cm}",
+          "en": "$CD$ is perpendicular to $AD$ at $D$, so the required distance is horizontal — option B.",
+          "zh": "$CD$ 在 $D$ 與 $AD$ 垂直，所求距離是水平方向 —— 答案 B。",
+          "highlight": ["9\\text{ cm}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "C",
+          "en": "$12$ — this is the **height** of $E$ above $AD$ ($\\frac{20\\times15}{25}=12$), not its distance from the side $CD$.",
+          "zh": "$12$ —— 這是 $E$ 到 $AD$ 的**高**（$\\frac{20\\times15}{25}=12$），不是到 $CD$ 的距離。"
+        },
+        {
+          "opt": "D",
+          "en": "$15$ — you stopped at $DE$.",
+          "zh": "$15$ —— 只算到 $DE$ 就停手了。"
+        },
+        {
+          "opt": "A",
+          "en": "$8$ — from rounding $\\frac{400}{25}$ incorrectly or using $AE\\times DE\\div AD$ with the wrong denominator.",
+          "zh": "$8$ —— 投影長度算錯（把分母取錯）所致。"
+        }
+      ],
+      "tip": {
+        "en": "Right triangle $\\Delta AED$: legs $20,15$, hypotenuse $25$ ($3$-$4$-$5$ ×5). Height $= \\frac{leg_1\\times leg_2}{hypotenuse}$, projections $=\\frac{leg^2}{hypotenuse}$.",
+        "zh": "直角三角形 $\\Delta AED$：直角邊 $20,15$、斜邊 $25$（$3$-$4$-$5$ 的 5 倍）。高 $=\\frac{兩直角邊積}{斜邊}$；投影 $=\\frac{邊^{2}}{斜邊}$。"
+      }
+    }
+  },
+  "2025-p2-q22": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Turn the given angles into arcs", "zh": "第 1 步 · 把已知角化成弧" },
+          "math": "\\angle RTS=33^{\\circ}\\Rightarrow \\overset{\\frown}{RS}=66^{\\circ},\\quad \\angle URV=33^{\\circ}\\Rightarrow \\overset{\\frown}{UV}=66^{\\circ}",
+          "en": "An inscribed angle is half the arc it stands on.",
+          "zh": "圓周角是所對弧的一半。",
+          "highlight": ["66^{\\circ}", "66^{\\circ}"]
+        },
+        {
+          "title": { "en": "Step 2 · Parallel chords give equal arcs", "zh": "第 2 步 · 平行弦截出等弧" },
+          "math": "RT\\parallel VU \\;\\Rightarrow\\; \\overset{\\frown}{RV}=\\overset{\\frown}{TU}=x",
+          "en": "Arcs between two parallel chords are equal.",
+          "zh": "兩條平行弦之間的弧相等。",
+          "highlight": ["\\overset{\\frown}{RV}=\\overset{\\frown}{TU}"]
+        },
+        {
+          "title": { "en": "Step 3 · The bisector makes them equal", "zh": "第 3 步 · 角平分線再給一個等式" },
+          "math": "\\angle SRT=\\frac{1}{2}\\overset{\\frown}{ST}=\\angle TRU=\\frac{1}{2}\\overset{\\frown}{TU} \\;\\Rightarrow\\; \\overset{\\frown}{ST}=x",
+          "en": "$RT$ bisects $\\angle SRU$, so arcs $ST$ and $TU$ are equal.",
+          "zh": "$RT$ 平分 $\\angle SRU$，故弧 $ST$ 與弧 $TU$ 相等。",
+          "highlight": ["\\overset{\\frown}{ST}=x"]
+        },
+        {
+          "title": { "en": "Step 4 · Solve for $x$", "zh": "第 4 步 · 解出 $x$" },
+          "math": "66+66+3x=360 \\;\\Rightarrow\\; x=76^{\\circ}",
+          "en": "The five arcs fill the whole circle.",
+          "zh": "五段弧合起來是整個圓。",
+          "highlight": ["\\overset{\\frown}{TU}=76^{\\circ}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\angle RUT=\\frac{1}{2}(66^{\\circ}+76^{\\circ})=71^{\\circ}",
+          "en": "It stands on arc $RT=\\overset{\\frown}{RS}+\\overset{\\frown}{ST}$ — option D.",
+          "zh": "它對着弧 $RT=\\overset{\\frown}{RS}+\\overset{\\frown}{ST}$ —— 答案 D。",
+          "highlight": ["71^{\\circ}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "A",
+          "en": "$36^{\\circ}$ — using arc $TU=72^{\\circ}$ (one third of $360-132$) instead of $76^{\\circ}$: you forgot to subtract *both* the $66^{\\circ}$ arcs.",
+          "zh": "$36^{\\circ}$ —— 把弧 $TU$ 當成 $72^{\\circ}$（只減了一個 $66^{\\circ}$），漏減另一個。"
+        },
+        {
+          "opt": "B",
+          "en": "$49^{\\circ}$ — stopping at half of arc $ST$ in the wrong place, e.g. $\\frac{1}{2}(33+66)$.",
+          "zh": "$49^{\\circ}$ —— 把 $\\frac{1}{2}(33+66)=49.5$ 當成答案，混淆了圓周角與弧。"
+        },
+        {
+          "opt": "C",
+          "en": "$65^{\\circ}$ — treating $\\angle RUT$ as $\\frac{1}{2}\\times$ arc $RU$ with a wrong arc.",
+          "zh": "$65^{\\circ}$ —— 對錯了弧（取了弧 $RU$ 而不是 $RT$）。"
+        }
+      ],
+      "tip": {
+        "en": "Circle geometry: turn every given angle into its arc first, then look for the two arc-equalities DSE loves — parallel chords, and an angle bisector.",
+        "zh": "圓形幾何：先把每個已知角化成弧，然後找兩個 DSE 最愛用的等弧條件 —— 平行弦、以及角平分線。"
+      }
+    }
+  },
+  "2025-p2-q23": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Two right angles force a trapezium", "zh": "第 1 步 · 兩個直角逼出梯形" },
+          "math": "\\angle ACD=\\angle BAC=90^{\\circ} \\;\\Rightarrow\\; AB\\parallel CD",
+          "en": "Both $AB$ and $CD$ are perpendicular to $AC$.",
+          "zh": "$AB$ 與 $CD$ 都垂直於 $AC$。",
+          "highlight": ["AB\\parallel CD"]
+        },
+        {
+          "title": { "en": "Step 2 · Put it on coordinates", "zh": "第 2 步 · 放上坐標" },
+          "math": "A(0,0),\\;C(0,-h),\\;B(b,0),\\;D(-d,-h)",
+          "en": "The two right angles at $A$ and $C$ fix this shape.",
+          "zh": "$A$、$C$ 兩個直角定出這個形狀。",
+          "highlight": ["B(b,0)", "D(-d,-h)"]
+        },
+        {
+          "title": { "en": "Step 3 · Use $\\angle ABC+\\angle ADC=90^{\\circ}$", "zh": "第 3 步 · 用 $\\angle ABC+\\angle ADC=90^{\\circ}$" },
+          "math": "\\tan\\angle ABC=\\frac{h}{b},\\;\\tan\\angle ADC=\\frac{h}{d},\\;\\frac{h}{b}\\cdot\\frac{h}{d}=1 \\;\\Rightarrow\\; h^{2}=bd",
+          "en": "When two angles add to $90^{\\circ}$ their tangents multiply to $1$.",
+          "zh": "兩角互餘時，正切值相乘等於 $1$。",
+          "highlight": ["h^{2}=bd"]
+        },
+        {
+          "title": { "en": "Step 4 · Test the options", "zh": "第 4 步 · 逐項檢驗" },
+          "math": "\\frac{BC}{AD}=\\frac{\\sqrt{b^{2}+h^{2}}}{\\sqrt{d^{2}+h^{2}}}=\\sqrt{\\frac{b(b+d)}{d(b+d)}}=\\sqrt{\\frac{b}{d}}=\\frac{h}{d}=\\tan\\angle ADC",
+          "en": "Only $\\tan\\angle ADC=\\frac{BC}{AD}$ survives; the other three fail for a general trapezium.",
+          "zh": "只有 $\\tan\\angle ADC=\\frac{BC}{AD}$ 普遍成立，其餘三式對一般梯形都不成立。",
+          "highlight": ["\\tan\\angle ADC=\\frac{BC}{AD}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\tan\\angle ADC=\\frac{BC}{AD}",
+          "en": "That is option C.",
+          "zh": "即選項 C。",
+          "highlight": ["\\text{C}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "A",
+          "en": "$\\tan\\angle ACB=\\frac{AB}{AD}$ — wrong: $\\tan\\angle ACB=\\frac{AB}{AC}$, and $AD\\neq AC$.",
+          "zh": "$\\tan\\angle ACB=\\frac{AB}{AD}$ —— 錯：$\\tan\\angle ACB=\\frac{AB}{AC}$，而 $AD\\neq AC$。"
+        },
+        {
+          "opt": "B",
+          "en": "$\\tan\\angle ACB=\\frac{AB}{CD}$ — mixes the two triangles; $\\tan\\angle ACB$ only involves $\\Delta ABC$.",
+          "zh": "$\\tan\\angle ACB=\\frac{AB}{CD}$ —— 把兩個三角形混在一起；$\\tan\\angle ACB$ 只涉及 $\\Delta ABC$。"
+        },
+        {
+          "opt": "D",
+          "en": "$\\tan\\angle ADC=\\frac{BC}{CD}$ — numerator and denominator come from different triangles.",
+          "zh": "$\\tan\\angle ADC=\\frac{BC}{CD}$ —— 分子分母來自不同三角形。"
+        }
+      ],
+      "tip": {
+        "en": "When two triangles share the vertical side $AC$, every tangent in the question is a ratio of sides *within one* triangle, or (as here) a ratio that the condition $h^{2}=bd$ collapses onto another tangent.",
+        "zh": "兩個三角形共用垂直邊 $AC$ 時，每個正切都是**同一個**三角形內的邊比；像本例則是用 $h^{2}=bd$ 把一條邊比化簡成另一個正切。"
+      }
+    }
+  },
+  "2025-p2-q24": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Length $XY$ by the cosine rule", "zh": "第 1 步 · 用餘弦定理求 $XY$" },
+          "math": "XY^{2}=1^{2}+2^{2}-2(1)(2)\\cos60^{\\circ}=3",
+          "en": "$\\angle XOY=80^{\\circ}-20^{\\circ}=60^{\\circ}$.",
+          "zh": "$\\angle XOY=80^{\\circ}-20^{\\circ}=60^{\\circ}$。",
+          "highlight": ["XY=\\sqrt{3}"]
+        },
+        {
+          "title": { "en": "Step 2 · Spot the right angle", "zh": "第 2 步 · 認出直角" },
+          "math": "1^{2}+XY^{2}=1+3=4=OY^{2} \\;\\Rightarrow\\; OX\\perp XY",
+          "en": "Since $OX=1$, $XY=\\sqrt3$ and $OY=2$, Pythagoras' converse gives $\\angle OXY=90^{\\circ}$.",
+          "zh": "由 $OX=1$、$XY=\\sqrt3$、$OY=2$，勾股逆定理得 $\\angle OXY=90^{\\circ}$。",
+          "highlight": ["\\angle OXY=90^{\\circ}"]
+        },
+        {
+          "title": { "en": "Step 3 · Which side is the equilateral triangle on?", "zh": "第 3 步 · 等邊三角形在哪一側" },
+          "math": "\\angle OXZ=90^{\\circ}+60^{\\circ}=150^{\\circ}",
+          "en": "The other equilateral vertex is at $140^{\\circ}$, outside the given range, so $Z$ is the one on the other side of $XY$: $XO$ and $XZ$ open $90^{\\circ}+60^{\\circ}$ apart.",
+          "zh": "另一個等邊頂點在 $140^{\\circ}$，超出題目範圍；故 $Z$ 在 $XY$ 的另一側，$XO$ 與 $XZ$ 張開 $90^{\\circ}+60^{\\circ}=150^{\\circ}$。",
+          "highlight": ["\\angle OXZ=150^{\\circ}"]
+        },
+        {
+          "title": { "en": "Step 4 · Cosine rule in $\\Delta OXZ$", "zh": "第 4 步 · 在 $\\Delta OXZ$ 用餘弦定理" },
+          "math": "r^{2}=1^{2}+3-2(1)(\\sqrt{3})\\cos150^{\\circ}=4+3=7",
+          "en": "$OX=1$, $XZ=\\sqrt3$ and $\\cos150^{\\circ}=-\\frac{\\sqrt3}{2}$, so $r=\\sqrt7$.",
+          "zh": "$OX=1$、$XZ=\\sqrt3$，而 $\\cos150^{\\circ}=-\\frac{\\sqrt3}{2}$，故 $r=\\sqrt{7}$。",
+          "highlight": ["r=\\sqrt{7}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "r=\\sqrt{7}",
+          "en": "Option C.",
+          "zh": "答案 C。",
+          "highlight": ["\\sqrt{7}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "A",
+          "en": "$\\sqrt3$ — that is the side $XY$, not $r=OZ$.",
+          "zh": "$\\sqrt3$ —— 那是邊長 $XY$，不是 $r=OZ$。"
+        },
+        {
+          "opt": "B",
+          "en": "$\\sqrt5$ — from adding $1+4$ (the two radii) instead of the actual side lengths.",
+          "zh": "$\\sqrt5$ —— 把兩個極徑平方相加（$1+4$）當成 $OZ^{2}$。"
+        },
+        {
+          "opt": "D",
+          "en": "$\\sqrt{10}$ — from $OX^{2}+XY^{2}+XZ^{2}$ style double counting, i.e. using the outer equilateral vertex.",
+          "zh": "$\\sqrt{10}$ —— 反覆加邊長平方（用了外側那個不合題意的頂點）。"
+        }
+      ],
+      "tip": {
+        "en": "Polar-coordinate triangles: convert to Cartesian for the length/rotation step. If two radii and the included angle are given, test the converse of Pythagoras — DSE often builds a right angle in.",
+        "zh": "極坐標三角形：算長度與旋轉時先化成直角坐標。給了兩個極徑與夾角，先試勾股逆定理 —— DSE 常暗藏一個直角。"
+      }
+    }
+  }
+}

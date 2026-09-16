@@ -1,0 +1,472 @@
+{
+  "2025-p2-q30": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · The mean gives $\\alpha+\\beta$", "zh": "第 1 步 · 平均數給出 $\\alpha+\\beta$" },
+          "math": "\\frac{\\alpha+\\beta+(-4)+(-3)+1+1+1+4}{8}=0 \\;\\Rightarrow\\; \\alpha+\\beta=0",
+          "en": "The eight known numbers other than $\\alpha,\\beta$ add up to $0$.",
+          "zh": "除 $\\alpha,\\beta$ 外，其餘八個數相加為 $0$。",
+          "highlight": ["\\alpha+\\beta=0"]
+        },
+        {
+          "title": { "en": "Step 2 · The range pins them down", "zh": "第 2 步 · 全距定出數值" },
+          "math": "\\text{range}=10,\\;\\alpha+\\beta=0 \\;\\Rightarrow\\; \\{\\alpha,\\beta\\}=\\{5,-5\\}",
+          "en": "The known part already spans $-4$ to $4$; with $\\alpha=-\\beta$ the pair must be $\\pm5$ (if it were $\\pm6$ the range would be $12$).",
+          "zh": "已知部分已跨 $-4$ 至 $4$；又 $\\alpha=-\\beta$，故兩數必為 $\\pm5$（若是 $\\pm6$ 全距會變成 $12$）。",
+          "highlight": ["\\{5,-5\\}"]
+        },
+        {
+          "title": { "en": "Step 3 · Mode and median", "zh": "第 3 步 · 眾數與中位數" },
+          "math": "-5,\\,-4,\\,-3,\\,1,\\,1,\\,1,\\,4,\\,5",
+          "en": "Sorting: the middle two are both $1$, so $t=1$; and $1$ appears three times, so $s=1$.",
+          "zh": "排序後：中間兩個都是 $1$，故 $t=1$；而 $1$ 出現三次，故 $s=1$。",
+          "highlight": ["s=1", "t=1"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\text{I and III only}",
+          "en": "I ($s=1$) ✓, II ($t=-1$) ✗, III ($\\alpha+\\beta=0$) ✓ — option B.",
+          "zh": "I（$s=1$）✓、II（$t=-1$）✗、III（$\\alpha+\\beta=0$）✓ —— 答案 B。",
+          "highlight": ["\\text{B}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "D",
+          "en": "$\\text{I, II and III}$ — statement II is the trap: with $8$ numbers the median is the **average of the 4th and 5th**, not the 4th. Here both are $1$, so $t=1$.",
+          "zh": "$\\text{I, II, III}$ —— II 是陷阱：8 個數的中位數是**第 4、5 個的平均**，不是第 4 個。這裡兩者都是 $1$，故 $t=1$。"
+        },
+        {
+          "opt": "A",
+          "en": "$\\text{I and II only}$ — you accepted $t=-1$ by treating $-3$ and $1$ as the middle pair, and forgot III.",
+          "zh": "$\\text{I, II}$ —— 把 $-3$、$1$ 當成中間一對而接受 $t=-1$，同時漏了 III。"
+        },
+        {
+          "opt": "C",
+          "en": "$\\text{II and III only}$ — you got III right but still mis-read the median.",
+          "zh": "$\\text{II, III}$ —— III 對，但中位數仍讀錯。"
+        }
+      ],
+      "tip": {
+        "en": "For $n$ numbers with $n$ **even**, median $=\\frac{1}{2}(\\text{4th}+\\text{5th})$ when $n=8$. And 'range $=10$' plus 'mean $=0$' usually forces the two unknowns to be $\\pm5$.",
+        "zh": "$n=8$（**偶數**）時，中位數 $=\\frac{1}{2}(\\text{第4個}+\\text{第5個})$。「全距 $=10$」加上「平均數 $=0$」通常逼出未知數為 $\\pm5$。"
+      }
+    }
+  },
+  "2025-p2-q31": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Count the digits", "zh": "第 1 步 · 數位數" },
+          "math": "3\\text{E}\\underbrace{00\\ldots0}_{12}\\Rightarrow 62\\times16^{12}",
+          "en": "$3\\text{E}_{16}=62$ and twelve zeros means twelve factors of $16=2^{4}$.",
+          "zh": "$3\\text{E}_{16}=62$，後面十二個 0 代表 $16^{12}=2^{48}$。",
+          "highlight": ["62\\times2^{48}"]
+        },
+        {
+          "title": { "en": "Step 2 · Write $62$ in binary", "zh": "第 2 步 · 把 $62$ 寫成 2 的冪" },
+          "math": "62=32+16+8+4+2=2^{5}+2^{4}+2^{3}+2^{2}+2^{1}",
+          "en": "Five consecutive powers of $2$ from $2^{5}$ down to $2^{1}$.",
+          "zh": "由 $2^{5}$ 到 $2^{1}$ 連續五個 2 的冪。",
+          "highlight": ["2^{5}+2^{4}+2^{3}+2^{2}+2^{1}"]
+        },
+        {
+          "title": { "en": "Step 3 · Add the exponents", "zh": "第 3 步 · 指數相加" },
+          "math": "62\\times2^{48}=2^{53}+2^{52}+2^{51}+2^{50}+2^{49}",
+          "en": "Multiplying by $2^{48}$ shifts every exponent up by $48$.",
+          "zh": "乘 $2^{48}$ 即每個指數加 $48$。",
+          "highlight": ["2^{53}+\\cdots+2^{49}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "2^{53}+2^{52}+2^{51}+2^{50}+2^{49}",
+          "en": "Option D.",
+          "zh": "答案 D。",
+          "highlight": ["\\text{D}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "C",
+          "en": "$2^{52}+\\cdots+2^{48}$ — treating $3\\text{E}$ as $31$ (ignoring $\\text{E}=14$): $31\\times2^{48}$.",
+          "zh": "$2^{52}+\\cdots+2^{48}$ —— 把 $3\\text{E}$ 當成 $31$（忘記 $\\text{E}=14$），即 $31\\times2^{48}$。"
+        },
+        {
+          "opt": "B",
+          "en": "$2^{17}+\\cdots+2^{13}$ — using $2^{12}$ instead of $16^{12}$ (forgetting that each hex digit is $4$ bits).",
+          "zh": "$2^{17}+\\cdots+2^{13}$ —— 用了 $2^{12}$ 而非 $16^{12}$（忘記每個十六進位位 = 4 個二進位位）。"
+        },
+        {
+          "opt": "A",
+          "en": "$2^{16}+\\cdots+2^{12}$ — two mistakes at once: $31$ instead of $62$, and $2^{12}$ instead of $2^{48}$.",
+          "zh": "$2^{16}+\\cdots+2^{12}$ —— 同時錯兩處：$31$ 而非 $62$，以及 $2^{12}$ 而非 $2^{48}$。"
+        }
+      ],
+      "tip": {
+        "en": "Hexadecimal: $3\\text{E}=3\\times16+14=62$, and each trailing hex $0$ adds $2^{4}$ to the exponent.",
+        "zh": "十六進位：$3\\text{E}=3\\times16+14=62$；每個末尾的十六進位 $0$ 等於指數加 $4$。"
+      }
+    }
+  },
+  "2025-p2-q32": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Factorise each expression", "zh": "第 1 步 · 逐式分解" },
+          "math": "p^{2}-4q^{2}=(p+2q)(p-2q)",
+          "en": "Difference of two squares.",
+          "zh": "平方差。",
+          "highlight": ["(p+2q)(p-2q)"]
+        },
+        {
+          "title": { "en": "Step 2 · The cubic", "zh": "第 2 步 · 三次式" },
+          "math": "p^{3}-8q^{3}=(p-2q)(p^{2}+2pq+4q^{2})",
+          "en": "Difference of two cubes, $a^{3}-b^{3}=(a-b)(a^{2}+ab+b^{2})$ with $b=2q$.",
+          "zh": "立方差 $a^{3}-b^{3}=(a-b)(a^{2}+ab+b^{2})$，其中 $b=2q$。",
+          "highlight": ["(p-2q)(p^{2}+2pq+4q^{2})"]
+        },
+        {
+          "title": { "en": "Step 3 · Third expression", "zh": "第 3 步 · 第三式" },
+          "math": "(p+2q)(p^{2}-4q^{2})=(p+2q)^{2}(p-2q)",
+          "en": "Substitute the factorisation from Step 1.",
+          "zh": "代入第 1 步的分解。",
+          "highlight": ["(p+2q)^{2}(p-2q)"]
+        },
+        {
+          "title": { "en": "Step 4 · Take the highest power of each factor", "zh": "第 4 步 · 每個因式取最高次" },
+          "math": "(p+2q)^{2}(p-2q)(p^{2}+2pq+4q^{2})=(p+2q)^{2}(p^{3}-8q^{3})",
+          "en": "$(p-2q)$ appears once, $(p+2q)$ twice — option C.",
+          "zh": "$(p-2q)$ 出現一次、$(p+2q)$ 出現兩次 —— 答案 C。",
+          "highlight": ["(p+2q)^{2}(p^{3}-8q^{3})"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "D",
+          "en": "$(p+2q)(p^{2}-4q^{2})(p^{3}-8q^{3})$ — a **common multiple** but not the **least**: it carries $(p-2q)$ twice.",
+          "zh": "$(p+2q)(p^{2}-4q^{2})(p^{3}-8q^{3})$ —— 是公倍式但**不是最小**：$(p-2q)$ 重複了兩次。"
+        },
+        {
+          "opt": "B",
+          "en": "$p^{2}-4q^{2}$ — that is the H.C.F.-flavoured distractor; it is not a multiple of $p^{3}-8q^{3}$.",
+          "zh": "$p^{2}-4q^{2}$ —— 這其實是 H.C.F. 類的干擾項，不是 $p^{3}-8q^{3}$ 的倍式。"
+        },
+        {
+          "opt": "A",
+          "en": "$p-2q$ — only one factor of the first expression; far from the L.C.M.",
+          "zh": "$p-2q$ —— 只是第一式的其中一個因式，遠不是最小公倍式。"
+        }
+      ],
+      "tip": {
+        "en": "L.C.M. = highest power of **every** factor that appears; H.C.F. = lowest power of the **common** factors. Factorise first, then just read the exponents off.",
+        "zh": "最小公倍式 = 每個出現過的因式取其**最高次**；最大公因式 = **共同**因式取最低次。先分解，再讀指數。"
+      }
+    }
+  },
+  "2025-p2-q33": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Name the variables", "zh": "第 1 步 · 設變數" },
+          "math": "v=\\log_{5}y,\\quad u=\\log_{25}x,\\quad v=au+b",
+          "en": "'$\\log_{5}y$ is a linear function of $\\log_{25}x$' means $v=au+b$.",
+          "zh": "「$\\log_{5}y$ 是 $\\log_{25}x$ 的線性函數」即 $v=au+b$。",
+          "highlight": ["v=au+b"]
+        },
+        {
+          "title": { "en": "Step 2 · Use the two intercepts", "zh": "第 2 步 · 用兩個截距" },
+          "math": "b=12,\\quad 0=2a+12 \\;\\Rightarrow\\; a=-6",
+          "en": "Vertical intercept at $u=0$ is $12$; horizontal intercept is $u=2$.",
+          "zh": "縱軸截距（$u=0$）為 $12$；橫軸截距在 $u=2$。",
+          "highlight": ["a=-6"]
+        },
+        {
+          "title": { "en": "Step 3 · Change the base of the $x$-log", "zh": "第 3 步 · 換底" },
+          "math": "\\log_{25}x=\\frac{\\log_{5}x}{\\log_{5}25}=\\frac{\\log_{5}x}{2}",
+          "en": "$\\log_{5}25=2$.",
+          "zh": "$\\log_{5}25=2$。",
+          "highlight": ["\\log_{25}x=\\frac{1}{2}\\log_{5}x"]
+        },
+        {
+          "title": { "en": "Step 4 · Read off $n$", "zh": "第 4 步 · 讀出 $n$" },
+          "math": "\\log_{5}y=-3\\log_{5}x+12 \\;\\Rightarrow\\; y=5^{12}x^{-3}",
+          "en": "So $n=-3$ — option C.",
+          "zh": "故 $n=-3$ —— 答案 C。",
+          "highlight": ["n=-3"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "A",
+          "en": "$-12$ — using $a=12$ or forgetting to divide by $2$ when converting the base of $x$.",
+          "zh": "$-12$ —— 把 $a$ 當成 $12$，或換底時忘記除以 $2$。"
+        },
+        {
+          "opt": "B",
+          "en": "$-4$ — from an incorrect change of base (e.g. dividing by $\\log_5 25=2$ twice, or using base $5$ for $x$ but base $25$ for $y$).",
+          "zh": "$-4$ —— 換底時弄錯（例如多除了一次 $2$）。"
+        },
+        {
+          "opt": "D",
+          "en": "$-1$ — reading the slope straight off the intercepts the wrong way ($2/12$ style).",
+          "zh": "$-1$ —— 把截距直接當成斜率（類似 $12/2$ 的反向誤算）。"
+        }
+      ],
+      "tip": {
+        "en": "When a 'linear function' question mixes bases $5$ and $25$, convert everything to one base first: $\\log_{25}x=\\frac12\\log_{5}x$. The power of $x$ is the slope **after** that conversion.",
+        "zh": "題目混用 $5$ 與 $25$ 底時，先全部化成同底：$\\log_{25}x=\\frac12\\log_{5}x$。$x$ 的指數就是換底**之後**的斜率。"
+      }
+    }
+  },
+  "2025-p2-q34": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · When do the two graphs meet?", "zh": "第 1 步 · 兩圖何時相交" },
+          "math": "y=a^{x}\\ \\text{and}\\ y=\\log_{a}x\\ \\text{meet} \\iff 0<a<1",
+          "en": "For $a>1$ the curves never meet; for $0<a<1$ they do.",
+          "zh": "$a>1$ 時兩曲線不相交；$0<a<1$ 時相交。",
+          "highlight": ["0<a<1"]
+        },
+        {
+          "title": { "en": "Step 2 · Statement I", "zh": "第 2 步 · 命題 I" },
+          "math": "a<1",
+          "en": "Since $P$ exists, $a<1$ — **true**.",
+          "zh": "既然 $P$ 存在，必有 $a<1$ —— **正確**。",
+          "highlight": ["a<1"]
+        },
+        {
+          "title": { "en": "Step 3 · Statement II", "zh": "第 3 步 · 命題 II" },
+          "math": "\\log_{a}x=0 \\;\\Rightarrow\\; x=1 \\;\\Rightarrow\\; Q(1,0),\\; OQ=1>a",
+          "en": "The $x$-intercept of $y=\\log_a x$ is always $1$, and $0<a<1$ — **true**.",
+          "zh": "$y=\\log_a x$ 的 $x$ 截距恆為 $1$，而 $0<a<1$ —— **正確**。",
+          "highlight": ["OQ=1>a"]
+        },
+        {
+          "title": { "en": "Step 4 · Statement III", "zh": "第 4 步 · 命題 III" },
+          "math": "P\\ \\text{lies on}\\ y=x \\;\\Rightarrow\\; \\angle POQ=45^{\\circ}",
+          "en": "$y=a^{x}$ and $y=\\log_{a}x$ are inverse functions, so their intersections lie on $y=x$ — **true**.",
+          "zh": "$y=a^{x}$ 與 $y=\\log_{a}x$ 互為反函數，交點必在 $y=x$ 上 —— **正確**。",
+          "highlight": ["\\angle POQ=45^{\\circ}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\text{I, II and III}",
+          "en": "All three — option D.",
+          "zh": "三項皆正確 —— 答案 D。",
+          "highlight": ["\\text{D}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "A",
+          "en": "$\\text{I and II only}$ — you doubted III; but a point on the line $y=x$ seen from the origin is always at $45^{\\circ}$ to both axes.",
+          "zh": "$\\text{I 與 II}$ —— 對 III 存疑；但只要 $P$ 在 $y=x$ 上，由原點看過去就與 $x$ 軸成 $45^{\\circ}$。"
+        },
+        {
+          "opt": "B",
+          "en": "$\\text{I and III only}$ — you missed $OQ>a$: $OQ=1$ and $a<1$, so it always holds.",
+          "zh": "$\\text{I 與 III}$ —— 漏了 $OQ>a$：$OQ=1$、$a<1$，恆成立。"
+        },
+        {
+          "opt": "C",
+          "en": "$\\text{II and III only}$ — dropping I, usually by thinking the curves can also meet for $a>1$.",
+          "zh": "$\\text{II 與 III}$ —— 漏了 I，通常誤以為 $a>1$ 時兩曲線也相交。"
+        }
+      ],
+      "tip": {
+        "en": "Two facts kill this question: (1) $a^{x}$ and $\\log_{a}x$ are inverses, so their intersections lie on $y=x$; (2) they intersect only for $0<a<1$. The $x$-intercept of $\\log_{a}x$ is always $(1,0)$.",
+        "zh": "兩個事實可解此題：(1) $a^{x}$ 與 $\\log_{a}x$ 互為反函數 ⇒ 交點在 $y=x$ 上；(2) 只有 $0<a<1$ 才相交。而 $\\log_{a}x$ 的 $x$ 截距恆為 $(1,0)$。"
+      }
+    }
+  },
+  "2025-p2-q35": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · The cycle of $i$", "zh": "第 1 步 · $i$ 的週期" },
+          "math": "i,\\,-1,\\,-i,\\,1,\\;i,\\,-1,\\,-i,\\,1,\\ldots",
+          "en": "Powers of $i$ repeat every four terms, and each block of four sums to $0$.",
+          "zh": "$i$ 的冪每四項重複一次，而每四個一組的和為 $0$。",
+          "highlight": ["i+(-1)+(-i)+1=0"]
+        },
+        {
+          "title": { "en": "Step 2 · How many terms?", "zh": "第 2 步 · 共有多少項" },
+          "math": "999-9+1=991=4\\times247+3",
+          "en": "From $i^{9}$ to $i^{999}$ inclusive.",
+          "zh": "由 $i^{9}$ 到 $i^{999}$（含頭尾）。",
+          "highlight": ["991=4\\times247+3"]
+        },
+        {
+          "title": { "en": "Step 3 · Drop the whole cycles", "zh": "第 3 步 · 去掉完整週期" },
+          "math": "247\\times0=0",
+          "en": "Only the last three terms matter.",
+          "zh": "只剩最後三項。",
+          "highlight": ["247\\times0=0"]
+        },
+        {
+          "title": { "en": "Step 4 · Add the remainder", "zh": "第 4 步 · 加餘下三項" },
+          "math": "i^{997}+i^{998}+i^{999}=i+(-1)+(-i)=-1",
+          "en": "$997\\equiv1$, $998\\equiv2$, $999\\equiv3 \\pmod 4$ — option A.",
+          "zh": "$997\\equiv1$、$998\\equiv2$、$999\\equiv3 \\pmod 4$ —— 答案 A。",
+          "highlight": ["-1"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "B",
+          "en": "$0$ — assuming the terms split into whole cycles; $991$ is not a multiple of $4$.",
+          "zh": "$0$ —— 誤以為剛好分成整數個週期；$991$ 不是 $4$ 的倍數。"
+        },
+        {
+          "opt": "C",
+          "en": "$1$ — starting the counting at $i^{8}$ (a shift of one) so the remainder becomes $1+(-1)+(-i)+i$…",
+          "zh": "$1$ —— 由 $i^{8}$ 起算（整體移位一次），餘項變成另一組。"
+        },
+        {
+          "opt": "D",
+          "en": "$i$ — adding only the first of the three leftover terms.",
+          "zh": "$i$ —— 只加了餘下三項的第一項。"
+        }
+      ],
+      "tip": {
+        "en": "Cyclic sums: number of terms $=b-a+1$, then take the remainder mod $4$ and add only those terms. Watch the *first* term's index ($i^{9}=i$), not the last.",
+        "zh": "週期和：先算項數 $=b-a+1$，取 $\\bmod 4$ 的餘數，只加餘下幾項。注意由**首項**的指數（$i^{9}=i$）開始數，不是由末項。"
+      }
+    }
+  },
+  "2025-p2-q36": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Rewrite the two lines", "zh": "第 1 步 · 改寫兩條直線" },
+          "math": "y\\ge\\frac{19-4x}{5},\\quad y\\ge\\frac{7x+11}{6},\\quad x\\le11",
+          "en": "Both inequalities force $y$ to be *above* a line; the third cuts off large $x$.",
+          "zh": "兩個不等式都要求 $y$ 在某直線**之上**，第三個限制 $x$ 不可太大。",
+          "highlight": ["y\\ge\\frac{7x+11}{6}", "x\\le11"]
+        },
+        {
+          "title": { "en": "Step 2 · Where the two lines cross", "zh": "第 2 步 · 兩線交點" },
+          "math": "\\frac{19-4x}{5}=\\frac{7x+11}{6} \\;\\Rightarrow\\; x=1,\\;y=3",
+          "en": "For $x<1$ the first line is higher; for $x>1$ the second is.",
+          "zh": "$x<1$ 時第一條較高；$x>1$ 時第二條較高。",
+          "highlight": ["(1,3)"]
+        },
+        {
+          "title": { "en": "Step 3 · On the relevant boundary the objective simplifies", "zh": "第 3 步 · 在相關邊界上目標式化簡" },
+          "math": "8x-6y+11=(7x-6y+11)+x=x",
+          "en": "Because the region's boundary for $x>1$ is exactly $7x-6y+11=0$.",
+          "zh": "因為 $x>1$ 時區域的邊界正是 $7x-6y+11=0$。",
+          "highlight": ["8x-6y+11=x"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\max(8x-6y+11)=x_{\\max}=11",
+          "en": "$x\\le11$ gives the greatest value $11$ (at the intersection of $7x-6y+11=0$ with $x=11$) — option B.",
+          "zh": "由 $x\\le11$ 得最大值 $11$（在 $7x-6y+11=0$ 與 $x=11$ 的交點取得）—— 答案 B。",
+          "highlight": ["11"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "D",
+          "en": "$129$ — evaluating the objective at a point that does **not** satisfy all three inequalities (e.g. $x=11$ with $y$ too small).",
+          "zh": "$129$ —— 把目標式代到**不滿足全部三個不等式**的點（例如 $x=11$ 但 $y$ 太小）。"
+        },
+        {
+          "opt": "C",
+          "en": "$15$ — from treating the corner as $(11,-5)$ (the first line's $x=11$ point), which violates $7x-6y+11\\le0$.",
+          "zh": "$15$ —— 把角點取成 $(11,-5)$（第一條線的 $x=11$ 點），但該點違反 $7x-6y+11\\le0$。"
+        },
+        {
+          "opt": "A",
+          "en": "$1$ — the value at the corner $(1,3)$; that is the **smallest** value on that edge, not the greatest.",
+          "zh": "$1$ —— 角點 $(1,3)$ 的值；那是該邊上的**最小**值，不是最大。"
+        }
+      ],
+      "tip": {
+        "en": "Linear programming: draw the boundary, then test the **corners**. If the objective comes out as a simple multiple of $x$ or $y$, the optimum is at the extreme value of that variable.",
+        "zh": "線性規劃：先畫邊界，再測**角點**。若目標式化簡後只是 $x$ 或 $y$ 的倍數，最佳值就在該變數的極端值。"
+      }
+    }
+  },
+  "2025-p2-q37": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Write the arithmetic condition", "zh": "第 1 步 · 寫出等差條件" },
+          "math": "p=q-d,\\quad r=q+d",
+          "en": "A common difference $d$ makes the algebra mechanical.",
+          "zh": "設公差為 $d$，代數就變成機械操作。",
+          "highlight": ["p=q-d,\\;r=q+d"]
+        },
+        {
+          "title": { "en": "Step 2 · Statement I", "zh": "第 2 步 · 命題 I" },
+          "math": "3^{q}\\div3^{p}=3^{d}=3^{r}\\div3^{q}",
+          "en": "Equal ratios $\\Rightarrow$ geometric — **true** (I).",
+          "zh": "公比相等 $\\Rightarrow$ 等比 —— **正確**（I）。",
+          "highlight": ["3^{d}"]
+        },
+        {
+          "title": { "en": "Step 3 · Statement II", "zh": "第 3 步 · 命題 II" },
+          "math": "\\left(\\frac{5}{q}\\right)^{2}=\\frac{5}{p}\\cdot\\frac{5}{r} \\iff q^{2}=pr \\iff d=0",
+          "en": "Only true when the sequence is constant (e.g. $p,q,r=1,2,3$ fails) — **false**.",
+          "zh": "只有當數列為常數（$d=0$）才成立（例：$p,q,r=1,2,3$ 就不成立）—— **錯誤**。",
+          "highlight": ["q^{2}=pr\\ \\text{only if}\\ d=0"]
+        },
+        {
+          "title": { "en": "Step 4 · Statement III", "zh": "第 4 步 · 命題 III" },
+          "math": "p-q=-d,\\;q-r=-d,\\;r-p=2d",
+          "en": "For an AP we need $(-d)-(-d)=(2d)-(-d)$, i.e. $0=3d$ — **false** unless $d=0$.",
+          "zh": "要成等差須 $(-d)-(-d)=(2d)-(-d)$，即 $0=3d$ —— 除非 $d=0$，否則**錯誤**。",
+          "highlight": ["0=3d"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\text{I only}",
+          "en": "Only I must be true — option A.",
+          "zh": "只有 I 必然成立 —— 答案 A。",
+          "highlight": ["\\text{A}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "C",
+          "en": "$\\text{I and III only}$ — III looks like it should work (the terms are all multiples of $d$), but $r-p=2d$ breaks the pattern; try $p,q,r=1,2,3$.",
+          "zh": "$\\text{I 與 III}$ —— III 看似合理（各項都是 $d$ 的倍數），但 $r-p=2d$ 破壞等差；用 $p,q,r=1,2,3$ 一試即知。"
+        },
+        {
+          "opt": "B",
+          "en": "$\\text{II only}$ — II is the classic false statement: reciprocal-type sequences ($\\frac{5}{p}$ etc.) are geometric only for special values.",
+          "zh": "$\\text{II 只有}$ —— II 是典型錯誤命題：倒數型數列（$\\frac{5}{p}$ 等）只在特殊值下才等比。"
+        },
+        {
+          "opt": "D",
+          "en": "$\\text{II and III only}$ — both of the false ones.",
+          "zh": "$\\text{II 與 III}$ —— 兩個錯誤命題的組合。"
+        }
+      ],
+      "tip": {
+        "en": "Substitute $p=q-d$, $r=q+d$ and test numerically with $(1,2,3)$: an exponential of an AP **is** a GP, but reciprocals and differences usually are not.",
+        "zh": "代 $p=q-d$、$r=q+d$，再用 $(1,2,3)$ 實測：等差的指數序列**是**等比，但倒數與差一般不成立。"
+      }
+    }
+  }
+}

@@ -1,0 +1,507 @@
+{
+  "2025-p2-q10": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Compounding half-yearly", "zh": "第 1 步 · 半年複利" },
+          "math": "r=\\frac{3\\%}{2}=1.5\\%,\\quad n=5\\times2=10",
+          "en": "Half-yearly compounding halves the rate per period and doubles the number of periods.",
+          "zh": "半年複利：每期利率減半，期數加倍。",
+          "highlight": ["1.5\\%", "n=10"]
+        },
+        {
+          "title": { "en": "Step 2 · Apply the compound interest formula", "zh": "第 2 步 · 代入複利公式" },
+          "math": "A=40000\\left(1+\\frac{0.03}{2}\\right)^{10}=40000(1.015)^{10}",
+          "en": "Use $A=P(1+\\frac{r}{n})^{nt}$ with $P=40000$, $r=0.03$, $n=2$, $t=5$.",
+          "zh": "用 $A=P(1+\\frac{r}{n})^{nt}$，其中 $P=40000$、$r=0.03$、$n=2$、$t=5$。",
+          "highlight": ["40000(1.015)^{10}"]
+        },
+        {
+          "title": { "en": "Step 3 · Evaluate", "zh": "第 3 步 · 計算" },
+          "math": "(1.015)^{10}=1.160541\\ldots",
+          "en": "$1.015^{10}\\approx1.160541$.",
+          "zh": "$1.015^{10}\\approx1.160541$。",
+          "highlight": ["1.160541"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "40000\\times1.160541\\approx\\$46\\,422",
+          "en": "Correct to the nearest dollar the amount is $46 422 — option C.",
+          "zh": "取至最接近的元，本利和為 $46 422 —— 答案 C。",
+          "highlight": ["\\$46\\,422"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "B",
+          "en": "$46\\,371$ — you used **annual** compounding: $40000(1.03)^{5}=46371$. The question says half-yearly.",
+          "zh": "$46\\,371$ —— 用了**每年**複利：$40000(1.03)^{5}=46371$。題目明說是半年複利。"
+        },
+        {
+          "opt": "A",
+          "en": "$46\\,000$ — simple interest: $40000(1+3\\%\\times5)=46000$.",
+          "zh": "$46\\,000$ —— 用了單利：$40000(1+3\\%\\times5)=46000$。"
+        },
+        {
+          "opt": "D",
+          "en": "$46\\,465$ — not produced by the correct model; it comes from a slip in the index (an extra period) or from mis-keying $1.015^{10}$ into the calculator.",
+          "zh": "$46\\,465$ —— 正確模型算不出這個數，通常是把 $1.015^{10}$ 在計算機上按錯（多按了一期）。"
+        }
+      ],
+      "tip": {
+        "en": "Compounded $n$ times a year ⇒ rate $\\div n$, periods $\\times n$. Annual compounding always gives the *smallest* amount — if you see a bigger answer with a bigger $n$, check your index.",
+        "zh": "一年複利 $n$ 次 ⇒ 利率 $\\div n$、期數 $\\times n$。期數越多本利和越大；算出比每年複利更小的數就一定有錯。"
+      }
+    }
+  },
+  "2025-p2-q11": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Turn ratios into equations", "zh": "第 1 步 · 把連比寫成方程" },
+          "math": "\\alpha+2\\beta=4k,\\quad \\beta+2\\gamma=9k,\\quad \\gamma+2\\alpha=5k",
+          "en": "A ratio $4:9:5$ means the three expressions are $4k,9k,5k$ for some $k\\neq0$.",
+          "zh": "連比 $4:9:5$ 表示三個式子分別是 $4k,9k,5k$（$k\\neq0$）。",
+          "highlight": ["4k", "9k", "5k"]
+        },
+        {
+          "title": { "en": "Step 2 · Express $\\alpha$ and $\\gamma$ in terms of $k$ and $\\beta$", "zh": "第 2 步 · 用 $k$ 與 $\\beta$ 表示 $\\alpha$、$\\gamma$" },
+          "math": "\\alpha=4k-2\\beta,\\quad \\gamma=\\frac{9k-\\beta}{2}",
+          "en": "Rearrange the first two equations only — the third is kept for the next step.",
+          "zh": "先只用首兩個方程移項，第三個留待下一步。",
+          "highlight": ["\\alpha=4k-2\\beta"]
+        },
+        {
+          "title": { "en": "Step 3 · Substitute into the third equation", "zh": "第 3 步 · 代入第三式" },
+          "math": "\\frac{9k-\\beta}{2}+2(4k-2\\beta)=5k \\;\\Rightarrow\\; 25k-9\\beta=10k",
+          "en": "Multiply by 2 to clear the fraction.",
+          "zh": "乘 2 消去分母。",
+          "highlight": ["25k-9\\beta=10k"]
+        },
+        {
+          "title": { "en": "Step 4 · Solve and take the ratio", "zh": "第 4 步 · 解出並取比" },
+          "math": "\\beta=\\frac{5k}{3},\\quad \\alpha=4k-\\frac{10k}{3}=\\frac{2k}{3}",
+          "en": "So $\\alpha:\\beta=\\frac{2k}{3}:\\frac{5k}{3}=2:5$.",
+          "zh": "所以 $\\alpha:\\beta=\\frac{2k}{3}:\\frac{5k}{3}=2:5$。",
+          "highlight": ["\\alpha:\\beta=2:5"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\alpha:\\beta=2:5",
+          "en": "That is option A. (Check: $\\gamma=\\frac{11k}{3}$ and $\\gamma+2\\alpha=5k$ ✓.)",
+          "zh": "即選項 A。（驗算：$\\gamma=\\frac{11k}{3}$，$\\gamma+2\\alpha=5k$ ✓。）",
+          "highlight": ["2:5"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "B",
+          "en": "$5:2$ — this is $\\beta:\\alpha$, the ratio the other way round. Read the last line of the question again.",
+          "zh": "$5:2$ —— 這是 $\\beta:\\alpha$，次序倒轉了。看清題目最後要求的是 $\\alpha:\\beta$。"
+        },
+        {
+          "opt": "C",
+          "en": "$128:149$ — appears when the three equations are added incorrectly (only part of a bracket is doubled).",
+          "zh": "$128:149$ —— 通常是把方程相加時只乘了括號的一部分而出錯。"
+        },
+        {
+          "opt": "D",
+          "en": "$149:128$ — the reciprocal of C, i.e. the same slip with the ratio reversed.",
+          "zh": "$149:128$ —— C 的倒數，即同一個錯誤再把比倒轉。"
+        }
+      ],
+      "tip": {
+        "en": "For a continued ratio $A:B:C=p:q:r$, write $A=pk,\\ B=qk,\\ C=rk$. Using one unknown $k$ turns three ratios into three easy linear equations.",
+        "zh": "連比 $A:B:C=p:q:r$ 就寫 $A=pk,\\ B=qk,\\ C=rk$：引入一個 $k$，三條比就變成三條一次方程。"
+      }
+    }
+  },
+  "2025-p2-q14": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Read the two intercepts from the graph", "zh": "第 1 步 · 從圖讀出兩個截距" },
+          "math": "x\\text{-intercept}=\\frac{7}{p},\\quad y\\text{-intercept}=\\frac{7}{q}",
+          "en": "Put $y=0$ and $x=0$ in $px+qy=7$.",
+          "zh": "在 $px+qy=7$ 中分別令 $y=0$、$x=0$。",
+          "highlight": ["\\frac{7}{p}", "\\frac{7}{q}"]
+        },
+        {
+          "title": { "en": "Step 2 · The $y$-intercept is above 1", "zh": "第 2 步 · $y$ 截距在 1 之上" },
+          "math": "\\frac{7}{q}>1 \\;\\Rightarrow\\; q<7",
+          "en": "So statement II ($q>7$) is **false**.",
+          "zh": "所以命題 II（$q>7$）**錯誤**。",
+          "highlight": ["q<7"]
+        },
+        {
+          "title": { "en": "Step 3 · The $x$-intercept is less than 1", "zh": "第 3 步 · $x$ 截距小於 1" },
+          "math": "\\frac{7}{p}<1 \\;\\Rightarrow\\; p>7",
+          "en": "So statement I ($p>7$) is **true**, and since $q<7<p$, statement III ($q>p$) is **false**.",
+          "zh": "所以命題 I（$p>7$）**正確**；又 $q<7<p$，故命題 III（$q>p$）**錯誤**。",
+          "highlight": ["p>7", "q<p"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\text{I only}",
+          "en": "Only statement I is true — option A.",
+          "zh": "只有命題 I 正確 —— 答案 A。",
+          "highlight": ["\\text{I only}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "D",
+          "en": "$\\text{II and III only}$ — comes from reading the intercepts off the graph the wrong way round (thinking a larger $y$-intercept means a larger $q$).",
+          "zh": "$\\text{II 與 III}$ —— 把截距與係數的關係看反了：$y$ 截距越大，$q$ 其實越小。"
+        },
+        {
+          "opt": "C",
+          "en": "$\\text{I and III only}$ — I is right, but $q>p$ contradicts $q<7<p$ unless $p$ and $q$ are negative, which the picture rules out.",
+          "zh": "$\\text{I 與 III}$ —— I 對，但 $q<7<p$ 與 $q>p$ 矛盾；要 $q>p$ 就要兩者皆負，而圖中兩截距皆為正。"
+        },
+        {
+          "opt": "B",
+          "en": "$\\text{II only}$ — picking the trap: the $y$-intercept is *bigger than 1*, so $\\frac{7}{q}>1$, not $q>7$.",
+          "zh": "$\\text{只有 II}$ —— 落入陷阱：$y$ 截距大於 1 表示 $\\frac{7}{q}>1$，不是 $q>7$。"
+        }
+      ],
+      "tip": {
+        "en": "Intercept form: $\\frac{x}{a}+\\frac{y}{b}=1$ with $a=\\frac{7}{p}$, $b=\\frac{7}{q}$. Big intercept ⇒ small coefficient.",
+        "zh": "截距式 $\\frac{x}{a}+\\frac{y}{b}=1$，其中 $a=\\frac{7}{p}$、$b=\\frac{7}{q}$：截距越大，係數越小。"
+      }
+    }
+  },
+  "2025-p2-q15": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Perimeter of a sector", "zh": "第 1 步 · 扇形的周界" },
+          "math": "2r+r\\theta=12\\pi,\\quad r=3\\pi",
+          "en": "The perimeter is two radii plus the arc $r\\theta$ ($\\theta$ in radians).",
+          "zh": "扇形周界 = 兩條半徑 + 弧長 $r\\theta$（$\\theta$ 以弧度計）。",
+          "highlight": ["2r+r\\theta"]
+        },
+        {
+          "title": { "en": "Step 2 · Find the angle", "zh": "第 2 步 · 求圓心角" },
+          "math": "6\\pi+3\\pi\\theta=12\\pi \\;\\Rightarrow\\; \\theta=2\\text{ rad}=114.6^{\\circ}",
+          "en": "So statement III ($\\theta>100^{\\circ}$) is **true**.",
+          "zh": "故命題 III（$\\theta>100^{\\circ}$）**正確**。",
+          "highlight": ["\\theta=2\\text{ rad}", "114.6^{\\circ}"]
+        },
+        {
+          "title": { "en": "Step 3 · Area of the sector", "zh": "第 3 步 · 扇形面積" },
+          "math": "\\frac{1}{2}r^{2}\\theta=\\frac{1}{2}(9\\pi^{2})(2)=9\\pi^{2}\\text{ cm}^{2}",
+          "en": "Statement I is exactly what the formula gives — **true**.",
+          "zh": "命題 I 正是公式的結果 —— **正確**。",
+          "highlight": ["9\\pi^{2}\\text{ cm}^{2}"]
+        },
+        {
+          "title": { "en": "Step 4 · Perimeter of $\\Delta OMN$", "zh": "第 4 步 · $\\Delta OMN$ 的周界" },
+          "math": "MN=2r\\sin\\frac{\\theta}{2}=6\\pi\\sin1^{\\circ}\\approx15.86",
+          "en": "Careful: $\\sin 1$ means $\\sin(1\\ \\text{radian})\\approx0.8415$, so $MN\\approx15.86$ cm.",
+          "zh": "注意：$\\sin1$ 是 $\\sin(1\\ \\text{弧度})\\approx0.8415$，故 $MN\\approx15.86$ cm。",
+          "highlight": ["MN\\approx15.86"]
+        },
+        {
+          "title": { "en": "Step 5 · Compare with 35 cm", "zh": "第 5 步 · 與 35 cm 比較" },
+          "math": "18.85+15.86=34.71<35",
+          "en": "Two radii $6\\pi\\approx18.85$ plus the chord $15.86$ gives $34.71$ cm, so statement II is **true**.",
+          "zh": "兩條半徑 $6\\pi\\approx18.85$ 加弦 $15.86$ 得 $34.71$ cm，故命題 II **正確**。",
+          "highlight": ["34.71<35"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\text{I, II and III}",
+          "en": "All three are true — option D.",
+          "zh": "三項皆正確 —— 答案 D。",
+          "highlight": ["\\text{I, II and III}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "B",
+          "en": "$\\text{I and III only}$ — you dropped II by using degrees inside $\\sin$: $6\\pi\\sin1^{\\circ}$ is a tiny number, but the sector angle is in **radians**.",
+          "zh": "$\\text{I 與 III}$ —— 漏了 II，因為把 $\\sin$ 內的 1 當成度數；扇形公式的角是**弧度**。"
+        },
+        {
+          "opt": "A",
+          "en": "$\\text{I and II only}$ — you treated $\\theta$ as $100^{\\circ}$ or forgot to convert: $2$ rad $=114.6^{\\circ}>100^{\\circ}$.",
+          "zh": "$\\text{I 與 II}$ —— 把 $\\theta$ 誤當 $100^{\\circ}$ 或忘記換算：$2$ 弧度 $=114.6^{\\circ}>100^{\\circ}$。"
+        },
+        {
+          "opt": "C",
+          "en": "$\\text{II and III only}$ — you lost I, usually by using $\\pi r^{2}\\theta$ (that is $2\\times$ the true area).",
+          "zh": "$\\text{II 與 III}$ —— 漏了 I，通常是用了 $\\pi r^{2}\\theta$（那是真面積的 2 倍）。"
+        }
+      ],
+      "tip": {
+        "en": "Sector: arc $=r\\theta$, area $=\\frac12r^{2}\\theta$, chord $=2r\\sin\\frac{\\theta}{2}$ — with $\\theta$ **in radians**. $\\pi$ rad $=180^{\\circ}$.",
+        "zh": "扇形：弧長 $=r\\theta$、面積 $=\\frac12r^{2}\\theta$、弦 $=2r\\sin\\frac{\\theta}{2}$，$\\theta$ 一律用**弧度**。$\\pi$ 弧度 $=180^{\\circ}$。"
+      }
+    }
+  },
+  "2025-p2-q16": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Total surface area of the cylinder", "zh": "第 1 步 · 圓柱總表面積" },
+          "math": "2\\pi r^{2}+2\\pi rh=492\\pi,\\quad h=35",
+          "en": "Two circular ends plus the curved surface $2\\pi rh$.",
+          "zh": "兩個圓底加曲面 $2\\pi rh$。",
+          "highlight": ["2\\pi r^{2}+2\\pi rh=492\\pi"]
+        },
+        {
+          "title": { "en": "Step 2 · Form a quadratic in $r$", "zh": "第 2 步 · 化成 $r$ 的二次方程" },
+          "math": "r^{2}+35r-246=0",
+          "en": "Divide every term by $2\\pi$.",
+          "zh": "全式除以 $2\\pi$。",
+          "highlight": ["r^{2}+35r-246=0"]
+        },
+        {
+          "title": { "en": "Step 3 · Solve for $r$", "zh": "第 3 步 · 解出 $r$" },
+          "math": "r=\\frac{-35+\\sqrt{35^{2}+4\\times246}}{2}=\\frac{-35+47}{2}=6",
+          "en": "$\\sqrt{2209}=47$; reject the negative root.",
+          "zh": "$\\sqrt{2209}=47$；負根不合，捨去。",
+          "highlight": ["r=6"]
+        },
+        {
+          "title": { "en": "Step 4 · Volume of the sphere", "zh": "第 4 步 · 球體體積" },
+          "math": "V=\\frac{4}{3}\\pi r^{3}=\\frac{4}{3}\\pi(216)=288\\pi\\text{ cm}^{3}",
+          "en": "The sphere has the same radius $6$ cm — option B.",
+          "zh": "球體半徑同為 $6$ cm，故體積 $288\\pi\\text{ cm}^{3}$ —— 答案 B。",
+          "highlight": ["288\\pi\\text{ cm}^{3}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "D",
+          "en": "$864\\pi$ — you used $4\\pi r^{3}$ and forgot the factor $\\frac13$ (that expression is $4\\pi r^{3}=864\\pi$).",
+          "zh": "$864\\pi$ —— 用了 $4\\pi r^{3}$，忘了 $\\frac13$（$4\\pi r^{3}=864\\pi$）。"
+        },
+        {
+          "opt": "A",
+          "en": "$144\\pi$ — half of the correct value, e.g. from using $\\frac{4}{3}\\pi r^{3}$ with $r^{3}=108$ or from treating $r=3$.",
+          "zh": "$144\\pi$ —— 只有正確值的一半，例如把 $r$ 當成 3 或 $r^{3}$ 算錯。"
+        },
+        {
+          "opt": "C",
+          "en": "$576\\pi$ — you solved the quadratic wrongly and took $r\\approx7.56$, or multiplied the volume by 2.",
+          "zh": "$576\\pi$ —— 二次方程解錯取了較大的 $r$，或把體積乘了 2。"
+        }
+      ],
+      "tip": {
+        "en": "$\\sqrt{2209}=47$ and $\\sqrt{1225}=35$: DSE often chooses numbers so the quadratic factorises nicely. Always test the positive root against the given total surface area.",
+        "zh": "$\\sqrt{2209}=47$、$\\sqrt{1225}=35$：DSE 常刻意讓二次方程有整數根。求出 $r$ 後代回表面積檢查一次。"
+      }
+    }
+  },
+  "2025-p2-q17": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Choose a convenient parallelogram", "zh": "第 1 步 · 取一個方便的平行四邊形" },
+          "math": "A(0,0),\\;B(4,0),\\;D(0,5),\\;C(4,5)",
+          "en": "Areas and their ratios do not change under stretching, so pick the simplest shape: side lengths in the ratio given.",
+          "zh": "伸縮不改變面積之比，所以取最簡單的形狀（邊長按題目比例）。",
+          "highlight": ["A(0,0)", "C(4,5)"]
+        },
+        {
+          "title": { "en": "Step 2 · Place E, F and G", "zh": "第 2 步 · 定出 E、F、G" },
+          "math": "E(1,0),\\;F(0,2),\\;G\\left(\\frac{8}{3},5\\right)",
+          "en": "$BE=3AE\\Rightarrow AE:EB=1:3$; $2DF=3AF\\Rightarrow AF:FD=2:3$; $DG=2CG\\Rightarrow DG:GC=2:1$.",
+          "zh": "$BE=3AE\\Rightarrow AE:EB=1:3$；$2DF=3AF\\Rightarrow AF:FD=2:3$；$DG=2CG\\Rightarrow DG:GC=2:1$。",
+          "highlight": ["E(1,0)", "F(0,2)", "G(\\frac{8}{3},5)"]
+        },
+        {
+          "title": { "en": "Step 3 · Find $H$", "zh": "第 3 步 · 求 $H$" },
+          "math": "EG:\\;y=3(x-1);\\quad BC\\text{ produced}:x=4 \\;\\Rightarrow\\; H(4,9)",
+          "en": "$EG$ joins $(1,0)$ and $(\\frac83,5)$, so its slope is $3$.",
+          "zh": "$EG$ 過 $(1,0)$ 與 $(\\frac83,5)$，斜率為 $3$。",
+          "highlight": ["H(4,9)"]
+        },
+        {
+          "title": { "en": "Step 4 · Area of $\\Delta CGH$ in these coordinates", "zh": "第 4 步 · 這個坐標下 $\\Delta CGH$ 的面積" },
+          "math": "[\\Delta CGH]=\\frac{1}{2}\\times\\frac{4}{3}\\times4=\\frac{8}{3}",
+          "en": "Base $CG=\\frac43$ (horizontal) and height $=9-5=4$.",
+          "zh": "底 $CG=\\frac43$（水平），高 $=9-5=4$。",
+          "highlight": ["\\frac{8}{3}"]
+        },
+        {
+          "title": { "en": "Step 5 · Area of $DFEG$ and the scale factor", "zh": "第 5 步 · $DFEG$ 面積與放大倍數" },
+          "math": "[DFEG]=\\frac{49}{6},\\quad \\frac{[DFEG]}{[\\Delta CGH]}=\\frac{49/6}{8/3}=\\frac{49}{16}",
+          "en": "Shoelace formula on $D(0,5),F(0,2),E(1,0),G(\\frac83,5)$.",
+          "zh": "用鞋帶公式算 $D(0,5),F(0,2),E(1,0),G(\\frac83,5)$ 的多邊形面積。",
+          "highlight": ["\\frac{49}{16}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "[DFEG]=16\\times\\frac{49}{16}=49\\text{ cm}^{2}",
+          "en": "Scale the picture so that $[\\Delta CGH]=16$ — option B.",
+          "zh": "把圖放大到 $[\\Delta CGH]=16$，得 $49\\text{ cm}^{2}$ —— 答案 B。",
+          "highlight": ["49\\text{ cm}^{2}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "C",
+          "en": "$105$ — using $[\\Delta CGH]=16$ with a wrong ratio, e.g. comparing with $[\\Delta EFG]$ instead of the quadrilateral $DFEG$.",
+          "zh": "$105$ —— 比例用錯，例如拿了 $[\\Delta EFG]$ 而不是四邊形 $DFEG$。"
+        },
+        {
+          "opt": "A",
+          "en": "$46$ — a near-miss from rounding the coordinates (using $G=(2.6,5)$ instead of $\\frac83$).",
+          "zh": "$46$ —— 把坐標取近似值（$G$ 用了 $2.6$ 而非 $\\frac83$）造成的近似誤差。"
+        },
+        {
+          "opt": "D",
+          "en": "$115$ — you treated $DG:GC$ as $1:2$ (reading the ratio the wrong way), which moves $G$ and inflates the quadrilateral.",
+          "zh": "$115$ —— 把 $DG:GC$ 看成 $1:2$（比例次序反了），$G$ 位置一錯面積就偏大。"
+        }
+      ],
+      "tip": {
+        "en": "For ratio-of-areas questions, pick the simplest coordinates (a rectangle) — you never need the real side lengths, only the *ratios*. Let the given area fix the scale at the end.",
+        "zh": "面積比題目：直接取最簡單的坐標（矩形），因為只需比值，不需真實邊長；最後用題目給的面積定出放大倍數。"
+      }
+    }
+  },
+  "2025-p2-q18": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Spot the right angle", "zh": "第 1 步 · 認出直角" },
+          "math": "25^{2}+60^{2}=625+3600=4225=65^{2}",
+          "en": "So $\\angle XZW=90^{\\circ}$ (converse of Pythagoras) and $WX$ is the hypotenuse.",
+          "zh": "故 $\\angle XZW=90^{\\circ}$（勾股定理逆定理），$WX$ 是斜邊。",
+          "highlight": ["\\angle XZW=90^{\\circ}"]
+        },
+        {
+          "title": { "en": "Step 2 · Use the given ratio", "zh": "第 2 步 · 用題給的比例" },
+          "math": "\\frac{WY}{XY}=\\frac{XY}{YZ} \\;\\Rightarrow\\; XY^{2}=WY\\cdot YZ",
+          "en": "$XY$ is the geometric mean of $WY$ and $YZ$.",
+          "zh": "$XY$ 是 $WY$ 與 $YZ$ 的等比中項。",
+          "highlight": ["XY^{2}=WY\\cdot YZ"]
+        },
+        {
+          "title": { "en": "Step 3 · Let $YZ=z$ and solve", "zh": "第 3 步 · 設 $YZ=z$ 求解" },
+          "math": "XY^{2}=3600+z^{2}=(25+z)z \\;\\Rightarrow\\; 3600=25z",
+          "en": "$XY^{2}=XZ^{2}+YZ^{2}$ from the right triangle, and $WY=25+z$.",
+          "zh": "由直角三角形 $XY^{2}=XZ^{2}+YZ^{2}$，而 $WY=25+z$。",
+          "highlight": ["z=144"]
+        },
+        {
+          "title": { "en": "Step 4 · Find $XY$", "zh": "第 4 步 · 求 $XY$" },
+          "math": "XY=\\sqrt{3600+144^{2}}=\\sqrt{24336}=156\\text{ cm}",
+          "en": "Check: $WY=169$, and $169\\times144=156^{2}$ ✓ — option C.",
+          "zh": "驗算：$WY=169$，$169\\times144=156^{2}$ ✓ —— 答案 C。",
+          "highlight": ["156\\text{ cm}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "B",
+          "en": "$144$ — that is $YZ$, not $XY$. The question asks for $XY$.",
+          "zh": "$144$ —— 這是 $YZ$ 而非 $XY$。題目要的是 $XY$。"
+        },
+        {
+          "opt": "D",
+          "en": "$169$ — that is $WY=25+144$. A correct intermediate value, but not the answer.",
+          "zh": "$169$ —— 這是 $WY=25+144$，算對了但答錯了題。"
+        },
+        {
+          "opt": "A",
+          "en": "$131$ — from writing $XY^2=65^2+144^2$ (treating $65$ as a leg) or from $60+65+6$ style errors.",
+          "zh": "$131$ —— 把 $65$ 當成直角邊，用了 $XY^{2}=65^{2}+144^{2}$ 之類的錯誤。"
+        }
+      ],
+      "tip": {
+        "en": "When a question gives three sides of a triangle, test Pythagoras first — a right angle usually unlocks the rest. DSE often hides $3$-$4$-$5$ families: here $25$-$60$-$65=\\times5$ of $5$-$12$-$13$.",
+        "zh": "題目給了三角形三邊，先驗勾股定理 —— 直角一出現後面就通了。留意 $3$-$4$-$5$ 的倍數：本例 $25$-$60$-$65$ 正是 $5$-$12$-$13$ 的 5 倍。"
+      }
+    }
+  },
+  "2025-p2-q19": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Put the square on coordinates", "zh": "第 1 步 · 把正方形放上坐標" },
+          "math": "B(0,0),\\;A(1,0),\\;C(0,1),\\;D(1,1)",
+          "en": "Side $1$. Then $AC$ is $x+y=1$ and $CD=1$.",
+          "zh": "取邊長 $1$。則 $AC$ 為 $x+y=1$，$CD=1$。",
+          "highlight": ["AC:\\;x+y=1"]
+        },
+        {
+          "title": { "en": "Step 2 · $F$ on $AC$ produced, $CF=CD$", "zh": "第 2 步 · $F$ 在 $AC$ 延線上且 $CF=CD$" },
+          "math": "F\\left(-\\frac{1}{\\sqrt{2}},\\;1+\\frac{1}{\\sqrt{2}}\\right)",
+          "en": "Because $CDEF$ is a rhombus, $CF=CD=1$.",
+          "zh": "因 $CDEF$ 是菱形，$CF=CD=1$。",
+          "highlight": ["CF=1"]
+        },
+        {
+          "title": { "en": "Step 3 · $DF$ produced meets the parallel through $B$", "zh": "第 3 步 · $DF$ 延線與過 $B$ 的平行線相交" },
+          "math": "G\\left(-(1+\\sqrt{2}),\\;1+\\sqrt{2}\\right),\\quad \\overrightarrow{DG}=2\\overrightarrow{DF}",
+          "en": "$BG\\parallel AF$ (direction $(-1,1)$) fixes $G$: solving gives $DF=FG$ — statement I is **true**.",
+          "zh": "$BG\\parallel AF$（方向 $(-1,1)$）定出 $G$：解得 $DF=FG$ —— 命題 I **正確**。",
+          "highlight": ["DF=FG"]
+        },
+        {
+          "title": { "en": "Step 4 · Compare the two triangles", "zh": "第 4 步 · 比較兩個三角形" },
+          "math": "DE=EF=1,\\;DF=\\sqrt{2+\\sqrt{2}};\\quad BF=FG=\\sqrt{2+\\sqrt{2}},\\;BG=2+\\sqrt{2}",
+          "en": "Both triangles have sides in the ratio $1:1:\\sqrt{2+\\sqrt{2}}$, so $\\Delta BFG\\sim\\Delta DEF$ — statement II is **true**.",
+          "zh": "兩個三角形的邊比同為 $1:1:\\sqrt{2+\\sqrt{2}}$，故 $\\Delta BFG\\sim\\Delta DEF$ —— 命題 II **正確**。",
+          "highlight": ["\\Delta BFG\\sim\\Delta DEF"]
+        },
+        {
+          "title": { "en": "Step 5 · The two angles", "zh": "第 5 步 · 兩角之和" },
+          "math": "\\angle ABG=135^{\\circ},\\;\\angle BFD=45^{\\circ},\\;135^{\\circ}+45^{\\circ}=180^{\\circ}",
+          "en": "Statement III is **true**.",
+          "zh": "命題 III **正確**。",
+          "highlight": ["180^{\\circ}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\text{I, II and III}",
+          "en": "All three statements hold — option D.",
+          "zh": "三項皆成立 —— 答案 D。",
+          "highlight": ["\\text{I, II and III}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "A",
+          "en": "$\\text{I and II only}$ — you rejected III by guessing; $\\angle ABG=135^{\\circ}$ (since $\\angle ABF=45^{\\circ}$ and $BG\\parallel AF$) and $\\angle BFD=45^{\\circ}$.",
+          "zh": "$\\text{I 與 II}$ —— 無理由地否定了 III：由 $BG\\parallel AF$ 得 $\\angle ABG=135^{\\circ}$，而 $\\angle BFD=45^{\\circ}$，兩者確實互補。"
+        },
+        {
+          "opt": "C",
+          "en": "$\\text{II and III only}$ — you doubted I by assuming $DF\\neq FG$; but $BG\\parallel AF$ forces exactly $DG=2DF$.",
+          "zh": "$\\text{II 與 III}$ —— 誤以為 $DF\\neq FG$；實際上 $BG\\parallel AF$ 迫使 $DG=2DF$，即 $DF=FG$。"
+        },
+        {
+          "opt": "B",
+          "en": "$\\text{I and III only}$ — you need the side ratio to see the similarity: $\\Delta DEF$ has sides $1,1,\\sqrt{2+\\sqrt2}$ and $\\Delta BFG$ is that triangle enlarged by $\\sqrt{2+\\sqrt2}$.",
+          "zh": "$\\text{I 與 III}$ —— 漏了 II：$\\Delta DEF$ 三邊為 $1,1,\\sqrt{2+\\sqrt2}$，$\\Delta BFG$ 正是它放大 $\\sqrt{2+\\sqrt2}$ 倍。"
+        }
+      ],
+      "tip": {
+        "en": "For 'which statements are true' geometry, coordinates are often faster than angle-chasing: a square of side $1$ and one line equation gives you exact lengths and angles.",
+        "zh": "「以下哪些正確」的幾何題，用坐標往往比追角快：邊長取 $1$、寫出一條直線方程，長度與角度都變成精確值。"
+      }
+    }
+  }
+}

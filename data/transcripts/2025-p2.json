@@ -368,7 +368,7 @@
     {
       "question_number": 27,
       "section": "A",
-      "stem_text": "The coordinates of the centre of the circle C are (7, 5). If C cuts the x-axis at the points P and Q such that PQ = 24, then the equation of C is",
+      "stem_text": "The coordinates of the centre of the circle C are (7, -5). If C cuts the x-axis at the points P and Q such that PQ = 24, then the equation of C is",
       "stem_latex": "PQ=24",
       "figure": null,
       "options": {
@@ -606,7 +606,7 @@
     {
       "question_number": 44,
       "section": "B",
-      "stem_text": "The standard scores of a boy and a girl in a Mathematics test are 2 and z respectively. The standard deviation of the scores of the Mathematics test is 2 marks. If the difference of the test score of the boy and the test score of the girl is 6 marks, find z.",
+      "stem_text": "The standard scores of a boy and a girl in a Mathematics test are -2 and z respectively. The standard deviation of the scores of the Mathematics test is 2 marks. If the difference of the test score of the boy and the test score of the girl is 6 marks, find z.",
       "stem_latex": null,
       "figure": null,
       "options": {

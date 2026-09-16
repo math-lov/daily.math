@@ -49,6 +49,8 @@ ok($("#batchDate").textContent === "2026-09-16", "batch date is 2026-09-16");
 
 console.log("\n— 題目內容 —");
 ok($$(".q-card .q-no").length === 3, "each card has a question badge");
+const badgeTxt = cards[0].querySelector(".q-no").textContent.trim();
+ok(/^\d{2}-P\d+Q\d{2}$/.test(badgeTxt), "question badge shows the paper code, e.g. 25-P2Q03 (got " + badgeTxt + ")");
 ok($$(".q-card img.q-img").length === 3, "each card shows the question image");
 const firstOptCount = cards[0].querySelectorAll(".opt").length;
 ok(firstOptCount === 4, "first question has 4 options (got " + firstOptCount + ")");
