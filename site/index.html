@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily 3 · DSE Maths MC</title>
+<meta name="description" content="Three DSE Maths MC questions a day, with animated bilingual solutions.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="aurora" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <!-- ═══ Header ═══ -->
+  <header class="topbar glass">
+    <div class="brand">
+      <div class="brand-mark">3</div>
+      <div>
+        <div class="brand-name">Daily Three</div>
+        <div class="brand-sub">DSE Maths · Multiple Choice</div>
+      </div>
+    </div>
+    <div class="top-right">
+      <button class="lang-switch" id="langBtn" title="Solution language / 解答語言">
+        <span class="lang-opt" data-lang="en">EN</span>
+        <span class="lang-opt" data-lang="zh">中文</span>
+      </button>
+      <span class="chip chip-streak" id="streakChip">Streak 0</span>
+    </div>
+  </header>
+
+  <!-- ═══ Today's batch ═══ -->
+  <section class="batch-head">
+    <div class="batch-title-row">
+      <h1 id="batchTitle">Loading…</h1>
+      <span class="chip chip-date" id="batchDate">—</span>
+    </div>
+    <div class="batch-meta" id="batchMeta"></div>
+  </section>
+
+  <main id="questions" class="questions"></main>
+
+  <!-- ═══ Progress ═══ -->
+  <section class="panel glass" id="progressPanel">
+    <div class="panel-head">
+      <h2>My progress</h2>
+      <span class="panel-sub">Saved in this browser only</span>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-n" id="stAttempts">0</div><div class="stat-l">Questions attempted</div></div>
+      <div class="stat"><div class="stat-n" id="stAccuracy">—</div><div class="stat-l">Accuracy</div></div>
+      <div class="stat"><div class="stat-n" id="stStreak">0</div><div class="stat-l">Days completed</div></div>
+      <div class="stat"><div class="stat-n" id="stCorrect">0</div><div class="stat-l">Correct</div></div>
+    </div>
+    <div class="topics" id="topicStats"></div>
+    <div class="wrongbook">
+      <div class="wrongbook-head">
+        <h3>Review list <span class="count" id="wrongCount">0</span></h3>
+        <button class="mini-btn" id="clearProgress">Reset</button>
+      </div>
+      <div id="wrongList" class="wrong-list"></div>
+    </div>
+  </section>
+
+  <!-- ═══ Archive ═══ -->
+  <nav class="panel glass" id="archivePanel">
+    <div class="panel-head"><h2>Archive</h2><span class="panel-sub">Every past batch</span></div>
+    <div class="archive" id="archive"></div>
+  </nav>
+
+  <footer class="foot">
+    <span id="footNote">Data: 2025 HKDSE Maths (Compulsory Part) Paper 2 · questions in English, solutions bilingual</span>
+  </footer>
+</div>
+
+<!-- KaTeX + auto-render (defer) -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+
+<!-- Version stamp changes hourly: GitHub Pages sends max-age=600 for static files,
+     so a same-hour visit may use the cached copy (fast), a later visit always refetches. -->
+<script>
+  window.__V = new Date().toISOString().slice(0, 13).replace(/[-T:]/g, "");
+  document.write('<script src="data/bank.js?v=' + window.__V + '"><\/script>');
+  document.write('<script src="data/solutions.js?v=' + window.__V + '"><\/script>');
+  document.write('<script src="data/releases.js?v=' + window.__V + '"><\/script>');
+  document.write('<script src="assets/app.js?v=' + window.__V + '"><\/script>');
+</script>
+</body>
+</html>

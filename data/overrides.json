@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "_note": "人工覆寫自動分類（topic / difficulty / timeSec）。build_bank.py 會套用，classifiedBy 會標成 manual-override。",
+  "overrides": {
+    "2025-p2-q05": { "difficulty": 2, "timeSec": 90 },
+    "2025-p2-q08": { "difficulty": 2, "timeSec": 90 },
+    "2025-p2-q29": { "difficulty": 3, "timeSec": 120 }
+  }
+}

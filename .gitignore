@@ -1,0 +1,18 @@
+# 試卷 PDF 與原始轉寫（體積／版權原因不入庫）
+*.pdf
+*.docx
+paper2025.json
+
+# 依賴與快取
+node_modules/
+__pycache__/
+*.pyc
+
+# 助手／IDE 資料
+.workbuddy/
+.wbapp_*
+.codebuddy/
+
+# 系統
+Thumbs.db
+.DS_Store
