@@ -21,8 +21,9 @@ window.BANK = {
     "images/questions/2025-p2-q01.png"
    ],
    "topic": {
-    "en": "Indices & Exponents",
-    "zh": "指數運算"
+    "unit": 3,
+    "en": "Exponential and Logarithmic Functions",
+    "zh": "指數與對數函數"
    },
    "difficulty": 1,
    "timeSec": 60,
@@ -40,7 +41,7 @@ window.BANK = {
     "D": "3^{14}x^{13}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q02",
@@ -51,8 +52,9 @@ window.BANK = {
     "images/questions/2025-p2-q02.png"
    ],
    "topic": {
-    "en": "Indices & Exponents",
-    "zh": "指數運算"
+    "unit": 4,
+    "en": "More about Polynomials",
+    "zh": "多項式續論"
    },
    "difficulty": 1,
    "timeSec": 60,
@@ -70,7 +72,7 @@ window.BANK = {
     "D": "(6+3m-4n)(6-3m-4n)"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q03",
@@ -81,11 +83,12 @@ window.BANK = {
     "images/questions/2025-p2-q03.png"
    ],
    "topic": {
-    "en": "Algebraic Identities",
-    "zh": "代數恆等式"
+    "unit": 4,
+    "en": "More about Polynomials",
+    "zh": "多項式續論"
    },
-   "difficulty": 1,
-   "timeSec": 60,
+   "difficulty": 2,
+   "timeSec": 90,
    "stem": {
     "text": "If a and b are constants such that (x+8)(x+a)+b \\equiv x^{2}+5a(x+3), then b =",
     "html": "If a and b are constants such that (x+8)(x+a)+b $\\equiv$ $x^{2}$+5a(x+3), then b =",
@@ -100,7 +103,7 @@ window.BANK = {
     "D": "14"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q04",
@@ -111,11 +114,12 @@ window.BANK = {
     "images/questions/2025-p2-q04.png"
    ],
    "topic": {
-    "en": "Algebra",
-    "zh": "代數"
+    "unit": 5,
+    "en": "More about Equations",
+    "zh": "方程續論"
    },
-   "difficulty": 1,
-   "timeSec": 60,
+   "difficulty": 2,
+   "timeSec": 90,
    "stem": {
     "text": "If (3c+1)(d-4)=2d(5c-1), then c =",
     "html": "If (3c+1)(d-4)=2d(5c-1), then c =",
@@ -130,7 +134,7 @@ window.BANK = {
     "D": "\\frac{7d+12}{3d-4}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q05",
@@ -141,8 +145,9 @@ window.BANK = {
     "images/questions/2025-p2-q05.png"
    ],
    "topic": {
-    "en": "Indices & Exponents",
-    "zh": "指數運算"
+    "unit": 1,
+    "en": "Quadratic Equations in One Unknown",
+    "zh": "一元二次方程"
    },
    "difficulty": 2,
    "timeSec": 90,
@@ -171,8 +176,9 @@ window.BANK = {
     "images/questions/2025-p2-q06.png"
    ],
    "topic": {
-    "en": "Algebra",
-    "zh": "代數"
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
    },
    "difficulty": 1,
    "timeSec": 60,
@@ -190,7 +196,7 @@ window.BANK = {
     "D": "5.665 \\le x < 5.675"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q07",
@@ -201,11 +207,12 @@ window.BANK = {
     "images/questions/2025-p2-q07.png"
    ],
    "topic": {
-    "en": "Inequalities & L.P.",
+    "unit": 8,
+    "en": "Inequalities and Linear Programming",
     "zh": "不等式與線性規劃"
    },
-   "difficulty": 1,
-   "timeSec": 60,
+   "difficulty": 2,
+   "timeSec": 90,
    "stem": {
     "text": "The solution of 4y+1 < 5y-3 \\le 8y-9 is",
     "html": "The solution of 4y+1 &lt; 5y-3 $\\le$ 8y-9 is",
@@ -220,7 +227,7 @@ window.BANK = {
     "D": "y > 4"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q08",
@@ -231,8 +238,9 @@ window.BANK = {
     "images/questions/2025-p2-q08.png"
    ],
    "topic": {
-    "en": "Indices & Exponents",
-    "zh": "指數運算"
+    "unit": 2,
+    "en": "Functions and Graphs",
+    "zh": "函數與圖像"
    },
    "difficulty": 2,
    "timeSec": 90,
@@ -261,11 +269,12 @@ window.BANK = {
     "images/questions/2025-p2-q09.png"
    ],
    "topic": {
-    "en": "Polynomials",
-    "zh": "多項式"
+    "unit": 4,
+    "en": "More about Polynomials",
+    "zh": "多項式續論"
    },
-   "difficulty": 1,
-   "timeSec": 60,
+   "difficulty": 2,
+   "timeSec": 90,
    "stem": {
     "text": "Let p(x)=nx^{3}-3nx+36, where n is a constant. If x+3 is a factor of p(x), then p(3)=",
     "html": "Let p(x)=n$x^{3}$-3nx+36, where n is a constant. If x+3 is a factor of p(x), then p(3)=",
@@ -280,7 +289,7 @@ window.BANK = {
     "D": "72"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q10",
@@ -291,11 +300,12 @@ window.BANK = {
     "images/questions/2025-p2-q10.png"
    ],
    "topic": {
-    "en": "Percentage & Interest",
-    "zh": "百分數與利息"
+    "unit": 3,
+    "en": "Exponential and Logarithmic Functions",
+    "zh": "指數與對數函數"
    },
-   "difficulty": 1,
-   "timeSec": 60,
+   "difficulty": 2,
+   "timeSec": 90,
    "stem": {
     "text": "A sum of $40 000 is deposited at an interest rate of 3% per annum for 5 years, compounded half-yearly. Find the amount correct to the nearest dollar.",
     "html": "A sum of &dollar;40 000 is deposited at an interest rate of 3% per annum for 5 years, compounded half-yearly. Find the amount correct to the nearest dollar.",
@@ -310,7 +320,7 @@ window.BANK = {
     "D": "\\$46\\,465"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q11",
@@ -321,11 +331,12 @@ window.BANK = {
     "images/questions/2025-p2-q11.png"
    ],
    "topic": {
-    "en": "Ratios",
-    "zh": "比例"
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
    },
-   "difficulty": 1,
-   "timeSec": 60,
+   "difficulty": 2,
+   "timeSec": 90,
    "stem": {
     "text": "If \\alpha, \\beta and \\gamma are non-zero constants such that (\\alpha+2\\beta):(\\beta+2\\gamma):(\\gamma+2\\alpha)=4:9:5, then \\alpha:\\beta=",
     "html": "If $\\alpha$, $\\beta$ and $\\gamma$ are non-zero constants such that ($\\alpha$+2$\\beta$):($\\beta$+2$\\gamma$):($\\gamma$+2$\\alpha$)=4:9:5, then $\\alpha$:$\\beta$=",
@@ -340,7 +351,7 @@ window.BANK = {
     "D": "149:128"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q12",
@@ -351,11 +362,12 @@ window.BANK = {
     "images/questions/2025-p2-q12.png"
    ],
    "topic": {
-    "en": "Variation",
+    "unit": 6,
+    "en": "Variations",
     "zh": "變分"
    },
-   "difficulty": 1,
-   "timeSec": 60,
+   "difficulty": 2,
+   "timeSec": 90,
    "stem": {
     "text": "It is given that z varies directly as the cube of x and inversely as the square of y. When x=3 and y=6, z=3. When x=5 and y=2, z=",
     "html": "It is given that z varies directly as the cube of x and inversely as the square of y. When x=3 and y=6, z=3. When x=5 and y=2, z=",
@@ -370,7 +382,7 @@ window.BANK = {
     "D": "243"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q13",
@@ -381,11 +393,12 @@ window.BANK = {
     "images/questions/2025-p2-q13.png"
    ],
    "topic": {
-    "en": "Sequences",
-    "zh": "數列"
+    "unit": 7,
+    "en": "Arithmetic and Geometric Sequences",
+    "zh": "等差等比數列"
    },
-   "difficulty": 1,
-   "timeSec": 60,
+   "difficulty": 2,
+   "timeSec": 90,
    "stem": {
     "text": "Let a_n be the nth term of a sequence. If a_{2}=3, a_{5}=41 and a_{n+2}=2a_{n+1}+a_{n} for any positive integer n, then a_{6}=",
     "html": "Let a_n be the nth term of a sequence. If $a_{2}$=3, $a_{5}$=41 and $a_{n+2}$=2$a_{n+1}$+$a_{n}$ for any positive integer n, then $a_{6}$=",
@@ -400,7 +413,7 @@ window.BANK = {
     "D": "243"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q14",
@@ -411,11 +424,12 @@ window.BANK = {
     "images/questions/2025-p2-q14.png"
    ],
    "topic": {
-    "en": "Coordinate Geometry",
-    "zh": "坐標幾何"
+    "unit": 10,
+    "en": "Equations of Straight Lines",
+    "zh": "直線方程"
    },
-   "difficulty": 1,
-   "timeSec": 60,
+   "difficulty": 2,
+   "timeSec": 90,
    "stem": {
     "text": "In the figure, the equation of the straight line L is px+qy=7. Which of the following is/are true?\nI. p > 7\nII. q > 7\nIII. q > p",
     "html": "In the figure, the equation of the straight line L is px+qy=7. Which of the following is/are true?<br>I. p &gt; 7<br>II. q &gt; 7<br>III. q &gt; p",
@@ -430,7 +444,7 @@ window.BANK = {
     "D": "\\text{II and III only}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q15",
@@ -441,11 +455,12 @@ window.BANK = {
     "images/questions/2025-p2-q15.png"
    ],
    "topic": {
-    "en": "Complex Numbers",
-    "zh": "複數"
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
    },
-   "difficulty": 1,
-   "timeSec": 60,
+   "difficulty": 2,
+   "timeSec": 90,
    "stem": {
     "text": "The perimeter of the sector OMN is 12\\pi\\text{ cm}, where O is the centre of the sector OMN. If the radius of the sector OMN is 3\\pi\\text{ cm}, which of the following are true?\nI. The area of the sector OMN is 9\\pi^{2}\\text{ cm}^{2}.\nII. The perimeter of \\Delta OMN is less than 35 cm.\nIII. The angle of the sector OMN is greater than 100^{\\circ}.",
     "html": "The perimeter of the sector OMN is 12$\\pi$$\\text{ cm}$, where O is the centre of the sector OMN. If the radius of the sector OMN is 3$\\pi$$\\text{ cm}$, which of the following are true?<br>I. The area of the sector OMN is 9$\\pi^{2}$$\\text{ cm}$^{2}.<br>II. The perimeter of $\\Delta$ OMN is less than 35 cm.<br>III. The angle of the sector OMN is greater than 10$0^{\\circ}$.",
@@ -460,7 +475,7 @@ window.BANK = {
     "D": "\\text{I, II and III}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q16",
@@ -471,8 +486,9 @@ window.BANK = {
     "images/questions/2025-p2-q16.png"
    ],
    "topic": {
-    "en": "Mensuration",
-    "zh": "度量與面積體積"
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
    },
    "difficulty": 2,
    "timeSec": 90,
@@ -490,7 +506,7 @@ window.BANK = {
     "D": "864\\pi\\text{ cm}^{3}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q17",
@@ -501,11 +517,12 @@ window.BANK = {
     "images/questions/2025-p2-q17.png"
    ],
    "topic": {
-    "en": "Geometry",
-    "zh": "幾何"
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
    },
-   "difficulty": 2,
-   "timeSec": 90,
+   "difficulty": 3,
+   "timeSec": 120,
    "stem": {
     "text": "In the figure, ABCD is a parallelogram. Let E, F and G be points lying on AB, AD and CD respectively such that BE=3AE, 2DF=3AF and DG=2CG. It is given that BC produced and EG produced meet at the point H. If the area of \\Delta CGH is 16\\text{ cm}^{2}, then the area of the quadrilateral DFEG is",
     "html": "In the figure, ABCD is a parallelogram. Let E, F and G be points lying on AB, AD and CD respectively such that BE=3AE, 2DF=3AF and DG=2CG. It is given that BC produced and EG produced meet at the point H. If the area of $\\Delta$ CGH is 16$\\text{ cm}$^{2}, then the area of the quadrilateral DFEG is",
@@ -520,7 +537,7 @@ window.BANK = {
     "D": "115\\text{ cm}^{2}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q18",
@@ -531,11 +548,12 @@ window.BANK = {
     "images/questions/2025-p2-q18.png"
    ],
    "topic": {
-    "en": "Trigonometry & Geometry",
-    "zh": "三角與幾何"
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
    },
-   "difficulty": 2,
-   "timeSec": 90,
+   "difficulty": 3,
+   "timeSec": 120,
    "stem": {
     "text": "The figure shows the triangle WXY. Let Z be a point lying on WY such that WY:XY=XY:YZ. If WX=65\\text{ cm}, WZ=25\\text{ cm} and XZ=60\\text{ cm}, then XY=",
     "html": "The figure shows the triangle WXY. Let Z be a point lying on WY such that WY:XY=XY:YZ. If WX=65$\\text{ cm}$, WZ=25$\\text{ cm}$ and XZ=60$\\text{ cm}$, then XY=",
@@ -550,7 +568,7 @@ window.BANK = {
     "D": "169\\text{ cm}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q19",
@@ -561,8 +579,9 @@ window.BANK = {
     "images/questions/2025-p2-q19.png"
    ],
    "topic": {
-    "en": "Trigonometry & Geometry",
-    "zh": "三角與幾何"
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -580,7 +599,7 @@ window.BANK = {
     "D": "\\text{I, II and III}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q20",
@@ -591,8 +610,9 @@ window.BANK = {
     "images/questions/2025-p2-q20.png"
    ],
    "topic": {
-    "en": "Geometry",
-    "zh": "幾何"
+    "unit": 14,
+    "en": "More about Trigonometry",
+    "zh": "三角學續論"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -610,7 +630,7 @@ window.BANK = {
     "D": "135\\text{ cm}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q21",
@@ -621,8 +641,9 @@ window.BANK = {
     "images/questions/2025-p2-q21.png"
    ],
    "topic": {
-    "en": "Geometry",
-    "zh": "幾何"
+    "unit": 14,
+    "en": "More about Trigonometry",
+    "zh": "三角學續論"
    },
    "difficulty": 2,
    "timeSec": 90,
@@ -640,7 +661,7 @@ window.BANK = {
     "D": "15\\text{ cm}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q22",
@@ -651,8 +672,9 @@ window.BANK = {
     "images/questions/2025-p2-q22.png"
    ],
    "topic": {
-    "en": "Ratios",
-    "zh": "比例"
+    "unit": 11,
+    "en": "Basic Properties of Circles",
+    "zh": "圓的基本性質"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -670,7 +692,7 @@ window.BANK = {
     "D": "71^{\\circ}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q23",
@@ -681,8 +703,9 @@ window.BANK = {
     "images/questions/2025-p2-q23.png"
    ],
    "topic": {
-    "en": "Trigonometry & Geometry",
-    "zh": "三角與幾何"
+    "unit": 14,
+    "en": "More about Trigonometry",
+    "zh": "三角學續論"
    },
    "difficulty": 2,
    "timeSec": 90,
@@ -700,7 +723,7 @@ window.BANK = {
     "D": "\\tan\\angle ADC=\\frac{BC}{CD}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q24",
@@ -711,8 +734,9 @@ window.BANK = {
     "images/questions/2025-p2-q24.png"
    ],
    "topic": {
-    "en": "Coordinate Geometry",
-    "zh": "坐標幾何"
+    "unit": 14,
+    "en": "More about Trigonometry",
+    "zh": "三角學續論"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -730,7 +754,7 @@ window.BANK = {
     "D": "\\sqrt{10}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q25",
@@ -741,11 +765,12 @@ window.BANK = {
     "images/questions/2025-p2-q25.png"
    ],
    "topic": {
-    "en": "Coordinate Geometry",
-    "zh": "坐標幾何"
+    "unit": 12,
+    "en": "Loci",
+    "zh": "軌跡"
    },
-   "difficulty": 3,
-   "timeSec": 120,
+   "difficulty": 2,
+   "timeSec": 90,
    "stem": {
     "text": "Denote the origin by O. The coordinates of the point A are (a, 2a), where a > 0. Let P be a moving point in the rectangular coordinate plane such that AP = OA. The locus of P is a",
     "html": "Denote the origin by O. The coordinates of the point A are (a, 2a), where a &gt; 0. Let P be a moving point in the rectangular coordinate plane such that AP = OA. The locus of P is a",
@@ -760,7 +785,7 @@ window.BANK = {
     "D": "\\text{straight line}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q26",
@@ -771,11 +796,12 @@ window.BANK = {
     "images/questions/2025-p2-q26.png"
    ],
    "topic": {
-    "en": "Coordinate Geometry",
-    "zh": "坐標幾何"
+    "unit": 10,
+    "en": "Equations of Straight Lines",
+    "zh": "直線方程"
    },
-   "difficulty": 2,
-   "timeSec": 90,
+   "difficulty": 3,
+   "timeSec": 120,
    "stem": {
     "text": "The straight lines L_{1} and L_{2} are perpendicular to each other. The equations of L_{1} and L_{2} are 3x+4y-20=0 and mx+ny-20=0 respectively, where m and n are constants. Suppose that L_{1} and L_{2} cut the x-axis at the points A and B respectively. Let C be the point of intersection of L_{1} and L_{2}. It is given that C lies above the x-axis. If the area of \\Delta ABC is 6, find n.",
     "html": "The straight lines $L_{1}$ and $L_{2}$ are perpendicular to each other. The equations of $L_{1}$ and $L_{2}$ are 3x+4y-20=0 and mx+ny-20=0 respectively, where m and n are constants. Suppose that $L_{1}$ and $L_{2}$ cut the x-axis at the points A and B respectively. Let C be the point of intersection of $L_{1}$ and $L_{2}$. It is given that C lies above the x-axis. If the area of $\\Delta$ ABC is 6, find n.",
@@ -790,7 +816,7 @@ window.BANK = {
     "D": "12"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q27",
@@ -801,11 +827,12 @@ window.BANK = {
     "images/questions/2025-p2-q27.png"
    ],
    "topic": {
-    "en": "Coordinate Geometry",
-    "zh": "坐標幾何"
+    "unit": 13,
+    "en": "Equations of Circles",
+    "zh": "圓的方程"
    },
-   "difficulty": 2,
-   "timeSec": 90,
+   "difficulty": 3,
+   "timeSec": 120,
    "stem": {
     "text": "The coordinates of the centre of the circle C are (7, 5). If C cuts the x-axis at the points P and Q such that PQ = 24, then the equation of C is",
     "html": "The coordinates of the centre of the circle C are (7, 5). If C cuts the x-axis at the points P and Q such that PQ = 24, then the equation of C is",
@@ -820,7 +847,7 @@ window.BANK = {
     "D": "x^{2}+y^{2}+14x-10y-119=0"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q28",
@@ -831,8 +858,9 @@ window.BANK = {
     "images/questions/2025-p2-q28.png"
    ],
    "topic": {
-    "en": "Probability",
-    "zh": "概率"
+    "unit": 16,
+    "en": "More about Probability",
+    "zh": "概率續論"
    },
    "difficulty": 2,
    "timeSec": 90,
@@ -850,7 +878,7 @@ window.BANK = {
     "D": "25"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q29",
@@ -861,8 +889,9 @@ window.BANK = {
     "images/questions/2025-p2-q29.png"
    ],
    "topic": {
-    "en": "Statistics",
-    "zh": "統計"
+    "unit": 17,
+    "en": "Measures of Dispersion",
+    "zh": "離差的度量"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -891,11 +920,12 @@ window.BANK = {
     "images/questions/2025-p2-q30.png"
    ],
    "topic": {
-    "en": "Statistics",
-    "zh": "統計"
+    "unit": 17,
+    "en": "Measures of Dispersion",
+    "zh": "離差的度量"
    },
-   "difficulty": 2,
-   "timeSec": 90,
+   "difficulty": 3,
+   "timeSec": 120,
    "stem": {
     "text": "Consider the following data:\n\\alpha, \\beta, -4, -3, 1, 1, 1, 4\nDenote the mode and the median of the above data by s and t respectively. If the mean and the range of the above data are 0 and 10 respectively, which of the following are true?\nI. s = 1\nII. t = -1\nIII. \\alpha + \\beta = 0",
     "html": "Consider the following data:<br>$\\alpha$, $\\beta$, -4, -3, 1, 1, 1, 4<br>Denote the mode and the median of the above data by s and t respectively. If the mean and the range of the above data are 0 and 10 respectively, which of the following are true?<br>I. s = 1<br>II. t = -1<br>III. $\\alpha$ + $\\beta$ = 0",
@@ -910,7 +940,7 @@ window.BANK = {
     "D": "\\text{I, II and III}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q31",
@@ -921,8 +951,9 @@ window.BANK = {
     "images/questions/2025-p2-q31.png"
    ],
    "topic": {
-    "en": "Number Systems",
-    "zh": "數制"
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -940,7 +971,7 @@ window.BANK = {
     "D": "2^{53}+2^{52}+2^{51}+2^{50}+2^{49}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q32",
@@ -951,8 +982,9 @@ window.BANK = {
     "images/questions/2025-p2-q32.png"
    ],
    "topic": {
-    "en": "Polynomials",
-    "zh": "多項式"
+    "unit": 4,
+    "en": "More about Polynomials",
+    "zh": "多項式續論"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -970,7 +1002,7 @@ window.BANK = {
     "D": "(p+2q)(p^{2}-4q^{2})(p^{3}-8q^{3})"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q33",
@@ -981,8 +1013,9 @@ window.BANK = {
     "images/questions/2025-p2-q33.png"
    ],
    "topic": {
-    "en": "Logarithms",
-    "zh": "對數"
+    "unit": 3,
+    "en": "Exponential and Logarithmic Functions",
+    "zh": "指數與對數函數"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -1000,7 +1033,7 @@ window.BANK = {
     "D": "-1"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q34",
@@ -1011,8 +1044,9 @@ window.BANK = {
     "images/questions/2025-p2-q34.png"
    ],
    "topic": {
-    "en": "Logarithms",
-    "zh": "對數"
+    "unit": 3,
+    "en": "Exponential and Logarithmic Functions",
+    "zh": "指數與對數函數"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -1030,7 +1064,7 @@ window.BANK = {
     "D": "\\text{I, II and III}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q35",
@@ -1041,8 +1075,9 @@ window.BANK = {
     "images/questions/2025-p2-q35.png"
    ],
    "topic": {
-    "en": "Complex Numbers",
-    "zh": "複數"
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -1060,7 +1095,7 @@ window.BANK = {
     "D": "i"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q36",
@@ -1071,7 +1106,8 @@ window.BANK = {
     "images/questions/2025-p2-q36.png"
    ],
    "topic": {
-    "en": "Inequalities & L.P.",
+    "unit": 8,
+    "en": "Inequalities and Linear Programming",
     "zh": "不等式與線性規劃"
    },
    "difficulty": 3,
@@ -1090,7 +1126,7 @@ window.BANK = {
     "D": "129"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q37",
@@ -1101,8 +1137,9 @@ window.BANK = {
     "images/questions/2025-p2-q37.png"
    ],
    "topic": {
-    "en": "Sequences",
-    "zh": "數列"
+    "unit": 7,
+    "en": "Arithmetic and Geometric Sequences",
+    "zh": "等差等比數列"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -1120,7 +1157,7 @@ window.BANK = {
     "D": "\\text{II and III only}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q38",
@@ -1131,8 +1168,9 @@ window.BANK = {
     "images/questions/2025-p2-q38.png"
    ],
    "topic": {
-    "en": "Circles",
-    "zh": "圓"
+    "unit": 11,
+    "en": "Basic Properties of Circles",
+    "zh": "圓的基本性質"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -1150,7 +1188,7 @@ window.BANK = {
     "D": "55^{\\circ}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q39",
@@ -1161,8 +1199,9 @@ window.BANK = {
     "images/questions/2025-p2-q39.png"
    ],
    "topic": {
-    "en": "Trigonometry & Geometry",
-    "zh": "三角與幾何"
+    "unit": 14,
+    "en": "More about Trigonometry",
+    "zh": "三角學續論"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -1180,7 +1219,7 @@ window.BANK = {
     "D": "5"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q40",
@@ -1191,8 +1230,9 @@ window.BANK = {
     "images/questions/2025-p2-q40.png"
    ],
    "topic": {
-    "en": "3-D Geometry",
-    "zh": "立體幾何"
+    "unit": 14,
+    "en": "More about Trigonometry",
+    "zh": "三角學續論"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -1210,7 +1250,7 @@ window.BANK = {
     "D": "71^{\\circ}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q41",
@@ -1221,8 +1261,9 @@ window.BANK = {
     "images/questions/2025-p2-q41.png"
    ],
    "topic": {
-    "en": "Mensuration",
-    "zh": "度量與面積體積"
+    "unit": 10,
+    "en": "Equations of Straight Lines",
+    "zh": "直線方程"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -1240,7 +1281,7 @@ window.BANK = {
     "D": "250"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q42",
@@ -1251,8 +1292,9 @@ window.BANK = {
     "images/questions/2025-p2-q42.png"
    ],
    "topic": {
-    "en": "Counting",
-    "zh": "計數"
+    "unit": 15,
+    "en": "Permutations and Combinations",
+    "zh": "排列與組合"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -1270,7 +1312,7 @@ window.BANK = {
     "D": "31\\,824"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q43",
@@ -1281,8 +1323,9 @@ window.BANK = {
     "images/questions/2025-p2-q43.png"
    ],
    "topic": {
-    "en": "Probability",
-    "zh": "概率"
+    "unit": 16,
+    "en": "More about Probability",
+    "zh": "概率續論"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -1300,7 +1343,7 @@ window.BANK = {
     "D": "\\frac{714}{715}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q44",
@@ -1311,8 +1354,9 @@ window.BANK = {
     "images/questions/2025-p2-q44.png"
    ],
    "topic": {
-    "en": "Statistics",
-    "zh": "統計"
+    "unit": 17,
+    "en": "Measures of Dispersion",
+    "zh": "離差的度量"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -1330,7 +1374,7 @@ window.BANK = {
     "D": "-3 \\text{ or } 3"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q45",
@@ -1341,8 +1385,9 @@ window.BANK = {
     "images/questions/2025-p2-q45.png"
    ],
    "topic": {
-    "en": "Statistics",
-    "zh": "統計"
+    "unit": 17,
+    "en": "Measures of Dispersion",
+    "zh": "離差的度量"
    },
    "difficulty": 3,
    "timeSec": 120,
@@ -1360,7 +1405,7 @@ window.BANK = {
     "D": "\\text{I, II and III}"
    },
    "transcribedBy": "ai-vision",
-   "classifiedBy": "auto-rules"
+   "classifiedBy": "manual-override"
   }
  ]
 };

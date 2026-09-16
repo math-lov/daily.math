@@ -23,29 +23,54 @@ TRANSCRIPTS = os.path.join(BASE, "data", "transcripts")   # 每份 AI 轉寫 = �
 OUT_DIR = os.path.join(BASE, "data")
 OUT = os.path.join(OUT_DIR, "bank.json")
 
-# ---------- 分類規則（順序有意義：越具體越前）----------
-# (關鍵詞列表, topic 英文, topic 中文)
-TOPIC_RULES: list[tuple[list[str], str, str]] = [
-    (["regular tetrahedron", "angle between pq"], "3-D Geometry", "立體幾何"),
-    (["i^{", "complex number"], "Complex Numbers", "複數"),
-    (["hexadecimal", "_{16}", "e000000000000"], "Number Systems", "數制"),
-    (["\\log", "log_{"], "Logarithms", "對數"),
-    (["committee", "working group", "selected from", "how many different"], "Counting", "計數"),
-    (["probability", "randomly chosen", "expected number of tokens", "number of tokens"], "Probability", "概率"),
-    (["standard score", "variance", "inter-quartile", "quartile", "median", "mode", "bar chart", "following data"], "Statistics", "統計"),
-    (["tangent to the circle", "diameter of the circle", "circle abcd"], "Circles", "圓"),
-    (["sector omn", "\\tan", "\\sin", "\\cos", "triangle wxy", "\\angle bfd"], "Trigonometry & Geometry", "三角與幾何"),
-    (["straight line", "locus", "polar coordinates", "centre of the circle", "equation of c"], "Coordinate Geometry", "坐標幾何"),
-    (["arithmetic sequence", "geometric sequence", "nth term"], "Sequences", "數列"),
-    (["varies directly", "varies inversely"], "Variation", "變分"),
-    (["interest rate", "compounded", "per annum"], "Percentage & Interest", "百分數與利息"),
-    (["system of inequalities", "greatest value of", "4y+1"], "Inequalities & L.P.", "不等式與線性規劃"),
-    (["l.c.m.", "is a factor of", "remainder"], "Polynomials", "多項式"),
-    (["\\equiv", "factoriz", "(x+8)(x+a)"], "Algebraic Identities", "代數恆等式"),
-    (["parallelogram", "rhombus", "trapezium", "rectangle", "square", "quadrilateral"], "Geometry", "幾何"),
-    (["area of", "volume", "cylinder", "sphere", "perimeter", "cm}^{2}", "cm}^{3}"], "Mensuration", "度量與面積體積"),
-    ([":", "ratio"], "Ratios", "比例"),
-    (["^{"], "Indices & Exponents", "指數運算"),
+# ---------- 分類：依香港高中數學課程「學習單元」(Learning Units) ----------
+# 0 = Junior Math（不屬於以下 20 個高中單元的題目）
+UNITS: dict[int, tuple[str, str]] = {
+    0: ("Junior Math", "初中數學"),
+    1: ("Quadratic Equations in One Unknown", "一元二次方程"),
+    2: ("Functions and Graphs", "函數與圖像"),
+    3: ("Exponential and Logarithmic Functions", "指數與對數函數"),
+    4: ("More about Polynomials", "多項式續論"),
+    5: ("More about Equations", "方程續論"),
+    6: ("Variations", "變分"),
+    7: ("Arithmetic and Geometric Sequences", "等差等比數列"),
+    8: ("Inequalities and Linear Programming", "不等式與線性規劃"),
+    9: ("More about Graphs of Functions", "函數圖像續論"),
+    10: ("Equations of Straight Lines", "直線方程"),
+    11: ("Basic Properties of Circles", "圓的基本性質"),
+    12: ("Loci", "軌跡"),
+    13: ("Equations of Circles", "圓的方程"),
+    14: ("More about Trigonometry", "三角學續論"),
+    15: ("Permutations and Combinations", "排列與組合"),
+    16: ("More about Probability", "概率續論"),
+    17: ("Measures of Dispersion", "離差的度量"),
+    18: ("Uses and Abuses of Statistics", "統計的應用與誤用"),
+    19: ("Further Applications", "進一步應用"),
+    20: ("Inquiry and Investigation", "探究與研究"),
+}
+
+# 關鍵詞 → 單元（順序有意義：越具體越前）。這是給「新試卷」用的預設分類，
+# 個別題目可用 data/overrides.json 的 "unit" 覆寫。
+UNIT_RULES: list[tuple[list[str], int]] = [
+    (["committee", "working group", "selected from", "how many different", "number of ways"], 15),
+    (["probability", "randomly chosen", "randomly drawn", "expected number", "number of tokens"], 16),
+    (["standard score", "variance", "standard deviation", "inter-quartile", "quartile", "dispersion"], 17),
+    (["abuse", "misleading", "misuse", "statistical chart"], 18),
+    (["locus", "loci", "moving point"], 12),
+    (["log_{", "\\log", "exponential"], 3),
+    (["interest rate", "compounded", "per annum"], 3),
+    (["equation of c", "centre of the circle", "cuts the x-axis at the points"], 13),
+    (["tangent to the circle", "diameter of the circle", "angle in the same segment", "cyclic"], 11),
+    (["straight line", "equations of l", "perpendicular to each other", "in-centre"], 10),
+    (["polar coordinates", "sine", "cosine", "tangent", "sector", "angle between", "\\tan", "\\sin", "\\cos"], 14),
+    (["regular tetrahedron"], 14),
+    (["system of inequalities", "linear programming", "greatest value of", "solution of \\d+y"], 8),
+    (["arithmetic sequence", "geometric sequence", "nth term", "is a geometric sequence"], 7),
+    (["varies directly", "varies inversely", "varies jointly"], 6),
+    (["l.c.m.", "h.c.f.", "is a factor of", "remainder theorem", "\\equiv", "(x+8)(x+a)"], 4),
+    (["f(x)", "p(x)", "f(", "function of", "graph of y", "values of x"], 2),
+    (["quadratic", "solve the equation x^{2}", "the equation x^{2}+", "roots of"], 1),
+    (["change of subject", "simultaneous", "standard form"], 5),
 ]
 
 HARD_MARKERS = [
@@ -79,17 +104,23 @@ def mathify(text: str) -> str:
     return s
 
 
-def pick_topic(q: dict) -> tuple[str, str]:
+def topic_of(unit: int) -> dict:
+    en, zh = UNITS.get(unit, UNITS[0])
+    return {"unit": unit, "en": en, "zh": zh}
+
+
+def pick_unit(q: dict) -> int:
+    """依關鍵詞推斷學習單元；判斷不了就歸 Junior Math（0）。"""
     hay = " ".join([
         str(q.get("stem_text") or ""),
         str(q.get("stem_latex") or ""),
         str(q.get("figure") or ""),
         " ".join(str(v) for v in (q.get("options") or {}).values()),
     ]).lower()
-    for keys, en, zh in TOPIC_RULES:
+    for keys, unit in UNIT_RULES:
         if any(k.lower() in hay for k in keys):
-            return en, zh
-    return "Algebra", "代數"
+            return unit
+    return 0
 
 
 def pick_difficulty(no: int, q: dict) -> int:
@@ -127,7 +158,6 @@ def main() -> int:
         for q in src.get("questions", []):
             no = int(q["question_number"])
             qid = f"{paper_id}-q{no:02d}"
-            topic_en, topic_zh = pick_topic(q)
             diff = pick_difficulty(no, q)
             stem_text = (q.get("stem_text") or "").strip()
             stem_latex = (q.get("stem_latex") or "").strip() or None
@@ -138,7 +168,7 @@ def main() -> int:
                 "paper": paper_id,
                 "section": q.get("section"),
                 "images": [f"images/questions/{qid}.png"],
-                "topic": {"en": topic_en, "zh": topic_zh},
+                "topic": topic_of(pick_unit(q)),
                 "difficulty": diff,
                 "timeSec": TIME_BY_DIFFICULTY[diff],
                 "stem": {
@@ -167,6 +197,8 @@ def main() -> int:
             for key in ("difficulty", "timeSec"):
                 if key in ov:
                     q[key] = ov[key]
+            if "unit" in ov:
+                q["topic"] = topic_of(ov["unit"])
             if "topic" in ov:
                 q["topic"] = ov["topic"]
             q["classifiedBy"] = "manual-override"

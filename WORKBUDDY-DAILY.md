@@ -100,6 +100,47 @@ Guidelines that make the animation work well:
 
 ---
 
+## 3b. Classification: HKDSE learning units
+
+Every question is tagged with one of the official **learning units (LU1–LU20)** taken from the
+senior secondary Maths syllabus; anything outside them is tagged **Junior Math** (`unit: 0`):
+
+| unit | name | 中文 |
+|---|---|---|
+| 0 | Junior Math | 初中數學（不屬 20 個高中單元） |
+| 1 | Quadratic Equations in One Unknown | 一元二次方程 |
+| 2 | Functions and Graphs | 函數與圖像 |
+| 3 | Exponential and Logarithmic Functions | 指數與對數函數 |
+| 4 | More about Polynomials | 多項式續論 |
+| 5 | More about Equations | 方程續論 |
+| 6 | Variations | 變分 |
+| 7 | Arithmetic and Geometric Sequences | 等差等比數列 |
+| 8 | Inequalities and Linear Programming | 不等式與線性規劃 |
+| 9 | More about Graphs of Functions | 函數圖像續論 |
+| 10 | Equations of Straight Lines | 直線方程 |
+| 11 | Basic Properties of Circles | 圓的基本性質 |
+| 12 | Loci | 軌跡 |
+| 13 | Equations of Circles | 圓的方程 |
+| 14 | More about Trigonometry | 三角學續論 |
+| 15 | Permutations and Combinations | 排列與組合 |
+| 16 | More about Probability | 概率續論 |
+| 17 | Measures of Dispersion | 離差的度量 |
+| 18 | Uses and Abuses of Statistics | 統計的應用與誤用 |
+| 19 | Further Applications | 進一步應用 |
+| 20 | Inquiry and Investigation | 探究與研究 |
+
+* `tools/build_bank.py` guesses the unit from keywords, but **every question should be
+  human-checked**: run `python tools\report_classification.py` to see the whole table.
+* Fix a wrong unit in `data/overrides.json` — never edit `bank.json`:
+  ```json
+  { "overrides": { "2025-p2-q35": { "unit": 19, "difficulty": 3, "timeSec": 150 } } }
+  ```
+* The site shows the unit on each card (`LU14 · More about Trigonometry`) and groups the
+  student's per-unit accuracy in the progress panel — so a wrong unit sends students to the
+  wrong revision topic. Check it when you first solve a question.
+
+---
+
 ## 4. Adding a new paper (one-off, ~30 min)
 
 1. **Cut the images** (PDF must be ≥250 DPI, otherwise the tool refuses and asks for a rescan):

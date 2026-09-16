@@ -49,6 +49,14 @@
     for (var i = 0; i < RELEASES.length; i++) if (RELEASES[i].ids.indexOf(qid) !== -1) return RELEASES[i];
     return null;
   }
+  /* Topic label: "LU14 · More about Trigonometry" (or just "Junior Math" for unit 0) */
+  function topicLabel(topic, short) {
+    var t = topic || {};
+    var name = store.lang === "zh" ? (t.zh || t.en) : (t.en || t.zh);
+    if (!name) return "—";
+    if (t.unit) return (short ? "LU" + t.unit : "LU" + t.unit + " · " + name);
+    return name;
+  }
   function stars(n) {
     var s = "";
     for (var i = 1; i <= 3; i++) s += '<span class="' + (i <= n ? "" : "off") + '">★</span>';
@@ -160,7 +168,7 @@
     top.appendChild(el("span", "q-no", "Q" + q.no));                       // the paper's question number
     top.appendChild(el("span", "chip chip-diff", (idx + 1) + " of 3 today"));
     top.appendChild(el("span", "stars", stars(q.difficulty)));
-    top.appendChild(el("span", "chip chip-topic", q.topic.en + (store.lang === "zh" ? " · " + q.topic.zh : "")));
+    top.appendChild(el("span", "chip chip-topic", topicLabel(q.topic)));
     top.appendChild(el("span", "chip chip-time", Math.round(q.timeSec / 60 * 10) / 10 + " min"));
     card.appendChild(top);
 
@@ -176,8 +184,15 @@
       t.innerHTML = q.stem.html;
       card.appendChild(t);
     }
+    // Figure description: the original scan is already shown below, so keep this collapsed
+    // (it stays useful for anyone who cannot read the image).
     if (q.figure) {
-      card.appendChild(el("div", "fig-note", "<b>Figure / 圖表：</b>" + q.figure));
+      var det = el("details", "fig-note");
+      var sum = document.createElement("summary");
+      sum.textContent = store.lang === "zh" ? "圖表描述（AI 轉寫）" : "Figure description (AI transcription)";
+      det.appendChild(sum);
+      det.appendChild(el("p", null, esc(q.figure)));
+      card.appendChild(det);
     }
 
     // question image (tap to enlarge)
@@ -406,23 +421,24 @@
     document.getElementById("stStreak").textContent = currentStreak();
     document.getElementById("streakChip").textContent = "Streak " + currentStreak() + " · Days " + daysCompleted();
 
-    // per-topic accuracy
+    // per learning-unit accuracy
     var agg = {};
     ids.forEach(function (id) {
       var q = QMAP[id]; if (!q) return;
-      var k = q.topic.en;
-      agg[k] = agg[k] || { n: 0, ok: 0 };
+      var topic = q.topic || {};
+      var k = String(topic.unit != null ? topic.unit : -1);
+      agg[k] = agg[k] || { n: 0, ok: 0, topic: topic };
       agg[k].n++;
       if (store.attempts[id].correct) agg[k].ok++;
     });
     var host = document.getElementById("topicStats");
     host.innerHTML = "";
     var keys = Object.keys(agg).sort(function (a, b) { return agg[b].n - agg[a].n; });
-    if (!keys.length) host.appendChild(el("div", "empty-note", "No attempts yet — answer a question to see your topic breakdown."));
+    if (!keys.length) host.appendChild(el("div", "empty-note", "No attempts yet — answer a question to see your unit breakdown."));
     keys.forEach(function (k) {
       var pct = Math.round(agg[k].ok / agg[k].n * 100);
       var row = el("div", "topic-row");
-      row.appendChild(el("span", "topic-name", k + " · " + agg[k].n + (store.lang === "zh" ? " 題" : " Q")));
+      row.appendChild(el("span", "topic-name", topicLabel(agg[k].topic) + " · " + agg[k].n + (store.lang === "zh" ? " 題" : " Q")));
       row.appendChild(el("span", "topic-val", agg[k].ok + "/" + agg[k].n + " (" + pct + "%)"));
       var bar = el("div", "bar");
       var inner = document.createElement("i");
@@ -443,7 +459,7 @@
       if (!q) return;
       var item = el("div", "wrong-item");
       item.appendChild(el("div", "wi-l",
-        "<b>" + q.topic.en + "</b> · " + q.id.replace("2025-p2-", "").toUpperCase() +
+        "<b>" + topicLabel(q.topic) + "</b> · Q" + q.no +
         " — you: " + store.attempts[id].picked + (s ? ", answer: " + s.answer : "")));
       if (r) {
         var a = document.createElement("a");
