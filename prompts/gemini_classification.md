@@ -16,12 +16,25 @@ python tools\merge_classification.py --apply            # 確認後寫入
 python tools\build_bank.py; python tools\make_site_data.py
 ```
 
+## 要附上什麼檔案
+
+| 附件 | 是否必需 | 說明 |
+|---|---|---|
+| `data\ai\classification_input.json` | **必需** | 45 題的題幹、公式、圖表描述、四個選項，以及 21 個學習單元的界說 |
+| `images\questions\2025-p2-qNN.png` | 選用 | **檔名就是題目 id**；圖形／圖表題（直線圖、幾何、柱狀圖、表格）看原圖會更準 |
+| `p2.pdf` / `paper2025.json` | **不必** | 題圖與文字都已備好，PDF 只會增加負擔 |
+
+一次對話上傳全部 45 題即可。若一次太擠，可分兩批（例如 JSON 篩出 Q1–23 + 對應 23 張圖，再處理 Q24–45），
+兩批回傳的 JSON 都存起來交給合併工具（工具接受只覆蓋部分題目的回覆）。
+
 ---
 
 ## 提示詞（由此行以下整段複製）
 
 你是香港中學文憑試（HKDSE）數學科資深老師，負責為題目做**分類標註**。
 我會給你一段 JSON，內含 `units`（學習單元清單與界定）與 `questions`（每題的題幹、圖表描述、四個選項）。
+如果我另外附上題目圖片，檔名即題目 id（例如 `2025-p2-q29.png` 就是 `2025-p2-q29`）——
+圖形題請以圖片為準，圖片與 JSON 描述不一致時以圖片為準，並在 `why` 末尾加上 `image differs`。
 
 ### 任務
 
