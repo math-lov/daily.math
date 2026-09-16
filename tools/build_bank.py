@@ -19,11 +19,9 @@ import sys
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SRC = os.path.join(BASE, "paper2025.json")
+TRANSCRIPTS = os.path.join(BASE, "data", "transcripts")   # 每份 AI 轉寫 = 一個檔案（檔名即 paper id）
 OUT_DIR = os.path.join(BASE, "data")
 OUT = os.path.join(OUT_DIR, "bank.json")
-
-PAPER_ID = "2025-p2"
 
 # ---------- 分類規則（順序有意義：越具體越前）----------
 # (關鍵詞列表, topic 英文, topic 中文)
@@ -111,37 +109,49 @@ TIME_BY_DIFFICULTY = {1: 60, 2: 90, 3: 120}
 
 
 def main() -> int:
-    src = json.load(open(SRC, encoding="utf-8"))
     os.makedirs(OUT_DIR, exist_ok=True)
+    if not os.path.isdir(TRANSCRIPTS):
+        print(f"缺少轉寫目錄 {TRANSCRIPTS}")
+        return 1
+
+    papers = []
+    for name in sorted(os.listdir(TRANSCRIPTS)):
+        if not name.lower().endswith(".json"):
+            continue
+        paper_id = os.path.splitext(name)[0]          # 檔名 = 試卷 id，如 2025-p2
+        src = json.load(open(os.path.join(TRANSCRIPTS, name), encoding="utf-8"))
+        papers.append((paper_id, src))
 
     questions = []
-    for q in src["questions"]:
-        no = int(q["question_number"])
-        qid = f"{PAPER_ID}-q{no:02d}"
-        topic_en, topic_zh = pick_topic(q)
-        diff = pick_difficulty(no, q)
-        stem_text = (q.get("stem_text") or "").strip()
-        stem_latex = (q.get("stem_latex") or "").strip() or None
+    for paper_id, src in papers:
+        for q in src.get("questions", []):
+            no = int(q["question_number"])
+            qid = f"{paper_id}-q{no:02d}"
+            topic_en, topic_zh = pick_topic(q)
+            diff = pick_difficulty(no, q)
+            stem_text = (q.get("stem_text") or "").strip()
+            stem_latex = (q.get("stem_latex") or "").strip() or None
 
-        questions.append({
-            "id": qid,
-            "no": no,
-            "section": q.get("section"),
-            "images": [f"images/questions/{qid}.png"],
-            "topic": {"en": topic_en, "zh": topic_zh},
-            "difficulty": diff,
-            "timeSec": TIME_BY_DIFFICULTY[diff],
-            "stem": {
-                "text": stem_text or None,          # 英文原文（含行內 LaTeX）
-                "html": mathify(stem_text) if stem_text else None,
-                "latex": stem_latex,                # 顯示用數學式
-            },
-            "figure": (q.get("figure") or "").strip() or None,
-            "notes": (q.get("notes") or "").strip() or None,
-            "options": {L: ((q.get("options") or {}).get(L) or None) for L in "ABCD"},
-            "transcribedBy": "gemini-vision",
-            "classifiedBy": "auto-rules",          # 分類為自動推斷，可在 solutions.json 覆寫
-        })
+            questions.append({
+                "id": qid,
+                "no": no,
+                "paper": paper_id,
+                "section": q.get("section"),
+                "images": [f"images/questions/{qid}.png"],
+                "topic": {"en": topic_en, "zh": topic_zh},
+                "difficulty": diff,
+                "timeSec": TIME_BY_DIFFICULTY[diff],
+                "stem": {
+                    "text": stem_text or None,          # 英文原文（含行內 LaTeX）
+                    "html": mathify(stem_text) if stem_text else None,
+                    "latex": stem_latex,                # 顯示用數學式
+                },
+                "figure": (q.get("figure") or "").strip() or None,
+                "notes": (q.get("notes") or "").strip() or None,
+                "options": {L: ((q.get("options") or {}).get(L) or None) for L in "ABCD"},
+                "transcribedBy": src.get("transcribedBy", "ai-vision"),
+                "classifiedBy": "auto-rules",          # 分類為自動推斷，可在 overrides.json 覆寫
+            })
 
     # 人工覆寫（data/overrides.json）：Work Buddy 或老師可修正自動分類結果
     ov_path = os.path.join(OUT_DIR, "overrides.json")
@@ -164,15 +174,20 @@ def main() -> int:
         if n_ov:
             print(f"已套用 {n_ov} 條人工覆寫")
 
+    papers_meta = [
+        {
+            "id": pid,
+            "name": src.get("exam") or pid,
+            "nameZh": src.get("examZh") or "",
+            "lang": "en",
+            "sourcePdf": src.get("sourcePdf"),
+            "questions": len(src.get("questions", [])),
+        }
+        for pid, src in papers
+    ]
     bank = {
         "version": 1,
-        "paper": {
-            "id": PAPER_ID,
-            "name": "2025 HKDSE Mathematics Compulsory Part Paper 2",
-            "nameZh": "2025 DSE 數學 必修部分 卷二",
-            "lang": "en",
-            "sourcePdf": "p2.pdf",
-        },
+        "papers": papers_meta,
         "questions": questions,
     }
     with open(OUT, "w", encoding="utf-8") as f:

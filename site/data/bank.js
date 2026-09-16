@@ -1,17 +1,21 @@
 // 自動生成，請勿手改（來源：data/；重新生成：python tools/make_site_data.py）
 window.BANK = {
  "version": 1,
- "paper": {
-  "id": "2025-p2",
-  "name": "2025 HKDSE Mathematics Compulsory Part Paper 2",
-  "nameZh": "2025 DSE 數學 必修部分 卷二",
-  "lang": "en",
-  "sourcePdf": "p2.pdf"
- },
+ "papers": [
+  {
+   "id": "2025-p2",
+   "name": "2025-DSE-MATH-CP 2",
+   "nameZh": "",
+   "lang": "en",
+   "sourcePdf": null,
+   "questions": 45
+  }
+ ],
  "questions": [
   {
    "id": "2025-p2-q01",
    "no": 1,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q01.png"
@@ -35,12 +39,13 @@ window.BANK = {
     "C": "3^{11}x^{13}",
     "D": "3^{14}x^{13}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q02",
    "no": 2,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q02.png"
@@ -64,12 +69,13 @@ window.BANK = {
     "C": "(6+3m-4n)(6-3m+4n)",
     "D": "(6+3m-4n)(6-3m-4n)"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q03",
    "no": 3,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q03.png"
@@ -93,12 +99,13 @@ window.BANK = {
     "C": "2",
     "D": "14"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q04",
    "no": 4,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q04.png"
@@ -122,12 +129,13 @@ window.BANK = {
     "C": "\\frac{7d-12}{3d+4}",
     "D": "\\frac{7d+12}{3d-4}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q05",
    "no": 5,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q05.png"
@@ -151,12 +159,13 @@ window.BANK = {
     "C": "x=k+3 \\text{ or } x=-k-1",
     "D": "x=k+3 \\text{ or } x=-k+1"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q06",
    "no": 6,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q06.png"
@@ -180,12 +189,13 @@ window.BANK = {
     "C": "5.665 < x \\le 5.675",
     "D": "5.665 \\le x < 5.675"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q07",
    "no": 7,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q07.png"
@@ -209,12 +219,13 @@ window.BANK = {
     "C": "y \\ge 2",
     "D": "y > 4"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q08",
    "no": 8,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q08.png"
@@ -238,12 +249,13 @@ window.BANK = {
     "C": "3",
     "D": "6"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q09",
    "no": 9,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q09.png"
@@ -267,12 +279,13 @@ window.BANK = {
     "C": "2",
     "D": "72"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q10",
    "no": 10,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q10.png"
@@ -296,12 +309,13 @@ window.BANK = {
     "C": "\\$46\\,422",
     "D": "\\$46\\,465"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q11",
    "no": 11,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q11.png"
@@ -325,12 +339,13 @@ window.BANK = {
     "C": "128:149",
     "D": "149:128"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q12",
    "no": 12,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q12.png"
@@ -354,12 +369,13 @@ window.BANK = {
     "C": "125",
     "D": "243"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q13",
    "no": 13,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q13.png"
@@ -383,12 +399,13 @@ window.BANK = {
     "C": "239",
     "D": "243"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q14",
    "no": 14,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q14.png"
@@ -412,12 +429,13 @@ window.BANK = {
     "C": "\\text{I and III only}",
     "D": "\\text{II and III only}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q15",
    "no": 15,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q15.png"
@@ -441,12 +459,13 @@ window.BANK = {
     "C": "\\text{II and III only}",
     "D": "\\text{I, II and III}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q16",
    "no": 16,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q16.png"
@@ -470,12 +489,13 @@ window.BANK = {
     "C": "576\\pi\\text{ cm}^{3}",
     "D": "864\\pi\\text{ cm}^{3}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q17",
    "no": 17,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q17.png"
@@ -499,12 +519,13 @@ window.BANK = {
     "C": "105\\text{ cm}^{2}",
     "D": "115\\text{ cm}^{2}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q18",
    "no": 18,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q18.png"
@@ -528,12 +549,13 @@ window.BANK = {
     "C": "156\\text{ cm}",
     "D": "169\\text{ cm}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q19",
    "no": 19,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q19.png"
@@ -557,12 +579,13 @@ window.BANK = {
     "C": "\\text{II and III only}",
     "D": "\\text{I, II and III}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q20",
    "no": 20,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q20.png"
@@ -586,12 +609,13 @@ window.BANK = {
     "C": "106\\text{ cm}",
     "D": "135\\text{ cm}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q21",
    "no": 21,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q21.png"
@@ -615,12 +639,13 @@ window.BANK = {
     "C": "12\\text{ cm}",
     "D": "15\\text{ cm}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q22",
    "no": 22,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q22.png"
@@ -644,12 +669,13 @@ window.BANK = {
     "C": "65^{\\circ}",
     "D": "71^{\\circ}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q23",
    "no": 23,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q23.png"
@@ -673,12 +699,13 @@ window.BANK = {
     "C": "\\tan\\angle ADC=\\frac{BC}{AD}",
     "D": "\\tan\\angle ADC=\\frac{BC}{CD}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q24",
    "no": 24,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q24.png"
@@ -702,12 +729,13 @@ window.BANK = {
     "C": "\\sqrt{7}",
     "D": "\\sqrt{10}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q25",
    "no": 25,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q25.png"
@@ -731,12 +759,13 @@ window.BANK = {
     "C": "\\text{rhombus}",
     "D": "\\text{straight line}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q26",
    "no": 26,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q26.png"
@@ -760,12 +789,13 @@ window.BANK = {
     "C": "9",
     "D": "12"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q27",
    "no": 27,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q27.png"
@@ -789,12 +819,13 @@ window.BANK = {
     "C": "x^{2}+y^{2}-14x+10y-119=0",
     "D": "x^{2}+y^{2}+14x-10y-119=0"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q28",
    "no": 28,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q28.png"
@@ -818,12 +849,13 @@ window.BANK = {
     "C": "20",
     "D": "25"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q29",
    "no": 29,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q29.png"
@@ -847,12 +879,13 @@ window.BANK = {
     "C": "3",
     "D": "4"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "manual-override"
   },
   {
    "id": "2025-p2-q30",
    "no": 30,
+   "paper": "2025-p2",
    "section": "A",
    "images": [
     "images/questions/2025-p2-q30.png"
@@ -876,12 +909,13 @@ window.BANK = {
     "C": "\\text{II and III only}",
     "D": "\\text{I, II and III}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q31",
    "no": 31,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q31.png"
@@ -905,12 +939,13 @@ window.BANK = {
     "C": "2^{52}+2^{51}+2^{50}+2^{49}+2^{48}",
     "D": "2^{53}+2^{52}+2^{51}+2^{50}+2^{49}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q32",
    "no": 32,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q32.png"
@@ -934,12 +969,13 @@ window.BANK = {
     "C": "(p+2q)^{2}(p^{3}-8q^{3})",
     "D": "(p+2q)(p^{2}-4q^{2})(p^{3}-8q^{3})"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q33",
    "no": 33,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q33.png"
@@ -963,12 +999,13 @@ window.BANK = {
     "C": "-3",
     "D": "-1"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q34",
    "no": 34,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q34.png"
@@ -992,12 +1029,13 @@ window.BANK = {
     "C": "\\text{II and III only}",
     "D": "\\text{I, II and III}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q35",
    "no": 35,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q35.png"
@@ -1021,12 +1059,13 @@ window.BANK = {
     "C": "1",
     "D": "i"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q36",
    "no": 36,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q36.png"
@@ -1050,12 +1089,13 @@ window.BANK = {
     "C": "15",
     "D": "129"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q37",
    "no": 37,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q37.png"
@@ -1079,12 +1119,13 @@ window.BANK = {
     "C": "\\text{I and III only}",
     "D": "\\text{II and III only}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q38",
    "no": 38,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q38.png"
@@ -1108,12 +1149,13 @@ window.BANK = {
     "C": "52^{\\circ}",
     "D": "55^{\\circ}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q39",
    "no": 39,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q39.png"
@@ -1137,12 +1179,13 @@ window.BANK = {
     "C": "4",
     "D": "5"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q40",
    "no": 40,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q40.png"
@@ -1166,12 +1209,13 @@ window.BANK = {
     "C": "60^{\\circ}",
     "D": "71^{\\circ}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q41",
    "no": 41,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q41.png"
@@ -1195,12 +1239,13 @@ window.BANK = {
     "C": "210",
     "D": "250"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q42",
    "no": 42,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q42.png"
@@ -1224,12 +1269,13 @@ window.BANK = {
     "C": "22\\,880",
     "D": "31\\,824"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q43",
    "no": 43,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q43.png"
@@ -1253,12 +1299,13 @@ window.BANK = {
     "C": "\\frac{140}{143}",
     "D": "\\frac{714}{715}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q44",
    "no": 44,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q44.png"
@@ -1282,12 +1329,13 @@ window.BANK = {
     "C": "-3 \\text{ or } 1",
     "D": "-3 \\text{ or } 3"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   },
   {
    "id": "2025-p2-q45",
    "no": 45,
+   "paper": "2025-p2",
    "section": "B",
    "images": [
     "images/questions/2025-p2-q45.png"
@@ -1311,7 +1359,7 @@ window.BANK = {
     "C": "\\text{II and III only}",
     "D": "\\text{I, II and III}"
    },
-   "transcribedBy": "gemini-vision",
+   "transcribedBy": "ai-vision",
    "classifiedBy": "auto-rules"
   }
  ]

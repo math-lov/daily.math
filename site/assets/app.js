@@ -105,8 +105,9 @@
     meta.innerHTML = "";
     meta.appendChild(el("span", "chip chip-topic", "Batch " + batch.batch + " of " + RELEASES.length));
     meta.appendChild(el("span", "chip chip-diff", "3 questions · mixed difficulty"));
+    var paperName = (BANK.papers && BANK.papers[0] && BANK.papers[0].name) || "DSE Maths Paper 2";
     document.getElementById("footNote").textContent =
-      (BANK.paper.name || "DSE Maths Paper 2") + " · questions in English · solutions in 中文 / English";
+      paperName + " · questions in English · solutions in 中文 / English";
 
     // language switch
     var btn = document.getElementById("langBtn");
