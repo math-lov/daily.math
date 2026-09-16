@@ -56,6 +56,9 @@ const stemTex = cards[0].querySelector(".q-stem");
 ok(stemTex && /27x/.test(stemTex.textContent), "stem LaTeX rendered on card 1");
 ok($$(".q-card .chip-time").length === 3, "every card shows the suggested time");
 ok($$(".q-card .stars").length === 3, "every card shows a difficulty rating");
+ok($$(".q-card .chip-topic").length === 3, "every card shows its learning unit");
+ok($$(".q-card details.fig-note").length >= 1 && $$(".q-card details.fig-note[open]").length === 0,
+  "figure description stays collapsed (batch 1 has a chart question)");
 
 console.log("\n— 作答：正確路徑 (Q1, answer C) —");
 const q1opts = cards[0].querySelectorAll(".opt");
@@ -106,14 +109,29 @@ ok(cardsAfter[0].querySelector(".feedback").classList.contains("ok"), "attempt s
 console.log("\n— 無解答題目（Batch 2）—");
 const dom2 = new JSDOM(html, { url: "https://example.test/?batch=2", pretendToBeVisual: true, runScripts: "outside-only" });
 const ctx2 = dom2.getInternalVMContext();
-ctx2.window.katex = { render: (s, el) => { el.textContent = s; } };
-ctx2.window.renderMathInElement = () => {};
+// real KaTeX here: these assertions are about how the maths is laid out inside the wording
+vm.runInContext(fs.readFileSync(path.join(site, "vendor", "katex", "katex.min.js"), "utf8"), ctx2, { filename: "katex.min.js" });
+vm.runInContext(fs.readFileSync(path.join(site, "vendor", "katex", "auto-render.min.js"), "utf8"), ctx2, { filename: "auto-render.min.js" });
 ["bank", "solutions", "releases", "app"].forEach((n) => {
   const p = n === "app" ? path.join(site, "assets", "app.js") : path.join(site, "data", n + ".js");
   vm.runInContext(fs.readFileSync(p, "utf8"), ctx2, { filename: n + ".js" });
 });
 const doc2 = ctx2.document;
+const $$2 = (s) => Array.prototype.slice.call(doc2.querySelectorAll(s));
 const cards2 = Array.prototype.slice.call(doc2.querySelectorAll(".q-card"));
+
+console.log("\n— 題幹排版（batch 2 全部是文字題）—");
+// Note text + figure description should not be repeated: the wording carries the maths inline,
+// and a formula must render as ONE KaTeX run (fragmented runs gave mixed fonts).
+const wording = $$2(".q-card .q-stem-text");
+ok(wording.length === 3, "each card shows the wording block (got " + wording.length + ")");
+ok(wording[0].querySelectorAll(".katex").length === 1,
+  "the whole formula renders as a single KaTeX run (got " + wording[0].querySelectorAll(".katex").length + ")");
+ok(/x2\+4x=k2/.test(wording[0].textContent.replace(/\s/g, "")), "the formula sits inline in the wording");
+ok(cards2.every((c) => !c.querySelector(".q-stem")), "no duplicated display formula above the wording");
+ok($$2(".q-card details.fig-note").length <= 3 && $$2(".q-card details.fig-note[open]").length === 0,
+  "figure description is present but collapsed");
+
 const pendingCard = cards2[1]; // q03 has no solution yet
 pendingCard.querySelectorAll(".opt")[0].click();
 const fb = pendingCard.querySelector(".feedback");

@@ -172,17 +172,17 @@
     top.appendChild(el("span", "chip chip-time", Math.round(q.timeSec / 60 * 10) / 10 + " min"));
     card.appendChild(top);
 
-    // stem: displayed maths first, then the English wording
-    if (q.stem.latex) {
-      var m = el("div", "q-stem");
-      tex(m, q.stem.latex, true);
-      card.appendChild(m);
-    }
+    // Stem: the English wording already carries the maths inline (typeset by KaTeX),
+    // so only fall back to a standalone display formula when there is no wording.
     if (q.stem.html) {
-      var t = el("div", q.stem.latex ? "q-text" : "q-stem");
+      var t = el("div", "q-stem-text");
       t.setAttribute("data-tex-inline", "1");
       t.innerHTML = q.stem.html;
       card.appendChild(t);
+    } else if (q.stem.latex) {
+      var m = el("div", "q-stem");
+      tex(m, q.stem.latex, true);
+      card.appendChild(m);
     }
     // Figure description: the original scan is already shown below, so keep this collapsed
     // (it stays useful for anyone who cannot read the image).

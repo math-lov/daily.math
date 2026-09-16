@@ -83,25 +83,100 @@ EASY_MARKERS = [
     "nearest dollar", "range of values", "solve the equation", "algebraic identities",
 ]
 
-# 行內 LaTeX 片段（包成 $...$ 交給 KaTeX）
-MATH_TOKEN = re.compile(
-    r"\\(?!begin\b|end\b)[a-zA-Z]+"
-    r"(?:_\{[^{}]*\}|\^\{[^{}]*\})*"
-    r"(?:\{[^{}]*\})*"
-    r"|[\w\)\]](?:\^\{[^{}]*\}|_\{[^{}]*\})+"
-)
+# ---------- 行內數學偵測（把英文文字裡的公式整段包成 $...$）----------
+# 逐個 token 包裝會令一條公式被拆成幾段渲染（字體不一致），所以要先找出
+# 「連續的數學 token」再整體包起來。
+MATH_CHARS = re.compile(r"^[0-9A-Za-z(){}\[\]+\-*/=<>^_.,:'\\| ]+$")
+STRONG_MARK = re.compile(r"[\^_\\]")
+CMP_ONLY = re.compile(r"^(=|<|>|\\le|\\ge|\\neq|\\approx)$")
+NUM_STRONG = re.compile(r"^[-+]\d+(\.\d+)?$|^\d+\.\d+$")
+NUM_PLAIN = re.compile(r"^\d+$")
+SINGLE_LETTER = re.compile(r"^[A-Za-z]$")
+TRAILING_PUNCT = re.compile(r"[.,;:]+$")
+
+
+def _is_math_token(tok: str, strong_only: bool = False) -> bool:
+    core = tok.strip()
+    if not core or not MATH_CHARS.match(core):
+        if not core.startswith("\\"):     # 例外：\le 之類的 LaTeX 命令
+            return False
+    core_nb = core.lstrip("\\")
+    if STRONG_MARK.search(core) or NUM_STRONG.match(core) or CMP_ONLY.match(core):
+        return True
+    if any(ch.isdigit() for ch in core_nb) and any(ch in "+-*/" for ch in core_nb):
+        return True
+    if not strong_only and (NUM_PLAIN.match(core) or SINGLE_LETTER.match(core)):
+        return True   # 只有緊貼其他數學 token 時才會被合併
+    return False
 
 
 def mathify(text: str) -> str:
-    """純文本 + 行內 LaTeX → HTML（$...$ 包住數學，其餘做 HTML 轉義）。"""
+    """英文原文 → HTML，其中公式整段用 $...$ 包住交給 KaTeX 行內渲染。
+
+    例：'Solve the equation x^{2}+4x=k^{2}-2k-3.' →
+        'Solve the equation $x^{2}+4x=k^{2}-2k-3$.'
+    """
     s = text
     s = s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-    s = s.replace("$", "&dollar;")
+    s = s.replace("$", "&dollar;")                              # 貨幣符號不當定界符
     s = s.replace("\\begin{cases}", "").replace("\\end{cases}", "")
-    s = s.replace("\\\\", "<br>")
-    s = MATH_TOKEN.sub(lambda m: "$" + m.group(0) + "$", s)
+    s = s.replace("\\\\", "<br>")                               # LaTeX 換行
     s = s.replace("\n", "<br>")
-    return s
+
+    parts = re.split(r"(\s+)", s)                               # 保留空白
+    strong = [_is_math_token(p, strong_only=True) for p in parts]
+    weak = [_is_math_token(p) for p in parts]
+
+    # 弱數學 token（單字母、純整數）只在緊鄰強數學 token 時才算數學
+    is_math: list[bool] = []
+    for i, p in enumerate(parts):
+        if not weak[i]:
+            is_math.append(False)
+            continue
+        if strong[i]:
+            is_math.append(True)
+            continue
+        left = i - 2 >= 0 and (strong[i - 2] or is_math[i - 2])
+        right = i + 2 < len(parts) and strong[i + 2]
+        is_math.append(bool(left or right))
+
+    out: list[str] = []
+    buf: list[str] = []   # 連續數學 token（含其間空白）
+    i, n = 0, len(parts)
+    while i < n:
+        part = parts[i]
+        if is_math[i]:
+            buf.append(part)
+            i += 1
+            continue
+        # 兩個數學 token 之間的空白要留在同一段公式內
+        if buf and part.strip() == "" and i + 1 < n and is_math[i + 1]:
+            buf.append(part)
+            i += 1
+            continue
+        if buf:
+            out.append(_flush_math(buf))
+            buf = []
+        out.append(part)
+        i += 1
+    if buf:
+        out.append(_flush_math(buf))
+    return "".join(out)
+
+
+def _flush_math(buf: list[str]) -> str:
+    """把一段連續的數學 token 合成一個 $...$（尾隨標點留在外面）。"""
+    chunk = "".join(buf)
+    lead = chunk[: len(chunk) - len(chunk.lstrip())]
+    body = chunk.strip()
+    tail = ""
+    m = TRAILING_PUNCT.search(body)
+    if m:
+        tail = m.group(0)
+        body = body[: m.start()]
+    if not body:
+        return chunk
+    return f"{lead}${body}${tail}"
 
 
 def topic_of(unit: int) -> dict:

@@ -93,10 +93,11 @@ body {
 .stars { font-size: 13px; letter-spacing: 1px; color: var(--warn); }
 .stars .off { color: #D7DCEA; }
 
-.q-stem { font-size: 19px; line-height: 1.9; padding: 4px 0 2px; }
+.q-stem { font-size: 19px; line-height: 1.9; padding: 4px 0 2px; text-align: center; }
 .q-stem .katex { font-size: 1.15em; }
-.q-text { font-size: 16px; color: var(--tx2); margin-top: 6px; }
-.q-text .katex { color: var(--tx); }
+/* question wording: one continuous paragraph, with the maths typeset inline */
+.q-stem-text { font-size: 18px; line-height: 1.95; padding: 6px 0 4px; }
+.q-stem-text .katex { font-size: 1.08em; }
 
 .fig-note {
   margin-top: 10px; padding: 10px 12px; border-radius: 11px;
