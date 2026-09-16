@@ -8,8 +8,11 @@
     "test": "node tools/smoke_test.js",
     "live": "node tools/live_check.js"
   },
+  "engines": {
+    "node": ">=22"
+  },
   "devDependencies": {
-    "jsdom": "^30.0.1",
-    "katex": "^0.16.11"
+    "jsdom": "30.0.1",
+    "katex": "0.16.11"
   }
 }
