@@ -10,7 +10,7 @@ const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 
-const base = (process.argv[2] || "https://tkchung907.github.io/dse-daily/").replace(/\/?$/, "/");
+const base = (process.argv[2] || "https://math-lov.github.io/daily.math/").replace(/\/?$/, "/");
 let fails = 0;
 const ok = (c, label) => { console.log((c ? "  PASS  " : "  FAIL  ") + label); if (!c) fails++; };
 const get = async (p) => {

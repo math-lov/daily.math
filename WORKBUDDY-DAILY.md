@@ -1,7 +1,7 @@
 # Work Buddy · Daily Three runbook
 
-Student-facing site: **https://tkchung907.github.io/dse-daily/**
-Repo: `tkchung907/dse-daily` (local: `C:\Code Buddy\HKDSE`)
+Student-facing site: **https://math-lov.github.io/daily.math/**
+Repo: `math-lov/daily.math` (local: `C:\Code Buddy\HKDSE`)
 
 ---
 
