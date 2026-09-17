@@ -645,9 +645,8 @@ ACTIONS = {
         [node_exe(), os.path.join("tools", "site_check.js")],
         [node_exe(), os.path.join("tools", "katex_check.js")],
         [node_exe(), os.path.join("tools", "smoke_test.js")],
-        ["git", "add", "-A"],
-        ["git", "commit", "-m", f"發布：批次 {p.get('batch') or ''}（本機面板）".strip()],
-        ["git", "push"],
+        # 有變更才 commit、有領先才 push；「沒有變更」不再是失敗
+        py_tool("git_publish.py", "--message", f"發布：批次 {p.get('batch') or ''}（本機面板）".strip()),
     ],
     "pick": lambda p: [py_tool("pick_batch.py", "--apply")],
     "review": lambda p: [py_tool("review_sheet.py", "--open")],
@@ -664,16 +663,12 @@ ACTIONS = {
         [node_exe(), os.path.join("tools", "site_check.js")],
         [node_exe(), os.path.join("tools", "katex_check.js")],
         [node_exe(), os.path.join("tools", "smoke_test.js")],
-        ["git", "add", "-A"],
-        ["git", "commit", "-m", f"發布：{p.get('msg') or '發布管理（本機面板）'}"],
-        ["git", "push"],
+        py_tool("git_publish.py", "--message", f"發布：{p.get('msg') or '發布管理（本機面板）'}"),
     ],
     "release-emergency": lambda p: [
         # 緊急收回：先讓學生看不到，再慢慢修。跳過完整檢查，但仍走 git（可回溯）
         py_tool("make_site_data.py"),
-        ["git", "add", "-A"],
-        ["git", "commit", "-m", f"緊急收回：{p.get('msg') or '（本機面板）'}"],
-        ["git", "push"],
+        py_tool("git_publish.py", "--message", f"緊急收回：{p.get('msg') or '（本機面板）'}"),
     ],
 }
 
