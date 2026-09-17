@@ -94,8 +94,8 @@
       "difficulty": 2,
       "timeSec": 90,
       "stem": {
-        "text": "If $a$ and $b$ are constants such that $(x+8)(x+a)+b \\equiv x^{2}+5a(x+3)$, then $b$ =",
-        "html": "If &dollar;a&dollar; and &dollar;b&dollar; are constants such that &dollar;(x+8)(x+a)+b $\\equiv$ x^{2}+5a(x+3)&dollar;, then &dollar;b&dollar; $=$",
+        "text": "If $a$ and $b$ are constants such that $(x+8)(x+a)+b\\equiv x^{2}+5a(x+3)$, then $b$ =",
+        "html": "If &dollar;a&dollar; and &dollar;b&dollar; are constants such that &dollar;(x+8)(x+a)+b\\equiv x^{2}+5a(x+3)&dollar;, then &dollar;b&dollar; $=$",
         "latex": "(x+8)(x+a)+b \\equiv x^{2}+5a(x+3)"
       },
       "figure": null,
