@@ -1,19 +1,5 @@
 {
   "version": 1,
   "_note": "老師在面板修訂的題目文字（覆寫 data/transcripts/*.json 的內容）。這裡只放被修訂過的題目；刪掉某題的條目＝回到原始轉寫。build_bank.py 會自動套用，所以 bank.json 是生成物、不需要手改。",
-  "edits": {
-    "2025-p2-q03": {
-      "stem_text": "If $a$ and $b$ are constants such that $(x+8)(x+a)+b\\equiv x^{2}+5a(x+3)$, then $b$ =",
-      "stem_latex": "(x+8)(x+a)+b \\equiv x^{2}+5a(x+3)",
-      "figure": "",
-      "notes": "",
-      "options": {
-        "A": "-14",
-        "B": "-2",
-        "C": "2",
-        "D": "14"
-      },
-      "at": "2026-09-17T10:43:55"
-    }
-  }
+  "edits": {}
 }

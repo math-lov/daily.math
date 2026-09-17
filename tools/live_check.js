@@ -58,8 +58,11 @@ const get = async (p) => {
   ok(cards.every((c) => c.querySelector(".chip-topic")), "every card shows its learning unit");
 
   const firstSolved = cards.find((c) => page.c.window.SOLUTIONS.solutions[c.dataset.qid]);
-  firstSolved.querySelectorAll(".opt")[2].click();
-  ok(firstSolved.querySelector(".feedback").classList.contains("ok"), "correct answer accepted (option C)");
+  // 正確答案由線上資料決定（不可硬編碼：預設批次會隨日期改變）
+  const wantAnswer = page.c.window.SOLUTIONS.solutions[firstSolved.dataset.qid].answer;
+  firstSolved.querySelectorAll(".opt")["ABCD".indexOf(wantAnswer)].click();
+  ok(firstSolved.querySelector(".feedback").classList.contains("ok"),
+     "correct answer accepted (option " + wantAnswer + ")");
   const btn = Array.prototype.filter.call(firstSolved.querySelectorAll(".q-actions .btn"), (b) => /solution/i.test(b.textContent))[0];
   ok(!!btn, "solution button offered");
   btn.click();

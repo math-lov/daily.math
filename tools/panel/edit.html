@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>題目／題解工作台 · HKDSE Daily Three</title>
-<link rel="stylesheet" href="/katex/katex.min.css">
+<link rel="stylesheet" href="/katex/katex.min.css?v=2">
 <style>
   :root{--bg:#0f1220;--card:#181c2f;--card2:#1f2440;--line:#2b3150;--txt:#e8eaf6;--dim:#9aa0c0;
         --ok:#3ddc97;--bad:#ff6b6b;--warn:#ffc857;--acc:#7c8cff}
@@ -82,7 +82,7 @@
       <div class="two">
         <div class="pane">
           <h2>題目內容（英文原文 + LaTeX）</h2>
-          <label>stem_text（英文題幹，行內數學用 $...$）</label>
+          <label>stem_text（英文題幹；行內數學用 $...$ 包住。寫了 $...$ 之後，系統就不會再自動判斷公式範圍）</label>
           <textarea id="f_stem_text"></textarea>
           <label>stem_latex（獨立顯示的公式，可留空）</label>
           <input id="f_stem_latex">
@@ -106,6 +106,9 @@
         <div class="pane">
           <h2>預覽（與學生端相同）</h2>
           <div class="preview" id="pvQ"></div>
+          <h2>學生端實際顯示（儲存後重算）</h2>
+          <div class="preview" id="pvStudent"></div>
+          <div class="muted">這是學生在網站看到的題幹。若與上面的預覽不同，請先按「儲存題目文字」再回來看。</div>
           <h2>題目原圖</h2>
           <div class="preview"><img id="imgQ" alt="題目圖"></div>
           <div class="row" style="margin-top:8px">
@@ -197,8 +200,8 @@
   </main>
 </div>
 
-<script defer src="/katex/katex.min.js"></script>
-<script defer src="/katex/auto-render.min.js"></script>
+<script defer src="/katex/katex.min.js?v=2"></script>
+<script defer src="/katex/auto-render.min.js?v=2"></script>
 <script>
 (function(){
   "use strict";
@@ -312,6 +315,20 @@
     $("imgQ").src = "/images/questions/" + q.id + ".png?v=" + v;
     $("imgMeta").textContent = "檔案：images/questions/" + q.id + ".png";
     updatePvQ();
+
+    // 學生端實際顯示：直接渲染 bank.stem.html（build_bank 產生的版本）
+    var sh = $("pvStudent");
+    sh.innerHTML = "";
+    if (q.stem && q.stem.html){
+      var sd = document.createElement("div");
+      sd.innerHTML = q.stem.html;
+      sh.appendChild(sd);
+      if (window.renderMathInElement){
+        try { renderMathInElement(sd, { delimiters:[{left:"$",right:"$",display:false}], throwOnError:false, strict:false }); } catch(e){}
+      }
+    } else {
+      sh.textContent = "（此題沒有文字題幹，網站會以顯示公式呈現 stem_latex）";
+    }
     ["f_stem_text","f_stem_latex","f_optA","f_optB","f_optC","f_optD"].forEach(function(id){
       $(id).oninput = updatePvQ;
     });
@@ -590,6 +607,18 @@
       await openQ(state.cur);
     } finally { state.busy = false; }
   }
+
+  // 診斷：KaTeX 樣式沒載入時，數學式會顯示成「重複字符 + 原始 TeX」
+  setTimeout(function(){
+    var hasCss = false;
+    try {
+      hasCss = Array.prototype.some.call(document.styleSheets, function(ss){
+        return (ss.href || "").indexOf("katex") >= 0 && ss.cssRules && ss.cssRules.length > 0;
+      });
+    } catch(e){ hasCss = true; }
+    if (window.katex && hasCss) return;
+    banner("數學排版資源未載入，預覽會顯示成重複字符。請按 Ctrl+F5 強制重新整理。", "no");
+  }, 2500);
 
   loadList();
 })();

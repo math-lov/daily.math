@@ -533,4 +533,24 @@
   } else {
     rerenderAll();
   }
+
+  /* 診斷：KaTeX 樣式／程式沒載入時，數學式會以未排版形式顯示
+     （MathML + 原始 TeX + 排版版三份同時出現，看起來像每個字重複）。 */
+  function mathAssetsMissing() {
+    var hasCss = false;
+    try {
+      hasCss = Array.prototype.some.call(document.styleSheets, function (ss) {
+        return (ss.href || "").indexOf("katex") >= 0 && ss.cssRules && ss.cssRules.length > 0;
+      });
+    } catch (e) { return false; }        // 跨來源讀不到 cssRules → 當作有樣式
+    return !window.katex || !hasCss;
+  }
+  setTimeout(function () {
+    if (!mathAssetsMissing()) return;
+    var b = document.createElement("div");
+    b.style.cssText = "position:sticky;top:0;z-index:99;background:#7a1d1d;color:#fff;"
+      + "padding:10px 14px;text-align:center;font:14px/1.5 system-ui,'Microsoft JhengHei',sans-serif";
+    b.textContent = "數學排版資源未載入，數學式可能顯示不正常。請按 Ctrl+F5 強制重新整理一次。";
+    document.body.insertBefore(b, document.body.firstChild);
+  }, 3000);
 })();

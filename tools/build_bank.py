@@ -119,10 +119,16 @@ def mathify(text: str) -> str:
     """
     s = text
     s = s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-    s = s.replace("$", "&dollar;")                              # 貨幣符號不當定界符
     s = s.replace("\\begin{cases}", "").replace("\\end{cases}", "")
     s = s.replace("\\\\", "<br>")                               # LaTeX 換行
     s = s.replace("\n", "<br>")
+
+    # 作者已在文字中用成對的 $...$ 明確標出數學範圍 → 尊重作者，不再自動偵測
+    # （自動偵測會把 &dollar; 轉義、括號等拆散，導致顯示零碎）
+    if s.count("$") >= 2 and s.count("$") % 2 == 0:
+        return s
+
+    s = s.replace("$", "&dollar;")                              # 貨幣符號不當定界符
 
     parts = re.split(r"(\s+)", s)                               # 保留空白
     strong = [_is_math_token(p, strong_only=True) for p in parts]
