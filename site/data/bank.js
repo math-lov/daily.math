@@ -459,7 +459,7 @@ window.BANK = {
    "timeSec": 90,
    "stem": {
     "text": "In the figure, the equation of the straight line L is px+qy=7. Which of the following is/are true?\nI. p > 7\nII. q > 7\nIII. q > p",
-    "html": "In the figure, the equation of the straight line L is $px+qy=7$. Which of the following is/are true?<br>I. p &gt; $7<br>II. q$ &gt; $7<br>III. q$ &gt; p",
+    "html": "In the figure, the equation of the straight line L is $px+qy=7$. Which of the following is/are true?<br>I. p &gt; 7<br>II. q &gt; 7<br>III. q &gt; p",
     "latex": "px+qy=7"
    },
    "figure": "Rectangular coordinate plane with x-axis and y-axis intersecting at origin O. A straight line L with negative slope cuts the positive y-axis at a point higher than 1 (a tick mark labeled '1' is marked on the y-axis below the y-intercept) and cuts the positive x-axis at a point less than 1 (a tick mark labeled '1' is marked on the x-axis to the right of the x-intercept).",
@@ -492,7 +492,7 @@ window.BANK = {
    "timeSec": 90,
    "stem": {
     "text": "The perimeter of the sector OMN is 12\\pi\\text{ cm}, where O is the centre of the sector OMN. If the radius of the sector OMN is 3\\pi\\text{ cm}, which of the following are true?\nI. The area of the sector OMN is 9\\pi^{2}\\text{ cm}^{2}.\nII. The perimeter of \\Delta OMN is less than 35 cm.\nIII. The angle of the sector OMN is greater than 100^{\\circ}.",
-    "html": "The perimeter of the sector OMN is $12\\pi\\text{$ cm}, where O is the centre of the sector OMN. If the radius of the sector OMN is $3\\pi\\text{$ cm}, which of the following are true?<br>I. The area of the sector OMN is $9\\pi^{2}\\text{ cm}^{2}.<br>II$. The perimeter of $\\Delta$ OMN is less than 35 cm.<br>III. The angle of the sector OMN is greater than $100^{\\circ}$.",
+    "html": "The perimeter of the sector OMN is $12\\pi\\text{ cm}$, where O is the centre of the sector OMN. If the radius of the sector OMN is $3\\pi\\text{ cm}$, which of the following are true?<br>I. The area of the sector OMN is $9\\pi^{2}\\text{ cm}^{2}$.<br>II. The perimeter of $\\Delta$ OMN is less than 35 cm.<br>III. The angle of the sector OMN is greater than $100^{\\circ}$.",
     "latex": null
    },
    "figure": null,
@@ -591,7 +591,7 @@ window.BANK = {
    "timeSec": 120,
    "stem": {
     "text": "The figure shows the triangle WXY. Let Z be a point lying on WY such that WY:XY=XY:YZ. If WX=65\\text{ cm}, WZ=25\\text{ cm} and XZ=60\\text{ cm}, then XY=",
-    "html": "The figure shows the triangle WXY. Let Z be a point lying on WY such that WY:XY=XY:YZ. If $WX=65\\text{$ cm}, $WZ=25\\text{$ cm} and $XZ=60\\text{$ cm}, then XY=",
+    "html": "The figure shows the triangle WXY. Let Z be a point lying on WY such that WY:XY=XY:YZ. If $WX=65\\text{ cm}, WZ=25\\text{ cm}$ and $XZ=60\\text{ cm}$, then XY=",
     "latex": "WY:XY=XY:YZ,\\quad WX=65\\text{ cm},\\quad WZ=25\\text{ cm},\\quad XZ=60\\text{ cm}"
    },
    "figure": "Triangle WXY with horizontal base WY, vertex X above WY. Z lies on WY between W and Y. A vertical segment XZ connects vertex X to point Z on base WY. Segment WZ is shorter than ZY.",
@@ -657,7 +657,7 @@ window.BANK = {
    "timeSec": 120,
    "stem": {
     "text": "It is given that PQRS is a trapezium with PQ // SR. If PS=41\\text{ cm}, RS=53\\text{ cm}, \\angle PSR=120^{\\circ} and \\angle QRS=150^{\\circ}, then PQ=",
-    "html": "It is given that PQRS is a trapezium with PQ // SR. If $PS=41\\text{$ cm}, $RS=53\\text{$ cm}, $\\angle PSR=120^{\\circ}$ and $\\angle QRS=150^{\\circ}$, then PQ=",
+    "html": "It is given that PQRS is a trapezium with PQ // SR. If $PS=41\\text{ cm}, RS=53\\text{ cm}, \\angle PSR=120^{\\circ}$ and $\\angle QRS=150^{\\circ}$, then PQ=",
     "latex": "PS=41\\text{ cm},\\quad RS=53\\text{ cm},\\quad \\angle PSR=120^{\\circ},\\quad \\angle QRS=150^{\\circ}"
    },
    "figure": null,
@@ -690,7 +690,7 @@ window.BANK = {
    "timeSec": 90,
    "stem": {
     "text": "In the figure, ABCD is a rectangle. It is given that AE=20\\text{ cm} and \\angle AED=90^{\\circ}. If the area of \\Delta ADE is 150\\text{ cm}^{2}, then the perpendicular distance from E to CD is",
-    "html": "In the figure, ABCD is a rectangle. It is given that $AE=20\\text{$ cm} and $\\angle AED=90^{\\circ}$. If the area of $\\Delta$ ADE is $150\\text{ cm}^{2}$, then the perpendicular distance from E to CD is",
+    "html": "In the figure, ABCD is a rectangle. It is given that $AE=20\\text{ cm}$ and $\\angle AED=90^{\\circ}$. If the area of $\\Delta$ ADE is $150\\text{ cm}^{2}$, then the perpendicular distance from E to CD is",
     "latex": "AE=20\\text{ cm},\\quad \\angle AED=90^{\\circ}"
    },
    "figure": "Rectangle ABCD with vertices labeled counterclockwise starting from bottom-left: A (bottom-left), B (top-left), C (top-right), D (bottom-right). E is an interior point above base AD. Line segments AE and DE form a right-angled triangle ADE with right angle at vertex E.",
@@ -921,7 +921,7 @@ window.BANK = {
    "timeSec": 90,
    "stem": {
     "text": "A box contains six cards numbered 2, 2, 2, 3, 4 and 5 respectively. In a game, a number is randomly drawn from the box and a certain number of tokens will be got according to the following table:\n\nNumber drawn: 2 | 3 | 4 | 5\nNumber of tokens got: 10 | 15 | 25 | 50\n\nFind the expected number of tokens got in the game.",
-    "html": "A box contains six cards numbered 2, 2, 2, 3, 4 and 5 respectively. In a game, a number is randomly drawn from the box and a certain number of tokens will be got according to the following table:<br><br>Number drawn: 2 | 3 | 4 | $5<br>Number$ of tokens got: 10 | 15 | 25 | $50<br><br>Find$ the expected number of tokens got in the game.",
+    "html": "A box contains six cards numbered 2, 2, 2, 3, 4 and 5 respectively. In a game, a number is randomly drawn from the box and a certain number of tokens will be got according to the following table:<br><br>Number drawn: 2 | 3 | 4 | 5<br>Number of tokens got: 10 | 15 | 25 | 50<br><br>Find the expected number of tokens got in the game.",
     "latex": null
    },
    "figure": "Table with two rows: Row 1 'Number drawn' with values 2, 3, 4, 5; Row 2 'Number of tokens got' with corresponding values 10, 15, 25, 50.",
@@ -987,7 +987,7 @@ window.BANK = {
    "timeSec": 120,
    "stem": {
     "text": "Consider the following data:\n\\alpha, \\beta, -4, -3, 1, 1, 1, 4\nDenote the mode and the median of the above data by s and t respectively. If the mean and the range of the above data are 0 and 10 respectively, which of the following are true?\nI. s = 1\nII. t = -1\nIII. \\alpha + \\beta = 0",
-    "html": "Consider the following $data:<br>\\alpha, \\beta, -4, -3$, 1, 1, 1, $4<br>Denote$ the mode and the median of the above data by s and t respectively. If the mean and the range of the above data are 0 and 10 respectively, which of the following are true?<br>I. $s = 1<br>II. t = -1<br>III. \\alpha$ + $\\beta = 0$",
+    "html": "Consider the following data:<br>$\\alpha, \\beta, -4, -3$, 1, 1, 1, 4<br>Denote the mode and the median of the above data by s and t respectively. If the mean and the range of the above data are 0 and 10 respectively, which of the following are true?<br>I. $s = 1$<br>II. $t = -1$<br>III. $\\alpha$ + $\\beta = 0$",
     "latex": "\\alpha,\\quad \\beta,\\quad -4,\\quad -3,\\quad 1,\\quad 1,\\quad 1,\\quad 4"
    },
    "figure": null,
@@ -1119,7 +1119,7 @@ window.BANK = {
    "timeSec": 120,
    "stem": {
     "text": "On the same rectangular coordinate system, the graph of y=\\log_{a}x cuts the graph of y=a^{x} and the x-axis at the points P and Q respectively, where a is a positive constant. Denote the origin by O. Which of the following are true?\nI. a < 1\nII. OQ > a\nIII. \\angle POQ = 45^{\\circ}",
-    "html": "On the same rectangular coordinate system, the graph of $y=\\log_{a}x$ cuts the graph of $y=a^{x}$ and the x-axis at the points P and Q respectively, where a is a positive constant. Denote the origin by O. Which of the following are true?<br>I. a &lt; $1<br>II$. OQ &gt; a<br>III. $\\angle$ POQ $= 45^{\\circ}$",
+    "html": "On the same rectangular coordinate system, the graph of $y=\\log_{a}x$ cuts the graph of $y=a^{x}$ and the x-axis at the points P and Q respectively, where a is a positive constant. Denote the origin by O. Which of the following are true?<br>I. a &lt; 1<br>II. OQ &gt; a<br>III. $\\angle$ POQ $= 45^{\\circ}$",
     "latex": "y=\\log_{a}x,\\quad y=a^{x}"
    },
    "figure": null,
@@ -1185,7 +1185,7 @@ window.BANK = {
    "timeSec": 120,
    "stem": {
     "text": "Consider the following system of inequalities:\n\\begin{cases}x \\le 11 \\\\ 4x+5y-19 \\ge 0 \\\\ 7x-6y+11 \\le 0\\end{cases}\nLet D be the region which represents the solution of the above system of inequalities. If (x, y) is a point lying in D, then the greatest value of 8x-6y+11 is",
-    "html": "Consider the following system of inequalities:<br>x $\\le 11$ <br> $4x+5y-19 \\ge 0$ <br> $7x-6y+11 \\le 0<br>Let D$ be the region which represents the solution of the above system of inequalities. If (x, y) is a point lying in D, then the greatest value of $8x-6y+11$ is",
+    "html": "Consider the following system of inequalities:<br>$x \\le 11$ <br> $4x+5y-19 \\ge 0$ <br> $7x-6y+11 \\le 0$<br>Let D be the region which represents the solution of the above system of inequalities. If (x, y) is a point lying in D, then the greatest value of $8x-6y+11$ is",
     "latex": "\\begin{cases}x \\le 11 \\\\ 4x+5y-19 \\ge 0 \\\\ 7x-6y+11 \\le 0\\end{cases},\\quad 8x-6y+11"
    },
    "figure": null,
@@ -1482,7 +1482,7 @@ window.BANK = {
    "timeSec": 120,
    "stem": {
     "text": "It is given that a, b, c and d are four distinct real numbers. Let m_{1}, r_{1} and v_{1} be the mean, the range and the variance of the group of numbers \\{a, b, c, d\\} respectively while m_{2}, r_{2} and v_{2} be the mean, the range and the variance of the group of numbers \\{2a, 2b, 2c, 2d\\} respectively. Denote the mean, the range and the variance of the group of numbers \\{a+3, b+3, c+3, d+3\\} by m_{3}, r_{3} and v_{3} respectively. Which of the following are true?\nI. m_{1}+m_{3} > m_{2}\nII. r_{1}+r_{3} = r_{2}\nIII. v_{1}+v_{3} < v_{2}",
-    "html": "It is given that a, b, c and d are four distinct real numbers. Let $m_{1}, r_{1}$ and $v_{1}$ be the mean, the range and the variance of the group of numbers $\\{a$, b, c, $d\\}$ respectively while $m_{2}, r_{2}$ and $v_{2}$ be the mean, the range and the variance of the group of numbers $\\{2a$, 2b, 2c, $2d\\}$ respectively. Denote the mean, the range and the variance of the group of numbers $\\{a+3, b+3, c+3, d+3\\}$ by $m_{3}, r_{3}$ and $v_{3}$ respectively. Which of the following are true?<br>I. $m_{1}+m_{3}$ &gt; $m_{2}<br>II. r_{1}+r_{3} = r_{2}<br>III. v_{1}+v_{3}$ &lt; $v_{2}$",
+    "html": "It is given that a, b, c and d are four distinct real numbers. Let $m_{1}, r_{1}$ and $v_{1}$ be the mean, the range and the variance of the group of numbers $\\{a, b, c, d\\}$ respectively while $m_{2}, r_{2}$ and $v_{2}$ be the mean, the range and the variance of the group of numbers $\\{2a, 2b, 2c, 2d\\}$ respectively. Denote the mean, the range and the variance of the group of numbers $\\{a+3, b+3, c+3, d+3\\}$ by $m_{3}, r_{3}$ and $v_{3}$ respectively. Which of the following are true?<br>I. $m_{1}+m_{3}$ &gt; $m_{2}$<br>II. $r_{1}+r_{3} = r_{2}$<br>III. $v_{1}+v_{3}$ &lt; $v_{2}$",
     "latex": "\\{a, b, c, d\\},\\quad \\{2a, 2b, 2c, 2d\\},\\quad \\{a+3, b+3, c+3, d+3\\}"
    },
    "figure": null,

@@ -51,6 +51,10 @@ function checkText(obj, where, keys) {
 bank.questions.forEach((q) => {
   check(q.stem.latex, `${q.id} · stem`);
   ["A", "B", "C", "D"].forEach((L) => check(q.options[L], `${q.id} · option ${L}`));
+  // 文字題幹裡的 $...$ 行內數學也要驗（自動偵測若把 \text{ cm} 之類切斷就會在這裡被抓到）
+  if (q.stem && q.stem.html) {
+    inlineTex(q.stem.html).forEach((t, i) => check(t, `${q.id} · stem.html[${i + 1}]`));
+  }
 });
 
 // ── 解答 ──

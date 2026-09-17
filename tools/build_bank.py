@@ -87,6 +87,7 @@ EASY_MARKERS = [
 # 逐個 token 包裝會令一條公式被拆成幾段渲染（字體不一致），所以要先找出
 # 「連續的數學 token」再整體包起來。
 MATH_CHARS = re.compile(r"^[0-9A-Za-z(){}\[\]+\-*/=<>^_.,:'\\| ]+$")
+BR_TOKEN = "\x00"      # LaTeX 換行／\n 的暫時代表（避免與後文黏成同一 token），最後才換成 <br>
 STRONG_MARK = re.compile(r"[\^_\\]")
 CMP_ONLY = re.compile(r"^(=|<|>|\\le|\\ge|\\neq|\\approx)$")
 NUM_STRONG = re.compile(r"^[-+]\d+(\.\d+)?$|^\d+\.\d+$")
@@ -95,8 +96,45 @@ SINGLE_LETTER = re.compile(r"^[A-Za-z]$")
 TRAILING_PUNCT = re.compile(r"[.,;:]+$")
 
 
+def _split_math_tokens(s: str) -> list[str]:
+    """按空白切 token，但 **{...} 群組不可分割**（含群組內空白）。
+
+    這樣 \\text{ cm} 才不會被拆成 '\\text{' 與 'cm}'，
+    否則會產生 $12\\pi\\text{$ cm} 這種壞掉的 LaTeX。
+    回傳值保留空白 token（原樣重組）。
+    """
+    out: list[str] = []
+    buf = ""
+    depth = 0
+    for ch in s:
+        if ch == "{":
+            depth += 1
+            buf += ch
+        elif ch == "}":
+            depth = max(0, depth - 1)
+            buf += ch
+        elif (ch.isspace() or ch == BR_TOKEN) and depth == 0:
+            if buf:
+                out.append(buf)
+                buf = ""
+            out.append(ch)
+        else:
+            buf += ch
+    if buf:
+        out.append(buf)
+    return out
+
+
+TEXT_MACRO_RE = re.compile(r"\\(?:text|mathrm|mbox|operatorname)\{[^{}]*\}")
+
+
+def _math_core(tok: str) -> str:
+    """判斷是否為數學用：去掉 \\text{...} 內容與所有空白。"""
+    return re.sub(r"\s+", "", TEXT_MACRO_RE.sub("", tok))
+
+
 def _is_math_token(tok: str, strong_only: bool = False) -> bool:
-    core = tok.strip()
+    core = _math_core(tok)
     if not core or not MATH_CHARS.match(core):
         if not core.startswith("\\"):     # 例外：\le 之類的 LaTeX 命令
             return False
@@ -120,17 +158,17 @@ def mathify(text: str) -> str:
     s = text
     s = s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     s = s.replace("\\begin{cases}", "").replace("\\end{cases}", "")
-    s = s.replace("\\\\", "<br>")                               # LaTeX 換行
-    s = s.replace("\n", "<br>")
+    s = s.replace("\\\\", BR_TOKEN)                             # LaTeX 換行（稍後還原）
+    s = s.replace("\n", BR_TOKEN)
 
     # 作者已在文字中用成對的 $...$ 明確標出數學範圍 → 尊重作者，不再自動偵測
     # （自動偵測會把 &dollar; 轉義、括號等拆散，導致顯示零碎）
     if s.count("$") >= 2 and s.count("$") % 2 == 0:
-        return s
+        return s.replace(BR_TOKEN, "<br>")
 
     s = s.replace("$", "&dollar;")                              # 貨幣符號不當定界符
 
-    parts = re.split(r"(\s+)", s)                               # 保留空白
+    parts = _split_math_tokens(s)                               # 保留空白；{} 群組不切斷
     strong = [_is_math_token(p, strong_only=True) for p in parts]
     weak = [_is_math_token(p) for p in parts]
 
@@ -168,7 +206,7 @@ def mathify(text: str) -> str:
         i += 1
     if buf:
         out.append(_flush_math(buf))
-    return "".join(out)
+    return "".join(out).replace(BR_TOKEN, "<br>")
 
 
 def _flush_math(buf: list[str]) -> str:
