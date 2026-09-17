@@ -42,6 +42,7 @@ window.BANK = {
     "D": "3^{14}x^{13}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -74,6 +75,7 @@ window.BANK = {
     "D": "(6+3m-4n)(6-3m-4n)"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -93,8 +95,8 @@ window.BANK = {
    "difficulty": 2,
    "timeSec": 90,
    "stem": {
-    "text": "If a and b are constants such that (x+8)(x+a)+b \\equiv x^{2}+5a(x+3), then b =",
-    "html": "If a and b are constants such that $(x+8)(x+a)+b \\equiv x^{2}+5a(x+3)$, then $b =$",
+    "text": "If $a$ and $b$ are constants such that $(x+8)(x+a)+b \\equiv x^{2}+5a(x+3)$, then $b$ =",
+    "html": "If &dollar;a&dollar; and &dollar;b&dollar; are constants such that &dollar;(x+8)(x+a)+b $\\equiv$ x^{2}+5a(x+3)&dollar;, then &dollar;b&dollar; $=$",
     "latex": "(x+8)(x+a)+b \\equiv x^{2}+5a(x+3)"
    },
    "figure": null,
@@ -106,6 +108,7 @@ window.BANK = {
     "D": "14"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": "panel",
    "classifiedBy": "manual-override"
   },
   {
@@ -138,6 +141,7 @@ window.BANK = {
     "D": "\\frac{7d+12}{3d-4}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -170,6 +174,7 @@ window.BANK = {
     "D": "x=k+3 \\text{ or } x=-k+1"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -202,6 +207,7 @@ window.BANK = {
     "D": "5.665 \\le x < 5.675"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -234,6 +240,7 @@ window.BANK = {
     "D": "y > 4"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -266,6 +273,7 @@ window.BANK = {
     "D": "6"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -298,6 +306,7 @@ window.BANK = {
     "D": "72"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -330,6 +339,7 @@ window.BANK = {
     "D": "\\$46\\,465"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -362,6 +372,7 @@ window.BANK = {
     "D": "149:128"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -394,6 +405,7 @@ window.BANK = {
     "D": "243"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -426,6 +438,7 @@ window.BANK = {
     "D": "243"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -458,6 +471,7 @@ window.BANK = {
     "D": "\\text{II and III only}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -490,6 +504,7 @@ window.BANK = {
     "D": "\\text{I, II and III}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -522,6 +537,7 @@ window.BANK = {
     "D": "864\\pi\\text{ cm}^{3}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -554,6 +570,7 @@ window.BANK = {
     "D": "115\\text{ cm}^{2}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -586,6 +603,7 @@ window.BANK = {
     "D": "169\\text{ cm}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -618,6 +636,7 @@ window.BANK = {
     "D": "\\text{I, II and III}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -650,6 +669,7 @@ window.BANK = {
     "D": "135\\text{ cm}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -682,6 +702,7 @@ window.BANK = {
     "D": "15\\text{ cm}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -714,6 +735,7 @@ window.BANK = {
     "D": "71^{\\circ}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -746,6 +768,7 @@ window.BANK = {
     "D": "\\tan\\angle ADC=\\frac{BC}{CD}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -778,6 +801,7 @@ window.BANK = {
     "D": "\\sqrt{10}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -810,6 +834,7 @@ window.BANK = {
     "D": "\\text{straight line}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -842,6 +867,7 @@ window.BANK = {
     "D": "12"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -874,6 +900,7 @@ window.BANK = {
     "D": "x^{2}+y^{2}+14x-10y-119=0"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -906,6 +933,7 @@ window.BANK = {
     "D": "25"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -938,6 +966,7 @@ window.BANK = {
     "D": "4"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -970,6 +999,7 @@ window.BANK = {
     "D": "\\text{I, II and III}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1002,6 +1032,7 @@ window.BANK = {
     "D": "2^{53}+2^{52}+2^{51}+2^{50}+2^{49}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1034,6 +1065,7 @@ window.BANK = {
     "D": "(p+2q)(p^{2}-4q^{2})(p^{3}-8q^{3})"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1066,6 +1098,7 @@ window.BANK = {
     "D": "-1"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1098,6 +1131,7 @@ window.BANK = {
     "D": "\\text{I, II and III}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1130,6 +1164,7 @@ window.BANK = {
     "D": "i"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1162,6 +1197,7 @@ window.BANK = {
     "D": "129"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1194,6 +1230,7 @@ window.BANK = {
     "D": "\\text{II and III only}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1226,6 +1263,7 @@ window.BANK = {
     "D": "55^{\\circ}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1258,6 +1296,7 @@ window.BANK = {
     "D": "5"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1290,6 +1329,7 @@ window.BANK = {
     "D": "71^{\\circ}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1322,6 +1362,7 @@ window.BANK = {
     "D": "250"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1354,6 +1395,7 @@ window.BANK = {
     "D": "31\\,824"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1386,6 +1428,7 @@ window.BANK = {
     "D": "\\frac{714}{715}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1418,6 +1461,7 @@ window.BANK = {
     "D": "-3 \\text{ or } 3"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   },
   {
@@ -1450,6 +1494,7 @@ window.BANK = {
     "D": "\\text{I, II and III}"
    },
    "transcribedBy": "ai-vision",
+   "editedBy": null,
    "classifiedBy": "manual-override"
   }
  ]

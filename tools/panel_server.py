@@ -11,16 +11,20 @@ r"""本機控制面板（僅 127.0.0.1，零額外依賴）。
 """
 from __future__ import annotations
 
+import datetime
 import io
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import threading
 import urllib.parse
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+
+import fitz  # PyMuPDF：面板即時重裁用
 
 # 控制台訊息一律英文（cmd/PowerShell 的 codepage 對中文不友善）；
 # 網頁介面仍是中文（瀏覽器用 UTF-8，沒有這個問題）。
@@ -33,6 +37,15 @@ PANEL_HTML = os.path.join(BASE, "tools", "panel", "index.html")
 DATA = os.path.join(BASE, "data")
 INBOX = os.path.join(BASE, "inbox")
 RUN_LOCK = threading.Lock()
+STARTED_AT = datetime.datetime.now()          # 行程啟動時間（用來偵測「程式已更新但沒重啟」）
+SERVER_CODE = os.path.join(BASE, "tools", "panel_server.py")
+
+
+def code_mtime() -> float:
+    try:
+        return os.path.getmtime(SERVER_CODE)
+    except OSError:
+        return 0.0
 
 
 # ───────────────────────── 小工具 ─────────────────────────
@@ -93,6 +106,225 @@ def verify_coverage() -> dict:
     ids = re.findall(r'"([A-Za-z0-9\-]+-q\d+)"', block.group(1) if block else src)
     uniq = sorted(set(ids))
     return {"checked": uniq, "count": len(uniq)}
+
+
+def now_iso() -> str:
+    return datetime.datetime.now().isoformat(timespec="seconds")
+
+
+def cut_index() -> dict:
+    return load("cut_index.json", {"pdf": "p2.pdf", "questions": []})
+
+
+def find_cut(qid: str) -> dict | None:
+    return next((q for q in cut_index().get("questions", []) if q["id"] == qid), None)
+
+
+def auto_box(qid: str) -> list[float] | None:
+    """用 OCR 行快取算「下一題題號 −6pt」的自動裁切框（不重跑 OCR）。"""
+    item = find_cut(qid)
+    if not item:
+        return None
+    path = os.path.join(BASE, "review", "ocr_rows.json")
+    if not os.path.exists(path):
+        return item.get("cropPt")
+    try:
+        doc = json.load(open(path, encoding="utf-8-sig"))
+    except Exception:  # noqa: BLE001
+        return item.get("cropPt")
+    page = next((p for p in doc["pages"] if p["page"] == item["page"]), None)
+    if not page:
+        return item.get("cropPt")
+    anchors = sorted([(r["y"], r["num"]) for r in page["rows"] if r.get("isAnchor")], key=lambda t: t[0])
+    idx = next((i for i, (_y, n) in enumerate(anchors) if n == item["no"]), None)
+    if idx is None:
+        return item.get("cropPt")
+    ph = page["h"]
+    y0 = max(0.0, anchors[idx][0] - 18.0)
+    y1 = (anchors[idx + 1][0] - 6.0) if idx + 1 < len(anchors) else ph - 8.0
+    return [40.0, round(y0, 1), round(page["w"] - 20.0, 1), round(y1, 1)]
+
+
+def recrop(qid: str, box: list[float], figure: list[float] | None = None) -> dict:
+    """依指定框即時重裁單題，並同步到 site/。"""
+    item = find_cut(qid)
+    if not item:
+        return {"ok": False, "error": f"cut_index.json 找不到 {qid}"}
+    pdf = os.path.join(BASE, cut_index().get("pdf") or "p2.pdf")
+    if not os.path.exists(pdf):
+        return {"ok": False, "error": f"找不到 PDF：{pdf}"}
+    doc = fitz.open(pdf)
+    page = doc[item["page"]]
+    z = 3.125
+    x0, y0, x1, y1 = [float(v) for v in box]
+    if x1 - x0 < 50 or y1 - y0 < 30:
+        doc.close()
+        return {"ok": False, "error": "裁切框太小"}
+    band = page.get_pixmap(matrix=fitz.Matrix(z, z), clip=fitz.Rect(x0, y0, x1, y1))
+    out = os.path.join(BASE, "images", "questions", f"{qid}.png")
+    if not figure:
+        band.save(out)
+    else:
+        fx0, fy0, fx1, fy1 = [float(v) for v in figure]
+        cont = page.get_pixmap(matrix=fitz.Matrix(z, z), clip=fitz.Rect(fx0, fy0, fx1, fy1))
+        n = band.n
+        xoff = round((fx0 - x0) * z)
+        W = max(band.width, xoff + cont.width)
+        H = band.height + cont.height
+        buf = bytearray(b"\xff" * (W * H * n))
+        for src, xo, yo in ((band, 0, 0), (cont, xoff, band.height)):
+            for r in range(src.height):
+                s = r * src.stride
+                d = ((yo + r) * W + xo) * n
+                buf[d:d + src.width * n] = src.samples[s:s + src.width * n]
+        fitz.Pixmap(band.colorspace, W, H, bytes(buf), band.alpha).save(out)
+    doc.close()
+    shutil.copyfile(out, os.path.join(BASE, "site", "images", "questions", f"{qid}.png"))
+    return {"ok": True, "bytes": os.path.getsize(out), "box": [round(v, 1) for v in box]}
+
+
+def question_detail(qid: str) -> dict:
+    bank = load("bank.json", {"questions": []})
+    q = next((x for x in bank["questions"] if x["id"] == qid), None)
+    if not q:
+        return {"ok": False, "error": f"{qid} 不在題庫"}
+    sol = load("solutions.json", {"solutions": {}}).get("solutions", {}).get(qid)
+    edits = load("question_edits.json", {"edits": {}}).get("edits", {}).get(qid)
+    cuts = load("cut_overrides.json", {"crops": {}}).get("crops", {}).get(qid)
+    ver = load(os.path.join("ai", "answer_verification.json"), {})
+    vres = next((r for r in ver.get("results", []) if r["id"] == qid), None)
+    paper = q.get("paper")
+    transcript = None
+    tpath = os.path.join(DATA, "transcripts", f"{paper}.json")
+    if os.path.exists(tpath):
+        try:
+            tq = json.load(open(tpath, encoding="utf-8-sig"))
+            transcript = next((x for x in tq.get("questions", [])
+                               if int(x.get("question_number", -1)) == q["no"]), None)
+        except Exception:  # noqa: BLE001
+            transcript = None
+    return {
+        "ok": True,
+        "qid": qid,
+        "bank": q,
+        "solution": sol,
+        "edits": edits,
+        "crop": cuts,
+        "transcript": transcript,
+        "cutIndex": find_cut(qid),
+        "autoBox": auto_box(qid),
+        "verification": vres,
+        "imgVersion": int(datetime.datetime.now().timestamp()),
+    }
+
+
+def save_qtext(qid: str, payload: dict) -> dict:
+    path = os.path.join(DATA, "question_edits.json")
+    doc = load("question_edits.json", {"version": 1, "edits": {}})
+    edits = doc.setdefault("edits", {})
+    if payload.get("reset"):
+        edits.pop(qid, None)
+    else:
+        entry = {k: payload[k] for k in ("stem_text", "stem_latex", "figure", "notes") if k in payload}
+        if isinstance(payload.get("options"), dict):
+            entry["options"] = {L: payload["options"].get(L) for L in "ABCD"}
+        if not entry:
+            return {"ok": False, "error": "沒有要儲存的欄位"}
+        entry["at"] = now_iso()
+        edits[qid] = entry
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(doc, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    steps = [{"cmd": f"寫入 {os.path.relpath(path, BASE)}（{qid}{' 已還原' if payload.get('reset') else ''}）",
+              "code": 0, "out": f"現有修訂 {len(edits)} 題"}]
+    for cmd in (py_tool("build_bank.py"), py_tool("make_site_data.py")):
+        r = run(cmd)
+        steps.append(r)
+        if r["code"] != 0:
+            return {"ok": False, "steps": steps}
+    return {"ok": True, "steps": steps}
+
+
+def save_qsol(qid: str, payload: dict) -> dict:
+    sol = payload.get("solution") or {}
+    entry = {"answer": payload.get("answer"), "verify": payload.get("verify") or "checked",
+             "solution": sol}
+    if payload.get("review"):
+        entry["review"] = payload["review"]
+    tmp_dir = os.path.join(DATA, "ai")
+    os.makedirs(tmp_dir, exist_ok=True)
+    tmp = os.path.join(tmp_dir, "_panel_solution.json")
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump({"solutions": {qid: entry}}, f, ensure_ascii=False, indent=1)
+    steps = []
+    for cmd in ([PY, os.path.join("tools", "merge_solutions.py"),
+                 "--file", os.path.relpath(tmp, BASE), "--force"],
+                py_tool("make_site_data.py")):
+        r = run(cmd)
+        steps.append(r)
+        if r["code"] != 0:
+            return {"ok": False, "steps": steps}
+    return {"ok": True, "steps": steps}
+
+
+def qlist() -> list[dict]:
+    bank = load("bank.json", {"questions": []})
+    sol = load("solutions.json", {"solutions": {}}).get("solutions", {})
+    ver = load(os.path.join("ai", "answer_verification.json"), {})
+    verified = {r["id"] for r in ver.get("results", []) if r.get("ok")}
+    edits = load("question_edits.json", {"edits": {}}).get("edits", {})
+    crops = load("cut_overrides.json", {"crops": {}}).get("crops", {})
+    out = []
+    for q in bank["questions"]:
+        s = sol.get(q["id"]) or {}
+        out.append({
+            "id": q["id"], "code": q.get("code"), "no": q.get("no"), "paper": q.get("paper"),
+            "unit": (q.get("topic") or {}).get("zh") or (q.get("topic") or {}).get("en"),
+            "difficulty": q.get("difficulty"), "hasFigure": bool(q.get("figure")),
+            "answer": s.get("answer"), "verify": s.get("verify"),
+            "verified": q["id"] in verified, "edited": q["id"] in edits,
+            "cropManual": q["id"] in crops, "review": s.get("review"),
+        })
+    return out
+
+
+def page_png(qid: str) -> tuple[bytes, float, float] | None:
+    item = find_cut(qid)
+    if not item:
+        return None
+    pdf = os.path.join(BASE, cut_index().get("pdf") or "p2.pdf")
+    doc = fitz.open(pdf)
+    page = doc[item["page"]]
+    pix = page.get_pixmap(matrix=fitz.Matrix(1.5, 1.5))
+    data = pix.tobytes("png")
+    pw, ph = page.rect.width, page.rect.height
+    doc.close()
+    return data, pw, ph
+
+
+def save_crop(qid: str, payload: dict) -> dict:
+    path = os.path.join(DATA, "cut_overrides.json")
+    doc = load("cut_overrides.json", {"version": 1, "crops": {}})
+    crops = doc.setdefault("crops", {})
+    if payload.get("mode") == "auto":
+        box = auto_box(qid)
+        if not box:
+            return {"ok": False, "error": "無法計算自動裁切框（缺 OCR 快取？）"}
+        crops.pop(qid, None)                    # 清除人工覆寫＝回到自動
+    else:
+        box = [float(payload[k]) for k in ("x0", "y0", "x1", "y1")]
+        crops[qid] = {"crop": [round(v, 1) for v in box],
+                      "figure": payload.get("figure") or None, "at": now_iso()}
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(doc, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    r = recrop(qid, box, payload.get("figure"))
+    if not r["ok"]:
+        return {"ok": False, "steps": [{"cmd": f"重裁 {qid}", "code": -1, "out": r["error"]}]}
+    return {"ok": True, "steps": [{"cmd": f"重裁 {qid} → {r['bytes']} bytes",
+                                   "code": 0, "out": f"框：[{', '.join(str(v) for v in box)}]"
+                                                     + ("（已回到自動規則）" if payload.get("mode") == "auto"
+                                                        else "（已記錄為人工調整）")}]}
 
 
 def status() -> dict:
@@ -163,6 +395,12 @@ def status() -> dict:
         "confirmed": confirmed,
         "releases": releases,
         "queue": {"ids": queue.get("ids", []), "createdAt": queue.get("createdAt")},
+        "server": {
+            "startedAt": STARTED_AT.isoformat(timespec="seconds"),
+            "codeMtime": datetime.datetime.fromtimestamp(code_mtime()).isoformat(timespec="seconds"),
+            # 程式檔比行程新 → 這個行程是舊的，新功能（如 /edit）不會生效
+            "stale": code_mtime() > STARTED_AT.timestamp() + 1,
+        },
         "verification": {
             "asOf": ver.get("generatedAt"),
             "unverified": ver.get("unverified", []),
@@ -251,9 +489,28 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def _not_found(self, path: str):
+        """瀏覽器要 HTML、程式要 JSON；順便提示「可能是舊行程」。"""
+        accept = self.headers.get("Accept") or ""
+        if "text/html" in accept:
+            safe = path.replace("<", "&lt;").replace(">", "&gt;")
+            body = ("<!DOCTYPE html><html lang='zh-Hant'><head><meta charset='utf-8'>"
+                    "<title>找不到</title></head>"
+                    "<body style='font-family:system-ui,\"Microsoft JhengHei\",sans-serif;padding:40px;line-height:1.8'>"
+                    "<h2>找不到這個路徑</h2>"
+                    f"<p>請求：<code>{safe}</code></p>"
+                    "<p>如果這是<b>剛新增的功能</b>（例如工作台 <code>/edit</code>），"
+                    "代表目前跑的是<b>舊的面板行程</b>——"
+                    "請回控制面板按右上角「重啟面板」，或關掉視窗重新雙擊 "
+                    "<code>start-panel.bat</code>。</p>"
+                    "<p><a href='/'>← 回控制面板</a></p></body></html>")
+            return self._send(body.encode("utf-8"), 404, "text/html; charset=utf-8")
+        return self._send({"ok": False, "error": "not found"}, 404)
+
     # ── GET ──
     def do_GET(self):  # noqa: N802
         parsed = urllib.parse.urlparse(self.path)
+        q = urllib.parse.parse_qs(parsed.query)
         if parsed.path in ("/", "/index.html", "/panel/"):
             if not os.path.exists(PANEL_HTML):
                 return self._send({"error": "缺少 tools/panel/index.html"}, 500)
@@ -278,13 +535,48 @@ class Handler(BaseHTTPRequestHandler):
                 with open(full, "rb") as f:
                     return self._send(f.read(), 200, ctype)
             return self._send({"ok": False, "error": "image not found"}, 404)
+        if parsed.path in ("/edit", "/edit/"):
+            path = os.path.join(BASE, "tools", "panel", "edit.html")
+            if not os.path.exists(path):
+                return self._send({"error": "缺少 tools/panel/edit.html"}, 500)
+            with open(path, "rb") as f:
+                return self._send(f.read(), 200, "text/html; charset=utf-8")
+        if parsed.path.startswith("/katex/"):
+            full = os.path.normpath(os.path.join(BASE, "site", "vendor", parsed.path.lstrip("/")))
+            allowed = os.path.normpath(os.path.join(BASE, "site", "vendor"))
+            if not (full.startswith(allowed) and os.path.isfile(full)):
+                return self._send({"ok": False, "error": "not found"}, 404)
+            ext = os.path.splitext(full)[1].lower()
+            ctype = {".css": "text/css; charset=utf-8", ".js": "application/javascript; charset=utf-8",
+                     ".woff2": "font/woff2", ".woff": "font/woff", ".ttf": "font/ttf"}.get(
+                ext, "application/octet-stream")
+            with open(full, "rb") as f:
+                return self._send(f.read(), 200, ctype)
+        if parsed.path == "/api/qlist":
+            return self._send({"ok": True, "list": qlist()})
+        if parsed.path == "/api/q":
+            return self._send(question_detail((q.get("qid") or [""])[0]))
+        if parsed.path == "/api/pageimg":
+            r = page_png((q.get("qid") or [""])[0])
+            if not r:
+                return self._send({"ok": False, "error": "找不到題目"}, 404)
+            data, pw, ph = r
+            self.send_response(200)
+            self.send_header("Content-Type", "image/png")
+            self.send_header("Content-Length", str(len(data)))
+            self.send_header("Cache-Control", "no-store")
+            self.send_header("X-Page-Width", str(pw))
+            self.send_header("X-Page-Height", str(ph))
+            self.end_headers()
+            self.wfile.write(data)
+            return
         if parsed.path == "/api/status":
             return self._send({"ok": True, "status": status()})
         if parsed.path == "/api/prompt":
             path = os.path.join(BASE, "prompts", "automation_solver_prompt.txt")
             txt = open(path, encoding="utf-8").read() if os.path.exists(path) else "（缺少提示詞檔）"
             return self._send({"ok": True, "prompt": txt})
-        return self._send({"ok": False, "error": "not found"}, 404)
+        return self._not_found(parsed.path)
 
     # ── POST ──
     def do_POST(self):  # noqa: N802
@@ -296,9 +588,31 @@ class Handler(BaseHTTPRequestHandler):
         if parsed.path == "/api/upload":
             return self._send(save_upload(parsed, body))
 
+        if parsed.path in ("/api/qtext", "/api/qsol", "/api/qcrop"):
+            qid = (q.get("qid") or [""])[0]
+            if not qid:
+                return self._send({"ok": False, "error": "缺少 qid"}, 400)
+            try:
+                payload = json.loads(body.decode("utf-8")) if body else {}
+            except Exception as e:  # noqa: BLE001
+                return self._send({"ok": False, "error": f"JSON 解析失敗：{e}"}, 400)
+            if not RUN_LOCK.acquire(blocking=False):
+                return self._send({"ok": False, "error": "已有動作執行中，請稍候"}, 409)
+            try:
+                fn = {"qtext": save_qtext, "qsol": save_qsol, "qcrop": save_crop}[parsed.path.rsplit("/", 1)[-1]]
+                return self._send(fn(qid, payload))
+            finally:
+                RUN_LOCK.release()
+
         if parsed.path == "/api/action":
             name = (q.get("name") or [""])[0]
             params = {k: v[0] for k, v in q.items() if k != "name"}
+            if name == "restart":
+                # 自我重啟：回完這次回應後用 execv 換掉自己（新程式碼立即生效）
+                threading.Timer(0.7, lambda: os.execv(sys.executable, [sys.executable, *sys.argv])).start()
+                return self._send({"ok": True, "steps": [
+                    {"cmd": "面板重啟中…", "code": 0, "out": "約 2 秒後重新載入此頁"}
+                ]})
             if name == "setcode":
                 # 把卷別代碼寫進轉寫檔（非歷年卷顯示用，如 MOCK-A → MOCK-A-Q03）
                 pid, code = params.get("paper", ""), params.get("code", "")
@@ -342,7 +656,7 @@ class Handler(BaseHTTPRequestHandler):
             finally:
                 RUN_LOCK.release()
 
-        return self._send({"ok": False, "error": "not found"}, 404)
+        return self._not_found(parsed.path)
 
 
 def main() -> int:

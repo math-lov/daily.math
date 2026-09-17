@@ -180,6 +180,15 @@ def main() -> int:
     for pno, y, num in seq:
         by_page.setdefault(pno, []).append((y, num))
 
+    # 面板手動調整的裁切框（data/cut_overrides.json）優先於自動規則
+    overrides: dict = {}
+    ov_path = os.path.join(BASE, "data", "cut_overrides.json")
+    if os.path.exists(ov_path):
+        try:
+            overrides = json.load(open(ov_path, encoding="utf-8-sig")).get("crops", {})
+        except Exception as e:  # noqa: BLE001
+            print(f"[warn] 讀不到 cut_overrides.json：{e!r}")
+
     plan, index, done = [], [], []
     for pno in sorted(by_page):
         page = doc[pno]
@@ -188,6 +197,7 @@ def main() -> int:
         items = sorted(by_page[pno])
         for i, (ay, num) in enumerate(items):
             qid = f"{paper}-q{num:02d}"
+            cx0, cx1 = x0, x1
             y0 = max(0.0, ay - cq.STEM_UP_BAND_PT)
             if i + 1 < len(items):
                 y1 = min(ph, items[i + 1][0] - 6)
@@ -200,7 +210,11 @@ def main() -> int:
                 continue
 
             fig_pt = None
-            if args.extend:
+            manual = overrides.get(qid)
+            if manual and manual.get("crop"):        # 面板手動調整優先
+                cx0, y0, cx1, y1 = [float(v) for v in manual["crop"]]
+                fig_pt = [float(v) for v in manual["figure"]] if manual.get("figure") else None
+            elif args.extend:
                 rows = strip_ink_rows(page, y0, min(ph, y1 + LOOKAHEAD_PT), x0, x1)
                 edge = [y for y in rows if y1 - 3.0 <= y <= y1 + NEAR_PT]
                 if edge:
@@ -215,24 +229,27 @@ def main() -> int:
                             fig_pt = [round(xr[0], 1), round(y1, 1), round(xr[1], 1), round(min(ph, bottom + PAD_PT), 1)]
 
             plan.append(f"p{pno} Q{num:02d} {qid}: y {y0:.0f}→{y1:.0f}（{y1 - y0:.0f}pt）"
+                        + (" [人工]" if manual else "")
                         + (f" + 續接 {fig_pt[1]:.0f}→{fig_pt[3]:.0f}" if fig_pt else ""))
             index.append({"id": qid, "no": num, "page": pno,
-                          "cropPt": [round(x0, 1), round(y0, 1), round(x1, 1), round(y1, 1)],
-                          "figurePt": fig_pt})
+                          "cropPt": [round(cx0, 1), round(y0, 1), round(cx1, 1), round(y1, 1)],
+                          "figurePt": fig_pt,
+                          "source": "manual" if manual else "auto"})
 
             if not args.apply or (only and num not in only):
                 continue
-            band = page.get_pixmap(matrix=fitz.Matrix(DPI_Z, DPI_Z), clip=fitz.Rect(x0, y0, x1, y1))
+            band = page.get_pixmap(matrix=fitz.Matrix(DPI_Z, DPI_Z), clip=fitz.Rect(cx0, y0, cx1, y1))
             if not fig_pt:
                 band.save(os.path.join(img_dir, f"{qid}.png"))
             else:
                 fx0, fy0, fx1, fy1 = fig_pt
                 cont = page.get_pixmap(matrix=fitz.Matrix(DPI_Z, DPI_Z), clip=fitz.Rect(fx0, fy0, fx1, fy1))
                 n = band.n
-                W = max(band.width, round((fx0 - x0) * DPI_Z) + cont.width)
+                xoff = round((fx0 - cx0) * DPI_Z)
+                W = max(band.width, xoff + cont.width)
                 H = band.height + cont.height
                 buf = bytearray(b"\xff" * (W * H * n))
-                for src, xo, yo in ((band, 0, 0), (cont, round((fx0 - x0) * DPI_Z), band.height)):
+                for src, xo, yo in ((band, 0, 0), (cont, xoff, band.height)):
                     for r in range(src.height):
                         s = r * src.stride
                         d = ((yo + r) * W + xo) * n

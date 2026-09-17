@@ -254,24 +254,43 @@ def main() -> int:
         src = json.load(open(os.path.join(TRANSCRIPTS, name), encoding="utf-8"))
         papers.append((paper_id, src))
 
+    # 老師在面板的修訂（data/question_edits.json）：覆寫轉寫內容；轉寫檔本身永不改動
+    edits: dict = {}
+    edits_path = os.path.join(OUT_DIR, "question_edits.json")
+    if os.path.exists(edits_path):
+        try:
+            edits = json.load(open(edits_path, encoding="utf-8-sig")).get("edits", {})
+        except Exception as e:  # noqa: BLE001
+            print(f"[warn] 讀不到 question_edits.json：{e!r}")
+
     questions = []
     for paper_id, src in papers:
         prefix = paper_prefix(paper_id, src)
         for q in src.get("questions", []):
             no = int(q["question_number"])
             qid = f"{paper_id}-q{no:02d}"
-            diff = pick_difficulty(no, q)
-            stem_text = (q.get("stem_text") or "").strip()
-            stem_latex = (q.get("stem_latex") or "").strip() or None
+            e = edits.get(qid) or {}
+            qq = dict(q)
+            if e:                                   # 套用人工修訂
+                for key in ("stem_text", "stem_latex", "figure", "notes"):
+                    if key in e:
+                        qq[key] = e[key]
+                if isinstance(e.get("options"), dict):
+                    base = {L: (q.get("options") or {}).get(L) for L in "ABCD"}
+                    base.update({L: e["options"][L] for L in "ABCD" if L in e["options"]})
+                    qq["options"] = base
+            diff = pick_difficulty(no, qq)
+            stem_text = (qq.get("stem_text") or "").strip()
+            stem_latex = (qq.get("stem_latex") or "").strip() or None
 
             questions.append({
                 "id": qid,
                 "code": question_code(prefix, no),      # 顯示用編號，如 25-P2Q03
                 "no": no,
                 "paper": paper_id,
-                "section": q.get("section"),
+                "section": qq.get("section"),
                 "images": [f"images/questions/{qid}.png"],
-                "topic": topic_of(pick_unit(q)),
+                "topic": topic_of(pick_unit(qq)),
                 "difficulty": diff,
                 "timeSec": TIME_BY_DIFFICULTY[diff],
                 "stem": {
@@ -279,10 +298,11 @@ def main() -> int:
                     "html": mathify(stem_text) if stem_text else None,
                     "latex": stem_latex,                # 顯示用數學式
                 },
-                "figure": (q.get("figure") or "").strip() or None,
-                "notes": (q.get("notes") or "").strip() or None,
-                "options": {L: ((q.get("options") or {}).get(L) or None) for L in "ABCD"},
+                "figure": (qq.get("figure") or "").strip() or None,
+                "notes": (qq.get("notes") or "").strip() or None,
+                "options": {L: ((qq.get("options") or {}).get(L) or None) for L in "ABCD"},
                 "transcribedBy": src.get("transcribedBy", "ai-vision"),
+                "editedBy": "panel" if e else None,     # 是否經人工修訂
                 "classifiedBy": "auto-rules",          # 分類為自動推斷，可在 overrides.json 覆寫
             })
 

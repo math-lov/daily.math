@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "_note": "老師在面板手動調整的裁切框（單位 pt，原點在頁面左上）。recut_figures.py 會優先採用這裡的設定，重跑管線不會覆蓋。crop = [x0, y0, x1, y1]；figure 可為 null。",
+  "crops": {}
+}

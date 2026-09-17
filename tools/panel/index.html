@@ -73,13 +73,25 @@
     <span class="chip">獨立驗算 <b id="cV">–</b></span>
     <span class="chip">待解 <b id="cU">–</b></span>
     <span class="chip">已排程 <b id="cR">–</b></span>
+    <button class="ghost" id="btnRestart" style="display:none">重啟面板</button>
     <button class="ghost" id="btnRefresh">重新載入</button>
   </div>
 </header>
 
 <div class="wrap">
 
+  <div class="alert" id="staleBar" style="border-color:#5c4a1d;background:#2a2414;color:#ffe0a3"></div>
   <div class="alert" id="alertBox"></div>
+
+  <section>
+    <h2>題目／題解工作台</h2>
+    <p class="hint">逐一檢視題目原圖與題解預覽（KaTeX 即時渲染）、修訂錯字、調整裁切框，
+      改完寫回 JSON；確認無誤再按發佈。</p>
+    <div class="row">
+      <a class="action-link" href="/edit" target="_blank" rel="noopener">開啟工作台（新分頁）</a>
+      <span class="hint">建議流程：工作台逐題檢查 → 儲存修訂 → 回本頁「檢查全部」→「一鍵發佈」</span>
+    </div>
+  </section>
 
   <section>
     <h2>進度總覽</h2>
@@ -280,6 +292,20 @@
     if (s.verification && s.verification.unverified && s.verification.unverified.length){
       $("queueInfo").textContent += "｜未登記驗算：" + s.verification.unverified.length;
     }
+
+    // 舊行程偵測：程式檔比行程新 → 新功能（如工作台）不會生效
+    var sv = s.server || {};
+    var bar = $("staleBar");
+    $("btnRestart").style.display = sv.stale ? "" : "none";
+    if (sv.stale){
+      bar.className = "alert show";
+      bar.innerHTML = "⚠ 面板程式已更新（" + esc(sv.codeMtime) + "），但目前仍是 <b>"
+        + esc(sv.startedAt) + "</b> 啟動的舊行程 —— 新功能（例如工作台 /edit）不會生效。"
+        + "請按右上角「<b>重啟面板</b>」。";
+    } else {
+      bar.className = "alert";
+      bar.textContent = "";
+    }
   }
 
   function fileBody(el){
@@ -300,6 +326,26 @@
   }
 
   $("btnRefresh").onclick = refresh;
+
+  // 一鍵重啟：呼叫 /api/action?name=restart（伺服器會 execv 換掉自己），再輪詢直到回來
+  $("btnRestart").onclick = async function(){
+    if (!confirm("重新啟動面板以載入最新程式？頁面會在數秒後自動重新載入。")) return;
+    setBusy(true, "重啟面板…");
+    try { await api("/api/action?name=restart", {method:"POST"}); } catch(e){}
+    var tries = 0;
+    var t = setInterval(async function(){
+      tries++;
+      try {
+        var r = await fetch("/api/status?t=" + Date.now());
+        if (r.ok){ clearInterval(t); location.reload(); return; }
+      } catch(e){ /* 重啟中，繼續等 */ }
+      if (tries > 60){
+        clearInterval(t);
+        setBusy(false);
+        alert("重啟後仍無法連線 —— 請關掉這個視窗，重新雙擊 start-panel.bat。");
+      }
+    }, 500);
+  };
 
   $("btnUpPdf").onclick = function(){ upload("pdf", $("pdfFile")); };
 
