@@ -35,6 +35,7 @@ $node = "C:\Users\t073\.workbuddy\binaries\node\versions\22.22.2-3\node.exe"
 & $node tools\site_check.js         # 資料完整性 + JS 語法
 & $node tools\katex_check.js        # 逐條用 KaTeX 解析所有數學式（CI 也會跑）
 & $py  tools\audit_crops.py --strict # 題目圖邊緣體檢（有圖被切就拒絕發佈）
+& $py  tools\syllabus_check.py      # 課程合規：度制、幾何題不用坐標／向量當主解法
 & $node tools\smoke_test.js         # 模擬學生完整流程（必須 all passed）
 git add -A
 git commit -m "Batch N: <主題>"
@@ -173,7 +174,10 @@ git push                            # GitHub Pages 1 分鐘後自動上線
 ```
 * `steps` 3–5 步，網站每 0.9 秒揭示一步；`math` 是那一步的顯示公式（≤60 字元）。
 * `traps` 指向真實干擾選項；`tip` 是可帶走的技巧。
+* `alt`（選填）＝超出必修範圍的進階解法參考（坐標法／向量法），學生端摺疊顯示，**不作第一解法**。
 * `en`/`zh` 內可用 `$...$` 寫行內數學。
+* ⚠ **課程範圍**：角度一律用度（禁弧度）；幾何題主解法不用坐標／向量（見 House rules 11）。
+  由 `& $py tools\syllabus_check.py` 把關。
 
 批次寫入用：`python tools\merge_solutions.py --file data\ai\solutions_batchN.json`
 （會驗證 id／answer／steps 中英齊備，不通過整批拒絕）。
@@ -263,3 +267,10 @@ git push                            # GitHub Pages 1 分鐘後自動上線
 9. **公開檔不得含未發放內容**：`site_check.js` 會逐題核對，違反就不准發佈；
    `--all` 產生的 `build/preview` 永遠不可上線。
 10. **止血優先於修正**：發現嚴重錯誤先「收回」（必要時走緊急通道），再慢慢修題／修答。
+11. **題解必須在 DSE 必修課程內**（學生沒學過的方法，答案對也沒用）：
+    * **角度一律用「度」**，禁止弧度（`rad`、`\frac{\pi}{3}`、`2\pi` 角度…），扇形題也用度制。
+    * **幾何題的主解法**用追角／全等相似／面積比／直角三角形三角比，**不要一開始就建坐標系或用向量**。
+    * 進階方法（坐標法／向量法）放選填欄位 `solution.alt`，學生端以摺疊的「進階解法（參考）」顯示。
+    * 把關程式：`& $py tools\syllabus_check.py`（CI 與面板發佈流程都會跑，**0 錯誤**才可上線）。
+12. **例外要留痕**：真的非用不可時，寫入 `data/syllabus_exceptions.json`（附原因與 `until` 日期），
+    過期會自動恢復為錯誤 —— 技術債不會無聲留下。

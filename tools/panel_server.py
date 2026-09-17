@@ -628,6 +628,7 @@ ACTIONS = {
         py_tool("validate_bank.py"),
         py_tool("verify_answers.py", "--json"),
         py_tool("audit_crops.py", "--strict"),
+        py_tool("syllabus_check.py"),
         # 本機預覽（含未發放題目）：smoke test 用它驗排版；build/ 不會進 git
         py_tool("make_site_data.py", "--all", "--out", "build/preview"),
         [node_exe(), os.path.join("tools", "site_check.js")],
@@ -638,6 +639,7 @@ ACTIONS = {
         py_tool("validate_bank.py"),
         py_tool("verify_answers.py"),
         py_tool("audit_crops.py", "--strict"),
+        py_tool("syllabus_check.py"),
         py_tool("make_site_data.py"),
         py_tool("make_site_data.py", "--all", "--out", "build/preview"),
         [node_exe(), os.path.join("tools", "site_check.js")],
@@ -656,6 +658,7 @@ ACTIONS = {
         py_tool("make_site_data.py", "--all", "--out", "build/preview"),
     ],
     "release-publish": lambda p: [
+        py_tool("syllabus_check.py"),
         py_tool("make_site_data.py"),
         py_tool("make_site_data.py", "--all", "--out", "build/preview"),
         [node_exe(), os.path.join("tools", "site_check.js")],

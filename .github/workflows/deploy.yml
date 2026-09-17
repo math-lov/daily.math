@@ -34,6 +34,10 @@ jobs:
           python-version: "3.12"
       - name: Independently verify the answers (pure stdlib)
         run: python tools/verify_answers.py
+      # 學生沒學過的方法，答案對也沒用：解法必須留在 DSE 必修課程內
+      # （度制、不用坐標／向量當主解法 → tools/syllabus_check.py）
+      - name: Solutions must stay inside the HKDSE syllabus
+        run: python tools/syllabus_check.py
 
   deploy:
     needs: verify

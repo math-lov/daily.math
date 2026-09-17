@@ -1,0 +1,73 @@
+{
+  "2025-p2-q15": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Arc length from the perimeter", "zh": "第 1 步 · 由周界求弧長" },
+          "math": "\\text{arc}=12\\pi-2(3\\pi)=6\\pi\\text{ cm}",
+          "en": "A sector's perimeter is two radii plus the arc, so arc $=12\\pi-6\\pi=6\\pi$ cm.",
+          "zh": "扇形周界 = 兩條半徑 + 弧長，所以弧長 $=12\\pi-6\\pi=6\\pi$ cm。",
+          "highlight": ["\\text{arc}=6\\pi\\text{ cm}"]
+        },
+        {
+          "title": { "en": "Step 2 · Arc as a fraction of the circumference", "zh": "第 2 步 · 弧長佔圓周的幾分之幾" },
+          "math": "\\frac{\\theta}{360^{\\circ}}=\\frac{6\\pi}{2\\pi(3\\pi)}=\\frac{1}{\\pi}",
+          "en": "Circumference $=2\\pi r=6\\pi^{2}$, so the arc is $\\frac{6\\pi}{6\\pi^{2}}=\\frac{1}{\\pi}$ of the whole circle: $\\frac{\\theta}{360^{\\circ}}=\\frac{1}{\\pi}$, i.e. $\\theta=\\frac{360^{\\circ}}{\\pi}\\approx114.6^{\\circ}>100^{\\circ}$ — statement III is **true**.",
+          "zh": "圓周 $=2\\pi r=6\\pi^{2}$，弧長佔圓周的 $\\frac{6\\pi}{6\\pi^{2}}=\\frac{1}{\\pi}$，故 $\\frac{\\theta}{360^{\\circ}}=\\frac{1}{\\pi}$，即 $\\theta=\\frac{360^{\\circ}}{\\pi}\\approx114.6^{\\circ}>100^{\\circ}$ —— 命題 III **正確**。",
+          "highlight": ["\\frac{\\theta}{360^{\\circ}}=\\frac{1}{\\pi}", "\\theta\\approx114.6^{\\circ}"]
+        },
+        {
+          "title": { "en": "Step 3 · Area of the sector", "zh": "第 3 步 · 扇形面積" },
+          "math": "\\frac{\\theta}{360^{\\circ}}\\times\\pi r^{2}=\\frac{1}{\\pi}\\times\\pi\\times9\\pi^{2}=9\\pi^{2}\\text{ cm}^{2}",
+          "en": "Area $=\\frac{\\theta}{360^{\\circ}}\\times\\pi r^{2}$; the $\\pi$ cancels exactly and leaves $9\\pi^{2}$ cm² — statement I is **true**.",
+          "zh": "面積 $=\\frac{\\theta}{360^{\\circ}}\\times\\pi r^{2}$；$\\pi$ 剛好約掉，得 $9\\pi^{2}$ cm² —— 命題 I **正確**。",
+          "highlight": ["9\\pi^{2}\\text{ cm}^{2}"]
+        },
+        {
+          "title": { "en": "Step 4 · Chord $MN$ of the isosceles triangle", "zh": "第 4 步 · 等腰三角形的弦 $MN$" },
+          "math": "MN=2r\\sin\\frac{\\theta}{2}=6\\pi\\sin 57.3^{\\circ}\\approx15.86",
+          "en": "$OM=ON=r$, so the perpendicular from $O$ bisects $MN$: $MN=2r\\sin\\frac{\\theta}{2}$, and $\\frac{\\theta}{2}\\approx57.3^{\\circ}$.",
+          "zh": "$OM=ON=r$，由 $O$ 作垂線會把 $MN$ 平分，故 $MN=2r\\sin\\frac{\\theta}{2}$，其中 $\\frac{\\theta}{2}\\approx57.3^{\\circ}$。",
+          "highlight": ["MN=2r\\sin\\frac{\\theta}{2}", "MN\\approx15.86"]
+        },
+        {
+          "title": { "en": "Step 5 · Compare the perimeter with 35 cm", "zh": "第 5 步 · 與 35 cm 比較" },
+          "math": "2r+MN=2(3\\pi)+15.86\\approx34.71<35",
+          "en": "Perimeter of $\\Delta OMN$ $=2(3\\pi)+15.86\\approx34.71$ cm, which is less than 35 — statement II is **true**.",
+          "zh": "$\\Delta OMN$ 的周界 $=2(3\\pi)+15.86\\approx34.71$ cm，小於 35 —— 命題 II **正確**。",
+          "highlight": ["34.71<35"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\text{I, II and III}",
+          "en": "All three statements are true — option D.",
+          "zh": "三項皆正確 —— 答案 D。",
+          "highlight": ["\\text{I, II and III}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "C",
+          "en": "$\\text{II and III only}$ — you dropped the fraction: the sector is only $\\frac{1}{\\pi}$ of the circle, so its area is $\\frac{1}{\\pi}\\times\\pi r^{2}=9\\pi^{2}$, not the whole circle's $9\\pi^{3}$.",
+          "zh": "$\\text{II 與 III}$ —— 忘了乘比例：扇形只佔圓的 $\\frac{1}{\\pi}$，面積是 $\\frac{1}{\\pi}\\times\\pi r^{2}=9\\pi^{2}$，不是整圓的 $9\\pi^{3}$。"
+        },
+        {
+          "opt": "B",
+          "en": "$\\text{I and III only}$ — you used the arc $6\\pi$ as if it were the chord $MN$: then $6\\pi+6\\pi=37.7>35$ makes II look false. A chord is always shorter than its arc ($15.86$ cm).",
+          "zh": "$\\text{I 與 III}$ —— 把弧長 $6\\pi$ 當成弦長 $MN$：那麼 $6\\pi+6\\pi=37.7>35$，就會誤判 II 不成立。弦一定比弧短（$15.86$ cm）。"
+        },
+        {
+          "opt": "A",
+          "en": "$\\text{I and II only}$ — you treated the $100^{\\circ}$ in statement III as if it were the sector's angle. The angle has to be found: $\\theta=\\frac{360^{\\circ}}{\\pi}\\approx114.6^{\\circ}$.",
+          "zh": "$\\text{I 與 II}$ —— 把命題 III 的 $100^{\\circ}$ 誤當成圓心角。$\\theta$ 要自己算：$\\theta=\\frac{360^{\\circ}}{\\pi}\\approx114.6^{\\circ}$。"
+        }
+      ],
+      "tip": {
+        "en": "Sector, all in **degrees**: arc $=\\frac{\\theta}{360^{\\circ}}\\times2\\pi r$, area $=\\frac{\\theta}{360^{\\circ}}\\times\\pi r^{2}$, chord $=2r\\sin\\frac{\\theta}{2}$. Get $\\theta$ from $\\frac{\\text{arc}}{\\text{circumference}}$ — the fraction makes the $\\pi$ cancel by itself.",
+        "zh": "扇形一律用**度**：弧長 $=\\frac{\\theta}{360^{\\circ}}\\times2\\pi r$、面積 $=\\frac{\\theta}{360^{\\circ}}\\times\\pi r^{2}$、弦長 $=2r\\sin\\frac{\\theta}{2}$。用「弧長 ÷ 圓周」求 $\\theta$，比例式裡的 $\\pi$ 會自己約掉。"
+      }
+    }
+  }
+}

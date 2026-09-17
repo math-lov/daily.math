@@ -37,6 +37,7 @@ $py = "C:\Users\t073\.workbuddy\binaries\python\envs\default\Scripts\python.exe"
    & $py tools\verify_answers.py     # 必須「失敗 0」
    & $py tools\validate_bank.py      # 必須「0 個錯誤」
    & $node tools\katex_check.js      # 必須「all LaTeX renders cleanly」
+   & $py tools\syllabus_check.py     # 必須「0 個錯誤」（度制、幾何題不用坐標／向量當主解法）
    ```
 7. **回報**：題號、答案、驗算方式、是否需要人工看圖。**不 push、不改 `releases.json`。**
 
@@ -59,7 +60,11 @@ $py = "C:\Users\t073\.workbuddy\binaries\python\envs\default\Scripts\python.exe"
       }
     ],
     "traps": [ { "opt": "C", "en": "...", "zh": "..." } ],
-    "tip": { "en": "...", "zh": "..." }
+    "tip": { "en": "...", "zh": "..." },
+    "alt": [
+      { "name": { "en": "Coordinate method (beyond syllabus)", "zh": "坐標法（超出必修）" },
+        "en": "...", "zh": "..." }
+    ]
   }
 }
 ```
@@ -68,6 +73,8 @@ $py = "C:\Users\t073\.workbuddy\binaries\python\envs\default\Scripts\python.exe"
 * `highlight` 放「這一步的結論」（指數、符號、答案值），學生眼睛要落在這裡。
 * `traps` **必須指向該題真正印出來的干擾選項**，說明「學生為何會選它、錯在哪」。
 * `tip` 要是可帶走的技巧，不是答案的重述。
+* `alt`（選填）＝**超出必修範圍的進階解法參考**（坐標法、向量法等），1–3 行講重點就好。
+  學生端以摺疊的「進階解法（參考）」顯示，**絕不當作第一解法**（見第 4 節規則 7–9）。
 * `en`/`zh` 內可用 `$...$` 寫行內數學。
 * ⚠ **貨幣符號**：文字欄位裡的 `$` 會被當成數學定界符。**絕不裸寫** `$`（例如 `$46 422` 會讓 `katex_check.js` 判定「unbalanced $ delimiters」並讓 CI 擋住發佈）。
   金額請寫成純數字（`46 422`），或整段放進數學式並轉義：`$\$46\,422$`。
@@ -111,6 +118,18 @@ $py = "C:\Users\t073\.workbuddy\binaries\python\envs\default\Scripts\python.exe"
 4. **絕不修改**：`data/transcripts/*`、`data/releases.json`、`site/**`（`site/` 由腳本生成）。
 5. **絕不** `git commit` / `git push`（發佈權在老師手上的面板）。
 6. 每次最多 6 題；每題都要有驗算函式，`verify_answers.py` 不許有任何 MISMATCH。
+
+### 課程範圍（學生沒學過的方法，答案對也沒用）
+
+7. **角度一律用「度」** —— 禁止弧度：`rad`、`\text{rad}`、`\frac{\pi}{3}`、`\theta=2\pi` 之類的
+   弧度角度，連 `traps`／`tip`／`alt` 的說明文字也不可出現。扇形題改用度制：
+   弧長 $=\dfrac{\theta}{360}\times 2\pi r$、扇形面積 $=\dfrac{\theta}{360}\times\pi r^{2}$、
+   弦長 $=2r\sin\dfrac{\theta}{2}$（$\theta$ 直接代度數）。
+8. **幾何題的主解法必須在必修課程內**：追角、全等／相似三角形、面積比、直角三角形三角比。
+   **不要一開始就建立坐標系或用向量** —— 那是最快的捷徑，但不是學生在課堂學到的方法。
+9. **進階方法放 `alt`**：坐標法／向量法等寫進 `solution.alt`（1–3 行講重點），
+   學生端以摺疊的「進階解法（參考）」顯示，不佔用主解法位置。
+10. 收工前必須跑 `python tools\syllabus_check.py`，**0 個錯誤**才能在回報中說完成。
 
 ---
 

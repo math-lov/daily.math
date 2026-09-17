@@ -11,10 +11,15 @@
 2. 逐題：讀 data/transcripts/*.json 的轉寫（含 figure 圖表描述與 notes）與 data/bank.json 的選項，
    推導答案並寫出中英雙語 steps / traps / tip，寫入 data/ai/solutions_batchN.json，
    再用 tools/merge_solutions.py --file 合併進 data/solutions.json。
+   **主解法必須在 DSE 必修課程內**（solver_playbook 第 4 節規則 7–9）：
+   角度一律用「度」（禁止弧度 rad／\frac{\pi}{n}，扇形題也用度制）；
+   幾何題用追角／全等相似／面積比／直角三角形三角比，**不要用坐標法或向量法當主解法**
+   （進階方法可放選填欄位 solution.alt，學生端以「進階解法（參考）」摺疊顯示）。
 3. 每一題都要在 tools/verify_answers.py 登記一個「獨立驗算」函式（用與解答不同的路徑算出答案，
-   例如數值代入、精確解方程、幾何坐標、命題真值表、窮舉計數），並加入 CHECKS 表。
-4. 跑 tools/verify_answers.py（必須「失敗 0」）與 tools/validate_bank.py（必須「0 個錯誤」）；
-   有 MISMATCH 就修到達標，不要略過。
+   例如數值代入、精確解方程、座標／向量、命題真值表、窮舉計數），並加入 CHECKS 表。
+   （驗算是程式內部行為，用座標或向量都可以；限制只針對「給學生看的解法」。）
+4. 跑 tools/verify_answers.py（必須「失敗 0」）、tools/validate_bank.py（必須「0 個錯誤」）
+   與 tools/syllabus_check.py（必須「0 個錯誤」）；有 MISMATCH 或違規就修到達標，不要略過。
 5. 若某題的圖表描述不足以判斷，跳過該題並列為「需人工看圖」，不要猜。
 6. 禁止修改 data/transcripts/*、data/releases.json、site/**；禁止 git commit 或 git push。
 7. 完成後輸出一段簡短報告：本批題號與答案、驗算結果、需人工看圖或轉寫可疑的題目。

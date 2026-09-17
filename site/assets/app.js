@@ -396,6 +396,23 @@
       tp.appendChild(el("p", null, rich(isZh ? (s.solution.tip.zh || s.solution.tip.en) : (s.solution.tip.en || s.solution.tip.zh))));
       host.appendChild(tp);
     }
+    // 進階解法（坐標法／向量法等，超出必修範圍）：摺疊顯示，只作參考，不佔主解法位置
+    if (s.solution.alt && s.solution.alt.length) {
+      var altBox = el("details", "alt-method");
+      var altSum = document.createElement("summary");
+      altSum.textContent = isZh
+        ? "進階解法（參考 · 超出必修範圍）"
+        : "Alternative method (reference · beyond the syllabus)";
+      altBox.appendChild(altSum);
+      s.solution.alt.forEach(function (a) {
+        var one = el("div", "alt-item");
+        var nm = L(a.name) || (typeof a.name === "string" ? a.name : "");
+        if (nm) one.appendChild(el("div", "alt-name", rich(String(nm))));
+        one.appendChild(el("p", null, rich(isZh ? (a.zh || a.en) : (a.en || a.zh))));
+        altBox.appendChild(one);
+      });
+      host.appendChild(altBox);
+    }
     host.appendChild(el("div", "answer-line", (isZh ? "答案：" : "Answer: ") + "<b>" + s.answer + "</b>  ·  " + (s.verify === "checked" ? (isZh ? "已核對" : "verified") : (isZh ? "待核對" : "unverified"))));
 
     if (window.renderMathInElement) autoRender(host);   // inline maths in notes / traps / tip

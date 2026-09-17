@@ -1,0 +1,289 @@
+{
+  "2025-p2-q17": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Similar triangles at $H$", "zh": "第 1 步 · 以 $H$ 為頂點的相似三角形" },
+          "math": "EB:GC=\\frac34 AB:\\frac13 AB=9:4",
+          "en": "$BE=3AE\\Rightarrow EB=\\frac34 AB$, and $DG=2CG\\Rightarrow GC=\\frac13 DC=\\frac13 AB$ (because $DC=AB$). With $EB\\parallel GC$ and $E,G,H$ collinear, $\\Delta EBH\\sim\\Delta GCH$.",
+          "zh": "$BE=3AE\\Rightarrow EB=\\frac34 AB$；$DG=2CG\\Rightarrow GC=\\frac13 DC=\\frac13 AB$（因 $DC=AB$）。又 $EB\\parallel GC$、$E,G,H$ 共線，故 $\\Delta EBH\\sim\\Delta GCH$。",
+          "highlight": ["EB:GC=9:4"]
+        },
+        {
+          "title": { "en": "Step 2 · How far $H$ is beyond $C$", "zh": "第 2 步 · $H$ 在 $C$ 之外多遠" },
+          "math": "BH:CH=9:4,\\quad BH=BC+CH\\;\\Rightarrow\\;CH=\\frac45 BC",
+          "en": "The same similarity gives $BH:CH=9:4$. Since $B,C,H$ are collinear with $C$ between $B$ and $H$, $BH=BC+CH$, so $\\dfrac{BC+CH}{CH}=\\dfrac94$ and $CH=\\dfrac45 BC$.",
+          "zh": "同一組相似給出 $BH:CH=9:4$。$B,C,H$ 共線且 $C$ 在 $B,H$ 之間，$BH=BC+CH$，故 $\\frac{BC+CH}{CH}=\\frac94$，得 $CH=\\frac45 BC$。",
+          "highlight": ["CH=\\frac45 BC"]
+        },
+        {
+          "title": { "en": "Step 3 · Area of the parallelogram", "zh": "第 3 步 · 平行四邊形的面積" },
+          "math": "[\\Delta GCH]=\\frac{CH}{CB}\\times\\frac{GC}{DC}\\times\\frac12[ABCD]=\\frac{2}{15}[ABCD]",
+          "en": "The diagonal gives $[\\Delta DCB]=\\frac12[ABCD]$; $\\Delta GCB$ shares the height from $B$ to $DC$, so $[\\Delta GCB]=\\frac{GC}{DC}[\\Delta DCB]$. Then $\\Delta GCH$ has its base on the same line $BC$, so multiply by $\\frac{CH}{CB}$. Hence $\\frac{2}{15}[ABCD]=16$ and $[ABCD]=120$ cm².",
+          "zh": "對角線給出 $[\\Delta DCB]=\\frac12[ABCD]$；$\\Delta GCB$ 與 $\\Delta DCB$ 同高（由 $B$ 到 $DC$），故 $[\\Delta GCB]=\\frac{GC}{DC}[\\Delta DCB]$；$\\Delta GCH$ 的底在同一條線 $BC$ 上，再乘 $\\frac{CH}{CB}$。故 $\\frac{2}{15}[ABCD]=16$，得 $[ABCD]=120$ cm²。",
+          "highlight": ["[ABCD]=120\\text{ cm}^{2}"]
+        },
+        {
+          "title": { "en": "Step 4 · Split $DFEG$ along $DE$", "zh": "第 4 步 · 用 $DE$ 把 $DFEG$ 分成兩塊" },
+          "math": "[\\Delta DEG]=\\frac13[ABCD],\\quad[\\Delta DEF]=\\frac{3}{40}[ABCD]",
+          "en": "$DE$ splits $DFEG$ into $\\Delta DEF+\\Delta DEG$. For $\\Delta DEG$: $[\\Delta DEC]=\\frac12[ABCD]$ (same base $DC$, same height), so $[\\Delta DEG]=\\frac{DG}{DC}[\\Delta DEC]=\\frac13[ABCD]$. For $\\Delta DEF$: $[\\Delta ADE]=\\frac{AE}{AB}[\\Delta ADB]=\\frac14\\cdot\\frac12[ABCD]=\\frac18[ABCD]$ and $[\\Delta AFE]=\\frac{AF}{AD}[\\Delta ADE]=\\frac25\\cdot\\frac18[ABCD]=\\frac{1}{20}[ABCD]$, so $[\\Delta DEF]=\\frac18-\\frac{1}{20}=\\frac{3}{40}[ABCD]$.",
+          "zh": "$DE$ 把 $DFEG$ 分成 $\\Delta DEF+\\Delta DEG$。$\\Delta DEG$：$[\\Delta DEC]=\\frac12[ABCD]$（同底 $DC$、等高），故 $[\\Delta DEG]=\\frac{DG}{DC}[\\Delta DEC]=\\frac13[ABCD]$。$\\Delta DEF$：$[\\Delta ADE]=\\frac{AE}{AB}[\\Delta ADB]=\\frac14\\cdot\\frac12[ABCD]=\\frac18[ABCD]$，$[\\Delta AFE]=\\frac{AF}{AD}[\\Delta ADE]=\\frac25\\cdot\\frac18[ABCD]=\\frac{1}{20}[ABCD]$，故 $[\\Delta DEF]=\\frac18-\\frac{1}{20}=\\frac{3}{40}[ABCD]$。",
+          "highlight": ["[\\Delta DEG]=\\frac13[ABCD]", "[\\Delta DEF]=\\frac{3}{40}[ABCD]"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "[DFEG]=\\left(\\frac{3}{40}+\\frac13\\right)\\times120=49\\text{ cm}^{2}",
+          "en": "$[DFEG]=\\frac{49}{120}[ABCD]=\\frac{49}{120}\\times120=49$ cm² — option B.",
+          "zh": "$[DFEG]=\\frac{49}{120}[ABCD]=\\frac{49}{120}\\times120=49$ cm² —— 答案 B。",
+          "highlight": ["49\\text{ cm}^{2}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "A",
+          "en": "$46\\text{ cm}^{2}$ — you dropped one of the two pieces: $DFEG$ needs **both** $\\Delta DEF=\\frac{3}{40}[ABCD]$ and $\\Delta DEG=\\frac13[ABCD]$.",
+          "zh": "$46\\text{ cm}^{2}$ —— 漏了兩塊的其中一塊：$DFEG$ 要同時加 $\\Delta DEF=\\frac{3}{40}[ABCD]$ 與 $\\Delta DEG=\\frac13[ABCD]$。"
+        },
+        {
+          "opt": "C",
+          "en": "$105\\text{ cm}^{2}$ — you subtracted instead of using ratios: $120-16=104$ looks tempting, but $DFEG$ is not the parallelogram minus $\\Delta CGH$ alone.",
+          "zh": "$105\\text{ cm}^{2}$ —— 用「大減小」代替比例：$120-16=104$ 很誘人，但 $DFEG$ 不是平行四邊形只減去 $\\Delta CGH$。"
+        },
+        {
+          "opt": "D",
+          "en": "$115\\text{ cm}^{2}$ — stopping after one subtraction (e.g. $120-\\frac{1}{20}\\times120=114$) leaves the other pieces unaccounted for.",
+          "zh": "$115\\text{ cm}^{2}$ —— 只減了一塊就停手（例如 $120-\\frac{1}{20}\\times120=114$），其餘幾塊沒有按比例算。"
+        }
+      ],
+      "tip": {
+        "en": "Area-ratio questions never need real lengths: find one **similar pair** to get a length ratio, then every triangle area is «(fraction of a base) × (fraction of a height) × $\\frac12$» of the parallelogram. Add the pieces that make up the quadrilateral.",
+        "zh": "面積比題目不需要真實邊長：先找**一組相似三角形**取得長度比，之後每個三角形面積都是「底的比例 × 高的比例 × $\\frac12$」個平行四邊形；最後把要問的圖形拆成幾塊相加。"
+      },
+      "alt": [
+        {
+          "name": { "en": "Coordinate method (beyond the syllabus)", "zh": "坐標法（超出必修）" },
+          "en": "Because only ratios matter, take $A(0,0),B(4,0),D(0,5),C(4,5)$; then $E(1,0),F(0,2),G(\\frac83,5)$, so $H=(4,9)$ and the shoelace formula gives $[DFEG]:[\\Delta CGH]=49:16$ — hence $\\frac{49}{16}\\times16=49$ cm².",
+          "zh": "既然只在乎比值，可直接取 $A(0,0),B(4,0),D(0,5),C(4,5)$，得 $E(1,0),F(0,2),G(\\frac83,5)$、$H=(4,9)$，用鞋帶公式得 $[DFEG]:[\\Delta CGH]=49:16$，故 $\\frac{49}{16}\\times16=49$ cm²。"
+        }
+      ]
+    }
+  },
+
+  "2025-p2-q19": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Two $135^{\\circ}$ angles and two $22.5^{\\circ}$ ones", "zh": "第 1 步 · 兩個 $135^{\\circ}$ 與兩個 $22.5^{\\circ}$" },
+          "math": "\\angle BCF=\\angle DCF=135^{\\circ}\\;\\Rightarrow\\;\\angle CFD=\\angle CDF=22.5^{\\circ}",
+          "en": "The square's diagonal bisects the right angle, so $\\angle BCA=\\angle ACD=45^{\\circ}$. As $A,C,F$ are collinear, $\\angle BCF=\\angle DCF=180^{\\circ}-45^{\\circ}=135^{\\circ}$. And $CDEF$ is a rhombus, so $CF=CD$: $\\Delta CDF$ is isosceles and its base angles are $\\frac{180^{\\circ}-135^{\\circ}}{2}=22.5^{\\circ}$.",
+          "zh": "正方形的對角線平分直角，故 $\\angle BCA=\\angle ACD=45^{\\circ}$。因 $A,C,F$ 共線，$\\angle BCF=\\angle DCF=180^{\\circ}-45^{\\circ}=135^{\\circ}$。又 $CDEF$ 是菱形，$CF=CD$，故 $\\Delta CDF$ 等腰，底角為 $\\frac{180^{\\circ}-135^{\\circ}}{2}=22.5^{\\circ}$。",
+          "highlight": ["\\angle DCF=135^{\\circ}", "\\angle CFD=22.5^{\\circ}"]
+        },
+        {
+          "title": { "en": "Step 2 · Statement I — $\\Delta CDF\\cong\\Delta CBF$", "zh": "第 2 步 · 命題 I —— $\\Delta CDF\\cong\\Delta CBF$" },
+          "math": "CD=CB,\\;CF\\text{ 共用},\\;\\angle DCF=\\angle BCF\\;\\Rightarrow\\;DF=BF",
+          "en": "$CD=CB$ (square), $CF$ is common and $\\angle DCF=\\angle BCF=135^{\\circ}$, so $\\Delta CDF\\cong\\Delta CBF$ (SAS) and $DF=BF$. Also $\\Delta BCF$ is isosceles ($BC=CF$) with $\\angle BCF=135^{\\circ}$, so $\\angle CBF=\\angle BFC=22.5^{\\circ}$.",
+          "zh": "$CD=CB$（正方形）、$CF$ 共用、$\\angle DCF=\\angle BCF=135^{\\circ}$，故 $\\Delta CDF\\cong\\Delta CBF$（SAS），得 $DF=BF$。又 $\\Delta BCF$ 等腰（$BC=CF$）且 $\\angle BCF=135^{\\circ}$，故 $\\angle CBF=\\angle BFC=22.5^{\\circ}$。",
+          "highlight": ["DF=BF"]
+        },
+        {
+          "title": { "en": "Step 3 · Finish statement I with $AF\\parallel BG$", "zh": "第 3 步 · 用 $AF\\parallel BG$ 完成命題 I" },
+          "math": "\\angle BGF=\\angle DFA=22.5^{\\circ},\\quad\\angle BFG=180^{\\circ}-45^{\\circ}=135^{\\circ}",
+          "en": "Because $AF\\parallel BG$, the transversal $DFG$ gives $\\angle BGF=\\angle DFA=22.5^{\\circ}$ (and $\\angle DFA=\\angle CFD$ as $A,C,F$ are collinear). With $D,F,G$ collinear, $\\angle BFG=180^{\\circ}-\\angle BFD$. So in $\\Delta BFG$ the angles at $B$ and $G$ are equal — $BF=FG$. Together with $DF=BF$: $DF=FG$ — statement I is **true**.",
+          "zh": "因 $AF\\parallel BG$，截線 $DFG$ 給出 $\\angle BGF=\\angle DFA=22.5^{\\circ}$（而 $A,C,F$ 共線故 $\\angle DFA=\\angle CFD$）。$D,F,G$ 共線時 $\\angle BFG=180^{\\circ}-\\angle BFD$，故 $\\Delta BFG$ 中 $B$、$G$ 兩角相等，得 $BF=FG$。配合 $DF=BF$，即 $DF=FG$ —— 命題 I **正確**。",
+          "highlight": ["DF=FG"]
+        },
+        {
+          "title": { "en": "Step 4 · Statement III — the two angles add to $180^{\\circ}$", "zh": "第 4 步 · 命題 III —— 兩角相加為 $180^{\\circ}$" },
+          "math": "\\angle ABG=180^{\\circ}-\\angle BAF=135^{\\circ},\\quad\\angle BFD=22.5^{\\circ}+22.5^{\\circ}=45^{\\circ}",
+          "en": "$\\angle BAF=\\angle BAC=45^{\\circ}$, and $AF\\parallel BG$ makes $\\angle ABG$ and $\\angle BAF$ co-interior: $\\angle ABG=180^{\\circ}-45^{\\circ}=135^{\\circ}$. Since $FC$ lies between $FB$ and $FD$, $\\angle BFD=\\angle BFC+\\angle CFD=22.5^{\\circ}+22.5^{\\circ}=45^{\\circ}$. Hence $135^{\\circ}+45^{\\circ}=180^{\\circ}$ — statement III is **true**.",
+          "zh": "$\\angle BAF=\\angle BAC=45^{\\circ}$，而 $AF\\parallel BG$ 使 $\\angle ABG$ 與 $\\angle BAF$ 同旁內角互補：$\\angle ABG=180^{\\circ}-45^{\\circ}=135^{\\circ}$。又 $FC$ 在 $FB$ 與 $FD$ 之間，$\\angle BFD=\\angle BFC+\\angle CFD=22.5^{\\circ}+22.5^{\\circ}=45^{\\circ}$。故 $135^{\\circ}+45^{\\circ}=180^{\\circ}$ —— 命題 III **正確**。",
+          "highlight": ["\\angle ABG=135^{\\circ}", "\\angle BFD=45^{\\circ}"]
+        },
+        {
+          "title": { "en": "Step 5 · Statement II — two pairs of equal angles", "zh": "第 5 步 · 命題 II —— 兩組相等角" },
+          "math": "\\Delta BFG:\\;135^{\\circ},22.5^{\\circ},22.5^{\\circ}\\;\\sim\\;\\Delta DEF:\\;135^{\\circ},22.5^{\\circ},22.5^{\\circ}",
+          "en": "In the rhombus, $CDEF$'s opposite angles are equal, so $\\angle DEF=\\angle DCF=135^{\\circ}$; with $DE=EF$, $\\angle EDF=\\angle DFE=22.5^{\\circ}$. And $\\Delta BFG$ has $\\angle BFG=135^{\\circ}$ with $\\angle FBG=\\angle BGF=22.5^{\\circ}$. The two triangles match in angles (AA), so $\\Delta BFG\\sim\\Delta DEF$ — statement II is **true**.",
+          "zh": "菱形 $CDEF$ 的對角相等，故 $\\angle DEF=\\angle DCF=135^{\\circ}$；又 $DE=EF$，得 $\\angle EDF=\\angle DFE=22.5^{\\circ}$。而 $\\Delta BFG$ 有 $\\angle BFG=135^{\\circ}$、$\\angle FBG=\\angle BGF=22.5^{\\circ}$。兩三角形三角對應相等（AA），故 $\\Delta BFG\\sim\\Delta DEF$ —— 命題 II **正確**。",
+          "highlight": ["\\Delta BFG\\sim\\Delta DEF"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\text{I, II and III}",
+          "en": "All three statements are true — option D.",
+          "zh": "三項皆成立 —— 答案 D。",
+          "highlight": ["\\text{I, II and III}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "A",
+          "en": "$\\text{I and II only}$ — you guessed III is false. $AF\\parallel BG$ forces $\\angle ABG=135^{\\circ}$, and $\\angle BFD=22.5^{\\circ}+22.5^{\\circ}=45^{\\circ}$; they **do** add to $180^{\\circ}$.",
+          "zh": "$\\text{I 與 II}$ —— 憑感覺否定 III。$AF\\parallel BG$ 逼出 $\\angle ABG=135^{\\circ}$，而 $\\angle BFD=22.5^{\\circ}+22.5^{\\circ}=45^{\\circ}$，兩者**確實**相加為 $180^{\\circ}$。"
+        },
+        {
+          "opt": "B",
+          "en": "$\\text{I and III only}$ — you doubted the similarity. Both triangles have angles $135^{\\circ},22.5^{\\circ},22.5^{\\circ}$ ($\\angle DEF$ equals $\\angle DCF$ as opposite angles of the rhombus).",
+          "zh": "$\\text{I 與 III}$ —— 對相似有疑問。兩個三角形的角都是 $135^{\\circ},22.5^{\\circ},22.5^{\\circ}$（菱形對角相等，$\\angle DEF=\\angle DCF$）。"
+        },
+        {
+          "opt": "C",
+          "en": "$\\text{II and III only}$ — you dropped I, usually by forgetting that $\\angle DCF=\\angle BCF$ lets you use SAS for $\\Delta CDF\\cong\\Delta CBF$, so $DF=BF=FG$.",
+          "zh": "$\\text{II 與 III}$ —— 漏了 I，通常是忘了 $\\angle DCF=\\angle BCF$ 可用 SAS 證 $\\Delta CDF\\cong\\Delta CBF$，從而 $DF=BF=FG$。"
+        }
+      ],
+      "tip": {
+        "en": "Square + rhombus on a diagonal: the diagonal bisects $90^{\\circ}$ into $45^{\\circ}$, and the rhombus's equal sides make an isosceles triangle — so base angles are $\\frac{180^{\\circ}-135^{\\circ}}{2}=22.5^{\\circ}$. Two $22.5^{\\circ}$ angles add to the $45^{\\circ}$ you need; a parallel line then hands you the $135^{\\circ}$.",
+        "zh": "正方形加菱形共用對角線：對角線把 $90^{\\circ}$ 平分成 $45^{\\circ}$，菱形的等邊造出等腰三角形，底角就是 $\\frac{180^{\\circ}-135^{\\circ}}{2}=22.5^{\\circ}$。兩個 $22.5^{\\circ}$ 相加正是要用的 $45^{\\circ}$；平行線再給你 $135^{\\circ}$，兩者互補。"
+      },
+      "alt": [
+        {
+          "name": { "en": "Coordinate + vector method (beyond the syllabus)", "zh": "坐標與向量法（超出必修）" },
+          "en": "Take $B(0,0),A(1,0),C(0,1),D(1,1)$. Then $F=(-\\frac{1}{\\sqrt2},1+\\frac{1}{\\sqrt2})$ and $BG\\parallel AF$ gives $G=(-(1+\\sqrt2),1+\\sqrt2)$ with $\\overrightarrow{DG}=2\\overrightarrow{DF}$ (so $DF=FG$). Sides: $BF=FG=\\sqrt{2+\\sqrt2}$, $BG=2+\\sqrt2$ and $DE=EF=1$, $DF=\\sqrt{2+\\sqrt2}$ — hence the triangles are similar; and $\\angle ABG=135^{\\circ}$, $\\angle BFD=45^{\\circ}$.",
+          "zh": "取 $B(0,0),A(1,0),C(0,1),D(1,1)$，得 $F=(-\\frac{1}{\\sqrt2},1+\\frac{1}{\\sqrt2})$；由 $BG\\parallel AF$ 得 $G=(-(1+\\sqrt2),1+\\sqrt2)$，且 $\\overrightarrow{DG}=2\\overrightarrow{DF}$（故 $DF=FG$）。邊長：$BF=FG=\\sqrt{2+\\sqrt2}$、$BG=2+\\sqrt2$，而 $DE=EF=1$、$DF=\\sqrt{2+\\sqrt2}$，故兩三角形相似；又 $\\angle ABG=135^{\\circ}$、$\\angle BFD=45^{\\circ}$。"
+        }
+      ]
+    }
+  },
+
+  "2025-p2-q20": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Draw the two heights", "zh": "第 1 步 · 作兩條高" },
+          "math": "PM\\perp SR,\\;QN\\perp SR,\\;PM=QN=h",
+          "en": "Drop perpendiculars from $P$ and $Q$ to the line $SR$, with feet $M$ and $N$. Since $PQ\\parallel SR$, $PMQN$ is a rectangle, so $PQ=MN$ — the answer is just $MS+SR+RN$.",
+          "zh": "由 $P$、$Q$ 作垂線到直線 $SR$，垂足為 $M$、$N$。因 $PQ\\parallel SR$，$PMQN$ 是矩形，故 $PQ=MN$ —— 答案就是 $MS+SR+RN$。",
+          "highlight": ["PQ=MN"]
+        },
+        {
+          "title": { "en": "Step 2 · The $120^{\\circ}$ angle: get $h$ and $MS$", "zh": "第 2 步 · 由 $120^{\\circ}$ 求 $h$ 與 $MS$" },
+          "math": "\\angle PSM=180^{\\circ}-120^{\\circ}=60^{\\circ},\\;\\;h=41\\sin60^{\\circ},\\;\\;MS=41\\cos60^{\\circ}=20.5",
+          "en": "$\\angle PSR=120^{\\circ}>90^{\\circ}$, so $M$ falls on the extension of $SR$ beyond $S$ and $\\angle PSM=60^{\\circ}$. In the right triangle $PSM$: $h=PS\\sin60^{\\circ}=\\frac{41\\sqrt3}{2}$ and $MS=PS\\cos60^{\\circ}=20.5$ cm.",
+          "zh": "$\\angle PSR=120^{\\circ}>90^{\\circ}$，故 $M$ 落在 $SR$ 向 $S$ 以外的延線上，$\\angle PSM=60^{\\circ}$。在直角三角形 $PSM$ 中：$h=PS\\sin60^{\\circ}=\\frac{41\\sqrt3}{2}$、$MS=PS\\cos60^{\\circ}=20.5$ cm。",
+          "highlight": ["\\angle PSM=60^{\\circ}", "MS=20.5\\text{ cm}"]
+        },
+        {
+          "title": { "en": "Step 3 · The $150^{\\circ}$ angle gives $RN$", "zh": "第 3 步 · 由 $150^{\\circ}$ 求 $RN$" },
+          "math": "\\angle QRN=180^{\\circ}-150^{\\circ}=30^{\\circ},\\quad RN=\\frac{h}{\\tan30^{\\circ}}=\\frac{41\\sqrt3}{2}\\times\\sqrt3=61.5",
+          "en": "Similarly $\\angle QRS=150^{\\circ}$ puts $N$ beyond $R$, and $\\angle QRN=30^{\\circ}$. So $RN=\\frac{h}{\\tan30^{\\circ}}=\\frac{41\\sqrt3}{2}\\cdot\\sqrt3=\\frac{123}{2}=61.5$ cm.",
+          "zh": "同樣，$\\angle QRS=150^{\\circ}$ 使 $N$ 落在 $R$ 之外，$\\angle QRN=30^{\\circ}$。故 $RN=\\frac{h}{\\tan30^{\\circ}}=\\frac{41\\sqrt3}{2}\\cdot\\sqrt3=\\frac{123}{2}=61.5$ cm。",
+          "highlight": ["\\angle QRN=30^{\\circ}", "RN=61.5\\text{ cm}"]
+        },
+        {
+          "title": { "en": "Step 4 · Add the three parts", "zh": "第 4 步 · 三段相加" },
+          "math": "PQ=MS+SR+RN=20.5+53+61.5=135\\text{ cm}",
+          "en": "$PQ=MN=MS+SR+RN=20.5+53+61.5=135$ cm — option D.",
+          "zh": "$PQ=MN=MS+SR+RN=20.5+53+61.5=135$ cm —— 答案 D。",
+          "highlight": ["PQ=135\\text{ cm}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "C",
+          "en": "$106\\text{ cm}$ — you used $41\\cos60^{\\circ}$ on both sides but forgot that the left part must be **added** (the $120^{\\circ}$ angle pushes $M$ outside $SR$): $53+20.5+20.5=94$ or with one part doubled you land near $106$.",
+          "zh": "$106\\text{ cm}$ —— 兩邊都用 $41\\cos60^{\\circ}$ 但忘記左邊那段要**加**（$120^{\\circ}$ 把 $M$ 推到 $SR$ 之外）：$53+20.5+20.5=94$，重複一段就會落在 $106$ 附近。"
+        },
+        {
+          "opt": "B",
+          "en": "$100\\text{ cm}$ — you read the $150^{\\circ}$ as $30^{\\circ}$ and used $RN=h\\sin30^{\\circ}$ instead of $\\frac{h}{\\tan30^{\\circ}}$; keep straight which side is opposite and which is adjacent.",
+          "zh": "$100\\text{ cm}$ —— 把 $150^{\\circ}$ 當成 $30^{\\circ}$ 後用了 $RN=h\\sin30^{\\circ}$（應用 $\\frac{h}{\\tan30^{\\circ}}$）；要分清哪條邊是對邊、哪條是鄰邊。"
+        },
+        {
+          "opt": "A",
+          "en": "$82\\text{ cm}$ — just $2\\times PS=82$, as if the two legs were parallel to the bases.",
+          "zh": "$82\\text{ cm}$ —— 只把 $PS$ 乘 $2$ 得 $82$，彷彿兩腰都與底平行。"
+        }
+      ],
+      "tip": {
+        "en": "Trapezium with two base angles: drop the two heights, then handle each right triangle on its own. An obtuse base angle ($120^{\\circ}$ or $150^{\\circ}$) means the foot falls **outside** the base — the angle you use inside the right triangle is $180^{\\circ}-\\theta$, and those outside pieces are added to the base to get the other parallel side.",
+        "zh": "梯形給了兩個底角：作兩條高，逐個直角三角形處理。底角是鈍角（$120^{\\circ}$／$150^{\\circ}$）時，垂足會落在**底邊之外**；直角三角形內要用的角是 $180^{\\circ}-\\theta$，而那些「外面」的部分要加到另一條平行邊上。"
+      },
+      "alt": [
+        {
+          "name": { "en": "Coordinate method (beyond the syllabus)", "zh": "坐標法（超出必修）" },
+          "en": "Put $S(0,0)$, $R(53,0)$ and $PQ\\parallel SR$. Then $P=41(\\cos120^{\\circ},\\sin120^{\\circ})=(-20.5,35.51)$; the leg $RQ$ rises to the same height, so its horizontal run is $\\frac{35.51}{\\tan30^{\\circ}}=61.5$ and $Q=(114.5,35.51)$. Hence $PQ=114.5-(-20.5)=135$ cm.",
+          "zh": "取 $S(0,0)$、$R(53,0)$ 且 $PQ\\parallel SR$。得 $P=41(\\cos120^{\\circ},\\sin120^{\\circ})=(-20.5,35.51)$；$RQ$ 要升到同一高度，水平走 $\frac{35.51}{\tan30^{\\circ}}=61.5$，故 $Q=(114.5,35.51)$，$PQ=114.5-(-20.5)=135$ cm。"
+        }
+      ]
+    }
+  },
+
+  "2025-p2-q23": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · The two right angles make a trapezium", "zh": "第 1 步 · 兩個直角造就梯形" },
+          "math": "\\angle BAC=\\angle ACD=90^{\\circ}\\;\\Rightarrow\\;AB\\parallel CD",
+          "en": "$AB$ and $CD$ are both perpendicular to $AC$, so $AB\\parallel CD$: the figure is a trapezium whose parallel sides are $AB$ and $CD$, with $AC$ the perpendicular distance between them.",
+          "zh": "$AB$ 與 $CD$ 都垂直於 $AC$，故 $AB\\parallel CD$：圖形是以 $AB$、$CD$ 為平行邊、$AC$ 為兩者距離的梯形。",
+          "highlight": ["AB\\parallel CD"]
+        },
+        {
+          "title": { "en": "Step 2 · Name the three lengths", "zh": "第 2 步 · 設三條長度" },
+          "math": "AB=x,\\quad CD=y,\\quad AC=h",
+          "en": "Both $\\Delta ABC$ (right angle at $A$) and $\\Delta ADC$ (right angle at $C$) contain $AC$, so $\\tan\\angle ABC=\\frac{AC}{AB}=\\frac{h}{x}$ and $\\tan\\angle ADC=\\frac{AC}{CD}=\\frac{h}{y}$.",
+          "zh": "$\\Delta ABC$（直角在 $A$）與 $\\Delta ADC$（直角在 $C$）都含 $AC$，故 $\\tan\\angle ABC=\\frac{AC}{AB}=\\frac{h}{x}$、$\\tan\\angle ADC=\\frac{AC}{CD}=\\frac{h}{y}$。",
+          "highlight": ["\\tan\\angle ADC=\\frac{h}{y}"]
+        },
+        {
+          "title": { "en": "Step 3 · Complementary angles: $h^{2}=xy$", "zh": "第 3 步 · 互餘角：$h^{2}=xy$" },
+          "math": "\\frac{h}{x}\\cdot\\frac{h}{y}=1\\;\\Rightarrow\\;h^{2}=xy",
+          "en": "$\\angle ABC+\\angle ADC=90^{\\circ}$, and tangents of complementary angles are reciprocals ($\\tan\\theta\\cdot\\tan(90^{\\circ}-\\theta)=1$). So $\\frac{h}{x}\\cdot\\frac{h}{y}=1$, i.e. $h^{2}=xy$ — $AC$ is the geometric mean of $AB$ and $CD$.",
+          "zh": "$\\angle ABC+\\angle ADC=90^{\\circ}$，而互餘兩角的 $\\tan$ 值互為倒數（$\\tan\\theta\\cdot\\tan(90^{\\circ}-\\theta)=1$）。故 $\\frac{h}{x}\\cdot\\frac{h}{y}=1$，即 $h^{2}=xy$ —— $AC$ 是 $AB$ 與 $CD$ 的等比中項。",
+          "highlight": ["h^{2}=xy"]
+        },
+        {
+          "title": { "en": "Step 4 · Simplify $\\frac{BC}{AD}$ using $h^{2}=xy$", "zh": "第 4 步 · 用 $h^{2}=xy$ 化簡 $\\frac{BC}{AD}$" },
+          "math": "\\frac{BC}{AD}=\\sqrt{\\frac{x^{2}+h^{2}}{y^{2}+h^{2}}}=\\sqrt{\\frac{x(x+y)}{y(x+y)}}=\\sqrt{\\frac{x}{y}}=\\frac{h}{y}",
+          "en": "Pythagoras gives $BC=\\sqrt{x^{2}+h^{2}}$ and $AD=\\sqrt{y^{2}+h^{2}}$. Replacing $h^{2}$ by $xy$ makes the numerator $x(x+y)$ and the denominator $y(x+y)$, so the common factor $x+y$ cancels: $\\frac{BC}{AD}=\\sqrt{\\frac{x}{y}}$. And $h^{2}=xy$ means $\\frac{h}{y}=\\sqrt{\\frac{x}{y}}$. Therefore $\\frac{BC}{AD}=\\frac{h}{y}=\\tan\\angle ADC$ — option C.",
+          "zh": "由勾股定理 $BC=\\sqrt{x^{2}+h^{2}}$、$AD=\\sqrt{y^{2}+h^{2}}$。把 $h^{2}$ 換成 $xy$ 後，分子成 $x(x+y)$、分母成 $y(x+y)$，公因式 $x+y$ 相消：$\\frac{BC}{AD}=\\sqrt{\\frac{x}{y}}$。而 $h^{2}=xy$ 給出 $\\frac{h}{y}=\\sqrt{\\frac{x}{y}}$。故 $\\frac{BC}{AD}=\\frac{h}{y}=\\tan\\angle ADC$ —— 答案 C。",
+          "highlight": ["\\frac{BC}{AD}=\\sqrt{\\frac{x}{y}}=\\frac{h}{y}=\\tan\\angle ADC"]
+        },
+        {
+          "title": { "en": "Step 5 · Why the other three fail", "zh": "第 5 步 · 其餘三式為何不成立" },
+          "math": "\\tan\\angle ACB=\\frac{x}{h},\\quad\\tan\\angle ADC=\\frac{h}{y},\\quad\\frac{BC}{CD}=\\frac{\\sqrt{x^{2}+h^{2}}}{y}",
+          "en": "$\\tan\\angle ACB=\\frac{AB}{AC}=\\frac{x}{h}$, which is neither $\\frac{AB}{AD}=\\frac{x}{\\sqrt{y^{2}+h^{2}}}$ (A) nor $\\frac{AB}{CD}=\\frac{x}{y}$ (B); and $\\tan\\angle ADC=\\frac{h}{y}\\neq\\frac{BC}{CD}=\\frac{\\sqrt{x^{2}+h^{2}}}{y}$ (D). Only C holds for every such trapezium.",
+          "zh": "$\\tan\\angle ACB=\\frac{AB}{AC}=\\frac{x}{h}$，既不等於 $\\frac{AB}{AD}=\\frac{x}{\\sqrt{y^{2}+h^{2}}}$（A），也不等於 $\\frac{AB}{CD}=\\frac{x}{y}$（B）；而 $\\tan\\angle ADC=\\frac{h}{y}$ 也不等於 $\\frac{BC}{CD}=\\frac{\\sqrt{x^{2}+h^{2}}}{y}$（D）。只有 C 對所有這類梯形都成立。",
+          "highlight": ["\\text{only C}"]
+        }
+      ],
+      "traps": [
+        {
+          "opt": "A",
+          "en": "$\\tan\\angle ACB=\\frac{AB}{AD}$ — wrong: $\\tan\\angle ACB=\\frac{AB}{AC}$, and $AD\\neq AC$ (they are equal only in the special case $y=0$).",
+          "zh": "$\\tan\\angle ACB=\\frac{AB}{AD}$ —— 錯：$\\tan\\angle ACB=\\frac{AB}{AC}$，而 $AD\\neq AC$（只有 $y=0$ 的特殊情況才相等）。"
+        },
+        {
+          "opt": "B",
+          "en": "$\\tan\\angle ACB=\\frac{AB}{CD}$ — mixes the two right triangles: $\\tan\\angle ACB$ only involves $AB$ and $AC$.",
+          "zh": "$\\tan\\angle ACB=\\frac{AB}{CD}$ —— 把兩個直角三角形混在一起：$\\tan\\angle ACB$ 只涉及 $AB$ 與 $AC$。"
+        },
+        {
+          "opt": "D",
+          "en": "$\\tan\\angle ADC=\\frac{BC}{CD}$ — $BC$ belongs to the other triangle; and $BC>AC=h$, so this ratio is bigger than $\\frac{h}{y}$.",
+          "zh": "$\\tan\\angle ADC=\\frac{BC}{CD}$ —— $BC$ 屬於另一個三角形；而且 $BC>AC=h$，這個比值一定大於 $\\frac{h}{y}$。"
+        }
+      ],
+      "tip": {
+        "en": "When two right triangles share the perpendicular $AC$ between parallel sides, give the three lengths single letters ($x,y,h$). The complementary-angle condition $\\angle B+\\angle D=90^{\\circ}$ always collapses to $h^{2}=xy$ — then $\\frac{BC}{AD}$ simplifies because $x+y$ cancels.",
+        "zh": "兩個直角三角形夾在平行邊之間、共用垂直邊 $AC$ 時，把三條長度設成單字母（$x,y,h$）。互餘條件 $\\angle B+\\angle D=90^{\\circ}$ 必定化為 $h^{2}=xy$；此時 $\\frac{BC}{AD}$ 會因為 $x+y$ 相消而化簡成 $\\tan\\angle ADC$。"
+      },
+      "alt": [
+        {
+          "name": { "en": "Coordinate method (beyond the syllabus)", "zh": "坐標法（超出必修）" },
+          "en": "Take $A(0,0)$, $C(0,-h)$, $B(b,0)$, $D(-d,-h)$ (the two right angles fix this shape). Then $\\tan\\angle ABC=\\frac{h}{b}$, $\\tan\\angle ADC=\\frac{h}{d}$ and complementarity gives $h^{2}=bd$; computing $\\frac{BC}{AD}=\\sqrt{\\frac{b}{d}}=\\frac{h}{d}$ shows only C holds generally.",
+          "zh": "取 $A(0,0)$、$C(0,-h)$、$B(b,0)$、$D(-d,-h)$（兩個直角定出此形狀）。則 $\\tan\\angle ABC=\\frac{h}{b}$、$\\tan\\angle ADC=\\frac{h}{d}$，互餘給出 $h^{2}=bd$；再算 $\\frac{BC}{AD}=\\sqrt{\\frac{b}{d}}=\\frac{h}{d}$，可見只有 C 普遍成立。"
+        }
+      ]
+    }
+  }
+}

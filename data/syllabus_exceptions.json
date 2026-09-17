@@ -1,0 +1,5 @@
+{
+ "version": 1,
+ "_note": "課程合規的例外清單（技術債）。列在這裡的違規會降為警告，不會擋住發佈；until 過期後自動恢復為錯誤。修好一題就把該條刪掉。規則見 tools/syllabus_check.py。",
+ "exceptions": []
+}
