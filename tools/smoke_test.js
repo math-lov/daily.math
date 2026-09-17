@@ -16,6 +16,9 @@ const { JSDOM } = require("jsdom");
 
 const root = path.join(__dirname, "..");
 const site = path.join(root, "site");
+// 本機預覽資料（含未發放題目）：python tools/make_site_data.py --all --out build/preview
+const previewDir = path.join(root, "build", "preview", "data");
+const hasPreview = fs.existsSync(path.join(previewDir, "bank.js"));
 let fails = 0;
 const ok = (cond, label) => { console.log((cond ? "  PASS  " : "  FAIL  ") + label); if (!cond) fails++; };
 
@@ -110,20 +113,22 @@ ok(/Step 1/.test(afterTitle), "step titles are localised too (got: " + afterTitl
 ok(cardsAfter[0].querySelector(".feedback").classList.contains("ok"), "attempt state survives re-render");
 
 /* Helper: boot a jsdom on a given batch with real KaTeX, optionally removing one solution
- * (so the "solution not released yet" path can be tested no matter what the data holds). */
-function boot(url, stripQid) {
+ * (so the "solution not released yet" path can be tested no matter what the data holds).
+ * dataDirOverride: 用本機預覽資料（build/preview，含未發放題目）跑排版檢查。 */
+function boot(url, stripQid, dataDirOverride) {
+  const dataDir = dataDirOverride || path.join(site, "data");
   const dom = new JSDOM(html, { url, pretendToBeVisual: true, runScripts: "outside-only" });
   const c = dom.getInternalVMContext();
   vm.runInContext(fs.readFileSync(path.join(site, "vendor", "katex", "katex.min.js"), "utf8"), c, { filename: "katex.min.js" });
   vm.runInContext(fs.readFileSync(path.join(site, "vendor", "katex", "auto-render.min.js"), "utf8"), c, { filename: "auto-render.min.js" });
   ["bank", "solutions"].forEach((n) => {
-    vm.runInContext(fs.readFileSync(path.join(site, "data", n + ".js"), "utf8"), c, { filename: n + ".js" });
+    vm.runInContext(fs.readFileSync(path.join(dataDir, n + ".js"), "utf8"), c, { filename: n + ".js" });
   });
   if (stripQid && c.window.SOLUTIONS && c.window.SOLUTIONS.solutions) {
     delete c.window.SOLUTIONS.solutions[stripQid];
   }
   ["releases"].forEach((n) => {
-    vm.runInContext(fs.readFileSync(path.join(site, "data", n + ".js"), "utf8"), c, { filename: n + ".js" });
+    vm.runInContext(fs.readFileSync(path.join(dataDir, n + ".js"), "utf8"), c, { filename: n + ".js" });
   });
   vm.runInContext(fs.readFileSync(path.join(site, "assets", "app.js"), "utf8"), c, { filename: "app.js" });
   return {
@@ -137,13 +142,21 @@ function boot(url, stripQid) {
 console.log("\n— 題幹排版（batch 2 全是文字題）—");
 const b2 = boot("https://example.test/?batch=2");
 ok(b2.$$(".q-card .q-stem-text").length === 3, "each card shows the wording block");
-const q5Card = boot("https://example.test/?batch=4").card("2025-p2-q05");
-ok(!!q5Card, "batch 4 shows Q5");
-const q5Tex = q5Card.querySelector(".q-stem-text");
-ok(q5Tex.querySelectorAll(".katex").length === 1,
-  "the whole formula renders as a single KaTeX run (got " + q5Tex.querySelectorAll(".katex").length + ")");
-ok(/x2\+4x=k2/.test(q5Tex.textContent.replace(/\s/g, "")), "the formula sits inline in the wording");
 ok(b2.cards.every((c) => !c.querySelector(".q-stem")), "no duplicated display formula above the wording");
+
+console.log("\n— 行內數學：整條公式一次 KaTeX 渲染 —");
+if (hasPreview) {
+  const b4 = boot("https://example.test/?batch=4", null, previewDir);
+  const q5Card = b4.card("2025-p2-q05");
+  ok(!!q5Card, "preview data: batch 4 shows Q5");
+  const q5Tex = q5Card && q5Card.querySelector(".q-stem-text");
+  const runs = q5Tex ? q5Tex.querySelectorAll(".katex").length : -1;
+  ok(runs === 1, "the whole formula renders as a single KaTeX run (got " + runs + ")");
+  ok(!!q5Tex && /x2\+4x=k2/.test(q5Tex.textContent.replace(/\s/g, "")),
+    "the formula sits inline in the wording");
+} else {
+  console.log("  SKIP  build/preview 不存在 → 先跑 python tools/make_site_data.py --all --out build/preview");
+}
 
 console.log("\n— 未發佈解答的題目 —");
 // Strip one solution so this path is always exercised, whatever the current data contains.

@@ -44,6 +44,20 @@
     RELEASES.forEach(function (r) { if (r.date <= today) best = r; });
     return best;
   }
+  /* 網址明確指定某批，但那批不在公開資料裡（尚未發放／已不存在）→ 顯示提示。 */
+  function requestedMissing() {
+    var raw = new URLSearchParams(location.search).get("batch");
+    if (!raw) return false;
+    var b = parseInt(raw, 10);
+    if (!b) return false;
+    for (var i = 0; i < RELEASES.length; i++) if (RELEASES[i].batch === b) return false;
+    return true;
+  }
+  /* 已收回的題目只剩 id（題目與解答已從公開檔移除）：2025-p2-q07 → 25-P2Q07 */
+  function qcodeOf(qid) {
+    var m = /^(\d{4})-p(\d+)-q(\d+)$/.exec(qid || "");
+    return m ? (m[1].slice(2) + "-P" + m[2] + "Q" + m[3]) : qid;
+  }
   function sol(qid) { return SOLUTIONS[qid] || null; }
   function batchOf(qid) {
     for (var i = 0; i < RELEASES.length; i++) if (RELEASES[i].ids.indexOf(qid) !== -1) return RELEASES[i];
@@ -118,13 +132,25 @@
 
   /* ───────── header ───────── */
   function renderHeader(batch) {
-    var title = L(batch.title) || ("Batch " + batch.batch);
+    var missing = requestedMissing();
+    var title = missing
+      ? L({ en: "Not released yet", zh: "尚未發放" })
+      : (L(batch.title) || ("Batch " + batch.batch));
     document.getElementById("batchTitle").textContent = title;
-    document.getElementById("batchDate").textContent = batch.date;
+    document.getElementById("batchDate").textContent = missing ? "" : batch.date;
     var meta = document.getElementById("batchMeta");
     meta.innerHTML = "";
     meta.appendChild(el("span", "chip chip-topic", "Batch " + batch.batch + " of " + RELEASES.length));
-    meta.appendChild(el("span", "chip chip-diff", "3 questions · mixed difficulty"));
+    meta.appendChild(el("span", "chip chip-diff", batch.ids.length + " questions · mixed difficulty"));
+    if (batch.status === "withdrawn") {
+      meta.appendChild(el("span", "chip chip-withdrawn",
+        store.lang === "zh" ? "此批次已收回" : "batch withdrawn"));
+    } else if ((batch.withdrawnIds || []).length) {
+      meta.appendChild(el("span", "chip chip-withdrawn",
+        (store.lang === "zh" ? "已收回 " : "withdrawn ") + batch.withdrawnIds.length
+        + (store.lang === "zh" ? " 題" : " Q")));
+    }
+    if (batch.notice) meta.appendChild(el("span", "chip chip-notice", esc(L(batch.notice))));
     var paperName = (BANK.papers && BANK.papers[0] && BANK.papers[0].name) || "DSE Maths Paper 2";
     document.getElementById("footNote").textContent =
       paperName + " · questions in English · solutions in 中文 / English";
@@ -149,8 +175,8 @@
     host.innerHTML = "";
     batch.ids.forEach(function (qid, idx) {
       var q = QMAP[qid];
-      if (!q) return;
-      host.appendChild(questionCard(q, idx));
+      // 已收回／未發放的題目不在公開資料裡，但仍留一張佔位卡說明
+      host.appendChild(q ? questionCard(q, idx) : withdrawnCard(qid, idx));
     });
     if (window.renderMathInElement) {
       Array.prototype.forEach.call(document.querySelectorAll("[data-tex-inline]"), function (node) {
@@ -159,6 +185,20 @@
         } catch (e) {}
       });
     }
+  }
+
+  /* 已收回（或未發放）的題目：題目與解答已從公開資料檔移除，只留一張說明卡。 */
+  function withdrawnCard(qid, idx) {
+    var card = el("div", "q-card glass q-withdrawn");
+    card.dataset.qid = qid;
+    var top = el("div", "q-top");
+    top.appendChild(el("span", "q-no", esc(qcodeOf(qid))));
+    top.appendChild(el("span", "chip chip-diff", (idx + 1) + " of 3 today"));
+    card.appendChild(top);
+    card.appendChild(el("p", "q-withdrawn-note", store.lang === "zh"
+      ? "這題已由老師收回，內容與解答不再提供。"
+      : "This question has been withdrawn by the teacher."));
+    return card;
   }
 
   function questionCard(q, idx) {
@@ -396,12 +436,16 @@
 
   /* ───────── progress ───────── */
   function batchStatus(r) {
+    // 收回的題目不再提供作答，也不應讓當天永遠「未完成」
+    var held = {};
+    (r.withdrawnIds || []).forEach(function (qid) { held[qid] = true; });
+    var ids = (r.ids || []).filter(function (qid) { return !held[qid] && QMAP[qid]; });
     var done = 0, correct = 0;
-    r.ids.forEach(function (qid) {
+    ids.forEach(function (qid) {
       var a = store.attempts[qid];
       if (a) { done++; if (a.correct) correct++; }
     });
-    return { done: done, correct: correct, total: r.ids.length };
+    return { done: done, correct: correct, total: ids.length };
   }
   function daysCompleted() { return RELEASES.filter(function (r) { return batchStatus(r).done === r.ids.length; }).length; }
   function currentStreak() {
@@ -485,11 +529,15 @@
       var cls = ["archive-link"];
       if (r.batch === cur.batch) cls.push("now");
       if (r.date > today) cls.push("future");
+      if (r.status === "withdrawn") cls.push("withdrawn");
       if (st.done === st.total) cls.push("full"); else if (st.done > 0) cls.push("partial");
       var a = document.createElement("a");
       a.href = "?batch=" + r.batch;
       a.className = cls.join(" ");
-      a.innerHTML = '<span class="dot"></span>Batch ' + r.batch + " · " + r.date;
+      var label = "Batch " + r.batch + " · " + r.date;
+      if (r.status === "withdrawn") label += store.lang === "zh" ? " · 已收回" : " · withdrawn";
+      else if ((r.withdrawnIds || []).length) label += store.lang === "zh" ? " · 部分收回" : " · partly withdrawn";
+      a.innerHTML = '<span class="dot"></span>' + label;
       host.appendChild(a);
     });
   }

@@ -31,6 +31,9 @@ import fitz  # PyMuPDF：面板即時重裁用
 if hasattr(sys.stdout, "buffer"):
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import release_model as rm  # noqa: E402  （發布治理：狀態、邊界、收回）
+
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PY = sys.executable
 PANEL_HTML = os.path.join(BASE, "tools", "panel", "index.html")
@@ -343,6 +346,164 @@ def save_crop(qid: str, payload: dict) -> dict:
                                                         else "（已記錄為人工調整）")}]}
 
 
+def git_porcelain() -> list[str]:
+    """未提交的變更（安靜執行，供面板顯示）。"""
+    try:
+        p = subprocess.run(["git", "status", "--porcelain"], cwd=BASE, capture_output=True,
+                           text=True, encoding="utf-8", errors="replace", timeout=30)
+        return [ln for ln in (p.stdout or "").splitlines() if ln.strip()]
+    except (OSError, subprocess.SubprocessError):
+        return []
+
+
+def releases_view() -> dict:
+    """發布管理頁的資料：每批的狀態與題目、可換入的庫存、統計、未提交變更。"""
+    bank = load("bank.json", {"questions": [], "papers": []})
+    sol = load("solutions.json", {"solutions": {}}).get("solutions", {})
+    doc = rm.load_releases()
+    rels = doc["releases"]
+    by_id = {q["id"]: q for q in bank.get("questions", [])}
+    live, revoked, _pending = rm.live_qids(rels)
+    scheduled = {i for r in rels for i in rm.ids_of(r)}
+
+    def qbrief(qid: str) -> dict:
+        q = by_id.get(qid) or {}
+        s = sol.get(qid) or {}
+        return {
+            "id": qid, "code": q.get("code") or qid,
+            "unit": (q.get("topic") or {}).get("zh") or (q.get("topic") or {}).get("en") or "",
+            "difficulty": q.get("difficulty"),
+            "solved": qid in sol, "answer": s.get("answer"), "verify": s.get("verify"),
+            "live": qid in live, "revoked": qid in revoked,
+        }
+
+    batches = []
+    for r in rels:
+        batches.append({
+            "batch": r.get("batch"), "date": rm.date_of(r), "status": rm.status_of(r),
+            "title": (r.get("title") or {}).get("zh") or (r.get("title") or {}).get("en") or "",
+            "notice": r.get("notice") or None,
+            "withdrawnIds": sorted(rm.held_ids(r)),
+            "questions": [qbrief(i) for i in rm.ids_of(r)],
+            "history": list(reversed(r.get("history") or []))[:10],
+        })
+
+    inventory = [qbrief(q["id"]) for q in bank.get("questions", [])
+                 if q["id"] in sol and q["id"] not in scheduled]
+    return {
+        "asOf": rm.today_iso(),
+        "stats": rm.summary(rels),
+        "batches": batches,
+        "inventory": inventory,
+        "dirty": git_porcelain(),
+    }
+
+
+def release_action(payload: dict) -> dict:
+    """執行一次發布管理操作；所有變更都要填原因，寫入 history（可審計）。"""
+    def bad(msg: str) -> dict:
+        return {"ok": False, "error": msg}
+
+    action = str(payload.get("action") or "")
+    note = str(payload.get("note") or "").strip()
+    if not note:
+        return bad("請填寫原因（會寫入操作記錄，方便日後回溯）")
+
+    doc = rm.load_releases()
+    rels = doc["releases"]
+    r = rm.find_batch(rels, batch=payload.get("batch"))
+    if not r:
+        return bad(f"找不到批次 {payload.get('batch')}")
+
+    qid = str(payload.get("qid") or "")
+    ids = rm.ids_of(r)
+    held = rm.held_ids(r)
+    msg = ""
+
+    if action == "withdraw_batch":
+        if rm.status_of(r) == rm.WITHDRAWN:
+            return bad("此批次已經是收回狀態")
+        r["status"] = rm.WITHDRAWN
+        rm.append_history(r, "withdraw", note, scope="batch")
+        msg = f"批次 {r.get('batch')} 已收回（{len(ids)} 題下架）"
+
+    elif action == "restore_batch":
+        if rm.status_of(r) == rm.PUBLISHED:
+            return bad("此批次本來就是發放中")
+        r["status"] = rm.PUBLISHED
+        rm.append_history(r, "restore", note, scope="batch")
+        msg = f"批次 {r.get('batch')} 已恢復發放"
+
+    elif action == "withdraw_question":
+        if qid not in ids:
+            return bad(f"{qid} 不在批次 {r.get('batch')} 內")
+        held.add(qid)
+        r["withdrawnIds"] = sorted(held)
+        rm.append_history(r, "withdraw", note, scope="question", qid=qid)
+        msg = f"{qid} 已收回（同批其餘照常）"
+
+    elif action == "restore_question":
+        held.discard(qid)
+        if held:
+            r["withdrawnIds"] = sorted(held)
+        else:
+            r.pop("withdrawnIds", None)
+        rm.append_history(r, "restore", note, scope="question", qid=qid)
+        msg = f"{qid} 已恢復"
+
+    elif action == "reschedule":
+        date = str(payload.get("date") or "")
+        if not re.match(r"^\d{4}-\d{2}-\d{2}$", date):
+            return bad("日期格式應為 YYYY-MM-DD")
+        clash = [x for x in rels if rm.date_of(x) == date and x is not r]
+        if clash:
+            return bad(f"{date} 已經有批次 {clash[0].get('batch')}")
+        old = rm.date_of(r)
+        r["date"] = date
+        rm.append_history(r, "reschedule", f"{note}（{old} → {date}）", scope="batch")
+        msg = f"批次 {r.get('batch')} 改期：{old} → {date}"
+
+    elif action == "swap":
+        new_qid = str(payload.get("newQid") or "")
+        if qid not in ids:
+            return bad(f"{qid} 不在批次 {r.get('batch')} 內")
+        used = {i for x in rels for i in rm.ids_of(x)}
+        if not new_qid:
+            return bad("請選擇要換入的題目")
+        if new_qid in used:
+            return bad(f"{new_qid} 已在其他批次，請先把它移出再換")
+        if new_qid not in load("solutions.json", {"solutions": {}}).get("solutions", {}):
+            return bad(f"{new_qid} 還沒有解答，先解題再換入")
+        ids[ids.index(qid)] = new_qid
+        r["ids"] = ids
+        held.discard(qid)
+        if held:
+            r["withdrawnIds"] = sorted(held)
+        else:
+            r.pop("withdrawnIds", None)
+        rm.append_history(r, "swap", f"{note}（{qid} → {new_qid}）", scope="question", qid=qid)
+        msg = f"批次 {r.get('batch')}：{qid} 換成 {new_qid}"
+
+    elif action == "notice":
+        en, zh = str(payload.get("en") or "").strip(), str(payload.get("zh") or "").strip()
+        if not en and not zh:
+            return bad("公告內容不能是空的")
+        r["notice"] = {"en": en or zh, "zh": zh or en}
+        rm.append_history(r, "notice", f"{note}（公告：{zh or en}）", scope="batch")
+        msg = f"批次 {r.get('batch')} 已加上更正公告"
+
+    elif action == "clear_notice":
+        r.pop("notice", None)
+        rm.append_history(r, "notice", f"{note}（清除公告）", scope="batch")
+        msg = f"批次 {r.get('batch')} 的公告已清除"
+
+    else:
+        return bad(f"未知操作 {action}")
+
+    rm.save_releases(doc)
+    return {"ok": True, "message": msg, "view": releases_view()}
+
+
 def status() -> dict:
     bank = load("bank.json", {"questions": [], "papers": []})
     sol = load("solutions.json", {"solutions": {}}).get("solutions", {})
@@ -467,6 +628,8 @@ ACTIONS = {
         py_tool("validate_bank.py"),
         py_tool("verify_answers.py", "--json"),
         py_tool("audit_crops.py", "--strict"),
+        # 本機預覽（含未發放題目）：smoke test 用它驗排版；build/ 不會進 git
+        py_tool("make_site_data.py", "--all", "--out", "build/preview"),
         [node_exe(), os.path.join("tools", "site_check.js")],
         [node_exe(), os.path.join("tools", "katex_check.js")],
         [node_exe(), os.path.join("tools", "smoke_test.js")],
@@ -476,6 +639,7 @@ ACTIONS = {
         py_tool("verify_answers.py"),
         py_tool("audit_crops.py", "--strict"),
         py_tool("make_site_data.py"),
+        py_tool("make_site_data.py", "--all", "--out", "build/preview"),
         [node_exe(), os.path.join("tools", "site_check.js")],
         [node_exe(), os.path.join("tools", "katex_check.js")],
         [node_exe(), os.path.join("tools", "smoke_test.js")],
@@ -486,6 +650,28 @@ ACTIONS = {
     "pick": lambda p: [py_tool("pick_batch.py", "--apply")],
     "review": lambda p: [py_tool("review_sheet.py", "--open")],
     "queue": lambda p: [],          # 由 handler 直接處理
+    # ── 發布管理：收回／恢復／改期／換題之後「套用」──
+    "release-rebuild": lambda p: [
+        py_tool("make_site_data.py"),
+        py_tool("make_site_data.py", "--all", "--out", "build/preview"),
+    ],
+    "release-publish": lambda p: [
+        py_tool("make_site_data.py"),
+        py_tool("make_site_data.py", "--all", "--out", "build/preview"),
+        [node_exe(), os.path.join("tools", "site_check.js")],
+        [node_exe(), os.path.join("tools", "katex_check.js")],
+        [node_exe(), os.path.join("tools", "smoke_test.js")],
+        ["git", "add", "-A"],
+        ["git", "commit", "-m", f"發布：{p.get('msg') or '發布管理（本機面板）'}"],
+        ["git", "push"],
+    ],
+    "release-emergency": lambda p: [
+        # 緊急收回：先讓學生看不到，再慢慢修。跳過完整檢查，但仍走 git（可回溯）
+        py_tool("make_site_data.py"),
+        ["git", "add", "-A"],
+        ["git", "commit", "-m", f"緊急收回：{p.get('msg') or '（本機面板）'}"],
+        ["git", "push"],
+    ],
 }
 
 
@@ -557,6 +743,12 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send({"error": "缺少 tools/panel/edit.html"}, 500)
             with open(path, "rb") as f:
                 return self._send(f.read(), 200, "text/html; charset=utf-8")
+        if parsed.path in ("/releases", "/releases/"):
+            path = os.path.join(BASE, "tools", "panel", "releases.html")
+            if not os.path.exists(path):
+                return self._send({"error": "缺少 tools/panel/releases.html"}, 500)
+            with open(path, "rb") as f:
+                return self._send(f.read(), 200, "text/html; charset=utf-8")
         if parsed.path.startswith("/katex/"):
             full = os.path.normpath(os.path.join(BASE, "site", "vendor", parsed.path.lstrip("/")))
             allowed = os.path.normpath(os.path.join(BASE, "site", "vendor"))
@@ -588,6 +780,8 @@ class Handler(BaseHTTPRequestHandler):
             return
         if parsed.path == "/api/status":
             return self._send({"ok": True, "status": status()})
+        if parsed.path == "/api/releases":
+            return self._send({"ok": True, "view": releases_view()})
         if parsed.path == "/api/prompt":
             path = os.path.join(BASE, "prompts", "automation_solver_prompt.txt")
             txt = open(path, encoding="utf-8").read() if os.path.exists(path) else "（缺少提示詞檔）"
@@ -620,12 +814,34 @@ class Handler(BaseHTTPRequestHandler):
             finally:
                 RUN_LOCK.release()
 
+        if parsed.path == "/api/release":
+            try:
+                payload = json.loads(body.decode("utf-8")) if body else {}
+            except Exception as e:  # noqa: BLE001
+                return self._send({"ok": False, "error": f"JSON 解析失敗：{e}"}, 400)
+            if not RUN_LOCK.acquire(blocking=False):
+                return self._send({"ok": False, "error": "已有動作執行中，請稍候"}, 409)
+            try:
+                return self._send(release_action(payload))
+            finally:
+                RUN_LOCK.release()
+
         if parsed.path == "/api/action":
             name = (q.get("name") or [""])[0]
             params = {k: v[0] for k, v in q.items() if k != "name"}
             if name == "restart":
-                # 自我重啟：回完這次回應後用 execv 換掉自己（新程式碼立即生效）
-                threading.Timer(0.7, lambda: os.execv(sys.executable, [sys.executable, *sys.argv])).start()
+                # 自我重啟：回完這次回應後用 execv 換掉自己（新程式碼立即生效）。
+                # 用絕對路徑 + 先切到專案根目錄 —— 行程 cwd 不是 BASE 時，相對路徑會 execv 失敗。
+                def _restart() -> None:
+                    try:
+                        os.chdir(BASE)
+                        os.execv(sys.executable, [sys.executable,
+                                                  os.path.join(BASE, "tools", "panel_server.py"),
+                                                  *sys.argv[1:]])
+                    except OSError as e:
+                        print(f"[restart] failed: {e}")
+
+                threading.Timer(0.7, _restart).start()
                 return self._send({"ok": True, "steps": [
                     {"cmd": "面板重啟中…", "code": 0, "out": "約 2 秒後重新載入此頁"}
                 ]})

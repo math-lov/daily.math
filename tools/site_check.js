@@ -63,17 +63,34 @@ for (const [qid, s] of Object.entries(SOLUTIONS)) {
   if (!((s.solution || {}).traps || []).length) warn(`${qid}: no traps listed`);
 }
 
-// 4) 排程
+// 4) 排程（公開檔只含已發放且未收回的題目；已收回的批次仍保留條目，供 Archive 顯示）
 const seen = new Set();
+let liveQ = 0, heldQ = 0;
 for (const r of RELEASES) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(r.date || "")) err(`release ${r.batch}: bad date`);
   if (seen.has(r.date)) warn(`duplicate release date ${r.date}`);
   seen.add(r.date);
-  if ((r.ids || []).length !== 3) warn(`release ${r.date}: ${(r.ids || []).length} questions (expected 3)`);
+
+  const status = r.status || "published";
+  const held = new Set(r.withdrawnIds || []);
+
+  if (status === "withdrawn") {
+    // 整批收回：題目與解答已不在公開檔，只確認條目還在（Archive 才有佔位可顯示）
+    if (!(r.ids || []).length) warn(`release ${r.date}: withdrawn but has no ids`);
+    heldQ += (r.ids || []).length;
+    continue;
+  }
+
+  const live = (r.ids || []).filter((qid) => !held.has(qid));
+  liveQ += live.length;
+  heldQ += held.size;
+  if (live.length !== 3) warn(`release ${r.date}: ${live.length} question(s) live (expected 3)`);
+  if (held.size) console.log(`[info] release ${r.date}: ${held.size} question(s) withdrawn → ${[...held].join(", ")}`);
+
   const diffs = new Set();
-  for (const qid of r.ids || []) {
+  for (const qid of live) {
     const q = byId.get(qid);
-    if (!q) { err(`release ${r.date}: unknown id ${qid}`); continue; }
+    if (!q) { err(`release ${r.date}: unknown id ${qid} (should be in the published bank)`); continue; }
     diffs.add(q.difficulty);
     if (!SOLUTIONS[qid]) warn(`release ${r.date}: ${qid} has no solution yet`);
   }
@@ -82,6 +99,20 @@ for (const r of RELEASES) {
   if (diffs.size === 1 && (diffs.has(1) || diffs.has(3))) {
     warn(`release ${r.date}: every question is difficulty ${[...diffs][0]} — mix them or move some`);
   }
+}
+console.log(`released questions: ${liveQ} live · ${heldQ} withdrawn`);
+
+// 4b) 發布邊界：公開檔不應含有未發放的題目（以 releases 為準交叉核對）
+const releasedIds = new Set();
+for (const r of RELEASES) {
+  if ((r.status || "published") === "withdrawn") continue;
+  for (const qid of r.ids || []) if (!(r.withdrawnIds || []).includes(qid)) releasedIds.add(qid);
+}
+for (const q of BANK.questions) {
+  if (!releasedIds.has(q.id)) err(`${q.id}: question is in the public bank but not released`);
+}
+for (const qid of Object.keys(SOLUTIONS)) {
+  if (!releasedIds.has(qid)) err(`${qid}: solution is public but the question is not released`);
 }
 
 // 5) 圖片
@@ -95,11 +126,11 @@ for (const q of BANK.questions) {
 }
 console.log(`images: ${imgs} files present`);
 
-// 6) 建議排程：列出尚可發佈（有解答）的題目
+// 6) 已發放題目統計（公開檔只含已發放內容；完整題庫統計見 make_site_data.py 的輸出）
 const pool = BANK.questions.filter((q) => SOLUTIONS[q.id]);
 const byDiff = { 1: 0, 2: 0, 3: 0 };
 pool.forEach((q) => byDiff[q.difficulty]++);
-console.log(`ready-to-publish pool: easy ${byDiff[1]} / medium ${byDiff[2]} / hard ${byDiff[3]}`);
+console.log(`released questions with solutions: easy ${byDiff[1]} / medium ${byDiff[2]} / hard ${byDiff[3]}`);
 
 console.log(`\nresult: ${errors} error(s), ${warnings} warning(s)`);
 process.exit(errors ? 1 : 0);

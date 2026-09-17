@@ -13,8 +13,8 @@ Repo: `tkchung907/dse-daily` (local: `C:\Code Buddy\HKDSE`)
 | `data/bank.json` | generated | 題庫（含 `code` 顯示編號、單元、難度、建議時間） |
 | `data/overrides.json` | 老師／Work Buddy | 修正個別題目的 unit / difficulty / timeSec |
 | **`data/solutions.json`** | **CodeBuddy（自動解題，已驗算）** | 答案＋中英雙語逐步解答；45/45 完成並經獨立驗算 |
-| **`data/releases.json`** | **Work Buddy（每日）** | 哪 3 題在哪一天發佈 |
-| `site/` | generated | 網站（`site/data/*.js` 由 `tools/make_site_data.py` 生成） |
+| **`data/releases.json`** | **Work Buddy（排程）＋老師（收回）** | 哪 3 題在哪一天發佈；狀態／收回／公告欄位見 4c |
+| `site/` | generated | 網站；`site/data/*.js` **只含已發放且未收回**的內容（未發放的題目與解答不會輸出） |
 | `images/questions/<paper>-qNN.png` | cut tool | 每題一張裁剪圖 |
 | `tools/panel_server.py` + `start-panel.bat` | 老師 | 本機控制面板（上載新卷／看進度／一鍵發佈） |
 
@@ -44,26 +44,53 @@ git push                            # GitHub Pages 1 分鐘後自動上線
 **也可以完全用面板做**：雙擊 `start-panel.bat` → 「排程與發佈」→ 按「自動挑下一批」→「一鍵發佈」。
 面板的「一鍵發佈」等於上面 4 個檢查指令 + git push，任何一步失敗就中止。
 
+### 發布邊界（重要）
+
+`make_site_data.py` **只會把「日期 ≤ 今天 且未收回」的批次輸出到網站**：
+
+* 所以「發佈」這個動作本身就是「發放今天到期的批次」—— 不必另外做什麼，
+  跑一次上面的流程就會把當天（以及之前）的批次推上去。
+* **未到期的批次，題目、答案、解答、題圖根本不會出現在 `site/`** ——
+  學生改網址（`?batch=99`）也看不到，`site_check.js` 會擋住任何漏出的內容。
+* **多久跑一次？** 每天一次最好（當天批次當天出現）；某天沒跑，隔天補跑即可（會一次補上）。
+* 想先看未來幾天的樣子：`& $py tools\make_site_data.py --all --out build\preview`
+  （`build/` 不會進 git，純本機預覽，**切勿**把 `--all` 的輸出當成網站）。
+* 收回／改期／換題／公告 → 開面板「發布管理」`/releases`（見第 2 節）。
+
 發佈後請**抽查 1 題**：開網站點當天其中一題，看解答動畫是否通順、答案與選項一致。
 
 ### 每日檢查清單
 - [ ] `pick_batch.py` 顯示的 3 題主題合理（不要三題同一單元）
 - [ ] `smoke_test.js` 全 PASS
+- [ ] `make_site_data.py` 的「發布邊界」行顯示今天該發放的批次與題數正確
 - [ ] 發佈後網站（手機也試一次）當天批次正常顯示
+- [ ] 若有收回：學生端 Archive 顯示「已收回」，且該題的答案與解答已看不到
 - [ ] 留意題池：`pick_batch.py` 顯示剩餘 < 15 題時，提醒老師補新試卷
 
 ---
 
-## 2. 如果發現解答有錯
+## 2. 如果發現解答有錯（或題目有問題）
 
-1. **不要憑感覺改**：先確認題目（開 `images/questions/<paper>-qNN.png` 原圖）與現有解答。
-2. 若確實錯了，改 `data/solutions.json`，並**同時**修正 `tools/verify_answers.py` 對應的驗算函式
-   （驗算必須用另一條路徑算出答案）。
-3. 重跑：`& $py tools\verify_answers.py`（必須 0 失敗）→ `& $py tools\make_site_data.py` → 檢查 → push。
-4. 若只是**題目轉寫**有問題（不是解答），改 `data/transcripts/<paper>.json` 後重跑
+**先止血，再修正** —— 學生看到錯的東西比看不到更糟。
+
+1. **收回**：開面板「發布管理」`http://127.0.0.1:8787/releases`
+   * 只有一題有問題 → 該題按「**收回此題**」（同批另外兩題照常發放）
+   * 整批都不能用 → 按「**收回整批**」
+   * **必填原因**：會寫進 `releases.json` 的 `history`（誰、何時、為何），日後回溯得到
+2. **上線**：
+   * 一般 → 按「**重建並發佈**」（validate／KATEX／smoke 全過才 push）
+   * 很急 → 按「**緊急收回並上線**」（跳過完整檢查，先讓學生看不到，再慢慢修）
+3. **修正**：改 `data/solutions.json`，並**同時**修正 `tools/verify_answers.py` 對應的驗算函式
+   （驗算必須用另一條路徑算出答案）；`& $py tools\verify_answers.py` 必須 0 失敗。
+4. **恢復**：「發布管理」→「恢復此題／恢復發放」→「重建並發佈」。
+5. **公告**（答案改過就要做）：該批次按「更正公告…」填中文說明 → 學生端題目上方會出現黃色提示。
+6. 若只是**題目轉寫**有問題（不是解答），改 `data/transcripts/<paper>.json` 後重跑
    `build_bank.py`（並在 `data/overrides.json` 保留必要的人工分類）。
-5. 若驗算做不到（純幾何敘述型），把該題的 `verify` 改成 `"checked-manual"`，
+7. 若驗算做不到（純幾何敘述型），把該題的 `verify` 改成 `"checked-manual"`，
    並在該題加 `"review": "原因"` 欄位 → 面板會列進「需目視確認」。
+
+> **規則**：`releases.json` 一律用**狀態標記**收回，**不要刪條目** —— 刪掉就無法審計、無法恢復，
+> 學生端的 Archive 也會對已收回的批次顯示「已收回」，而不是讓它憑空消失。
 
 **目前需目視確認**：`25-P2Q27`（選項 10y 正負號模糊）、`25-P2Q44`（題幹標準分符號與選項不符）
 —— 兩題已在 `solutions.json` 標了 `review` 欄位，面板會顯示。
@@ -155,9 +182,24 @@ git push                            # GitHub Pages 1 分鐘後自動上線
 ```json
 { "date": "2026-09-18", "batch": 3,
   "title": { "en": "Geometry warm-up", "zh": "幾何熱身" },
-  "ids": ["2025-p2-q14", "2025-p2-q22", "2025-p2-q38"] }
+  "ids": ["2025-p2-q14", "2025-p2-q22", "2025-p2-q38"],
+  "status": "published",
+  "withdrawnIds": [],
+  "notice": { "en": "Answer corrected: C → D", "zh": "答案已更正：C → D" },
+  "history": [ { "at": "2026-09-20T10:12:00", "action": "withdraw", "scope": "question",
+                 "id": "2025-p2-q22", "note": "選項轉寫有誤，待重掃", "by": "teacher" } ] }
 ```
-`pick_batch.py` 會自動產生（含日期接續、批次編號、標題）。
+`pick_batch.py` 會自動產生前四項（含日期接續、批次編號、標題）；後四項由面板「發布管理」維護。
+
+| 欄位 | 意義 | 學生端效果 |
+|---|---|---|
+| `date` | 發放日 | 到這天才看得到（之前完全不存在） |
+| `status` | `published`（預設）／`scheduled`／`withdrawn` | `withdrawn`＝整批回收，題目與解答下架，Archive 顯示「已收回」 |
+| `withdrawnIds` | 單題收回 | 該題顯示「已收回」佔位，同批其餘照常 |
+| `notice` | 更正公告 | 批次標頭顯示黃色提示 |
+| `history` | 操作記錄（誰／何時／為何） | **不輸出到公開檔**（教師審計用） |
+
+狀態與邊界由 `tools/release_model.py` 統一計算（`python tools\release_model.py` 可看現況）。
 
 ### 4d. 學習單元（LU1–LU20，0 = 初中數學）
 | unit | name | 中文 |
@@ -216,3 +258,8 @@ git push                            # GitHub Pages 1 分鐘後自動上線
 5. push 前必須跑 `site_check.js` + `smoke_test.js`，兩者都要過。
 6. 發佈的批次必須**三道全綠**：`validate_bank.py` 0 錯誤、`verify_answers.py` 0 失敗、smoke 全過。
 7. 不確定就停手：把問題寫進 `data/queue.json` 或告知 CodeBuddy，不要猜著上線。
+8. **不刪資料，用狀態收回**：收回一律改狀態（`status`／`withdrawnIds`）並填原因；
+   `history` 留痕、可恢復、可審計。改完按「重建並發佈」。
+9. **公開檔不得含未發放內容**：`site_check.js` 會逐題核對，違反就不准發佈；
+   `--all` 產生的 `build/preview` 永遠不可上線。
+10. **止血優先於修正**：發現嚴重錯誤先「收回」（必要時走緊急通道），再慢慢修題／修答。

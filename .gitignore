@@ -13,6 +13,9 @@ inbox/
 data/queue.json
 review/
 
+# 本機預覽建置（--all 會含未發放題目，絕不可上線）
+build/
+
 # 助手／IDE 資料
 .workbuddy/
 .wbapp_*
