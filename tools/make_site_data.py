@@ -46,7 +46,7 @@ def load(name: str, default):
 # 只在工作台（教師端）顯示、不應出現在公開網站的欄位。
 # data/*.json 是編輯層，完整保留；這裡只是生成公開資料檔時略去。
 TEACHER_ONLY_Q = ("notes", "transcribedBy", "editedBy", "classifiedBy")
-TEACHER_ONLY_SOL = ("review",)
+TEACHER_ONLY_SOL = ("review", "coordMethodAllowed")
 
 
 def strip_teacher_only(bank: dict, solutions: dict) -> tuple[int, int]:
