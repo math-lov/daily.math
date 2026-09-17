@@ -373,10 +373,16 @@ def main() -> int:
         if n_ov:
             print(f"已套用 {n_ov} 條人工覆寫")
 
+    # 卷名覆寫（data/overrides.json 的 paperNames）：可把轉寫檔的卷名換成別的稱呼，
+    # 例如不想顯示考評局的原卷名時。轉寫檔本身仍保持「永不手改」。
+    paper_names: dict = {}
+    if os.path.exists(ov_path):
+        paper_names = json.load(open(ov_path, encoding="utf-8-sig")).get("paperNames") or {}
+
     papers_meta = [
         {
             "id": pid,
-            "name": src.get("exam") or pid,
+            "name": paper_names.get(pid) or src.get("exam") or pid,
             "nameZh": src.get("examZh") or "",
             "lang": "en",
             "sourcePdf": src.get("sourcePdf"),

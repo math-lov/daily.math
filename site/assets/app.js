@@ -1,4 +1,4 @@
-/* Daily Three · DSE Maths MC  —  page logic
+/* Daily Three · Maths MC  —  page logic
  * Data:  window.BANK / window.SOLUTIONS / window.RELEASES  (site/data/*.js)
  * Store: localStorage (attempts, wrong list, language) — this browser only.
  */
@@ -151,10 +151,6 @@
         + (store.lang === "zh" ? " 題" : " Q")));
     }
     if (batch.notice) meta.appendChild(el("span", "chip chip-notice", esc(L(batch.notice))));
-    var paperName = (BANK.papers && BANK.papers[0] && BANK.papers[0].name) || "DSE Maths Paper 2";
-    document.getElementById("footNote").textContent =
-      paperName + " · questions in English · solutions in 中文 / English";
-
     // language switch
     var btn = document.getElementById("langBtn");
     Array.prototype.forEach.call(btn.querySelectorAll(".lang-opt"), function (o) {

@@ -1332,8 +1332,8 @@
           }
         ],
         "tip": {
-          "en": "$\\sqrt{2209}=47$ and $\\sqrt{1225}=35$: DSE often chooses numbers so the quadratic factorises nicely. Always test the positive root against the given total surface area.",
-          "zh": "$\\sqrt{2209}=47$、$\\sqrt{1225}=35$：DSE 常刻意讓二次方程有整數根。求出 $r$ 後代回表面積檢查一次。"
+          "en": "$\\sqrt{2209}=47$ and $\\sqrt{1225}=35$: paper setters often choose numbers so the quadratic factorises nicely. Always test the positive root against the given total surface area.",
+          "zh": "$\\sqrt{2209}=47$、$\\sqrt{1225}=35$：命題常刻意讓二次方程有整數根。求出 $r$ 後代回表面積檢查一次。"
         }
       }
     },
@@ -1509,7 +1509,7 @@
           }
         ],
         "tip": {
-          "en": "When a question gives three sides of a triangle, test Pythagoras first — a right angle usually unlocks the rest. DSE often hides $3$-$4$-$5$ families: here $25$-$60$-$65=\\times5$ of $5$-$12$-$13$.",
+          "en": "When a question gives three sides of a triangle, test Pythagoras first — a right angle usually unlocks the rest. Setters often hide $3$-$4$-$5$ families: here $25$-$60$-$65=\\times5$ of $5$-$12$-$13$.",
           "zh": "題目給了三角形三邊，先驗勾股定理 —— 直角一出現後面就通了。留意 $3$-$4$-$5$ 的倍數：本例 $25$-$60$-$65$ 正是 $5$-$12$-$13$ 的 5 倍。"
         }
       }
@@ -1878,8 +1878,8 @@
           }
         ],
         "tip": {
-          "en": "Circle geometry: turn every given angle into its arc first, then look for the two arc-equalities DSE loves — parallel chords, and an angle bisector.",
-          "zh": "圓形幾何：先把每個已知角化成弧，然後找兩個 DSE 最愛用的等弧條件 —— 平行弦、以及角平分線。"
+          "en": "Circle geometry: turn every given angle into its arc first, then look for the two arc-equalities setters love — parallel chords, and an angle bisector.",
+          "zh": "圓形幾何：先把每個已知角化成弧，然後找兩個最常考的等弧條件 —— 平行弦、以及角平分線。"
         }
       }
     },
@@ -2066,8 +2066,8 @@
           }
         ],
         "tip": {
-          "en": "Polar questions: when the two points come as a radius plus a polar angle, the included angle is just the **difference of the polar angles** — write it down first, then use the cosine rule for the distance and test the converse of Pythagoras; DSE often hides a right angle here.",
-          "zh": "極坐標題：兩點以極徑＋極角給出時，**夾角就是兩個極角之差**（先寫下來）；接着用餘弦定理求距離，再試勾股逆定理 —— DSE 常在這裡暗藏一個直角。"
+          "en": "Polar questions: when the two points come as a radius plus a polar angle, the included angle is just the **difference of the polar angles** — write it down first, then use the cosine rule for the distance and test the converse of Pythagoras; setters often hide a right angle here.",
+          "zh": "極坐標題：兩點以極徑＋極角給出時，**夾角就是兩個極角之差**（先寫下來）；接着用餘弦定理求距離，再試勾股逆定理 —— 這類題常在這裡暗藏一個直角。"
         }
       },
       "coordMethodAllowed": "題目本身以極坐標（極徑＋極角）給點，文中提及坐標是由題目決定，並非用坐標法取代課程方法"
@@ -2388,8 +2388,8 @@
           }
         ],
         "tip": {
-          "en": "Repeated values in a box (three $2$s here) must carry their full weight: multiply the token value by the count, then divide by the total. DSE always hides a repeated card.",
-          "zh": "箱中有重複數字（這裡三張 $2$）時，必須把重複次數算進去：代幣數 × 張數，再除以總數。DSE 幾乎必設一個重複值。"
+          "en": "Repeated values in a box (three $2$s here) must carry their full weight: multiply the token value by the count, then divide by the total. Setters almost always hide a repeated value.",
+          "zh": "箱中有重複數字（這裡三張 $2$）時，必須把重複次數算進去：代幣數 × 張數，再除以總數。這類題幾乎必設一個重複值。"
         }
       }
     },

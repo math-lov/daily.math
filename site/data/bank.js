@@ -4,11 +4,11 @@ window.BANK = {
  "papers": [
   {
    "id": "2025-p2",
-   "name": "2025-DSE-MATH-CP 2",
+   "name": "2025 Paper 2",
    "nameZh": "",
    "lang": "en",
    "sourcePdf": null,
-   "questions": 6
+   "questions": 9
   }
  ],
  "questions": [
@@ -39,6 +39,35 @@ window.BANK = {
     "B": "3^{4}x^{3}",
     "C": "3^{11}x^{13}",
     "D": "3^{14}x^{13}"
+   }
+  },
+  {
+   "id": "2025-p2-q02",
+   "code": "25-P2Q02",
+   "no": 2,
+   "paper": "2025-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2025-p2-q02.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 1,
+   "timeSec": 60,
+   "stem": {
+    "text": null,
+    "html": null,
+    "latex": "36-(3m+4n)^{2}="
+   },
+   "figure": null,
+   "options": {
+    "A": "(6+3m+4n)(6-3m+4n)",
+    "B": "(6+3m+4n)(6-3m-4n)",
+    "C": "(6+3m-4n)(6-3m+4n)",
+    "D": "(6+3m-4n)(6-3m-4n)"
    }
   },
   {
@@ -100,6 +129,35 @@ window.BANK = {
    }
   },
   {
+   "id": "2025-p2-q07",
+   "code": "25-P2Q07",
+   "no": 7,
+   "paper": "2025-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2025-p2-q07.png"
+   ],
+   "topic": {
+    "unit": 8,
+    "en": "Inequalities and Linear Programming",
+    "zh": "不等式與線性規劃"
+   },
+   "difficulty": 2,
+   "timeSec": 90,
+   "stem": {
+    "text": "The solution of 4y+1 < 5y-3 \\le 8y-9 is",
+    "html": "The solution of $4y+1$ &lt; $5y-3 \\le 8y-9$ is",
+    "latex": "4y+1 < 5y-3 \\le 8y-9"
+   },
+   "figure": null,
+   "options": {
+    "A": "y > -4",
+    "B": "y \\ge -2",
+    "C": "y \\ge 2",
+    "D": "y > 4"
+   }
+  },
+  {
    "id": "2025-p2-q08",
    "code": "25-P2Q08",
    "no": 8,
@@ -126,6 +184,35 @@ window.BANK = {
     "B": "-3",
     "C": "3",
     "D": "6"
+   }
+  },
+  {
+   "id": "2025-p2-q12",
+   "code": "25-P2Q12",
+   "no": 12,
+   "paper": "2025-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2025-p2-q12.png"
+   ],
+   "topic": {
+    "unit": 6,
+    "en": "Variations",
+    "zh": "變分"
+   },
+   "difficulty": 2,
+   "timeSec": 90,
+   "stem": {
+    "text": "It is given that z varies directly as the cube of x and inversely as the square of y. When x=3 and y=6, z=3. When x=5 and y=2, z=",
+    "html": "It is given that z varies directly as the cube of x and inversely as the square of y. When $x=3$ and $y=6, z=3$. When $x=5$ and $y=2$, z=",
+    "latex": null
+   },
+   "figure": null,
+   "options": {
+    "A": "5",
+    "B": "25",
+    "C": "125",
+    "D": "243"
    }
   },
   {

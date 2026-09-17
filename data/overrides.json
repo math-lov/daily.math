@@ -24,6 +24,9 @@
     "19": "Further Applications 進一步應用",
     "20": "Inquiry and Investigation 探究與研究"
   },
+  "paperNames": {
+    "2025-p2": "2025 Paper 2"
+  },
   "overrides": {
     "2025-p2-q01": {
       "unit": 3,

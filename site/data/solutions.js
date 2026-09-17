@@ -81,6 +81,83 @@ window.SOLUTIONS = {
     }
    }
   },
+  "2025-p2-q02": {
+   "answer": "B",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Spot a difference of two squares",
+       "zh": "第 1 步 · 認出平方差"
+      },
+      "math": "36-(3m+4n)^{2} = 6^{2}-(3m+4n)^{2}",
+      "en": "$36=6^{2}$, so this is $a^{2}-b^{2}$ with $a=6$ and $b=3m+4n$.",
+      "zh": "$36=6^{2}$，所以這是 $a^{2}-b^{2}$，其中 $a=6$、$b=3m+4n$。",
+      "highlight": [
+       "6^{2}-(3m+4n)^{2}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Apply the identity",
+       "zh": "第 2 步 · 套用公式"
+      },
+      "math": "a^{2}-b^{2} = (a-b)(a+b)",
+      "en": "The two brackets differ only in the sign in the middle.",
+      "zh": "兩個括號只在「中間的符號」不同。",
+      "highlight": [
+       "(a-b)(a+b)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Remove the brackets carefully",
+       "zh": "第 3 步 · 小心去括號"
+      },
+      "math": "(6-(3m+4n))(6+(3m+4n)) = (6-3m-4n)(6+3m+4n)",
+      "en": "The minus sign applies to BOTH $3m$ and $4n$ inside the bracket.",
+      "zh": "負號要作用於括號內**每一項**：$3m$ 和 $4n$ 都要變號。",
+      "highlight": [
+       "(6-3m-4n)(6+3m+4n)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "(6-3m-4n)(6+3m+4n)",
+      "en": "Option B.",
+      "zh": "選項 B。",
+      "highlight": [
+       "(6-3m-4n)(6+3m+4n)"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "en": "$(6+3m+4n)(6-3m+4n)$ — only $3m$ changed sign; the $-4n$ should also have become $-4n$. Expanding this gives $(6+4n)^{2}-9m^{2}$, not the required expression.",
+      "zh": "$(6+3m+4n)(6-3m+4n)$ —— 只有 $3m$ 變號，$4n$ 忘了變。展開後其實是 $(6+4n)^{2}-9m^{2}$，不是原式。"
+     },
+     {
+      "opt": "C",
+      "en": "$(6+3m-4n)(6-3m+4n)$ — the signs of the wrong pair were flipped (this factorises $(6-4n)^{2} \\cdot \\ldots$ incorrectly).",
+      "zh": "$(6+3m-4n)(6-3m+4n)$ —— 變錯了一項的符號，展開後不符合原式。"
+     },
+     {
+      "opt": "D",
+      "en": "$(6+3m-4n)(6-3m-4n)$ — grouping $(6-4n)\\pm3m$ instead: this expands to $(6-4n)^{2}-9m^{2}$.",
+      "zh": "$(6+3m-4n)(6-3m-4n)$ —— 錯誤地以 $(6-4n)\\pm3m$ 分組，展開是 $(6-4n)^{2}-9m^{2}$。"
+     }
+    ],
+    "tip": {
+     "en": "For $a^{2}-b^{2}$ when $b$ has several terms: the minus bracket must negate every term of $b$.",
+     "zh": "平方差裡 $b$ 是多項式時：減號括號要讓 $b$ 的**每一項**都變號。"
+    }
+   }
+  },
   "2025-p2-q04": {
    "answer": "A",
    "verify": "checked",
@@ -223,6 +300,83 @@ window.SOLUTIONS = {
     }
    }
   },
+  "2025-p2-q07": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Solve the left inequality",
+       "zh": "第 1 步 · 解左邊的不等式"
+      },
+      "math": "4y+1 < 5y-3 \\;\\Rightarrow\\; 4 < y",
+      "en": "Move $4y$ to the right and $-3$ to the left: $1+3 < 5y-4y$.",
+      "zh": "把 $4y$ 移到右邊、$-3$ 移到左邊：$1+3 < 5y-4y$。",
+      "highlight": [
+       "y > 4"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Solve the right inequality",
+       "zh": "第 2 步 · 解右邊的不等式"
+      },
+      "math": "5y-3 \\le 8y-9 \\;\\Rightarrow\\; 6 \\le 3y \\;\\Rightarrow\\; y \\ge 2",
+      "en": "This part allows $y=4$, so it uses $\\le$.",
+      "zh": "這一段容許 $y=4$，所以用 $\\le$。",
+      "highlight": [
+       "y \\ge 2"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Intersect the two conditions",
+       "zh": "第 3 步 · 取交集"
+      },
+      "math": "y > 4 \\;\\text{and}\\; y \\ge 2 \\;\\Rightarrow\\; y > 4",
+      "en": "The stricter condition wins: every $y>4$ satisfies both.",
+      "zh": "取較嚴的一段：所有 $y>4$ 都同時滿足兩式。",
+      "highlight": [
+       "y > 4"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "y > 4",
+      "en": "Option D.",
+      "zh": "選項 D。",
+      "highlight": [
+       "y > 4"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "$y \\ge 2$ — only the second inequality was solved; the two conditions must hold at the same time, so the intersection is $y>4$.",
+      "zh": "$y \\ge 2$ —— 只解了第二段。兩段要**同時**成立，交集才是答案 $y>4$。"
+     },
+     {
+      "opt": "A",
+      "en": "$y > -4$ — sign slip when moving terms in the first inequality.",
+      "zh": "$y > -4$ —— 第一段移項時符號出錯。"
+     },
+     {
+      "opt": "B",
+      "en": "$y \\ge -2$ — sign slip in the second inequality.",
+      "zh": "$y \\ge -2$ —— 第二段移項時符號出錯。"
+     }
+    ],
+    "tip": {
+     "en": "Solve each part of a compound inequality separately, then take the intersection — and keep $\\le$ where the boundary is allowed.",
+     "zh": "連不等式要分段解，最後取交集；邊界容許的用 $\\le$，不容許的用 $<$。"
+    }
+   }
+  },
   "2025-p2-q08": {
    "answer": "C",
    "verify": "checked",
@@ -297,6 +451,71 @@ window.SOLUTIONS = {
     "tip": {
      "en": "For $f(a)+f(-a)$ with an even power and a linear term, the linear parts partly cancel — substitute carefully first, simplify second.",
      "zh": "遇到 $f(a)+f(-a)$（含偶次方與一次項），一次項通常會部分抵消——先老實代入，再化簡。"
+    }
+   }
+  },
+  "2025-p2-q12": {
+   "answer": "C",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Write the variation statement",
+       "zh": "第 1 步 · 寫出變分關係"
+      },
+      "math": "z = \\frac{kx^{3}}{y^{2}}",
+      "en": "Directly as the cube of $x$ → $x^{3}$ on top; inversely as the square of $y$ → $y^{2}$ below.",
+      "zh": "與 $x$ 的立方成正比 → $x^{3}$ 在分子；與 $y$ 的平方成反比 → $y^{2}$ 在分母。",
+      "highlight": [
+       "z = \\frac{kx^{3}}{y^{2}}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Find k from the given data",
+       "zh": "第 2 步 · 用已知數據求 k"
+      },
+      "math": "3 = \\frac{k(3)^{3}}{6^{2}} = \\frac{27k}{36} \\;\\Rightarrow\\; k = 4",
+      "en": "$3 \\times 36 \\div 27 = 4$.",
+      "zh": "$3 \\times 36 \\div 27 = 4$。",
+      "highlight": [
+       "k = 4"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Substitute the new values",
+       "zh": "第 3 步 · 代入新的數值"
+      },
+      "math": "z = \\frac{4(5)^{3}}{2^{2}} = \\frac{4 \\times 125}{4} = 125",
+      "en": "Option C.",
+      "zh": "選項 C。",
+      "highlight": [
+       "125"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "en": "$25$ — used the square of $x$ instead of the cube ($5^{2}$ appears in the working).",
+      "zh": "$25$ —— 把 $x$ 的立方誤當平方（算式中出現 $5^{2}$）。"
+     },
+     {
+      "opt": "A",
+      "en": "$5$ — that is just the given $x$; the work of finding $k$ and substituting was skipped.",
+      "zh": "$5$ —— 那只是題目給的 $x$，沒有真正求 $k$ 與代入。"
+     },
+     {
+      "opt": "D",
+      "en": "$243=3^{5}$ — the relation was treated as a power of 3 instead of the formula $z=\\frac{kx^{3}}{y^{2}}$.",
+      "zh": "$243=3^{5}$ —— 把變分關係當成 $3$ 的次方硬算，而非用 $z=\\frac{kx^{3}}{y^{2}}$。"
+     }
+    ],
+    "tip": {
+     "en": "Variation questions: write the formula with $k$, find $k$ from the given pair, then substitute — never skip finding $k$.",
+     "zh": "變分題三步：寫出含 $k$ 的公式 → 用已知一組數據求 $k$ → 代入新數據。不能跳過求 $k$。"
     }
    }
   },
