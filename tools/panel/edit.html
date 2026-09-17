@@ -36,6 +36,15 @@
   .tag.ok{color:var(--ok);border-color:#1d5c46}
   .tag.warn{color:var(--warn);border-color:#5c4a1d}
   .tag.bad{color:var(--bad);border-color:#5c1d1d}
+  /* 左側欄：依試卷分組 */
+  .pgroup{padding:5px 8px;border-radius:8px;cursor:pointer;display:flex;gap:6px;align-items:center;
+          background:#141833;border:1px solid var(--line);margin:10px 0 4px;font-size:13px}
+  .pgroup:first-child{margin-top:0}
+  .pgroup:hover{border-color:var(--acc)}
+  .pgroup .caret{color:var(--acc);width:10px;display:inline-block}
+  .pgroup .pname{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pgroup .sp{flex:1}
+  .pitems{padding-left:6px}
   .tabs{display:flex;gap:8px;margin:10px 0 14px;flex-wrap:wrap}
   .tabs button.on{background:var(--acc);border-color:var(--acc);color:#0b1020;font-weight:700}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -245,25 +254,68 @@
     state.list = (r.list || []);
     renderList();
   }
+  var collapsed = {};
+  try { collapsed = JSON.parse(localStorage.getItem("wbCollapsed") || "{}") || {}; } catch(e){ collapsed = {}; }
+  function saveCollapsed(){ try { localStorage.setItem("wbCollapsed", JSON.stringify(collapsed)); } catch(e){} }
+
+  function qitemNode(q){
+    var d = document.createElement("div");
+    d.className = "qitem" + (state.cur === q.id ? " on" : "");
+    var tags = "";
+    if (q.verified) tags += '<span class="tag ok">✓</span>';
+    if (q.edited) tags += '<span class="tag warn">✎</span>';
+    if (q.cropManual) tags += '<span class="tag warn">✂</span>';
+    if (q.review) tags += '<span class="tag bad">!</span>';
+    d.innerHTML = '<span class="code">' + esc(q.code) + '</span><span class="muted">'
+      + esc(q.answer || "-") + '</span><span class="sp"></span>' + tags;
+    d.onclick = function(){ openQ(q.id); };
+    return d;
+  }
+
+  /* 題目較多時按試卷分組，方便追蹤；新卷入庫會自動多出一組 */
   function renderList(){
     var kw = ($("search").value || "").trim().toLowerCase();
     var host = $("list");
     host.innerHTML = "";
-    state.list.filter(function(q){
+    var hits = state.list.filter(function(q){
       if (!kw) return true;
-      return (q.code + " " + (q.unit||"") + " " + q.id).toLowerCase().indexOf(kw) >= 0;
-    }).forEach(function(q){
-      var d = document.createElement("div");
-      d.className = "qitem" + (state.cur === q.id ? " on" : "");
-      var tags = "";
-      if (q.verified) tags += '<span class="tag ok">✓</span>';
-      if (q.edited) tags += '<span class="tag warn">✎</span>';
-      if (q.cropManual) tags += '<span class="tag warn">✂</span>';
-      if (q.review) tags += '<span class="tag bad">!</span>';
-      d.innerHTML = '<span class="code">' + esc(q.code) + '</span><span class="muted">'
-        + esc(q.answer || "-") + '</span><span class="sp"></span>' + tags;
-      d.onclick = function(){ openQ(q.id); };
-      host.appendChild(d);
+      return ((q.code || "") + " " + (q.unit || "") + " " + q.id + " " + (q.paperLabel || q.paper || ""))
+        .toLowerCase().indexOf(kw) >= 0;
+    });
+    if (!hits.length){
+      var em = document.createElement("div");
+      em.className = "muted";
+      em.textContent = "沒有符合的題目";
+      host.appendChild(em);
+      return;
+    }
+    var groups = [], byKey = {};
+    hits.forEach(function(q){
+      var key = q.paper || "（未分類）";
+      if (!byKey[key]){
+        byKey[key] = { key:key, label:q.paperLabel || key, name:q.paperName || "", items:[] };
+        groups.push(byKey[key]);
+      }
+      byKey[key].items.push(q);
+    });
+    groups.forEach(function(g){
+      var open = kw ? true : !collapsed[g.key];        // 搜尋時一律展開
+      var head = document.createElement("div");
+      head.className = "pgroup" + (open ? " open" : "");
+      if (g.name) head.title = g.name;
+      var unsolved = g.items.filter(function(q){ return !q.answer; }).length;
+      head.innerHTML = '<span class="caret">' + (open ? "▾" : "▸") + '</span>'
+        + '<span class="pname">' + esc(g.label) + '</span><span class="sp"></span>'
+        + '<span class="muted">' + g.items.length + ' 題'
+        + (unsolved ? ' · <span style="color:var(--warn)">未解 ' + unsolved + '</span>' : '')
+        + '</span>';
+      head.onclick = function(){ collapsed[g.key] = !collapsed[g.key]; saveCollapsed(); renderList(); };
+      host.appendChild(head);
+      if (!open) return;
+      var box = document.createElement("div");
+      box.className = "pitems";
+      g.items.forEach(function(q){ box.appendChild(qitemNode(q)); });
+      host.appendChild(box);
     });
   }
   $("search").oninput = renderList;
@@ -271,6 +323,8 @@
   /* ── 開啟一題 ── */
   async function openQ(qid){
     state.cur = qid;
+    var cur = state.list.filter(function(x){ return x.id === qid; })[0];
+    if (cur && collapsed[cur.paper]){ collapsed[cur.paper] = false; saveCollapsed(); }   // 展開所屬試卷
     renderList();
     banner("");
     var r = await api("/api/q?qid=" + encodeURIComponent(qid));

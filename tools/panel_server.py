@@ -267,6 +267,18 @@ def save_qsol(qid: str, payload: dict) -> dict:
     return {"ok": True, "steps": steps}
 
 
+PAPER_ID_RE = re.compile(r"^(\d{4})-p(\d+)$")
+
+
+def paper_label(p: dict, fallback: str) -> str:
+    """左側欄的分組標題：歷年卷 → '2025 Paper 2'；自訂卷 → 卷名；最後退回 paper id。"""
+    pid = str(p.get("id") or fallback or "")
+    m = PAPER_ID_RE.match(pid)
+    if m:
+        return f"{m.group(1)} Paper {m.group(2)}"
+    return str(p.get("name") or pid or "（未分類）")
+
+
 def qlist() -> list[dict]:
     bank = load("bank.json", {"questions": []})
     sol = load("solutions.json", {"solutions": {}}).get("solutions", {})
@@ -274,11 +286,15 @@ def qlist() -> list[dict]:
     verified = {r["id"] for r in ver.get("results", []) if r.get("ok")}
     edits = load("question_edits.json", {"edits": {}}).get("edits", {})
     crops = load("cut_overrides.json", {"crops": {}}).get("crops", {})
+    papers = {p.get("id"): p for p in bank.get("papers", [])}
     out = []
     for q in bank["questions"]:
         s = sol.get(q["id"]) or {}
+        pmeta = papers.get(q.get("paper")) or {}
         out.append({
             "id": q["id"], "code": q.get("code"), "no": q.get("no"), "paper": q.get("paper"),
+            "paperLabel": paper_label(pmeta, q.get("paper")),
+            "paperName": pmeta.get("name") or "",
             "unit": (q.get("topic") or {}).get("zh") or (q.get("topic") or {}).get("en"),
             "difficulty": q.get("difficulty"), "hasFigure": bool(q.get("figure")),
             "answer": s.get("answer"), "verify": s.get("verify"),

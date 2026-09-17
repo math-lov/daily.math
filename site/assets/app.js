@@ -211,7 +211,7 @@
     tg.onclick = function () { img.classList.toggle("hidden"); };
     wrap.appendChild(tg);
     card.appendChild(wrap);
-    if (q.notes) card.appendChild(el("div", "fig-note", "<b>Transcription note:</b> " + q.notes));
+    // 轉寫備註（q.notes）是教師用的，學生端不顯示 —— 見工作台「題目」頁的 notes 欄。
 
     // options
     var opts = el("div", "options");

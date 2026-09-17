@@ -32,6 +32,28 @@ def load(name: str, default):
     return json.load(open(path, encoding="utf-8-sig"))
 
 
+# 只在工作台（教師端）顯示、不應出現在公開網站的欄位。
+# data/*.json 是編輯層，完整保留；這裡只是生成公開資料檔時略去。
+TEACHER_ONLY_Q = ("notes", "transcribedBy", "editedBy", "classifiedBy")
+TEACHER_ONLY_SOL = ("review",)
+
+
+def strip_teacher_only(bank: dict, solutions: dict) -> tuple[int, int]:
+    """移除教師專用欄位，回傳 (略去的 notes 題數, 略去的 review 題數)。"""
+    n_notes = n_review = 0
+    for q in bank.get("questions", []):
+        if "notes" in q:
+            n_notes += 1
+        for k in TEACHER_ONLY_Q:
+            q.pop(k, None)
+    for s in (solutions.get("solutions") or {}).values():
+        if "review" in s:
+            n_review += 1
+        for k in TEACHER_ONLY_SOL:
+            s.pop(k, None)
+    return n_notes, n_review
+
+
 def write_js(path: str, var: str, obj) -> None:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -48,6 +70,8 @@ def main() -> int:
         return 1
     solutions = load("solutions.json", {"version": 1, "solutions": {}})
     releases = load("releases.json", {"releases": []})
+
+    n_notes, n_review = strip_teacher_only(bank, solutions)
 
     write_js(os.path.join(SITE_DATA, "bank.js"), "BANK", bank)
     write_js(os.path.join(SITE_DATA, "solutions.js"), "SOLUTIONS", solutions)
@@ -69,6 +93,7 @@ def main() -> int:
     n_sol = len(solutions.get("solutions", {}))
     print(f"已生成 site/data/{{bank,solutions,releases}}.js；複製 {copied} 張題圖")
     print(f"題庫 {len(bank['questions'])} 題；解答 {n_sol} 題；排程 {len(releases.get('releases', []))} 批")
+    print(f"公開資料檔已略去教師專用欄位：notes {n_notes} 題、review {n_review} 題（原檔 data/ 不變）")
     return 0
 
 

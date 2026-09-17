@@ -34,16 +34,12 @@ window.BANK = {
     "latex": "\\frac{(27x)^{5}}{(3x^{-2})^{4}}="
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "3^{2}x^{3}",
     "B": "3^{4}x^{3}",
     "C": "3^{11}x^{13}",
     "D": "3^{14}x^{13}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q02",
@@ -67,16 +63,12 @@ window.BANK = {
     "latex": "36-(3m+4n)^{2}="
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "(6+3m+4n)(6-3m+4n)",
     "B": "(6+3m+4n)(6-3m-4n)",
     "C": "(6+3m-4n)(6-3m+4n)",
     "D": "(6+3m-4n)(6-3m-4n)"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q03",
@@ -100,16 +92,12 @@ window.BANK = {
     "latex": "(x+8)(x+a)+b \\equiv x^{2}+5a(x+3)"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "-14",
     "B": "-2",
     "C": "2",
     "D": "14"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q04",
@@ -133,16 +121,12 @@ window.BANK = {
     "latex": "(3c+1)(d-4)=2d(5c-1)"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "\\frac{3d-4}{7d+12}",
     "B": "\\frac{3d+4}{7d-12}",
     "C": "\\frac{7d-12}{3d+4}",
     "D": "\\frac{7d+12}{3d-4}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q05",
@@ -166,16 +150,12 @@ window.BANK = {
     "latex": "x^{2}+4x=k^{2}-2k-3"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "x=k-3 \\text{ or } x=-k-1",
     "B": "x=k-3 \\text{ or } x=-k+1",
     "C": "x=k+3 \\text{ or } x=-k-1",
     "D": "x=k+3 \\text{ or } x=-k+1"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q06",
@@ -199,16 +179,12 @@ window.BANK = {
     "latex": "x=5.67"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "5.66 < x \\le 5.68",
     "B": "5.66 \\le x < 5.68",
     "C": "5.665 < x \\le 5.675",
     "D": "5.665 \\le x < 5.675"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q07",
@@ -232,16 +208,12 @@ window.BANK = {
     "latex": "4y+1 < 5y-3 \\le 8y-9"
    },
    "figure": null,
-   "notes": "The printed inequality has a slightly smudged middle-right relation symbol, mathematically formatted as \\le.",
    "options": {
     "A": "y > -4",
     "B": "y \\ge -2",
     "C": "y \\ge 2",
     "D": "y > 4"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q08",
@@ -265,16 +237,12 @@ window.BANK = {
     "latex": "f(x)=x^{2}+7x+k,\\quad f(4)+f(-4)=38"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "-6",
     "B": "-3",
     "C": "3",
     "D": "6"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q09",
@@ -298,16 +266,12 @@ window.BANK = {
     "latex": "p(x)=nx^{3}-3nx+36"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "-2",
     "B": "0",
     "C": "2",
     "D": "72"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q10",
@@ -331,16 +295,12 @@ window.BANK = {
     "latex": null
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "\\$46\\,000",
     "B": "\\$46\\,371",
     "C": "\\$46\\,422",
     "D": "\\$46\\,465"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q11",
@@ -364,16 +324,12 @@ window.BANK = {
     "latex": "(\\alpha+2\\beta):(\\beta+2\\gamma):(\\gamma+2\\alpha)=4:9:5"
    },
    "figure": null,
-   "notes": "The ratio in the question stem is printed with Greek letters \\alpha and \\beta; the final expression is transcribed as \\alpha:\\beta.",
    "options": {
     "A": "2:5",
     "B": "5:2",
     "C": "128:149",
     "D": "149:128"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q12",
@@ -397,16 +353,12 @@ window.BANK = {
     "latex": null
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "5",
     "B": "25",
     "C": "125",
     "D": "243"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q13",
@@ -430,16 +382,12 @@ window.BANK = {
     "latex": "a_{2}=3,\\quad a_{5}=41,\\quad a_{n+2}=2a_{n+1}+a_{n}"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "99",
     "B": "101",
     "C": "239",
     "D": "243"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q14",
@@ -463,16 +411,12 @@ window.BANK = {
     "latex": "px+qy=7"
    },
    "figure": "Rectangular coordinate plane with x-axis and y-axis intersecting at origin O. A straight line L with negative slope cuts the positive y-axis at a point higher than 1 (a tick mark labeled '1' is marked on the y-axis below the y-intercept) and cuts the positive x-axis at a point less than 1 (a tick mark labeled '1' is marked on the x-axis to the right of the x-intercept).",
-   "notes": null,
    "options": {
     "A": "\\text{I only}",
     "B": "\\text{II only}",
     "C": "\\text{I and III only}",
     "D": "\\text{II and III only}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q15",
@@ -496,16 +440,12 @@ window.BANK = {
     "latex": null
    },
    "figure": null,
-   "notes": "In the original image, radius is printed as '3\\pi\\text{ cm}' (appears with \\pi slightly compact).",
    "options": {
     "A": "\\text{I and II only}",
     "B": "\\text{I and III only}",
     "C": "\\text{II and III only}",
     "D": "\\text{I, II and III}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q16",
@@ -529,16 +469,12 @@ window.BANK = {
     "latex": null
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "144\\pi\\text{ cm}^{3}",
     "B": "288\\pi\\text{ cm}^{3}",
     "C": "576\\pi\\text{ cm}^{3}",
     "D": "864\\pi\\text{ cm}^{3}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q17",
@@ -562,16 +498,12 @@ window.BANK = {
     "latex": "BE=3AE,\\quad 2DF=3AF,\\quad DG=2CG"
    },
    "figure": "Parallelogram ABCD with vertices labeled counterclockwise starting from bottom-left: A (bottom-left), B (bottom-right), C (top-right), D (top-left). E lies on side AB with BE > AE. F lies on AD with DF > AF. G lies on CD with DG > CG. Line segments FE and EG are drawn inside ABCD. Segment EG is extended beyond G and side BC is extended beyond C, intersecting outside the parallelogram at point H.",
-   "notes": null,
    "options": {
     "A": "46\\text{ cm}^{2}",
     "B": "49\\text{ cm}^{2}",
     "C": "105\\text{ cm}^{2}",
     "D": "115\\text{ cm}^{2}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q18",
@@ -595,16 +527,12 @@ window.BANK = {
     "latex": "WY:XY=XY:YZ,\\quad WX=65\\text{ cm},\\quad WZ=25\\text{ cm},\\quad XZ=60\\text{ cm}"
    },
    "figure": "Triangle WXY with horizontal base WY, vertex X above WY. Z lies on WY between W and Y. A vertical segment XZ connects vertex X to point Z on base WY. Segment WZ is shorter than ZY.",
-   "notes": null,
    "options": {
     "A": "131\\text{ cm}",
     "B": "144\\text{ cm}",
     "C": "156\\text{ cm}",
     "D": "169\\text{ cm}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q19",
@@ -628,16 +556,12 @@ window.BANK = {
     "latex": null
    },
    "figure": "Square ABCD shown in perspective (square face ABCD on the front-right with vertices A bottom-right, B bottom-left, C top-left, D top-right). Diagonal AC is extended outward to point F. Rhombus CDEF is constructed sharing side CD, with F lying on AC produced and E lying above CD. Diagonal DF is drawn and extended further to point G. Line segments BF, BG, and diagonal AC (extended to F) are drawn. Line AF is parallel to BG.",
-   "notes": null,
    "options": {
     "A": "\\text{I and II only}",
     "B": "\\text{I and III only}",
     "C": "\\text{II and III only}",
     "D": "\\text{I, II and III}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q20",
@@ -661,16 +585,12 @@ window.BANK = {
     "latex": "PS=41\\text{ cm},\\quad RS=53\\text{ cm},\\quad \\angle PSR=120^{\\circ},\\quad \\angle QRS=150^{\\circ}"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "82\\text{ cm}",
     "B": "100\\text{ cm}",
     "C": "106\\text{ cm}",
     "D": "135\\text{ cm}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q21",
@@ -694,16 +614,12 @@ window.BANK = {
     "latex": "AE=20\\text{ cm},\\quad \\angle AED=90^{\\circ}"
    },
    "figure": "Rectangle ABCD with vertices labeled counterclockwise starting from bottom-left: A (bottom-left), B (top-left), C (top-right), D (bottom-right). E is an interior point above base AD. Line segments AE and DE form a right-angled triangle ADE with right angle at vertex E.",
-   "notes": null,
    "options": {
     "A": "8\\text{ cm}",
     "B": "9\\text{ cm}",
     "C": "12\\text{ cm}",
     "D": "15\\text{ cm}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q22",
@@ -727,16 +643,12 @@ window.BANK = {
     "latex": "RT \\parallel VU,\\quad \\angle RTS=\\angle URV=33^{\\circ}"
    },
    "figure": "Circle RSTUV with five cyclic points arranged along the circle: R (upper-right), S (lower-right), T (bottom), U (middle-left), V (top). Chords UV, VR, RU, UT, TR, TS, and RS are drawn. Chords RT and VU are parallel. An arc mark indicates \\angle RUT at vertex U.",
-   "notes": null,
    "options": {
     "A": "36^{\\circ}",
     "B": "49^{\\circ}",
     "C": "65^{\\circ}",
     "D": "71^{\\circ}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q23",
@@ -760,16 +672,12 @@ window.BANK = {
     "latex": "\\angle ABC+\\angle ADC=\\angle ACD=\\angle BAC=90^{\\circ}"
    },
    "figure": "Quadrilateral ABCD divided into two triangles by vertical diagonal AC. Points are arranged with D at bottom-left, C at bottom-middle, A vertically above C, and B at top-right. Horizontal lines AB and DC are drawn. Triangle ABC is on the right, and triangle ADC is on the left.",
-   "notes": null,
    "options": {
     "A": "\\tan\\angle ACB=\\frac{AB}{AD}",
     "B": "\\tan\\angle ACB=\\frac{AB}{CD}",
     "C": "\\tan\\angle ADC=\\frac{BC}{AD}",
     "D": "\\tan\\angle ADC=\\frac{BC}{CD}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q24",
@@ -793,16 +701,12 @@ window.BANK = {
     "latex": "(1, 20^{\\circ}),\\quad (2, 80^{\\circ}),\\quad (r, \\theta)"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "\\sqrt{3}",
     "B": "\\sqrt{5}",
     "C": "\\sqrt{7}",
     "D": "\\sqrt{10}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q25",
@@ -826,16 +730,12 @@ window.BANK = {
     "latex": "AP=OA"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "\\text{point}",
     "B": "\\text{circle}",
     "C": "\\text{rhombus}",
     "D": "\\text{straight line}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q26",
@@ -859,16 +759,12 @@ window.BANK = {
     "latex": "L_{1}: 3x+4y-20=0,\\quad L_{2}: mx+ny-20=0"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "-12",
     "B": "-9",
     "C": "9",
     "D": "12"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q27",
@@ -892,16 +788,12 @@ window.BANK = {
     "latex": "PQ=24"
    },
    "figure": null,
-   "notes": "Options in the print show '+ 10y' in the transcript notation as printed.",
    "options": {
     "A": "x^{2}+y^{2}-14x+10y-95=0",
     "B": "x^{2}+y^{2}+14x-10y-95=0",
     "C": "x^{2}+y^{2}-14x+10y-119=0",
     "D": "x^{2}+y^{2}+14x-10y-119=0"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q28",
@@ -925,16 +817,12 @@ window.BANK = {
     "latex": null
    },
    "figure": "Table with two rows: Row 1 'Number drawn' with values 2, 3, 4, 5; Row 2 'Number of tokens got' with corresponding values 10, 15, 25, 50.",
-   "notes": null,
    "options": {
     "A": "3",
     "B": "4",
     "C": "20",
     "D": "25"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q29",
@@ -958,16 +846,12 @@ window.BANK = {
     "latex": null
    },
    "figure": "Bar chart with vertical axis 'Number of teachers' showing grid lines and values: 0, 2, 4, 6, 8. Horizontal axis labeled 'Number of books read' with categories: 3, 4, 5, 6, 7. Bar heights: category 3 has height 4; category 4 has height 8; category 5 has height 6; category 6 has height 2; category 7 has height 2.",
-   "notes": null,
    "options": {
     "A": "1",
     "B": "2",
     "C": "3",
     "D": "4"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q30",
@@ -991,16 +875,12 @@ window.BANK = {
     "latex": "\\alpha,\\quad \\beta,\\quad -4,\\quad -3,\\quad 1,\\quad 1,\\quad 1,\\quad 4"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "\\text{I and II only}",
     "B": "\\text{I and III only}",
     "C": "\\text{II and III only}",
     "D": "\\text{I, II and III}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q31",
@@ -1024,16 +904,12 @@ window.BANK = {
     "latex": "3\\text{E}00000000000016_{16}="
    },
    "figure": null,
-   "notes": "Hexadecimal number printed as 3E followed by twelve zeros with subscript 16: 3E00000000000016.",
    "options": {
     "A": "2^{16}+2^{15}+2^{14}+2^{13}+2^{12}",
     "B": "2^{17}+2^{16}+2^{15}+2^{14}+2^{13}",
     "C": "2^{52}+2^{51}+2^{50}+2^{49}+2^{48}",
     "D": "2^{53}+2^{52}+2^{51}+2^{50}+2^{49}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q32",
@@ -1057,16 +933,12 @@ window.BANK = {
     "latex": "p^{2}-4q^{2},\\quad p^{3}-8q^{3},\\quad (p+2q)(p^{2}-4q^{2})"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "p-2q",
     "B": "p^{2}-4q^{2}",
     "C": "(p+2q)^{2}(p^{3}-8q^{3})",
     "D": "(p+2q)(p^{2}-4q^{2})(p^{3}-8q^{3})"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q33",
@@ -1090,16 +962,12 @@ window.BANK = {
     "latex": "y=mx^{n}"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "-12",
     "B": "-4",
     "C": "-3",
     "D": "-1"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q34",
@@ -1123,16 +991,12 @@ window.BANK = {
     "latex": "y=\\log_{a}x,\\quad y=a^{x}"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "\\text{I and II only}",
     "B": "\\text{I and III only}",
     "C": "\\text{II and III only}",
     "D": "\\text{I, II and III}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q35",
@@ -1156,16 +1020,12 @@ window.BANK = {
     "latex": "i^{9}+i^{10}+i^{11}+\\dots+i^{999}="
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "-1",
     "B": "0",
     "C": "1",
     "D": "i"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q36",
@@ -1189,16 +1049,12 @@ window.BANK = {
     "latex": "\\begin{cases}x \\le 11 \\\\ 4x+5y-19 \\ge 0 \\\\ 7x-6y+11 \\le 0\\end{cases},\\quad 8x-6y+11"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "1",
     "B": "11",
     "C": "15",
     "D": "129"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q37",
@@ -1222,16 +1078,12 @@ window.BANK = {
     "latex": null
    },
    "figure": null,
-   "notes": "Statement I in the printed question omits '3^p, 3^q' due to faint text; mathematically and in DSE style, it represents the sequence 3^p, 3^q, 3^r.",
    "options": {
     "A": "\\text{I only}",
     "B": "\\text{II only}",
     "C": "\\text{I and III only}",
     "D": "\\text{II and III only}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q38",
@@ -1255,16 +1107,12 @@ window.BANK = {
     "latex": "\\angle BEC=96^{\\circ},\\quad \\angle CDT=41^{\\circ}"
    },
    "figure": "Circle ABCD with diameter AC passing across the circle. Chord BD intersects AC at point E inside the circle. Line TD is tangent to the circle at point D, extending outward to the right. Chord CD is drawn. An arc indicates \\angle CDE at vertex D.",
-   "notes": null,
    "options": {
     "A": "47^{\\circ}",
     "B": "48^{\\circ}",
     "C": "52^{\\circ}",
     "D": "55^{\\circ}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q39",
@@ -1288,16 +1136,12 @@ window.BANK = {
     "latex": "\\tan^{3}\\theta=2\\tan\\theta"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "2",
     "B": "3",
     "C": "4",
     "D": "5"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q40",
@@ -1321,16 +1165,12 @@ window.BANK = {
     "latex": null
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "35^{\\circ}",
     "B": "55^{\\circ}",
     "C": "60^{\\circ}",
     "D": "71^{\\circ}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q41",
@@ -1354,16 +1194,12 @@ window.BANK = {
     "latex": "(20, 0)"
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "70",
     "B": "87",
     "C": "210",
     "D": "250"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q42",
@@ -1387,16 +1223,12 @@ window.BANK = {
     "latex": null
    },
    "figure": null,
-   "notes": "In the question stem, 'at least manager' has a faint number, standard context is 'at least 1 manager'.",
    "options": {
     "A": "16\\,016",
     "B": "20\\,384",
     "C": "22\\,880",
     "D": "31\\,824"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q43",
@@ -1420,16 +1252,12 @@ window.BANK = {
     "latex": null
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "\\frac{9}{13}",
     "B": "\\frac{133}{143}",
     "C": "\\frac{140}{143}",
     "D": "\\frac{714}{715}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q44",
@@ -1453,16 +1281,12 @@ window.BANK = {
     "latex": null
    },
    "figure": null,
-   "notes": null,
    "options": {
     "A": "-5 \\text{ or } 1",
     "B": "-5 \\text{ or } 3",
     "C": "-3 \\text{ or } 1",
     "D": "-3 \\text{ or } 3"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   },
   {
    "id": "2025-p2-q45",
@@ -1486,16 +1310,12 @@ window.BANK = {
     "latex": "\\{a, b, c, d\\},\\quad \\{2a, 2b, 2c, 2d\\},\\quad \\{a+3, b+3, c+3, d+3\\}"
    },
    "figure": null,
-   "notes": "In the stem, m_1 is faint/missing before r_1 on the first occurrence in the scan.",
    "options": {
     "A": "\\text{I and II only}",
     "B": "\\text{I and III only}",
     "C": "\\text{II and III only}",
     "D": "\\text{I, II and III}"
-   },
-   "transcribedBy": "ai-vision",
-   "editedBy": null,
-   "classifiedBy": "manual-override"
+   }
   }
  ]
 };
