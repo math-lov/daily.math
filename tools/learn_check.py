@@ -191,8 +191,11 @@ def main(argv: list[str] | None = None) -> int:
                 elif opt == ans:
                     err("S4", "%s：traps 指向正確答案 %r" % (qid, opt))
         else:
-            if not q.get("parts"):
-                err("S2", "%s：long 題缺少 parts" % qid)
+            # parts 是選填：文字應用題（單一問題）本來就沒有 (a)(b) 分部；
+            # 有的話每一部都要有內容。
+            for i, pt in enumerate(q.get("parts") or [], 1):
+                if not str(pt.get("text") or "").strip():
+                    err("S2", "%s：parts[%d] 沒有內容" % (qid, i))
             if s.get("answer") not in (None, ""):
                 warn("S4", "%s：long 題不需要 answer（現為 %r）" % (qid, s.get("answer")))
             if options:

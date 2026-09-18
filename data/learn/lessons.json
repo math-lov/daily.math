@@ -81,6 +81,67 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ws02",
+   "stage": 1,
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "source": "EPH All-Round L5 · Worksheet 2",
+   "name": {
+    "zh": "二元一次方程（聯立方程）",
+    "en": "Linear Equations in Two Unknowns"
+   },
+   "intro": {
+    "zh": "這一課學兩個解方程組的方法：代入法與加減消去法，再用它們處理文字應用題。DSE Paper 1 幾乎年年有一題文字題（4–5 分），Paper 2 也常考；最容易失分的地方不是解方程，而是「設未知數」與「最後答問題問的那個量」。",
+    "en": ""
+   },
+   "lessons": [
+    {
+     "id": "ws02-1",
+     "title": {
+      "zh": "兩個方法與應用題",
+      "en": "Two methods + word problems"
+     },
+     "conceptCards": [
+      "ws02-c1",
+      "ws02-c2",
+      "ws02-c3",
+      "ws02-c4",
+      "ws02-c5"
+     ],
+     "longQuestionIds": [
+      "eph-ws02-ex01",
+      "eph-ws02-ex02"
+     ],
+     "mcPages": [
+      [
+       "eph-ws02-q01",
+       "eph-ws02-q02",
+       "eph-ws02-q03"
+      ],
+      [
+       "eph-ws02-q04",
+       "eph-ws02-q05",
+       "eph-ws02-q06"
+      ],
+      [
+       "eph-ws02-q07",
+       "eph-ws02-q08",
+       "eph-ws02-q09"
+      ],
+      [
+       "eph-ws02-q10",
+       "eph-ws02-q11",
+       "eph-ws02-q12"
+      ],
+      [
+       "eph-ws02-q13",
+       "eph-ws02-q14"
+      ]
+     ]
+    }
+   ]
   }
  ],
  "assessments": []

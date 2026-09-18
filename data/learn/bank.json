@@ -416,6 +416,316 @@
     "D": "$(m+3n)(m+3n-2)$"
    },
    "review": null
+  },
+  {
+   "id": "eph-ws02-ex01",
+   "type": "long",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 2,
+   "code": "WS2-EX1",
+   "source": "WS02 Example 1 · [HKDSE 2021 Paper 1 Q5]",
+   "stem": {
+    "text": "The number of chocolate bars owned by Henry is 2 times that owned by Winka. If Henry gives 6 of his chocolate bars to Winka, then the number of chocolate bars owned by Winka is 5 times that owned by Henry. Find the total number of chocolate bars owned by Henry and Winka."
+   },
+   "marks": 4,
+   "review": null
+  },
+  {
+   "id": "eph-ws02-ex02",
+   "type": "long",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 3,
+   "code": "WS2-EX2",
+   "source": "WS02 Example 2 · [HKDSE 2023 Paper 1 Q5]",
+   "stem": {
+    "text": "On a bus, the number of male passengers is 80% more than the number of female passengers. If 56 male passengers get off the bus, then the number of female passengers is 80% more than the number of male passengers. Find the number of female passengers on the bus."
+   },
+   "marks": 4,
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q01",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 2,
+   "code": "WS2-Q01",
+   "source": "WS02 Paper 2 Q1 · [HKDSE 2015 Paper 2 Q3]",
+   "stem": {
+    "text": "If $a-4b=2$ and $5a+2b=-12$, then $a=$"
+   },
+   "options": {
+    "A": "-2",
+    "B": "-1",
+    "C": "1",
+    "D": "2"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q02",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 2,
+   "code": "WS2-Q02",
+   "source": "WS02 Paper 2 Q2 · [HKDSE 2015 Paper 2 Q3]",
+   "stem": {
+    "text": "If $3p-q=13$ and $9p+2q=4$, then $q=$"
+   },
+   "options": {
+    "A": "-7",
+    "B": "-2",
+    "C": "2",
+    "D": "7"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q03",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 3,
+   "code": "WS2-Q03",
+   "source": "WS02 Paper 2 Q3 · [HKDSE 2012 Paper 2 Q5]",
+   "stem": {
+    "text": "If $p+2q+11=3p-q=13$, then $p=$"
+   },
+   "options": {
+    "A": "-7",
+    "B": "-1",
+    "C": "4",
+    "D": "6"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q04",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 2,
+   "code": "WS2-Q04",
+   "source": "WS02 Paper 2 Q4 · [HKDSE 2012 Paper 2 Q5]",
+   "stem": {
+    "text": "If $4r-s-10=r+4s=9$, then $r=$"
+   },
+   "options": {
+    "A": "-11",
+    "B": "-6",
+    "C": "1",
+    "D": "5"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q05",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 3,
+   "code": "WS2-Q05",
+   "source": "WS02 Paper 2 Q5 · [HKDSE 2016 Paper 2 Q5]",
+   "stem": {
+    "text": "If $4p-q=9p+4q=5$, then $q=$"
+   },
+   "options": {
+    "A": "-5",
+    "B": "-1",
+    "C": "1",
+    "D": "5"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q06",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 3,
+   "code": "WS2-Q06",
+   "source": "WS02 Paper 2 Q6 · [HKDSE 2016 Paper 2 Q5]",
+   "stem": {
+    "text": "If $x+5y=3x+2y=13$, then $x=$"
+   },
+   "options": {
+    "A": "-3",
+    "B": "-2",
+    "C": "2",
+    "D": "3"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q07",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 2,
+   "code": "WS2-Q07",
+   "source": "WS02 Paper 2 Q7 · [HKDSE 2019 Paper 2 Q3]",
+   "stem": {
+    "text": "If $9m+10n=8=3m-2n$, then $m=$"
+   },
+   "options": {
+    "A": "-4",
+    "B": "-1",
+    "C": "2",
+    "D": "4"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q08",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 2,
+   "code": "WS2-Q08",
+   "source": "WS02 Paper 2 Q8 · [HKDSE 2019 Paper 2 Q3]",
+   "stem": {
+    "text": "If $5a+6b=27=17a-12b$, then $a=$"
+   },
+   "options": {
+    "A": "-3",
+    "B": "2",
+    "C": "3",
+    "D": "7"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q09",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 3,
+   "code": "WS2-Q09",
+   "source": "WS02 Paper 2 Q9 · [HKCEE 2008 Paper 2 Q8]",
+   "stem": {
+    "text": "If $a-4=b-10=a-5b+11$, then $a=$"
+   },
+   "options": {
+    "A": "-3",
+    "B": "-1",
+    "C": "1",
+    "D": "3"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q10",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 3,
+   "code": "WS2-Q10",
+   "source": "WS02 Paper 2 Q10 · [HKCEE 2008 Paper 2 Q8]",
+   "stem": {
+    "text": "If $13-2p=q+9=3q-2p-5$, then $p=$"
+   },
+   "options": {
+    "A": "-8",
+    "B": "-6",
+    "C": "-1",
+    "D": "6"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q11",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 2,
+   "code": "WS2-Q11",
+   "source": "WS02 Paper 2 Q11 · [HKDSE 2014 Paper 2 Q8]",
+   "stem": {
+    "text": "The price of 3 avocados and 2 pears is \\$70. If the price of 4 avocados and the price of 9 pears are the same, then the price of a pear is"
+   },
+   "options": {
+    "A": "\\$8",
+    "B": "\\$12",
+    "C": "\\$18",
+    "D": "\\$27"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q12",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 2,
+   "code": "WS2-Q12",
+   "source": "WS02 Paper 2 Q12 · [HKDSE 2014 Paper 2 Q8]",
+   "stem": {
+    "text": "The prices of 5 hamburgers and 8 sandwiches are the same. Ivan buys 2 hamburgers and 4 sandwiches for \\$108. Find the price of a hamburger."
+   },
+   "options": {
+    "A": "\\$12.5",
+    "B": "\\$15",
+    "C": "\\$20",
+    "D": "\\$24"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q13",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 3,
+   "code": "WS2-Q13",
+   "source": "WS02 Paper 2 Q13 · [HKCEE 2011 Paper 2 Q6]",
+   "stem": {
+    "text": "The price of 3 oranges and 7 apples is \\$53 while the price of 4 oranges and 2 apples is \\$34. Find the price of 2 oranges and 3 apples."
+   },
+   "options": {
+    "A": "\\$27",
+    "B": "\\$28",
+    "C": "\\$29",
+    "D": "\\$30"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-q14",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 3,
+   "code": "WS2-Q14",
+   "source": "WS02 Paper 2 Q14 · [HKCEE 2011 Paper 2 Q6]",
+   "stem": {
+    "text": "In an exhibition, the total fare of 2 adults and 3 children is \\$105 while the total fare of 5 adults and 4 children is \\$210. Find the total fare of 2 adults and 1 child."
+   },
+   "options": {
+    "A": "\\$60",
+    "B": "\\$70",
+    "C": "\\$75",
+    "D": "\\$90"
+   },
+   "review": null
   }
  ]
 }

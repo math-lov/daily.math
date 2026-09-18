@@ -89,6 +89,15 @@ git add -A; git commit -m "Learn: add WS02"; git push  # 5. 發佈（GitHub Page
 處理方式：`wmf_to_png.py` 用 Windows GDI+ 轉成高解析 PNG → 讀圖轉寫成 LaTeX →
 在 `bank.json` 標 `review` 旗標 → 老師覆核後清掉旗標才出站。
 
+## 6b. EPH 原檔的已知陷阱（轉寫時要留意）
+
+| 現象 | 處理 |
+|---|---|
+| 題解的變數 `b` 被打成希臘字母 `β`（WS02 有 25 處） | 一律寫回 `b`；`w:sym font="Symbol" char="F061"/F062` 才是斜體 `a`／`b`（抽取器已正確還原） |
+| 連等題（$A=B=C$）在摘要中會被拆散 | 讀 `data/learn/raw/<CODE>.json` 原始區塊，不要只看 digest |
+| 選項文字短（如 `A. –1.`）會跨題重複而被 digest 去重 | 同上：需要時用 `--variant both` 或直接查 raw JSON 的 `dup` 欄位 |
+| 金額 `$70` 是裸 `$`，會被 KaTeX 當定界符 | 一律寫 `\$70`（`learn_check` 會把裸 `$` 當錯誤擋下） |
+
 ## 7. 本機維護平台（`start-learn-panel.bat`，127.0.0.1:8788）
 
 與每日三題站的面板（8787）**完全獨立**（不同資料層、不同埠，可同時開）。

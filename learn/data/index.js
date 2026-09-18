@@ -35,16 +35,39 @@ window.LEARN_INDEX = {
    "lessonIds": [
     "ws01-1"
    ]
+  },
+  {
+   "id": "ws02",
+   "stage": 1,
+   "unit": 0,
+   "name": {
+    "zh": "二元一次方程（聯立方程）",
+    "en": "Linear Equations in Two Unknowns"
+   },
+   "intro": {
+    "zh": "這一課學兩個解方程組的方法：代入法與加減消去法，再用它們處理文字應用題。DSE Paper 1 幾乎年年有一題文字題（4–5 分），Paper 2 也常考；最容易失分的地方不是解方程，而是「設未知數」與「最後答問題問的那個量」。",
+    "en": ""
+   },
+   "source": "EPH All-Round L5 · Worksheet 2",
+   "stats": {
+    "mc": 14,
+    "long": 2,
+    "cards": 5,
+    "pages": 5
+   },
+   "lessonIds": [
+    "ws02-1"
+   ]
   }
  ],
  "assessments": [],
- "generatedAt": "2026-09-18T12:25:15Z",
+ "generatedAt": "2026-09-18T12:32:31Z",
  "counts": {
-  "topics": 1,
+  "topics": 2,
   "held": 0,
-  "mc": 18,
-  "long": 2,
-  "cards": 7,
+  "mc": 32,
+  "long": 4,
+  "cards": 12,
   "blocked": 0
  }
 };

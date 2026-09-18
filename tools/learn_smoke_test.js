@@ -77,6 +77,24 @@ ok(/\/ \d+ 頁/.test(t0.$("#pos").textContent), "footer shows the position (got 
 ok(t0.$("#prev").disabled === true, "prev is disabled on the first page");
 
 /* ── 3. 概念卡 ───────────────────────────────────────────────────────── */
+/* ── 2b. 第二個課題（二元一次方程）也正常 ─────────────────────────────── */
+console.log("\n— 課題 2：二元一次方程 —");
+ok(home.$$(".topic-btn").length >= 2,
+   "home page lists both topics (got " + home.$$(".topic-btn").length + ")");
+const t02 = boot("topic.html", "?t=ws02&p=0");
+ok(t02.$$("#pagenav .pg").length === 8,
+   "ws02 has 1 card page + 2 demos + 5 MC pages (got " + t02.$$("#pagenav .pg").length + ")");
+ok((t02.$("#topic-name").textContent || "").indexOf("二元一次") >= 0,
+   "ws02 topic name rendered (" + t02.$("#topic-name").textContent + ")");
+ok(!!t02.$(".concept-body") && t02.$$(".formula .katex").length >= 1, "ws02 concept card renders formulas");
+const t02mc = boot("topic.html", "?t=ws02&p=3");
+const q02 = t02mc.$$("#topic-body .card[data-qid]");
+ok(q02.length === 3, "ws02 first MC page holds 3 questions (got " + q02.length + ")");
+ok(t02mc.$$("#topic-body .opt").length === 12,
+   "each question has 4 options (got " + t02mc.$$("#topic-body .opt").length + ")");
+ok(!/\\\$\\\$/.test(t02mc.$("#topic-body").textContent),
+   "currency renders as $ without breaking the maths delimiters");
+
 console.log("\n— 概念卡 —");
 ok(t0.$$(".ccard-head h3").length === 1, "one concept card is shown at a time");
 ok(t0.$$(".formula .katex").length >= 1, "card formula rendered by KaTeX");
