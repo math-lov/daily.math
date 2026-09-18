@@ -29,7 +29,7 @@ window.LEARN_INDEX = {
    "stats": {
     "mc": 18,
     "long": 2,
-    "cards": 6,
+    "cards": 7,
     "pages": 6
    },
    "lessonIds": [
@@ -38,13 +38,13 @@ window.LEARN_INDEX = {
   }
  ],
  "assessments": [],
- "generatedAt": "2026-09-18T12:05:30Z",
+ "generatedAt": "2026-09-18T12:14:47Z",
  "counts": {
   "topics": 1,
   "held": 0,
   "mc": 18,
   "long": 2,
-  "cards": 6,
+  "cards": 7,
   "blocked": 0
  }
 };
