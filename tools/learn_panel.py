@@ -759,28 +759,56 @@ function bindPreview(ids){
 }
 
 async function loadTopics(){
-  const r = await fetch('/api/edit').then(x=>x.json());
+  let r;
+  try {
+    r = await fetch('/api/edit').then(x=>x.json());
+  } catch (e) {
+    $('list').innerHTML = '<span class="err">載入失敗：' + esc(e.message) +
+      '<br>請確認面板是從這個網址開啟（不是 file://），並重新啟動面板。</span>';
+    return;
+  }
   BUNDLE = r;
+  const topics = r.topics || [];
   const sel=$('topicSel');
-  sel.innerHTML = (r.topics||[]).map(t=>`<option value="${t.id}">${esc((t.name||{}).zh||t.id)}</option>`).join('');
-  sel.value = r.topic ? r.topic.id : (r.topics[0]||{}).id;
+  sel.innerHTML = topics.map(t=>'<option value="' + t.id + '">' + esc((t.name||{}).zh||t.id) + '</option>').join('');
+  if(!topics.length){
+    $('list').innerHTML = '<span class="muted">data/learn/lessons.json 裡還沒有課題</span>';
+    return;
+  }
+  sel.value = r.topic ? r.topic.id : topics[0].id;
   sel.onchange = ()=>openTopic(sel.value);
   openTopic(sel.value);
 }
+
+/* 事件委派：按鈕用 data-act / data-id，避免在 HTML 字串裡組 onclick（引號極易出錯） */
+document.addEventListener('click', function(e){
+  const t = e.target.closest ? e.target.closest('[data-act]') : null;
+  if(!t) return;
+  const act = t.getAttribute('data-act'), id = t.getAttribute('data-id') || '';
+  if(act==='topic') editTopic();
+  else if(act==='card') editCard(id);
+  else if(act==='q') editQ(id);
+  else if(act==='saveTopic') saveTopic();
+  else if(act==='saveCard') saveCard(id);
+  else if(act==='saveQ') saveQ(id);
+});
 
 async function openTopic(tid){
   const r = await fetch('/api/edit?topic='+encodeURIComponent(tid)).then(x=>x.json());
   if(!r.ok){ $('list').innerHTML='<span class="err">'+esc(r.error||'載入失敗')+'</span>'; return; }
   BUNDLE = r;
   const rows=[];
-  rows.push(`<div class="section-title"><span>課題資料</span></div>
-    <div><button onclick="editTopic()">課題名稱／簡介</button></div>`);
-  rows.push(`<div class="section-title"><span>概念卡（${r.cards.length}）</span></div>`);
-  r.cards.forEach(c=>rows.push(`<div><button onclick="editCard('${c.id}')">${esc((c.title||{}).zh||c.id)}</button></div>`));
-  rows.push(`<div class="section-title"><span>長題示範（${r.long.length}）</span></div>`);
-  r.long.forEach(q=>rows.push(`<div><button onclick="editQ('${q.id}')">${esc(q.code)} · ${esc(q.source||'')}</button></div>`));
-  rows.push(`<div class="section-title"><span>MC 練習（${r.mc.length}）</span></div>`);
-  r.mc.forEach(q=>rows.push(`<div><button onclick="editQ('${q.id}')">${esc(q.code)} · ${esc(player(q.stem))}</button></div>`));
+  rows.push('<div class="section-title"><span>課題資料</span></div>'
+    + '<div><button data-act="topic">課題名稱／簡介</button></div>');
+  rows.push('<div class="section-title"><span>概念卡（' + r.cards.length + '）</span></div>');
+  r.cards.forEach(c=>rows.push('<div><button data-act="card" data-id="' + esc(c.id) + '">'
+    + esc((c.title||{}).zh||c.id) + '</button></div>'));
+  rows.push('<div class="section-title"><span>長題示範（' + r.long.length + '）</span></div>');
+  r.long.forEach(q=>rows.push('<div><button data-act="q" data-id="' + esc(q.id) + '">'
+    + esc(q.code) + ' · ' + esc(q.source||'') + '</button></div>'));
+  rows.push('<div class="section-title"><span>MC 練習（' + r.mc.length + '）</span></div>');
+  r.mc.forEach(q=>rows.push('<div><button data-act="q" data-id="' + esc(q.id) + '">'
+    + esc(q.code) + ' · ' + esc(player(q.stem)) + '</button></div>'));
   $('list').innerHTML = rows.join('');
   $('editor').innerHTML = '<div class="muted">← 選一個項目開始編輯</div>';
 }
@@ -804,7 +832,7 @@ function editTopic(){
     field('中文名稱', 'f_zh', (t.name||{}).zh) +
     field('English name', 'f_en', (t.name||{}).en, 2) +
     field('簡介（可含 $...$）', 'f_intro', (t.intro||{}).zh, 4) +
-    '<button class="primary" onclick="saveTopic()">儲存</button>';
+    '<button class="primary" data-act="saveTopic">儲存</button>';
   bindPreview([['f_intro','pv-f_intro','rich']]);
 }
 
@@ -819,7 +847,7 @@ function editCard(id){
     field('常見錯誤（橙框）', 'f_warn', (c.warn||{}).zh, 4) +
     field('英文生字（每行一組，格式：english 中文）', 'f_vocab',
           (c.vocab||[]).map(v=>v.en+' '+v.zh).join('\\n'), 4) +
-    '<button class="primary" onclick="saveCard(\'' + id + '\')">儲存</button>';
+    '<button class="primary" data-act="saveCard" data-id="' + esc(id) + '">儲存</button>';
   bindPreview([['f_body','pv-f_body','rich'], ['f_warn','pv-f_warn','rich'],
                ['f_math','pv-f_math','tex']]);
 }
@@ -849,7 +877,7 @@ function editQ(id){
   html += field('干擾選項解說（每行：選項|解說，例：B| $x$ 的符號錯了）', 'f_traps',
     (q.traps||[]).map(t=>`${t.opt}| ${t.zh}`).join('\\n'), 3);
   html += field('帶得走的技巧', 'f_tip', (q.tip||{}).zh, 3);
-  html += '<button class="primary" onclick="saveQ(\'' + id + '\')">儲存</button>';
+  html += '<button class="primary" data-act="saveQ" data-id="' + esc(id) + '">儲存</button>';
   $('editor').innerHTML = html;
   bindPreview([['f_stem','pv-f_stem','rich'], ['f_tip','pv-f_tip','rich']]);
   ['A','B','C','D'].forEach(L=>{

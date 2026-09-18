@@ -317,7 +317,8 @@ git add -A; git commit -m "Learn: WS02"; git push
   儲存後自動「生成 + 結構檢查」。步驟輸入法＝每步三行（標題／公式／解說），空行分隔。
 * **發佈**：`重新生成 + 檢查`（四步全過）→ `一鍵發佈`（再 git commit／push）
 * 右上角 **本機預覽** ↗：即時 serve `learn/` 前端，改完馬上用手機看
-* 面板 API 自我測試：`& $py tools\learn_panel_test.py`（自動起行程、測完還原檔案）
+* 面板自我測試：`& $py tools\learn_panel_test.py`（自動起行程 → 測 API ＋ 編輯器前端 jsdom
+  `tools/learn_editor_test.js` → 測完還原檔案與審計記錄）
 
 ### 發佈邊界（重要）
 

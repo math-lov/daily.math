@@ -119,7 +119,8 @@ git add -A; git commit -m "Learn: add WS02"; git push  # 5. 發佈（GitHub Page
 * **儲存前驗證**（不通過就不寫檔）：`$` 成對、概念卡正文 ≥20 字、步驟解說 ≥10 字、MC 答案必須是其中一個選項、
   `traps` 不可指向正確答案、角度用「度」、主解法不可用坐標／向量。
 * **儲存後**會自動跑 `make_learn_data.py` + `learn_check.py` 並回報結果（其餘兩道留給發佈流程）。
-* 面板 API 自我測試：`& $py tools\learn_panel_test.py`（自己起測試行程、測完自動還原檔案）。
+* 面板 API 自我測試：`& $py tools\learn_panel_test.py`
+  （自己起測試行程 → 測 API 與**編輯器前端**（`tools/learn_editor_test.js`，jsdom）→ 測完自動還原檔案、清掉測試審計記錄）。
 
 ## 8. 已知限制
 

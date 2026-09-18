@@ -47,6 +47,21 @@ def read_json(name: str):
         return json.load(f)
 
 
+def write_json(name: str, obj) -> None:
+    path = os.path.join(LEARN_DATA, name)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(obj, f, ensure_ascii=False, indent=1)
+        f.write("\n")
+
+
+def node_exe() -> str:
+    for cand in (os.environ.get("NODE_EXE"),
+                 r"C:\Users\t073\.workbuddy\binaries\node\versions\22.22.2-3\node.exe"):
+        if cand and os.path.exists(cand):
+            return cand
+    return "node"
+
+
 def main(argv: list[str] | None = None) -> int:
     try:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -72,6 +87,8 @@ def main(argv: list[str] | None = None) -> int:
             fails += 1
 
     original = read_json("concepts.json")
+    pub_path = os.path.join(LEARN_DATA, "publish.json")
+    original_pub = read_json("publish.json") if os.path.exists(pub_path) else None
     log_before = read_json("edit_log.json").get("entries", []) if os.path.exists(
         os.path.join(LEARN_DATA, "edit_log.json")) else []
 
@@ -140,12 +157,27 @@ def main(argv: list[str] | None = None) -> int:
         ok(code == 200 and res.get("ok"), "可以暫緩課題")
         code, res = req(base + "/api/hold", {"topic": TEST_TOPIC, "hold": False})
         ok(code == 200 and res.get("ok"), "可以恢復課題")
+
+        print("\n— 編輯器前端（jsdom：語法、清單、表單、預覽）—")
+        r = subprocess.run([node_exe(), os.path.join(BASE, "tools", "learn_editor_test.js"), base],
+                           cwd=BASE, capture_output=True, text=True, encoding="utf-8",
+                           errors="replace", timeout=180)
+        tail = [ln for ln in (r.stdout or "").splitlines() if ln.strip()]
+        passed = len([ln for ln in tail if "PASS" in ln])
+        failed = [ln for ln in tail if "FAIL" in ln]
+        ok(r.returncode == 0, "編輯器測試全過（%d 項）" % passed)
+        for ln in failed[:8]:
+            print("        " + ln.strip())
     finally:
         proc.terminate()
         try:
             proc.wait(timeout=8)
         except subprocess.TimeoutExpired:
             proc.kill()
+        # 還原課題開關檔（測試切換過開關會改到 updatedAt）
+        if original_pub is not None and read_json("publish.json") != original_pub:
+            write_json("publish.json", original_pub)
+            print("（已還原 publish.json）")
         # 清掉測試寫入的審計記錄（保留真實記錄）
         log_path = os.path.join(LEARN_DATA, "edit_log.json")
         if not args.keep_log and os.path.exists(log_path):
