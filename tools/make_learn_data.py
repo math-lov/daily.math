@@ -71,6 +71,13 @@ def write_js(path: str, var: str, obj) -> None:
         f.write(";\n")
 
 
+def _with_figures(obj: dict, figures: dict, key: str) -> dict:
+    """概念卡／題目附加示意圖（只進公開檔，唔寫入 concepts.json / bank.json）。"""
+    if figures.get(key):
+        return dict(obj, figures=figures[key])
+    return obj
+
+
 def build_topic(topic: dict, bank_by_id: dict, cards_by_id: dict, sols: dict,
                 blocked: set[str], figures: dict | None = None) -> dict:
     """組出單一課題的完整內容（給前端）。"""
@@ -81,21 +88,20 @@ def build_topic(topic: dict, bank_by_id: dict, cards_by_id: dict, sols: dict,
         for cid in les.get("conceptCards", []):
             card = cards_by_id.get(cid)
             if card:
-                # 示意圖只進公開檔（SVG 由 make_learn_figures.py 產生），唔寫入 concepts.json
+                # 示意圖只進公開檔（SVG 由 make_learn_figures.py 產生）
                 # 一張卡可以有多幅圖（例如變換多於一次）
-                if figures.get(cid):
-                    card = dict(card, figures=figures[cid])
-                cards.append(card)
+                cards.append(_with_figures(card, figures, cid))
 
         long_qs = []
         for qid in les.get("longQuestionIds", []):
             q = bank_by_id.get(qid)
             if q and qid not in blocked:
-                long_qs.append(q)
+                long_qs.append(_with_figures(q, figures, qid))
 
         pages = []
         for page in les.get("mcPages", []):
-            row = [bank_by_id[qid] for qid in page if qid in bank_by_id and qid not in blocked]
+            row = [_with_figures(bank_by_id[qid], figures, qid)
+                   for qid in page if qid in bank_by_id and qid not in blocked]
             if row:
                 pages.append(row)
 
@@ -247,7 +253,9 @@ def main(argv: list[str] | None = None) -> int:
     if hold:
         print("暫緩出站（面板開關）：課題 %s" % ", ".join(sorted(hold)))
     if figures:
-        print("概念卡示意圖 %d 張（SVG）" % len(figures))
+        n_card = sum(1 for k in figures if not k.startswith("eph-"))
+        print("示意圖（SVG）：概念卡 %d 張 · 題目 %d 題 · 共 %d 幅"
+              % (n_card, len(figures) - n_card, sum(len(v) for v in figures.values())))
     print("已剔除教師欄位 %d 個；題解已併入題目 %d 題" % (removed, merged))
     return 0
 

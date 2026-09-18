@@ -432,6 +432,17 @@
   }
 
   /* ── 概念卡 ─────────────────────────────────────────────────────────── */
+  /* 示意圖（SVG）：概念卡／題目都係「一組圖」，逐幅插入（來源可控） */
+  function appendFigures(host, node) {
+    (node.figures || []).forEach(function (fg) {
+      if (!fg || !fg.svg) return;
+      var fig = el("div", "fig");
+      fig.innerHTML = fg.svg;
+      host.appendChild(fig);
+      if (fg.caption) host.appendChild(el("div", "fig-cap", fg.caption));
+    });
+  }
+
   function renderCards(body, page, pages, cur, tid) {
     var cards = page.lesson.cards || [];
     var i = 0;
@@ -459,15 +470,8 @@
       if (c.title && c.title.en) head.appendChild(el("span", "en", c.title.en));
       card.appendChild(head);
 
-      // 概念卡示意圖（SVG）：由 tools/make_learn_figures.py 產生、來源可控，直接插入
-      // 一張卡可以有多幅圖（例如變換多於一次，就逐步畫一次變換一幅）
-      (c.figures || []).forEach(function (fg) {
-        if (!fg || !fg.svg) return;
-        var fig = el("div", "fig");
-        fig.innerHTML = fg.svg;
-        card.appendChild(fig);
-        if (fg.caption) card.appendChild(el("div", "fig-cap", fg.caption));
-      });
+      // 概念卡示意圖（一張卡可以有多幅圖：例如變換多於一次就逐步畫）
+      appendFigures(card, c);
 
       var b = el("div", "ccard-body concept-body");
       renderMathBody(b, (c.body && c.body.zh) || "", c.math || []);
@@ -692,6 +696,8 @@
     richInto(stem, (q.stem && q.stem.text) || "");
     autoRender(stem);
     card.appendChild(stem);
+
+    appendFigures(card, q);          // 題目示意圖（插喺題幹下面、選項上面）
 
     var opts = el("div", "opts");
     opts.setAttribute("data-tex-inline", "1");

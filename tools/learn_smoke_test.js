@@ -343,6 +343,16 @@ ok((t04fig.$(".fig svg").getAttribute("viewBox") || "").indexOf("0 0") === 0,
    "the figure is a scalable SVG (viewBox: " + t04fig.$(".fig svg").getAttribute("viewBox") + ")");
 ok(!/<script/i.test(t04fig.$(".fig").innerHTML), "figure markup is inert (no <script>)");
 ok(!boot("topic.html", "?t=ws01&p=0").$(".fig"), "topics without figures are unaffected");
+
+// MC 題嘅圖：插喺題幹下面；兩次變換嘅題目（q05）要畫兩幅
+const t04q = boot("topic.html", "?t=ws04&p=5");       // 第二個 MC 頁：q04、q05、q06
+const qFigN = t04q.$$("#topic-body .card[data-qid]").map(
+  (c) => c.querySelectorAll(".fig svg").length);
+ok(qFigN.length === 3, "the MC page holds 3 question cards (got " + qFigN.length + ")");
+ok(qFigN.every((n) => n >= 1), "every MC question here has a figure (" + qFigN.join(", ") + ")");
+ok(qFigN[1] === 2, "the two-step question (q05) shows two figures (got " + qFigN[1] + ")");
+ok(t04q.$$(".fig-cap").length === qFigN.reduce((a, b) => a + b, 0),
+   "each MC figure carries a caption too");
 const sLong = t1.store();
 ok(Object.keys(sLong.long || {}).length >= 1, "finishing the demo is recorded in progress");
 

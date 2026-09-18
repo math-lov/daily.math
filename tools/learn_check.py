@@ -232,8 +232,13 @@ def main(argv: list[str] | None = None) -> int:
         if not _dollar_ok(blob_all):
             err("S6", "%s：題解整體 $ 不成對" % qid)
 
-    # ── S9：概念卡示意圖（SVG）安全檢查 ───────────────────────────────────
+    # ── S9：示意圖（SVG）安全檢查（概念卡同題目都用同一套）────────────────
     figures_doc = _load("figures.json", {"figures": {}})
+    known_ids = {c.get("id") for c in concepts.get("cards", [])} | \
+                {q.get("id") for q in questions}
+    for fid in (figures_doc.get("figures") or {}):
+        if fid not in known_ids:
+            warn("S9", "figures.json：%s 唔對應任何概念卡或題目（會被忽略）" % fid)
     for fid, items in (figures_doc.get("figures") or {}).items():
         if isinstance(items, str):                 # 舊格式（單一幅圖）都接受
             items = [{"svg": items}]
