@@ -1,0 +1,370 @@
+{
+  "2026-p2-q07": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Substitute $x=1+d$", "zh": "第 1 步 · 代入 $x=1+d$" },
+          "math": "f(1+d)=(1+2d)(d-1)+9(1+d)",
+          "en": "Put $x=1+d$ into $f(x)=(x+d)(x-2)+9x$: the first factor becomes $1+d+d=1+2d$, the second $1+d-2=d-1$.",
+          "zh": "把 $x=1+d$ 代入 $f(x)=(x+d)(x-2)+9x$：第一個因式是 $1+d+d=1+2d$，第二個是 $1+d-2=d-1$。",
+          "highlight": ["1+2d", "d-1"]
+        },
+        {
+          "title": { "en": "Step 2 · Expand and set to 0", "zh": "第 2 步 · 展開並令為 0" },
+          "math": "(2d^{2}-d-1)+(9+9d)=2d^{2}+8d+8",
+          "en": "$(1+2d)(d-1)=2d^{2}-d-1$; adding $9+9d$ gives $2d^{2}+8d+8=0$.",
+          "zh": "$(1+2d)(d-1)=2d^{2}-d-1$，再加上 $9+9d$，得 $2d^{2}+8d+8=0$。",
+          "highlight": ["2d^{2}+8d+8=0"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "d^{2}+4d+4=0 \\Rightarrow (d+2)^{2}=0 \\Rightarrow d=-2",
+          "en": "Divide by 2 and complete the square — option A.",
+          "zh": "兩邊除以 2 後配方，得 $d=-2$，選 A。",
+          "highlight": ["d=-2"]
+        }
+      ],
+      "traps": [
+        { "opt": "C",
+          "en": "Ignoring the $+9x$ term leaves $(1+2d)(d-1)=0$, giving $d=1$ — keep every term when substituting.",
+          "zh": "漏掉 $+9x$ 那一項會只剩 $(1+2d)(d-1)=0$，得 $d=1$ —— 代入時每一項都要保留。" },
+        { "opt": "D",
+          "en": "Getting $(d+2)^{2}=0$ but dropping the minus sign reads off $d=2$.",
+          "zh": "解到 $(d+2)^{2}=0$ 卻漏掉負號，就會讀成 $d=2$。" }
+      ],
+      "tip": {
+        "en": "For $f(\\text{expression})=0$ questions, substitute first and simplify last — do not expand $f$ with unknown $d$ before substituting.",
+        "zh": "遇到 $f(\\text{某式})=0$，先代入、後化簡；不要帶著未知的 $d$ 先把 $f$ 展開。" }
+    }
+  },
+
+  "2026-p2-q08": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Divisibility by $x-4$", "zh": "第 1 步 · 被 $x-4$ 整除" },
+          "math": "g(4)=64h+32+4k-5=0 \\Rightarrow 64h+4k=-27",
+          "en": "By the factor theorem, $g(4)=0$, which gives one equation linking $h$ and $k$.",
+          "zh": "由因式定理 $g(4)=0$，得到一個關於 $h$、$k$ 的方程。",
+          "highlight": ["64h+4k=-27"]
+        },
+        {
+          "title": { "en": "Step 2 · Remainder when divided by $x+4$", "zh": "第 2 步 · 除以 $x+4$ 的餘數" },
+          "math": "g(-4)=-64h+32-4k-5=-(64h+4k)+27",
+          "en": "The remainder is $g(-4)$. Group the $h,k$ terms: they appear again as $64h+4k$, but with the opposite sign.",
+          "zh": "餘數是 $g(-4)$。把 $h,k$ 的項併起來，正好又出現 $64h+4k$，只是變了號。",
+          "highlight": ["-(64h+4k)+27"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "g(-4)=27+27=54",
+          "en": "Substitute $64h+4k=-27$: $g(-4)=27+27=54$ — no need to find $h$ and $k$ separately.",
+          "zh": "代入 $64h+4k=-27$：$g(-4)=27+27=54$ —— 不必分別求出 $h$ 與 $k$。",
+          "highlight": ["54"]
+        }
+      ],
+      "traps": [
+        { "opt": "C",
+          "en": "Answering 0 because $g$ is divisible by $x-4$ — the divisor here is $x+4$, not $x-4$.",
+          "zh": "因為「$g$ 可被 $x-4$ 整除」就直接答 0 —— 但題目除的是 $x+4$，不是 $x-4$。" },
+        { "opt": "A",
+          "en": "Getting $g(-4)=-(64h+4k)=-(-27)=27$ and stopping, forgetting to add the constant part $+27$.",
+          "zh": "算出 $-(64h+4k)=27$ 就停手，忘了再加油常數部分 $+27$。" }
+      ],
+      "tip": {
+        "en": "Two remainders from one condition usually share the same combination of unknowns — compare $g(4)$ and $g(-4)$ and cancel instead of solving.",
+        "zh": "同一條件下的兩個餘數，通常會共用同一組未知數組合 —— 比較 $g(4)$ 與 $g(-4)$ 直接消去，不必解方程。" }
+    }
+  },
+
+  "2026-p2-q09": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Solve the first inequality", "zh": "第 1 步 · 解第一條不等式" },
+          "math": "x-1>\\frac{2x-9}{3} \\Rightarrow 3x-3>2x-9 \\Rightarrow x>-6",
+          "en": "Multiply both sides by 3 (positive, so the inequality sign is unchanged), then collect terms.",
+          "zh": "兩邊乘 3（正數，不等號方向不變），再合併同類項。",
+          "highlight": ["x>-6"]
+        },
+        {
+          "title": { "en": "Step 2 · Solve the second inequality", "zh": "第 2 步 · 解第二條不等式" },
+          "math": "3x+12\\ge0 \\Rightarrow x\\ge-4",
+          "en": "The second condition gives $x\\ge-4$, a smaller set than $x>-6$.",
+          "zh": "第二式得 $x\\ge-4$，這個範圍比 $x>-6$ 窄。",
+          "highlight": ["x\\ge-4"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\{x>-6\\}\\cup\\{x\\ge-4\\}=\\{x>-6\\}",
+          "en": "'or' means union: every number satisfying either one. Since $x\\ge-4$ is inside $x>-6$, the union is just $x>-6$ — option D.",
+          "zh": "「or」代表聯集：滿足其中之一即可。因 $x\\ge-4$ 完全包含在 $x>-6$ 內，聯集就是 $x>-6$，選 D。",
+          "highlight": ["x>-6"]
+        }
+      ],
+      "traps": [
+        { "opt": "B",
+          "en": "Treating 'or' as 'and' (intersection) gives $x\\ge-4$ — read the connective carefully.",
+          "zh": "把「or」當成「and」（交集）就會得到 $x\\ge-4$ —— 要看清楚連接詞。" },
+        { "opt": "A",
+          "en": "Writing $x\\le-4$ means the inequality sign was flipped when it should not have been (dividing by a positive number).",
+          "zh": "寫成 $x\\le-4$ 表示不等號被誤轉向（除以正數時方向不變）。" }
+      ],
+      "tip": {
+        "en": "Solve each inequality separately, draw both on a number line, then take union for 'or' and intersection for 'and'.",
+        "zh": "每條不等式分別解出，畫在同一條數線上：『or』取聯集、『and』取交集。" }
+    }
+  },
+
+  "2026-p2-q10": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Total cost = total weight × unit cost", "zh": "第 1 步 · 總成本＝總重量 × 每公斤成本" },
+          "math": "12s+18t=16(s+t)",
+          "en": "The mixture costs 16 per kg and weighs $s+t$ kg, which must equal the sum of the two costs.",
+          "zh": "混合物每公斤 16，共 $s+t$ 公斤，其總成本必等於兩種米的成本之和。",
+          "highlight": ["12s+18t=16(s+t)"]
+        },
+        {
+          "title": { "en": "Step 2 · Simplify", "zh": "第 2 步 · 化簡" },
+          "math": "12s+18t=16s+16t \\Rightarrow 2t=4s \\Rightarrow t=2s",
+          "en": "Expand the right side and collect: $18t-16t=16s-12s$.",
+          "zh": "展開右邊再合併：$18t-16t=16s-12s$，得 $t=2s$。",
+          "highlight": ["t=2s"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "s:t=1:2",
+          "en": "When $t=2s$, taking $s=1$ gives $t=2$ — option A. (Check: 12 + 36 = 48 for 3 kg, i.e. 16 per kg.)",
+          "zh": "當 $t=2s$，取 $s=1$ 得 $t=2$，選 A。（驗算：1 公斤 S 與 2 公斤 T 共 12+36=48，除以 3 公斤正是 16。）",
+          "highlight": ["1:2"]
+        }
+      ],
+      "traps": [
+        { "opt": "B",
+          "en": "2:1 is the ratio $t:s$, not $s:t$ — check which quantity is asked first.",
+          "zh": "2:1 是 $t:s$，不是題目問的 $s:t$ —— 要看清楚哪個量在前面。" },
+        { "opt": "C",
+          "en": "Averaging the two prices (12 and 18 and 16) without weighting gives the wrong split.",
+          "zh": "把 12、18 與 16 直接取平均而沒有按重量加權，就會得到錯誤的比例。" }
+      ],
+      "tip": {
+        "en": "Mixture problems: write 'total cost = total weight × unit cost' as one equation, then the ratio follows from the simplified relation.",
+        "zh": "混合問題：先把「總成本＝總重量 × 每單位成本」寫成一條方程，化簡後比例自然出現。" }
+    }
+  },
+
+  "2026-p2-q11": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Quarterly rate and number of periods", "zh": "第 1 步 · 每季利率與期數" },
+          "math": "\\frac{4\\%}{4}=1\\%,\\quad 5\\times4=20",
+          "en": "Compounded quarterly: the rate per period is 4%/4 = 1% and there are $5\\times4=20$ periods.",
+          "zh": "每季複利：每期利率為 4%/4 = 1%，期數為 $5\\times4=20$。",
+          "highlight": ["1\\%", "20"]
+        },
+        {
+          "title": { "en": "Step 2 · Set up the equation", "zh": "第 2 步 · 立式" },
+          "math": "P(1.01)^{20}=80000",
+          "en": "The amount after 20 periods at 1% per period is 80000.",
+          "zh": "本金 $P$ 經 20 期、每期 1% 後為 80000。",
+          "highlight": ["(1.01)^{20}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "P=\\frac{80000}{1.01^{20}}\\approx 65\\,563.7 \\Rightarrow 65\\,564",
+          "en": "$1.01^{20}\\approx1.22019$, so $P\\approx65\\,563.7$, i.e. 65 564 to the nearest integer — option B.",
+          "zh": "$1.01^{20}\\approx1.22019$，故 $P\\approx65\\,563.7$，取整為 65 564，選 B。",
+          "highlight": ["65\\,564"]
+        }
+      ],
+      "traps": [
+        { "opt": "C",
+          "en": "Using 4% per year (once a year) instead of quarterly gives $80000/1.04^{5}\\approx65\\,754$.",
+          "zh": "把「每季複利」當成「每年複利 4%」會得到 $80000/1.04^{5}\\approx65\\,754$。" },
+        { "opt": "D",
+          "en": "Simple interest $80000/(1+4\\%\\times5)=66\\,667$ ignores compounding altogether.",
+          "zh": "用單利 $80000/(1+4\\%\\times5)=66\\,667$，完全忽略了複利。" }
+      ],
+      "tip": {
+        "en": "'Compounded quarterly' means divide the annual rate by 4 and multiply the years by 4 — fix both numbers before touching the calculator.",
+        "zh": "「每季複利」＝年利率 ÷ 4、年數 × 4；先把這兩個數字定好再按計算機。" }
+    }
+  },
+
+  "2026-p2-q12": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · New value of $u$", "zh": "第 1 步 · $u$ 的新值" },
+          "math": "u'=1.44u \\Rightarrow \\sqrt{u'}=1.2\\sqrt{u}",
+          "en": "$u$ increased by 44% means $u'=1.44u$; since $w$ varies as $\\sqrt{u}$, take the square root: $1.44$ becomes $1.2$.",
+          "zh": "$u$ 增加 44% 即 $u'=1.44u$；因 $w$ 與 $\\sqrt{u}$ 成正比，開方後 $1.44$ 變成 $1.2$。",
+          "highlight": ["1.2\\sqrt{u}"]
+        },
+        {
+          "title": { "en": "Step 2 · New value of $v$", "zh": "第 2 步 · $v$ 的新值" },
+          "math": "v'=0.8v",
+          "en": "$v$ decreased by 20% means $v'=0.8v$. Because $w$ varies inversely as $v$, this factor goes to the denominator.",
+          "zh": "$v$ 減少 20% 即 $v'=0.8v$；因 $w$ 與 $v$ 成反比，這個倍數放在分母。",
+          "highlight": ["0.8v"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "w'=\\frac{1.2}{0.8}w=1.5w",
+          "en": "The new value is $1.5$ times the old, i.e. an increase of 50% — option B.",
+          "zh": "新值是原值的 1.5 倍，即增加 50%，選 B。",
+          "highlight": ["1.5w \\Rightarrow +50\\%"]
+        }
+      ],
+      "traps": [
+        { "opt": "D",
+          "en": "Forgetting the square root and using $1.44/0.8=1.8$ gives +80% — the $\\sqrt{\\ }$ must be applied first.",
+          "zh": "忘記開方，直接用 $1.44/0.8=1.8$ 會得到 +80% —— 要先取平方根。" },
+        { "opt": "C",
+          "en": "Simply adding the two percentages (44% + 20% = 64%) ignores that one change is direct and the other is inverse.",
+          "zh": "把兩個百分數直接相加（44% + 20% = 64%），忽略了兩者的正比／反比關係。" }
+      ],
+      "tip": {
+        "en": "For variation problems, convert each change into a multiplier: 'increased by 44%' → $1.44$, then apply the powers or roots required by the relation.",
+        "zh": "變分題把每個變化寫成倍數（增加 44% → $1.44$），再按正比／反比關係取次方或根號。" }
+    }
+  },
+
+  "2026-p2-q13": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Form of the general term", "zh": "第 1 步 · 通項的形式" },
+          "math": "r^{2}-3r+2=0 \\Rightarrow r=1,2",
+          "en": "The recurrence $a_{n+2}=3a_{n+1}-2a_{n}$ has auxiliary equation $r^{2}-3r+2=0$, so $a_{n}=A+B\\cdot2^{n}$.",
+          "zh": "遞推式 $a_{n+2}=3a_{n+1}-2a_{n}$ 的輔助方程是 $r^{2}-3r+2=0$，故 $a_{n}=A+B\\cdot2^{n}$。",
+          "highlight": ["a_n=A+B\\cdot2^{n}"]
+        },
+        {
+          "title": { "en": "Step 2 · Use the two given terms", "zh": "第 2 步 · 代入已知兩項" },
+          "math": "A+4B=7,\\quad A+32B=35 \\Rightarrow B=1,\\ A=3",
+          "en": "Subtract the two equations: $28B=28$.",
+          "zh": "兩式相減：$28B=28$，得 $B=1$、$A=3$。",
+          "highlight": ["B=1", "A=3"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "a_{8}=3+2^{8}=3+256=259",
+          "en": "Substitute $n=8$ — option C.",
+          "zh": "代入 $n=8$，得 259，選 C。",
+          "highlight": ["259"]
+        }
+      ],
+      "traps": [
+        { "opt": "B",
+          "en": "131 is $a_{7}=3+128$ — the term number is off by one.",
+          "zh": "131 是 $a_{7}=3+128$ —— 項數差了一項。" },
+        { "opt": "D",
+          "en": "515 is $a_{9}=3+512$, i.e. one term too far (or $2^{8}$ counted as $2^{9}$).",
+          "zh": "515 是 $a_{9}=3+512$，即多算了一項（或把 $2^{8}$ 當成 $2^{9}$）。" }
+      ],
+      "tip": {
+        "en": "For $a_{n+2}=pa_{n+1}+qa_{n}$, solve the auxiliary equation $r^{2}=pr+q$ first; then the two given terms pin down the constants.",
+        "zh": "遞推式形如 $a_{n+2}=pa_{n+1}+qa_{n}$，先解輔助方程 $r^{2}=pr+q$，再用已知兩項定出常數。" }
+    }
+  },
+
+  "2026-p2-q14": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Use the common point on the positive $x$-axis", "zh": "第 1 步 · 用正 x 軸上的交點" },
+          "math": "at=b,\\quad ct=d\\quad(t>0)",
+          "en": "Both lines pass through $(t,0)$ with $t>0$, so substituting $y=0$ gives $at=b$ and $ct=d$.",
+          "zh": "兩線都過正 x 軸上的 $(t,0)$（$t>0$），代入 $y=0$ 得 $at=b$、$ct=d$。",
+          "highlight": ["at=b", "ct=d"]
+        },
+        {
+          "title": { "en": "Step 2 · Compare $a$ and $c$", "zh": "第 2 步 · 比較 $a$ 與 $c$" },
+          "math": "a=\\frac{b}{t},\\quad c=\\frac{d}{t},\\quad b>d \\Rightarrow a>c",
+          "en": "The figure shows $b>d$, so dividing by the same positive $t$ gives $a>c$: statement I is false.",
+          "zh": "由圖知 $b>d$，同除以正的 $t$ 得 $a>c$，故命題 I 錯誤。",
+          "highlight": ["a>c"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "ad=\\frac{bd}{t}=bc",
+          "en": "$b>d$ is true from the graph; and $ad=\\frac{bd}{t}=bc$ makes III true. So II and III — option C.",
+          "zh": "由圖得 $b>d$ 成立；又 $ad=\\frac{bd}{t}=bc$，故 III 成立。答案是 II 與 III，選 C。",
+          "highlight": ["ad=bc"]
+        }
+      ],
+      "traps": [
+        { "opt": "D",
+          "en": "Assuming a larger intercept means a larger $a$ — but $a=b/t$ and $c=d/t$ with the **same** $t$, so $b>d$ forces $a>c$.",
+          "zh": "誤以為截距大斜率就大 —— 但 $a=b/t$、$c=d/t$ 用的是同一個 $t$，所以 $b>d$ 會迫使 $a>c$。" },
+        { "opt": "B",
+          "en": "Stopping after I and II without testing the algebraic relation in III.",
+          "zh": "做完 I、II 就停手，沒有檢驗 III 的代數關係。" }
+      ],
+      "tip": {
+        "en": "When two lines meet on the $x$-axis, put $y=0$ and write each coefficient as (intercept)/(x-coordinate) — then the comparison is immediate.",
+        "zh": "兩線交於 x 軸時，代 $y=0$，把係數寫成（截距）÷（交點橫坐標），大小比較就一目了然。" }
+    }
+  },
+
+  "2026-p2-q15": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Expand the leading term", "zh": "第 1 步 · 展開看首項" },
+          "math": "y=pqx^{2}+(2p+q)x+2",
+          "en": "The coefficient of $x^{2}$ is $pq$, which is negative, so the graph opens downwards: statement I is true.",
+          "zh": "$x^{2}$ 的係數是 $pq$，因 $pq<0$ 為負，圖像開口向下，命題 I 成立。",
+          "highlight": ["pq<0 \\Rightarrow \\text{opens downwards}"]
+        },
+        {
+          "title": { "en": "Step 2 · Count the $x$-intercepts", "zh": "第 2 步 · 數 x 截距" },
+          "math": "x=-\\frac{1}{p}\\ \\text{or}\\ x=-\\frac{2}{q}",
+          "en": "$pq<0$ means $p$ and $q$ have opposite signs, so the two roots can never be equal — there are two $x$-intercepts: II is true.",
+          "zh": "$pq<0$ 表示 $p$ 與 $q$ 異號，兩個根不可能相等，故有兩個 x 截距，命題 II 成立。",
+          "highlight": ["two distinct roots"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "x=0 \\Rightarrow y=(1)(2)=2\\neq0",
+          "en": "At $x=0$ the value is 2, not 0, so the graph does not pass through the origin: III is false. Answer A.",
+          "zh": "當 $x=0$，$y=2\\neq0$，圖像不經原點，命題 III 錯誤。答案 A。",
+          "highlight": ["y=2"]
+        }
+      ],
+      "traps": [
+        { "opt": "D",
+          "en": "Seeing two brackets and assuming $x=0$ is a root — substitute $x=0$ to check: $y=(0+1)(0+2)=2$.",
+          "zh": "看到兩個括號就以為 $x=0$ 是根 —— 代入 $x=0$ 檢查：$y=(0+1)(0+2)=2$。" },
+        { "opt": "C",
+          "en": "Forgetting that the sign of $pq$ decides the opening direction, so the graph actually opens downwards.",
+          "zh": "忘記 $pq$ 的正負決定開口方向，實際上此圖像開口向下。" }
+      ],
+      "tip": {
+        "en": "For $y=(px+1)(qx+2)$: the sign of $pq$ tells you the opening direction, the two brackets give the roots, and $x=0$ gives the $y$-intercept.",
+        "zh": "對 $y=(px+1)(qx+2)$：$pq$ 的正負看開口方向、兩個括號給根、代 $x=0$ 得 y 截距。" }
+    }
+  }
+}

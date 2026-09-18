@@ -3659,6 +3659,2775 @@
           "zh": "變換規則：$\\times k$ 令平均數、全距乘 $k$、方差乘 $k^{2}$；$+c$ 只改變平均數。故平移不會令全距或方差變大。"
         }
       }
+    },
+    "2026-p2-q01": {
+      "answer": "D",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Common denominator",
+              "zh": "第 1 步 · 通分"
+            },
+            "math": "\\frac{1}{k+2}+\\frac{3}{5k-6}=\\frac{5k-6+3(k+2)}{(k+2)(5k-6)}",
+            "en": "The two denominators share no factor, so the common denominator is their product $(k+2)(5k-6)$. Each numerator is multiplied by the other denominator.",
+            "zh": "兩個分母沒有公因式，公分母就是它們的乘積 $(k+2)(5k-6)$；每個分子都要乘上對方的分母。",
+            "highlight": [
+              "(k+2)(5k-6)"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Expand the numerator",
+              "zh": "第 2 步 · 展開分子"
+            },
+            "math": "5k-6+3(k+2)=5k-6+3k+6=8k",
+            "en": "Multiply out: $3(k+2)=3k+6$. The constants $-6$ and $+6$ cancel, leaving $8k$.",
+            "zh": "展開：$3(k+2)=3k+6$。常數項 $-6$ 與 $+6$ 正好抵消，只剩 $8k$。",
+            "highlight": [
+              "8k"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "\\frac{8k}{(k+2)(5k-6)}",
+            "en": "That matches option D.",
+            "zh": "與選項 D 相符。",
+            "highlight": [
+              "\\text{D}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "C",
+            "en": "Reading the plus as a minus gives $5k-3k=2k$ (the constants still cancel) — check the sign before combining.",
+            "zh": "把加號看成減號會得到 $5k-3k=2k$（常數項仍抵消）—— 合併前先看清楚符號。"
+          },
+          {
+            "opt": "A",
+            "en": "Flipping the sign of the whole numerator gives $-8k$; the numerator is $+8k$ because $5k+3k$ is positive.",
+            "zh": "把整個分子的正負號弄反會得到 $-8k$；因為 $5k+3k$ 是正的，分子應為 $+8k$。"
+          }
+        ],
+        "tip": {
+          "en": "For adding fractions, find the common denominator first, then multiply the **whole** bracket (distributive law) — constants often cancel, so re-check the numerator.",
+          "zh": "分式加減先找公分母，分子要乘**整個**括號（分配律）；常數項常常正好抵消，所以合併後要再檢查一次分子。"
+        }
+      }
+    },
+    "2026-p2-q02": {
+      "answer": "A",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Write everything in base 3",
+              "zh": "第 1 步 · 全部化成底數 3"
+            },
+            "math": "9^{3n+1}=3^{6n+2},\\quad 27^{2n+1}=3^{6n+3}",
+            "en": "Since $9=3^{2}$ and $27=3^{3}$, multiply the exponent by 2 and by 3 respectively.",
+            "zh": "因為 $9=3^{2}$、$27=3^{3}$，指數分別乘 2 與乘 3。",
+            "highlight": [
+              "9=3^{2}",
+              "27=3^{3}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Add exponents in the denominator",
+              "zh": "第 2 步 · 分母指數相加"
+            },
+            "math": "3^{2n+3}\\cdot 3^{6n+3}=3^{8n+6}",
+            "en": "Same base, so add the exponents: $(2n+3)+(6n+3)=8n+6$.",
+            "zh": "同底數相乘，指數相加：$(2n+3)+(6n+3)=8n+6$。",
+            "highlight": [
+              "3^{8n+6}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 3 · Subtract exponents",
+              "zh": "第 3 步 · 指數相減"
+            },
+            "math": "3^{(6n+2)-(8n+6)}=3^{-2n-4}",
+            "en": "Division means subtracting the exponent: $(6n+2)-(8n+6)=-2n-4$.",
+            "zh": "相除即指數相減：$(6n+2)-(8n+6)=-2n-4$。",
+            "highlight": [
+              "3^{-2n-4}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "3^{-2n-4}=9^{-n-2}",
+            "en": "The options use base 9, and $3^{2m}=9^{m}$, so $3^{-2n-4}=9^{-n-2}$ — option A.",
+            "zh": "選項用底數 9，而 $3^{2m}=9^{m}$，故 $3^{-2n-4}=9^{-n-2}$，選 A。",
+            "highlight": [
+              "\\text{A}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "B",
+            "en": "Writing $27^{2n+1}$ as $3^{6n+1}$ (forgetting to multiply the $+1$ by 3) leaves $3^{-2n-2}=9^{-n-1}$.",
+            "zh": "把 $27^{2n+1}$ 寫成 $3^{6n+1}$（忘記 $+1$ 也要乘 3）會得到 $3^{-2n-2}=9^{-n-1}$。"
+          },
+          {
+            "opt": "C",
+            "en": "Dropping the minus when subtracting gives $2n-4$, i.e. $9^{n-2}$ — keep the sign of the whole bracket.",
+            "zh": "指數相減時漏掉負號會得到 $2n-4$，即 $9^{n-2}$ —— 減的是整個括號。"
+          }
+        ],
+        "tip": {
+          "en": "Convert every term to the **same base** first, then apply the index laws; convert back to the base used in the options at the very end.",
+          "zh": "先全部化成**同一個底數**再套指數律；最後才換回選項使用的底數。"
+        }
+      }
+    },
+    "2026-p2-q03": {
+      "answer": "D",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Expand the first square",
+              "zh": "第 1 步 · 展開第一個平方"
+            },
+            "math": "(2\\alpha-\\beta)^{2}=4\\alpha^{2}-4\\alpha\\beta+\\beta^{2}",
+            "en": "Use $(a-b)^{2}=a^{2}-2ab+b^{2}$ with $a=2\\alpha$, $b=\\beta$: the middle term is $-2(2\\alpha)(\\beta)=-4\\alpha\\beta$.",
+            "zh": "用 $(a-b)^{2}=a^{2}-2ab+b^{2}$，取 $a=2\\alpha$、$b=\\beta$：中間項是 $-2(2\\alpha)(\\beta)=-4\\alpha\\beta$。",
+            "highlight": [
+              "-4\\alpha\\beta"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Expand the second square",
+              "zh": "第 2 步 · 展開第二個平方"
+            },
+            "math": "(\\alpha-2\\beta)^{2}=\\alpha^{2}-4\\alpha\\beta+4\\beta^{2}",
+            "en": "Same identity with $a=\\alpha$, $b=2\\beta$.",
+            "zh": "同一公式，取 $a=\\alpha$、$b=2\\beta$。",
+            "highlight": [
+              "-4\\alpha\\beta"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "5\\alpha^{2}-8\\alpha\\beta+5\\beta^{2}",
+            "en": "Add like terms: $\\alpha^{2}$ gives $4+1=5$, the cross term gives $-4-4=-8$, $\\beta^{2}$ gives $1+4=5$. Option D.",
+            "zh": "合併同類項：$\\alpha^{2}$ 項為 $4+1=5$，交叉項為 $-4-4=-8$，$\\beta^{2}$ 項為 $1+4=5$。選 D。",
+            "highlight": [
+              "-8\\alpha\\beta"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "B",
+            "en": "Forgetting to square the coefficient 2 (writing $(2\\alpha)^{2}=2\\alpha^{2}$) gives $3\\alpha^{2}-8\\alpha\\beta+3\\beta^{2}$.",
+            "zh": "忘記平方係數 2（把 $(2\\alpha)^{2}$ 寫成 $2\\alpha^{2}$）會得到 $3\\alpha^{2}-8\\alpha\\beta+3\\beta^{2}$。"
+          },
+          {
+            "opt": "C",
+            "en": "Counting the cross term only once: each square contributes $-4\\alpha\\beta$, so the total is $-8\\alpha\\beta$.",
+            "zh": "交叉項只算一次：兩個平方各貢獻 $-4\\alpha\\beta$，合計應是 $-8\\alpha\\beta$。"
+          }
+        ],
+        "tip": {
+          "en": "With $(a-b)^{2}=a^{2}-2ab+b^{2}$, square the **coefficient** too, and remember both brackets contribute a cross term before you collect like terms.",
+          "zh": "用 $(a-b)^{2}=a^{2}-2ab+b^{2}$ 時，係數也要平方；兩個括號各有一個交叉項，合併同類項時都要算進去。"
+        }
+      }
+    },
+    "2026-p2-q04": {
+      "answer": "A",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · 4 significant figures",
+              "zh": "第 1 步 · 4 位有效數字"
+            },
+            "math": "230.045678 \\to 230.0",
+            "en": "Count from the first non-zero digit: 2, 3, 0, 0 — the 4th significant figure is the first decimal place. The next digit is 4, so round down.",
+            "zh": "由第一個非零數字起數：2、3、0、0 —— 第 4 位有效數字是小數點後第一位；下一位是 4，捨去。",
+            "highlight": [
+              "230.0"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · 4 decimal places",
+              "zh": "第 2 步 · 4 位小數"
+            },
+            "math": "230.045678 \\to 230.0457",
+            "en": "Four digits after the decimal point: 0456, and the next digit is 7, so round up to 230.0457.",
+            "zh": "小數點後取四位：0456，下一位是 7，故進位成 230.0457。",
+            "highlight": [
+              "230.0457"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "230.0\\ (\\text{4 s.f.})",
+            "en": "Only option A states a correct pair.",
+            "zh": "只有選項 A 的數值與四捨五入方式都正確。",
+            "highlight": [
+              "\\text{A}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "C",
+            "en": "230.0456 is just the number cut off, not rounded: the 5th decimal is 7, so it must round up to 230.0457.",
+            "zh": "230.0456 只是把數字截斷，並未四捨五入：第 5 位小數是 7，應進位成 230.0457。"
+          },
+          {
+            "opt": "B",
+            "en": "230.046 has three decimal places, not four significant figures — 'significant figures' and 'decimal places' are different counts.",
+            "zh": "230.046 是三位小數，不是四位有效數字 —— 「有效數字」與「小數位數」數法不同。"
+          }
+        ],
+        "tip": {
+          "en": "Significant figures start from the first non-zero digit; decimal places start after the point. Fix which digit you are rounding to, then look at the **next** digit.",
+          "zh": "有效數字由第一個非零數字開始數，小數位數由小數點後開始數。先確定要取到哪一位，再看**下一位**決定捨入。"
+        }
+      }
+    },
+    "2026-p2-q05": {
+      "answer": "A",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Expand the left side",
+              "zh": "第 1 步 · 展開左式"
+            },
+            "math": "(x-5)(x+m)-4(x+n)=x^{2}+(m-9)x-5m-4n",
+            "en": "$(x-5)(x+m)=x^{2}+(m-5)x-5m$, then $-4(x+n)=-4x-4n$; the $x$ coefficient is $(m-5)-4=m-9$.",
+            "zh": "$(x-5)(x+m)=x^{2}+(m-5)x-5m$，再減 $4(x+n)=-4x-4n$；$x$ 的係數為 $(m-5)-4=m-9$。",
+            "highlight": [
+              "m-9"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Expand the right side",
+              "zh": "第 2 步 · 展開右式"
+            },
+            "math": "x(x+6)+1=x^{2}+6x+1",
+            "en": "The identity holds for every $x$, so coefficients of equal powers must match.",
+            "zh": "恆等式對所有 $x$ 都成立，故同次數的係數必須相等。",
+            "highlight": [
+              "x^{2}+6x+1"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 3 · Compare the $x$ coefficients",
+              "zh": "第 3 步 · 比較 $x$ 的係數"
+            },
+            "math": "m-9=6 \\Rightarrow m=15",
+            "en": "Matching the coefficients of $x$ on both sides gives $m$.",
+            "zh": "比較兩邊 $x$ 的係數即可求得 $m$。",
+            "highlight": [
+              "m=15"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "-5m-4n=1 \\Rightarrow -75-4n=1 \\Rightarrow n=-19",
+            "en": "Now compare constants and substitute $m=15$. The question asks for $n$, not $m$.",
+            "zh": "再比較常數項並代入 $m=15$。題目問的是 $n$ 而不是 $m$。",
+            "highlight": [
+              "n=-19"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "D",
+            "en": "15 is the value of $m$ — a very common slip is answering with the letter you found first.",
+            "zh": "15 是 $m$ 的值 —— 最常見的失誤就是先求出哪個字母就答哪個，題目問的是 $n$。"
+          },
+          {
+            "opt": "B",
+            "en": "A sign slip when moving terms in $-5m-4n=1$ (e.g. turning $-75-4n=1$ into $-4n=-74$) gives a small wrong value.",
+            "zh": "在 $-5m-4n=1$ 移項時搞錯正負號（例如把 $-75-4n=1$ 寫成 $-4n=-74$）會得到錯誤的小數值。"
+          }
+        ],
+        "tip": {
+          "en": "For an identity, arrange both sides in standard form and compare coefficients term by term; then re-read which letter the question actually asks for.",
+          "zh": "處理恆等式：兩邊先整理成標準式再逐項比較係數；最後再看清楚題目問的是哪一個字母。"
+        }
+      }
+    },
+    "2026-p2-q06": {
+      "answer": "C",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Expand the left side",
+              "zh": "第 1 步 · 展開左式"
+            },
+            "math": "(x+2s)(x+t)=x^{2}+(t+2s)x+2st",
+            "en": "Multiply the two brackets: the $x$ term is $tx+2sx$ and the constant is $2st$.",
+            "zh": "兩括號相乘：$x$ 項為 $tx+2sx$，常數項為 $2st$。",
+            "highlight": [
+              "x^{2}+(t+2s)x+2st"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Move everything to one side",
+              "zh": "第 2 步 · 全部移到同一邊"
+            },
+            "math": "x^{2}+(t+2s)x+2st-sx-st=0 \\Rightarrow x^{2}+(s+t)x+st=0",
+            "en": "Subtract $sx+st$ from both sides first — do not read the roots off the brackets as first written.",
+            "zh": "先把右邊的 $sx+st$ 減掉 —— 不要直接從原式的括號讀答案。",
+            "highlight": [
+              "x^{2}+(s+t)x+st=0"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 3 · Factorise",
+              "zh": "第 3 步 · 因式分解"
+            },
+            "math": "(x+s)(x+t)=0",
+            "en": "Find two numbers with sum $s+t$ and product $st$ — they are $s$ and $t$.",
+            "zh": "找兩個數，和為 $s+t$、積為 $st$ —— 就是 $s$ 與 $t$。",
+            "highlight": [
+              "(x+s)(x+t)=0"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "x=-s \\text{ or } x=-t",
+            "en": "A quadratic has two roots, so both must be listed — option C.",
+            "zh": "二次方程式有兩個根，兩個都要列出 —— 選 C。",
+            "highlight": [
+              "x=-s",
+              "x=-t"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "B",
+            "en": "Reading $x=-2s$ straight from the bracket $(x+2s)$ ignores the $sx+st$ on the right that has to be moved first.",
+            "zh": "直接由 $(x+2s)$ 讀出 $x=-2s$，忽略了右邊的 $sx+st$ 必須先移到左邊。"
+          },
+          {
+            "opt": "A",
+            "en": "$x=-s$ is a root but only one of them; a quadratic equation should give two roots.",
+            "zh": "$x=-s$ 確實是一個根，但只是其中一個；二次方程式應有兩個根。"
+          }
+        ],
+        "tip": {
+          "en": "When $x$ appears on both sides, move everything to one side and make it 0 before factorising — never read roots off the brackets as first written.",
+          "zh": "當 $x$ 同時出現在等式兩邊時，先把全部移到同一邊化為 0 再因式分解 —— 絕不要直接從原式括號讀根。"
+        }
+      }
+    },
+    "2026-p2-q07": {
+      "answer": "A",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Substitute $x=1+d$",
+              "zh": "第 1 步 · 代入 $x=1+d$"
+            },
+            "math": "f(1+d)=(1+2d)(d-1)+9(1+d)",
+            "en": "Put $x=1+d$ into $f(x)=(x+d)(x-2)+9x$: the first factor becomes $1+d+d=1+2d$, the second $1+d-2=d-1$.",
+            "zh": "把 $x=1+d$ 代入 $f(x)=(x+d)(x-2)+9x$：第一個因式是 $1+d+d=1+2d$，第二個是 $1+d-2=d-1$。",
+            "highlight": [
+              "1+2d",
+              "d-1"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Expand and set to 0",
+              "zh": "第 2 步 · 展開並令為 0"
+            },
+            "math": "(2d^{2}-d-1)+(9+9d)=2d^{2}+8d+8",
+            "en": "$(1+2d)(d-1)=2d^{2}-d-1$; adding $9+9d$ gives $2d^{2}+8d+8=0$.",
+            "zh": "$(1+2d)(d-1)=2d^{2}-d-1$，再加上 $9+9d$，得 $2d^{2}+8d+8=0$。",
+            "highlight": [
+              "2d^{2}+8d+8=0"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "d^{2}+4d+4=0 \\Rightarrow (d+2)^{2}=0 \\Rightarrow d=-2",
+            "en": "Divide by 2 and complete the square — option A.",
+            "zh": "兩邊除以 2 後配方，得 $d=-2$，選 A。",
+            "highlight": [
+              "d=-2"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "C",
+            "en": "Ignoring the $+9x$ term leaves $(1+2d)(d-1)=0$, giving $d=1$ — keep every term when substituting.",
+            "zh": "漏掉 $+9x$ 那一項會只剩 $(1+2d)(d-1)=0$，得 $d=1$ —— 代入時每一項都要保留。"
+          },
+          {
+            "opt": "D",
+            "en": "Getting $(d+2)^{2}=0$ but dropping the minus sign reads off $d=2$.",
+            "zh": "解到 $(d+2)^{2}=0$ 卻漏掉負號，就會讀成 $d=2$。"
+          }
+        ],
+        "tip": {
+          "en": "For $f(\\text{expression})=0$ questions, substitute first and simplify last — do not expand $f$ with unknown $d$ before substituting.",
+          "zh": "遇到 $f(\\text{某式})=0$，先代入、後化簡；不要帶著未知的 $d$ 先把 $f$ 展開。"
+        }
+      }
+    },
+    "2026-p2-q08": {
+      "answer": "D",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Divisibility by $x-4$",
+              "zh": "第 1 步 · 被 $x-4$ 整除"
+            },
+            "math": "g(4)=64h+32+4k-5=0 \\Rightarrow 64h+4k=-27",
+            "en": "By the factor theorem, $g(4)=0$, which gives one equation linking $h$ and $k$.",
+            "zh": "由因式定理 $g(4)=0$，得到一個關於 $h$、$k$ 的方程。",
+            "highlight": [
+              "64h+4k=-27"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Remainder when divided by $x+4$",
+              "zh": "第 2 步 · 除以 $x+4$ 的餘數"
+            },
+            "math": "g(-4)=-64h+32-4k-5=-(64h+4k)+27",
+            "en": "The remainder is $g(-4)$. Group the $h,k$ terms: they appear again as $64h+4k$, but with the opposite sign.",
+            "zh": "餘數是 $g(-4)$。把 $h,k$ 的項併起來，正好又出現 $64h+4k$，只是變了號。",
+            "highlight": [
+              "-(64h+4k)+27"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "g(-4)=27+27=54",
+            "en": "Substitute $64h+4k=-27$: $g(-4)=27+27=54$ — no need to find $h$ and $k$ separately.",
+            "zh": "代入 $64h+4k=-27$：$g(-4)=27+27=54$ —— 不必分別求出 $h$ 與 $k$。",
+            "highlight": [
+              "54"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "C",
+            "en": "Answering 0 because $g$ is divisible by $x-4$ — the divisor here is $x+4$, not $x-4$.",
+            "zh": "因為「$g$ 可被 $x-4$ 整除」就直接答 0 —— 但題目除的是 $x+4$，不是 $x-4$。"
+          },
+          {
+            "opt": "A",
+            "en": "Getting $g(-4)=-(64h+4k)=-(-27)=27$ and stopping, forgetting to add the constant part $+27$.",
+            "zh": "算出 $-(64h+4k)=27$ 就停手，忘了再加油常數部分 $+27$。"
+          }
+        ],
+        "tip": {
+          "en": "Two remainders from one condition usually share the same combination of unknowns — compare $g(4)$ and $g(-4)$ and cancel instead of solving.",
+          "zh": "同一條件下的兩個餘數，通常會共用同一組未知數組合 —— 比較 $g(4)$ 與 $g(-4)$ 直接消去，不必解方程。"
+        }
+      }
+    },
+    "2026-p2-q09": {
+      "answer": "D",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Solve the first inequality",
+              "zh": "第 1 步 · 解第一條不等式"
+            },
+            "math": "x-1>\\frac{2x-9}{3} \\Rightarrow 3x-3>2x-9 \\Rightarrow x>-6",
+            "en": "Multiply both sides by 3 (positive, so the inequality sign is unchanged), then collect terms.",
+            "zh": "兩邊乘 3（正數，不等號方向不變），再合併同類項。",
+            "highlight": [
+              "x>-6"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Solve the second inequality",
+              "zh": "第 2 步 · 解第二條不等式"
+            },
+            "math": "3x+12\\ge0 \\Rightarrow x\\ge-4",
+            "en": "The second condition gives $x\\ge-4$, a smaller set than $x>-6$.",
+            "zh": "第二式得 $x\\ge-4$，這個範圍比 $x>-6$ 窄。",
+            "highlight": [
+              "x\\ge-4"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "\\{x>-6\\}\\cup\\{x\\ge-4\\}=\\{x>-6\\}",
+            "en": "'or' means union: every number satisfying either one. Since $x\\ge-4$ is inside $x>-6$, the union is just $x>-6$ — option D.",
+            "zh": "「or」代表聯集：滿足其中之一即可。因 $x\\ge-4$ 完全包含在 $x>-6$ 內，聯集就是 $x>-6$，選 D。",
+            "highlight": [
+              "x>-6"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "B",
+            "en": "Treating 'or' as 'and' (intersection) gives $x\\ge-4$ — read the connective carefully.",
+            "zh": "把「or」當成「and」（交集）就會得到 $x\\ge-4$ —— 要看清楚連接詞。"
+          },
+          {
+            "opt": "A",
+            "en": "Writing $x\\le-4$ means the inequality sign was flipped when it should not have been (dividing by a positive number).",
+            "zh": "寫成 $x\\le-4$ 表示不等號被誤轉向（除以正數時方向不變）。"
+          }
+        ],
+        "tip": {
+          "en": "Solve each inequality separately, draw both on a number line, then take union for 'or' and intersection for 'and'.",
+          "zh": "每條不等式分別解出，畫在同一條數線上：『or』取聯集、『and』取交集。"
+        }
+      }
+    },
+    "2026-p2-q10": {
+      "answer": "A",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Total cost = total weight × unit cost",
+              "zh": "第 1 步 · 總成本＝總重量 × 每公斤成本"
+            },
+            "math": "12s+18t=16(s+t)",
+            "en": "The mixture costs 16 per kg and weighs $s+t$ kg, which must equal the sum of the two costs.",
+            "zh": "混合物每公斤 16，共 $s+t$ 公斤，其總成本必等於兩種米的成本之和。",
+            "highlight": [
+              "12s+18t=16(s+t)"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Simplify",
+              "zh": "第 2 步 · 化簡"
+            },
+            "math": "12s+18t=16s+16t \\Rightarrow 2t=4s \\Rightarrow t=2s",
+            "en": "Expand the right side and collect: $18t-16t=16s-12s$.",
+            "zh": "展開右邊再合併：$18t-16t=16s-12s$，得 $t=2s$。",
+            "highlight": [
+              "t=2s"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "s:t=1:2",
+            "en": "When $t=2s$, taking $s=1$ gives $t=2$ — option A. (Check: 12 + 36 = 48 for 3 kg, i.e. 16 per kg.)",
+            "zh": "當 $t=2s$，取 $s=1$ 得 $t=2$，選 A。（驗算：1 公斤 S 與 2 公斤 T 共 12+36=48，除以 3 公斤正是 16。）",
+            "highlight": [
+              "1:2"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "B",
+            "en": "2:1 is the ratio $t:s$, not $s:t$ — check which quantity is asked first.",
+            "zh": "2:1 是 $t:s$，不是題目問的 $s:t$ —— 要看清楚哪個量在前面。"
+          },
+          {
+            "opt": "C",
+            "en": "Averaging the two prices (12 and 18 and 16) without weighting gives the wrong split.",
+            "zh": "把 12、18 與 16 直接取平均而沒有按重量加權，就會得到錯誤的比例。"
+          }
+        ],
+        "tip": {
+          "en": "Mixture problems: write 'total cost = total weight × unit cost' as one equation, then the ratio follows from the simplified relation.",
+          "zh": "混合問題：先把「總成本＝總重量 × 每單位成本」寫成一條方程，化簡後比例自然出現。"
+        }
+      }
+    },
+    "2026-p2-q11": {
+      "answer": "B",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Quarterly rate and number of periods",
+              "zh": "第 1 步 · 每季利率與期數"
+            },
+            "math": "\\frac{4\\%}{4}=1\\%,\\quad 5\\times4=20",
+            "en": "Compounded quarterly: the rate per period is 4%/4 = 1% and there are $5\\times4=20$ periods.",
+            "zh": "每季複利：每期利率為 4%/4 = 1%，期數為 $5\\times4=20$。",
+            "highlight": [
+              "1\\%",
+              "20"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Set up the equation",
+              "zh": "第 2 步 · 立式"
+            },
+            "math": "P(1.01)^{20}=80000",
+            "en": "The amount after 20 periods at 1% per period is 80000.",
+            "zh": "本金 $P$ 經 20 期、每期 1% 後為 80000。",
+            "highlight": [
+              "(1.01)^{20}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "P=\\frac{80000}{1.01^{20}}\\approx 65\\,563.7 \\Rightarrow 65\\,564",
+            "en": "$1.01^{20}\\approx1.22019$, so $P\\approx65\\,563.7$, i.e. 65 564 to the nearest integer — option B.",
+            "zh": "$1.01^{20}\\approx1.22019$，故 $P\\approx65\\,563.7$，取整為 65 564，選 B。",
+            "highlight": [
+              "65\\,564"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "C",
+            "en": "Using 4% per year (once a year) instead of quarterly gives $80000/1.04^{5}\\approx65\\,754$.",
+            "zh": "把「每季複利」當成「每年複利 4%」會得到 $80000/1.04^{5}\\approx65\\,754$。"
+          },
+          {
+            "opt": "D",
+            "en": "Simple interest $80000/(1+4\\%\\times5)=66\\,667$ ignores compounding altogether.",
+            "zh": "用單利 $80000/(1+4\\%\\times5)=66\\,667$，完全忽略了複利。"
+          }
+        ],
+        "tip": {
+          "en": "'Compounded quarterly' means divide the annual rate by 4 and multiply the years by 4 — fix both numbers before touching the calculator.",
+          "zh": "「每季複利」＝年利率 ÷ 4、年數 × 4；先把這兩個數字定好再按計算機。"
+        }
+      }
+    },
+    "2026-p2-q12": {
+      "answer": "B",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · New value of $u$",
+              "zh": "第 1 步 · $u$ 的新值"
+            },
+            "math": "u'=1.44u \\Rightarrow \\sqrt{u'}=1.2\\sqrt{u}",
+            "en": "$u$ increased by 44% means $u'=1.44u$; since $w$ varies as $\\sqrt{u}$, take the square root: $1.44$ becomes $1.2$.",
+            "zh": "$u$ 增加 44% 即 $u'=1.44u$；因 $w$ 與 $\\sqrt{u}$ 成正比，開方後 $1.44$ 變成 $1.2$。",
+            "highlight": [
+              "1.2\\sqrt{u}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · New value of $v$",
+              "zh": "第 2 步 · $v$ 的新值"
+            },
+            "math": "v'=0.8v",
+            "en": "$v$ decreased by 20% means $v'=0.8v$. Because $w$ varies inversely as $v$, this factor goes to the denominator.",
+            "zh": "$v$ 減少 20% 即 $v'=0.8v$；因 $w$ 與 $v$ 成反比，這個倍數放在分母。",
+            "highlight": [
+              "0.8v"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "w'=\\frac{1.2}{0.8}w=1.5w",
+            "en": "The new value is $1.5$ times the old, i.e. an increase of 50% — option B.",
+            "zh": "新值是原值的 1.5 倍，即增加 50%，選 B。",
+            "highlight": [
+              "1.5w \\Rightarrow +50\\%"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "D",
+            "en": "Forgetting the square root and using $1.44/0.8=1.8$ gives +80% — the $\\sqrt{\\ }$ must be applied first.",
+            "zh": "忘記開方，直接用 $1.44/0.8=1.8$ 會得到 +80% —— 要先取平方根。"
+          },
+          {
+            "opt": "C",
+            "en": "Simply adding the two percentages (44% + 20% = 64%) ignores that one change is direct and the other is inverse.",
+            "zh": "把兩個百分數直接相加（44% + 20% = 64%），忽略了兩者的正比／反比關係。"
+          }
+        ],
+        "tip": {
+          "en": "For variation problems, convert each change into a multiplier: 'increased by 44%' → $1.44$, then apply the powers or roots required by the relation.",
+          "zh": "變分題把每個變化寫成倍數（增加 44% → $1.44$），再按正比／反比關係取次方或根號。"
+        }
+      }
+    },
+    "2026-p2-q13": {
+      "answer": "C",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Form of the general term",
+              "zh": "第 1 步 · 通項的形式"
+            },
+            "math": "r^{2}-3r+2=0 \\Rightarrow r=1,2",
+            "en": "The recurrence $a_{n+2}=3a_{n+1}-2a_{n}$ has auxiliary equation $r^{2}-3r+2=0$, so $a_{n}=A+B\\cdot2^{n}$.",
+            "zh": "遞推式 $a_{n+2}=3a_{n+1}-2a_{n}$ 的輔助方程是 $r^{2}-3r+2=0$，故 $a_{n}=A+B\\cdot2^{n}$。",
+            "highlight": [
+              "a_n=A+B\\cdot2^{n}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Use the two given terms",
+              "zh": "第 2 步 · 代入已知兩項"
+            },
+            "math": "A+4B=7,\\quad A+32B=35 \\Rightarrow B=1,\\ A=3",
+            "en": "Subtract the two equations: $28B=28$.",
+            "zh": "兩式相減：$28B=28$，得 $B=1$、$A=3$。",
+            "highlight": [
+              "B=1",
+              "A=3"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "a_{8}=3+2^{8}=3+256=259",
+            "en": "Substitute $n=8$ — option C.",
+            "zh": "代入 $n=8$，得 259，選 C。",
+            "highlight": [
+              "259"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "B",
+            "en": "131 is $a_{7}=3+128$ — the term number is off by one.",
+            "zh": "131 是 $a_{7}=3+128$ —— 項數差了一項。"
+          },
+          {
+            "opt": "D",
+            "en": "515 is $a_{9}=3+512$, i.e. one term too far (or $2^{8}$ counted as $2^{9}$).",
+            "zh": "515 是 $a_{9}=3+512$，即多算了一項（或把 $2^{8}$ 當成 $2^{9}$）。"
+          }
+        ],
+        "tip": {
+          "en": "For $a_{n+2}=pa_{n+1}+qa_{n}$, solve the auxiliary equation $r^{2}=pr+q$ first; then the two given terms pin down the constants.",
+          "zh": "遞推式形如 $a_{n+2}=pa_{n+1}+qa_{n}$，先解輔助方程 $r^{2}=pr+q$，再用已知兩項定出常數。"
+        }
+      }
+    },
+    "2026-p2-q14": {
+      "answer": "C",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Use the common point on the positive $x$-axis",
+              "zh": "第 1 步 · 用正 x 軸上的交點"
+            },
+            "math": "at=b,\\quad ct=d\\quad(t>0)",
+            "en": "Both lines pass through $(t,0)$ with $t>0$, so substituting $y=0$ gives $at=b$ and $ct=d$.",
+            "zh": "兩線都過正 x 軸上的 $(t,0)$（$t>0$），代入 $y=0$ 得 $at=b$、$ct=d$。",
+            "highlight": [
+              "at=b",
+              "ct=d"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Compare $a$ and $c$",
+              "zh": "第 2 步 · 比較 $a$ 與 $c$"
+            },
+            "math": "a=\\frac{b}{t},\\quad c=\\frac{d}{t},\\quad b>d \\Rightarrow a>c",
+            "en": "The figure shows $b>d$, so dividing by the same positive $t$ gives $a>c$: statement I is false.",
+            "zh": "由圖知 $b>d$，同除以正的 $t$ 得 $a>c$，故命題 I 錯誤。",
+            "highlight": [
+              "a>c"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "ad=\\frac{bd}{t}=bc",
+            "en": "$b>d$ is true from the graph; and $ad=\\frac{bd}{t}=bc$ makes III true. So II and III — option C.",
+            "zh": "由圖得 $b>d$ 成立；又 $ad=\\frac{bd}{t}=bc$，故 III 成立。答案是 II 與 III，選 C。",
+            "highlight": [
+              "ad=bc"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "D",
+            "en": "Assuming a larger intercept means a larger $a$ — but $a=b/t$ and $c=d/t$ with the **same** $t$, so $b>d$ forces $a>c$.",
+            "zh": "誤以為截距大斜率就大 —— 但 $a=b/t$、$c=d/t$ 用的是同一個 $t$，所以 $b>d$ 會迫使 $a>c$。"
+          },
+          {
+            "opt": "B",
+            "en": "Stopping after I and II without testing the algebraic relation in III.",
+            "zh": "做完 I、II 就停手，沒有檢驗 III 的代數關係。"
+          }
+        ],
+        "tip": {
+          "en": "When two lines meet on the $x$-axis, put $y=0$ and write each coefficient as (intercept)/(x-coordinate) — then the comparison is immediate.",
+          "zh": "兩線交於 x 軸時，代 $y=0$，把係數寫成（截距）÷（交點橫坐標），大小比較就一目了然。"
+        }
+      }
+    },
+    "2026-p2-q15": {
+      "answer": "A",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Expand the leading term",
+              "zh": "第 1 步 · 展開看首項"
+            },
+            "math": "y=pqx^{2}+(2p+q)x+2",
+            "en": "The coefficient of $x^{2}$ is $pq$, which is negative, so the graph opens downwards: statement I is true.",
+            "zh": "$x^{2}$ 的係數是 $pq$，因 $pq<0$ 為負，圖像開口向下，命題 I 成立。",
+            "highlight": [
+              "pq<0 \\Rightarrow \\text{opens downwards}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Count the $x$-intercepts",
+              "zh": "第 2 步 · 數 x 截距"
+            },
+            "math": "x=-\\frac{1}{p}\\ \\text{or}\\ x=-\\frac{2}{q}",
+            "en": "$pq<0$ means $p$ and $q$ have opposite signs, so the two roots can never be equal — there are two $x$-intercepts: II is true.",
+            "zh": "$pq<0$ 表示 $p$ 與 $q$ 異號，兩個根不可能相等，故有兩個 x 截距，命題 II 成立。",
+            "highlight": [
+              "two distinct roots"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "x=0 \\Rightarrow y=(1)(2)=2\\neq0",
+            "en": "At $x=0$ the value is 2, not 0, so the graph does not pass through the origin: III is false. Answer A.",
+            "zh": "當 $x=0$，$y=2\\neq0$，圖像不經原點，命題 III 錯誤。答案 A。",
+            "highlight": [
+              "y=2"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "D",
+            "en": "Seeing two brackets and assuming $x=0$ is a root — substitute $x=0$ to check: $y=(0+1)(0+2)=2$.",
+            "zh": "看到兩個括號就以為 $x=0$ 是根 —— 代入 $x=0$ 檢查：$y=(0+1)(0+2)=2$。"
+          },
+          {
+            "opt": "C",
+            "en": "Forgetting that the sign of $pq$ decides the opening direction, so the graph actually opens downwards.",
+            "zh": "忘記 $pq$ 的正負決定開口方向，實際上此圖像開口向下。"
+          }
+        ],
+        "tip": {
+          "en": "For $y=(px+1)(qx+2)$: the sign of $pq$ tells you the opening direction, the two brackets give the roots, and $x=0$ gives the $y$-intercept.",
+          "zh": "對 $y=(px+1)(qx+2)$：$pq$ 的正負看開口方向、兩個括號給根、代 $x=0$ 得 y 截距。"
+        }
+      }
+    },
+    "2026-p2-q16": {
+      "answer": "B",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Perimeter of a sector",
+              "zh": "第 1 步 · 扇形周長"
+            },
+            "math": "2r+s=k \\Rightarrow 28+s=k",
+            "en": "A sector is bounded by two radii and the arc, so its perimeter is $2r+s$ with $r=14$.",
+            "zh": "扇形由兩條半徑與弧圍成，周長是 $2r+s$，其中 $r=14$。",
+            "highlight": [
+              "28+s=k"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Area of a sector",
+              "zh": "第 2 步 · 扇形面積"
+            },
+            "math": "\\frac{1}{2}rs=3k \\Rightarrow 7s=3k",
+            "en": "The area $\\frac12rs$ equals $3k$, and $r=14$ gives $\\frac12(14)s=7s$.",
+            "zh": "面積 $\\frac12rs$ 等於 $3k$，代入 $r=14$ 得 $7s=3k$。",
+            "highlight": [
+              "7s=3k"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "7s=3(28+s) \\Rightarrow 4s=84 \\Rightarrow s=21",
+            "en": "Eliminate $k$: substitute $k=28+s$. The arc length is 21 cm — option B.",
+            "zh": "把 $k=28+s$ 代入消去 $k$，得 $4s=84$，弧長 21 cm，選 B。",
+            "highlight": [
+              "s=21"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "C",
+            "en": "28 is $2r$, the two radii — that is the straight part of the perimeter, not the arc.",
+            "zh": "28 是 $2r$（兩條半徑），那是周長中的直線部分，不是弧長。"
+          },
+          {
+            "opt": "D",
+            "en": "Writing the area condition as $rs=3k$ (dropping the $\\frac12$) overstates the arc length.",
+            "zh": "把面積條件寫成 $rs=3k$（漏了 $\\frac12$）會高估弧長。"
+          }
+        ],
+        "tip": {
+          "en": "Sector formulas: perimeter $=2r+s$, area $=\\frac12rs=\\frac{\\theta}{360}\\pi r^{2}$ — write them down before substituting, and never forget the two radii.",
+          "zh": "扇形公式：周長 $=2r+s$、面積 $=\\frac12rs=\\frac{\\theta}{360}\\pi r^{2}$；代入前先寫好，千萬別漏掉兩條半徑。"
+        }
+      }
+    },
+    "2026-p2-q17": {
+      "answer": "B",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Volume of the whole pyramid",
+              "zh": "第 1 步 · 整個金字塔體積"
+            },
+            "math": "V=\\frac{1}{3}(18)(16)(12)=1152",
+            "en": "Base area $18\\times16$ times height 12, divided by 3.",
+            "zh": "底面積 $18\\times16$ 乘高 12 再除以 3。",
+            "highlight": [
+              "1152"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Volume of the small pyramid $X$",
+              "zh": "第 2 步 · 小金字塔 $X$ 的體積"
+            },
+            "math": "k=\\frac{12}{16}=\\frac{3}{4},\\quad V_X=\\left(\\frac{3}{4}\\right)^{3}(1152)=486",
+            "en": "The cutting plane is parallel to the base, so $X$ is similar to the whole pyramid with length ratio $12/16=3/4$; volumes go as the cube of the ratio.",
+            "zh": "截面平行於底面，故 $X$ 與整個金字塔相似，長度比為 $12/16=3/4$；體積按比的三次方縮放。",
+            "highlight": [
+              "\\left(\\frac{3}{4}\\right)^{3}",
+              "486"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "V_Y=1152-486=666",
+            "en": "The frustum is what remains after removing $X$ — option B.",
+            "zh": "台體是扣掉 $X$ 之後剩下的部分，得 666，選 B。",
+            "highlight": [
+              "666"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "A",
+            "en": "486 is the volume of the small pyramid $X$; the question asks for the frustum $Y$.",
+            "zh": "486 是小金字塔 $X$ 的體積，題目問的是台體 $Y$。"
+          },
+          {
+            "opt": "D",
+            "en": "Using the length ratio or the area ratio instead of the cube of the ratio for a volume.",
+            "zh": "算體積時誤用長度比（或面積比），體積要用相似比的三次方。"
+          }
+        ],
+        "tip": {
+          "en": "Similar solids: lengths scale as $k$, areas as $k^{2}$, volumes as $k^{3}$; a frustum is always 'whole minus the removed similar piece'.",
+          "zh": "相似立體：長度比 $k$、面積比 $k^{2}$、體積比 $k^{3}$；台體＝整體減去被切走的相似部分。"
+        }
+      }
+    },
+    "2026-p2-q18": {
+      "answer": "C",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Find the height from the area of $\\Delta ABD$",
+              "zh": "第 1 步 · 由 $\\Delta ABD$ 的面積求高"
+            },
+            "math": "\\frac{1}{2}(3)(h)=225 \\Rightarrow h=150",
+            "en": "Take $AB=3$ units and $CD=5$ units (the ratio $3:5$). With base $AB$, the area gives the height between the parallel sides.",
+            "zh": "取 $AB=3$ 單位、$CD=5$ 單位（即比 $3:5$）。以 $AB$ 為底，由面積可求兩平行線間的高。",
+            "highlight": [
+              "h=150"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · The small trapezium",
+              "zh": "第 2 步 · 上方小梯形"
+            },
+            "math": "EF=\\frac{2}{5}AB=1.2,\\quad \\text{height}=h-\\frac{2}{5}h=60",
+            "en": "$E$ divides $BD$ in $2:3$, so $BE:BD=2:5$. As $EF\\parallel AB$ and $BF\\parallel AD$, the top piece is a scaled copy at ratio $2/5$: both its parallel side and its height scale by $2/5$.",
+            "zh": "$E$ 把 $BD$ 分成 $2:3$，故 $BE:BD=2:5$。因 $EF\\parallel AB$、$BF\\parallel AD$，上方部分是比例 $2/5$ 的相似圖形：平行邊與高都乘 $2/5$。",
+            "highlight": [
+              "EF=1.2",
+              "\\text{height}=60"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "\\frac{1}{2}(5+1.2)(150-60)=279",
+            "en": "Trapezium area $=\\frac12(CD+EF)\\times$ height difference $=279$ cm² — option C.",
+            "zh": "梯形面積 $=\\frac12(CD+EF)\\times$ 高差 $=279$ cm²，選 C。",
+            "highlight": [
+              "279"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "A",
+            "en": "Scaling only one of EF and the height by $2/5$ (they scale together, since the top piece is similar).",
+            "zh": "只把 $EF$ 或高其中一項乘 $2/5$ —— 兩者要一起縮放（上方部分與原圖相似）。"
+          },
+          {
+            "opt": "D",
+            "en": "Using the full height 150 for the trapezium instead of the gap $150-60=90$.",
+            "zh": "用整條高 150 算梯形，而沒有用 $150-60=90$ 這個高差。"
+          }
+        ],
+        "tip": {
+          "en": "In parallel-line figures, a line parallel to the base cuts a similar figure; convert the given ratio into a scale factor and apply it to every length.",
+          "zh": "平行線圖形中，與底平行的線會切出相似圖形；把已知比化成比例因子，所有長度（含高）一起乘。"
+        }
+      }
+    },
+    "2026-p2-q19": {
+      "answer": "C",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Identify the hypotenuse",
+              "zh": "第 1 步 · 認出斜邊"
+            },
+            "math": "\\angle QPR=90^{\\circ} \\Rightarrow QR=p\\ \\text{is the hypotenuse}",
+            "en": "The right angle is at $P$, so the side opposite it, $QR=p$, is the hypotenuse; $PR=q$ is a leg.",
+            "zh": "直角在 $P$，故對邊 $QR=p$ 是斜邊，$PR=q$ 是其中一條直角邊。",
+            "highlight": [
+              "QR=p"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Express $PQ$ with $\\theta$",
+              "zh": "第 2 步 · 用 $\\theta$ 表示 $PQ$"
+            },
+            "math": "\\cos\\theta=\\frac{PQ}{QR}=\\frac{PQ}{p} \\Rightarrow PQ=p\\cos\\theta",
+            "en": "In the right angle at $Q$, $PQ$ is the side adjacent to $\\theta$ and $QR$ is the hypotenuse.",
+            "zh": "在 $Q$ 的直角關係中，$PQ$ 是 $\\theta$ 的鄰邊、$QR$ 是斜邊。",
+            "highlight": [
+              "PQ=p\\cos\\theta"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "S=\\frac{1}{2}(PQ)(PR)=\\frac{1}{2}(p\\cos\\theta)(q)=\\frac{1}{2}pq\\cos\\theta",
+            "en": "The two legs of the right angle at $P$ are $PQ$ and $PR$ — option C.",
+            "zh": "$P$ 處的兩條直角邊是 $PQ$ 與 $PR$，面積 $\\frac12 pq\\cos\\theta$，選 C。",
+            "highlight": [
+              "\\frac{1}{2}pq\\cos\\theta"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "B",
+            "en": "Using $\\sin$ means $PQ$ was taken as the opposite side of $\\theta$ — but the opposite side of $\\theta$ is $PR=q$.",
+            "zh": "用 $\\sin$ 等於把 $PQ$ 當成 $\\theta$ 的對邊 —— 但 $\\theta$ 的對邊是 $PR=q$。"
+          },
+          {
+            "opt": "D",
+            "en": "The area is a product of two lengths, so only $\\sin$ or $\\cos$ can appear; $\\tan$ would give a ratio, not an area.",
+            "zh": "面積是兩個長度相乘，只會出現 $\\sin$ 或 $\\cos$；$\\tan$ 得出的是比值，不是面積。"
+          }
+        ],
+        "tip": {
+          "en": "For a right triangle write down 'which angle, which side': adjacent/hypotenuse → $\\cos$, opposite/hypotenuse → $\\sin$; then substitute into $\\frac12\\times$ base $\\times$ height.",
+          "zh": "直角三角形先寫清楚「哪個角、哪條邊」：鄰邊／斜邊用 $\\cos$，對邊／斜邊用 $\\sin$；再代入 $\\frac12\\times$ 底 $\\times$ 高。"
+        }
+      }
+    },
+    "2026-p2-q20": {
+      "answer": "B",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Length $DE$ in $\\Delta DCE$",
+              "zh": "第 1 步 · 在 $\\Delta DCE$ 求 $DE$"
+            },
+            "math": "DC=AB=3,\\ CE=4 \\Rightarrow DE=5",
+            "en": "Opposite sides of a rectangle are equal, so $DC=3$; the right angle at $C$ gives the 3-4-5 triangle.",
+            "zh": "長方形對邊相等，故 $DC=3$；$C$ 是直角，得 3-4-5 直角三角形。",
+            "highlight": [
+              "DE=5"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Similar triangles",
+              "zh": "第 2 步 · 相似三角形"
+            },
+            "math": "\\Delta FBE\\sim\\Delta DCE,\\quad \\frac{FE}{DE}=\\frac{BE}{CE}=\\frac{12}{4}=3",
+            "en": "$FB\\parallel DC$ (both along $AB$/$DC$) and $FE$ is the same line as $DE$, so the two triangles are similar; the ratio of corresponding sides is $BE:CE$.",
+            "zh": "$FB\\parallel DC$（同在 $AB$／$DC$ 方向）且 $FE$ 與 $DE$ 同線，故兩三角形相似；對應邊比為 $BE:CE$。",
+            "highlight": [
+              "\\frac{FE}{DE}=3"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "EF=3\\times5=15",
+            "en": "So $EF$ is three times $DE$ — option B.",
+            "zh": "故 $EF$ 是 $DE$ 的三倍，得 15，選 B。",
+            "highlight": [
+              "15"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "C",
+            "en": "16 is $BC=BE+CE$ — that is the side of the rectangle, not $EF$.",
+            "zh": "16 是 $BC=BE+CE$（長方形的邊），不是 $EF$。"
+          },
+          {
+            "opt": "A",
+            "en": "13 comes from using the wrong pair of corresponding sides (e.g. adding the height $DC$ to $BE-CE$).",
+            "zh": "13 來自用錯對應邊（例如把高 $DC$ 誤加在 $BE-CE$ 上）。"
+          }
+        ],
+        "tip": {
+          "en": "When two lines are produced to meet, look for similar triangles first; match the vertices by the parallel lines, then use the ratio of the known collinear segments.",
+          "zh": "題目把線延長交於一點時，先找相似三角形：用平行線配對頂點，再用共線段的比例求長。"
+        }
+      }
+    },
+    "2026-p2-q21": {
+      "answer": "C",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Is there a right angle?",
+              "zh": "第 1 步 · 有沒有直角？"
+            },
+            "math": "9^{2}+40^{2}=81+1600=1681=41^{2}",
+            "en": "$WX=9$, $WY=40$, $XY=41$ satisfy Pythagoras, so $\\angle XWY=90^{\\circ}$.",
+            "zh": "$WX=9$、$WY=40$、$XY=41$ 符合畢氏定理，故 $\\angle XWY=90^{\\circ}$。",
+            "highlight": [
+              "\\angle XWY=90^{\\circ}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Similar triangles",
+              "zh": "第 2 步 · 相似三角形"
+            },
+            "math": "\\angle WXY=\\angle YWZ,\\ \\angle WYX=\\angle WZY \\Rightarrow \\Delta WXY\\sim\\Delta WZY",
+            "en": "Two pairs of equal angles give the similarity; the correspondence is $X\\leftrightarrow W$, $Y\\leftrightarrow Z$, $W\\leftrightarrow Y$.",
+            "zh": "兩對角相等即相似；對應關係是 $X\\leftrightarrow W$、$Y\\leftrightarrow Z$、$W\\leftrightarrow Y$。",
+            "highlight": [
+              "\\Delta WXY\\sim\\Delta WZY"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "\\frac{WY}{WX}=\\frac{40}{9} \\Rightarrow ZY=\\frac{40}{9}(40),\\ WZ=\\frac{40}{9}(41)",
+            "en": "Sides in the ratio $40:9$; perimeter $=9+41+\\frac{1600}{9}+\\frac{1640}{9}=50+360=410$ cm — option C.",
+            "zh": "對應邊比為 $40:9$；周長 $=9+41+\\frac{1600}{9}+\\frac{1640}{9}=50+360=410$ cm，選 C。",
+            "highlight": [
+              "410"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "A",
+            "en": "100 treats the quadrilateral as if $WZ=XY$ and $ZY=WX$ (i.e. a parallelogram) — the correct sides come from the similarity ratio $40:9$.",
+            "zh": "100 等於把四邊形當成平行四邊形（$WZ=XY$、$ZY=WX$）—— 正確的是用相似比 $40:9$ 求邊。"
+          },
+          {
+            "opt": "B",
+            "en": "Using the ratio $\\frac{WX}{WY}=\\frac{9}{40}$ the wrong way round shrinks the sides instead of enlarging them.",
+            "zh": "把比例 $\\frac{WX}{WY}=\\frac{9}{40}$ 用反了，會把邊縮小而不是放大。"
+          }
+        ],
+        "tip": {
+          "en": "Match similar-triangle vertices by the equal angles first, then every side ratio follows; when the perimeter is a neat number, expect fractions along the way.",
+          "zh": "相似三角形先用等角配對頂點，之後所有邊比自然出現；周長是整數時，中途分數通常會互相抵消。"
+        }
+      }
+    },
+    "2026-p2-q23": {
+      "answer": "D",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · $BCEF$ is a rectangle",
+              "zh": "第 1 步 · $BCEF$ 是長方形"
+            },
+            "math": "BC\\parallel EF,\\ BC=EF \\Rightarrow BF\\parallel CE",
+            "en": "In a regular hexagon opposite sides are parallel and equal, so $BC\\parallel EF$ and $BC=EF$; hence $BCEF$ is a parallelogram, giving $BF\\parallel CE$ (and $BC\\perp BF$). Since $G$ lies on $BF$, $BG\\parallel CE$: statement I is true.",
+            "zh": "正六邊形對邊平行且相等，故 $BC\\parallel EF$、$BC=EF$，$BCEF$ 為平行四邊形，得 $BF\\parallel CE$（且 $BC\\perp BF$）。$G$ 在 $BF$ 上，故 $BG\\parallel CE$，命題 I 成立。",
+            "highlight": [
+              "BG\\parallel CE"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Compare the sides of the two triangles",
+              "zh": "第 2 步 · 比較兩三角形的邊"
+            },
+            "math": "AB=1,\\ BF=\\sqrt{3},\\ BG=AG=\\frac{\\sqrt{3}}{3}",
+            "en": "$\\Delta ABF$ has $AB=AF=1$, $BF=\\sqrt3$ (since $\\angle BAF=120^{\\circ}$), so $\\angle ABF=30^{\\circ}$; with $\\angle ABC=120^{\\circ}$ we get $\\angle CBF=90^{\\circ}$. In the 30-60-90 triangle $BCG$ ($BC=1$), $BG=\\frac{1}{\\sqrt3}$ and $CG=\\frac{2}{\\sqrt3}$, so $AG=AC-CG=\\sqrt3-\\frac{2}{\\sqrt3}=\\frac{1}{\\sqrt3}$. Thus $\\Delta ABG$ has sides $1:\\frac{1}{\\sqrt3}:\\frac{1}{\\sqrt3}$, and $\\Delta BDC$ has $BD=\\sqrt3$, $DC=BC=1$, i.e. the same ratio: statement II is true.",
+            "zh": "$\\Delta ABF$ 中 $AB=AF=1$、$BF=\\sqrt3$（因 $\\angle BAF=120^{\\circ}$），故 $\\angle ABF=30^{\\circ}$；配合 $\\angle ABC=120^{\\circ}$ 得 $\\angle CBF=90^{\\circ}$。在 30-60-90 的 $\\Delta BCG$（$BC=1$）中，$BG=\\frac{1}{\\sqrt3}$、$CG=\\frac{2}{\\sqrt3}$，故 $AG=AC-CG=\\sqrt3-\\frac{2}{\\sqrt3}=\\frac{1}{\\sqrt3}$。於是 $\\Delta ABG$ 三邊比為 $1:\\frac{1}{\\sqrt3}:\\frac{1}{\\sqrt3}$，而 $\\Delta BDC$ 的 $BD=\\sqrt3$、$DC=BC=1$ 比值相同，命題 II 成立。",
+            "highlight": [
+              "\\Delta ABG\\sim\\Delta BDC"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "AG=BG=\\frac{\\sqrt{3}}{3},\\ GF=GC=\\frac{2\\sqrt{3}}{3},\\ AF=BC=1",
+            "en": "From Step 2, $GF=BF-BG=\\sqrt3-\\frac{\\sqrt3}{3}=\\frac{2\\sqrt3}{3}=GC$, and $AF=BC$; with $AG=BG$ the two triangles are congruent (SSS): statement III is true. All three hold — option D.",
+            "zh": "由第 2 步，$GF=BF-BG=\\sqrt3-\\frac{\\sqrt3}{3}=\\frac{2\\sqrt3}{3}=GC$，且 $AF=BC$；配合 $AG=BG$，兩三角形 SSS 全等，命題 III 成立。三個都對，選 D。",
+            "highlight": [
+              "\\Delta AGF\\cong\\Delta BGC",
+              "\\text{D}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "C",
+            "en": "Judging from the picture that $BG$ and $CE$ are not parallel — but $BCEF$ is a parallelogram, so they are.",
+            "zh": "憑圖覺得 $BG$ 與 $CE$ 不平行 —— 但 $BCEF$ 是平行四邊形，它們確實平行。"
+          },
+          {
+            "opt": "B",
+            "en": "Comparing the wrong pairs of sides in II (e.g. $AB$ with $BC$) makes the ratio look unequal.",
+            "zh": "比較 II 時配錯對應邊（例如把 $AB$ 對上 $BC$），比例就會看起來不相等。"
+          }
+        ],
+        "tip": {
+          "en": "In a regular hexagon, remember $\\angle ABC=120^{\\circ}$, opposite sides parallel and equal, and the two-step diagonal $=\\sqrt3\\times$ side; these three facts settle most such questions.",
+          "zh": "正六邊形記住三件事：內角 $120^{\\circ}$、對邊平行且相等、跨兩邊的對角線 $=\\sqrt3\\times$ 邊長；多數題目用這三點就解得完。"
+        }
+      }
+    },
+    "2026-p2-q24": {
+      "answer": "D",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Translate",
+              "zh": "第 1 步 · 平移"
+            },
+            "math": "U=(3-5,\\ 1)=(-2,\\ 1)",
+            "en": "'Leftwards by 5 units' subtracts 5 from the $x$-coordinate only.",
+            "zh": "「向左移 5 單位」只把 $x$ 坐標減 5。",
+            "highlight": [
+              "U=(-2,1)"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Rotation anticlockwise through $270^{\\circ}$",
+              "zh": "第 2 步 · 逆時針旋轉 $270^{\\circ}$"
+            },
+            "math": "(x,y)\\mapsto(y,-x)",
+            "en": "Anticlockwise $270^{\\circ}$ = clockwise $90^{\\circ}$, and a clockwise quarter turn sends $(x,y)$ to $(y,-x)$.",
+            "zh": "逆時針 $270^{\\circ}$ 等於順時針 $90^{\\circ}$；順時針轉 90° 把 $(x,y)$ 變成 $(y,-x)$。",
+            "highlight": [
+              "(x,y)\\mapsto(y,-x)"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "V=(1,\\ 2) \\Rightarrow y\\text{-coordinate}=2",
+            "en": "Applying it to $U(-2,1)$ gives $(1,2)$ — option D.",
+            "zh": "對 $U(-2,1)$ 應用後得 $(1,2)$，y 坐標為 2，選 D。",
+            "highlight": [
+              "2"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "A",
+            "en": "Rotating only $90^{\\circ}$ anticlockwise (rule $(x,y)\\mapsto(-y,x)$) gives $y=-2$.",
+            "zh": "只轉 $90^{\\circ}$（規則 $(x,y)\\mapsto(-y,x)$）會得到 y 坐標 $-2$。"
+          },
+          {
+            "opt": "B",
+            "en": "Rotating $180^{\\circ}$ instead of $270^{\\circ}$ gives $y=-1$.",
+            "zh": "轉 $180^{\\circ}$ 而不是 $270^{\\circ}$，會得到 y 坐標 $-1$。"
+          }
+        ],
+        "tip": {
+          "en": "Memorise the quarter turns: anticlockwise $90^{\\circ}$ $(x,y)\\to(-y,x)$ and clockwise $90^{\\circ}$ $(x,y)\\to(y,-x)$; any multiple of $90^{\\circ}$ follows from these.",
+          "zh": "記住 90° 旋轉：逆時針 $(x,y)\\to(-y,x)$、順時針 $(x,y)\\to(y,-x)$，其他 $90^{\\circ}$ 倍數都可由此推出。"
+        }
+      }
+    },
+    "2026-p2-q25": {
+      "answer": "B",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · The central angle",
+              "zh": "第 1 步 · 圓心角"
+            },
+            "math": "\\angle POQ=\\angle POT=82^{\\circ}",
+            "en": "$T$ lies on $OQ$, so $OP$ and $OT$ make the same angle as $OP$ and $OQ$.",
+            "zh": "$T$ 在 $OQ$ 上，故 $OP$ 與 $OT$ 的夾角就是 $OP$ 與 $OQ$ 的夾角。",
+            "highlight": [
+              "\\angle POQ=82^{\\circ}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Angles in $\\Delta POT$",
+              "zh": "第 2 步 · $\\Delta POT$ 的內角"
+            },
+            "math": "\\angle PTO=180^{\\circ}-104^{\\circ}=76^{\\circ} \\Rightarrow \\angle OPT=22^{\\circ}",
+            "en": "$TO$ and $TQ$ are opposite rays, so $\\angle PTO$ is supplementary to $\\angle PTQ=104^{\\circ}$; the angle sum then gives $\\angle OPT=22^{\\circ}$.",
+            "zh": "$TO$ 與 $TQ$ 反向，故 $\\angle PTO$ 與 $\\angle PTQ=104^{\\circ}$ 互補；再由內角和得 $\\angle OPT=22^{\\circ}$。",
+            "highlight": [
+              "\\angle OPT=22^{\\circ}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "\\angle POR=180^{\\circ}-2(22^{\\circ})=136^{\\circ},\\ \\angle QOR=54^{\\circ}",
+            "en": "In isosceles $\\Delta OPR$ ($OP=OR$ as radii), $\\angle ORP=\\angle OPR=22^{\\circ}$. Hence $\\angle QOR=136^{\\circ}-82^{\\circ}=54^{\\circ}$, and the angle in the alternate segment gives $\\angle QSR=\\frac{54^{\\circ}}{2}=27^{\\circ}$ — option B.",
+            "zh": "等腰 $\\Delta OPR$（$OP=OR$ 為半徑）中 $\\angle ORP=\\angle OPR=22^{\\circ}$，故 $\\angle QOR=136^{\\circ}-82^{\\circ}=54^{\\circ}$；由同弓形圓周角得 $\\angle QSR=\\frac{54^{\\circ}}{2}=27^{\\circ}$，選 B。",
+            "highlight": [
+              "27^{\\circ}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "A",
+            "en": "22° is the angle at $P$ in $\\Delta POT$, not the inscribed angle asked for — one more step ($\\angle QOR\\div2$) is needed.",
+            "zh": "22° 是 $\\Delta POT$ 在 $P$ 的角，不是題目要的圓周角 —— 還要再算 $\\angle QOR\\div2$。"
+          },
+          {
+            "opt": "D",
+            "en": "Halving the wrong central angle (or using $136^{\\circ}$) gives a value near 49°; the inscribed angle must subtend $\\angle QOR$.",
+            "zh": "把錯誤的圓心角除以 2（或用 $136^{\\circ}$）會得到接近 49° 的值；圓周角要對應 $\\angle QOR$。"
+          }
+        ],
+        "tip": {
+          "en": "When a diameter-like radius meets a chord inside the circle, first find the triangle's angles at the centre, then use 'angle at centre $=2\\times$ angle at circumference'.",
+          "zh": "半徑與弦在圓內相交時，先求出圓心處的三角形內角，再用「圓心角＝圓周角的兩倍」。"
+        }
+      }
+    },
+    "2026-p2-q26": {
+      "answer": "D",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Recognise the locus",
+              "zh": "第 1 步 · 認出軌跡"
+            },
+            "math": "d(P,L_1)=d(P,L_2)",
+            "en": "The set of points equidistant from two straight lines is the pair of angle bisectors of the lines.",
+            "zh": "與兩條直線距離相等的點集，就是這兩條直線的兩條角平分線。",
+            "highlight": [
+              "\\text{angle bisectors}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Do the lines meet?",
+              "zh": "第 2 步 · 兩線是否相交"
+            },
+            "math": "-\\frac{3}{5}\\neq\\frac{3}{5}",
+            "en": "The slopes $-\\frac35$ and $\\frac{3}{5}$ are different, so $L_1$ and $L_2$ are not parallel; they cross, giving two distinct bisectors.",
+            "zh": "斜率 $-\\frac35$ 與 $\\frac{3}{5}$ 不同，$L_1$ 與 $L_2$ 不平行而相交，故有兩條不同的角平分線。",
+            "highlight": [
+              "\\text{two lines}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "\\text{a pair of straight lines}",
+            "en": "The locus is two straight lines — option D.",
+            "zh": "軌跡是一對直線，選 D。",
+            "highlight": [
+              "\\text{D}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "A",
+            "en": "A single point would mean only one point is equidistant — no: every point on either bisector is.",
+            "zh": "「一點」意味只有一個點等距 —— 其實兩條角平分線上的每一點都等距。"
+          },
+          {
+            "opt": "B",
+            "en": "A circle is the locus of points at a fixed distance from ONE point, not from two lines.",
+            "zh": "圓是「與某一點距離固定」的軌跡，不是與兩條直線等距。"
+          }
+        ],
+        "tip": {
+          "en": "Locus language: equidistant from two points → perpendicular bisector; from two lines → angle bisectors; from one point → circle.",
+          "zh": "軌跡語言：與兩點等距 → 垂直平分線；與兩直線等距 → 角平分線；與一點等距 → 圓。"
+        }
+      }
+    },
+    "2026-p2-q27": {
+      "answer": "A",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Write the centre",
+              "zh": "第 1 步 · 設圓心"
+            },
+            "math": "C=(5,\\ k)",
+            "en": "The centre has $x$-coordinate 5; its $y$-coordinate is unknown.",
+            "zh": "圓心的 $x$ 坐標是 5，$y$ 坐標未知。",
+            "highlight": [
+              "(5,k)"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Equal radii",
+              "zh": "第 2 步 · 半徑相等"
+            },
+            "math": "k^{2}=36+(4-k)^{2} \\Rightarrow 8k=52 \\Rightarrow k=6.5",
+            "en": "The distances to $(5,0)$ and $(11,4)$ are both radii, so equate them.",
+            "zh": "到 $(5,0)$ 與 $(11,4)$ 的距離都是半徑，令兩者相等。",
+            "highlight": [
+              "k=6.5"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "r=6.5 \\Rightarrow 2\\pi r=13\\pi",
+            "en": "The circumference is $13\\pi$ — option A.",
+            "zh": "周長 $=2\\pi r=13\\pi$，選 A。",
+            "highlight": [
+              "13\\pi"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "C",
+            "en": "22π uses $r=11$, taking the $x$-coordinate of $(11,4)$ as the radius — the radius is a distance, not a coordinate.",
+            "zh": "22π 用了 $r=11$，把 $(11,4)$ 的 $x$ 坐標當半徑 —— 半徑是距離，不是坐標。"
+          },
+          {
+            "opt": "D",
+            "en": "42π is about a diameter of 42; it comes from confusing diameter with radius.",
+            "zh": "42π 相當於直徑 42，是把直徑與半徑混淆。"
+          }
+        ],
+        "tip": {
+          "en": "For a circle through two points with a known centre line, just use 'radius = radius': set the two distance expressions equal and solve.",
+          "zh": "已知圓心在某直線上、圓過兩點時，直接用「半徑＝半徑」：令兩個距離式相等後解方程。"
+        }
+      }
+    },
+    "2026-p2-q28": {
+      "answer": "C",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Total number of pairs",
+              "zh": "第 1 步 · 配對總數"
+            },
+            "math": "\\binom{5}{2}=10",
+            "en": "Two cards are drawn at the same time, so order does not matter: 10 equally likely pairs.",
+            "zh": "同時抽兩張，次序不重要，共有 $\\binom52=10$ 個等可能的組合。",
+            "highlight": [
+              "10"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Count the favourable pairs",
+              "zh": "第 2 步 · 數有利組合"
+            },
+            "math": "(2,6)\\times2,\\ (3,6),\\ (4,6) \\Rightarrow 4",
+            "en": "Only sums greater than 7 count: $2+6=8$ (two ways, since there are two 2's), $3+6=9$, $4+6=10$.",
+            "zh": "只有和大於 7 才算：$2+6=8$（有兩張 2，故兩個組合）、$3+6=9$、$4+6=10$。",
+            "highlight": [
+              "4\\ \\text{pairs}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "P=\\frac{4}{10}=\\frac{2}{5}",
+            "en": "Simplify the fraction — option C.",
+            "zh": "約簡後得 $\\frac25$，選 C。",
+            "highlight": [
+              "\\frac{2}{5}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "D",
+            "en": "$\\frac{3}{10}$ counts only one of the two $(2,6)$ pairs — the two cards numbered 2 are distinct cards.",
+            "zh": "$\\frac{3}{10}$ 只算了一個 $(2,6)$ 組合 —— 兩張寫著 2 的是不同的紙卡。"
+          },
+          {
+            "opt": "B",
+            "en": "$\\frac15$ is $\\frac{2}{10}$, counting only the $(2,6)$ pairs and forgetting $3+6$ and $4+6$.",
+            "zh": "$\\frac15$ 就是 $\\frac{2}{10}$，只算了 $(2,6)$，漏掉 $3+6$ 與 $4+6$。"
+          }
+        ],
+        "tip": {
+          "en": "List every pair systematically (fix the smaller card and pair it with each larger one); identical numbers are still separate cards, so count them separately.",
+          "zh": "系統地列出所有組合（固定較小的那張，逐個配對），數字相同但卡片不同，要分別計算。"
+        }
+      }
+    },
+    "2026-p2-q29": {
+      "answer": "D",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · What a box-and-whisker diagram shows",
+              "zh": "第 1 步 · 盒鬚圖顯示甚麼"
+            },
+            "math": "\\text{min},\\ Q_1,\\ \\text{median},\\ Q_3,\\ \\text{max}",
+            "en": "The five marks on a box-and-whisker diagram are exactly these five values.",
+            "zh": "盒鬚圖上的五個記號正正就是這五個值。",
+            "highlight": [
+              "Q_1",
+              "Q_3"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Which statements follow",
+              "zh": "第 2 步 · 哪些命題可以得出"
+            },
+            "math": "\\text{IQR}=Q_3-Q_1",
+            "en": "The lower quartile is read off directly (II), and the inter-quartile range is $Q_3-Q_1$ (III). The mean needs every individual datum, which the diagram does not show (I is false).",
+            "zh": "下四分位數可直接讀出（II）；四分位距為 $Q_3-Q_1$（III）。平均數需要每一個數據，圖中沒有（I 錯）。",
+            "highlight": [
+              "\\text{II and III}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "\\text{D}",
+            "en": "So II and III — option D.",
+            "zh": "故 II 與 III，選 D。",
+            "highlight": [
+              "\\text{D}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "C",
+            "en": "Reading the median as if it were the mean — they are equal only for symmetric data, and the diagram alone cannot tell.",
+            "zh": "把中位數當成平均數 —— 只有對稱數據才會相等，單憑盒鬚圖無法判斷。"
+          },
+          {
+            "opt": "A",
+            "en": "Assuming the median mark is the mean.",
+            "zh": "誤以為圖上的中位數就是平均數。"
+          }
+        ],
+        "tip": {
+          "en": "Box-and-whisker gives position (quartiles, median, range, IQR) but never the sum of the data, so the mean and standard deviation cannot be read off.",
+          "zh": "盒鬚圖只給位置資訊（四分位數、中位數、全距、四分位距），沒有數據總和，所以平均數與標準差都讀不出來。"
+        }
+      }
+    },
+    "2026-p2-q30": {
+      "answer": "B",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Use the mean and the range",
+              "zh": "第 1 步 · 用平均數與全距"
+            },
+            "math": "68+x+y=90 \\Rightarrow x+y=22;\\quad 13-4=9",
+            "en": "The ten numbers have mean 9, so their sum is 90; the known ones add up to 68. The range is already $13-4=9$, so neither $x$ nor $y$ can lie outside $[4,13]$. Hence $x,y\\ge9$.",
+            "zh": "十個數平均 9，總和 90，已知數之和為 68。全距已是 $13-4=9$，故 $x,y$ 都不能超出 $[4,13]$，於是 $x,y\\ge9$。",
+            "highlight": [
+              "x+y=22",
+              "x,y\\ge9"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · The median",
+              "zh": "第 2 步 · 中位數"
+            },
+            "math": "\\text{median}=\\frac{8+\\min(x,y)}{2}\\ge\\frac{8+9}{2}=8.5>7",
+            "en": "In order, the data are $4,7,7,7,8,\\min(x,y),\\ldots$, so the 5th value is 8 and the 6th is at least 9: statement II is always true.",
+            "zh": "由小至大排列為 $4,7,7,7,8,\\min(x,y),\\ldots$，第 5 個是 8、第 6 個至少是 9，故命題 II 恆成立。",
+            "highlight": [
+              "\\text{median}>7"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "x=y=11:\\ u=7,\\ w=11",
+            "en": "But $x=y=11$ is allowed, and then the variance is $70\\div10=7$ (so I fails) and the mode is 11 (so III fails). Only II must be true — option B.",
+            "zh": "但 $x=y=11$ 也符合條件，此時變異數為 $70\\div10=7$（I 不成立）、眾數為 11（III 不成立）。只有 II 必然成立，選 B。",
+            "highlight": [
+              "\\text{II only}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "D",
+            "en": "Testing only one pair (say $x=9,y=13$) makes III look true; $x=y=11$ is a counter-example.",
+            "zh": "只試一組（例如 $x=9,y=13$）會覺得 III 成立；$x=y=11$ 就是反例。"
+          },
+          {
+            "opt": "C",
+            "en": "Statement I fails too: with $x=y=11$ the variance is exactly 7, and with other pairs it is larger than 7.",
+            "zh": "命題 I 也不成立：$x=y=11$ 時變異數正好是 7，其他情況更超過 7。"
+          }
+        ],
+        "tip": {
+          "en": "For 'must be true' questions, find the complete range of the unknowns first, then look for a counter-example — one valid set that breaks a statement is enough.",
+          "zh": "「必然成立」的題目：先定出未知數的完整範圍，再找反例 —— 只要有一組合法數據推翻命題，該命題就不成立。"
+        }
+      }
+    },
+    "2026-p2-q31": {
+      "answer": "A",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Split into two bytes",
+              "zh": "第 1 步 · 分成兩段"
+            },
+            "math": "10101000\\,|\\,00001110",
+            "en": "Sixteen binary digits: read the top eight bits and the bottom eight bits separately.",
+            "zh": "十六個二進位數字：高位八位與低位八位分開看。",
+            "highlight": [
+              "10101000",
+              "00001110"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Value of each part",
+              "zh": "第 2 步 · 各段的值"
+            },
+            "math": "10101000_2=168=21\\times2^{3},\\quad 00001110_2=14",
+            "en": "$168=128+32+8=21\\times8$; the low byte is $8+4+2=14$.",
+            "zh": "$168=128+32+8=21\\times8$；低位元組為 $8+4+2=14$。",
+            "highlight": [
+              "168",
+              "14"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "168\\times2^{8}+14=21\\times2^{3}\\times2^{8}+14=21\\times2^{11}+14",
+            "en": "The high byte stands for $2^{8}$ times its value — option A.",
+            "zh": "高位元組代表它本身的值乘 $2^{8}$，得 $21\\times2^{11}+14$，選 A。",
+            "highlight": [
+              "21\\times2^{11}+14"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "B",
+            "en": "$+28$ doubles the low byte: the last four bits $1110$ are $8+4+2=14$, not 28.",
+            "zh": "$+28$ 把低位元組加倍了：最後四位 $1110$ 是 $8+4+2=14$，不是 28。"
+          },
+          {
+            "opt": "C",
+            "en": "Using $2^{12}$ means one bit was skipped — the high byte covers $2^{15}$ down to $2^{8}$.",
+            "zh": "用 $2^{12}$ 等於漏了一位 —— 高位元組對應 $2^{15}$ 至 $2^{8}$。"
+          }
+        ],
+        "tip": {
+          "en": "For a long binary string, split it into bytes (or nibbles): the high part contributes its value times $2^{8}$ (or $2^{4}$).",
+          "zh": "長二進位數先按位元組（或半位元組）切開：高位部分代表「它的值 × $2^{8}$（或 $2^{4}$）」。"
+        }
+      }
+    },
+    "2026-p2-q32": {
+      "answer": "D",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · The rule for each letter",
+              "zh": "第 1 步 · 每個字母的規則"
+            },
+            "math": "\\min(\\text{三者})=HCF,\\quad \\max(\\text{三者})=LCM",
+            "en": "For every variable, the smallest exponent among the three expressions is the H.C.F. exponent and the largest is the L.C.M. exponent.",
+            "zh": "對每個字母而言，三個指數中最小的等於 H.C.F. 的指數、最大的等於 L.C.M. 的指數。",
+            "highlight": [
+              "\\min=HCF",
+              "\\max=LCM"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Fix $x$ and $y$",
+              "zh": "第 2 步 · 定 $x$ 與 $y$"
+            },
+            "math": "x:\\ 1,1\\Rightarrow\\text{third}=x^{2};\\qquad y:\\ 3,2\\Rightarrow\\text{third}=y^{4}",
+            "en": "$x$: the first two have $x^{1}$, so the third must carry $x^{2}$ to reach the L.C.M. $x^{2}$. $y$: to make the maximum 4 the third must be $y^{4}$.",
+            "zh": "$x$：前兩式都是 $x^{1}$，故第三式需帶 $x^{2}$ 才達到 L.C.M. 的 $x^{2}$。$y$：要令最大為 4，第三式須為 $y^{4}$。",
+            "highlight": [
+              "x^{2}",
+              "y^{4}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "z:\\ \\min(6,4,z)=3 \\Rightarrow z^{3}",
+            "en": "$z$: the minimum of $6,4$ and the unknown is 3, so the third expression carries $z^{3}$ (and indeed $\\max(6,4,3)=6$ matches the L.C.M.). The third expression is $x^{2}y^{4}z^{3}$ — option D.",
+            "zh": "$z$：$6$、$4$ 與未知數的最小值是 3，故第三式帶 $z^{3}$（而 $\\max(6,4,3)=6$ 正好符合 L.C.M.）。第三式為 $x^{2}y^{4}z^{3}$，選 D。",
+            "highlight": [
+              "x^{2}y^{4}z^{3}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "B",
+            "en": "Taking $y^{4}$ but keeping $z^{4}$: the H.C.F. has $z^{3}$, so the smallest of $6,4$ and the third exponent must be 3.",
+            "zh": "取了 $y^{4}$ 卻保留 $z^{4}$：H.C.F. 是 $z^{3}$，所以 $6$、$4$ 與第三個指數中的最小值必須是 3。"
+          },
+          {
+            "opt": "C",
+            "en": "$y^{2}$ leaves the maximum at 3 ($xy^{3}z^{6}$ already reaches $y^{3}$), so the L.C.M. could never be $y^{4}$.",
+            "zh": "$y^{2}$ 會令最大值停留在 3（$xy^{3}z^{6}$ 本身已達 $y^{3}$），L.C.M. 就永遠到不了 $y^{4}$。"
+          }
+        ],
+        "tip": {
+          "en": "For H.C.F./L.C.M. of expressions, compare exponents variable by variable: min must equal the H.C.F. and max must equal the L.C.M.",
+          "zh": "求多項式的 H.C.F./L.C.M.：逐個字母比較指數，最小值要等於 H.C.F.、最大值要等於 L.C.M.。"
+        }
+      }
+    },
+    "2026-p2-q33": {
+      "answer": "C",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · First two terms",
+              "zh": "第 1 步 · 首兩項"
+            },
+            "math": "a_1=S_1=2,\\quad a_2=S_2-S_1=(9-1)-2=6",
+            "en": "The first term is $S_1$; the second is $S_2-S_1$. So the 2nd term is 6, not 8 — statement I is false.",
+            "zh": "首項為 $S_1$；第二項為 $S_2-S_1$。故第 2 項是 6 而不是 8，命題 I 錯誤。",
+            "highlight": [
+              "a_2=6"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · General term",
+              "zh": "第 2 步 · 通項"
+            },
+            "math": "a_n=S_n-S_{n-1}=3^{n}-3^{n-1}=2\\cdot3^{n-1}",
+            "en": "This holds for $n\\ge2$ (and also for $n=1$: $2\\cdot3^{0}=2$). Each term is the previous one times 3, so the sequence is geometric — statement II is true.",
+            "zh": "此式對 $n\\ge2$ 成立（$n=1$ 亦合：$2\\cdot3^{0}=2$）。每項是前一項的 3 倍，故為等比數列，命題 II 成立。",
+            "highlight": [
+              "a_n=2\\cdot3^{n-1}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "2\\cdot3^{n-1}=2\\times\\text{integer}",
+            "en": "$3^{n-1}$ is an integer, so every term is a multiple of 2 — statement III is true. Answer: II and III, option C.",
+            "zh": "$3^{n-1}$ 是整數，故每項都是 2 的倍數，命題 III 成立。答案為 II 與 III，選 C。",
+            "highlight": [
+              "\\text{even}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "D",
+            "en": "Taking $a_2=S_2=8$ — but $S_2$ is the sum of the first two terms, not the second term.",
+            "zh": "把 $a_2$ 當成 $S_2=8$ —— 但 $S_2$ 是首兩項之和，不是第二項。"
+          },
+          {
+            "opt": "A",
+            "en": "Accepting I and II but forgetting to check the parity in III.",
+            "zh": "接受了 I 與 II，卻忘了檢驗 III 的奇偶性。"
+          }
+        ],
+        "tip": {
+          "en": "Always use $a_n=S_n-S_{n-1}$ (for $n\\ge2$) and check $a_1=S_1$ separately; never read $a_n$ straight off $S_n$.",
+          "zh": "一律用 $a_n=S_n-S_{n-1}$（$n\\ge2$），再單獨檢查 $a_1=S_1$；不要把 $S_n$ 直接當成 $a_n$。"
+        }
+      }
+    },
+    "2026-p2-q34": {
+      "answer": "C",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Simplify the numerator",
+              "zh": "第 1 步 · 化簡分子"
+            },
+            "math": "i^{4}+2i^{3}+3i^{2}+4i=1-2i-3+4i=-2+2i",
+            "en": "Using $i^{2}=-1$: $i^{4}=1$, $i^{3}=-i$.",
+            "zh": "利用 $i^{2}=-1$：$i^{4}=1$、$i^{3}=-i$。",
+            "highlight": [
+              "-2+2i"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Make the expression real",
+              "zh": "第 2 步 · 令整式為實數"
+            },
+            "math": "\\frac{-2+2i}{\\beta i-1}\\cdot\\frac{-\\beta i-1}{-\\beta i-1}=\\frac{(2+2\\beta)+(2\\beta-2)i}{\\beta^{2}+1}",
+            "en": "Multiply by the conjugate of the denominator; the denominator becomes the real number $\\beta^{2}+1$.",
+            "zh": "分子分母同乘分母的共軛，分母化為實數 $\\beta^{2}+1$。",
+            "highlight": [
+              "(2\\beta-2)i"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "2\\beta-2=0 \\Rightarrow \\beta=1",
+            "en": "For a real value the imaginary part must vanish — option C.",
+            "zh": "要是實數，虛部必須為 0，故 $\\beta=1$，選 C。",
+            "highlight": [
+              "\\beta=1"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "A",
+            "en": "Getting $-2$ usually means a sign slip in $i^{3}=-i$ or in the conjugate step.",
+            "zh": "得到 $-2$ 通常是 $i^{3}=-i$ 或共軛那一步的符號出錯。"
+          },
+          {
+            "opt": "D",
+            "en": "Setting the real part to 0 instead of the imaginary part gives $\\beta=-1$; a real number needs **zero imaginary part**.",
+            "zh": "令實部為 0（而不是虛部）會得到 $\\beta=-1$；要成為實數，需要**虛部為 0**。"
+          }
+        ],
+        "tip": {
+          "en": "To make $\\frac{z}{w}$ real, multiply by the conjugate of $w$ and set the imaginary part of the product to zero — $z\\bar w$ must be real.",
+          "zh": "要令 $\\frac{z}{w}$ 為實數：乘以 $w$ 的共軛後，令乘積的虛部為 0 —— 即 $z\\bar w$ 要是實數。"
+        }
+      }
+    },
+    "2026-p2-q35": {
+      "answer": "B",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Increasing or decreasing?",
+              "zh": "第 1 步 · 增函數還是減函數？"
+            },
+            "math": "y=2-\\log_{3}(x+4)",
+            "en": "As $x$ increases, $\\log_3(x+4)$ increases, so $2-\\log_3(x+4)$ **decreases**. Statement I is false.",
+            "zh": "當 $x$ 增大，$\\log_3(x+4)$ 增大，故 $2-\\log_3(x+4)$ **減少**。命題 I 錯誤。",
+            "highlight": [
+              "\\text{decreasing}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · $x$-intercept",
+              "zh": "第 2 步 · x 截距"
+            },
+            "math": "0=2-\\log_{3}(x+4) \\Rightarrow \\log_{3}(x+4)=2 \\Rightarrow x+4=9",
+            "en": "So the $x$-intercept is $x=5$ — statement II is true.",
+            "zh": "故 x 截距為 $x=5$，命題 II 成立。",
+            "highlight": [
+              "x=5"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "x=0 \\Rightarrow y=2-\\log_{3}4\\approx0.74\\neq2",
+            "en": "The $y$-intercept is $2-\\log_34$, not 2, so III is false. Answer B.",
+            "zh": "y 截距是 $2-\\log_34$ 而不是 2，故 III 錯誤。答案 B。",
+            "highlight": [
+              "y\\neq2"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "D",
+            "en": "Reading the constant 2 in $y=2-\\log_3(x+4)$ as the $y$-intercept — it is only the vertical shift.",
+            "zh": "把 $y=2-\\log_3(x+4)$ 中的常數 2 當成 y 截距 —— 它只是圖像的上下平移量。"
+          },
+          {
+            "opt": "C",
+            "en": "Treating $-\\log$ as increasing: a minus sign in front reflects the curve, so it decreases.",
+            "zh": "把 $-\\log$ 當成增函數：前面的負號會把圖像上下反轉，故為減函數。"
+          }
+        ],
+        "tip": {
+          "en": "For $y=c\\pm\\log_a(x+b)$: the sign of the logarithm decides increasing/decreasing; put $y=0$ for the $x$-intercept and $x=0$ for the $y$-intercept.",
+          "zh": "對 $y=c\\pm\\log_a(x+b)$：對數前的正負決定增減；求 x 截距令 $y=0$，求 y 截距令 $x=0$。"
+        }
+      }
+    },
+    "2026-p2-q36": {
+      "answer": "D",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Take logarithms",
+              "zh": "第 1 步 · 取對數"
+            },
+            "math": "y=ab^{x} \\Rightarrow \\log y=\\log a+x\\log b",
+            "en": "So $\\log y$ is linear in $x$ with vertical intercept $\\log a$ and slope $\\log b$.",
+            "zh": "故 $\\log y$ 是 $x$ 的線性函數，縱軸截距為 $\\log a$、斜率為 $\\log b$。",
+            "highlight": [
+              "\\log a+x\\log b"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Read the vertical intercept",
+              "zh": "第 2 步 · 讀縱軸截距"
+            },
+            "math": "\\log a=2",
+            "en": "The graph of $\\log y$ against $x$ has vertical intercept 2, and that intercept is $\\log a$.",
+            "zh": "以 $x$ 為橫軸、$\\log y$ 為縱軸的圖，其縱軸截距是 2，而該截距等於 $\\log a$。",
+            "highlight": [
+              "\\log a=2"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "a=10^{2}=100",
+            "en": "Base 10 logarithms (as used in DSE) give $a=100$ — option D.",
+            "zh": "以 10 為底（DSE 常用）得 $a=10^{2}=100$，選 D。",
+            "highlight": [
+              "100"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "A",
+            "en": "$0.01=10^{-2}$ reverses the sign — the intercept 2 means $\\log a=+2$.",
+            "zh": "$0.01=10^{-2}$ 把符號弄反了 —— 截距是 2，即 $\\log a=+2$。"
+          },
+          {
+            "opt": "C",
+            "en": "Taking $a=10$ (i.e. $\\log a=1$) ignores the actual intercept value 2.",
+            "zh": "取 $a=10$（即 $\\log a=1$）忽略了真正的截距 2。"
+          }
+        ],
+        "tip": {
+          "en": "For $y=ab^{x}$, the vertical intercept of the $\\log y$ vs $x$ graph is $\\log a$ and the slope is $\\log b$ — memorise this pair.",
+          "zh": "對 $y=ab^{x}$：$\\log y$ 對 $x$ 的圖，縱軸截距是 $\\log a$、斜率是 $\\log b$ —— 這兩點要背熟。"
+        }
+      }
+    },
+    "2026-p2-q37": {
+      "answer": "A",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Find the vertices of $R$",
+              "zh": "第 1 步 · 求 $R$ 的頂點"
+            },
+            "math": "(10,7),\\quad(-11,7),\\quad(2,1)",
+            "en": "The three boundary lines meet in pairs: $y=7$ with $3x-4y=2$ gives $(10,7)$; $y=7$ with $6x+13y=25$ gives $(-11,7)$; the last two give $(2,1)$. All three satisfy the remaining inequality.",
+            "zh": "三條邊界線兩兩相交：$y=7$ 與 $3x-4y=2$ 得 $(10,7)$；$y=7$ 與 $6x+13y=25$ 得 $(-11,7)$；另兩線得 $(2,1)$。三點都滿足其餘不等式。",
+            "highlight": [
+              "(10,7)",
+              "(-11,7)",
+              "(2,1)"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Evaluate at each vertex",
+              "zh": "第 2 步 · 逐個頂點求值"
+            },
+            "math": "106,\\quad 1,\\quad 42",
+            "en": "$5x+4y+28$ equals $106$ at $(10,7)$, $1$ at $(-11,7)$ and $42$ at $(2,1)$.",
+            "zh": "$5x+4y+28$ 在 $(10,7)$ 為 106、在 $(-11,7)$ 為 1、在 $(2,1)$ 為 42。",
+            "highlight": [
+              "106",
+              "1",
+              "42"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "\\min=1",
+            "en": "A linear function on a polygon takes its extreme values at vertices, so the least value is 1 — option A.",
+            "zh": "線性函數在多邊形上的極值必在頂點取得，故最小值為 1，選 A。",
+            "highlight": [
+              "1"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "D",
+            "en": "106 is the **maximum** (at $(10,7)$) — the question asks for the least value.",
+            "zh": "106 是**最大值**（在 $(10,7)$ 取得）—— 題目問的是最小值。"
+          },
+          {
+            "opt": "C",
+            "en": "42 is the value at $(2,1)$; testing only one vertex misses the true minimum.",
+            "zh": "42 是 $(2,1)$ 處的值；只試一個頂點會錯過真正的最小值。"
+          }
+        ],
+        "tip": {
+          "en": "Linear programming: sketch the region, list **all** vertices, evaluate the objective at each; the extreme values sit at vertices.",
+          "zh": "線性規劃：畫出可行區域，列出**所有**頂點，逐個代入目標函數；極值必在頂點。"
+        }
+      }
+    },
+    "2026-p2-q38": {
+      "answer": "B",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Read the arcs from $AB\\parallel TC$",
+              "zh": "第 1 步 · 由 $AB\\parallel TC$ 得弧"
+            },
+            "math": "\\angle ABD=\\angle CTD=23^{\\circ} \\Rightarrow \\text{arc }AD=46^{\\circ}",
+            "en": "$AB\\parallel TC$ and $T,B,D$ are collinear, so the angle $\\angle CTD=23^{\\circ}$ equals $\\angle ABD$. An inscribed angle is half its arc, so arc $AD=46^{\\circ}$.",
+            "zh": "$AB\\parallel TC$ 且 $T,B,D$ 共線，故 $\\angle CTD=23^{\\circ}$ 等於 $\\angle ABD$；圓周角是所對弧的一半，故弧 $AD=46^{\\circ}$。",
+            "highlight": [
+              "\\text{arc }AD=46^{\\circ}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Use the angle between the chords",
+              "zh": "第 2 步 · 用弦交角"
+            },
+            "math": "85^{\\circ}=\\frac{1}{2}(\\text{arc }AD+\\text{arc }BC)=\\frac{1}{2}(46^{\\circ}+\\text{arc }BC)",
+            "en": "The angle between two chords equals half the sum of the arcs cut off by the angle and its vertical angle; hence arc $BC=124^{\\circ}$ (so $\\angle CDB=62^{\\circ}$).",
+            "zh": "兩弦的夾角等於「該角與其對頂角所截兩弧之和」的一半，故弧 $BC=124^{\\circ}$（即 $\\angle CDB=62^{\\circ}$）。",
+            "highlight": [
+              "\\text{arc }BC=124^{\\circ}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "\\angle TCD=\\angle CBD=\\frac{c}{2},\\quad 23^{\\circ}=\\angle CDB-\\angle TCD",
+            "en": "In $\\Delta CTD$, $\\angle TDC=180^{\\circ}-\\angle CDB$ and the angle sum gives $\\frac{c}{2}=62^{\\circ}-23^{\\circ}=39^{\\circ}$, so arc $CD=78^{\\circ}$. Then arc $AB=360^{\\circ}-(46+124+78)^{\\circ}=112^{\\circ}$, and $\\angle ADE=\\angle ADB=\\frac{112^{\\circ}}{2}=56^{\\circ}$ — option B.",
+            "zh": "在 $\\Delta CTD$ 中 $\\angle TDC=180^{\\circ}-\\angle CDB$，由內角和得 $\\frac{c}{2}=62^{\\circ}-23^{\\circ}=39^{\\circ}$，故弧 $CD=78^{\\circ}$。於是弧 $AB=360^{\\circ}-(46+124+78)^{\\circ}=112^{\\circ}$，$\\angle ADE=\\angle ADB=\\frac{112^{\\circ}}{2}=56^{\\circ}$，選 B。",
+            "highlight": [
+              "56^{\\circ}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "A",
+            "en": "39° is only half of arc $CD$ (the angle $\\angle TCD$); the question asks for $\\angle ADE$, which subtends arc $AB$.",
+            "zh": "39° 只是弧 $CD$ 的一半（即 $\\angle TCD$）；題目問的 $\\angle ADE$ 所對的是弧 $AB$。"
+          },
+          {
+            "opt": "C",
+            "en": "62° is $\\angle CDB=\\frac12$ arc $BC$; do not stop one step early.",
+            "zh": "62° 是 $\\angle CDB=\\frac12$ 弧 $BC$；不要提早一步作答。"
+          }
+        ],
+        "tip": {
+          "en": "Turn every given angle into an arc degree ($\\times2$ for an inscribed angle, tangent–chord and chord–chord also give half-arcs), then use 'arcs add to $360^{\\circ}$'.",
+          "zh": "把每個已知角換成弧的度數（圓周角 ×2；切線－弦、弦－弦也都是半弧），再用「三弧之和為 $360^{\\circ}$」收尾。"
+        }
+      }
+    },
+    "2026-p2-q39": {
+      "answer": "A",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · The four points are concyclic",
+              "zh": "第 1 步 · 四點共圓"
+            },
+            "math": "\\angle TSU=\\angle TVU=90^{\\circ} \\Rightarrow TU\\ \\text{is a diameter}",
+            "en": "Both angles subtend $TU$ and are right angles, so (converse of 'angle in a semicircle') $S,T,U,V$ lie on one circle with $TU$ as diameter.",
+            "zh": "兩個角都對着 $TU$ 且都是直角，由「半圓上的圓周角是直角」的逆定理，$S,T,U,V$ 共圓且 $TU$ 為直徑。",
+            "highlight": [
+              "\\text{concyclic}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Angles at $T$",
+              "zh": "第 2 步 · $T$ 處的角"
+            },
+            "math": "\\angle TUV=180^{\\circ}-90^{\\circ}-30^{\\circ}=60^{\\circ},\\quad \\angle TSV=180^{\\circ}-60^{\\circ}=120^{\\circ}",
+            "en": "In right-angled $\\Delta TUV$, $\\angle TUV=60^{\\circ}$. Opposite angles of the cyclic quadrilateral $STUV$ are supplementary, so $\\angle TSV=180^{\\circ}-60^{\\circ}=120^{\\circ}$.",
+            "zh": "在直角 $\\Delta TUV$ 中 $\\angle TUV=60^{\\circ}$；圓內接四邊形 $STUV$ 的對角互補，故 $\\angle TSV=180^{\\circ}-60^{\\circ}=120^{\\circ}$。",
+            "highlight": [
+              "\\angle TSV=120^{\\circ}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "TV^{2}=8^{2}+5^{2}-2(8)(5)\\cos120^{\\circ}=129",
+            "en": "In $\\Delta STV$ ($ST=8$, $SV=5$, included angle $120^{\\circ}$) the cosine rule gives $TV=\\sqrt{129}$. The sine rule then gives $\\sin\\angle STV=\\frac{5\\sin120^{\\circ}}{\\sqrt{129}}$, so $\\angle STV\\approx22^{\\circ}$. Since $\\angle SUV$ and $\\angle STV$ stand on the same chord $SV$, $\\angle SUV\\approx22^{\\circ}$ — option A.",
+            "zh": "在 $\\Delta STV$（$ST=8$、$SV=5$、夾角 $120^{\\circ}$）中，用餘弦定理得 $TV=\\sqrt{129}$；再用正弦定理得 $\\sin\\angle STV=\\frac{5\\sin120^{\\circ}}{\\sqrt{129}}$，故 $\\angle STV\\approx22^{\\circ}$。因 $\\angle SUV$ 與 $\\angle STV$ 同對弦 $SV$，得 $\\angle SUV\\approx22^{\\circ}$，選 A。",
+            "highlight": [
+              "22^{\\circ}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "D",
+            "en": "38° comes from taking $\\angle TSV=60^{\\circ}$: the quadrilateral is cyclic, so $\\angle TSV$ and $\\angle TUV$ are supplementary (120°, not 60°).",
+            "zh": "38° 來自把 $\\angle TSV$ 當成 $60^{\\circ}$：四邊形共圓，$\\angle TSV$ 與 $\\angle TUV$ 互補，應是 $120^{\\circ}$。"
+          },
+          {
+            "opt": "C",
+            "en": "30° is $\\angle UTV$ itself; $\\angle SUV$ is not equal to it but to $\\angle STV$.",
+            "zh": "30° 是 $\\angle UTV$ 本身；$\\angle SUV$ 不等於它，而是等於 $\\angle STV$。"
+          }
+        ],
+        "tip": {
+          "en": "Two right angles on the same segment → concyclic (the segment is a diameter); then switch between 'arcs/chords' and the sine and cosine rules to find the required angle.",
+          "zh": "同一線段上的兩個直角 → 四點共圓（該線段為直徑）；之後在同弓形角、正弦／餘弦定理之間切換即可求得目標角。"
+        }
+      }
+    },
+    "2026-p2-q40": {
+      "answer": "D",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Set up the dimensions",
+              "zh": "第 1 步 · 定出尺寸"
+            },
+            "math": "AB=AC=1,\\ AE=2,\\ BC=\\sqrt{2}",
+            "en": "From $AB:AC:AE=1:1:2$ take $AB=AC=1$, $AE=2$. The right angle at $A$ gives $BC=\\sqrt{1^{2}+1^{2}}=\\sqrt2$.",
+            "zh": "由 $AB:AC:AE=1:1:2$ 取 $AB=AC=1$、$AE=2$；$A$ 為直角，故 $BC=\\sqrt{1^{2}+1^{2}}=\\sqrt2$。",
+            "highlight": [
+              "BC=\\sqrt{2}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · The angle between the two planes",
+              "zh": "第 2 步 · 線面交角"
+            },
+            "math": "AM=\\frac{BC}{2}=\\frac{\\sqrt{2}}{2},\\quad EM=\\sqrt{AE^{2}+AM^{2}}=\\sqrt{\\frac{9}{2}}",
+            "en": "The two planes meet along $BC$. Let $M$ be the midpoint of $BC$: since $AB=AC$, $AM\\perp BC$; and as $AE\\perp$ the base, $EM\\perp BC$ too. So the angle between the planes is $\\angle AME$, and $\\Delta EAM$ is right-angled at $A$.",
+            "zh": "兩平面沿 $BC$ 相交。設 $M$ 為 $BC$ 中點：因 $AB=AC$，$AM\\perp BC$；又 $AE\\perp$ 底面，故 $EM\\perp BC$。因此兩平面的夾角就是 $\\angle AME$，而 $\\Delta EAM$ 在 $A$ 為直角。",
+            "highlight": [
+              "AM\\perp BC",
+              "EM\\perp BC"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "\\cos\\theta=\\frac{AM}{EM}=\\frac{\\frac{\\sqrt2}{2}}{\\frac{3}{\\sqrt2}}=\\frac{1}{3} \\Rightarrow \\sin\\theta=\\frac{2\\sqrt{2}}{3}",
+            "en": "$EM=\\sqrt{4+\\frac12}=\\frac{3}{\\sqrt2}$, so $\\cos\\theta=\\frac13$ and $\\sin\\theta=\\sqrt{1-\\frac19}=\\frac{2\\sqrt2}{3}$ — option D.",
+            "zh": "$EM=\\sqrt{4+\\frac12}=\\frac{3}{\\sqrt2}$，故 $\\cos\\theta=\\frac13$，$\\sin\\theta=\\sqrt{1-\\frac19}=\\frac{2\\sqrt2}{3}$，選 D。",
+            "highlight": [
+              "\\frac{2\\sqrt{2}}{3}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "A",
+            "en": "$\\frac13$ is $\\cos\\theta$, not $\\sin\\theta$ — check which ratio the question asks for.",
+            "zh": "$\\frac13$ 是 $\\cos\\theta$ 而不是 $\\sin\\theta$ —— 看清楚題目問哪一個比值。"
+          },
+          {
+            "opt": "C",
+            "en": "Using $AM=AB=\\sqrt2$ instead of the median length $\\frac{\\sqrt2}{2}$ inflates the angle's cosine.",
+            "zh": "把 $AM$ 當成 $AB=\\sqrt2$（而不是中線長 $\\frac{\\sqrt2}{2}$），會使餘弦值變大。"
+          }
+        ],
+        "tip": {
+          "en": "Angle between two planes: find their line of intersection, then drop perpendiculars from a convenient point to that line in each plane — the angle between those two perpendiculars is the answer.",
+          "zh": "兩平面的夾角：先找交線，再在兩個平面內各作交線的垂線 —— 這兩條垂線的夾角就是所求。"
+        }
+      }
+    },
+    "2026-p2-q41": {
+      "answer": "C",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Substitute $s=\\sin^{2}\\theta$",
+              "zh": "第 1 步 · 令 $s=\\sin^{2}\\theta$"
+            },
+            "math": "6s^{2}-5s+1=0 \\Rightarrow (3s-1)(2s-1)=0",
+            "en": "The equation is quadratic in $\\sin^{2}\\theta$, so $\\sin^{2}\\theta=\\frac13$ or $\\frac12$, i.e. $\\sin\\theta=\\pm\\frac{1}{\\sqrt3}$ or $\\pm\\frac{1}{\\sqrt2}$.",
+            "zh": "方程對 $\\sin^{2}\\theta$ 是二次式，得 $\\sin^{2}\\theta=\\frac13$ 或 $\\frac12$，即 $\\sin\\theta=\\pm\\frac{1}{\\sqrt3}$ 或 $\\pm\\frac{1}{\\sqrt2}$。",
+            "highlight": [
+              "\\sin^{2}\\theta=\\frac13,\\ \\frac12"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Count the roots for $\\frac{1}{\\sqrt2}$",
+              "zh": "第 2 步 · 數 $\\frac{1}{\\sqrt2}$ 的解"
+            },
+            "math": "\\sin\\theta=\\frac{1}{\\sqrt2}:135^{\\circ};\\quad \\sin\\theta=-\\frac{1}{\\sqrt2}:225^{\\circ},315^{\\circ}",
+            "en": "Within $90^{\\circ}\\le\\theta\\le360^{\\circ}$: 45° is too small, so only 135°; the negative value gives both 225° and 315° — 3 roots.",
+            "zh": "在 $90^{\\circ}\\le\\theta\\le360^{\\circ}$ 內：45° 不在範圍內，只有 135°；負值則有 225° 與 315°，共 3 個解。",
+            "highlight": [
+              "3\\ \\text{roots}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "\\sin\\theta=\\frac{1}{\\sqrt3}:144.7^{\\circ};\\quad -\\frac{1}{\\sqrt3}:215.3^{\\circ},324.7^{\\circ}",
+            "en": "$\\sin\\theta=\\frac{1}{\\sqrt3}$ gives $35.3^{\\circ}$ (rejected) and $144.7^{\\circ}$; its negative gives $215.3^{\\circ}$ and $324.7^{\\circ}$ — another 3 roots. Total $3+3=6$ — option C.",
+            "zh": "$\\sin\\theta=\\frac{1}{\\sqrt3}$ 給出 $35.3^{\\circ}$（不合）與 $144.7^{\\circ}$；負值給出 $215.3^{\\circ}$ 與 $324.7^{\\circ}$，又是 3 個解。合共 $3+3=6$，選 C。",
+            "highlight": [
+              "6"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "B",
+            "en": "4 roots means only $\\sin\\theta=\\pm\\frac{1}{\\sqrt2}$ was used — the case $\\sin^{2}\\theta=\\frac13$ was dropped.",
+            "zh": "4 個解表示只用了 $\\sin\\theta=\\pm\\frac{1}{\\sqrt2}$，漏掉 $\\sin^{2}\\theta=\\frac13$ 這個情況。"
+          },
+          {
+            "opt": "A",
+            "en": "2 roots counts only one angle for each sine value, forgetting that $\\sin\\theta=k$ has two solutions in a full turn.",
+            "zh": "2 個解是每個正弦值只算了一個角，忘了在整圈內 $\\sin\\theta=k$ 一般有兩個解。"
+          }
+        ],
+        "tip": {
+          "en": "For trigonometric equations, list every value $\\sin^{2}\\theta$ can take, then for each $\\pm$ value sketch the sine curve and count the solutions inside the given interval.",
+          "zh": "三角方程：先列出 $\\sin^{2}\\theta$ 的所有可能值，再對每個 $\\pm$ 值畫正弦圖形，數出在指定區間內的解。"
+        }
+      }
+    },
+    "2026-p2-q42": {
+      "answer": "B",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Total ways",
+              "zh": "第 1 步 · 總數"
+            },
+            "math": "\\binom{10}{5}=252",
+            "en": "Choose any 5 of the 10 students.",
+            "zh": "從 10 名學生中任選 5 名。",
+            "highlight": [
+              "252"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Count 'at most 2 boys'",
+              "zh": "第 2 步 · 數「至多 2 名男生」"
+            },
+            "math": "\\binom{3}{0}\\binom{7}{5}+\\binom{3}{1}\\binom{7}{4}+\\binom{3}{2}\\binom{7}{3}=21+105+105=231",
+            "en": "Split into 0, 1 and 2 boys; the girls fill the rest.",
+            "zh": "分成 0、1、2 名男生三種情況，其餘由女生補足。",
+            "highlight": [
+              "231"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "P=\\frac{231}{252}=\\frac{11}{12}",
+            "en": "(Or take the complement: $1-\\frac{\\binom33\\binom72}{252}=1-\\frac{21}{252}=\\frac{11}{12}$.) Option B.",
+            "zh": "（或用反面：$1-\\frac{\\binom33\\binom72}{252}=1-\\frac{21}{252}=\\frac{11}{12}$。）選 B。",
+            "highlight": [
+              "\\frac{11}{12}"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "C",
+            "en": "$\\frac{119}{120}$ comes from using $1-\\frac{1}{120}$ as if only one committee had 3 boys; actually $\\binom33\\binom72=21$ do.",
+            "zh": "$\\frac{119}{120}$ 來自把「3 名男生」的組合當成只有 1 個；實際上有 $\\binom33\\binom72=21$ 個。"
+          },
+          {
+            "opt": "D",
+            "en": "$\\frac{251}{252}$ subtracts a single case out of 252, again underestimating the complement.",
+            "zh": "$\\frac{251}{252}$ 只從 252 中扣掉 1 個情況，同樣低估了反面事件。"
+          }
+        ],
+        "tip": {
+          "en": "For 'at most / at least' questions, either split into cases or use the complement — whichever has fewer cases; both must be counted with combinations, not permutations.",
+          "zh": "「至多／至少」的題目：分情況或取反面，選情況較少的一邊；兩者都要用組合數而不是排列數。"
+        }
+      }
+    },
+    "2026-p2-q43": {
+      "answer": "C",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Who is left out?",
+              "zh": "第 1 步 · 誰被排除？"
+            },
+            "math": "7\\ \\text{of}\\ 8:\\ \\text{exclude 1 person}",
+            "en": "Choosing 7 from 8 employees means leaving one out, and the two types of employee give two different cases.",
+            "zh": "從 8 人中選 7 人，等於排除 1 人；全職與兼職被排除時情況不同，要分開討論。",
+            "highlight": [
+              "\\text{two cases}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Case 1 — a full-timer is left out",
+              "zh": "第 2 步 · 情況一：排除全職"
+            },
+            "math": "5\\times\\left[4!\\times\\binom{5}{3}\\times3!\\right]=5\\times1440=7200",
+            "en": "Leaving out one of the 5 full-timers gives 4 full-time and 3 part-time. Arrange the 4 full-timers ($4!$), then put the 3 part-timers into 3 of the 5 gaps around/between them ($\\binom53$) and order them ($3!$).",
+            "zh": "排除 5 名全職之一，得 4 全職、3 兼職。先排 4 名全職（$4!$），再把 3 名兼職放入 5 個空隙中的 3 個（$\\binom53$）並排列（$3!$）。",
+            "highlight": [
+              "7200"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "3\\times\\left[5!\\times\\binom{6}{2}\\times2!\\right]+7200=3\\times3600+7200=18000",
+            "en": "Case 2: leaving out one of the 3 part-timers gives 5 full-time and 2 part-time, so $5!\\times\\binom62\\times2!=3600$ each. Total $10800+7200=18000$ — option C.",
+            "zh": "情況二：排除 3 名兼職之一，得 5 全職、2 兼職，每種 $5!\\times\\binom62\\times2!=3600$。合計 $10800+7200=18000$，選 C。",
+            "highlight": [
+              "18000"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "A",
+            "en": "5040 is just $7!$ — it ignores the 'no two part-timers adjacent' condition completely.",
+            "zh": "5040 就是 $7!$，完全忽略了「兼職不相鄰」的條件。"
+          },
+          {
+            "opt": "B",
+            "en": "14400 counts only one of the two cases (it forgets the queues where a part-timer is left out).",
+            "zh": "14400 只算了兩種情況中的一種（漏掉排除兼職的排法）。"
+          }
+        ],
+        "tip": {
+          "en": "For 'no two alike are adjacent', arrange the other group first, then place the restricted ones in the gaps; remember to check whether the selection itself has cases.",
+          "zh": "「同類不相鄰」：先排另一類，再把受限制的放進空隙；別忘了先確認「選人」本身有幾種情況。"
+        }
+      }
+    },
+    "2026-p2-q44": {
+      "answer": "B",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Standard score formula",
+              "zh": "第 1 步 · 標準分公式"
+            },
+            "math": "z=\\frac{x-\\mu}{\\sigma} \\Rightarrow x=\\mu+z\\sigma",
+            "en": "The score equals the mean plus the standard score times the standard deviation.",
+            "zh": "分數等於平均數加上「標準分 × 標準差」。",
+            "highlight": [
+              "x=\\mu+z\\sigma"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Find $\\sigma$ from the two known scores",
+              "zh": "第 2 步 · 由兩個已知分數求 $\\sigma$"
+            },
+            "math": "58-40=(2-0)\\sigma \\Rightarrow \\sigma=9",
+            "en": "Subtracting removes $\\mu$: the difference in scores equals the difference in standard scores times $\\sigma$.",
+            "zh": "相減可消去 $\\mu$：分數之差＝標準分之差 × $\\sigma$。",
+            "highlight": [
+              "\\sigma=9"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "\\beta-\\alpha=(3-(-1))\\times9=36",
+            "en": "Again the mean cancels, so no need to find it — option B.",
+            "zh": "同樣消去平均數，不必求出它，得 36，選 B。",
+            "highlight": [
+              "36"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "A",
+            "en": "31 is $\\alpha$ alone: $\\alpha=40-1\\times9=31$; the question asks for $\\beta-\\alpha$.",
+            "zh": "31 只是 $\\alpha$ 本身：$\\alpha=40-1\\times9=31$；題目問的是 $\\beta-\\alpha$。"
+          },
+          {
+            "opt": "D",
+            "en": "98 is $\\alpha+\\beta=31+67$; adding instead of subtracting the two scores.",
+            "zh": "98 是 $\\alpha+\\beta=31+67$，把兩個分數相加而不是相減。"
+          }
+        ],
+        "tip": {
+          "en": "With standard scores, differences cancel the mean: score difference $=$ standard-score difference $\\times\\sigma$. Use this whenever the question asks for a difference.",
+          "zh": "標準分的題目：相減可消去平均數 —— 分數差＝標準分差 × 標準差。問「差」時優先用這條。"
+        }
+      }
+    },
+    "2026-p2-q45": {
+      "answer": "A",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · What transformation is applied?",
+              "zh": "第 1 步 · 做了甚麼變換？"
+            },
+            "math": "\\frac{x+2}{5}=\\frac{1}{5}x+\\frac{2}{5}",
+            "en": "Each new number is the old one multiplied by $\\frac15$ and then increased by $\\frac25$.",
+            "zh": "每個新數是原數乘 $\\frac15$ 再加 $\\frac25$。",
+            "highlight": [
+              "\\frac{1}{5}x+\\frac{2}{5}"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Effect on the standard deviation",
+              "zh": "第 2 步 · 對標準差的影響"
+            },
+            "math": "\\text{new SD}=5\\times\\frac{1}{5}=1",
+            "en": "Adding a constant shifts every value equally, so the spread is unchanged; multiplying by $\\frac15$ shrinks the standard deviation by the same factor.",
+            "zh": "加常數只是整體平移，分佈的分散程度不變；乘 $\\frac15$ 則把標準差按同一倍數縮小。",
+            "highlight": [
+              "\\text{new SD}=1"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "\\text{variance}=1^{2}=1",
+            "en": "The variance is the square of the standard deviation — option A.",
+            "zh": "變異數是標準差的平方，得 1，選 A。",
+            "highlight": [
+              "1"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "D",
+            "en": "25 is the original variance: forgetting that dividing the data by 5 also divides the spread by 5.",
+            "zh": "25 是原變異數：忘了數據除以 5 時，分散程度也除以 5。"
+          },
+          {
+            "opt": "B",
+            "en": "5 is the original standard deviation; the question asks for the **variance** of the new data.",
+            "zh": "5 是原本的標準差；題目問的是新數據的**變異數**。"
+          }
+        ],
+        "tip": {
+          "en": "Transformations: adding/subtracting a constant changes the mean only; multiplying/dividing changes the mean and scales the standard deviation by the same factor, the variance by its square.",
+          "zh": "變換性質：加／減常數只影響平均數；乘／除則同時影響平均數，並把標準差按同倍數、變異數按平方縮放。"
+        }
+      }
+    },
+    "2026-p2-q22": {
+      "answer": "C",
+      "verify": "checked",
+      "solution": {
+        "steps": [
+          {
+            "title": {
+              "en": "Step 1 · Draw the auxiliary line",
+              "zh": "第 1 步 · 作輔助線"
+            },
+            "math": "\\ell \\parallel BC \\parallel EA",
+            "en": "$\\angle EAB=\\angle ABC=90^{\\circ}$, both taken with $AB$, so $EA\\parallel BC$. Draw through the inner vertex $D$ a straight line $\\ell$ parallel to $BC$ — it is then also parallel to $EA$.",
+            "zh": "$\\angle EAB$ 與 $\\angle ABC$ 同與 $AB$ 成直角，故 $EA\\parallel BC$。過內凹頂點 $D$ 作直線 $\\ell$ 平行於 $BC$，它同時平行於 $EA$。",
+            "highlight": [
+              "\\ell\\parallel BC\\parallel EA"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 2 · Split the angle at $D$",
+              "zh": "第 2 步 · 把 $D$ 處的角切開"
+            },
+            "math": "q=\\angle CDE=\\angle(CD,\\ell)+\\angle(\\ell,DE)",
+            "en": "The line $\\ell$ passes through $D$ and lies between $DC$ and $DE$, so the angle $q$ is the sum of the two parts it makes.",
+            "zh": "直線 $\\ell$ 過 $D$ 且落在 $DC$ 與 $DE$ 之間，故角 $q$ 等於它所切出的兩部分之和。",
+            "highlight": [
+              "q=\\angle(CD,\\ell)+\\angle(\\ell,DE)"
+            ]
+          },
+          {
+            "title": {
+              "en": "Step 3 · Alternate angles give $p$ and $r$",
+              "zh": "第 3 步 · 內錯角給出 $p$ 與 $r$"
+            },
+            "math": "\\angle(\\ell,DE)=p,\\qquad \\angle(CD,\\ell)=r",
+            "en": "$EA\\parallel\\ell$ with transversal $ED$: the alternate angles are equal, so the angle between $\\ell$ and $DE$ equals $p$ at $E$. Likewise $BC\\parallel\\ell$ with transversal $CD$ gives $\\angle(CD,\\ell)=r$.",
+            "zh": "$EA\\parallel\\ell$、$ED$ 為截線：內錯角相等，故 $\\ell$ 與 $DE$ 的夾角等於 $E$ 處的 $p$。同理 $BC\\parallel\\ell$、$CD$ 為截線，得 $\\angle(CD,\\ell)=r$。",
+            "highlight": [
+              "\\angle(\\ell,DE)=p",
+              "\\angle(CD,\\ell)=r"
+            ]
+          },
+          {
+            "title": {
+              "en": "Answer",
+              "zh": "答案"
+            },
+            "math": "q=p+r",
+            "en": "Adding the two parts gives $q=p+r$ — option C. (Check with the pentagon angle sum: $90^{\\circ}+90^{\\circ}+r+(360^{\\circ}-q)+p=540^{\\circ}$ gives the same relation.)",
+            "zh": "兩部分相加得 $q=p+r$，選 C。（也可用五邊形內角和驗證：$90^{\\circ}+90^{\\circ}+r+(360^{\\circ}-q)+p=540^{\\circ}$，得同一關係。）",
+            "highlight": [
+              "q=p+r"
+            ]
+          }
+        ],
+        "traps": [
+          {
+            "opt": "A",
+            "en": "$p=r$ only holds in the special case where the figure is symmetric (e.g. when $D$ is directly below the midpoint of $BC$); moving $D$ changes $p$ and $r$ independently.",
+            "zh": "$p=r$ 只在圖形對稱的特例成立（例如 $D$ 正好在 $BC$ 中點的正下方）；移動 $D$ 時 $p$ 與 $r$ 各自改變。"
+          },
+          {
+            "opt": "D",
+            "en": "With $q=p+r$, the sum $p+q+r=2q$, which equals $180^{\\circ}$ only when $q=90^{\\circ}$ — that is option B, and it is not forced.",
+            "zh": "由 $q=p+r$ 得 $p+q+r=2q$，只有當 $q=90^{\\circ}$ 時才等於 $180^{\\circ}$（即選項 B），而 $q$ 不必然為直角。"
+          }
+        ],
+        "tip": {
+          "en": "When a broken line joins two parallel lines, draw a parallel line through the turning point: alternate angles then turn the whole problem into one addition. Never guess equal angles from the picture.",
+          "zh": "折線夾在兩條平行線之間時，過轉折點作平行線：內錯角會把問題化為一條加法。不要憑圖猜「看起來相等」的角。"
+        }
+      }
     }
   }
 }

@@ -1,0 +1,288 @@
+{
+  "2026-p2-q24": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Translate", "zh": "第 1 步 · 平移" },
+          "math": "U=(3-5,\\ 1)=(-2,\\ 1)",
+          "en": "'Leftwards by 5 units' subtracts 5 from the $x$-coordinate only.",
+          "zh": "「向左移 5 單位」只把 $x$ 坐標減 5。",
+          "highlight": ["U=(-2,1)"]
+        },
+        {
+          "title": { "en": "Step 2 · Rotation anticlockwise through $270^{\\circ}$", "zh": "第 2 步 · 逆時針旋轉 $270^{\\circ}$" },
+          "math": "(x,y)\\mapsto(y,-x)",
+          "en": "Anticlockwise $270^{\\circ}$ = clockwise $90^{\\circ}$, and a clockwise quarter turn sends $(x,y)$ to $(y,-x)$.",
+          "zh": "逆時針 $270^{\\circ}$ 等於順時針 $90^{\\circ}$；順時針轉 90° 把 $(x,y)$ 變成 $(y,-x)$。",
+          "highlight": ["(x,y)\\mapsto(y,-x)"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "V=(1,\\ 2) \\Rightarrow y\\text{-coordinate}=2",
+          "en": "Applying it to $U(-2,1)$ gives $(1,2)$ — option D.",
+          "zh": "對 $U(-2,1)$ 應用後得 $(1,2)$，y 坐標為 2，選 D。",
+          "highlight": ["2"]
+        }
+      ],
+      "traps": [
+        { "opt": "A",
+          "en": "Rotating only $90^{\\circ}$ anticlockwise (rule $(x,y)\\mapsto(-y,x)$) gives $y=-2$.",
+          "zh": "只轉 $90^{\\circ}$（規則 $(x,y)\\mapsto(-y,x)$）會得到 y 坐標 $-2$。" },
+        { "opt": "B",
+          "en": "Rotating $180^{\\circ}$ instead of $270^{\\circ}$ gives $y=-1$.",
+          "zh": "轉 $180^{\\circ}$ 而不是 $270^{\\circ}$，會得到 y 坐標 $-1$。" }
+      ],
+      "tip": {
+        "en": "Memorise the quarter turns: anticlockwise $90^{\\circ}$ $(x,y)\\to(-y,x)$ and clockwise $90^{\\circ}$ $(x,y)\\to(y,-x)$; any multiple of $90^{\\circ}$ follows from these.",
+        "zh": "記住 90° 旋轉：逆時針 $(x,y)\\to(-y,x)$、順時針 $(x,y)\\to(y,-x)$，其他 $90^{\\circ}$ 倍數都可由此推出。" }
+    }
+  },
+
+  "2026-p2-q25": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · The central angle", "zh": "第 1 步 · 圓心角" },
+          "math": "\\angle POQ=\\angle POT=82^{\\circ}",
+          "en": "$T$ lies on $OQ$, so $OP$ and $OT$ make the same angle as $OP$ and $OQ$.",
+          "zh": "$T$ 在 $OQ$ 上，故 $OP$ 與 $OT$ 的夾角就是 $OP$ 與 $OQ$ 的夾角。",
+          "highlight": ["\\angle POQ=82^{\\circ}"]
+        },
+        {
+          "title": { "en": "Step 2 · Angles in $\\Delta POT$", "zh": "第 2 步 · $\\Delta POT$ 的內角" },
+          "math": "\\angle PTO=180^{\\circ}-104^{\\circ}=76^{\\circ} \\Rightarrow \\angle OPT=22^{\\circ}",
+          "en": "$TO$ and $TQ$ are opposite rays, so $\\angle PTO$ is supplementary to $\\angle PTQ=104^{\\circ}$; the angle sum then gives $\\angle OPT=22^{\\circ}$.",
+          "zh": "$TO$ 與 $TQ$ 反向，故 $\\angle PTO$ 與 $\\angle PTQ=104^{\\circ}$ 互補；再由內角和得 $\\angle OPT=22^{\\circ}$。",
+          "highlight": ["\\angle OPT=22^{\\circ}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\angle POR=180^{\\circ}-2(22^{\\circ})=136^{\\circ},\\ \\angle QOR=54^{\\circ}",
+          "en": "In isosceles $\\Delta OPR$ ($OP=OR$ as radii), $\\angle ORP=\\angle OPR=22^{\\circ}$. Hence $\\angle QOR=136^{\\circ}-82^{\\circ}=54^{\\circ}$, and the angle in the alternate segment gives $\\angle QSR=\\frac{54^{\\circ}}{2}=27^{\\circ}$ — option B.",
+          "zh": "等腰 $\\Delta OPR$（$OP=OR$ 為半徑）中 $\\angle ORP=\\angle OPR=22^{\\circ}$，故 $\\angle QOR=136^{\\circ}-82^{\\circ}=54^{\\circ}$；由同弓形圓周角得 $\\angle QSR=\\frac{54^{\\circ}}{2}=27^{\\circ}$，選 B。",
+          "highlight": ["27^{\\circ}"]
+        }
+      ],
+      "traps": [
+        { "opt": "A",
+          "en": "22° is the angle at $P$ in $\\Delta POT$, not the inscribed angle asked for — one more step ($\\angle QOR\\div2$) is needed.",
+          "zh": "22° 是 $\\Delta POT$ 在 $P$ 的角，不是題目要的圓周角 —— 還要再算 $\\angle QOR\\div2$。" },
+        { "opt": "D",
+          "en": "Halving the wrong central angle (or using $136^{\\circ}$) gives a value near 49°; the inscribed angle must subtend $\\angle QOR$.",
+          "zh": "把錯誤的圓心角除以 2（或用 $136^{\\circ}$）會得到接近 49° 的值；圓周角要對應 $\\angle QOR$。" }
+      ],
+      "tip": {
+        "en": "When a diameter-like radius meets a chord inside the circle, first find the triangle's angles at the centre, then use 'angle at centre $=2\\times$ angle at circumference'.",
+        "zh": "半徑與弦在圓內相交時，先求出圓心處的三角形內角，再用「圓心角＝圓周角的兩倍」。" }
+    }
+  },
+
+  "2026-p2-q26": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Recognise the locus", "zh": "第 1 步 · 認出軌跡" },
+          "math": "d(P,L_1)=d(P,L_2)",
+          "en": "The set of points equidistant from two straight lines is the pair of angle bisectors of the lines.",
+          "zh": "與兩條直線距離相等的點集，就是這兩條直線的兩條角平分線。",
+          "highlight": ["\\text{angle bisectors}"]
+        },
+        {
+          "title": { "en": "Step 2 · Do the lines meet?", "zh": "第 2 步 · 兩線是否相交" },
+          "math": "-\\frac{3}{5}\\neq\\frac{3}{5}",
+          "en": "The slopes $-\\frac35$ and $\\frac{3}{5}$ are different, so $L_1$ and $L_2$ are not parallel; they cross, giving two distinct bisectors.",
+          "zh": "斜率 $-\\frac35$ 與 $\\frac{3}{5}$ 不同，$L_1$ 與 $L_2$ 不平行而相交，故有兩條不同的角平分線。",
+          "highlight": ["\\text{two lines}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\text{a pair of straight lines}",
+          "en": "The locus is two straight lines — option D.",
+          "zh": "軌跡是一對直線，選 D。",
+          "highlight": ["\\text{D}"]
+        }
+      ],
+      "traps": [
+        { "opt": "A",
+          "en": "A single point would mean only one point is equidistant — no: every point on either bisector is.",
+          "zh": "「一點」意味只有一個點等距 —— 其實兩條角平分線上的每一點都等距。" },
+        { "opt": "B",
+          "en": "A circle is the locus of points at a fixed distance from ONE point, not from two lines.",
+          "zh": "圓是「與某一點距離固定」的軌跡，不是與兩條直線等距。" }
+      ],
+      "tip": {
+        "en": "Locus language: equidistant from two points → perpendicular bisector; from two lines → angle bisectors; from one point → circle.",
+        "zh": "軌跡語言：與兩點等距 → 垂直平分線；與兩直線等距 → 角平分線；與一點等距 → 圓。" }
+    }
+  },
+
+  "2026-p2-q27": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Write the centre", "zh": "第 1 步 · 設圓心" },
+          "math": "C=(5,\\ k)",
+          "en": "The centre has $x$-coordinate 5; its $y$-coordinate is unknown.",
+          "zh": "圓心的 $x$ 坐標是 5，$y$ 坐標未知。",
+          "highlight": ["(5,k)"]
+        },
+        {
+          "title": { "en": "Step 2 · Equal radii", "zh": "第 2 步 · 半徑相等" },
+          "math": "k^{2}=36+(4-k)^{2} \\Rightarrow 8k=52 \\Rightarrow k=6.5",
+          "en": "The distances to $(5,0)$ and $(11,4)$ are both radii, so equate them.",
+          "zh": "到 $(5,0)$ 與 $(11,4)$ 的距離都是半徑，令兩者相等。",
+          "highlight": ["k=6.5"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "r=6.5 \\Rightarrow 2\\pi r=13\\pi",
+          "en": "The circumference is $13\\pi$ — option A.",
+          "zh": "周長 $=2\\pi r=13\\pi$，選 A。",
+          "highlight": ["13\\pi"]
+        }
+      ],
+      "traps": [
+        { "opt": "C",
+          "en": "22π uses $r=11$, taking the $x$-coordinate of $(11,4)$ as the radius — the radius is a distance, not a coordinate.",
+          "zh": "22π 用了 $r=11$，把 $(11,4)$ 的 $x$ 坐標當半徑 —— 半徑是距離，不是坐標。" },
+        { "opt": "D",
+          "en": "42π is about a diameter of 42; it comes from confusing diameter with radius.",
+          "zh": "42π 相當於直徑 42，是把直徑與半徑混淆。" }
+      ],
+      "tip": {
+        "en": "For a circle through two points with a known centre line, just use 'radius = radius': set the two distance expressions equal and solve.",
+        "zh": "已知圓心在某直線上、圓過兩點時，直接用「半徑＝半徑」：令兩個距離式相等後解方程。" }
+    }
+  },
+
+  "2026-p2-q28": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Total number of pairs", "zh": "第 1 步 · 配對總數" },
+          "math": "\\binom{5}{2}=10",
+          "en": "Two cards are drawn at the same time, so order does not matter: 10 equally likely pairs.",
+          "zh": "同時抽兩張，次序不重要，共有 $\\binom52=10$ 個等可能的組合。",
+          "highlight": ["10"]
+        },
+        {
+          "title": { "en": "Step 2 · Count the favourable pairs", "zh": "第 2 步 · 數有利組合" },
+          "math": "(2,6)\\times2,\\ (3,6),\\ (4,6) \\Rightarrow 4",
+          "en": "Only sums greater than 7 count: $2+6=8$ (two ways, since there are two 2's), $3+6=9$, $4+6=10$.",
+          "zh": "只有和大於 7 才算：$2+6=8$（有兩張 2，故兩個組合）、$3+6=9$、$4+6=10$。",
+          "highlight": ["4\\ \\text{pairs}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "P=\\frac{4}{10}=\\frac{2}{5}",
+          "en": "Simplify the fraction — option C.",
+          "zh": "約簡後得 $\\frac25$，選 C。",
+          "highlight": ["\\frac{2}{5}"]
+        }
+      ],
+      "traps": [
+        { "opt": "D",
+          "en": "$\\frac{3}{10}$ counts only one of the two $(2,6)$ pairs — the two cards numbered 2 are distinct cards.",
+          "zh": "$\\frac{3}{10}$ 只算了一個 $(2,6)$ 組合 —— 兩張寫著 2 的是不同的紙卡。" },
+        { "opt": "B",
+          "en": "$\\frac15$ is $\\frac{2}{10}$, counting only the $(2,6)$ pairs and forgetting $3+6$ and $4+6$.",
+          "zh": "$\\frac15$ 就是 $\\frac{2}{10}$，只算了 $(2,6)$，漏掉 $3+6$ 與 $4+6$。" }
+      ],
+      "tip": {
+        "en": "List every pair systematically (fix the smaller card and pair it with each larger one); identical numbers are still separate cards, so count them separately.",
+        "zh": "系統地列出所有組合（固定較小的那張，逐個配對），數字相同但卡片不同，要分別計算。" }
+    }
+  },
+
+  "2026-p2-q29": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · What a box-and-whisker diagram shows", "zh": "第 1 步 · 盒鬚圖顯示甚麼" },
+          "math": "\\text{min},\\ Q_1,\\ \\text{median},\\ Q_3,\\ \\text{max}",
+          "en": "The five marks on a box-and-whisker diagram are exactly these five values.",
+          "zh": "盒鬚圖上的五個記號正正就是這五個值。",
+          "highlight": ["Q_1", "Q_3"]
+        },
+        {
+          "title": { "en": "Step 2 · Which statements follow", "zh": "第 2 步 · 哪些命題可以得出" },
+          "math": "\\text{IQR}=Q_3-Q_1",
+          "en": "The lower quartile is read off directly (II), and the inter-quartile range is $Q_3-Q_1$ (III). The mean needs every individual datum, which the diagram does not show (I is false).",
+          "zh": "下四分位數可直接讀出（II）；四分位距為 $Q_3-Q_1$（III）。平均數需要每一個數據，圖中沒有（I 錯）。",
+          "highlight": ["\\text{II and III}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\text{D}",
+          "en": "So II and III — option D.",
+          "zh": "故 II 與 III，選 D。",
+          "highlight": ["\\text{D}"]
+        }
+      ],
+      "traps": [
+        { "opt": "C",
+          "en": "Reading the median as if it were the mean — they are equal only for symmetric data, and the diagram alone cannot tell.",
+          "zh": "把中位數當成平均數 —— 只有對稱數據才會相等，單憑盒鬚圖無法判斷。" },
+        { "opt": "A",
+          "en": "Assuming the median mark is the mean.",
+          "zh": "誤以為圖上的中位數就是平均數。" }
+      ],
+      "tip": {
+        "en": "Box-and-whisker gives position (quartiles, median, range, IQR) but never the sum of the data, so the mean and standard deviation cannot be read off.",
+        "zh": "盒鬚圖只給位置資訊（四分位數、中位數、全距、四分位距），沒有數據總和，所以平均數與標準差都讀不出來。" }
+    }
+  },
+
+  "2026-p2-q30": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Use the mean and the range", "zh": "第 1 步 · 用平均數與全距" },
+          "math": "68+x+y=90 \\Rightarrow x+y=22;\\quad 13-4=9",
+          "en": "The ten numbers have mean 9, so their sum is 90; the known ones add up to 68. The range is already $13-4=9$, so neither $x$ nor $y$ can lie outside $[4,13]$. Hence $x,y\\ge9$.",
+          "zh": "十個數平均 9，總和 90，已知數之和為 68。全距已是 $13-4=9$，故 $x,y$ 都不能超出 $[4,13]$，於是 $x,y\\ge9$。",
+          "highlight": ["x+y=22", "x,y\\ge9"]
+        },
+        {
+          "title": { "en": "Step 2 · The median", "zh": "第 2 步 · 中位數" },
+          "math": "\\text{median}=\\frac{8+\\min(x,y)}{2}\\ge\\frac{8+9}{2}=8.5>7",
+          "en": "In order, the data are $4,7,7,7,8,\\min(x,y),\\ldots$, so the 5th value is 8 and the 6th is at least 9: statement II is always true.",
+          "zh": "由小至大排列為 $4,7,7,7,8,\\min(x,y),\\ldots$，第 5 個是 8、第 6 個至少是 9，故命題 II 恆成立。",
+          "highlight": ["\\text{median}>7"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "x=y=11:\\ u=7,\\ w=11",
+          "en": "But $x=y=11$ is allowed, and then the variance is $70\\div10=7$ (so I fails) and the mode is 11 (so III fails). Only II must be true — option B.",
+          "zh": "但 $x=y=11$ 也符合條件，此時變異數為 $70\\div10=7$（I 不成立）、眾數為 11（III 不成立）。只有 II 必然成立，選 B。",
+          "highlight": ["\\text{II only}"]
+        }
+      ],
+      "traps": [
+        { "opt": "D",
+          "en": "Testing only one pair (say $x=9,y=13$) makes III look true; $x=y=11$ is a counter-example.",
+          "zh": "只試一組（例如 $x=9,y=13$）會覺得 III 成立；$x=y=11$ 就是反例。" },
+        { "opt": "C",
+          "en": "Statement I fails too: with $x=y=11$ the variance is exactly 7, and with other pairs it is larger than 7.",
+          "zh": "命題 I 也不成立：$x=y=11$ 時變異數正好是 7，其他情況更超過 7。" }
+      ],
+      "tip": {
+        "en": "For 'must be true' questions, find the complete range of the unknowns first, then look for a counter-example — one valid set that breaks a statement is enough.",
+        "zh": "「必然成立」的題目：先定出未知數的完整範圍，再找反例 —— 只要有一組合法數據推翻命題，該命題就不成立。" }
+    }
+  }
+}

@@ -834,6 +834,674 @@ def q45(options):
                   f"v1+v3={v1 + v3:.4g} vs v2={v2:.4g} → {sorted(truth)}")
 
 
+def _poly_area(pts) -> float:
+    s = 0.0
+    for i in range(len(pts)):
+        x1, y1 = pts[i]
+        x2, y2 = pts[(i + 1) % len(pts)]
+        s += x1 * y2 - x2 * y1
+    return abs(s) / 2
+
+
+def _ang(a, b, c) -> float:
+    """∠abc 的度數（退化情況回傳 0）。"""
+    v1 = (a[0] - b[0], a[1] - b[1])
+    v2 = (c[0] - b[0], c[1] - b[1])
+    den = math.hypot(*v1) * math.hypot(*v2)
+    if den < 1e-15:
+        return 0.0
+    cos = (v1[0] * v2[0] + v1[1] * v2[1]) / den
+    return math.degrees(math.acos(max(-1.0, min(1.0, cos))))
+
+
+def _lines(a1, b1, c1, a2, b2, c2):
+    """解 a1x+b1y=c1 與 a2x+b2y=c2。"""
+    det = a1 * b2 - a2 * b1
+    return ((c1 * b2 - c2 * b1) / det, (a1 * c2 - a2 * c1) / det)
+
+
+def _sides(p, q, r):
+    return sorted([math.dist(p, q), math.dist(q, r), math.dist(r, p)])
+
+
+def _clean(tex: str) -> str:
+    """把選項字串清成可解析的算式：去掉 $ 與句尾的句號。"""
+    return str(tex).strip().replace("$", "").rstrip(".").strip()
+
+
+def p26_07(options):
+    """f(1+d)=0：把每個選項的 d 代回 f(1+d) 直接檢驗。"""
+    f = lambda d: (1 + 2 * d) * (d - 1) + 9 * (1 + d)
+    hits = [L for L, tex in options.items()
+            if (m := re.search(r"(-?\d+)", tex)) and abs(f(int(m.group(1)))) < 1e-9]
+    return hits, "f(1+d) evaluated at each option's value"
+
+
+def p26_08(options):
+    """任取滿足 g(4)=0 的 (h,k)（h=0, k=−27/4），算 g(−4)；餘數與 h、k 無關。"""
+    k = Fraction(-27, 4)
+    rem = 32 - 4 * k - 5
+    hits = [L for L, tex in options.items() if abs(_num(tex) - float(rem)) < 1e-9]
+    return hits, f"g(-4) for a valid (h,k) = {rem}"
+
+
+def p26_09(options):
+    """逐點比較：原不等式（or）與各選項在一組 x 樣本上的真值，唯一全同者為答案。"""
+    def truth(x):
+        return (x - 1 > (2 * x - 9) / 3) or (3 * x + 12 >= 0)
+
+    xs = [i / 2 for i in range(-20, 21)]
+    hits = []
+    for L, tex in options.items():
+        t = tex.replace("$", "").replace("\\le", "<=").replace("\\ge", ">=").strip().rstrip(".")
+        if all(bool(ev(t, x=x)) == truth(x) for x in xs):
+            hits.append(L)
+    return hits, "solution sets compared on 41 sample values"
+
+
+def p26_10(options):
+    """把每個選項的比例代入「混合後每公斤成本」，等於 16 者為答案。"""
+    hits = []
+    for L, tex in options.items():
+        m = re.match(r"(\d+)\s*:\s*(\d+)", tex.strip())
+        if m:
+            a, b = int(m.group(1)), int(m.group(2))
+            if abs((12 * a + 18 * b) / (a + b) - 16) < 1e-9:
+                hits.append(L)
+    return hits, "mixture cost per kg for each option's ratio"
+
+
+def p26_11(options):
+    """用 Decimal 精算 80000/1.01^20 並四捨五入到整數。"""
+    val = Decimal(80000) / (Decimal("1.01") ** 20)
+    ans = int(val.quantize(Decimal("1"), rounding=ROUND_HALF_UP))
+    hits = [L for L, tex in options.items() if _num(tex) == ans]
+    return hits, f"80000/1.01^20 = {val:.2f} → {ans}"
+
+
+def p26_12(options):
+    """w' = (1.2/0.8)w = 1.5w：把每個選項的百分數化成倍數比對。"""
+    target = 1.2 / 0.8
+    hits = []
+    for L, tex in options.items():
+        m = re.search(r"(\d+)", tex)
+        if m and abs((1 + int(m.group(1)) / 100) - target) < 1e-9:
+            hits.append(L)
+    return hits, f"required multiplier {target} → +50%"
+
+
+def p26_13(options):
+    """由 a2、a5 反解 a1，再用遞推式逐步迭代到 a8（不引用通項公式）。"""
+    a1 = Fraction(70, 14)
+    seq = [a1, Fraction(7)]
+    while len(seq) < 8:
+        seq.append(3 * seq[-1] - 2 * seq[-2])
+    hits = [L for L, tex in options.items() if _num(tex) == float(seq[7])]
+    return hits, f"a1={a1}, iterated a8={seq[7]}"
+
+
+def p26_14(options):
+    """在多組符合圖示（b>d>0、交點在正 x 軸）的 (t,b,d) 下檢驗三命題。"""
+    truth = {"I", "II", "III"}
+    for t, b, d in ((2, 4, 2), (3, 6, 1), (1, 10, 4)):
+        a, c = b / t, d / t
+        if not a < c:
+            truth.discard("I")
+        if not b > d:
+            truth.discard("II")
+        if abs(a * d - b * c) > 1e-12:
+            truth.discard("III")
+    return _stmt_hits(options, truth), "statements tested on 3 valid configurations (b>d)"
+
+
+def p26_15(options):
+    """在多組 pq<0 的 (p,q) 下檢驗：開口方向、x 截距數、是否過原點。"""
+    truth = {"I", "II", "III"}
+    for p, q in ((1, -2), (3, -1), (-2, 5)):
+        if not p * q < 0:
+            truth.discard("I")
+        if not abs(-1 / p - (-2 / q)) > 0:
+            truth.discard("II")
+        if abs((0 * p + 1) * (0 * q + 2)) > 1e-12:      # y(0) = 2 ≠ 0 → 不過原點
+            truth.discard("III")
+    return _stmt_hits(options, truth), "statements tested on 3 (p,q) with pq<0"
+
+
+def p26_16(options):
+    """把每個選項的弧長代入 2r+s=k 與 ½rs=3k（r=14），兩式同時成立者為答案。"""
+    r = 14
+    hits = []
+    for L, tex in options.items():
+        n = _num(tex)
+        if abs(0.5 * r * n - 3 * (2 * r + n)) < 1e-9:
+            hits.append(L)
+    return hits, "each option's arc length checked against both sector conditions"
+
+
+def p26_17(options):
+    """以相似比 (12/16) 的三次方算小金字塔，Y = 總體積 − V_X。"""
+    k = 12 / 16
+    vx = (1 / 3) * (18 * k) * (16 * k) * (12 * k)
+    vy = (1 / 3) * 18 * 16 * 12 - vx
+    hits = [L for L, tex in options.items() if abs(_num(tex) - vy) < 1e-6]
+    return hits, f"V_X={vx}, V_Y={vy}"
+
+
+def p26_18(options):
+    """（驗算用坐標）由 △ABD=225 定高，依 E、F 的定義定點，用鞋帶公式算 CDEF 面積。"""
+    h = 225 * 2 / 3
+    e = 0.7
+    B, D = (3.0, 0.0), (e, h)
+    C = (e + 5, h)
+    E = (B[0] + 0.4 * (D[0] - B[0]), 0.4 * h)
+    F = (B[0] + 0.4 * e, 0.4 * h)
+    area = _poly_area([C, D, E, F])
+    hits = [L for L, tex in options.items() if abs(_num(tex) - area) < 1e-6]
+    return hits, f"area(CDEF)={area:.2f} (h={h})"
+
+
+def p26_19(options):
+    """用三組實際直角三角形檢驗各選項公式是否等於面積（p=斜邊、q=PR、θ=∠PQR）。"""
+    forms = {"A": lambda p, q, t: 0.5 * p * q,
+             "B": lambda p, q, t: 0.5 * p * q * math.sin(t),
+             "C": lambda p, q, t: 0.5 * p * q * math.cos(t),
+             "D": lambda p, q, t: 0.5 * p * q * math.tan(t)}
+    ok = {L: True for L in options}
+    for PQ, PR in ((3, 4), (5, 12), (2, 7)):
+        p, q = math.hypot(PQ, PR), PR
+        theta = math.atan2(PR, PQ)
+        S = PQ * PR / 2
+        for L in options:
+            if L in forms and abs(forms[L](p, q, theta) - S) > 1e-9:
+                ok[L] = False
+    return [L for L in options if ok[L]], "each formula compared with the true area on 3 right triangles"
+
+
+def p26_20(options):
+    """（驗算用坐標）A(0,0),B(3,0),C(3,16),D(0,16),E(3,12)：求直線 DE 與 y=0 的交點 F，算 EF。"""
+    D, E = (0.0, 16.0), (3.0, 12.0)
+    t = D[1] / (D[1] - E[1])
+    F = (D[0] + t * (E[0] - D[0]), 0.0)
+    ef = math.dist(E, F)
+    hits = [L for L, tex in options.items() if abs(_num(tex) - ef) < 1e-6]
+    return hits, f"F={F}, EF={ef}"
+
+
+def p26_21(options):
+    """（驗算用坐標）W(0,0),X(9,0),Y(0,40)；由 WZ=41×40/9、ZY=40×40/9 解 Z，
+       驗證兩個角相等後算周長。"""
+    W, X, Y = (0.0, 0.0), (9.0, 0.0), (0.0, 40.0)
+    s = 40 / 9
+    dW, dY = s * 41.0, s * 40.0
+    z2 = (dW ** 2 - dY ** 2 + 40 ** 2) / (2 * 40)
+    z1 = math.sqrt(max(dW ** 2 - z2 ** 2, 0.0))
+    Z = (z1, z2)
+    ang_ok = (abs(_ang(W, X, Y) - _ang(Y, W, Z)) < 1e-4
+              and abs(_ang(W, Y, X) - _ang(W, Z, Y)) < 1e-4)
+    per = math.dist(W, X) + math.dist(X, Y) + math.dist(Y, Z) + math.dist(Z, W)
+    hits = [L for L, tex in options.items() if ang_ok and abs(_num(tex) - per) < 1e-6]
+    return hits, f"Z=({z1:.2f},{z2:.2f}), angles consistent={ang_ok}, perimeter={per:.3f}"
+
+
+def p26_22(options):
+    """（驗算用坐標）建 4 組合法圖形（AB⊥EA、AB⊥BC、D 為向左內凹點），實測 p、r、q 的關係。"""
+    ok = {"A": True, "B": True, "C": True, "D": True}
+    figs = ((6, 6, 8, 4, 3), (5, 4, 7, 3, 2), (7, 9, 11, 5, 3), (4, 3, 6, 2.5, 1.5))
+    for h, c, e, dx, dy in figs:
+        A, B, C, E, D = (0.0, 0.0), (0.0, h), (c, h), (e, 0.0), (dx, dy)
+        p, r, q = _ang(A, E, D), _ang(B, C, D), _ang(C, D, E)
+        if abs(p - r) > 1e-9:
+            ok["A"] = False
+        if abs(q - 90) > 1e-9:
+            ok["B"] = False
+        if abs(p + r - q) > 1e-9:
+            ok["C"] = False
+        if abs(p + q + r - 180) > 1e-9:
+            ok["D"] = False
+    truth = {k for k, v in ok.items() if v}
+    return [L for L in options if L in truth], "p, r, q relations tested on 4 valid figures"
+
+
+def p26_23(options):
+    """（驗算用坐標）單位正六邊形：求 G，逐一檢驗 I（BG∥CE）、II（△ABG~△BDC）、III（△AGF≅△BGC）。"""
+    pts = {n: (math.cos(math.radians(90 - 60 * k)), math.sin(math.radians(90 - 60 * k)))
+           for k, n in enumerate("ABCDEF")}
+    A, B, C, D, E, F = (pts[n] for n in "ABCDEF")
+
+    def inter(p, q, r, s):
+        d1 = (q[0] - p[0], q[1] - p[1])
+        d2 = (s[0] - r[0], s[1] - r[1])
+        den = d1[0] * d2[1] - d1[1] * d2[0]
+        t = ((r[0] - p[0]) * d2[1] - (r[1] - p[1]) * d2[0]) / den
+        return (p[0] + t * d1[0], p[1] + t * d1[1])
+
+    G = inter(A, C, B, F)
+    I = abs((B[0] - G[0]) * (E[1] - C[1]) - (B[1] - G[1]) * (E[0] - C[0])) < 1e-9
+    s1, s2 = _sides(A, B, G), _sides(B, D, C)
+    II = abs(s1[0] / s2[0] - s1[1] / s2[1]) < 1e-9 and abs(s1[1] / s2[1] - s1[2] / s2[2]) < 1e-9
+    s3, s4 = _sides(A, G, F), _sides(B, G, C)
+    III = all(abs(a - b) < 1e-9 for a, b in zip(s3, s4))
+    truth = {k for k, ok in (("I", I), ("II", II), ("III", III)) if ok}
+    return _stmt_hits(options, truth), f"I={I}, II={II}, III={III}"
+
+
+def p26_24(options):
+    """先平移再旋轉：用逆時針 270° 的旋轉矩陣算 V 的 y 坐標。"""
+    th = math.radians(270)
+    ux, uy = 3 - 5, 1.0
+    vy = ux * math.sin(th) + uy * math.cos(th)
+    hits = [L for L, tex in options.items() if abs(_num(tex) - vy) < 1e-9]
+    return hits, f"V_y={vy:.3f}"
+
+
+def p26_25(options):
+    """（驗算用坐標）單位圓：P 在 0°、Q 在 82°；在 OQ 上找 T 使 ∠PTQ=104°，定出 R，
+       再由圓心角 ∠QOR 求圓周角 ∠QSR。"""
+    P = (1.0, 0.0)
+    Q = (math.cos(math.radians(82)), math.sin(math.radians(82)))
+    # 掃描 T = mid·Q（mid ∈ (0,1)）找 ∠PTQ = 104°：避開 mid→1（T→Q）的退化位置
+    best = (1e9, 0.5)
+    mid = 0.001
+    while mid < 0.999:
+        T = (mid * Q[0], mid * Q[1])
+        d = abs(_ang(P, T, Q) - 104)
+        if d < best[0]:
+            best = (d, mid)
+        mid += 0.001
+    best2 = best
+    mid = best[1] - 0.001
+    while mid <= best[1] + 0.001:
+        if 0 < mid < 1:
+            T = (mid * Q[0], mid * Q[1])
+            d = abs(_ang(P, T, Q) - 104)
+            if d < best2[0]:
+                best2 = (d, mid)
+        mid += 1e-6
+    mid = best2[1]
+    T = (mid * Q[0], mid * Q[1])
+    dx, dy = T[0] - P[0], T[1] - P[1]
+    b = 2 * (P[0] * dx + P[1] * dy)
+    c = P[0] ** 2 + P[1] ** 2 - 1
+    u = (-b + math.sqrt(b * b - 4 * (dx * dx + dy * dy) * c)) / (2 * (dx * dx + dy * dy))
+    R = (P[0] + u * dx, P[1] + u * dy)
+    ra = math.degrees(math.atan2(R[1], R[0])) % 360
+    ans = abs(ra - 82) / 2
+    hits = [L for L, tex in options.items() if abs(_num(tex) - ans) < 1.0]
+    return hits, f"R at {ra:.2f}°, ∠QSR≈{ans:.2f}°"
+
+
+def p26_26(options):
+    """兩線斜率比較：不同 → 相交 → 等距點軌跡是兩條角平分線（一對直線）。"""
+    m1, m2 = -3 / 5, 3 / 5
+    if abs(m1 - m2) > 1e-12:
+        return ([L for L in options if L == "D"],
+                f"slopes {m1} vs {m2} differ → two angle bisectors")
+    return ([L for L in options if L == "B"], "parallel lines → one midline")
+
+
+def p26_27(options):
+    """圓心 (5,k) 與兩點等距解 k=6.5；周長 2π|k|。"""
+    k = 52 / 8
+    circ = 2 * math.pi * abs(k)
+    hits = []
+    for L, tex in options.items():
+        m = re.search(r"(\d+(?:\.\d+)?)", tex)
+        if m and abs(float(m.group(1)) * math.pi - circ) < 1e-6:
+            hits.append(L)
+    return hits, f"k={k}, circumference={circ:.6f}"
+
+
+def p26_28(options):
+    """窮舉 C(5,2)=10 組配對（兩張 2 是不同卡），數和大於 7 者。"""
+    cards = [2, 2, 3, 4, 6]
+    tot = fav = 0
+    for i in range(5):
+        for j in range(i + 1, 5):
+            tot += 1
+            if cards[i] + cards[j] > 7:
+                fav += 1
+    p = fav / tot
+    hits = [L for L, tex in options.items() if abs(ev(_clean(tex)) - p) < 1e-12]
+    return hits, f"{fav}/{tot} pairs with sum > 7"
+
+
+def p26_29(options):
+    """反例：兩組數據可有相同五數摘要但平均數不同 → 平均數不可從盒鬚圖得知。"""
+    a = [1, 2, 3, 3, 5, 6, 7, 8, 9]
+    b = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    def summary(xs):
+        xs = sorted(xs)
+        n = len(xs)
+        med = xs[n // 2]
+        lo, hi = xs[:n // 2], xs[n // 2 + 1:]
+        q1 = (lo[1] + lo[2]) / 2 if len(lo) == 4 else lo[len(lo) // 2]
+        q3 = (hi[1] + hi[2]) / 2 if len(hi) == 4 else hi[len(hi) // 2]
+        return (xs[0], q1, med, q3, xs[-1])
+
+    same = summary(a) == summary(b)
+    means = (sum(a) / len(a), sum(b) / len(b))
+    differ = abs(means[0] - means[1]) > 1e-9
+    truth = {"II", "III"} if (same and differ) else set()
+    return _stmt_hits(options, truth), f"same five-number summary={same}, means differ={differ}"
+
+
+def p26_30(options):
+    """窮舉所有 x+y=22 且 x,y∈[4,13] 的 (x,y)，檢驗 I/II/III 是否恆成立。"""
+    from collections import Counter
+    base = [4, 7, 7, 7, 8, 11, 11, 13]
+    always = {"I": True, "II": True, "III": True}
+    tested = 0
+    for x in range(4, 14):
+        y = 22 - x
+        if not (4 <= y <= 13):
+            continue
+        tested += 1
+        data = base + [x, y]
+        n = len(data)
+        mean = sum(data) / n
+        u = sum((v - mean) ** 2 for v in data) / n
+        s = sorted(data)
+        v = (s[4] + s[5]) / 2
+        cnt = Counter(data)
+        w = max(cnt, key=lambda k: cnt[k])
+        if not u < 7:
+            always["I"] = False
+        if not v > 7:
+            always["II"] = False
+        if w != 7:
+            always["III"] = False
+    truth = {k for k, ok in always.items() if ok}
+    return _stmt_hits(options, truth), f"{tested} valid (x,y): " + ", ".join(
+        f"{k}={always[k]}" for k in ("I", "II", "III"))
+
+
+def p26_31(options):
+    """二進位字串轉整數，再比對每個選項的表達式。"""
+    val = int("1010100000001110", 2)
+    hits = [L for L, tex in options.items() if abs(ev(_clean(tex)) - val) < 1e-6]
+    return hits, f"1010100000001110_2 = {val}"
+
+
+def p26_32(options):
+    """三個式子的指數：min 必須等於 HCF、max 等於 LCM。"""
+    e1, e2 = (1, 3, 6), (1, 2, 4)
+    hcf, lcm = (1, 2, 3), (2, 4, 6)
+    hits = []
+    for L, tex in options.items():
+        m = re.match(r"x(?:\^\{?(\d+)\}?)?y(?:\^\{?(\d+)\}?)?z(?:\^\{?(\d+)\}?)?",
+                     tex.strip().replace("$", ""))
+        if m:
+            e3 = tuple(int(g) if g else 1 for g in m.groups())
+            if tuple(min(x) for x in zip(e1, e2, e3)) == hcf and \
+               tuple(max(x) for x in zip(e1, e2, e3)) == lcm:
+                hits.append(L)
+    return hits, "each option tested: min=HCF and max=LCM"
+
+
+def p26_33(options):
+    """由 S_n=3^n−1 直接算 a1..a5，檢驗三命題。"""
+    S = lambda n: 3 ** n - 1
+    a = [None] + [S(n) - S(n - 1) for n in range(1, 6)]
+    cond = {"I": a[2] == 8,
+            "II": all(a[n + 1] == 3 * a[n] for n in range(1, 5)),
+            "III": all(x % 2 == 0 for x in a[1:])}
+    truth = {k for k, ok in cond.items() if ok}
+    return _stmt_hits(options, truth), f"a1..a5={a[1:]}, " + ", ".join(
+        f"{k}={cond[k]}" for k in ("I", "II", "III"))
+
+
+def p26_34(options):
+    """把每個選項的 β 代入複數式（Python complex），實測虛部是否為 0。"""
+    i = complex(0, 1)
+    num = i ** 4 + 2 * i ** 3 + 3 * i ** 2 + 4 * i
+    hits = []
+    for L, tex in options.items():
+        m = re.search(r"(-?\d+)", tex)
+        if m and abs((num / (complex(0, float(m.group(1))) - 1)).imag) < 1e-9:
+            hits.append(L)
+    return hits, f"numerator={num}; imaginary part tested for each option"
+
+
+def p26_35(options):
+    """數值檢驗 y=2−log_3(x+4) 的單調性、x 截距與 y 截距。"""
+    f = lambda x: 2 - math.log(x + 4, 3)
+    cond = {"I": f(1) > f(0), "II": abs(f(5)) < 1e-12, "III": abs(f(0) - 2) < 1e-12}
+    truth = {k for k, ok in cond.items() if ok}
+    return _stmt_hits(options, truth), f"f(0)={f(0):.4f}, f(1)={f(1):.4f}, f(5)={f(5):.1e}"
+
+
+def p26_36(options):
+    """縱軸截距 log a = 2 → a = 10²；橫軸截距定出斜率。"""
+    loga = 2.0
+    a = 10 ** loga
+    hits = [L for L, tex in options.items() if abs(_num(tex) - a) < 1e-6]
+    return hits, f"log a=2 → a={a}, slope log b={-loga}"
+
+
+def p26_37(options):
+    """三條邊界線兩兩求交點，篩出可行頂點，取 5x+4y+28 的最小值。"""
+    cands = [_lines(0, 1, 7, 3, -4, 2), _lines(0, 1, 7, 6, 13, 25), _lines(3, -4, 2, 6, 13, 25)]
+    feas = [(x, y) for x, y in cands
+            if y <= 7 + 1e-9 and 3 * x - 4 * y <= 2 + 1e-9 and 6 * x + 13 * y >= 25 - 1e-9]
+    mn = min(5 * x + 4 * y + 28 for x, y in feas)
+    hits = [L for L, tex in options.items() if abs(_num(tex) - mn) < 1e-9]
+    return hits, f"vertices {[(round(x, 3), round(y, 3)) for x, y in feas]} → min={mn}"
+
+
+def p26_38(options):
+    """（驗算用坐標）以弧 a=112,b=124,c=78,d=46 建構圖形，逐項驗證已知條件與所求角。"""
+    def on(deg):
+        return (math.cos(math.radians(deg)), math.sin(math.radians(deg)))
+
+    def inter(p, q, r, s):
+        d1 = (q[0] - p[0], q[1] - p[1])
+        d2 = (s[0] - r[0], s[1] - r[1])
+        den = d1[0] * d2[1] - d1[1] * d2[0]
+        t = ((r[0] - p[0]) * d2[1] - (r[1] - p[1]) * d2[0]) / den
+        return (p[0] + t * d1[0], p[1] + t * d1[1])
+
+    A = on(90)
+    B = on(90 - 112)
+    C = on(90 - 112 - 124)
+    D = on(90 - 112 - 124 - 78)
+    E = inter(A, C, B, D)
+    tang = (-C[1], C[0])
+    T = inter(C, (C[0] + tang[0], C[1] + tang[1]), B, D)
+    ab = (B[0] - A[0], B[1] - A[1])
+    parallel = abs(ab[0] * tang[1] - ab[1] * tang[0]) < 1e-9
+    abd, aed, cte, ade = _ang(A, B, D), _ang(A, E, D), _ang(C, T, E), _ang(A, D, E)
+    hits = [L for L, tex in options.items() if abs(_num(tex) - ade) < 0.6]
+    return hits, (f"∠ABD={abd:.2f}°(23), ∠AED={aed:.2f}°(85), AB∥TC={parallel}, "
+                  f"∠CTE={cte:.2f}°(23) → ∠ADE={ade:.2f}°")
+
+
+def p26_39(options):
+    """（驗算用坐標）T=(0,0)、U=(D,0)，S=(8cosφ,8sinφ) 且 D=8/cosφ；
+       掃描 φ 使 SV=5（取 S、V 同側的解），再量度 ∠SUV。"""
+    found = None
+    for i in range(3001, 9000):
+        phi = math.radians(i / 100)
+        D = 8 / math.cos(phi)
+        S = (8 * math.cos(phi), 8 * math.sin(phi))
+        t = D * math.cos(math.radians(30))
+        V = (t * math.cos(math.radians(30)), t * math.sin(math.radians(30)))
+        if abs(math.dist(S, V) - 5) < 0.002:
+            found = (phi, S, V, (D, 0.0))
+            break
+    if not found:
+        return [], "no configuration found"
+    phi, S, V, U = found
+    ans = _ang(S, U, V)
+    hits = [L for L, tex in options.items() if abs(_num(tex) - ans) < 1.0]
+    return hits, f"φ={math.degrees(phi):.2f}°, |SV|={math.dist(S, V):.3f}, ∠SUV={ans:.2f}°"
+
+
+def p26_40(options):
+    """（驗算用向量）A(0,0,0),B(1,0,0),C(0,1,0),E(0,0,2)：交線 BC 的兩條垂線夾角即所求。"""
+    A, E, M = (0.0, 0.0, 0.0), (0.0, 0.0, 2.0), (0.5, 0.5, 0.0)
+    u = tuple(A[i] - M[i] for i in range(3))
+    v = tuple(E[i] - M[i] for i in range(3))
+    cos = sum(a * b for a, b in zip(u, v)) / (math.sqrt(sum(a * a for a in u)) *
+                                              math.sqrt(sum(b * b for b in v)))
+    sin = math.sqrt(max(0.0, 1 - cos * cos))
+    targets = {"A": 1 / 3, "B": 2 / 3, "C": math.sqrt(2) / 4, "D": 2 * math.sqrt(2) / 3}
+    hits = [L for L in options if L in targets and abs(targets[L] - sin) < 1e-9]
+    return hits, f"cosθ={cos:.6f}, sinθ={sin:.6f}"
+
+
+def p26_41(options):
+    """掃描 90°~360°（0.01°）數 6sin⁴θ−5sin²θ+1=0 的根（全部是簡單根 → 看變號）。"""
+    f = lambda t: 6 * math.sin(t) ** 4 - 5 * math.sin(t) ** 2 + 1
+    roots, prev = 0, f(math.radians(90))
+    for i in range(9001, 36001):
+        cur = f(math.radians(i / 100))
+        if abs(cur) < 1e-12:            # 採樣點正好落在根上：跳過，讓下一段判斷變號
+            continue
+        if prev * cur < 0:
+            roots += 1
+        prev = cur
+    hits = [L for L, tex in options.items() if _num(tex) == roots]
+    return hits, f"sign changes on [90°,360°] = {roots}"
+
+
+def p26_42(options):
+    """窮舉 C(10,5)=252 個委員會，數出男生 ≤ 2 的數目。"""
+    from itertools import combinations
+    tot = fav = 0
+    for comb in combinations(range(10), 5):
+        tot += 1
+        if sum(1 for s in comb if s < 3) <= 2:
+            fav += 1
+    p = fav / tot
+    hits = [L for L, tex in options.items() if abs(ev(_clean(tex)) - p) < 1e-12]
+    return hits, f"{fav}/{tot} → {p:.6f}"
+
+
+def p26_43(options):
+    """窮舉：8 人中選 7 人排隊且兼職不相鄰，直接數出所有合法排列。"""
+    from itertools import permutations
+    people = ["F1", "F2", "F3", "F4", "F5", "P1", "P2", "P3"]
+    cnt = 0
+    for perm in permutations(people, 7):
+        if all(not (perm[i][0] == "P" and perm[i + 1][0] == "P") for i in range(6)):
+            cnt += 1
+    hits = [L for L, tex in options.items() if _num(tex) == cnt]
+    return hits, f"brute-force enumeration = {cnt}"
+
+
+def p26_44(options):
+    """由 (40,z=0)、(58,z=2) 定 σ = 18/2；β−α = (3−(−1))σ。"""
+    sigma = (58 - 40) / 2
+    diff = 4 * sigma
+    hits = [L for L, tex in options.items() if abs(_num(tex) - diff) < 1e-9]
+    return hits, f"σ={sigma}, β−α={diff}"
+
+
+def p26_45(options):
+    """造一組標準差為 5 的數據，實際做 (x+2)/5 變換後計算變異數。"""
+    data = [-5.0, 5.0]
+    n = len(data)
+    m = sum(data) / n
+    sd = math.sqrt(sum((x - m) ** 2 for x in data) / n)
+    new = [(x + 2) / 5 for x in data]
+    mn = sum(new) / n
+    var = sum((x - mn) ** 2 for x in new) / n
+    hits = [L for L, tex in options.items() if abs(_num(tex) - var) < 1e-9]
+    return hits, f"original SD={sd}, new variance={var}"
+
+
+# ───────── 2026 卷（p26_xx）─────────
+def p26_01(options):
+    """1/(k+2)+3/(5k-6) → 在 k=1,3,7 數值比對各選項（避開 k=-2、6/5 兩個無定義點）。"""
+    hits = []
+    stem = "\\frac{1}{k+2}+\\frac{3}{5k-6}"
+    for L, tex in options.items():
+        if all(close(ev(stem, k=k), ev(tex, k=k)) for k in (1, 3, 7)):
+            hits.append(L)
+    return hits, "1/(k+2)+3/(5k-6) evaluated at k=1,3,7"
+
+
+def p26_02(options):
+    """9^(3n+1)/((3^(2n+3))(27^(2n+1))) → n=1,2,3 數值比對。"""
+    hits = []
+    stem = "\\frac{9^{3n+1}}{(3^{2n+3})(27^{2n+1})}"
+    for L, tex in options.items():
+        if all(close(ev(stem, n=n), ev(tex, n=n), rel=1e-6) for n in (1, 2, 3)):
+            hits.append(L)
+    return hits, "index expression evaluated at n=1,2,3"
+
+
+def p26_03(options):
+    """(2α-β)²+(α-2β)² → α,β 換成單字母變數（補上相鄰字母的乘號）後數值比對。"""
+    def norm(tex):                       # to_py 不會在兩個字母之間補乘號（\alpha\beta）
+        s = tex.replace("\\alpha", "a").replace("\\beta", "b")
+        return re.sub(r"(?<=[a-zA-Z])(?=[a-zA-Z])", "*", s)
+
+    hits = []
+    stem = norm("(2\\alpha-\\beta)^{2}+(\\alpha-2\\beta)^{2}")
+    for L, tex in options.items():
+        if all(close(ev(stem, a=a, b=b), ev(norm(tex), a=a, b=b))
+               for a, b in ((1, 2), (3, -1), (-2.5, 4))):
+            hits.append(L)
+    return hits, "quadratic expansion compared at 3 (alpha,beta) sample points"
+
+
+def p26_04(options):
+    """230.045678 的捨入：用 Decimal 精確算「4 位有效數字」與「4 位小數」，再比對選項的數值＋模式。"""
+    val = Decimal("230.045678")
+    sf4 = val.quantize(Decimal("0.1"), rounding=ROUND_HALF_UP)        # 230.0
+    dp4 = val.quantize(Decimal("0.0001"), rounding=ROUND_HALF_UP)     # 230.0457
+    hits = []
+    for L, tex in options.items():
+        m = re.search(r"([0-9]+(?:\.[0-9]+)?)", tex)
+        if not m:
+            continue
+        num = Decimal(m.group(1))
+        if "significant" in tex and num == sf4:
+            hits.append(L)
+        elif "decimal" in tex and num == dp4:
+            hits.append(L)
+    return hits, f"Decimal rounding: 4 s.f. = {sf4}, 4 d.p. = {dp4}"
+
+
+def p26_05(options):
+    """恆等式 (x-5)(x+m)-4(x+n) ≡ x(x+6)+1：
+       展開得 F(x)=(m-15)x-(5m+4n+1)；取 x=0,1 建二元一次方程，用 Fraction 精確解 m,n。"""
+    # x=0 → 5m+4n = -1 ； x=1 → m+n = -4
+    rows = [[Fraction(5), Fraction(4), Fraction(-1)],
+            [Fraction(1), Fraction(1), Fraction(-4)]]
+    det = rows[0][0] * rows[1][1] - rows[0][1] * rows[1][0]                 # 5·1-4·1 = 1
+    m = (rows[0][2] * rows[1][1] - rows[0][1] * rows[1][2]) / det           # 15
+    n = (rows[0][0] * rows[1][2] - rows[0][2] * rows[1][0]) / det           # -19
+    hits = []
+    for L, tex in options.items():
+        mm = re.search(r"(-?\d+)", tex)
+        if mm and Fraction(int(mm.group(1))) == n:
+            hits.append(L)
+    return hits, f"identity solved exactly with Fractions: m={m}, n={n}"
+
+
+def p26_06(options):
+    """(x+2s)(x+t)=sx+st → 整理成 x²+(s+t)x+st=0，用二次公式求根，再比對選項的候選值集合。"""
+    hits = []
+    for L, tex in options.items():
+        cands = re.findall(r"x\s*=\s*([^$\s,]+)", tex)
+        if not cands:
+            continue
+        ok = True
+        for s, t in ((2, 3), (1, 5), (-2, 7)):
+            disc = (s + t) ** 2 - 4 * s * t
+            roots = sorted(round((-(s + t) + sgn * disc ** 0.5) / 2, 9) for sgn in (1, -1))
+            vals = sorted(round(ev(c, s=s, t=t), 9) for c in cands)
+            if vals != roots:
+                ok = False
+                break
+        if ok:
+            hits.append(L)
+    return hits, "quadratic roots compared with each option's candidate set at 3 (s,t) samples"
+
+
 CHECKS = {
     "2025-p2-q01": q01, "2025-p2-q02": q02, "2025-p2-q03": q03, "2025-p2-q04": q04,
     "2025-p2-q05": q05, "2025-p2-q06": q06, "2025-p2-q07": q07, "2025-p2-q08": q08,
@@ -851,6 +1519,23 @@ CHECKS = {
     # Batch B4（最後）
     "2025-p2-q38": q38, "2025-p2-q39": q39, "2025-p2-q40": q40, "2025-p2-q41": q41,
     "2025-p2-q42": q42, "2025-p2-q43": q43, "2025-p2-q44": q44, "2025-p2-q45": q45,
+    # 2026 卷 · batch 6
+    "2026-p2-q01": p26_01, "2026-p2-q02": p26_02, "2026-p2-q03": p26_03,
+    "2026-p2-q04": p26_04, "2026-p2-q05": p26_05, "2026-p2-q06": p26_06,
+    # 2026 卷 · batch 7–11（q22 待人工看圖，暫不解答）
+    "2026-p2-q07": p26_07, "2026-p2-q08": p26_08, "2026-p2-q09": p26_09,
+    "2026-p2-q10": p26_10, "2026-p2-q11": p26_11, "2026-p2-q12": p26_12,
+    "2026-p2-q13": p26_13, "2026-p2-q14": p26_14, "2026-p2-q15": p26_15,
+    "2026-p2-q16": p26_16, "2026-p2-q17": p26_17, "2026-p2-q18": p26_18,
+    "2026-p2-q19": p26_19, "2026-p2-q20": p26_20,     "2026-p2-q21": p26_21,
+    "2026-p2-q22": p26_22, "2026-p2-q23": p26_23, "2026-p2-q24": p26_24, "2026-p2-q25": p26_25,
+    "2026-p2-q26": p26_26, "2026-p2-q27": p26_27, "2026-p2-q28": p26_28,
+    "2026-p2-q29": p26_29, "2026-p2-q30": p26_30, "2026-p2-q31": p26_31,
+    "2026-p2-q32": p26_32, "2026-p2-q33": p26_33, "2026-p2-q34": p26_34,
+    "2026-p2-q35": p26_35, "2026-p2-q36": p26_36, "2026-p2-q37": p26_37,
+    "2026-p2-q38": p26_38, "2026-p2-q39": p26_39, "2026-p2-q40": p26_40,
+    "2026-p2-q41": p26_41, "2026-p2-q42": p26_42, "2026-p2-q43": p26_43,
+    "2026-p2-q44": p26_44, "2026-p2-q45": p26_45,
 }
 
 

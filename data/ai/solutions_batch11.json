@@ -1,0 +1,247 @@
+{
+  "2026-p2-q40": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Set up the dimensions", "zh": "第 1 步 · 定出尺寸" },
+          "math": "AB=AC=1,\\ AE=2,\\ BC=\\sqrt{2}",
+          "en": "From $AB:AC:AE=1:1:2$ take $AB=AC=1$, $AE=2$. The right angle at $A$ gives $BC=\\sqrt{1^{2}+1^{2}}=\\sqrt2$.",
+          "zh": "由 $AB:AC:AE=1:1:2$ 取 $AB=AC=1$、$AE=2$；$A$ 為直角，故 $BC=\\sqrt{1^{2}+1^{2}}=\\sqrt2$。",
+          "highlight": ["BC=\\sqrt{2}"]
+        },
+        {
+          "title": { "en": "Step 2 · The angle between the two planes", "zh": "第 2 步 · 線面交角" },
+          "math": "AM=\\frac{BC}{2}=\\frac{\\sqrt{2}}{2},\\quad EM=\\sqrt{AE^{2}+AM^{2}}=\\sqrt{\\frac{9}{2}}",
+          "en": "The two planes meet along $BC$. Let $M$ be the midpoint of $BC$: since $AB=AC$, $AM\\perp BC$; and as $AE\\perp$ the base, $EM\\perp BC$ too. So the angle between the planes is $\\angle AME$, and $\\Delta EAM$ is right-angled at $A$.",
+          "zh": "兩平面沿 $BC$ 相交。設 $M$ 為 $BC$ 中點：因 $AB=AC$，$AM\\perp BC$；又 $AE\\perp$ 底面，故 $EM\\perp BC$。因此兩平面的夾角就是 $\\angle AME$，而 $\\Delta EAM$ 在 $A$ 為直角。",
+          "highlight": ["AM\\perp BC", "EM\\perp BC"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\cos\\theta=\\frac{AM}{EM}=\\frac{\\frac{\\sqrt2}{2}}{\\frac{3}{\\sqrt2}}=\\frac{1}{3} \\Rightarrow \\sin\\theta=\\frac{2\\sqrt{2}}{3}",
+          "en": "$EM=\\sqrt{4+\\frac12}=\\frac{3}{\\sqrt2}$, so $\\cos\\theta=\\frac13$ and $\\sin\\theta=\\sqrt{1-\\frac19}=\\frac{2\\sqrt2}{3}$ — option D.",
+          "zh": "$EM=\\sqrt{4+\\frac12}=\\frac{3}{\\sqrt2}$，故 $\\cos\\theta=\\frac13$，$\\sin\\theta=\\sqrt{1-\\frac19}=\\frac{2\\sqrt2}{3}$，選 D。",
+          "highlight": ["\\frac{2\\sqrt{2}}{3}"]
+        }
+      ],
+      "traps": [
+        { "opt": "A",
+          "en": "$\\frac13$ is $\\cos\\theta$, not $\\sin\\theta$ — check which ratio the question asks for.",
+          "zh": "$\\frac13$ 是 $\\cos\\theta$ 而不是 $\\sin\\theta$ —— 看清楚題目問哪一個比值。" },
+        { "opt": "C",
+          "en": "Using $AM=AB=\\sqrt2$ instead of the median length $\\frac{\\sqrt2}{2}$ inflates the angle's cosine.",
+          "zh": "把 $AM$ 當成 $AB=\\sqrt2$（而不是中線長 $\\frac{\\sqrt2}{2}$），會使餘弦值變大。" }
+      ],
+      "tip": {
+        "en": "Angle between two planes: find their line of intersection, then drop perpendiculars from a convenient point to that line in each plane — the angle between those two perpendiculars is the answer.",
+        "zh": "兩平面的夾角：先找交線，再在兩個平面內各作交線的垂線 —— 這兩條垂線的夾角就是所求。" }
+    }
+  },
+
+  "2026-p2-q41": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Substitute $s=\\sin^{2}\\theta$", "zh": "第 1 步 · 令 $s=\\sin^{2}\\theta$" },
+          "math": "6s^{2}-5s+1=0 \\Rightarrow (3s-1)(2s-1)=0",
+          "en": "The equation is quadratic in $\\sin^{2}\\theta$, so $\\sin^{2}\\theta=\\frac13$ or $\\frac12$, i.e. $\\sin\\theta=\\pm\\frac{1}{\\sqrt3}$ or $\\pm\\frac{1}{\\sqrt2}$.",
+          "zh": "方程對 $\\sin^{2}\\theta$ 是二次式，得 $\\sin^{2}\\theta=\\frac13$ 或 $\\frac12$，即 $\\sin\\theta=\\pm\\frac{1}{\\sqrt3}$ 或 $\\pm\\frac{1}{\\sqrt2}$。",
+          "highlight": ["\\sin^{2}\\theta=\\frac13,\\ \\frac12"]
+        },
+        {
+          "title": { "en": "Step 2 · Count the roots for $\\frac{1}{\\sqrt2}$", "zh": "第 2 步 · 數 $\\frac{1}{\\sqrt2}$ 的解" },
+          "math": "\\sin\\theta=\\frac{1}{\\sqrt2}:135^{\\circ};\\quad \\sin\\theta=-\\frac{1}{\\sqrt2}:225^{\\circ},315^{\\circ}",
+          "en": "Within $90^{\\circ}\\le\\theta\\le360^{\\circ}$: 45° is too small, so only 135°; the negative value gives both 225° and 315° — 3 roots.",
+          "zh": "在 $90^{\\circ}\\le\\theta\\le360^{\\circ}$ 內：45° 不在範圍內，只有 135°；負值則有 225° 與 315°，共 3 個解。",
+          "highlight": ["3\\ \\text{roots}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\sin\\theta=\\frac{1}{\\sqrt3}:144.7^{\\circ};\\quad -\\frac{1}{\\sqrt3}:215.3^{\\circ},324.7^{\\circ}",
+          "en": "$\\sin\\theta=\\frac{1}{\\sqrt3}$ gives $35.3^{\\circ}$ (rejected) and $144.7^{\\circ}$; its negative gives $215.3^{\\circ}$ and $324.7^{\\circ}$ — another 3 roots. Total $3+3=6$ — option C.",
+          "zh": "$\\sin\\theta=\\frac{1}{\\sqrt3}$ 給出 $35.3^{\\circ}$（不合）與 $144.7^{\\circ}$；負值給出 $215.3^{\\circ}$ 與 $324.7^{\\circ}$，又是 3 個解。合共 $3+3=6$，選 C。",
+          "highlight": ["6"]
+        }
+      ],
+      "traps": [
+        { "opt": "B",
+          "en": "4 roots means only $\\sin\\theta=\\pm\\frac{1}{\\sqrt2}$ was used — the case $\\sin^{2}\\theta=\\frac13$ was dropped.",
+          "zh": "4 個解表示只用了 $\\sin\\theta=\\pm\\frac{1}{\\sqrt2}$，漏掉 $\\sin^{2}\\theta=\\frac13$ 這個情況。" },
+        { "opt": "A",
+          "en": "2 roots counts only one angle for each sine value, forgetting that $\\sin\\theta=k$ has two solutions in a full turn.",
+          "zh": "2 個解是每個正弦值只算了一個角，忘了在整圈內 $\\sin\\theta=k$ 一般有兩個解。" }
+      ],
+      "tip": {
+        "en": "For trigonometric equations, list every value $\\sin^{2}\\theta$ can take, then for each $\\pm$ value sketch the sine curve and count the solutions inside the given interval.",
+        "zh": "三角方程：先列出 $\\sin^{2}\\theta$ 的所有可能值，再對每個 $\\pm$ 值畫正弦圖形，數出在指定區間內的解。" }
+    }
+  },
+
+  "2026-p2-q42": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Total ways", "zh": "第 1 步 · 總數" },
+          "math": "\\binom{10}{5}=252",
+          "en": "Choose any 5 of the 10 students.",
+          "zh": "從 10 名學生中任選 5 名。",
+          "highlight": ["252"]
+        },
+        {
+          "title": { "en": "Step 2 · Count 'at most 2 boys'", "zh": "第 2 步 · 數「至多 2 名男生」" },
+          "math": "\\binom{3}{0}\\binom{7}{5}+\\binom{3}{1}\\binom{7}{4}+\\binom{3}{2}\\binom{7}{3}=21+105+105=231",
+          "en": "Split into 0, 1 and 2 boys; the girls fill the rest.",
+          "zh": "分成 0、1、2 名男生三種情況，其餘由女生補足。",
+          "highlight": ["231"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "P=\\frac{231}{252}=\\frac{11}{12}",
+          "en": "(Or take the complement: $1-\\frac{\\binom33\\binom72}{252}=1-\\frac{21}{252}=\\frac{11}{12}$.) Option B.",
+          "zh": "（或用反面：$1-\\frac{\\binom33\\binom72}{252}=1-\\frac{21}{252}=\\frac{11}{12}$。）選 B。",
+          "highlight": ["\\frac{11}{12}"]
+        }
+      ],
+      "traps": [
+        { "opt": "C",
+          "en": "$\\frac{119}{120}$ comes from using $1-\\frac{1}{120}$ as if only one committee had 3 boys; actually $\\binom33\\binom72=21$ do.",
+          "zh": "$\\frac{119}{120}$ 來自把「3 名男生」的組合當成只有 1 個；實際上有 $\\binom33\\binom72=21$ 個。" },
+        { "opt": "D",
+          "en": "$\\frac{251}{252}$ subtracts a single case out of 252, again underestimating the complement.",
+          "zh": "$\\frac{251}{252}$ 只從 252 中扣掉 1 個情況，同樣低估了反面事件。" }
+      ],
+      "tip": {
+        "en": "For 'at most / at least' questions, either split into cases or use the complement — whichever has fewer cases; both must be counted with combinations, not permutations.",
+        "zh": "「至多／至少」的題目：分情況或取反面，選情況較少的一邊；兩者都要用組合數而不是排列數。" }
+    }
+  },
+
+  "2026-p2-q43": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Who is left out?", "zh": "第 1 步 · 誰被排除？" },
+          "math": "7\\ \\text{of}\\ 8:\\ \\text{exclude 1 person}",
+          "en": "Choosing 7 from 8 employees means leaving one out, and the two types of employee give two different cases.",
+          "zh": "從 8 人中選 7 人，等於排除 1 人；全職與兼職被排除時情況不同，要分開討論。",
+          "highlight": ["\\text{two cases}"]
+        },
+        {
+          "title": { "en": "Step 2 · Case 1 — a full-timer is left out", "zh": "第 2 步 · 情況一：排除全職" },
+          "math": "5\\times\\left[4!\\times\\binom{5}{3}\\times3!\\right]=5\\times1440=7200",
+          "en": "Leaving out one of the 5 full-timers gives 4 full-time and 3 part-time. Arrange the 4 full-timers ($4!$), then put the 3 part-timers into 3 of the 5 gaps around/between them ($\\binom53$) and order them ($3!$).",
+          "zh": "排除 5 名全職之一，得 4 全職、3 兼職。先排 4 名全職（$4!$），再把 3 名兼職放入 5 個空隙中的 3 個（$\\binom53$）並排列（$3!$）。",
+          "highlight": ["7200"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "3\\times\\left[5!\\times\\binom{6}{2}\\times2!\\right]+7200=3\\times3600+7200=18000",
+          "en": "Case 2: leaving out one of the 3 part-timers gives 5 full-time and 2 part-time, so $5!\\times\\binom62\\times2!=3600$ each. Total $10800+7200=18000$ — option C.",
+          "zh": "情況二：排除 3 名兼職之一，得 5 全職、2 兼職，每種 $5!\\times\\binom62\\times2!=3600$。合計 $10800+7200=18000$，選 C。",
+          "highlight": ["18000"]
+        }
+      ],
+      "traps": [
+        { "opt": "A",
+          "en": "5040 is just $7!$ — it ignores the 'no two part-timers adjacent' condition completely.",
+          "zh": "5040 就是 $7!$，完全忽略了「兼職不相鄰」的條件。" },
+        { "opt": "B",
+          "en": "14400 counts only one of the two cases (it forgets the queues where a part-timer is left out).",
+          "zh": "14400 只算了兩種情況中的一種（漏掉排除兼職的排法）。" }
+      ],
+      "tip": {
+        "en": "For 'no two alike are adjacent', arrange the other group first, then place the restricted ones in the gaps; remember to check whether the selection itself has cases.",
+        "zh": "「同類不相鄰」：先排另一類，再把受限制的放進空隙；別忘了先確認「選人」本身有幾種情況。" }
+    }
+  },
+
+  "2026-p2-q44": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Standard score formula", "zh": "第 1 步 · 標準分公式" },
+          "math": "z=\\frac{x-\\mu}{\\sigma} \\Rightarrow x=\\mu+z\\sigma",
+          "en": "The score equals the mean plus the standard score times the standard deviation.",
+          "zh": "分數等於平均數加上「標準分 × 標準差」。",
+          "highlight": ["x=\\mu+z\\sigma"]
+        },
+        {
+          "title": { "en": "Step 2 · Find $\\sigma$ from the two known scores", "zh": "第 2 步 · 由兩個已知分數求 $\\sigma$" },
+          "math": "58-40=(2-0)\\sigma \\Rightarrow \\sigma=9",
+          "en": "Subtracting removes $\\mu$: the difference in scores equals the difference in standard scores times $\\sigma$.",
+          "zh": "相減可消去 $\\mu$：分數之差＝標準分之差 × $\\sigma$。",
+          "highlight": ["\\sigma=9"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\beta-\\alpha=(3-(-1))\\times9=36",
+          "en": "Again the mean cancels, so no need to find it — option B.",
+          "zh": "同樣消去平均數，不必求出它，得 36，選 B。",
+          "highlight": ["36"]
+        }
+      ],
+      "traps": [
+        { "opt": "A",
+          "en": "31 is $\\alpha$ alone: $\\alpha=40-1\\times9=31$; the question asks for $\\beta-\\alpha$.",
+          "zh": "31 只是 $\\alpha$ 本身：$\\alpha=40-1\\times9=31$；題目問的是 $\\beta-\\alpha$。" },
+        { "opt": "D",
+          "en": "98 is $\\alpha+\\beta=31+67$; adding instead of subtracting the two scores.",
+          "zh": "98 是 $\\alpha+\\beta=31+67$，把兩個分數相加而不是相減。" }
+      ],
+      "tip": {
+        "en": "With standard scores, differences cancel the mean: score difference $=$ standard-score difference $\\times\\sigma$. Use this whenever the question asks for a difference.",
+        "zh": "標準分的題目：相減可消去平均數 —— 分數差＝標準分差 × 標準差。問「差」時優先用這條。" }
+    }
+  },
+
+  "2026-p2-q45": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · What transformation is applied?", "zh": "第 1 步 · 做了甚麼變換？" },
+          "math": "\\frac{x+2}{5}=\\frac{1}{5}x+\\frac{2}{5}",
+          "en": "Each new number is the old one multiplied by $\\frac15$ and then increased by $\\frac25$.",
+          "zh": "每個新數是原數乘 $\\frac15$ 再加 $\\frac25$。",
+          "highlight": ["\\frac{1}{5}x+\\frac{2}{5}"]
+        },
+        {
+          "title": { "en": "Step 2 · Effect on the standard deviation", "zh": "第 2 步 · 對標準差的影響" },
+          "math": "\\text{new SD}=5\\times\\frac{1}{5}=1",
+          "en": "Adding a constant shifts every value equally, so the spread is unchanged; multiplying by $\\frac15$ shrinks the standard deviation by the same factor.",
+          "zh": "加常數只是整體平移，分佈的分散程度不變；乘 $\\frac15$ 則把標準差按同一倍數縮小。",
+          "highlight": ["\\text{new SD}=1"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\text{variance}=1^{2}=1",
+          "en": "The variance is the square of the standard deviation — option A.",
+          "zh": "變異數是標準差的平方，得 1，選 A。",
+          "highlight": ["1"]
+        }
+      ],
+      "traps": [
+        { "opt": "D",
+          "en": "25 is the original variance: forgetting that dividing the data by 5 also divides the spread by 5.",
+          "zh": "25 是原變異數：忘了數據除以 5 時，分散程度也除以 5。" },
+        { "opt": "B",
+          "en": "5 is the original standard deviation; the question asks for the **variance** of the new data.",
+          "zh": "5 是原本的標準差；題目問的是新數據的**變異數**。" }
+      ],
+      "tip": {
+        "en": "Transformations: adding/subtracting a constant changes the mean only; multiplying/dividing changes the mean and scales the standard deviation by the same factor, the variance by its square.",
+        "zh": "變換性質：加／減常數只影響平均數；乘／除則同時影響平均數，並把標準差按同倍數、變異數按平方縮放。" }
+    }
+  }
+}

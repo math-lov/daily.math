@@ -1,0 +1,288 @@
+{
+  "2026-p2-q16": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Perimeter of a sector", "zh": "第 1 步 · 扇形周長" },
+          "math": "2r+s=k \\Rightarrow 28+s=k",
+          "en": "A sector is bounded by two radii and the arc, so its perimeter is $2r+s$ with $r=14$.",
+          "zh": "扇形由兩條半徑與弧圍成，周長是 $2r+s$，其中 $r=14$。",
+          "highlight": ["28+s=k"]
+        },
+        {
+          "title": { "en": "Step 2 · Area of a sector", "zh": "第 2 步 · 扇形面積" },
+          "math": "\\frac{1}{2}rs=3k \\Rightarrow 7s=3k",
+          "en": "The area $\\frac12rs$ equals $3k$, and $r=14$ gives $\\frac12(14)s=7s$.",
+          "zh": "面積 $\\frac12rs$ 等於 $3k$，代入 $r=14$ 得 $7s=3k$。",
+          "highlight": ["7s=3k"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "7s=3(28+s) \\Rightarrow 4s=84 \\Rightarrow s=21",
+          "en": "Eliminate $k$: substitute $k=28+s$. The arc length is 21 cm — option B.",
+          "zh": "把 $k=28+s$ 代入消去 $k$，得 $4s=84$，弧長 21 cm，選 B。",
+          "highlight": ["s=21"]
+        }
+      ],
+      "traps": [
+        { "opt": "C",
+          "en": "28 is $2r$, the two radii — that is the straight part of the perimeter, not the arc.",
+          "zh": "28 是 $2r$（兩條半徑），那是周長中的直線部分，不是弧長。" },
+        { "opt": "D",
+          "en": "Writing the area condition as $rs=3k$ (dropping the $\\frac12$) overstates the arc length.",
+          "zh": "把面積條件寫成 $rs=3k$（漏了 $\\frac12$）會高估弧長。" }
+      ],
+      "tip": {
+        "en": "Sector formulas: perimeter $=2r+s$, area $=\\frac12rs=\\frac{\\theta}{360}\\pi r^{2}$ — write them down before substituting, and never forget the two radii.",
+        "zh": "扇形公式：周長 $=2r+s$、面積 $=\\frac12rs=\\frac{\\theta}{360}\\pi r^{2}$；代入前先寫好，千萬別漏掉兩條半徑。" }
+    }
+  },
+
+  "2026-p2-q17": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Volume of the whole pyramid", "zh": "第 1 步 · 整個金字塔體積" },
+          "math": "V=\\frac{1}{3}(18)(16)(12)=1152",
+          "en": "Base area $18\\times16$ times height 12, divided by 3.",
+          "zh": "底面積 $18\\times16$ 乘高 12 再除以 3。",
+          "highlight": ["1152"]
+        },
+        {
+          "title": { "en": "Step 2 · Volume of the small pyramid $X$", "zh": "第 2 步 · 小金字塔 $X$ 的體積" },
+          "math": "k=\\frac{12}{16}=\\frac{3}{4},\\quad V_X=\\left(\\frac{3}{4}\\right)^{3}(1152)=486",
+          "en": "The cutting plane is parallel to the base, so $X$ is similar to the whole pyramid with length ratio $12/16=3/4$; volumes go as the cube of the ratio.",
+          "zh": "截面平行於底面，故 $X$ 與整個金字塔相似，長度比為 $12/16=3/4$；體積按比的三次方縮放。",
+          "highlight": ["\\left(\\frac{3}{4}\\right)^{3}", "486"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "V_Y=1152-486=666",
+          "en": "The frustum is what remains after removing $X$ — option B.",
+          "zh": "台體是扣掉 $X$ 之後剩下的部分，得 666，選 B。",
+          "highlight": ["666"]
+        }
+      ],
+      "traps": [
+        { "opt": "A",
+          "en": "486 is the volume of the small pyramid $X$; the question asks for the frustum $Y$.",
+          "zh": "486 是小金字塔 $X$ 的體積，題目問的是台體 $Y$。" },
+        { "opt": "D",
+          "en": "Using the length ratio or the area ratio instead of the cube of the ratio for a volume.",
+          "zh": "算體積時誤用長度比（或面積比），體積要用相似比的三次方。" }
+      ],
+      "tip": {
+        "en": "Similar solids: lengths scale as $k$, areas as $k^{2}$, volumes as $k^{3}$; a frustum is always 'whole minus the removed similar piece'.",
+        "zh": "相似立體：長度比 $k$、面積比 $k^{2}$、體積比 $k^{3}$；台體＝整體減去被切走的相似部分。" }
+    }
+  },
+
+  "2026-p2-q18": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Find the height from the area of $\\Delta ABD$", "zh": "第 1 步 · 由 $\\Delta ABD$ 的面積求高" },
+          "math": "\\frac{1}{2}(3)(h)=225 \\Rightarrow h=150",
+          "en": "Take $AB=3$ units and $CD=5$ units (the ratio $3:5$). With base $AB$, the area gives the height between the parallel sides.",
+          "zh": "取 $AB=3$ 單位、$CD=5$ 單位（即比 $3:5$）。以 $AB$ 為底，由面積可求兩平行線間的高。",
+          "highlight": ["h=150"]
+        },
+        {
+          "title": { "en": "Step 2 · The small trapezium", "zh": "第 2 步 · 上方小梯形" },
+          "math": "EF=\\frac{2}{5}AB=1.2,\\quad \\text{height}=h-\\frac{2}{5}h=60",
+          "en": "$E$ divides $BD$ in $2:3$, so $BE:BD=2:5$. As $EF\\parallel AB$ and $BF\\parallel AD$, the top piece is a scaled copy at ratio $2/5$: both its parallel side and its height scale by $2/5$.",
+          "zh": "$E$ 把 $BD$ 分成 $2:3$，故 $BE:BD=2:5$。因 $EF\\parallel AB$、$BF\\parallel AD$，上方部分是比例 $2/5$ 的相似圖形：平行邊與高都乘 $2/5$。",
+          "highlight": ["EF=1.2", "\\text{height}=60"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\frac{1}{2}(5+1.2)(150-60)=279",
+          "en": "Trapezium area $=\\frac12(CD+EF)\\times$ height difference $=279$ cm² — option C.",
+          "zh": "梯形面積 $=\\frac12(CD+EF)\\times$ 高差 $=279$ cm²，選 C。",
+          "highlight": ["279"]
+        }
+      ],
+      "traps": [
+        { "opt": "A",
+          "en": "Scaling only one of EF and the height by $2/5$ (they scale together, since the top piece is similar).",
+          "zh": "只把 $EF$ 或高其中一項乘 $2/5$ —— 兩者要一起縮放（上方部分與原圖相似）。" },
+        { "opt": "D",
+          "en": "Using the full height 150 for the trapezium instead of the gap $150-60=90$.",
+          "zh": "用整條高 150 算梯形，而沒有用 $150-60=90$ 這個高差。" }
+      ],
+      "tip": {
+        "en": "In parallel-line figures, a line parallel to the base cuts a similar figure; convert the given ratio into a scale factor and apply it to every length.",
+        "zh": "平行線圖形中，與底平行的線會切出相似圖形；把已知比化成比例因子，所有長度（含高）一起乘。" }
+    }
+  },
+
+  "2026-p2-q19": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Identify the hypotenuse", "zh": "第 1 步 · 認出斜邊" },
+          "math": "\\angle QPR=90^{\\circ} \\Rightarrow QR=p\\ \\text{is the hypotenuse}",
+          "en": "The right angle is at $P$, so the side opposite it, $QR=p$, is the hypotenuse; $PR=q$ is a leg.",
+          "zh": "直角在 $P$，故對邊 $QR=p$ 是斜邊，$PR=q$ 是其中一條直角邊。",
+          "highlight": ["QR=p"]
+        },
+        {
+          "title": { "en": "Step 2 · Express $PQ$ with $\\theta$", "zh": "第 2 步 · 用 $\\theta$ 表示 $PQ$" },
+          "math": "\\cos\\theta=\\frac{PQ}{QR}=\\frac{PQ}{p} \\Rightarrow PQ=p\\cos\\theta",
+          "en": "In the right angle at $Q$, $PQ$ is the side adjacent to $\\theta$ and $QR$ is the hypotenuse.",
+          "zh": "在 $Q$ 的直角關係中，$PQ$ 是 $\\theta$ 的鄰邊、$QR$ 是斜邊。",
+          "highlight": ["PQ=p\\cos\\theta"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "S=\\frac{1}{2}(PQ)(PR)=\\frac{1}{2}(p\\cos\\theta)(q)=\\frac{1}{2}pq\\cos\\theta",
+          "en": "The two legs of the right angle at $P$ are $PQ$ and $PR$ — option C.",
+          "zh": "$P$ 處的兩條直角邊是 $PQ$ 與 $PR$，面積 $\\frac12 pq\\cos\\theta$，選 C。",
+          "highlight": ["\\frac{1}{2}pq\\cos\\theta"]
+        }
+      ],
+      "traps": [
+        { "opt": "B",
+          "en": "Using $\\sin$ means $PQ$ was taken as the opposite side of $\\theta$ — but the opposite side of $\\theta$ is $PR=q$.",
+          "zh": "用 $\\sin$ 等於把 $PQ$ 當成 $\\theta$ 的對邊 —— 但 $\\theta$ 的對邊是 $PR=q$。" },
+        { "opt": "D",
+          "en": "The area is a product of two lengths, so only $\\sin$ or $\\cos$ can appear; $\\tan$ would give a ratio, not an area.",
+          "zh": "面積是兩個長度相乘，只會出現 $\\sin$ 或 $\\cos$；$\\tan$ 得出的是比值，不是面積。" }
+      ],
+      "tip": {
+        "en": "For a right triangle write down 'which angle, which side': adjacent/hypotenuse → $\\cos$, opposite/hypotenuse → $\\sin$; then substitute into $\\frac12\\times$ base $\\times$ height.",
+        "zh": "直角三角形先寫清楚「哪個角、哪條邊」：鄰邊／斜邊用 $\\cos$，對邊／斜邊用 $\\sin$；再代入 $\\frac12\\times$ 底 $\\times$ 高。" }
+    }
+  },
+
+  "2026-p2-q20": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Length $DE$ in $\\Delta DCE$", "zh": "第 1 步 · 在 $\\Delta DCE$ 求 $DE$" },
+          "math": "DC=AB=3,\\ CE=4 \\Rightarrow DE=5",
+          "en": "Opposite sides of a rectangle are equal, so $DC=3$; the right angle at $C$ gives the 3-4-5 triangle.",
+          "zh": "長方形對邊相等，故 $DC=3$；$C$ 是直角，得 3-4-5 直角三角形。",
+          "highlight": ["DE=5"]
+        },
+        {
+          "title": { "en": "Step 2 · Similar triangles", "zh": "第 2 步 · 相似三角形" },
+          "math": "\\Delta FBE\\sim\\Delta DCE,\\quad \\frac{FE}{DE}=\\frac{BE}{CE}=\\frac{12}{4}=3",
+          "en": "$FB\\parallel DC$ (both along $AB$/$DC$) and $FE$ is the same line as $DE$, so the two triangles are similar; the ratio of corresponding sides is $BE:CE$.",
+          "zh": "$FB\\parallel DC$（同在 $AB$／$DC$ 方向）且 $FE$ 與 $DE$ 同線，故兩三角形相似；對應邊比為 $BE:CE$。",
+          "highlight": ["\\frac{FE}{DE}=3"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "EF=3\\times5=15",
+          "en": "So $EF$ is three times $DE$ — option B.",
+          "zh": "故 $EF$ 是 $DE$ 的三倍，得 15，選 B。",
+          "highlight": ["15"]
+        }
+      ],
+      "traps": [
+        { "opt": "C",
+          "en": "16 is $BC=BE+CE$ — that is the side of the rectangle, not $EF$.",
+          "zh": "16 是 $BC=BE+CE$（長方形的邊），不是 $EF$。" },
+        { "opt": "A",
+          "en": "13 comes from using the wrong pair of corresponding sides (e.g. adding the height $DC$ to $BE-CE$).",
+          "zh": "13 來自用錯對應邊（例如把高 $DC$ 誤加在 $BE-CE$ 上）。" }
+      ],
+      "tip": {
+        "en": "When two lines are produced to meet, look for similar triangles first; match the vertices by the parallel lines, then use the ratio of the known collinear segments.",
+        "zh": "題目把線延長交於一點時，先找相似三角形：用平行線配對頂點，再用共線段的比例求長。" }
+    }
+  },
+
+  "2026-p2-q21": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Is there a right angle?", "zh": "第 1 步 · 有沒有直角？" },
+          "math": "9^{2}+40^{2}=81+1600=1681=41^{2}",
+          "en": "$WX=9$, $WY=40$, $XY=41$ satisfy Pythagoras, so $\\angle XWY=90^{\\circ}$.",
+          "zh": "$WX=9$、$WY=40$、$XY=41$ 符合畢氏定理，故 $\\angle XWY=90^{\\circ}$。",
+          "highlight": ["\\angle XWY=90^{\\circ}"]
+        },
+        {
+          "title": { "en": "Step 2 · Similar triangles", "zh": "第 2 步 · 相似三角形" },
+          "math": "\\angle WXY=\\angle YWZ,\\ \\angle WYX=\\angle WZY \\Rightarrow \\Delta WXY\\sim\\Delta WZY",
+          "en": "Two pairs of equal angles give the similarity; the correspondence is $X\\leftrightarrow W$, $Y\\leftrightarrow Z$, $W\\leftrightarrow Y$.",
+          "zh": "兩對角相等即相似；對應關係是 $X\\leftrightarrow W$、$Y\\leftrightarrow Z$、$W\\leftrightarrow Y$。",
+          "highlight": ["\\Delta WXY\\sim\\Delta WZY"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\frac{WY}{WX}=\\frac{40}{9} \\Rightarrow ZY=\\frac{40}{9}(40),\\ WZ=\\frac{40}{9}(41)",
+          "en": "Sides in the ratio $40:9$; perimeter $=9+41+\\frac{1600}{9}+\\frac{1640}{9}=50+360=410$ cm — option C.",
+          "zh": "對應邊比為 $40:9$；周長 $=9+41+\\frac{1600}{9}+\\frac{1640}{9}=50+360=410$ cm，選 C。",
+          "highlight": ["410"]
+        }
+      ],
+      "traps": [
+        { "opt": "A",
+          "en": "100 treats the quadrilateral as if $WZ=XY$ and $ZY=WX$ (i.e. a parallelogram) — the correct sides come from the similarity ratio $40:9$.",
+          "zh": "100 等於把四邊形當成平行四邊形（$WZ=XY$、$ZY=WX$）—— 正確的是用相似比 $40:9$ 求邊。" },
+        { "opt": "B",
+          "en": "Using the ratio $\\frac{WX}{WY}=\\frac{9}{40}$ the wrong way round shrinks the sides instead of enlarging them.",
+          "zh": "把比例 $\\frac{WX}{WY}=\\frac{9}{40}$ 用反了，會把邊縮小而不是放大。" }
+      ],
+      "tip": {
+        "en": "Match similar-triangle vertices by the equal angles first, then every side ratio follows; when the perimeter is a neat number, expect fractions along the way.",
+        "zh": "相似三角形先用等角配對頂點，之後所有邊比自然出現；周長是整數時，中途分數通常會互相抵消。" }
+    }
+  },
+
+  "2026-p2-q23": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · $BCEF$ is a rectangle", "zh": "第 1 步 · $BCEF$ 是長方形" },
+          "math": "BC\\parallel EF,\\ BC=EF \\Rightarrow BF\\parallel CE",
+          "en": "In a regular hexagon opposite sides are parallel and equal, so $BC\\parallel EF$ and $BC=EF$; hence $BCEF$ is a parallelogram, giving $BF\\parallel CE$ (and $BC\\perp BF$). Since $G$ lies on $BF$, $BG\\parallel CE$: statement I is true.",
+          "zh": "正六邊形對邊平行且相等，故 $BC\\parallel EF$、$BC=EF$，$BCEF$ 為平行四邊形，得 $BF\\parallel CE$（且 $BC\\perp BF$）。$G$ 在 $BF$ 上，故 $BG\\parallel CE$，命題 I 成立。",
+          "highlight": ["BG\\parallel CE"]
+        },
+        {
+          "title": { "en": "Step 2 · Compare the sides of the two triangles", "zh": "第 2 步 · 比較兩三角形的邊" },
+          "math": "AB=1,\\ BF=\\sqrt{3},\\ BG=AG=\\frac{\\sqrt{3}}{3}",
+          "en": "$\\Delta ABF$ has $AB=AF=1$, $BF=\\sqrt3$ (since $\\angle BAF=120^{\\circ}$), so $\\angle ABF=30^{\\circ}$; with $\\angle ABC=120^{\\circ}$ we get $\\angle CBF=90^{\\circ}$. In the 30-60-90 triangle $BCG$ ($BC=1$), $BG=\\frac{1}{\\sqrt3}$ and $CG=\\frac{2}{\\sqrt3}$, so $AG=AC-CG=\\sqrt3-\\frac{2}{\\sqrt3}=\\frac{1}{\\sqrt3}$. Thus $\\Delta ABG$ has sides $1:\\frac{1}{\\sqrt3}:\\frac{1}{\\sqrt3}$, and $\\Delta BDC$ has $BD=\\sqrt3$, $DC=BC=1$, i.e. the same ratio: statement II is true.",
+          "zh": "$\\Delta ABF$ 中 $AB=AF=1$、$BF=\\sqrt3$（因 $\\angle BAF=120^{\\circ}$），故 $\\angle ABF=30^{\\circ}$；配合 $\\angle ABC=120^{\\circ}$ 得 $\\angle CBF=90^{\\circ}$。在 30-60-90 的 $\\Delta BCG$（$BC=1$）中，$BG=\\frac{1}{\\sqrt3}$、$CG=\\frac{2}{\\sqrt3}$，故 $AG=AC-CG=\\sqrt3-\\frac{2}{\\sqrt3}=\\frac{1}{\\sqrt3}$。於是 $\\Delta ABG$ 三邊比為 $1:\\frac{1}{\\sqrt3}:\\frac{1}{\\sqrt3}$，而 $\\Delta BDC$ 的 $BD=\\sqrt3$、$DC=BC=1$ 比值相同，命題 II 成立。",
+          "highlight": ["\\Delta ABG\\sim\\Delta BDC"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "AG=BG=\\frac{\\sqrt{3}}{3},\\ GF=GC=\\frac{2\\sqrt{3}}{3},\\ AF=BC=1",
+          "en": "From Step 2, $GF=BF-BG=\\sqrt3-\\frac{\\sqrt3}{3}=\\frac{2\\sqrt3}{3}=GC$, and $AF=BC$; with $AG=BG$ the two triangles are congruent (SSS): statement III is true. All three hold — option D.",
+          "zh": "由第 2 步，$GF=BF-BG=\\sqrt3-\\frac{\\sqrt3}{3}=\\frac{2\\sqrt3}{3}=GC$，且 $AF=BC$；配合 $AG=BG$，兩三角形 SSS 全等，命題 III 成立。三個都對，選 D。",
+          "highlight": ["\\Delta AGF\\cong\\Delta BGC", "\\text{D}"]
+        }
+      ],
+      "traps": [
+        { "opt": "C",
+          "en": "Judging from the picture that $BG$ and $CE$ are not parallel — but $BCEF$ is a parallelogram, so they are.",
+          "zh": "憑圖覺得 $BG$ 與 $CE$ 不平行 —— 但 $BCEF$ 是平行四邊形，它們確實平行。" },
+        { "opt": "B",
+          "en": "Comparing the wrong pairs of sides in II (e.g. $AB$ with $BC$) makes the ratio look unequal.",
+          "zh": "比較 II 時配錯對應邊（例如把 $AB$ 對上 $BC$），比例就會看起來不相等。" }
+      ],
+      "tip": {
+        "en": "In a regular hexagon, remember $\\angle ABC=120^{\\circ}$, opposite sides parallel and equal, and the two-step diagonal $=\\sqrt3\\times$ side; these three facts settle most such questions.",
+        "zh": "正六邊形記住三件事：內角 $120^{\\circ}$、對邊平行且相等、跨兩邊的對角線 $=\\sqrt3\\times$ 邊長；多數題目用這三點就解得完。" }
+    }
+  }
+}

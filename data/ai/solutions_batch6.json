@@ -1,0 +1,274 @@
+{
+  "2026-p2-q01": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Common denominator", "zh": "第 1 步 · 通分" },
+          "math": "\\frac{1}{k+2}+\\frac{3}{5k-6}=\\frac{5k-6+3(k+2)}{(k+2)(5k-6)}",
+          "en": "The two denominators share no factor, so the common denominator is their product $(k+2)(5k-6)$. Each numerator is multiplied by the other denominator.",
+          "zh": "兩個分母沒有公因式，公分母就是它們的乘積 $(k+2)(5k-6)$；每個分子都要乘上對方的分母。",
+          "highlight": ["(k+2)(5k-6)"]
+        },
+        {
+          "title": { "en": "Step 2 · Expand the numerator", "zh": "第 2 步 · 展開分子" },
+          "math": "5k-6+3(k+2)=5k-6+3k+6=8k",
+          "en": "Multiply out: $3(k+2)=3k+6$. The constants $-6$ and $+6$ cancel, leaving $8k$.",
+          "zh": "展開：$3(k+2)=3k+6$。常數項 $-6$ 與 $+6$ 正好抵消，只剩 $8k$。",
+          "highlight": ["8k"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\frac{8k}{(k+2)(5k-6)}",
+          "en": "That matches option D.",
+          "zh": "與選項 D 相符。",
+          "highlight": ["\\text{D}"]
+        }
+      ],
+      "traps": [
+        { "opt": "C",
+          "en": "Reading the plus as a minus gives $5k-3k=2k$ (the constants still cancel) — check the sign before combining.",
+          "zh": "把加號看成減號會得到 $5k-3k=2k$（常數項仍抵消）—— 合併前先看清楚符號。" },
+        { "opt": "A",
+          "en": "Flipping the sign of the whole numerator gives $-8k$; the numerator is $+8k$ because $5k+3k$ is positive.",
+          "zh": "把整個分子的正負號弄反會得到 $-8k$；因為 $5k+3k$ 是正的，分子應為 $+8k$。" }
+      ],
+      "tip": {
+        "en": "For adding fractions, find the common denominator first, then multiply the **whole** bracket (distributive law) — constants often cancel, so re-check the numerator.",
+        "zh": "分式加減先找公分母，分子要乘**整個**括號（分配律）；常數項常常正好抵消，所以合併後要再檢查一次分子。"
+      }
+    }
+  },
+
+  "2026-p2-q02": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Write everything in base 3", "zh": "第 1 步 · 全部化成底數 3" },
+          "math": "9^{3n+1}=3^{6n+2},\\quad 27^{2n+1}=3^{6n+3}",
+          "en": "Since $9=3^{2}$ and $27=3^{3}$, multiply the exponent by 2 and by 3 respectively.",
+          "zh": "因為 $9=3^{2}$、$27=3^{3}$，指數分別乘 2 與乘 3。",
+          "highlight": ["9=3^{2}", "27=3^{3}"]
+        },
+        {
+          "title": { "en": "Step 2 · Add exponents in the denominator", "zh": "第 2 步 · 分母指數相加" },
+          "math": "3^{2n+3}\\cdot 3^{6n+3}=3^{8n+6}",
+          "en": "Same base, so add the exponents: $(2n+3)+(6n+3)=8n+6$.",
+          "zh": "同底數相乘，指數相加：$(2n+3)+(6n+3)=8n+6$。",
+          "highlight": ["3^{8n+6}"]
+        },
+        {
+          "title": { "en": "Step 3 · Subtract exponents", "zh": "第 3 步 · 指數相減" },
+          "math": "3^{(6n+2)-(8n+6)}=3^{-2n-4}",
+          "en": "Division means subtracting the exponent: $(6n+2)-(8n+6)=-2n-4$.",
+          "zh": "相除即指數相減：$(6n+2)-(8n+6)=-2n-4$。",
+          "highlight": ["3^{-2n-4}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "3^{-2n-4}=9^{-n-2}",
+          "en": "The options use base 9, and $3^{2m}=9^{m}$, so $3^{-2n-4}=9^{-n-2}$ — option A.",
+          "zh": "選項用底數 9，而 $3^{2m}=9^{m}$，故 $3^{-2n-4}=9^{-n-2}$，選 A。",
+          "highlight": ["\\text{A}"]
+        }
+      ],
+      "traps": [
+        { "opt": "B",
+          "en": "Writing $27^{2n+1}$ as $3^{6n+1}$ (forgetting to multiply the $+1$ by 3) leaves $3^{-2n-2}=9^{-n-1}$.",
+          "zh": "把 $27^{2n+1}$ 寫成 $3^{6n+1}$（忘記 $+1$ 也要乘 3）會得到 $3^{-2n-2}=9^{-n-1}$。" },
+        { "opt": "C",
+          "en": "Dropping the minus when subtracting gives $2n-4$, i.e. $9^{n-2}$ — keep the sign of the whole bracket.",
+          "zh": "指數相減時漏掉負號會得到 $2n-4$，即 $9^{n-2}$ —— 減的是整個括號。" }
+      ],
+      "tip": {
+        "en": "Convert every term to the **same base** first, then apply the index laws; convert back to the base used in the options at the very end.",
+        "zh": "先全部化成**同一個底數**再套指數律；最後才換回選項使用的底數。"
+      }
+    }
+  },
+
+  "2026-p2-q03": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Expand the first square", "zh": "第 1 步 · 展開第一個平方" },
+          "math": "(2\\alpha-\\beta)^{2}=4\\alpha^{2}-4\\alpha\\beta+\\beta^{2}",
+          "en": "Use $(a-b)^{2}=a^{2}-2ab+b^{2}$ with $a=2\\alpha$, $b=\\beta$: the middle term is $-2(2\\alpha)(\\beta)=-4\\alpha\\beta$.",
+          "zh": "用 $(a-b)^{2}=a^{2}-2ab+b^{2}$，取 $a=2\\alpha$、$b=\\beta$：中間項是 $-2(2\\alpha)(\\beta)=-4\\alpha\\beta$。",
+          "highlight": ["-4\\alpha\\beta"]
+        },
+        {
+          "title": { "en": "Step 2 · Expand the second square", "zh": "第 2 步 · 展開第二個平方" },
+          "math": "(\\alpha-2\\beta)^{2}=\\alpha^{2}-4\\alpha\\beta+4\\beta^{2}",
+          "en": "Same identity with $a=\\alpha$, $b=2\\beta$.",
+          "zh": "同一公式，取 $a=\\alpha$、$b=2\\beta$。",
+          "highlight": ["-4\\alpha\\beta"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "5\\alpha^{2}-8\\alpha\\beta+5\\beta^{2}",
+          "en": "Add like terms: $\\alpha^{2}$ gives $4+1=5$, the cross term gives $-4-4=-8$, $\\beta^{2}$ gives $1+4=5$. Option D.",
+          "zh": "合併同類項：$\\alpha^{2}$ 項為 $4+1=5$，交叉項為 $-4-4=-8$，$\\beta^{2}$ 項為 $1+4=5$。選 D。",
+          "highlight": ["-8\\alpha\\beta"]
+        }
+      ],
+      "traps": [
+        { "opt": "B",
+          "en": "Forgetting to square the coefficient 2 (writing $(2\\alpha)^{2}=2\\alpha^{2}$) gives $3\\alpha^{2}-8\\alpha\\beta+3\\beta^{2}$.",
+          "zh": "忘記平方係數 2（把 $(2\\alpha)^{2}$ 寫成 $2\\alpha^{2}$）會得到 $3\\alpha^{2}-8\\alpha\\beta+3\\beta^{2}$。" },
+        { "opt": "C",
+          "en": "Counting the cross term only once: each square contributes $-4\\alpha\\beta$, so the total is $-8\\alpha\\beta$.",
+          "zh": "交叉項只算一次：兩個平方各貢獻 $-4\\alpha\\beta$，合計應是 $-8\\alpha\\beta$。" }
+      ],
+      "tip": {
+        "en": "With $(a-b)^{2}=a^{2}-2ab+b^{2}$, square the **coefficient** too, and remember both brackets contribute a cross term before you collect like terms.",
+        "zh": "用 $(a-b)^{2}=a^{2}-2ab+b^{2}$ 時，係數也要平方；兩個括號各有一個交叉項，合併同類項時都要算進去。"
+      }
+    }
+  },
+
+  "2026-p2-q04": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · 4 significant figures", "zh": "第 1 步 · 4 位有效數字" },
+          "math": "230.045678 \\to 230.0",
+          "en": "Count from the first non-zero digit: 2, 3, 0, 0 — the 4th significant figure is the first decimal place. The next digit is 4, so round down.",
+          "zh": "由第一個非零數字起數：2、3、0、0 —— 第 4 位有效數字是小數點後第一位；下一位是 4，捨去。",
+          "highlight": ["230.0"]
+        },
+        {
+          "title": { "en": "Step 2 · 4 decimal places", "zh": "第 2 步 · 4 位小數" },
+          "math": "230.045678 \\to 230.0457",
+          "en": "Four digits after the decimal point: 0456, and the next digit is 7, so round up to 230.0457.",
+          "zh": "小數點後取四位：0456，下一位是 7，故進位成 230.0457。",
+          "highlight": ["230.0457"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "230.0\\ (\\text{4 s.f.})",
+          "en": "Only option A states a correct pair.",
+          "zh": "只有選項 A 的數值與四捨五入方式都正確。",
+          "highlight": ["\\text{A}"]
+        }
+      ],
+      "traps": [
+        { "opt": "C",
+          "en": "230.0456 is just the number cut off, not rounded: the 5th decimal is 7, so it must round up to 230.0457.",
+          "zh": "230.0456 只是把數字截斷，並未四捨五入：第 5 位小數是 7，應進位成 230.0457。" },
+        { "opt": "B",
+          "en": "230.046 has three decimal places, not four significant figures — 'significant figures' and 'decimal places' are different counts.",
+          "zh": "230.046 是三位小數，不是四位有效數字 —— 「有效數字」與「小數位數」數法不同。" }
+      ],
+      "tip": {
+        "en": "Significant figures start from the first non-zero digit; decimal places start after the point. Fix which digit you are rounding to, then look at the **next** digit.",
+        "zh": "有效數字由第一個非零數字開始數，小數位數由小數點後開始數。先確定要取到哪一位，再看**下一位**決定捨入。"
+      }
+    }
+  },
+
+  "2026-p2-q05": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Expand the left side", "zh": "第 1 步 · 展開左式" },
+          "math": "(x-5)(x+m)-4(x+n)=x^{2}+(m-9)x-5m-4n",
+          "en": "$(x-5)(x+m)=x^{2}+(m-5)x-5m$, then $-4(x+n)=-4x-4n$; the $x$ coefficient is $(m-5)-4=m-9$.",
+          "zh": "$(x-5)(x+m)=x^{2}+(m-5)x-5m$，再減 $4(x+n)=-4x-4n$；$x$ 的係數為 $(m-5)-4=m-9$。",
+          "highlight": ["m-9"]
+        },
+        {
+          "title": { "en": "Step 2 · Expand the right side", "zh": "第 2 步 · 展開右式" },
+          "math": "x(x+6)+1=x^{2}+6x+1",
+          "en": "The identity holds for every $x$, so coefficients of equal powers must match.",
+          "zh": "恆等式對所有 $x$ 都成立，故同次數的係數必須相等。",
+          "highlight": ["x^{2}+6x+1"]
+        },
+        {
+          "title": { "en": "Step 3 · Compare the $x$ coefficients", "zh": "第 3 步 · 比較 $x$ 的係數" },
+          "math": "m-9=6 \\Rightarrow m=15",
+          "en": "Matching the coefficients of $x$ on both sides gives $m$.",
+          "zh": "比較兩邊 $x$ 的係數即可求得 $m$。",
+          "highlight": ["m=15"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "-5m-4n=1 \\Rightarrow -75-4n=1 \\Rightarrow n=-19",
+          "en": "Now compare constants and substitute $m=15$. The question asks for $n$, not $m$.",
+          "zh": "再比較常數項並代入 $m=15$。題目問的是 $n$ 而不是 $m$。",
+          "highlight": ["n=-19"]
+        }
+      ],
+      "traps": [
+        { "opt": "D",
+          "en": "15 is the value of $m$ — a very common slip is answering with the letter you found first.",
+          "zh": "15 是 $m$ 的值 —— 最常見的失誤就是先求出哪個字母就答哪個，題目問的是 $n$。" },
+        { "opt": "B",
+          "en": "A sign slip when moving terms in $-5m-4n=1$ (e.g. turning $-75-4n=1$ into $-4n=-74$) gives a small wrong value.",
+          "zh": "在 $-5m-4n=1$ 移項時搞錯正負號（例如把 $-75-4n=1$ 寫成 $-4n=-74$）會得到錯誤的小數值。" }
+      ],
+      "tip": {
+        "en": "For an identity, arrange both sides in standard form and compare coefficients term by term; then re-read which letter the question actually asks for.",
+        "zh": "處理恆等式：兩邊先整理成標準式再逐項比較係數；最後再看清楚題目問的是哪一個字母。"
+      }
+    }
+  },
+
+  "2026-p2-q06": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Expand the left side", "zh": "第 1 步 · 展開左式" },
+          "math": "(x+2s)(x+t)=x^{2}+(t+2s)x+2st",
+          "en": "Multiply the two brackets: the $x$ term is $tx+2sx$ and the constant is $2st$.",
+          "zh": "兩括號相乘：$x$ 項為 $tx+2sx$，常數項為 $2st$。",
+          "highlight": ["x^{2}+(t+2s)x+2st"]
+        },
+        {
+          "title": { "en": "Step 2 · Move everything to one side", "zh": "第 2 步 · 全部移到同一邊" },
+          "math": "x^{2}+(t+2s)x+2st-sx-st=0 \\Rightarrow x^{2}+(s+t)x+st=0",
+          "en": "Subtract $sx+st$ from both sides first — do not read the roots off the brackets as first written.",
+          "zh": "先把右邊的 $sx+st$ 減掉 —— 不要直接從原式的括號讀答案。",
+          "highlight": ["x^{2}+(s+t)x+st=0"]
+        },
+        {
+          "title": { "en": "Step 3 · Factorise", "zh": "第 3 步 · 因式分解" },
+          "math": "(x+s)(x+t)=0",
+          "en": "Find two numbers with sum $s+t$ and product $st$ — they are $s$ and $t$.",
+          "zh": "找兩個數，和為 $s+t$、積為 $st$ —— 就是 $s$ 與 $t$。",
+          "highlight": ["(x+s)(x+t)=0"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "x=-s \\text{ or } x=-t",
+          "en": "A quadratic has two roots, so both must be listed — option C.",
+          "zh": "二次方程式有兩個根，兩個都要列出 —— 選 C。",
+          "highlight": ["x=-s", "x=-t"]
+        }
+      ],
+      "traps": [
+        { "opt": "B",
+          "en": "Reading $x=-2s$ straight from the bracket $(x+2s)$ ignores the $sx+st$ on the right that has to be moved first.",
+          "zh": "直接由 $(x+2s)$ 讀出 $x=-2s$，忽略了右邊的 $sx+st$ 必須先移到左邊。" },
+        { "opt": "A",
+          "en": "$x=-s$ is a root but only one of them; a quadratic equation should give two roots.",
+          "zh": "$x=-s$ 確實是一個根，但只是其中一個；二次方程式應有兩個根。" }
+      ],
+      "tip": {
+        "en": "When $x$ appears on both sides, move everything to one side and make it 0 before factorising — never read roots off the brackets as first written.",
+        "zh": "當 $x$ 同時出現在等式兩邊時，先把全部移到同一邊化為 0 再因式分解 —— 絕不要直接從原式括號讀根。"
+      }
+    }
+  }
+}

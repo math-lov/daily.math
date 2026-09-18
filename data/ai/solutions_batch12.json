@@ -1,0 +1,49 @@
+{
+  "2026-p2-q22": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Draw the auxiliary line", "zh": "第 1 步 · 作輔助線" },
+          "math": "\\ell \\parallel BC \\parallel EA",
+          "en": "$\\angle EAB=\\angle ABC=90^{\\circ}$, both taken with $AB$, so $EA\\parallel BC$. Draw through the inner vertex $D$ a straight line $\\ell$ parallel to $BC$ — it is then also parallel to $EA$.",
+          "zh": "$\\angle EAB$ 與 $\\angle ABC$ 同與 $AB$ 成直角，故 $EA\\parallel BC$。過內凹頂點 $D$ 作直線 $\\ell$ 平行於 $BC$，它同時平行於 $EA$。",
+          "highlight": ["\\ell\\parallel BC\\parallel EA"]
+        },
+        {
+          "title": { "en": "Step 2 · Split the angle at $D$", "zh": "第 2 步 · 把 $D$ 處的角切開" },
+          "math": "q=\\angle CDE=\\angle(CD,\\ell)+\\angle(\\ell,DE)",
+          "en": "The line $\\ell$ passes through $D$ and lies between $DC$ and $DE$, so the angle $q$ is the sum of the two parts it makes.",
+          "zh": "直線 $\\ell$ 過 $D$ 且落在 $DC$ 與 $DE$ 之間，故角 $q$ 等於它所切出的兩部分之和。",
+          "highlight": ["q=\\angle(CD,\\ell)+\\angle(\\ell,DE)"]
+        },
+        {
+          "title": { "en": "Step 3 · Alternate angles give $p$ and $r$", "zh": "第 3 步 · 內錯角給出 $p$ 與 $r$" },
+          "math": "\\angle(\\ell,DE)=p,\\qquad \\angle(CD,\\ell)=r",
+          "en": "$EA\\parallel\\ell$ with transversal $ED$: the alternate angles are equal, so the angle between $\\ell$ and $DE$ equals $p$ at $E$. Likewise $BC\\parallel\\ell$ with transversal $CD$ gives $\\angle(CD,\\ell)=r$.",
+          "zh": "$EA\\parallel\\ell$、$ED$ 為截線：內錯角相等，故 $\\ell$ 與 $DE$ 的夾角等於 $E$ 處的 $p$。同理 $BC\\parallel\\ell$、$CD$ 為截線，得 $\\angle(CD,\\ell)=r$。",
+          "highlight": ["\\angle(\\ell,DE)=p", "\\angle(CD,\\ell)=r"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "q=p+r",
+          "en": "Adding the two parts gives $q=p+r$ — option C. (Check with the pentagon angle sum: $90^{\\circ}+90^{\\circ}+r+(360^{\\circ}-q)+p=540^{\\circ}$ gives the same relation.)",
+          "zh": "兩部分相加得 $q=p+r$，選 C。（也可用五邊形內角和驗證：$90^{\\circ}+90^{\\circ}+r+(360^{\\circ}-q)+p=540^{\\circ}$，得同一關係。）",
+          "highlight": ["q=p+r"]
+        }
+      ],
+      "traps": [
+        { "opt": "A",
+          "en": "$p=r$ only holds in the special case where the figure is symmetric (e.g. when $D$ is directly below the midpoint of $BC$); moving $D$ changes $p$ and $r$ independently.",
+          "zh": "$p=r$ 只在圖形對稱的特例成立（例如 $D$ 正好在 $BC$ 中點的正下方）；移動 $D$ 時 $p$ 與 $r$ 各自改變。" },
+        { "opt": "D",
+          "en": "With $q=p+r$, the sum $p+q+r=2q$, which equals $180^{\\circ}$ only when $q=90^{\\circ}$ — that is option B, and it is not forced.",
+          "zh": "由 $q=p+r$ 得 $p+q+r=2q$，只有當 $q=90^{\\circ}$ 時才等於 $180^{\\circ}$（即選項 B），而 $q$ 不必然為直角。" }
+      ],
+      "tip": {
+        "en": "When a broken line joins two parallel lines, draw a parallel line through the turning point: alternate angles then turn the whole problem into one addition. Never guess equal angles from the picture.",
+        "zh": "折線夾在兩條平行線之間時，過轉折點作平行線：內錯角會把問題化為一條加法。不要憑圖猜「看起來相等」的角。" }
+    }
+  }
+}

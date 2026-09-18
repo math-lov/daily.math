@@ -1,0 +1,370 @@
+{
+  "2026-p2-q31": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Split into two bytes", "zh": "第 1 步 · 分成兩段" },
+          "math": "10101000\\,|\\,00001110",
+          "en": "Sixteen binary digits: read the top eight bits and the bottom eight bits separately.",
+          "zh": "十六個二進位數字：高位八位與低位八位分開看。",
+          "highlight": ["10101000", "00001110"]
+        },
+        {
+          "title": { "en": "Step 2 · Value of each part", "zh": "第 2 步 · 各段的值" },
+          "math": "10101000_2=168=21\\times2^{3},\\quad 00001110_2=14",
+          "en": "$168=128+32+8=21\\times8$; the low byte is $8+4+2=14$.",
+          "zh": "$168=128+32+8=21\\times8$；低位元組為 $8+4+2=14$。",
+          "highlight": ["168", "14"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "168\\times2^{8}+14=21\\times2^{3}\\times2^{8}+14=21\\times2^{11}+14",
+          "en": "The high byte stands for $2^{8}$ times its value — option A.",
+          "zh": "高位元組代表它本身的值乘 $2^{8}$，得 $21\\times2^{11}+14$，選 A。",
+          "highlight": ["21\\times2^{11}+14"]
+        }
+      ],
+      "traps": [
+        { "opt": "B",
+          "en": "$+28$ doubles the low byte: the last four bits $1110$ are $8+4+2=14$, not 28.",
+          "zh": "$+28$ 把低位元組加倍了：最後四位 $1110$ 是 $8+4+2=14$，不是 28。" },
+        { "opt": "C",
+          "en": "Using $2^{12}$ means one bit was skipped — the high byte covers $2^{15}$ down to $2^{8}$.",
+          "zh": "用 $2^{12}$ 等於漏了一位 —— 高位元組對應 $2^{15}$ 至 $2^{8}$。" }
+      ],
+      "tip": {
+        "en": "For a long binary string, split it into bytes (or nibbles): the high part contributes its value times $2^{8}$ (or $2^{4}$).",
+        "zh": "長二進位數先按位元組（或半位元組）切開：高位部分代表「它的值 × $2^{8}$（或 $2^{4}$）」。" }
+    }
+  },
+
+  "2026-p2-q32": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · The rule for each letter", "zh": "第 1 步 · 每個字母的規則" },
+          "math": "\\min(\\text{三者})=HCF,\\quad \\max(\\text{三者})=LCM",
+          "en": "For every variable, the smallest exponent among the three expressions is the H.C.F. exponent and the largest is the L.C.M. exponent.",
+          "zh": "對每個字母而言，三個指數中最小的等於 H.C.F. 的指數、最大的等於 L.C.M. 的指數。",
+          "highlight": ["\\min=HCF", "\\max=LCM"]
+        },
+        {
+          "title": { "en": "Step 2 · Fix $x$ and $y$", "zh": "第 2 步 · 定 $x$ 與 $y$" },
+          "math": "x:\\ 1,1\\Rightarrow\\text{third}=x^{2};\\qquad y:\\ 3,2\\Rightarrow\\text{third}=y^{4}",
+          "en": "$x$: the first two have $x^{1}$, so the third must carry $x^{2}$ to reach the L.C.M. $x^{2}$. $y$: to make the maximum 4 the third must be $y^{4}$.",
+          "zh": "$x$：前兩式都是 $x^{1}$，故第三式需帶 $x^{2}$ 才達到 L.C.M. 的 $x^{2}$。$y$：要令最大為 4，第三式須為 $y^{4}$。",
+          "highlight": ["x^{2}", "y^{4}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "z:\\ \\min(6,4,z)=3 \\Rightarrow z^{3}",
+          "en": "$z$: the minimum of $6,4$ and the unknown is 3, so the third expression carries $z^{3}$ (and indeed $\\max(6,4,3)=6$ matches the L.C.M.). The third expression is $x^{2}y^{4}z^{3}$ — option D.",
+          "zh": "$z$：$6$、$4$ 與未知數的最小值是 3，故第三式帶 $z^{3}$（而 $\\max(6,4,3)=6$ 正好符合 L.C.M.）。第三式為 $x^{2}y^{4}z^{3}$，選 D。",
+          "highlight": ["x^{2}y^{4}z^{3}"]
+        }
+      ],
+      "traps": [
+        { "opt": "B",
+          "en": "Taking $y^{4}$ but keeping $z^{4}$: the H.C.F. has $z^{3}$, so the smallest of $6,4$ and the third exponent must be 3.",
+          "zh": "取了 $y^{4}$ 卻保留 $z^{4}$：H.C.F. 是 $z^{3}$，所以 $6$、$4$ 與第三個指數中的最小值必須是 3。" },
+        { "opt": "C",
+          "en": "$y^{2}$ leaves the maximum at 3 ($xy^{3}z^{6}$ already reaches $y^{3}$), so the L.C.M. could never be $y^{4}$.",
+          "zh": "$y^{2}$ 會令最大值停留在 3（$xy^{3}z^{6}$ 本身已達 $y^{3}$），L.C.M. 就永遠到不了 $y^{4}$。" }
+      ],
+      "tip": {
+        "en": "For H.C.F./L.C.M. of expressions, compare exponents variable by variable: min must equal the H.C.F. and max must equal the L.C.M.",
+        "zh": "求多項式的 H.C.F./L.C.M.：逐個字母比較指數，最小值要等於 H.C.F.、最大值要等於 L.C.M.。" }
+    }
+  },
+
+  "2026-p2-q33": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · First two terms", "zh": "第 1 步 · 首兩項" },
+          "math": "a_1=S_1=2,\\quad a_2=S_2-S_1=(9-1)-2=6",
+          "en": "The first term is $S_1$; the second is $S_2-S_1$. So the 2nd term is 6, not 8 — statement I is false.",
+          "zh": "首項為 $S_1$；第二項為 $S_2-S_1$。故第 2 項是 6 而不是 8，命題 I 錯誤。",
+          "highlight": ["a_2=6"]
+        },
+        {
+          "title": { "en": "Step 2 · General term", "zh": "第 2 步 · 通項" },
+          "math": "a_n=S_n-S_{n-1}=3^{n}-3^{n-1}=2\\cdot3^{n-1}",
+          "en": "This holds for $n\\ge2$ (and also for $n=1$: $2\\cdot3^{0}=2$). Each term is the previous one times 3, so the sequence is geometric — statement II is true.",
+          "zh": "此式對 $n\\ge2$ 成立（$n=1$ 亦合：$2\\cdot3^{0}=2$）。每項是前一項的 3 倍，故為等比數列，命題 II 成立。",
+          "highlight": ["a_n=2\\cdot3^{n-1}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "2\\cdot3^{n-1}=2\\times\\text{integer}",
+          "en": "$3^{n-1}$ is an integer, so every term is a multiple of 2 — statement III is true. Answer: II and III, option C.",
+          "zh": "$3^{n-1}$ 是整數，故每項都是 2 的倍數，命題 III 成立。答案為 II 與 III，選 C。",
+          "highlight": ["\\text{even}"]
+        }
+      ],
+      "traps": [
+        { "opt": "D",
+          "en": "Taking $a_2=S_2=8$ — but $S_2$ is the sum of the first two terms, not the second term.",
+          "zh": "把 $a_2$ 當成 $S_2=8$ —— 但 $S_2$ 是首兩項之和，不是第二項。" },
+        { "opt": "A",
+          "en": "Accepting I and II but forgetting to check the parity in III.",
+          "zh": "接受了 I 與 II，卻忘了檢驗 III 的奇偶性。" }
+      ],
+      "tip": {
+        "en": "Always use $a_n=S_n-S_{n-1}$ (for $n\\ge2$) and check $a_1=S_1$ separately; never read $a_n$ straight off $S_n$.",
+        "zh": "一律用 $a_n=S_n-S_{n-1}$（$n\\ge2$），再單獨檢查 $a_1=S_1$；不要把 $S_n$ 直接當成 $a_n$。" }
+    }
+  },
+
+  "2026-p2-q34": {
+    "answer": "C",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Simplify the numerator", "zh": "第 1 步 · 化簡分子" },
+          "math": "i^{4}+2i^{3}+3i^{2}+4i=1-2i-3+4i=-2+2i",
+          "en": "Using $i^{2}=-1$: $i^{4}=1$, $i^{3}=-i$.",
+          "zh": "利用 $i^{2}=-1$：$i^{4}=1$、$i^{3}=-i$。",
+          "highlight": ["-2+2i"]
+        },
+        {
+          "title": { "en": "Step 2 · Make the expression real", "zh": "第 2 步 · 令整式為實數" },
+          "math": "\\frac{-2+2i}{\\beta i-1}\\cdot\\frac{-\\beta i-1}{-\\beta i-1}=\\frac{(2+2\\beta)+(2\\beta-2)i}{\\beta^{2}+1}",
+          "en": "Multiply by the conjugate of the denominator; the denominator becomes the real number $\\beta^{2}+1$.",
+          "zh": "分子分母同乘分母的共軛，分母化為實數 $\\beta^{2}+1$。",
+          "highlight": ["(2\\beta-2)i"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "2\\beta-2=0 \\Rightarrow \\beta=1",
+          "en": "For a real value the imaginary part must vanish — option C.",
+          "zh": "要是實數，虛部必須為 0，故 $\\beta=1$，選 C。",
+          "highlight": ["\\beta=1"]
+        }
+      ],
+      "traps": [
+        { "opt": "A",
+          "en": "Getting $-2$ usually means a sign slip in $i^{3}=-i$ or in the conjugate step.",
+          "zh": "得到 $-2$ 通常是 $i^{3}=-i$ 或共軛那一步的符號出錯。" },
+        { "opt": "D",
+          "en": "Setting the real part to 0 instead of the imaginary part gives $\\beta=-1$; a real number needs **zero imaginary part**.",
+          "zh": "令實部為 0（而不是虛部）會得到 $\\beta=-1$；要成為實數，需要**虛部為 0**。" }
+      ],
+      "tip": {
+        "en": "To make $\\frac{z}{w}$ real, multiply by the conjugate of $w$ and set the imaginary part of the product to zero — $z\\bar w$ must be real.",
+        "zh": "要令 $\\frac{z}{w}$ 為實數：乘以 $w$ 的共軛後，令乘積的虛部為 0 —— 即 $z\\bar w$ 要是實數。" }
+    }
+  },
+
+  "2026-p2-q35": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Increasing or decreasing?", "zh": "第 1 步 · 增函數還是減函數？" },
+          "math": "y=2-\\log_{3}(x+4)",
+          "en": "As $x$ increases, $\\log_3(x+4)$ increases, so $2-\\log_3(x+4)$ **decreases**. Statement I is false.",
+          "zh": "當 $x$ 增大，$\\log_3(x+4)$ 增大，故 $2-\\log_3(x+4)$ **減少**。命題 I 錯誤。",
+          "highlight": ["\\text{decreasing}"]
+        },
+        {
+          "title": { "en": "Step 2 · $x$-intercept", "zh": "第 2 步 · x 截距" },
+          "math": "0=2-\\log_{3}(x+4) \\Rightarrow \\log_{3}(x+4)=2 \\Rightarrow x+4=9",
+          "en": "So the $x$-intercept is $x=5$ — statement II is true.",
+          "zh": "故 x 截距為 $x=5$，命題 II 成立。",
+          "highlight": ["x=5"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "x=0 \\Rightarrow y=2-\\log_{3}4\\approx0.74\\neq2",
+          "en": "The $y$-intercept is $2-\\log_34$, not 2, so III is false. Answer B.",
+          "zh": "y 截距是 $2-\\log_34$ 而不是 2，故 III 錯誤。答案 B。",
+          "highlight": ["y\\neq2"]
+        }
+      ],
+      "traps": [
+        { "opt": "D",
+          "en": "Reading the constant 2 in $y=2-\\log_3(x+4)$ as the $y$-intercept — it is only the vertical shift.",
+          "zh": "把 $y=2-\\log_3(x+4)$ 中的常數 2 當成 y 截距 —— 它只是圖像的上下平移量。" },
+        { "opt": "C",
+          "en": "Treating $-\\log$ as increasing: a minus sign in front reflects the curve, so it decreases.",
+          "zh": "把 $-\\log$ 當成增函數：前面的負號會把圖像上下反轉，故為減函數。" }
+      ],
+      "tip": {
+        "en": "For $y=c\\pm\\log_a(x+b)$: the sign of the logarithm decides increasing/decreasing; put $y=0$ for the $x$-intercept and $x=0$ for the $y$-intercept.",
+        "zh": "對 $y=c\\pm\\log_a(x+b)$：對數前的正負決定增減；求 x 截距令 $y=0$，求 y 截距令 $x=0$。" }
+    }
+  },
+
+  "2026-p2-q36": {
+    "answer": "D",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Take logarithms", "zh": "第 1 步 · 取對數" },
+          "math": "y=ab^{x} \\Rightarrow \\log y=\\log a+x\\log b",
+          "en": "So $\\log y$ is linear in $x$ with vertical intercept $\\log a$ and slope $\\log b$.",
+          "zh": "故 $\\log y$ 是 $x$ 的線性函數，縱軸截距為 $\\log a$、斜率為 $\\log b$。",
+          "highlight": ["\\log a+x\\log b"]
+        },
+        {
+          "title": { "en": "Step 2 · Read the vertical intercept", "zh": "第 2 步 · 讀縱軸截距" },
+          "math": "\\log a=2",
+          "en": "The graph of $\\log y$ against $x$ has vertical intercept 2, and that intercept is $\\log a$.",
+          "zh": "以 $x$ 為橫軸、$\\log y$ 為縱軸的圖，其縱軸截距是 2，而該截距等於 $\\log a$。",
+          "highlight": ["\\log a=2"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "a=10^{2}=100",
+          "en": "Base 10 logarithms (as used in DSE) give $a=100$ — option D.",
+          "zh": "以 10 為底（DSE 常用）得 $a=10^{2}=100$，選 D。",
+          "highlight": ["100"]
+        }
+      ],
+      "traps": [
+        { "opt": "A",
+          "en": "$0.01=10^{-2}$ reverses the sign — the intercept 2 means $\\log a=+2$.",
+          "zh": "$0.01=10^{-2}$ 把符號弄反了 —— 截距是 2，即 $\\log a=+2$。" },
+        { "opt": "C",
+          "en": "Taking $a=10$ (i.e. $\\log a=1$) ignores the actual intercept value 2.",
+          "zh": "取 $a=10$（即 $\\log a=1$）忽略了真正的截距 2。" }
+      ],
+      "tip": {
+        "en": "For $y=ab^{x}$, the vertical intercept of the $\\log y$ vs $x$ graph is $\\log a$ and the slope is $\\log b$ — memorise this pair.",
+        "zh": "對 $y=ab^{x}$：$\\log y$ 對 $x$ 的圖，縱軸截距是 $\\log a$、斜率是 $\\log b$ —— 這兩點要背熟。" }
+    }
+  },
+
+  "2026-p2-q37": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Find the vertices of $R$", "zh": "第 1 步 · 求 $R$ 的頂點" },
+          "math": "(10,7),\\quad(-11,7),\\quad(2,1)",
+          "en": "The three boundary lines meet in pairs: $y=7$ with $3x-4y=2$ gives $(10,7)$; $y=7$ with $6x+13y=25$ gives $(-11,7)$; the last two give $(2,1)$. All three satisfy the remaining inequality.",
+          "zh": "三條邊界線兩兩相交：$y=7$ 與 $3x-4y=2$ 得 $(10,7)$；$y=7$ 與 $6x+13y=25$ 得 $(-11,7)$；另兩線得 $(2,1)$。三點都滿足其餘不等式。",
+          "highlight": ["(10,7)", "(-11,7)", "(2,1)"]
+        },
+        {
+          "title": { "en": "Step 2 · Evaluate at each vertex", "zh": "第 2 步 · 逐個頂點求值" },
+          "math": "106,\\quad 1,\\quad 42",
+          "en": "$5x+4y+28$ equals $106$ at $(10,7)$, $1$ at $(-11,7)$ and $42$ at $(2,1)$.",
+          "zh": "$5x+4y+28$ 在 $(10,7)$ 為 106、在 $(-11,7)$ 為 1、在 $(2,1)$ 為 42。",
+          "highlight": ["106", "1", "42"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\min=1",
+          "en": "A linear function on a polygon takes its extreme values at vertices, so the least value is 1 — option A.",
+          "zh": "線性函數在多邊形上的極值必在頂點取得，故最小值為 1，選 A。",
+          "highlight": ["1"]
+        }
+      ],
+      "traps": [
+        { "opt": "D",
+          "en": "106 is the **maximum** (at $(10,7)$) — the question asks for the least value.",
+          "zh": "106 是**最大值**（在 $(10,7)$ 取得）—— 題目問的是最小值。" },
+        { "opt": "C",
+          "en": "42 is the value at $(2,1)$; testing only one vertex misses the true minimum.",
+          "zh": "42 是 $(2,1)$ 處的值；只試一個頂點會錯過真正的最小值。" }
+      ],
+      "tip": {
+        "en": "Linear programming: sketch the region, list **all** vertices, evaluate the objective at each; the extreme values sit at vertices.",
+        "zh": "線性規劃：畫出可行區域，列出**所有**頂點，逐個代入目標函數；極值必在頂點。" }
+    }
+  },
+
+  "2026-p2-q38": {
+    "answer": "B",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · Read the arcs from $AB\\parallel TC$", "zh": "第 1 步 · 由 $AB\\parallel TC$ 得弧" },
+          "math": "\\angle ABD=\\angle CTD=23^{\\circ} \\Rightarrow \\text{arc }AD=46^{\\circ}",
+          "en": "$AB\\parallel TC$ and $T,B,D$ are collinear, so the angle $\\angle CTD=23^{\\circ}$ equals $\\angle ABD$. An inscribed angle is half its arc, so arc $AD=46^{\\circ}$.",
+          "zh": "$AB\\parallel TC$ 且 $T,B,D$ 共線，故 $\\angle CTD=23^{\\circ}$ 等於 $\\angle ABD$；圓周角是所對弧的一半，故弧 $AD=46^{\\circ}$。",
+          "highlight": ["\\text{arc }AD=46^{\\circ}"]
+        },
+        {
+          "title": { "en": "Step 2 · Use the angle between the chords", "zh": "第 2 步 · 用弦交角" },
+          "math": "85^{\\circ}=\\frac{1}{2}(\\text{arc }AD+\\text{arc }BC)=\\frac{1}{2}(46^{\\circ}+\\text{arc }BC)",
+          "en": "The angle between two chords equals half the sum of the arcs cut off by the angle and its vertical angle; hence arc $BC=124^{\\circ}$ (so $\\angle CDB=62^{\\circ}$).",
+          "zh": "兩弦的夾角等於「該角與其對頂角所截兩弧之和」的一半，故弧 $BC=124^{\\circ}$（即 $\\angle CDB=62^{\\circ}$）。",
+          "highlight": ["\\text{arc }BC=124^{\\circ}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "\\angle TCD=\\angle CBD=\\frac{c}{2},\\quad 23^{\\circ}=\\angle CDB-\\angle TCD",
+          "en": "In $\\Delta CTD$, $\\angle TDC=180^{\\circ}-\\angle CDB$ and the angle sum gives $\\frac{c}{2}=62^{\\circ}-23^{\\circ}=39^{\\circ}$, so arc $CD=78^{\\circ}$. Then arc $AB=360^{\\circ}-(46+124+78)^{\\circ}=112^{\\circ}$, and $\\angle ADE=\\angle ADB=\\frac{112^{\\circ}}{2}=56^{\\circ}$ — option B.",
+          "zh": "在 $\\Delta CTD$ 中 $\\angle TDC=180^{\\circ}-\\angle CDB$，由內角和得 $\\frac{c}{2}=62^{\\circ}-23^{\\circ}=39^{\\circ}$，故弧 $CD=78^{\\circ}$。於是弧 $AB=360^{\\circ}-(46+124+78)^{\\circ}=112^{\\circ}$，$\\angle ADE=\\angle ADB=\\frac{112^{\\circ}}{2}=56^{\\circ}$，選 B。",
+          "highlight": ["56^{\\circ}"]
+        }
+      ],
+      "traps": [
+        { "opt": "A",
+          "en": "39° is only half of arc $CD$ (the angle $\\angle TCD$); the question asks for $\\angle ADE$, which subtends arc $AB$.",
+          "zh": "39° 只是弧 $CD$ 的一半（即 $\\angle TCD$）；題目問的 $\\angle ADE$ 所對的是弧 $AB$。" },
+        { "opt": "C",
+          "en": "62° is $\\angle CDB=\\frac12$ arc $BC$; do not stop one step early.",
+          "zh": "62° 是 $\\angle CDB=\\frac12$ 弧 $BC$；不要提早一步作答。" }
+      ],
+      "tip": {
+        "en": "Turn every given angle into an arc degree ($\\times2$ for an inscribed angle, tangent–chord and chord–chord also give half-arcs), then use 'arcs add to $360^{\\circ}$'.",
+        "zh": "把每個已知角換成弧的度數（圓周角 ×2；切線－弦、弦－弦也都是半弧），再用「三弧之和為 $360^{\\circ}$」收尾。" }
+    }
+  },
+
+  "2026-p2-q39": {
+    "answer": "A",
+    "verify": "checked",
+    "solution": {
+      "steps": [
+        {
+          "title": { "en": "Step 1 · The four points are concyclic", "zh": "第 1 步 · 四點共圓" },
+          "math": "\\angle TSU=\\angle TVU=90^{\\circ} \\Rightarrow TU\\ \\text{is a diameter}",
+          "en": "Both angles subtend $TU$ and are right angles, so (converse of 'angle in a semicircle') $S,T,U,V$ lie on one circle with $TU$ as diameter.",
+          "zh": "兩個角都對着 $TU$ 且都是直角，由「半圓上的圓周角是直角」的逆定理，$S,T,U,V$ 共圓且 $TU$ 為直徑。",
+          "highlight": ["\\text{concyclic}"]
+        },
+        {
+          "title": { "en": "Step 2 · Angles at $T$", "zh": "第 2 步 · $T$ 處的角" },
+          "math": "\\angle TUV=180^{\\circ}-90^{\\circ}-30^{\\circ}=60^{\\circ},\\quad \\angle TSV=180^{\\circ}-60^{\\circ}=120^{\\circ}",
+          "en": "In right-angled $\\Delta TUV$, $\\angle TUV=60^{\\circ}$. Opposite angles of the cyclic quadrilateral $STUV$ are supplementary, so $\\angle TSV=180^{\\circ}-60^{\\circ}=120^{\\circ}$.",
+          "zh": "在直角 $\\Delta TUV$ 中 $\\angle TUV=60^{\\circ}$；圓內接四邊形 $STUV$ 的對角互補，故 $\\angle TSV=180^{\\circ}-60^{\\circ}=120^{\\circ}$。",
+          "highlight": ["\\angle TSV=120^{\\circ}"]
+        },
+        {
+          "title": { "en": "Answer", "zh": "答案" },
+          "math": "TV^{2}=8^{2}+5^{2}-2(8)(5)\\cos120^{\\circ}=129",
+          "en": "In $\\Delta STV$ ($ST=8$, $SV=5$, included angle $120^{\\circ}$) the cosine rule gives $TV=\\sqrt{129}$. The sine rule then gives $\\sin\\angle STV=\\frac{5\\sin120^{\\circ}}{\\sqrt{129}}$, so $\\angle STV\\approx22^{\\circ}$. Since $\\angle SUV$ and $\\angle STV$ stand on the same chord $SV$, $\\angle SUV\\approx22^{\\circ}$ — option A.",
+          "zh": "在 $\\Delta STV$（$ST=8$、$SV=5$、夾角 $120^{\\circ}$）中，用餘弦定理得 $TV=\\sqrt{129}$；再用正弦定理得 $\\sin\\angle STV=\\frac{5\\sin120^{\\circ}}{\\sqrt{129}}$，故 $\\angle STV\\approx22^{\\circ}$。因 $\\angle SUV$ 與 $\\angle STV$ 同對弦 $SV$，得 $\\angle SUV\\approx22^{\\circ}$，選 A。",
+          "highlight": ["22^{\\circ}"]
+        }
+      ],
+      "traps": [
+        { "opt": "D",
+          "en": "38° comes from taking $\\angle TSV=60^{\\circ}$: the quadrilateral is cyclic, so $\\angle TSV$ and $\\angle TUV$ are supplementary (120°, not 60°).",
+          "zh": "38° 來自把 $\\angle TSV$ 當成 $60^{\\circ}$：四邊形共圓，$\\angle TSV$ 與 $\\angle TUV$ 互補，應是 $120^{\\circ}$。" },
+        { "opt": "C",
+          "en": "30° is $\\angle UTV$ itself; $\\angle SUV$ is not equal to it but to $\\angle STV$.",
+          "zh": "30° 是 $\\angle UTV$ 本身；$\\angle SUV$ 不等於它，而是等於 $\\angle STV$。" }
+      ],
+      "tip": {
+        "en": "Two right angles on the same segment → concyclic (the segment is a diameter); then switch between 'arcs/chords' and the sine and cosine rules to find the required angle.",
+        "zh": "同一線段上的兩個直角 → 四點共圓（該線段為直徑）；之後在同弓形角、正弦／餘弦定理之間切換即可求得目標角。" }
+    }
+  }
+}

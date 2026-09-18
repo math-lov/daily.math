@@ -61,9 +61,12 @@ RAD_PAT = re.compile(
     r"|\\frac\{\\pi\}\{\d+\}|\\frac\{\d+\\pi\}\{\d+\}|\\pi\s*/\s*\d|=\s*\\pi\b|\\pi\\text\{ ?rad",
     re.I)
 
+# 用 \b 詞邊界：否則 "original"、"coordinated" 這類普通英文字也會命中（假警報）。
+# 另排除連字號（x-coordinate）與否定語境（without coordinates）；
+# 英文 origin 不再列入 —— 它在圖像題（如「不經原點」）是正常用語。
 COORD_PAT = re.compile(
-    r"坐標|坐标|座標|coordinates?|\\overrightarrow|\\vec\{|vectors?|向量|"
-    r"origin|原點|原點", re.I)
+    r"坐標|坐标|座標|(?<!-)(?<!without )\bcoordinates?\b|\\overrightarrow|\\vec\{|"
+    r"\bvectors?\b|向量|原點|原点", re.I)
 
 
 def _text_of(node) -> str:
@@ -137,7 +140,10 @@ def main() -> int:
                            blob, "角度請用「度」（°）：弧度不在必修課程內，扇形題也要先換算成度")
 
         # ── R2／R3 坐標法或向量法當主解法 ──
-        if unit not in COORD_NATIVE_UNITS and not s.get("coordMethodAllowed"):
+        # 題目本身即坐標／向量題（平移、旋轉、直線方程等）→ 用坐標屬課程內做法，不檢查
+        stem_blob = _text_of(q.get("stem") or {}) + " " + _text_of(q.get("figure") or "")
+        coord_native_q = bool(re.search(r"coordinate|origin|坐標|座標|坐标|原點|原点", stem_blob, re.I))
+        if unit not in COORD_NATIVE_UNITS and not s.get("coordMethodAllowed") and not coord_native_q:
             for i, st in enumerate(steps):
                 blob = _text_of(st)
                 m = COORD_PAT.search(blob)
@@ -146,7 +152,7 @@ def main() -> int:
                            "主解法請用課程內方法（追角／全等相似三角形／面積比／直角三角形三角比）；"
                            "坐標法或向量法請放到 solution.alt 作參考")
         if (unit not in COORD_NATIVE_UNITS and not s.get("coordMethodAllowed")
-                and sol.get("tip")):
+                and not coord_native_q and sol.get("tip")):
             blob = _text_of(sol["tip"])
             m = COORD_PAT.search(blob)
             if m:
