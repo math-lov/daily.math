@@ -116,17 +116,20 @@ def main(argv: list[str] | None = None) -> int:
 
         card = bundle["cards"][0]
         orig_body = card["body"]["zh"]
+        # 刻意加入 {{math:0}} 定位標記：驗證「帶標記的正文」也能儲存（面板不應誤擋）
+        test_body = orig_body + "\n" + MARKER + "\n{{math:0}}"
 
         print("\n— 儲存（UTF-8 來回）—")
         patch = {"title": card["title"], "math": card.get("math") or [],
                  "warn": card.get("warn") or {}, "vocab": card.get("vocab") or [],
-                 "body": {"zh": orig_body + MARKER}}
+                 "body": {"zh": test_body}}
         code, res = req(base + "/api/edit", {"kind": "card", "id": card["id"], "patch": patch})
         ok(code == 200 and res.get("ok"), "合法修改可以儲存（checksOk=%s）" % res.get("checksOk"))
         ok(res.get("checksOk") is True, "儲存後自動跑「生成 + 結構檢查」且通過")
         on_disk = read_json("concepts.json")
         disk_card = next(c for c in on_disk["cards"] if c["id"] == card["id"])
         ok(MARKER in disk_card["body"]["zh"], "中文正確寫入檔案（沒有變成 ? 或亂碼）")
+        ok("{{math:0}}" in disk_card["body"]["zh"], "定位標記 {{math:0}} 也能儲存")
         ok(disk_card["title"]["zh"] == card["title"]["zh"], "其他欄位沒有被破壞")
 
         print("\n— 驗證會擋錯 —")
