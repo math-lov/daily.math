@@ -726,6 +726,768 @@
     "D": "\\$90"
    },
    "review": null
+  },
+  {
+   "id": "eph-ws03-ex01",
+   "type": "long",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "change-of-subject",
+   "difficulty": 2,
+   "code": "WS3-EX1",
+   "source": "WS03 Example 1 · [HKDSE 2014 Paper 1 Q5]",
+   "stem": {
+    "text": "Consider the formula $3(2m+n)=m+9$."
+   },
+   "parts": [
+    {
+     "label": "(a)",
+     "text": "Make $n$ the subject of the above formula.",
+     "marks": 2
+    },
+    {
+     "label": "(b)",
+     "text": "If the value of $m$ is increased by $3$, write down the change in the value of $n$.",
+     "marks": 2
+    }
+   ],
+   "marks": 4,
+   "review": null
+  },
+  {
+   "id": "eph-ws03-ex02",
+   "type": "long",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "change-of-subject",
+   "difficulty": 2,
+   "code": "WS3-EX2",
+   "source": "WS03 Practice 2 · [同 Example 1 題型]",
+   "stem": {
+    "text": "Consider the formula $4(x-3y)=8x-7$."
+   },
+   "parts": [
+    {
+     "label": "(a)",
+     "text": "Make $y$ the subject of the above formula.",
+     "marks": 2
+    },
+    {
+     "label": "(b)",
+     "text": "If the value of $x$ is decreased by $12$, write down the change in the value of $y$.",
+     "marks": 2
+    }
+   ],
+   "marks": 4,
+   "review": null
+  },
+  {
+   "id": "eph-ws03-ex03",
+   "type": "long",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 2,
+   "code": "WS3-EX3",
+   "source": "WS03 Practice 3 · [恆等式求常數]",
+   "stem": {
+    "text": "Consider the identity $(x+h)(x+9)\\equiv(x+6)^{2}+k$, where $h$ and $k$ are constants."
+   },
+   "parts": [
+    {
+     "label": "(a)",
+     "text": "Find $h$.",
+     "marks": 2
+    },
+    {
+     "label": "(b)",
+     "text": "Find $k$.",
+     "marks": 2
+    }
+   ],
+   "marks": 4,
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q01",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "change-of-subject",
+   "difficulty": 1,
+   "code": "WS3-Q01",
+   "source": "EPH WS03 Q1 · 選項自擬（原為圖片）",
+   "stem": {
+    "text": "If $2n-3m=1$, then $m=$"
+   },
+   "options": {
+    "A": "$-n$",
+    "B": "$\\frac{2n-1}{3}$",
+    "C": "$\\frac{1-2n}{3}$",
+    "D": "$\\frac{2n+1}{3}$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q02",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "change-of-subject",
+   "difficulty": 1,
+   "code": "WS3-Q02",
+   "source": "EPH WS03 Q2 · 選項自擬（原為圖片）",
+   "stem": {
+    "text": "If $4x-3=4(9-y)$, then $y=$"
+   },
+   "options": {
+    "A": "$\\frac{39-4x}{4}$",
+    "B": "$39-4x$",
+    "C": "$\\frac{4x-39}{4}$",
+    "D": "$4x-39$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q03",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "change-of-subject",
+   "difficulty": 2,
+   "code": "WS3-Q03",
+   "source": "EPH WS03 Q8 · 選項自擬（原為圖片）",
+   "stem": {
+    "text": "If $a(b-a)=-2(a+b)$, then $b=$"
+   },
+   "options": {
+    "A": "$\\frac{a^{2}-2a}{a+2}$",
+    "B": "$\\frac{a^{2}+2a}{a+2}$",
+    "C": "$\\frac{a^{2}-2a}{a-2}$",
+    "D": "$a-2$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q04",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "change-of-subject",
+   "difficulty": 2,
+   "code": "WS3-Q04",
+   "source": "EPH WS03 Q9 · 選項自擬（原為圖片）",
+   "stem": {
+    "text": "If $m(m-a)=a(2-m)$, then $a=$"
+   },
+   "options": {
+    "A": "$m$",
+    "B": "$\\frac{m^{2}}{2}$",
+    "C": "$\\frac{m}{2}$",
+    "D": "$2m^{2}$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q05",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 2,
+   "code": "WS3-Q18",
+   "source": "EPH WS03 Q18 · [HKDSE Sample Paper 2 Q4]",
+   "stem": {
+    "text": "Let $p$ and $q$ be constants. If $x^{2}+p(x+5)-q\\equiv(x+3)(x-9)$, then $q=$"
+   },
+   "options": {
+    "A": "$-6$",
+    "B": "$-5$",
+    "C": "$-3$",
+    "D": "$27$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q06",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 2,
+   "code": "WS3-Q19",
+   "source": "EPH WS03 Q19 · [HKDSE Sample Paper 2 Q4]",
+   "stem": {
+    "text": "Let $a$ and $b$ be constants. If $2x^{2}+a(x+2)+b\\equiv(2x-1)(x-1)$, then $b=$"
+   },
+   "options": {
+    "A": "$-3$",
+    "B": "$-2$",
+    "C": "$1$",
+    "D": "$7$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q07",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 3,
+   "code": "WS3-Q20",
+   "source": "EPH WS03 Q20 · [HKDSE Practice Paper 2 Q4]",
+   "stem": {
+    "text": "Let $m$ and $n$ be constants. If $m(x+4)^{2}+n(x-1)^{2}\\equiv x^{2}+28x+46$, then $m=$"
+   },
+   "options": {
+    "A": "$-4$",
+    "B": "$-2$",
+    "C": "$2$",
+    "D": "$3$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q08",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 3,
+   "code": "WS3-Q21",
+   "source": "EPH WS03 Q21 · [HKDSE Practice Paper 2 Q4]",
+   "stem": {
+    "text": "Let $a$ and $b$ be constants. If $a(x+3)^{2}+b(x-4)^{2}\\equiv x^{2}-78x+51$, then $a=$"
+   },
+   "options": {
+    "A": "$-5$",
+    "B": "$-3$",
+    "C": "$4$",
+    "D": "$6$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q09",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 2,
+   "code": "WS3-Q22",
+   "source": "EPH WS03 Q22 · [HKDSE 2020 Paper 2 Q7]",
+   "stem": {
+    "text": "If $h$ and $k$ are constants such that $(x+h)(x+8)\\equiv(x+7)^{2}+k$, then $k=$"
+   },
+   "options": {
+    "A": "$-18$",
+    "B": "$-8$",
+    "C": "$-1$",
+    "D": "$6$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q10",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 2,
+   "code": "WS3-Q23",
+   "source": "EPH WS03 Q23 · [HKDSE 2020 Paper 2 Q7]",
+   "stem": {
+    "text": "If $p$ and $q$ are constants such that $(x+p)(x-12)\\equiv(x-8)^{2}+q$, then $q=$"
+   },
+   "options": {
+    "A": "$-16$",
+    "B": "$-4$",
+    "C": "$8$",
+    "D": "$12$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q11",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 2,
+   "code": "WS3-Q24",
+   "source": "EPH WS03 Q24 · [HKDSE 2012 Paper 2 Q3]",
+   "stem": {
+    "text": "If $a$ and $b$ are constants such that $x^{2}+a\\equiv(x+b)(x-3)+5$, then $a=$"
+   },
+   "options": {
+    "A": "$5$",
+    "B": "$3$",
+    "C": "$-4$",
+    "D": "$-9$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q12",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 2,
+   "code": "WS3-Q25",
+   "source": "EPH WS03 Q25 · 選項 B/C 自擬 · [HKDSE 2012 Paper 2 Q3]",
+   "stem": {
+    "text": "If $m$ and $n$ are constants such that $x^{2}+m\\equiv(x-4)(x+n)+8$, then $m=$"
+   },
+   "options": {
+    "A": "$-8$",
+    "B": "$-4$",
+    "C": "$4$",
+    "D": "$8$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q13",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 2,
+   "code": "WS3-Q26",
+   "source": "EPH WS03 Q26 · [HKDSE 2019 Paper 2 Q4]",
+   "stem": {
+    "text": "If $a$ and $\\beta$ are constants such that $(x-5)(x+a)-9\\equiv(x-8)^{2}+\\beta$, then $\\beta=$"
+   },
+   "options": {
+    "A": "$-34$",
+    "B": "$-18$",
+    "C": "$-11$",
+    "D": "$-9$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q14",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 2,
+   "code": "WS3-Q27",
+   "source": "EPH WS03 Q27 · [HKDSE 2019 Paper 2 Q4]",
+   "stem": {
+    "text": "If $a$ and $\\beta$ are constants such that $(x+a)(x-8)-13\\equiv(x-11)^{2}+\\beta$, then $\\beta=$"
+   },
+   "options": {
+    "A": "$-22$",
+    "B": "$-14$",
+    "C": "$-13$",
+    "D": "$-11$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q15",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 3,
+   "code": "WS3-Q28",
+   "source": "EPH WS03 Q28 · 選項 A/B 自擬 · [HKDSE 2014 Paper 2 Q3]",
+   "stem": {
+    "text": "If $p$ and $q$ are constants such that $px(x+3)+2x^{2}\\equiv qx(x+2)-x$, then $p=$"
+   },
+   "options": {
+    "A": "$-3$",
+    "B": "$1$",
+    "C": "$3$",
+    "D": "$5$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q16",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 3,
+   "code": "WS3-Q38",
+   "source": "EPH WS03 Q38 · [HKDSE 2021 Paper 2 Q6]",
+   "stem": {
+    "text": "If $a$, $b$ and $c$ are non-zero constants such that $a(x+9)+b(2x+9)\\equiv c(x+8)$, then $a:b=$"
+   },
+   "options": {
+    "A": "$1:2$",
+    "B": "$1:7$",
+    "C": "$2:1$",
+    "D": "$7:1$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q17",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 3,
+   "code": "WS3-Q40",
+   "source": "EPH WS03 Q40 · [HKDSE 2013 Paper 2 Q8]",
+   "stem": {
+    "text": "If $a$, $b$ and $c$ are non-zero constants such that $x(x+4a)+a\\equiv x^{2}+3(bx+c)$, then $a:b:c=$"
+   },
+   "options": {
+    "A": "$3:4:1$",
+    "B": "$3:4:9$",
+    "C": "$4:3:12$",
+    "D": "$12:9:4$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-q18",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 3,
+   "code": "WS3-Q41",
+   "source": "EPH WS03 Q41 · [HKDSE 2013 Paper 2 Q8]",
+   "stem": {
+    "text": "If $a$, $b$ and $c$ are non-zero constants such that $4a-x(x-2a)\\equiv 3(bx+c)-x^{2}$, then $a:b:c=$"
+   },
+   "options": {
+    "A": "$3:2:4$",
+    "B": "$4:6:3$",
+    "C": "$6:9:8$",
+    "D": "$12:8:9$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-ex01",
+   "type": "long",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 2,
+   "code": "WS4-EX1",
+   "source": "WS04 Example 1 · [HKDSE 2022 Paper 1 Q7]",
+   "stem": {
+    "text": "The coordinates of the points $A$ and $B$ are $(9,-13)$ and $(-7,5)$ respectively. $A$ is rotated anticlockwise about $O$ through $90^{\\circ}$ to $A'$, where $O$ is the origin. $B'$ is the reflection image of $B$ with respect to the $y$-axis."
+   },
+   "parts": [
+    {
+     "label": "(a)",
+     "text": "Write down the coordinates of $A'$ and $B'$.",
+     "marks": 2
+    },
+    {
+     "label": "(b)",
+     "text": "Find the slope of $A'B'$.",
+     "marks": 2
+    }
+   ],
+   "marks": 4,
+   "review": null
+  },
+  {
+   "id": "eph-ws04-ex02",
+   "type": "long",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 3,
+   "code": "WS4-EX2",
+   "source": "WS04 Example 2 · [HKDSE 2014 Paper 1 Q8]",
+   "stem": {
+    "text": "The coordinates of the points $R$ and $S$ are $(-5,-3)$ and $(0,5)$ respectively. $R$ is rotated clockwise about the origin $O$ through $270^{\\circ}$ to $R'$. $S$ is translated leftwards by $13$ units to $S'$."
+   },
+   "parts": [
+    {
+     "label": "(a)",
+     "text": "Write down the coordinates of $R'$ and $S'$.",
+     "marks": 2
+    },
+    {
+     "label": "(b)",
+     "text": "Prove that $RS$ is perpendicular to $R'S'$.",
+     "marks": 3
+    }
+   ],
+   "marks": 5,
+   "review": null
+  },
+  {
+   "id": "eph-ws04-ex03",
+   "type": "long",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 3,
+   "code": "WS4-EX3",
+   "source": "WS04 Practice 2",
+   "stem": {
+    "text": "The coordinates of the points $P$ and $Q$ are $(4,2)$ and $(6,5)$ respectively. $P$ is translated leftwards by $3$ units to $P'$. $Q$ is rotated anticlockwise about the origin $O$ through $90^{\\circ}$ to $Q'$."
+   },
+   "parts": [
+    {
+     "label": "(a)",
+     "text": "Write down the coordinates of $P'$ and $Q'$.",
+     "marks": 2
+    },
+    {
+     "label": "(b)",
+     "text": "Prove that $PQ$ is perpendicular to $P'Q'$.",
+     "marks": 3
+    }
+   ],
+   "marks": 5,
+   "review": null
+  },
+  {
+   "id": "eph-ws04-q01",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 1,
+   "code": "WS4-Q01",
+   "source": "EPH WS04 Q1 · [HKDSE Sample Paper 2 Q26]",
+   "stem": {
+    "text": "If the point $(-7,-2)$ is rotated anticlockwise about the origin through $270^{\\circ}$, then the coordinates of its image are"
+   },
+   "options": {
+    "A": "$(-2,7)$",
+    "B": "$(7,-2)$",
+    "C": "$(2,-7)$",
+    "D": "$(-7,2)$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-q02",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 2,
+   "code": "WS4-Q02",
+   "source": "EPH WS04 Q2 · [Modified from HKCEE 2009 Paper 2 Q30]",
+   "stem": {
+    "text": "The coordinates of the point $A$ are $(4,-4)$. $L$ is a vertical line passing through $(2,0)$. If $A$ is reflected with respect to the straight line $L$ to the point $B$, then the distance between $A$ and $B$ is"
+   },
+   "options": {
+    "A": "$1$",
+    "B": "$2$",
+    "C": "$3$",
+    "D": "$4$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-q03",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 2,
+   "code": "WS4-Q03",
+   "source": "EPH WS04 Q3 · [Modified from HKDSE Practice Paper 2 Q25]",
+   "stem": {
+    "text": "If the point $(3,5)$ is reflected with respect to a straight line parallel to the $y$-axis and passing through $(-2,0)$, then the $x$-coordinate of its image is"
+   },
+   "options": {
+    "A": "$-7$",
+    "B": "$-1$",
+    "C": "$1$",
+    "D": "$3$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-q04",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 2,
+   "code": "WS4-Q04",
+   "source": "EPH WS04 Q4 · [Modified from HKDSE Practice Paper 2 Q25]",
+   "stem": {
+    "text": "If the point $(8,-9)$ is reflected with respect to a straight line parallel to the $x$-axis and passing through $(0,-5)$, then the coordinates of its image are"
+   },
+   "options": {
+    "A": "$(-18,-9)$",
+    "B": "$(8,-4)$",
+    "C": "$(8,-1)$",
+    "D": "$(13,-9)$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-q05",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 2,
+   "code": "WS4-Q05",
+   "source": "EPH WS04 Q5 · [HKDSE 2019 Paper 2 Q25]",
+   "stem": {
+    "text": "The coordinates of the point $P$ are $(-2,-5)$. $P$ is rotated clockwise about the origin through $270^{\\circ}$ to the point $Q$. $Q$ is then translated leftwards by $4$ units to the point $R$. Find the $x$-coordinate of $R$."
+   },
+   "options": {
+    "A": "$-2$",
+    "B": "$-1$",
+    "C": "$1$",
+    "D": "$2$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-q06",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 2,
+   "code": "WS4-Q06",
+   "source": "EPH WS04 Q6 · [Modified from HKDSE 2019 Paper 2 Q25]",
+   "stem": {
+    "text": "The coordinates of the point $D$ are $(8,-8)$. $D$ is translated rightwards by $1$ unit to the point $E$. $E$ is then rotated anticlockwise about the origin through $180^{\\circ}$ to the point $F$. Find the coordinates of $F$."
+   },
+   "options": {
+    "A": "$(-9,8)$",
+    "B": "$(9,-8)$",
+    "C": "$(-7,8)$",
+    "D": "$(7,-8)$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-q07",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 2,
+   "code": "WS4-Q07",
+   "source": "EPH WS04 Q7 · 選項 A/B/C 自擬 · [HKDSE 2021 Paper 2 Q23]",
+   "stem": {
+    "text": "The coordinates of the point $A$ are $(-2,-1)$. $A$ is reflected with respect to the $x$-axis to the point $B$. $B$ is then rotated anticlockwise about the origin through $90^{\\circ}$ to the point $C$. Find the $x$-coordinate of $C$."
+   },
+   "options": {
+    "A": "$-2$",
+    "B": "$-1$",
+    "C": "$1$",
+    "D": "$2$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-q08",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 2,
+   "code": "WS4-Q08",
+   "source": "EPH WS04 Q8 · 選項 B/C 自擬 · [HKDSE 2021 Paper 2 Q23]",
+   "stem": {
+    "text": "The coordinates of the point $R$ are $(1,4)$. $R$ is rotated clockwise about the origin through $270^{\\circ}$ to the point $S$. $S$ is then reflected with respect to the $y$-axis to the point $T$. Find the $y$-coordinate of $T$."
+   },
+   "options": {
+    "A": "$-4$",
+    "B": "$-1$",
+    "C": "$1$",
+    "D": "$4$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-q09",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 3,
+   "code": "WS4-Q09",
+   "source": "EPH WS04 Q9 · [Modified from HKCEE 2011 Paper 2 Q29]",
+   "stem": {
+    "text": "The coordinates of the point $A$ are $(-6,-1)$. $L$ is a straight line parallel to the $y$-axis and passing through $(-4,0)$. If $A$ is translated upwards by $3$ units to the point $B$, then the coordinates of the reflection image of $B$ with respect to the straight line $L$ are"
+   },
+   "options": {
+    "A": "$(2,2)$",
+    "B": "$(2,-2)$",
+    "C": "$(-2,2)$",
+    "D": "$(-2,-2)$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-q10",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 3,
+   "code": "WS4-Q10",
+   "source": "EPH WS04 Q10 · [Modified from HKCEE 2011 Paper 2 Q29]",
+   "stem": {
+    "text": "The coordinates of the point $D$ are $(3,-4)$. $L$ is a straight line parallel to the $x$-axis and passing through $(0,-1)$. If $D$ is reflected with respect to the straight line $L$ to the point $E$, and then $E$ is translated leftwards by $2$ units to the point $F$, then the coordinates of $F$ are"
+   },
+   "options": {
+    "A": "$(1,2)$",
+    "B": "$(1,-2)$",
+    "C": "$(-1,2)$",
+    "D": "$(-1,-2)$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-q11",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 3,
+   "code": "WS4-Q11",
+   "source": "EPH WS04 Q11 · [Modified from HKDSE 2020 Paper 2 Q24]",
+   "stem": {
+    "text": "The point $P$ is translated leftwards by $10$ units to the point $Q$. If the coordinates of the reflection image of $Q$ with respect to the $y$-axis are $(-4,-6)$, then the coordinates of $P$ are"
+   },
+   "options": {
+    "A": "$(-14,6)$",
+    "B": "$(-6,-6)$",
+    "C": "$(6,6)$",
+    "D": "$(14,-6)$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-q12",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 3,
+   "code": "WS4-Q12",
+   "source": "EPH WS04 Q12 · [Modified from HKDSE 2020 Paper 2 Q24]",
+   "stem": {
+    "text": "The point $A$ is rotated anticlockwise about the origin through $90^{\\circ}$ to the point $B$. If $B$ is translated upwards by $6$ units to $(5,-8)$, then the coordinates of $A$ are"
+   },
+   "options": {
+    "A": "$(-14,-5)$",
+    "B": "$(-2,-5)$",
+    "C": "$(2,5)$",
+    "D": "$(14,5)$"
+   },
+   "review": null
   }
  ]
 }

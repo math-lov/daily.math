@@ -2122,6 +2122,2091 @@
      "en": "Circle the combination the question asks for before solving."
     }
    }
+  },
+  "eph-ws03-ex01": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "WS03 Example 1 · [HKDSE 2014 Paper 1 Q5]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 拆括號",
+       "en": ""
+      },
+      "math": "6m+3n=m+9",
+      "zh": "先把左邊的括號展開：$3(2m+n)=6m+3n$。有括號就先拆，這是換主項的固定第一步。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 移項，把含 $n$ 的留在左邊",
+       "en": ""
+      },
+      "math": "3n=m+9-6m=9-5m",
+      "zh": "要把 $n$ 變成主項，就把「不含 $n$」的 $6m$ 移到右邊變號。注意 $m+9-6m$ 要合併成 $9-5m$，不是 $9+5m$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 係數化成 1",
+       "en": ""
+      },
+      "math": "n=\\frac{9-5m}{3}=3-\\frac{5}{3}m",
+      "zh": "左邊是 $3n$，所以**整條式子**除以 3：$\\frac{9-5m}{3}$。兩個寫法都可以，題目問「變化」時用 $3-\\frac{5}{3}m$ 更方便。",
+      "en": "",
+      "highlight": [
+       "n=\\frac{9-5m}{3}"
+      ],
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · (b) 用係數直接算變化",
+       "en": ""
+      },
+      "math": "\\Delta n=-\\frac{5}{3}\\times 3=-5",
+      "zh": "$n=3-\\frac{5}{3}m$ 裡，$m$ 的係數是 $-\\frac{5}{3}$，表示「$m$ 每增加 1，$n$ 就減少 $\\frac{5}{3}$」。$m$ 增加 3 → $n$ 減少 5。不用重新代入算一次。",
+      "en": "",
+      "highlight": [
+       "-5"
+      ],
+      "marking": "1A"
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "換主項題若再問「某字母增加/減少時另一字母的變化」，直接用主項式裡的係數乘變化量，又快又不易錯。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-ex02": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "WS03 Practice 2",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 拆括號",
+       "en": ""
+      },
+      "math": "4x-12y=8x-7",
+      "zh": "$4(x-3y)=4x-12y$。展開後右邊維持 $8x-7$。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 移項（含 $y$ 的留左）",
+       "en": ""
+      },
+      "math": "-12y=8x-7-4x=4x-7",
+      "zh": "把 $4x$ 移到右邊變 $-4x$，合併得 $4x-7$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 係數化成 1（注意負號）",
+       "en": ""
+      },
+      "math": "y=\\frac{7-4x}{12}=\\frac{7}{12}-\\frac{1}{3}x",
+      "zh": "左邊是 $-12y$，所以整條除以 $-12$：$y=\\frac{4x-7}{-12}=\\frac{7-4x}{12}$。除以負數時每一項都要變號，這一步最易錯。",
+      "en": "",
+      "highlight": [
+       "y=\\frac{7-4x}{12}"
+      ],
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · (b) $x$ 減少 12 時 $y$ 的變化",
+       "en": ""
+      },
+      "math": "\\Delta y=-\\frac{1}{3}\\times(-12)=+4",
+      "zh": "$y=\\frac{7}{12}-\\frac{1}{3}x$，$x$ 的係數是 $-\\frac{1}{3}$。$x$ 減少 12 → $y$ **增加** 4（負負得正）。",
+      "en": "",
+      "highlight": [
+       "+4"
+      ],
+      "marking": "1A"
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "主項前面是負係數時，先把它變成正的再除（兩邊同乘 $-1$），可以少錯一次。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-ex03": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "WS03 Practice 3 · 恆等式",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開右邊",
+       "en": ""
+      },
+      "math": "(x+6)^{2}+k=x^{2}+12x+36+k",
+      "zh": "完全平方：$(x+6)^{2}=x^{2}+2(6)x+36=x^{2}+12x+36$。中間的 $12x$ 千萬不要漏。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開左邊",
+       "en": ""
+      },
+      "math": "(x+h)(x+9)=x^{2}+(h+9)x+9h",
+      "zh": "$x\\cdot x=x^{2}$、$x$ 項是 $9x+hx=(h+9)x$、常數項是 $9h$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 比較 $x$ 的係數求 $h$",
+       "en": ""
+      },
+      "math": "h+9=12\\ \\Rightarrow\\ h=3",
+      "zh": "恆等式左右同類項係數相同：$x$ 的係數 $h+9=12$，所以 $h=3$。",
+      "en": "",
+      "highlight": [
+       "h=3"
+      ],
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · 比較常數項求 $k$",
+       "en": ""
+      },
+      "math": "9h=36+k\\ \\Rightarrow\\ 27=36+k\\ \\Rightarrow\\ k=-9",
+      "zh": "常數項也要相等：$9h=36+k$。代入 $h=3$ 得 $27=36+k$，所以 $k=-9$。",
+      "en": "",
+      "highlight": [
+       "k=-9"
+      ],
+      "marking": "1A"
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "驗算：代 $x=0$，左邊 $9h=27$、右邊 $36+k=27$ ✓。兩個常數都對上了。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q01": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q1 · 選項自擬",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 把含 $m$ 的移到一邊",
+       "en": ""
+      },
+      "math": "-3m=1-2n",
+      "zh": "題目問 $m$，就把含 $m$ 的項留在左邊：$2n-3m=1$ → $-3m=1-2n$。移過等號的項要變號。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 整條除以 $-3$",
+       "en": ""
+      },
+      "math": "m=\\frac{1-2n}{-3}=\\frac{2n-1}{3}",
+      "zh": "左邊是 $-3m$，整條除以 $-3$。分子分母同乘 $-1$ 把負號移走，答案是 $\\frac{2n-1}{3}$。",
+      "en": "",
+      "highlight": [
+       "\\frac{2n-1}{3}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "zh": "$\\frac{1-2n}{3}$ 是忘記把分母的負號也處理掉 —— $\\frac{1-2n}{-3}$ 要分子分母同乘 $-1$ 才等於 $\\frac{2n-1}{3}$。",
+      "en": "Sign not cleared in the denominator."
+     },
+     {
+      "opt": "A",
+      "zh": "$-n$ 是把 $2n$ 當成 $3n$ 亂約的結果，完全沒有移項。",
+      "en": "Guessed by cancelling wrongly."
+     }
+    ],
+    "tip": {
+     "zh": "主項題的三步：拆括號 → 移項 → 係數化 1。做完把答案代回原式驗算一次。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q02": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q2 · 選項自擬",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 拆右邊的括號",
+       "en": ""
+      },
+      "math": "4x-3=36-4y",
+      "zh": "$4(9-y)=36-4y$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 把含 $y$ 的移到左邊",
+       "en": ""
+      },
+      "math": "4y=36-4x+3=39-4x",
+      "zh": "$-4y$ 移去左邊變 $+4y$；$4x$ 移去右邊變 $-4x$；$-3$ 移過去變 $+3$。合併：$36+3=39$，所以 $4y=39-4x$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 整條除以 4",
+       "en": ""
+      },
+      "math": "y=\\frac{39-4x}{4}",
+      "zh": "左邊是 $4y$，整條除以 4：$\\frac{39-4x}{4}$。注意不是 $\\frac{39}{4}-4x$ —— 兩項都要除。",
+      "en": "",
+      "highlight": [
+       "\\frac{39-4x}{4}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$39-4x$ 是 $4y$ 的值，忘記除以 4。這是這類題最常見的錯。",
+      "en": "Forgot to divide by 4."
+     },
+     {
+      "opt": "C",
+      "zh": "$\\frac{4x-39}{4}$ 移項時沒有變號（把 $4y=39-4x$ 寫成 $4y=4x-39$）。",
+      "en": "Sign error when transposing."
+     }
+    ],
+    "tip": {
+     "zh": "看到「$4y=$」就要記得最後一步是除以 4；選項裡同時放 $4y$ 與 $y$ 是常見的陷阱設計。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q03": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q8 · 選項自擬",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開左邊",
+       "en": ""
+      },
+      "math": "ab-a^{2}=-2a-2b",
+      "zh": "$a(b-a)=ab-a^{2}$；右邊 $-2(a+b)=-2a-2b$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 把含 $b$ 的集中到同一邊",
+       "en": ""
+      },
+      "math": "ab+2b=a^{2}-2a",
+      "zh": "$-2b$ 移左變 $+2b$；$-a^{2}$ 移右變 $+a^{2}$。左邊兩項都含 $b$，可以抽公因式。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 抽 $b$ 出來再除過去",
+       "en": ""
+      },
+      "math": "b(a+2)=a^{2}-2a\\ \\Rightarrow\\ b=\\frac{a^{2}-2a}{a+2}",
+      "zh": "$ab+2b=b(a+2)$，然後整條除以 $(a+2)$。答案也可以寫成 $\\frac{a(a-2)}{a+2}$。",
+      "en": "",
+      "highlight": [
+       "\\frac{a^{2}-2a}{a+2}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "zh": "$\\frac{a^{2}-2a}{a-2}$ 是抽因式時括號寫錯（把 $ab+2b$ 當成 $b(a-2)$）。",
+      "en": "Wrong common factor."
+     },
+     {
+      "opt": "D",
+      "zh": "$a-2$ 是直接把 $(a+2)$ 約掉，忘記分母還有東西。",
+      "en": "Cancelled wrongly."
+     }
+    ],
+    "tip": {
+     "zh": "當目標字母出現在兩項、而且**不在同一邊**時，先集中、再抽公因式，最後才除過去。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q04": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q9 · 選項自擬",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開兩邊",
+       "en": ""
+      },
+      "math": "m^{2}-ma=2a-ma",
+      "zh": "左邊 $m(m-a)=m^{2}-ma$；右邊 $a(2-m)=2a-ma$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 兩邊同時加 $ma$",
+       "en": ""
+      },
+      "math": "m^{2}=2a",
+      "zh": "兩邊都有 $-ma$，加 $ma$ 之後就抵消了 —— 這一步是這題的關鍵。",
+      "en": "",
+      "highlight": [
+       "m^{2}=2a"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 解出 $a$",
+       "en": ""
+      },
+      "math": "a=\\frac{m^{2}}{2}",
+      "zh": "$m^{2}=2a$，所以 $a=\\frac{m^{2}}{2}$。",
+      "en": "",
+      "highlight": [
+       "\\frac{m^{2}}{2}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$m$ 是直接把 $m^{2}$ 當成 $2m$ 約掉，次數處理錯誤（$m^{2}$ 不能被 2 約成 $m$）。",
+      "en": "Wrong power handling."
+     },
+     {
+      "opt": "C",
+      "zh": "$\\frac{m}{2}$ 是把 $m^{2}$ 誤看成 $m$。",
+      "en": "Lost a power of m."
+     }
+    ],
+    "tip": {
+     "zh": "兩邊有相同的項（$-ma$）時，直接加回去抵消，比移項更快更不易錯。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q05": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q18 · [HKDSE Sample Paper 2 Q4]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開右邊",
+       "en": ""
+      },
+      "math": "(x+3)(x-9)=x^{2}-6x-27",
+      "zh": "$(x+3)(x-9)=x^{2}-9x+3x-27=x^{2}-6x-27$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開左邊並比較 $x$ 係數",
+       "en": ""
+      },
+      "math": "x^{2}+px+5p-q\\ \\Rightarrow\\ p=-6",
+      "zh": "左邊 $=x^{2}+px+(5p-q)$。與右邊的 $x$ 係數比較：$p=-6$。",
+      "en": "",
+      "highlight": [
+       "p=-6"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 比較常數項求 $q$",
+       "en": ""
+      },
+      "math": "5p-q=-27\\ \\Rightarrow\\ -30-q=-27\\ \\Rightarrow\\ q=-3",
+      "zh": "常數項也要相等：$5p-q=-27$。代入 $p=-6$：$-30-q=-27$，所以 $q=-3$。",
+      "en": "",
+      "highlight": [
+       "q=-3"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$-6$ 是 $p$ 的值。題目問的是 $q$，這種題的選項常常同時放兩個常數。",
+      "en": "-6 is the value of p, not q."
+     },
+     {
+      "opt": "D",
+      "zh": "$27$ 是把常數項 $-27$ 的正負號搞反（忘記 $5p$ 那一份）。",
+      "en": "Sign error in the constant term."
+     }
+    ],
+    "tip": {
+     "zh": "比較係數時先在草稿上把左右兩邊「對齊」寫好，再一項一項比，就不會拿錯常數。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q06": {
+   "answer": "D",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q19 · [HKDSE Sample Paper 2 Q4]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開右邊",
+       "en": ""
+      },
+      "math": "(2x-1)(x-1)=2x^{2}-3x+1",
+      "zh": "$2x^{2}-2x-x+1=2x^{2}-3x+1$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開左邊並比較 $x$ 係數",
+       "en": ""
+      },
+      "math": "2x^{2}+ax+(2a+b)\\ \\Rightarrow\\ a=-3",
+      "zh": "左邊 $=2x^{2}+ax+(2a+b)$。$x$ 的係數：$a=-3$。",
+      "en": "",
+      "highlight": [
+       "a=-3"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 比較常數項求 $b$",
+       "en": ""
+      },
+      "math": "2a+b=1\\ \\Rightarrow\\ -6+b=1\\ \\Rightarrow\\ b=7",
+      "zh": "常數項：$2a+b=1$。代入 $a=-3$ 得 $-6+b=1$，所以 $b=7$。",
+      "en": "",
+      "highlight": [
+       "b=7"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$-3$ 是 $a$ 的值（題目問 $b$）。",
+      "en": "-3 is a, not b."
+     },
+     {
+      "opt": "C",
+      "zh": "$1$ 是直接把右邊的常數項當成 $b$，忘記左邊還有 $2a$。",
+      "en": "Forgot the 2a term."
+     }
+    ],
+    "tip": {
+     "zh": "左邊是 $a(x+2)+b$ —— 展開是 $ax+2a+b$，常數項裡同時有 $2a$ 和 $b$，不能直接抄。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q07": {
+   "answer": "D",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q20 · [HKDSE Practice Paper 2 Q4]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開左邊",
+       "en": ""
+      },
+      "math": "m(x^{2}+8x+16)+n(x^{2}-2x+1)=(m+n)x^{2}+(8m-2n)x+(16m+n)",
+      "zh": "$(x+4)^{2}=x^{2}+8x+16$、$(x-1)^{2}=x^{2}-2x+1$，再乘上 $m$、$n$ 後合併同類項。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 比較 $x^{2}$ 與 $x$ 的係數",
+       "en": ""
+      },
+      "math": "m+n=1,\\qquad 8m-2n=28",
+      "zh": "右邊是 $x^{2}+28x+46$，所以 $x^{2}$ 係數 $=1$、$x$ 係數 $=28$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 解聯立方程求 $m$",
+       "en": ""
+      },
+      "math": "n=1-m\\ \\Rightarrow\\ 8m-2(1-m)=28\\ \\Rightarrow\\ 10m=30\\ \\Rightarrow\\ m=3",
+      "zh": "由 $n=1-m$ 代入第二式：$8m-2+2m=28$，得 $10m=30$，$m=3$。（驗算常數項：$16(3)+n=46$ → $n=-2$，與 $m+n=1$ 吻合 ✓）",
+      "en": "",
+      "highlight": [
+       "m=3"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$-2$ 是 $n$ 的值，題目問的是 $m$。",
+      "en": "-2 is n."
+     },
+     {
+      "opt": "A",
+      "zh": "$-4$ 是展開 $(x-1)^{2}$ 時把 $-2x$ 寫成 $+2x$ 所造成的結果。",
+      "en": "Sign slip when expanding (x-1)^2."
+     }
+    ],
+    "tip": {
+     "zh": "兩個平方都要展開時，先把 $(a\\pm b)^{2}=a^{2}\\pm2ab+b^{2}$ 寫清楚再乘係數。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q08": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q21 · [HKDSE Practice Paper 2 Q4]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開左邊",
+       "en": ""
+      },
+      "math": "a(x^{2}+6x+9)+b(x^{2}-8x+16)=(a+b)x^{2}+(6a-8b)x+(9a+16b)",
+      "zh": "$(x+3)^{2}=x^{2}+6x+9$、$(x-4)^{2}=x^{2}-8x+16$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 比較係數列方程",
+       "en": ""
+      },
+      "math": "a+b=1,\\qquad 6a-8b=-78",
+      "zh": "右邊 $x^{2}-78x+51$：$x^{2}$ 係數 $=1$、$x$ 係數 $=-78$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 解出 $a$",
+       "en": ""
+      },
+      "math": "b=1-a\\ \\Rightarrow\\ 6a-8(1-a)=-78\\ \\Rightarrow\\ 14a=-70\\ \\Rightarrow\\ a=-5",
+      "zh": "代入後：$6a-8+8a=-78$ → $14a=-70$ → $a=-5$。（驗算常數項：$9(-5)+16(6)=-45+96=51$ ✓）",
+      "en": "",
+      "highlight": [
+       "a=-5"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "D",
+      "zh": "$6$ 是 $b$ 的值，題目問 $a$。",
+      "en": "6 is b."
+     },
+     {
+      "opt": "C",
+      "zh": "$4$ 是展開時把 $(x-4)^{2}$ 的 $-8x$ 寫成 $+8x$ 的結果。",
+      "en": "Sign slip when expanding (x-4)^2."
+     }
+    ],
+    "tip": {
+     "zh": "求出一個常數後，用第三個係數（常數項）驗算，可以即時發現計錯。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q09": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q22 · [HKDSE 2020 Paper 2 Q7]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開右邊",
+       "en": ""
+      },
+      "math": "(x+7)^{2}+k=x^{2}+14x+49+k",
+      "zh": "$(x+7)^{2}=x^{2}+14x+49$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開左邊、比較 $x$ 係數求 $h$",
+       "en": ""
+      },
+      "math": "x^{2}+(h+8)x+8h\\ \\Rightarrow\\ h+8=14\\ \\Rightarrow\\ h=6",
+      "zh": "左邊 $=x^{2}+(h+8)x+8h$。$x$ 係數：$h+8=14$ → $h=6$。",
+      "en": "",
+      "highlight": [
+       "h=6"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 比較常數項求 $k$",
+       "en": ""
+      },
+      "math": "8h=49+k\\ \\Rightarrow\\ 48=49+k\\ \\Rightarrow\\ k=-1",
+      "zh": "常數項：$8h=49+k$。代入 $h=6$：$48=49+k$，所以 $k=-1$。",
+      "en": "",
+      "highlight": [
+       "k=-1"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "D",
+      "zh": "$6$ 是 $h$ 的值，題目問 $k$。",
+      "en": "6 is h."
+     },
+     {
+      "opt": "B",
+      "zh": "$-8$ 是把常數項當成 $h$ 之外又多減了一次 8，沒有按係數比較。",
+      "en": "Did not compare constant terms properly."
+     }
+    ],
+    "tip": {
+     "zh": "捷徑：取 $x=-8$，左邊 $(x+h)(x+8)$ 變成 0，直接得 $0=(-8+7)^{2}+k=1+k$ → $k=-1$，一步完成。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q10": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q23 · [HKDSE 2020 Paper 2 Q7]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開右邊",
+       "en": ""
+      },
+      "math": "(x-8)^{2}+q=x^{2}-16x+64+q",
+      "zh": "$(x-8)^{2}=x^{2}-16x+64$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開左邊、比較 $x$ 係數求 $p$",
+       "en": ""
+      },
+      "math": "x^{2}+(p-12)x-12p\\ \\Rightarrow\\ p-12=-16\\ \\Rightarrow\\ p=-4",
+      "zh": "左邊 $=x^{2}+(p-12)x-12p$。$x$ 係數：$p-12=-16$ → $p=-4$。",
+      "en": "",
+      "highlight": [
+       "p=-4"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 比較常數項求 $q$",
+       "en": ""
+      },
+      "math": "-12p=64+q\\ \\Rightarrow\\ 48=64+q\\ \\Rightarrow\\ q=-16",
+      "zh": "常數項：$-12p=64+q$。代入 $p=-4$：$48=64+q$，所以 $q=-16$。",
+      "en": "",
+      "highlight": [
+       "q=-16"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$-4$ 是 $p$ 的值，題目問 $q$。",
+      "en": "-4 is p."
+     },
+     {
+      "opt": "D",
+      "zh": "$12$ 是直接抄題目的數字，沒有做任何係數比較。",
+      "en": "Copied a number from the question."
+     }
+    ],
+    "tip": {
+     "zh": "捷徑：取 $x=12$，左邊 $(x+p)(x-12)$ 變成 0，得 $0=(12-8)^{2}+q=16+q$ → $q=-16$，一步完成。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q11": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q24 · [HKDSE 2012 Paper 2 Q3]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開右邊",
+       "en": ""
+      },
+      "math": "(x+b)(x-3)+5=x^{2}+(b-3)x-3b+5",
+      "zh": "$(x+b)(x-3)=x^{2}-3x+bx-3b=x^{2}+(b-3)x-3b$，再加 5。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 比較 $x$ 係數求 $b$",
+       "en": ""
+      },
+      "math": "b-3=0\\ \\Rightarrow\\ b=3",
+      "zh": "左邊 $x^{2}+a$ **沒有 $x$ 項**，表示 $x$ 的係數是 $0$：$b-3=0$ → $b=3$。這是這題的關鍵。",
+      "en": "",
+      "highlight": [
+       "b=3"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 比較常數項求 $a$",
+       "en": ""
+      },
+      "math": "a=-3b+5=-9+5=-4",
+      "zh": "常數項：$a=-3b+5$。代入 $b=3$：$a=-9+5=-4$。",
+      "en": "",
+      "highlight": [
+       "a=-4"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$3$ 是 $b$ 的值，題目問 $a$。",
+      "en": "3 is b."
+     },
+     {
+      "opt": "A",
+      "zh": "$5$ 是直接抄右邊的 $+5$，忘記還有 $-3b$ 那一份。",
+      "en": "Forgot the -3b term."
+     }
+    ],
+    "tip": {
+     "zh": "一邊「少了某一項」時，它的係數是 0 —— 這是恆等式題最常考的陷阱。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q12": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q25 · 選項自擬 · [HKDSE 2012 Paper 2 Q3]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開右邊",
+       "en": ""
+      },
+      "math": "(x-4)(x+n)+8=x^{2}+(n-4)x-4n+8",
+      "zh": "$(x-4)(x+n)=x^{2}+nx-4x-4n=x^{2}+(n-4)x-4n$，再加 8。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 比較 $x$ 係數求 $n$",
+       "en": ""
+      },
+      "math": "n-4=0\\ \\Rightarrow\\ n=4",
+      "zh": "左邊 $x^{2}+m$ 沒有 $x$ 項 → $x$ 係數 $=0$ → $n-4=0$ → $n=4$。",
+      "en": "",
+      "highlight": [
+       "n=4"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 比較常數項求 $m$",
+       "en": ""
+      },
+      "math": "m=-4n+8=-16+8=-8",
+      "zh": "常數項：$m=-4n+8$。代入 $n=4$：$m=-16+8=-8$。",
+      "en": "",
+      "highlight": [
+       "m=-8"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "zh": "$4$ 是 $n$ 的值，題目問 $m$。",
+      "en": "4 is n."
+     },
+     {
+      "opt": "D",
+      "zh": "$8$ 是直接抄右邊的 $+8$，忘記減去 $4n$。",
+      "en": "Forgot the -4n term."
+     }
+    ],
+    "tip": {
+     "zh": "「沒有 $x$ 項」= $x$ 的係數是 0，先求另一個常數，再代回常數項。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q13": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q26 · [HKDSE 2019 Paper 2 Q4]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開右邊",
+       "en": ""
+      },
+      "math": "(x-8)^{2}+\\beta=x^{2}-16x+64+\\beta",
+      "zh": "$(x-8)^{2}=x^{2}-16x+64$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開左邊、比較 $x$ 係數求 $a$",
+       "en": ""
+      },
+      "math": "x^{2}+(a-5)x-5a-9\\ \\Rightarrow\\ a-5=-16\\ \\Rightarrow\\ a=-11",
+      "zh": "左邊 $=x^{2}+(a-5)x-5a-9$。$x$ 係數：$a-5=-16$ → $a=-11$。",
+      "en": "",
+      "highlight": [
+       "a=-11"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 比較常數項求 $\\beta$",
+       "en": ""
+      },
+      "math": "-5a-9=64+\\beta\\ \\Rightarrow\\ 46=64+\\beta\\ \\Rightarrow\\ \\beta=-18",
+      "zh": "常數項：$-5(-11)-9=55-9=46=64+\\beta$，所以 $\\beta=-18$。",
+      "en": "",
+      "highlight": [
+       "\\beta=-18"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "zh": "$-11$ 是 $a$ 的值，題目問 $\\beta$。",
+      "en": "-11 is a."
+     },
+     {
+      "opt": "D",
+      "zh": "$-9$ 是直接抄左邊的 $-9$，忘記處理 $-5a$。",
+      "en": "Forgot the -5a term."
+     }
+    ],
+    "tip": {
+     "zh": "捷徑：取 $x=8$，右邊 $(x-8)^{2}$ 變成 0 → $(8-5)(8+a)-9=\\beta$；再取 $x=5$ 求 $a$，兩步完成。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q14": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q27 · [HKDSE 2019 Paper 2 Q4]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開右邊",
+       "en": ""
+      },
+      "math": "(x-11)^{2}+\\beta=x^{2}-22x+121+\\beta",
+      "zh": "$(x-11)^{2}=x^{2}-22x+121$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開左邊、比較 $x$ 係數求 $a$",
+       "en": ""
+      },
+      "math": "x^{2}+(a-8)x-8a-13\\ \\Rightarrow\\ a-8=-22\\ \\Rightarrow\\ a=-14",
+      "zh": "左邊 $=x^{2}+(a-8)x-8a-13$。$x$ 係數：$a-8=-22$ → $a=-14$。",
+      "en": "",
+      "highlight": [
+       "a=-14"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 比較常數項求 $\\beta$",
+       "en": ""
+      },
+      "math": "-8a-13=121+\\beta\\ \\Rightarrow\\ 99=121+\\beta\\ \\Rightarrow\\ \\beta=-22",
+      "zh": "常數項：$-8(-14)-13=112-13=99=121+\\beta$，所以 $\\beta=-22$。",
+      "en": "",
+      "highlight": [
+       "\\beta=-22"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$-14$ 是 $a$ 的值，題目問 $\\beta$。",
+      "en": "-14 is a."
+     },
+     {
+      "opt": "C",
+      "zh": "$-13$ 是直接抄左邊的 $-13$，忘記處理 $-8a$。",
+      "en": "Forgot the -8a term."
+     }
+    ],
+    "tip": {
+     "zh": "兩個常數輪流求：先用 $x$ 的係數求 $a$，再用常數項求 $\\beta$，最後代一個 $x$ 驗算。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q15": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q28 · 選項自擬 · [HKDSE 2014 Paper 2 Q3]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開左邊",
+       "en": ""
+      },
+      "math": "px^{2}+3px+2x^{2}=(p+2)x^{2}+3px",
+      "zh": "$px(x+3)=px^{2}+3px$，加上 $2x^{2}$ 後合併 $x^{2}$ 項。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開右邊",
+       "en": ""
+      },
+      "math": "qx^{2}+2qx-x=qx^{2}+(2q-1)x",
+      "zh": "$qx(x+2)=qx^{2}+2qx$，再減 $x$ → $x$ 項是 $(2q-1)x$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 比較係數、解出 $p$",
+       "en": ""
+      },
+      "math": "p+2=q,\\quad 3p=2q-1\\ \\Rightarrow\\ 3p=2(p+2)-1\\ \\Rightarrow\\ p=3",
+      "zh": "代入 $q=p+2$：$3p=2p+4-1=2p+3$，所以 $p=3$（$q=5$）。",
+      "en": "",
+      "highlight": [
+       "p=3"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "D",
+      "zh": "$5$ 是 $q$ 的值，題目問 $p$。",
+      "en": "5 is q."
+     },
+     {
+      "opt": "A",
+      "zh": "$-3$ 是移項時沒有變號的結果（把 $3p=2p+3$ 寫成 $3p=2p-3$）。",
+      "en": "Sign error when transposing."
+     }
+    ],
+    "tip": {
+     "zh": "兩邊都沒有常數項時，比較 $x^{2}$ 與 $x$ 的係數就夠解出兩個未知數。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q16": {
+   "answer": "D",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q38 · [HKDSE 2021 Paper 2 Q6]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開左邊",
+       "en": ""
+      },
+      "math": "a(x+9)+b(2x+9)=(a+2b)x+(9a+9b)",
+      "zh": "$x$ 項是 $ax+2bx=(a+2b)x$；常數項是 $9a+9b$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開右邊、比較係數",
+       "en": ""
+      },
+      "math": "c(x+8)=cx+8c\\ \\Rightarrow\\ c=a+2b,\\quad 8c=9a+9b",
+      "zh": "右邊 $x$ 項是 $cx$、常數項是 $8c$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 消去 $c$ 求 $a:b$",
+       "en": ""
+      },
+      "math": "8(a+2b)=9a+9b\\ \\Rightarrow\\ 7b=a\\ \\Rightarrow\\ a:b=7:1",
+      "zh": "把 $c=a+2b$ 代入 $8c=9a+9b$：$8a+16b=9a+9b$ → $7b=a$ → $a:b=7:1$。",
+      "en": "",
+      "highlight": [
+       "7:1"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "zh": "$2:1$ 是直接抄 $x$ 項裡 $a$ 與 $b$ 的係數比，忘記還要用常數項的條件。",
+      "en": "Took the coefficients of x only."
+     },
+     {
+      "opt": "B",
+      "zh": "$1:7$ 是把比的前後調轉（$7b=a$ 表示 $a$ 是 $b$ 的 7 倍）。",
+      "en": "Ratio reversed."
+     }
+    ],
+    "tip": {
+     "zh": "比例題：把兩個係數條件寫成兩條方程，消去第三個常數（$c$）就得到 $a:b$。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q17": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q40 · [HKDSE 2013 Paper 2 Q8]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開左邊",
+       "en": ""
+      },
+      "math": "x(x+4a)+a=x^{2}+4ax+a",
+      "zh": "$x(x+4a)=x^{2}+4ax$，再加 $a$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開右邊、比較係數",
+       "en": ""
+      },
+      "math": "x^{2}+3(bx+c)=x^{2}+3bx+3c\\ \\Rightarrow\\ 4a=3b,\\quad a=3c",
+      "zh": "$x$ 係數：$4a=3b$；常數項：$a=3c$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 化為連比",
+       "en": ""
+      },
+      "math": "b=\\frac{4a}{3},\\quad c=\\frac{a}{3}\\ \\Rightarrow\\ a:b:c=3:4:1",
+      "zh": "三個都用 $a$ 表示：$a:\\frac{4a}{3}:\\frac{a}{3}$，同乘 3 → $3:4:1$。",
+      "en": "",
+      "highlight": [
+       "3:4:1"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "zh": "$4:3:12$ 是只用了 $4a=3b$（得 $a:b=3:4$ 卻寫成 $4:3$），常數項沒處理好。",
+      "en": "Mixed up the ratio order."
+     },
+     {
+      "opt": "D",
+      "zh": "$12:9:4$ 是把 $c$ 的比例算錯（$a=3c$ → $c=\\frac{a}{3}$，不是 $3a$）。",
+      "en": "Wrong constant ratio."
+     }
+    ],
+    "tip": {
+     "zh": "連比題的標準做法：全部用同一個字母表示，再化成整數比。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws03-q18": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "EPH WS03 Q41 · [HKDSE 2013 Paper 2 Q8]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 展開左邊（注意負號）",
+       "en": ""
+      },
+      "math": "4a-x(x-2a)=4a-x^{2}+2ax=-x^{2}+2ax+4a",
+      "zh": "$-x(x-2a)=-x^{2}+2ax$，兩項都要變號。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開右邊、比較係數",
+       "en": ""
+      },
+      "math": "3(bx+c)-x^{2}=-x^{2}+3bx+3c\\ \\Rightarrow\\ 2a=3b,\\quad 4a=3c",
+      "zh": "$x$ 係數：$2a=3b$；常數項：$4a=3c$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 化為連比",
+       "en": ""
+      },
+      "math": "b=\\frac{2a}{3},\\quad c=\\frac{4a}{3}\\ \\Rightarrow\\ a:b:c=3:2:4",
+      "zh": "$a:\\frac{2a}{3}:\\frac{4a}{3}$，同乘 3 → $3:2:4$。",
+      "en": "",
+      "highlight": [
+       "3:2:4"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$4:6:3$ 是把 $2a=3b$ 與 $4a=3c$ 的比例調轉了。",
+      "en": "Ratios reversed."
+     },
+     {
+      "opt": "C",
+      "zh": "$6:9:8$ 是展開 $-x(x-2a)$ 時漏了變號，得到 $-2ax$ 所致。",
+      "en": "Sign slip when expanding."
+     }
+    ],
+    "tip": {
+     "zh": "式子前面有負號時，展開後**每一項**都要變號 —— 這是這題唯一的陷阱。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-ex01": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "WS04 Example 1 · [HKDSE 2022 Paper 1 Q7]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 把 $A$ 繞原點逆時針轉 $90^{\\circ}$",
+       "en": ""
+      },
+      "math": "(x,y)\\to(-y,x)\\ \\Rightarrow\\ A'(13,9)",
+      "zh": "逆時針 $90^{\\circ}$ 的公式是 $(x,y)\\to(-y,x)$。$A(9,-13)$ 的 $-y=-(-13)=13$、$x=9$，所以 $A'=(13,9)$。",
+      "en": "",
+      "highlight": [
+       "A'(13,9)"
+      ],
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 把 $B$ 對 $y$ 軸反射",
+       "en": ""
+      },
+      "math": "(x,y)\\to(-x,y)\\ \\Rightarrow\\ B'(7,5)",
+      "zh": "對 $y$ 軸反射是改 $x$ 的符號：$B(-7,5)$ → $B'=(7,5)$。",
+      "en": "",
+      "highlight": [
+       "B'(7,5)"
+      ],
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 用斜率公式求 $A'B'$",
+       "en": ""
+      },
+      "math": "m=\\frac{5-9}{7-13}=\\frac{-4}{-6}=\\frac{2}{3}",
+      "zh": "斜率 $=\\frac{y_{2}-y_{1}}{x_{2}-x_{1}}$。代 $A'(13,9)$、$B'(7,5)$：$\\frac{5-9}{7-13}=\\frac{-4}{-6}=\\frac{2}{3}$。",
+      "en": "",
+      "highlight": [
+       "\\frac{2}{3}"
+      ],
+      "marking": "1A"
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "兩個變換分開做、分開寫，每一個都拿得到 (1A)；千萬不要一次過心算兩個變換。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-ex02": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "WS04 Example 2 · [HKDSE 2014 Paper 1 Q8]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · $270^{\\circ}$ 化成「反向 $90^{\\circ}$」",
+       "en": ""
+      },
+      "math": "\\text{順 }270^{\\circ}=\\text{逆 }90^{\\circ}:(x,y)\\to(-y,x)",
+      "zh": "順時針 $270^{\\circ}$ 等於逆時針 $90^{\\circ}$，直接用 $(x,y)\\to(-y,x)$。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 求 $R'$ 與 $S'$",
+       "en": ""
+      },
+      "math": "R'(3,-5),\\qquad S'(-13,5)",
+      "zh": "$R(-5,-3)$：$-y=3$、$x=-5$ → $R'=(3,-5)$。$S(0,5)$ 向左 13 → $x$ 減 13 → $S'=(-13,5)$。",
+      "en": "",
+      "highlight": [
+       "R'(3,-5)",
+       "S'(-13,5)"
+      ],
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 分別求兩條線的斜率",
+       "en": ""
+      },
+      "math": "m_{RS}=\\frac{5-(-3)}{0-(-5)}=\\frac{8}{5},\\qquad m_{R'S'}=\\frac{5-(-5)}{-13-3}=\\frac{10}{-16}=-\\frac{5}{8}",
+      "zh": "兩條斜率都要算出來，DSE 每一步都給分。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · 相乘等於 $-1$ → 垂直",
+       "en": ""
+      },
+      "math": "m_{RS}\\times m_{R'S'}=\\frac{8}{5}\\times\\left(-\\frac{5}{8}\\right)=-1\\ \\Rightarrow\\ RS\\perp R'S'",
+      "zh": "「$\\because$ 兩斜率相乘 $=-1$，$\\therefore RS\\perp R'S'$」—— 這一句一定要寫，是拿 (1A) 的關鍵句。",
+      "en": "",
+      "highlight": [
+       "-1"
+      ],
+      "marking": "1A"
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "$\\frac{8}{5}$ 與 $-\\frac{5}{8}$ 互為負倒數（很對稱）—— 看到這種對稱就代表你算對了，這是自我檢查的好方法。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-ex03": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "WS04 Practice 2",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · $P$ 向左平移 3 單位",
+       "en": ""
+      },
+      "math": "P'(4-3,\\ 2)=(1,2)",
+      "zh": "「向左」是 $x$ 減 3，$y$ 不變。",
+      "en": "",
+      "highlight": [
+       "P'(1,2)"
+      ],
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · $Q$ 繞原點逆時針轉 $90^{\\circ}$",
+       "en": ""
+      },
+      "math": "(x,y)\\to(-y,x)\\ \\Rightarrow\\ Q'(-5,6)",
+      "zh": "$Q(6,5)$：$-y=-5$、$x=6$ → $Q'=(-5,6)$。",
+      "en": "",
+      "highlight": [
+       "Q'(-5,6)"
+      ],
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 求兩條線的斜率",
+       "en": ""
+      },
+      "math": "m_{PQ}=\\frac{5-2}{6-4}=\\frac{3}{2},\\qquad m_{P'Q'}=\\frac{6-2}{-5-1}=\\frac{4}{-6}=-\\frac{2}{3}",
+      "zh": "代斜率公式，注意 $P'Q'$ 的分母是 $-5-1=-6$（負號不要漏）。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · 相乘等於 $-1$ → 垂直",
+       "en": ""
+      },
+      "math": "\\frac{3}{2}\\times\\left(-\\frac{2}{3}\\right)=-1\\ \\Rightarrow\\ PQ\\perp P'Q'",
+      "zh": "兩斜率相乘 $=-1$，所以兩線垂直。",
+      "en": "",
+      "highlight": [
+       "-1"
+      ],
+      "marking": "1A"
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "兩個點用不同的變換（一個平移、一個旋轉），所以 $PQ$ 與 $P'Q'$ 的長度不相等是正常的；題目只問垂直，用「斜率相乘 $=-1$」就足夠，不必理長度。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-q01": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "EPH WS04 Q1 · [HKDSE Sample Paper 2 Q26]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 把 $270^{\\circ}$ 換成反向 $90^{\\circ}$",
+       "en": ""
+      },
+      "math": "\\text{逆 }270^{\\circ}=\\text{順 }90^{\\circ}:(x,y)\\to(y,-x)",
+      "zh": "逆時針 $270^{\\circ}$ 等於順時針 $90^{\\circ}$，公式是 $(x,y)\\to(y,-x)$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 代入 $(-7,-2)$",
+       "en": ""
+      },
+      "math": "(-7,-2)\\to(-2,\\ -(-7))=(-2,7)",
+      "zh": "$y=-2$ 搬到前面、$x=-7$ 變號成 $7$ 放後面 → $(-2,7)$。",
+      "en": "",
+      "highlight": [
+       "(-2,7)"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$(7,-2)$ 是把兩個座標都變號又調位（用錯了逆時針 $90^{\\circ}$ 的公式）。",
+      "en": "Used the anticlockwise formula."
+     },
+     {
+      "opt": "C",
+      "zh": "$(2,-7)$ 是用了 $180^{\\circ}$ 之後再調位，兩種規則混在一起。",
+      "en": "Mixed up the rotation rules."
+     }
+    ],
+    "tip": {
+     "zh": "看到 $270^{\\circ}$ 就先換成反向 $90^{\\circ}$，再用你背熟的 90° 公式，最穩。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-q02": {
+   "answer": "D",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "EPH WS04 Q2 · [Modified from HKCEE 2009 Paper 2 Q30]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 寫出直線 $L$ 的方程",
+       "en": ""
+      },
+      "math": "L:\\ x=2",
+      "zh": "「垂直線且通過 $(2,0)$」表示 $L$ 是 $x=2$（線上每一點的 $x$ 都是 2）。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 求反射後的點 $B$",
+       "en": ""
+      },
+      "math": "B=(2\\times2-4,\\ -4)=(0,-4)",
+      "zh": "對 $x=2$ 反射：$x'=2(2)-4=0$，$y$ 不變 → $B=(0,-4)$。",
+      "en": "",
+      "highlight": [
+       "(0,-4)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 求 $A$ 與 $B$ 的距離",
+       "en": ""
+      },
+      "math": "|4-0|=4",
+      "zh": "兩點的 $y$ 相同，距離就是 $x$ 的差：$4-0=4$。（也可用「點到直線距離 $\\times2$」：$|4-2|\\times2=4$。）",
+      "en": "",
+      "highlight": [
+       "4"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$2$ 是「點到直線的距離」，忘記乘 2 —— 反射要跨到另一邊，是兩倍。",
+      "en": "Forgot to double the distance."
+     },
+     {
+      "opt": "A",
+      "zh": "$1$ 是把距離算成 $|4-2|-1$，沒有按公式做。",
+      "en": "Miscalculated the distance."
+     }
+    ],
+    "tip": {
+     "zh": "「點到鏡軸的距離」和「點與影像的距離」是兩回事：後者是前者的 2 倍。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-q03": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "EPH WS04 Q3 · [Modified from HKDSE Practice Paper 2 Q25]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 寫出直線的方程",
+       "en": ""
+      },
+      "math": "L:\\ x=-2",
+      "zh": "平行於 $y$ 軸且通過 $(-2,0)$ → 垂直線 $x=-2$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 用公式求影像的 $x$ 座標",
+       "en": ""
+      },
+      "math": "x'=2(-2)-3=-4-3=-7",
+      "zh": "對 $x=c$ 反射：$x'=2c-x$。代 $c=-2$、$x=3$：$x'=-4-3=-7$。",
+      "en": "",
+      "highlight": [
+       "-7"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 檢查（$y$ 不變）",
+       "en": ""
+      },
+      "math": "(3,5)\\to(-7,5)",
+      "zh": "垂直線反射只改 $x$，$y$ 維持 5。",
+      "en": "",
+      "highlight": [
+       "(-7,5)"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$-1$ 是把距離算成 $3-(-2)=5$ 之後只加一次（$-2+1=-1$），忘記乘 2。",
+      "en": "Added the distance once only."
+     },
+     {
+      "opt": "D",
+      "zh": "$3$ 是完全沒有做反射（$x$ 維持不變）。",
+      "en": "Did not reflect at all."
+     }
+    ],
+    "tip": {
+     "zh": "公式 $x'=2c-x$ 直接代就對，$c$ 是負數時連負號一起代入。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-q04": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "EPH WS04 Q4 · [Modified from HKDSE Practice Paper 2 Q25]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 寫出直線的方程",
+       "en": ""
+      },
+      "math": "L:\\ y=-5",
+      "zh": "平行於 $x$ 軸且通過 $(0,-5)$ → 水平線 $y=-5$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 用公式求影像",
+       "en": ""
+      },
+      "math": "(8,-9)\\to(8,\\ 2(-5)-(-9))=(8,-1)",
+      "zh": "對 $y=c$ 反射：$y'=2c-y$。代 $c=-5$、$y=-9$：$y'=-10+9=-1$；$x$ 不變。",
+      "en": "",
+      "highlight": [
+       "(8,-1)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 驗算距離",
+       "en": ""
+      },
+      "math": "|-9-(-5)|=4,\\quad |-1-(-5)|=4",
+      "zh": "原點與影像到直線的距離都是 4 ✓（鏡射兩邊距離相同）。",
+      "en": ""
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$(-18,-9)$ 是把 $x$ 也改了 —— 水平線反射只改 $y$。",
+      "en": "Changed the wrong coordinate."
+     },
+     {
+      "opt": "B",
+      "zh": "$(8,-4)$ 是只加了一次距離（$-9+5=-4$），忘記乘 2。",
+      "en": "Added the distance once only."
+     }
+    ],
+    "tip": {
+     "zh": "水平線改 $y$、垂直線改 $x$；改完用「到直線距離相等」驗算，一次就知對錯。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-q05": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "EPH WS04 Q5 · [HKDSE 2019 Paper 2 Q25]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 旋轉：順時針 $270^{\\circ}$ = 逆時針 $90^{\\circ}$",
+       "en": ""
+      },
+      "math": "(-2,-5)\\to(5,-2)",
+      "zh": "用 $(x,y)\\to(-y,x)$：$-y=5$、$x=-2$ → $Q=(5,-2)$。",
+      "en": "",
+      "highlight": [
+       "(5,-2)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 向左平移 4 單位",
+       "en": ""
+      },
+      "math": "R=(5-4,\\ -2)=(1,-2)",
+      "zh": "「向左」是 $x$ 減 4：$5-4=1$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 讀出 $x$ 座標",
+       "en": ""
+      },
+      "math": "x=1",
+      "zh": "題目問的是 $x$-coordinate，答案是 1（不要答成整點座標）。",
+      "en": "",
+      "highlight": [
+       "1"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "D",
+      "zh": "$2$ 是把「向左」當成加 4（$5+4=9$ 再取錯），或把旋轉方向用反。",
+      "en": "Wrong direction or wrong rotation."
+     },
+     {
+      "opt": "A",
+      "zh": "$-2$ 是原點的 $x$ 座標，沒有做變換。",
+      "en": "Did not transform."
+     }
+    ],
+    "tip": {
+     "zh": "兩步變換的題目：一步一步寫，每步都寫清楚座標，最後才讀題目問的是 $x$ 還是 $y$。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-q06": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "EPH WS04 Q6 · [Modified from HKDSE 2019 Paper 2 Q25]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 向右平移 1 單位",
+       "en": ""
+      },
+      "math": "E=(8+1,\\ -8)=(9,-8)",
+      "zh": "「向右」是 $x$ 加 1。",
+      "en": "",
+      "highlight": [
+       "(9,-8)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 旋轉 $180^{\\circ}$：兩個座標都變號",
+       "en": ""
+      },
+      "math": "F=(-9,8)",
+      "zh": "$180^{\\circ}$ 不分順逆，$(x,y)\\to(-x,-y)$ → $F=(-9,8)$。",
+      "en": "",
+      "highlight": [
+       "(-9,8)"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$(9,-8)$ 是忘記做旋轉（只做了平移）。",
+      "en": "Did only the translation."
+     },
+     {
+      "opt": "C",
+      "zh": "$(-7,8)$ 是平移時做成向左（$8-1=7$），方向搞反。",
+      "en": "Translated the wrong way."
+     }
+    ],
+    "tip": {
+     "zh": "$180^{\\circ}$ 最簡單：兩個座標一起變號，不用管順時針或逆時針。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-q07": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "EPH WS04 Q7 · 選項自擬 · [HKDSE 2021 Paper 2 Q23]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 對 $x$ 軸反射",
+       "en": ""
+      },
+      "math": "A(-2,-1)\\to B(-2,1)",
+      "zh": "對 $x$ 軸反射改 $y$：$-1$ 變 $1$，$x$ 不變。",
+      "en": "",
+      "highlight": [
+       "B(-2,1)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 逆時針轉 $90^{\\circ}$",
+       "en": ""
+      },
+      "math": "B(-2,1)\\to C(-1,-2)",
+      "zh": "用 $(x,y)\\to(-y,x)$：$-y=-1$、$x=-2$ → $C=(-1,-2)$。",
+      "en": "",
+      "highlight": [
+       "C(-1,-2)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 讀出 $x$ 座標",
+       "en": ""
+      },
+      "math": "x=-1",
+      "zh": "$C=(-1,-2)$，題目問 $x$-coordinate → $-1$。",
+      "en": "",
+      "highlight": [
+       "-1"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$-2$ 是 $B$ 的 $x$ 座標（只做了反射就作答）。",
+      "en": "Stopped after the reflection."
+     },
+     {
+      "opt": "D",
+      "zh": "$2$ 是旋轉時用了順時針公式（方向用反）。",
+      "en": "Wrong rotation direction."
+     }
+    ],
+    "tip": {
+     "zh": "「先反射再旋轉」的題：順序不能調換，一步一步寫才不會亂。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-q08": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "EPH WS04 Q8 · 選項自擬 · [HKDSE 2021 Paper 2 Q23]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 旋轉：順時針 $270^{\\circ}$ = 逆時針 $90^{\\circ}$",
+       "en": ""
+      },
+      "math": "R(1,4)\\to S(-4,1)",
+      "zh": "用 $(x,y)\\to(-y,x)$：$-y=-4$、$x=1$ → $S=(-4,1)$。",
+      "en": "",
+      "highlight": [
+       "S(-4,1)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 對 $y$ 軸反射",
+       "en": ""
+      },
+      "math": "S(-4,1)\\to T(4,1)",
+      "zh": "對 $y$ 軸反射改 $x$：$-4$ 變 $4$，$y$ 不變。",
+      "en": "",
+      "highlight": [
+       "T(4,1)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 讀出 $y$ 座標",
+       "en": ""
+      },
+      "math": "y=1",
+      "zh": "$T=(4,1)$，題目問 $y$-coordinate → $1$。",
+      "en": "",
+      "highlight": [
+       "1"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$-4$ 是 $S$ 的 $x$ 座標，不是 $T$ 的 $y$ 座標（題目問什麼要先圈起來）。",
+      "en": "Answered with the wrong coordinate."
+     },
+     {
+      "opt": "D",
+      "zh": "$4$ 是把 $T$ 的 $x$ 座標當成答案。",
+      "en": "Gave the x-coordinate."
+     }
+    ],
+    "tip": {
+     "zh": "最後一步最容易失分：題目問 $x$ 還是 $y$、問座標還是距離，作答前先圈關鍵字。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-q09": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "EPH WS04 Q9 · [Modified from HKCEE 2011 Paper 2 Q29]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 向上平移 3 單位",
+       "en": ""
+      },
+      "math": "B=(-6,-1+3)=(-6,2)",
+      "zh": "「向上」是 $y$ 加 3。",
+      "en": "",
+      "highlight": [
+       "B(-6,2)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 寫出直線 $L$ 的方程",
+       "en": ""
+      },
+      "math": "L:\\ x=-4",
+      "zh": "平行於 $y$ 軸且通過 $(-4,0)$ → 垂直線 $x=-4$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 對 $L$ 反射（只改 $x$）",
+       "en": ""
+      },
+      "math": "x'=2(-4)-(-6)=-8+6=-2\\ \\Rightarrow\\ (-2,2)",
+      "zh": "對 $x=c$ 反射：$x'=2c-x=-8+6=-2$；$y$ 維持 2 → $(-2,2)$。",
+      "en": "",
+      "highlight": [
+       "(-2,2)"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$(2,2)$ 是平移時做成向右（或反射公式代錯正負號）。",
+      "en": "Sign slip in the reflection formula."
+     },
+     {
+      "opt": "D",
+      "zh": "$(-2,-2)$ 是把 $y$ 也改了 —— 垂直線反射只改 $x$。",
+      "en": "Changed the y-coordinate too."
+     }
+    ],
+    "tip": {
+     "zh": "先平移再反射：順序照題目寫，平移後的點才是反射的對象。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-q10": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "EPH WS04 Q10 · [Modified from HKCEE 2011 Paper 2 Q29]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 寫出直線 $L$ 的方程",
+       "en": ""
+      },
+      "math": "L:\\ y=-1",
+      "zh": "平行於 $x$ 軸且通過 $(0,-1)$ → 水平線 $y=-1$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 對 $L$ 反射（只改 $y$）",
+       "en": ""
+      },
+      "math": "E=(3,\\ 2(-1)-(-4))=(3,2)",
+      "zh": "對 $y=c$ 反射：$y'=2c-y=-2+4=2$；$x$ 維持 3 → $E=(3,2)$。",
+      "en": "",
+      "highlight": [
+       "E(3,2)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 向左平移 2 單位",
+       "en": ""
+      },
+      "math": "F=(3-2,\\ 2)=(1,2)",
+      "zh": "「向左」是 $x$ 減 2：$3-2=1$。",
+      "en": "",
+      "highlight": [
+       "(1,2)"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$(1,-2)$ 是反射時沒有把 $y$ 變號（把 $2c-y$ 算成 $-2-4$）。",
+      "en": "Wrong sign in the reflection."
+     },
+     {
+      "opt": "C",
+      "zh": "$(-1,2)$ 是平移做成向右再多減（方向搞錯）。",
+      "en": "Translated the wrong way."
+     }
+    ],
+    "tip": {
+     "zh": "水平線反射：距離 $\\times2$ 加上去。$D$ 在 $y=-1$ 下方 3 格，影像就在上方 3 格 → $y=2$。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-q11": {
+   "answer": "D",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "EPH WS04 Q11 · [Modified from HKDSE 2020 Paper 2 Q24]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 由影像倒推 $Q$",
+       "en": ""
+      },
+      "math": "Q=(-(-4),\\ -6)=(4,-6)",
+      "zh": "題目給的是 $Q$ 對 $y$ 軸反射後的影像 $(-4,-6)$。反射的「反動作」就是再反射一次：改 $x$ 的符號 → $Q=(4,-6)$。",
+      "en": "",
+      "highlight": [
+       "Q=(4,-6)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 由 $Q$ 倒推 $P$",
+       "en": ""
+      },
+      "math": "P=(4+10,\\ -6)=(14,-6)",
+      "zh": "$P$ 向左 10 才變成 $Q$，所以 $P$ 是 $Q$ 向右 10：$x=4+10=14$。",
+      "en": "",
+      "highlight": [
+       "P=(14,-6)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 驗算",
+       "en": ""
+      },
+      "math": "(14,-6)\\xrightarrow{\\text{左 }10}(4,-6)\\xrightarrow{\\text{對 }y\\text{ 軸}}(-4,-6)\\ \\checkmark",
+      "zh": "順做一次回到題目給的 $(-4,-6)$ ✓。",
+      "en": ""
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$(-6,-6)$ 是倒推時方向搞錯（把 $P$ 也向左移）。",
+      "en": "Wrong direction when reversing."
+     },
+     {
+      "opt": "C",
+      "zh": "$(6,6)$ 是把 $y$ 也變號了 —— 對 $y$ 軸反射不改 $y$。",
+      "en": "Changed the y-coordinate."
+     }
+    ],
+    "tip": {
+     "zh": "「已知影像求原點」的題：把每一步變換做**反動作**，由後往前推回去。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws04-q12": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "EPH WS04 Q12 · [Modified from HKDSE 2020 Paper 2 Q24]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 由平移的結果倒推 $B$",
+       "en": ""
+      },
+      "math": "B=(5,\\ -8-6)=(5,-14)",
+      "zh": "$B$ 向上 6 才變成 $(5,-8)$，所以 $B$ 的 $y=-8-6=-14$。",
+      "en": "",
+      "highlight": [
+       "B=(5,-14)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 由 $B$ 倒推 $A$（旋轉的反動作）",
+       "en": ""
+      },
+      "math": "\\text{逆 }90^{\\circ}\\text{ 的反動作}=\\text{順 }90^{\\circ}:(x,y)\\to(y,-x)",
+      "zh": "逆時針 $90^{\\circ}$ 的反向就是順時針 $90^{\\circ}$，公式 $(x,y)\\to(y,-x)$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 代入 $B(5,-14)$",
+       "en": ""
+      },
+      "math": "A=(-14,\\ -5)",
+      "zh": "$y=-14$ 搬到前面、$x=5$ 變號放後面 → $A=(-14,-5)$。",
+      "en": "",
+      "highlight": [
+       "A=(-14,-5)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · 驗算",
+       "en": ""
+      },
+      "math": "A(-14,-5)\\xrightarrow{\\text{逆 }90^{\\circ}}(5,-14)\\xrightarrow{\\text{上 }6}(5,-8)\\ \\checkmark",
+      "zh": "順做一次回到題目給的 $(5,-8)$ ✓。",
+      "en": ""
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$(-2,-5)$ 是旋轉公式用反（用了逆時針公式去倒推）。",
+      "en": "Used the forward rotation instead of its inverse."
+     },
+     {
+      "opt": "D",
+      "zh": "$(14,5)$ 是兩個座標都變號（當成 $180^{\\circ}$）。",
+      "en": "Treated it as a 180° rotation."
+     }
+    ],
+    "tip": {
+     "zh": "倒推題一定要「順做一次」驗算：由你求出的 $A$ 出發，照題目做一次，看是否回到題目給的點。",
+     "en": ""
+    }
+   }
   }
  }
 }

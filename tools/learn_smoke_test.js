@@ -298,6 +298,27 @@ ok(stem13.querySelector(".katex") === null, "the currency sentence is not swallo
 const optA13 = t02cur.$('.card[data-qid="eph-ws02-q13"] .opt');
 ok(!!optA13 && optA13.querySelector(".cur") && optA13.textContent.indexOf("\\$") < 0,
    "options render currency too");
+
+/* ── 2c. 第 3、4 課 ───────────────────────────────────────────────────── */
+console.log("\n— 課題 3、4 —");
+ok(home.$$(".topic-btn").length === 4,
+   "home lists all four topics (got " + home.$$(".topic-btn").length + ")");
+const t03 = boot("topic.html", "?t=ws03&p=0");
+ok((t03.$("#topic-name").textContent || "").indexOf("主項") >= 0,
+   "ws03 name rendered (" + t03.$("#topic-name").textContent + ")");
+ok(t03.$$("#pagenav .pg").length === 10,
+   "ws03 = 1 card page + 3 demos + 6 MC pages (got " + t03.$$("#pagenav .pg").length + ")");
+ok(t03.$$(".formula .katex").length >= 2, "ws03 concept card renders formulas");
+const t03mc = boot("topic.html", "?t=ws03&p=4");
+ok(t03mc.$$("#topic-body .card[data-qid]").length === 3, "ws03 MC page holds 3 questions");
+const t04 = boot("topic.html", "?t=ws04&p=0");
+ok((t04.$("#topic-name").textContent || "").indexOf("坐標") >= 0,
+   "ws04 name rendered (" + t04.$("#topic-name").textContent + ")");
+ok(t04.$$("#pagenav .pg").length === 8,
+   "ws04 = 1 card page + 3 demos + 4 MC pages (got " + t04.$$("#pagenav .pg").length + ")");
+const t04mc = boot("topic.html", "?t=ws04&p=4");
+ok(t04mc.$$("#topic-body .opt").length === 12,
+   "ws04 MC page has 3 questions × 4 options (got " + t04mc.$$("#topic-body .opt").length + ")");
 const sLong = t1.store();
 ok(Object.keys(sLong.long || {}).length >= 1, "finishing the demo is recorded in progress");
 
