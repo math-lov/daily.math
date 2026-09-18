@@ -119,6 +119,13 @@
   /* Editorial text may contain inline maths wrapped in $...$ (e.g. "$x=-k+1$").
      Escape the HTML, keep the $ delimiters for KaTeX auto-render. */
   function rich(s) { return esc(s); }
+  /* 選項是「純文字」而非 LaTeX？（如 "230.0 (correct to 4 significant figures)."）
+     數學模式會吃掉空格、把單字排成斜體。判別：無 $、無 \ 命令，
+     且含「兩個相連的字母單字」。 */
+  function isProse(s) {
+    if (s.indexOf("$") >= 0 || s.indexOf("\\") >= 0) return false;
+    return /(^|[^A-Za-z])[A-Za-z]{2,}\s+[A-Za-z]{2,}(?![A-Za-z])/.test(s);
+  }
   function autoRender(node) {
     if (!window.renderMathInElement || !node) return;
     try {
@@ -260,10 +267,10 @@
       b.appendChild(el("span", "letter", letter));
       var v = el("span", "val");
       var ov = q.options ? q.options[letter] : null;
-      // 選項兩種寫法都支援：純 LaTeX（整串丟 KaTeX）或含 $...$ 的文字（行內渲染）
-      if (ov && ov.indexOf("$") >= 0) v.innerHTML = rich(ov);
-      else if (ov) tex(v, ov, false);
-      else v.textContent = "—";
+      // 選項三種寫法：含 $...$ 的文字（行內渲染）／純文字（原樣）／純 LaTeX（整串數學）
+      if (!ov) v.textContent = "—";
+      else if (ov.indexOf("$") >= 0 || isProse(ov)) v.innerHTML = rich(ov);
+      else tex(v, ov, false);
       b.appendChild(v);
       b.onclick = function () { pick(q, letter, card, b); };
       opts.appendChild(b);

@@ -102,14 +102,20 @@ def strip_math_delims(s: str | None) -> str | None:
     資料層約定：**選項與 stem_latex 存「純 LaTeX」**；只有 stem_text 可以用 $...$
     （那會交給 mathify 處理）。Gemini 轉寫偶爾會多包一層 $，不剝掉的話
     KaTeX 會把 $ 當非法字元，學生端只會看到紅色原始碼。
+
+    注意：只剝「整串剛好一對」的情況。像 '$x=-s$ or $x=-t$' 這種**混合內容**
+    （多對 $）不能剝 —— 剝掉外圍會留下奇數個 $，行內渲染反而更亂；原樣保留，
+    交給前端以行內渲染處理。
     """
     if not s:
         return s
     t = s.strip()
     for a, b in (("$", "$"), ("\\(", "\\)"), ("\\[", "\\]")):
         if t.startswith(a) and t.endswith(b) and len(t) > len(a) + len(b) - 1:
-            t = t[len(a):-len(b)].strip()
-            break
+            inner = t[len(a):-len(b)]
+            if a == "$" and "$" in inner:
+                break                       # 混合內容 → 原樣保留
+            return inner.strip() or None
     return t or None
 
 

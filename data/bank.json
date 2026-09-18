@@ -1695,8 +1695,8 @@
       "options": {
         "A": "x=-s",
         "B": "x=-2s",
-        "C": "x=-s$ or $x=-t",
-        "D": "x=-2s$ or $x=-t"
+        "C": "$x=-s$ or $x=-t$",
+        "D": "$x=-2s$ or $x=-t$"
       },
       "transcribedBy": "ai-vision",
       "editedBy": null,
@@ -1851,8 +1851,8 @@
       "difficulty": 1,
       "timeSec": 60,
       "stem": {
-        "text": "A sum of \\$P is deposited at an interest rate of 4% per annum for 5 years, compounded quarterly. If the amount is \\$80000, find P correct to the nearest integer.",
-        "html": "A sum of \\$P is deposited at an interest rate of 4% per annum for 5 years, compounded quarterly. If the amount is \\$80000, find P correct to the nearest integer.",
+        "text": "A sum of $P$ is deposited at an interest rate of 4% per annum for 5 years, compounded quarterly. If the amount is $80000, find P correct to the nearest integer.",
+        "html": "A sum of &dollar;P&dollar; is deposited at an interest rate of 4% per annum for 5 years, compounded quarterly. If the amount is &dollar;80000, find P correct to the nearest integer.",
         "latex": "P(1+\\frac{4\\%}{4})^{20}=80000"
       },
       "figure": null,
@@ -1864,7 +1864,7 @@
         "D": "66 667"
       },
       "transcribedBy": "ai-vision",
-      "editedBy": null,
+      "editedBy": "panel",
       "classifiedBy": "auto-rules"
     },
     {
