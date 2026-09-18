@@ -268,6 +268,23 @@ ok(t1.$$(".steps .step").length >= 3, "all steps revealed (got " + t1.$$(".steps
 ok(!!t1.$(".done-banner"), "finishing the demo shows the completion banner");
 ok(t1.$$(".step .marking").length >= 1, "DSE marking codes (1A/1M) are shown");
 ok(t1.$$(".hl .katex").length >= 1 || t1.$$(".hl").length >= 1, "step highlights rendered");
+
+// 步驟標題本身可以含 $...$（例：第 2 步 · 由 (2) 寫出 $q$）→ 必須渲染成數學，不能露出 $ 字元
+const t02q = boot("topic.html", "?t=ws02&p=3");
+const card03 = t02q.$('.card[data-qid="eph-ws02-q03"]');
+ok(!!card03, "found the ws02 q03 card (step titles contain $...$)");
+// 每次揭一步後提示列會重建 → 每輪重新抓目前的按鈕（模擬真人逐次按）
+for (let k = 0; k < 4; k++) {
+  const row = card03 && card03.querySelector(".hint-row");
+  const hb = row && row.querySelector(".btn");
+  if (!hb) break;
+  hb.click();
+}
+const titles03 = card03 ? Array.prototype.slice.call(card03.querySelectorAll(".step h4")) : [];
+ok(titles03.length >= 2, "q03 steps revealed (got " + titles03.length + ")");
+ok(titles03.every((h) => h.textContent.indexOf("$") < 0),
+   "step titles show no raw $ (" + titles03.map((h) => h.textContent).join(" / ") + ")");
+ok(titles03.some((h) => h.querySelector(".katex")), "step titles with $...$ are typeset by KaTeX");
 const sLong = t1.store();
 ok(Object.keys(sLong.long || {}).length >= 1, "finishing the demo is recorded in progress");
 

@@ -122,6 +122,13 @@
     if (s.indexOf("$") >= 0 || s.indexOf("\\") >= 0) return false;
     return /(^|[^A-Za-z])[A-Za-z]{2,}\s+[A-Za-z]{2,}(?![A-Za-z])/.test(s);
   }
+  /* 短標籤（步驟標題、卡片標題、解法名）也可能含 $...$ → 行內數學渲染。
+     直接用 textContent 的話會把 $q$、$p$ 原字元露出來。 */
+  function labelInto(node, s) {
+    richInto(node, (s == null ? "" : String(s)));
+    autoRender(node);
+    return node;
+  }
   function mathInto(node, s) {                  // 選項三路判別
     if (!s) { node.textContent = "—"; return; }
     if (s.indexOf("$") >= 0 || isProse(s)) { richInto(node, s); autoRender(node); }
@@ -440,7 +447,7 @@
       var c = cards[i];
       var card = el("div", "card");
       var head = el("div", "ccard-head");
-      head.appendChild(el("h3", null, (c.title && c.title.zh) || ""));
+      head.appendChild(labelInto(el("h3"), (c.title && c.title.zh) || ""));
       if (c.title && c.title.en) head.appendChild(el("span", "en", c.title.en));
       card.appendChild(head);
 
@@ -551,8 +558,9 @@
 
     function drawStep(i) {
       var st = steps[i];
+      if (!st) return;                        // 防禦：步驟已全部顯示時再被觸發
       var box = el("div", "step");
-      var h = el("h4", null, (st.title && st.title.zh) || ("第 " + (i + 1) + " 步"));
+      var h = labelInto(el("h4"), (st.title && st.title.zh) || ("第 " + (i + 1) + " 步"));
       box.appendChild(h);
       if (st.math) {
         var f = el("div", "formula");
@@ -764,8 +772,9 @@
 
     function drawStep(i) {
       var st = steps[i];
+      if (!st) return;                        // 防禦：步驟已全部顯示時再被觸發
       var box = el("div", "step");
-      box.appendChild(el("h4", null, (st.title && st.title.zh) || ("第 " + (i + 1) + " 步")));
+      box.appendChild(labelInto(el("h4"), (st.title && st.title.zh) || ("第 " + (i + 1) + " 步")));
       if (st.math) {
         var f = el("div", "formula");
         tex(f, st.math, true);
@@ -822,7 +831,8 @@
         var tgl = el("button", "btn btn-sm btn-ghost alt-toggle", "進階解法（參考）");
         var ab = el("div", "alt-body hidden");
         sol.alt.forEach(function (a, i) {
-          var nm = el("div", "small muted", (a.name && (a.name.zh || a.name.en)) || ("進階解法 " + (i + 1)));
+          var nm = labelInto(el("div", "small muted"),
+                             (a.name && (a.name.zh || a.name.en)) || ("進階解法 " + (i + 1)));
           ab.appendChild(nm);
           var sp = el("div");
           richInto(sp, a.zh || a.en || "");
