@@ -1,3 +1,17 @@
 {
- "entries": []
+ "entries": [
+  {
+   "at": "2026-09-18T20:22:52",
+   "kind": "card",
+   "id": "ws01-c5",
+   "fields": [
+    "body",
+    "math",
+    "title",
+    "vocab",
+    "warn"
+   ],
+   "by": "teacher-panel"
+  }
+ ]
 }
