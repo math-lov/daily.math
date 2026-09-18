@@ -209,6 +209,7 @@ ok(/錯題本/.test(w.$$("#wrong-count").length ? w.$("#wrong-count").textConten
 
 /* ── 6b. 再練一次 → 回到該題且是未作答狀態 ───────────────────────────── */
 console.log("\n— 錯題本：再練一次回到該題 —");
+const targetQid = wrongBefore[0];
 const navUrl = String(w.ctx.window.__LEARN_LAST_NAV || "");
 ok(navUrl.indexOf(targetQid) >= 0, "retry navigates to that question (" + navUrl + ")");
 const retryPage = boot("topic.html", navUrl.replace(/^[^?]*/, ""), JSON.stringify(w.store()));
@@ -227,8 +228,7 @@ ok(othersMarked >= 0, "other questions on the page keep their own state (" + oth
 // 回到課題頁後作答，應該可以正常判分並移出錯題本
 const retryOpts = retryCard.querySelectorAll(".opt");
 const retryQid = targetQid;
-const retryData = allMc.concat(t2.$$("#topic-body .card[data-qid]") ? [] : [])
-  .filter((q) => q.id === retryQid)[0];
+const retryData = allMc.filter((q) => q.id === retryQid)[0];
 ok(!!retryData, "retried question data available (" + retryQid + ")");
 const correctIdx = ["A", "B", "C", "D"].indexOf(retryData.answer);
 retryOpts[correctIdx].click();
