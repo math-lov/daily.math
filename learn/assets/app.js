@@ -54,6 +54,12 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
   }
+  /* 所有頁面跳轉都走這裡：記錄最後一次跳轉目標（smoke test 用），並統一處理
+     jsdom／舊瀏覽器不支援 location 指派的情況。 */
+  function go(url) {
+    window.__LEARN_LAST_NAV = url;
+    try { location.href = url; } catch (e) {}
+  }
   function toast(msg) {
     var t = qs("#toast");
     if (!t) { t = el("div", "toast"); t.id = "toast"; document.body.appendChild(t); }
@@ -180,7 +186,7 @@
                            " 題 · 練習 " + (s.mc || 0) + " 題";
         body.appendChild(meta);
         btn.appendChild(body);
-        btn.onclick = function () { location.href = "topic.html?t=" + encodeURIComponent(t.id); };
+        btn.onclick = function () { go("topic.html?t=" + encodeURIComponent(t.id)); };
         grid.appendChild(btn);
       });
       host.appendChild(grid);
@@ -188,16 +194,16 @@
 
     // 繼續學習：跳到第一個未完成課題
     var next = (INDEX.topics || []).filter(function (t) { return !isTopicDone(t); })[0];
-    var go = qs("#continue");
-    if (go) {
+    var goBtn = qs("#continue");
+    if (goBtn) {
       if (next) {
-        go.classList.remove("hidden");
-        go.onclick = function () { location.href = "topic.html?t=" + encodeURIComponent(next.id); };
+        goBtn.classList.remove("hidden");
+        goBtn.onclick = function () { go("topic.html?t=" + encodeURIComponent(next.id)); };
         var lbl = qs("#continue-label");
         if (lbl) lbl.textContent = "繼續學習 · " + ((next.name && next.name.zh) || next.id);
       } else if ((INDEX.topics || []).length) {
-        go.classList.remove("hidden");
-        go.onclick = function () { toast("全部課題都完成了，做得好！"); };
+        goBtn.classList.remove("hidden");
+        goBtn.onclick = function () { toast("全部課題都完成了，做得好！"); };
         var l2 = qs("#continue-label");
         if (l2) l2.textContent = "全部完成 ✓";
       }
@@ -293,9 +299,10 @@
       var pages = buildPages(topic);
       var cur = Math.min(pageFromUrl(), Math.max(0, pages.length - 1));
       var byQ = new URLSearchParams(location.search).get("q");
+      var focusQid = null;
       if (byQ) {
         var hit = pageOfQuestion(pages, byQ);
-        if (hit >= 0) cur = hit;
+        if (hit >= 0) { cur = hit; focusQid = byQ; }
       }
 
       var nameEl = qs("#topic-name");
@@ -319,7 +326,7 @@
         nav.appendChild(b);
       });
 
-      renderPage(pages, cur, id);
+      renderPage(pages, cur, id, focusQid);
 
       // footer
       var pos = qs("#pos");
@@ -340,10 +347,10 @@
   }
 
   function gotoPage(tid, n) {
-    location.href = "topic.html?t=" + encodeURIComponent(tid) + "&p=" + n;
+    go("topic.html?t=" + encodeURIComponent(tid) + "&p=" + n);
   }
 
-  function renderPage(pages, cur, tid) {
+  function renderPage(pages, cur, tid, focusQid) {
     var body = qs("#topic-body");
     body.innerHTML = "";
     var p = pages[cur];
@@ -363,7 +370,7 @@
 
     if (p.kind === "cards") renderCards(body, p, pages, cur, tid);
     else if (p.kind === "long") renderLong(body, p, pages, cur, tid);
-    else renderMcPage(body, p, pages, cur, tid);
+    else renderMcPage(body, p, pages, cur, tid, focusQid);
   }
 
   /* ── 概念卡 ─────────────────────────────────────────────────────────── */
@@ -558,7 +565,7 @@
       var goNext = el("button", "btn btn-block btn-primary", "下一頁 →");
       goNext.onclick = function () { gotoPage(tid, cur + 1); };
       var back = el("button", "btn btn-block btn-ghost", "← 回主目錄");
-      back.onclick = function () { location.href = "index.html"; };
+      back.onclick = function () { go("index.html"); };
       var row = el("div", "row");
       row.appendChild(goNext); row.appendChild(back);
       row.style.marginTop = "10px";
@@ -576,11 +583,20 @@
   }
 
   /* ── MC 頁 ──────────────────────────────────────────────────────────── */
-  function renderMcPage(body, page, pages, cur, tid) {
+  function renderMcPage(body, page, pages, cur, tid, focusQid) {
     var wrap = el("div");
     page.row.forEach(function (q, idx) {
       wrap.appendChild(mcCard(q, page, pages, cur, tid, idx + 1, page.row.length));
     });
+    // 從錯題本「再練一次」回來：標出這一題，並且讓它回到未作答狀態
+    if (focusQid) {
+      var focus = qs('.card[data-qid="' + focusQid + '"]', wrap);
+      if (focus) {
+        focus.classList.add("focus-card");
+        var note = el("div", "focus-note", "從錯題本回來：這一題已清空作答記錄，重新試一次吧。");
+        wrap.insertBefore(note, focus);
+      }
+    }
     body.appendChild(wrap);
 
     var nextRow = el("div", "card");
@@ -593,7 +609,7 @@
     var nx = el("button", "btn btn-sm btn-primary", "下一頁 →");
     nx.onclick = function () { gotoPage(tid, cur + 1); };
     var hm = el("button", "btn btn-sm btn-ghost", "回主目錄");
-    hm.onclick = function () { location.href = "index.html"; };
+    hm.onclick = function () { go("index.html"); };
     row.appendChild(nx); row.appendChild(hm);
     nextRow.appendChild(row);
     body.appendChild(nextRow);
@@ -601,6 +617,7 @@
 
   function mcCard(q, page, pages, cur, tid, num, total) {
     var card = el("div", "card");
+    card.setAttribute("data-qid", q.id);
     var head = el("div", "q-head");
     head.appendChild(el("span", "q-code", q.code || q.id));
     head.appendChild(el("span", "q-diff", "★".repeat(q.difficulty || 1) + "☆".repeat(3 - (q.difficulty || 1))));
@@ -794,7 +811,7 @@
       var b1 = el("div", "empty", "錯題本是空的 —— 或者你已經把錯的題目都弄懂了 ✓");
       e.appendChild(b1);
       var b2 = el("button", "btn btn-primary", "回主目錄");
-      b2.onclick = function () { location.href = "index.html"; };
+      b2.onclick = function () { go("index.html"); };
       e.appendChild(b2);
       host.appendChild(e);
       return;
@@ -829,7 +846,7 @@
         again.onclick = function () {
           delete store.mc[qid];
           save();
-          location.href = "topic.html?t=" + t + "&q=" + encodeURIComponent(qid);
+          go("topic.html?t=" + t + "&q=" + encodeURIComponent(qid));
         };
         inner.appendChild(again);
         row.appendChild(inner);

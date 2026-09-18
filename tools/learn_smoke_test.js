@@ -207,6 +207,34 @@ ok(Object.keys(wrongAfter).length === wrongBefore.length - 1,
 ok(/錯題本/.test(w.$$("#wrong-count").length ? w.$("#wrong-count").textContent : "錯題本"),
    "header keeps the wrong-book badge");
 
+/* ── 6b. 再練一次 → 回到該題且是未作答狀態 ───────────────────────────── */
+console.log("\n— 錯題本：再練一次回到該題 —");
+const navUrl = String(w.ctx.window.__LEARN_LAST_NAV || "");
+ok(navUrl.indexOf(targetQid) >= 0, "retry navigates to that question (" + navUrl + ")");
+const retryPage = boot("topic.html", navUrl.replace(/^[^?]*/, ""), JSON.stringify(w.store()));
+const retryCard = retryPage.doc.querySelector('.card[data-qid="' + targetQid + '"]');
+ok(!!retryCard, "the retried question is on the page we land on");
+ok(retryCard.querySelectorAll(".opt.wrong, .opt.correct, .opt.reveal").length === 0,
+   "the retried question shows as unanswered (no red/green marking)");
+ok(Array.prototype.every.call(retryCard.querySelectorAll(".opt"), (o) => !o.disabled),
+   "the retried question is answerable again");
+ok(!!retryPage.$(".focus-note"), "a note explains we came back from the wrong book");
+// 同一頁其他題目若之前已作答，應該保持原狀（不可以被清掉）
+const othersMarked = retryPage.$$("#topic-body .card[data-qid]")
+  .filter((c) => c.getAttribute("data-qid") !== targetQid)
+  .filter((c) => c.querySelectorAll(".opt[disabled]").length > 0).length;
+ok(othersMarked >= 0, "other questions on the page keep their own state (" + othersMarked + " previously answered)");
+// 回到課題頁後作答，應該可以正常判分並移出錯題本
+const retryOpts = retryCard.querySelectorAll(".opt");
+const retryQid = targetQid;
+const retryData = allMc.concat(t2.$$("#topic-body .card[data-qid]") ? [] : [])
+  .filter((q) => q.id === retryQid)[0];
+ok(!!retryData, "retried question data available (" + retryQid + ")");
+const correctIdx = ["A", "B", "C", "D"].indexOf(retryData.answer);
+retryOpts[correctIdx].click();
+ok(!!retryCard.querySelector(".opt.correct"), "answering correctly marks the option green");
+ok(retryPage.store().mc[retryQid].correct === true, "correct retry is recorded (will leave the wrong book)");
+
 /* ── 7. 乾淨狀態的錯題本 ─────────────────────────────────────────────── */
 console.log("\n— 錯題本（乾淨）—");
 const w2 = boot("wrong.html", "", JSON.stringify({ mc: {}, long: {}, cards: {} }));

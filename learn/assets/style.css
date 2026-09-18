@@ -282,6 +282,14 @@ body {
 .done-banner .big { font-size: 22px; font-weight: 700; color: var(--ok); }
 .done-banner p { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
 
+/* 從錯題本回來的那一題：加邊框提示，避免學生混淆「其他題目已作答」的狀態 */
+.focus-card { box-shadow: 0 0 0 3px #BEE3F8, var(--shadow-lift); scroll-margin-top: 120px; }
+.focus-note {
+  font-size: 14px; color: #2C5282; background: #EBF8FF;
+  border-radius: var(--radius-sm); padding: 8px 12px; margin-bottom: 10px;
+  border-left: 4px solid var(--primary);
+}
+
 .wrong-item { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .wrong-item .wq { flex: 1; min-width: 0; font-size: 15px; }
 .empty { text-align: center; color: var(--muted); padding: 28px 10px; }
