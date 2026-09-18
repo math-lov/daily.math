@@ -285,6 +285,19 @@ ok(titles03.length >= 2, "q03 steps revealed (got " + titles03.length + ")");
 ok(titles03.every((h) => h.textContent.indexOf("$") < 0),
    "step titles show no raw $ (" + titles03.map((h) => h.textContent).join(" / ") + ")");
 ok(titles03.some((h) => h.querySelector(".katex")), "step titles with $...$ are typeset by KaTeX");
+
+// 金銀符號：資料層寫成 \$（跳脫）→ 畫面要顯示成 $，且不可以被誤配成數學
+const t02cur = boot("topic.html", "?t=ws02&p=7");
+const stem13 = t02cur.$('.card[data-qid="eph-ws02-q13"] .q-stem');
+ok(!!stem13, "found the q13 currency card");
+ok(stem13.textContent.indexOf("\\$") < 0,
+   "no literal backslash-$ in the stem (" + stem13.textContent.slice(0, 60) + "...)");
+ok(stem13.querySelectorAll(".cur").length >= 2,
+   "currency symbols rendered as $ (got " + stem13.querySelectorAll(".cur").length + ")");
+ok(stem13.querySelector(".katex") === null, "the currency sentence is not swallowed into maths");
+const optA13 = t02cur.$('.card[data-qid="eph-ws02-q13"] .opt');
+ok(!!optA13 && optA13.querySelector(".cur") && optA13.textContent.indexOf("\\$") < 0,
+   "options render currency too");
 const sLong = t1.store();
 ok(Object.keys(sLong.long || {}).length >= 1, "finishing the demo is recorded in progress");
 

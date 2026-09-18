@@ -96,6 +96,7 @@
     try {
       renderMathInElement(node, {
         delimiters: [{ left: "$", right: "$", display: false }],
+        ignoredClasses: ["cur"],          // 貨幣符號不參與數學配對
         throwOnError: false, strict: false
       });
     } catch (e) {}
@@ -114,9 +115,16 @@
     return true;
   }
   /* 文字（可含 $...$ 與換行）→ 行內渲染容器 */
+  /* 資料層的貨幣寫成 \$（跳脫，避免與數學 $ 配對衝突）。
+     顯示層把它還原成 <span class="cur">$</span>：auto-render 會跳過 .cur，
+     所以「is \$53 while … is \$34」不會被當成一段數學。 */
+  var CURRENCY_RE = /\\\$/g;
+  function htmlWithCurrency(escapedHtml) {
+    return escapedHtml.replace(CURRENCY_RE, '<span class="cur">$</span>');
+  }
   function richInto(node, s) {
     node.setAttribute("data-tex-inline", "1");
-    node.innerHTML = esc(s).replace(/\n/g, "<br>");
+    node.innerHTML = htmlWithCurrency(esc(s)).replace(/\n/g, "<br>");
   }
   function isProse(s) {
     if (s.indexOf("$") >= 0 || s.indexOf("\\") >= 0) return false;
@@ -401,7 +409,7 @@
       if (!s) return;
       var d = el("div", "btext");
       d.setAttribute("data-tex-inline", "1");
-      d.innerHTML = esc(s).replace(/\n/g, "<br>");
+      d.innerHTML = htmlWithCurrency(esc(s)).replace(/\n/g, "<br>");
       autoRender(d);
       host.appendChild(d);
     }
