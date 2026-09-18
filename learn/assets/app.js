@@ -697,7 +697,8 @@
     autoRender(stem);
     card.appendChild(stem);
 
-    appendFigures(card, q);          // 題目示意圖（插喺題幹下面、選項上面）
+    // 注意：題目示意圖唔好放喺題幹下面 —— 圖入面有影像點，會洩漏答案。
+    // 改為作答後（或按「看完整解答」）先同解說一齊出現，見 showTail()。
 
     var opts = el("div", "opts");
     opts.setAttribute("data-tex-inline", "1");
@@ -749,6 +750,7 @@
         hinted = true;
         while (revealed < steps.length) { drawStep(revealed); revealed++; }
         showHints();
+        appendFigures(tail, q);        // 睇晒步驟＝放棄作答 → 圖都可以出場
       };
       hintRow.appendChild(b);
       hintRow.appendChild(all);
@@ -823,6 +825,8 @@
         var line = el("div", "answer-line", "答案：" + q.answer + " ✓");
         tail.appendChild(line);
       }
+      // 示意圖放喺答案欄：先睇答案，再睇圖配上解說（兩次變換嘅題目有兩幅）
+      appendFigures(tail, q);
       // 干擾選項解說（只顯示學生選的那個 + 其他錯的選項為何錯）
       var traps = sol.traps || [];
       if (traps.length) {

@@ -344,15 +344,27 @@ ok((t04fig.$(".fig svg").getAttribute("viewBox") || "").indexOf("0 0") === 0,
 ok(!/<script/i.test(t04fig.$(".fig").innerHTML), "figure markup is inert (no <script>)");
 ok(!boot("topic.html", "?t=ws01&p=0").$(".fig"), "topics without figures are unaffected");
 
-// MC 題嘅圖：插喺題幹下面；兩次變換嘅題目（q05）要畫兩幅
+// MC 題嘅圖要放喺答案欄：作答前唔可以見到（圖入面有影像點＝洩漏答案），作答後先出場
 const t04q = boot("topic.html", "?t=ws04&p=5");       // 第二個 MC 頁：q04、q05、q06
+const qCards04 = t04q.$$("#topic-body .card[data-qid]");
+ok(qCards04.length === 3, "the MC page holds 3 question cards (got " + qCards04.length + ")");
+ok(t04q.$$("#topic-body .fig").length === 0, "no figure before answering (no spoiler)");
+qCards04.forEach((c) => c.querySelector(".opt").click());    // 作答
 const qFigN = t04q.$$("#topic-body .card[data-qid]").map(
   (c) => c.querySelectorAll(".fig svg").length);
-ok(qFigN.length === 3, "the MC page holds 3 question cards (got " + qFigN.length + ")");
-ok(qFigN.every((n) => n >= 1), "every MC question here has a figure (" + qFigN.join(", ") + ")");
+ok(qFigN.every((n) => n >= 1),
+   "every MC question shows its figure after answering (" + qFigN.join(", ") + ")");
 ok(qFigN[1] === 2, "the two-step question (q05) shows two figures (got " + qFigN[1] + ")");
 ok(t04q.$$(".fig-cap").length === qFigN.reduce((a, b) => a + b, 0),
    "each MC figure carries a caption too");
+
+// 未作答但按「看完整解答」＝放棄作答 → 圖都要出場
+const t04q2 = boot("topic.html", "?t=ws04&p=5");
+const c04 = t04q2.$("#topic-body .card[data-qid]");
+const allBtn04 = c04.querySelectorAll(".hint-row .btn")[1];   // 第二個＝看完整解答
+allBtn04.click();
+ok(c04.querySelectorAll(".fig svg").length >= 1,
+   "pressing 'show the whole solution' also reveals the figure");
 const sLong = t1.store();
 ok(Object.keys(sLong.long || {}).length >= 1, "finishing the demo is recorded in progress");
 
