@@ -307,6 +307,14 @@ cd "C:\Code Buddy\HKDSE"
 git add -A; git commit -m "Learn: WS02"; git push
 ```
 
+### 本機維護平台（面板）
+
+* 雙擊 **`start-learn-panel.bat`** → `http://127.0.0.1:8788/`（與每日站面板 8787 **完全獨立**，可同時開）
+* **總覽**：統計、**課題開關**（暫緩＝學生看不到）、孤兒題、最後生成時間
+* **覆核清單**：逐題處理 `review` 旗標（「通過」＝清旗標＋寫 `data/learn/review_log.json` 審計）
+* **發佈**：`重新生成 + 檢查`（四步全過）→ `一鍵發佈`（再 git commit／push）
+* 右上角 **本機預覽** ↗：即時 serve `learn/` 前端，改完馬上用手機看
+
 ### 發佈邊界（重要）
 
 * **真正的防線在生成器**：`make_learn_data.py` **不會輸出 `review` 旗標未清的題目**

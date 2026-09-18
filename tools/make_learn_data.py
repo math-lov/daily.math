@@ -136,6 +136,9 @@ def main(argv: list[str] | None = None) -> int:
     concepts = _load("concepts.json", {"cards": []})
     sols_doc = _load("solutions.json", {"solutions": {}})
     sols = sols_doc.get("solutions") or {}
+    # 課題開關（面板維護）：holdTopics 內的課題暫緩出站，學生看不到
+    pub_doc = _load("publish.json", {"holdTopics": []})
+    hold: set[str] = {str(x) for x in (pub_doc.get("holdTopics") or [])}
 
     questions = bank.get("questions", [])
     bank_by_id = {q["id"]: q for q in questions}
@@ -163,9 +166,13 @@ def main(argv: list[str] | None = None) -> int:
 
     # 首頁索引（輕量）
     topics_index = []
+    kept_files: set[str] = set()
     for t in lessons.get("topics", []):
         tid = t.get("id")
+        if tid in hold:
+            continue                              # 面板暫緩的課題：不輸出
         payload = build_topic(t, bank_by_id, cards_by_id, sols, blocked)
+        kept_files.add("topic-%s.js" % tid)
         topics_index.append({
             "id": tid,
             "stage": t.get("stage"),
@@ -188,12 +195,23 @@ def main(argv: list[str] | None = None) -> int:
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "counts": {
             "topics": len(topics_index),
+            "held": len(hold),
             "mc": sum(t["stats"]["mc"] for t in topics_index),
             "long": sum(t["stats"]["long"] for t in topics_index),
             "cards": sum(t["stats"]["cards"] for t in topics_index),
             "blocked": len(blocked),
         },
     }
+
+    # 清掉已暫緩／已刪除課題的殘留資料檔（否則學生仍載入得到舊內容）
+    stale = 0
+    if os.path.isdir(out_data):
+        for fn in os.listdir(out_data):
+            if fn.startswith("topic-") and fn.endswith(".js") and fn not in kept_files:
+                os.remove(os.path.join(out_data, fn))
+                stale += 1
+    if stale:
+        print("已移除 %d 個暫緩／不再使用課題的資料檔" % stale)
     write_js(os.path.join(out_data, "index.js"), "LEARN_INDEX", index_obj)
     write_js(os.path.join(out_data, "meta.js"), "LEARN_META",
              {"generatedAt": index_obj["generatedAt"],
@@ -219,6 +237,8 @@ def main(argv: list[str] | None = None) -> int:
              index_obj["counts"]["long"], index_obj["counts"]["cards"]))
     if blocked:
         print("暫緩出站（review 未覆核）：%d 題 → %s" % (len(blocked), ", ".join(sorted(blocked))))
+    if hold:
+        print("暫緩出站（面板開關）：課題 %s" % ", ".join(sorted(hold)))
     print("已剔除教師欄位 %d 個；題解已併入題目 %d 題" % (removed, merged))
     return 0
 

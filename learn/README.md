@@ -89,7 +89,21 @@ git add -A; git commit -m "Learn: add WS02"; git push  # 5. 發佈（GitHub Page
 處理方式：`wmf_to_png.py` 用 Windows GDI+ 轉成高解析 PNG → 讀圖轉寫成 LaTeX →
 在 `bank.json` 標 `review` 旗標 → 老師覆核後清掉旗標才出站。
 
-## 7. 已知限制
+## 7. 本機維護平台（`start-learn-panel.bat`，127.0.0.1:8788）
+
+與每日三題站的面板（8787）**完全獨立**（不同資料層、不同埠，可同時開）。
+
+| 分頁 | 功能 |
+|---|---|
+| **總覽** | 題數／概念卡／待覆核統計；**課題開關**（暫緩＝學生看不到，資料檔會被自動清除）；孤兒題；最後生成時間 |
+| **覆核清單** | 列出 `review` 旗標未清的題目（嵌圖公式 `embed-fig`、可疑轉寫），逐題「通過（清除旗標＋寫審計）」或「保留（加備註）」 |
+| **發佈** | 「重新生成 + 檢查」＝ `make_learn_data` → `learn_check` → `learn_katex_check` → `learn_smoke_test`（失敗即停）；「一鍵發佈」＝ 再 git add／commit／push |
+| （右上角） | **本機預覽** ↗ `/site/index.html` —— 直接 serve `learn/` 前端，改完馬上用手機／瀏覽器看 |
+
+寫入的檔案：`data/learn/publish.json`（課題開關）、`data/learn/review_log.json`（覆核審計）、
+`data/learn/bank.json`（清除 `review` 旗標時）。
+
+## 8. 已知限制
 
 * 目前只有 **Stage 1 的第一課（WS01 因式分解）**；其餘課題按第 5 節流程逐批補上。
 * 長題目示範只展示題解與教學，**不要求學生作答**（進度記「已讀完示範」）。
