@@ -105,7 +105,7 @@ window.LEARN_INDEX = {
   }
  ],
  "assessments": [],
- "generatedAt": "2026-09-18T13:34:32Z",
+ "generatedAt": "2026-09-18T13:58:19Z",
  "counts": {
   "topics": 4,
   "held": 0,

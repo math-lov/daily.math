@@ -232,6 +232,17 @@ def main(argv: list[str] | None = None) -> int:
         if not _dollar_ok(blob_all):
             err("S6", "%s：題解整體 $ 不成對" % qid)
 
+    # ── S9：概念卡示意圖（SVG）安全檢查 ───────────────────────────────────
+    figures_doc = _load("figures.json", {"figures": {}})
+    for fid, svg in (figures_doc.get("figures") or {}).items():
+        if not isinstance(svg, str) or "<svg" not in svg or "</svg>" not in svg:
+            err("S9", "figures.json：%s 唔係完整的 SVG" % fid)
+            continue
+        low = svg.lower()
+        for bad in ("<script", "onerror=", "onload=", "onclick=", "javascript:"):
+            if bad in low:
+                err("S9", "figures.json：%s 含可疑內容（%s）" % (fid, bad))
+
     # ── 統計 ──────────────────────────────────────────────────────────────
     n_mc = sum(1 for q in questions if q.get("type") == "mc")
     n_long = sum(1 for q in questions if q.get("type") == "long")

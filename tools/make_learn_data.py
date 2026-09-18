@@ -72,14 +72,18 @@ def write_js(path: str, var: str, obj) -> None:
 
 
 def build_topic(topic: dict, bank_by_id: dict, cards_by_id: dict, sols: dict,
-                blocked: set[str]) -> dict:
+                blocked: set[str], figures: dict | None = None) -> dict:
     """組出單一課題的完整內容（給前端）。"""
+    figures = figures or {}
     lessons_out = []
     for les in topic.get("lessons", []):
         cards = []
         for cid in les.get("conceptCards", []):
             card = cards_by_id.get(cid)
             if card:
+                # 示意圖只進公開檔（SVG 由 make_learn_figures.py 產生），唔寫入 concepts.json
+                if figures.get(cid):
+                    card = dict(card, svg=figures[cid])
                 cards.append(card)
 
         long_qs = []
@@ -136,6 +140,8 @@ def main(argv: list[str] | None = None) -> int:
     concepts = _load("concepts.json", {"cards": []})
     sols_doc = _load("solutions.json", {"solutions": {}})
     sols = sols_doc.get("solutions") or {}
+    # 概念卡示意圖（SVG）：由 tools/make_learn_figures.py 產生
+    figures = (_load("figures.json", {"figures": {}}).get("figures") or {})
     # 課題開關（面板維護）：holdTopics 內的課題暫緩出站，學生看不到
     pub_doc = _load("publish.json", {"holdTopics": []})
     hold: set[str] = {str(x) for x in (pub_doc.get("holdTopics") or [])}
@@ -171,7 +177,7 @@ def main(argv: list[str] | None = None) -> int:
         tid = t.get("id")
         if tid in hold:
             continue                              # 面板暫緩的課題：不輸出
-        payload = build_topic(t, bank_by_id, cards_by_id, sols, blocked)
+        payload = build_topic(t, bank_by_id, cards_by_id, sols, blocked, figures)
         kept_files.add("topic-%s.js" % tid)
         topics_index.append({
             "id": tid,
@@ -239,6 +245,8 @@ def main(argv: list[str] | None = None) -> int:
         print("暫緩出站（review 未覆核）：%d 題 → %s" % (len(blocked), ", ".join(sorted(blocked))))
     if hold:
         print("暫緩出站（面板開關）：課題 %s" % ", ".join(sorted(hold)))
+    if figures:
+        print("概念卡示意圖 %d 張（SVG）" % len(figures))
     print("已剔除教師欄位 %d 個；題解已併入題目 %d 題" % (removed, merged))
     return 0
 

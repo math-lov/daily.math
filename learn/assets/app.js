@@ -459,6 +459,13 @@
       if (c.title && c.title.en) head.appendChild(el("span", "en", c.title.en));
       card.appendChild(head);
 
+      // 概念卡示意圖（SVG）：由 tools/make_learn_figures.py 產生、來源可控，直接插入
+      if (c.svg) {
+        var fig = el("div", "fig");
+        fig.innerHTML = c.svg;
+        card.appendChild(fig);
+      }
+
       var b = el("div", "ccard-body concept-body");
       renderMathBody(b, (c.body && c.body.zh) || "", c.math || []);
       card.appendChild(b);

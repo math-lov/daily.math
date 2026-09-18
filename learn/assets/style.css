@@ -164,6 +164,14 @@ body {
 .ccard-body p { margin: 0 0 10px; }
 .ccard-body .btext { margin: 0 0 8px; }
 .ccard-body .btext:last-child { margin-bottom: 0; }
+/* 概念卡示意圖（SVG）：黑白試卷風、列印友善 */
+.fig {
+  margin: 10px 0 12px; padding: 6px; background: #fff;
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  text-align: center;
+}
+.fig svg { display: inline-block; width: 100%; max-width: 330px; height: auto; }
+
 .formula {
   display: flex; justify-content: center; padding: 10px 0; margin: 8px 0;
   background: #F7FAFF; border-radius: var(--radius-sm); overflow-x: auto;
