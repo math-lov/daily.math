@@ -117,6 +117,16 @@ ok(t2.$$("#topic-body .opts").length === 3, "all three questions render option l
 ok(t2.$$("#topic-body .q-diff").length === 3, "difficulty stars rendered");
 ok(!!first.querySelector(".q-code").textContent.trim(), "question code shown (" + first.querySelector(".q-code").textContent + ")");
 
+// 提示必須在作答前就出現（弱生可以先看提示再答，不扣分）
+ok(t2.$$("#topic-body .hint-row").length === 3, "every question offers hints before answering");
+ok(t2.$$("#topic-body .hint-row .btn").length >= 6, "hint buttons are rendered up front");
+const q2optsBefore = Array.prototype.slice.call(qCards[1].querySelectorAll(".opt"));
+ok(q2optsBefore.every((o) => !o.disabled), "other questions stay answerable until the student answers them");
+// 作答前先按一次提示：應該真的揭示一步
+const preHint = qCards[1].querySelector(".hint-row .btn");
+preHint.click();
+ok(qCards[1].querySelectorAll(".steps .step").length === 1, "hint works before answering (step revealed)");
+
 // 從資料取得正確答案，故意挑一個錯的選項作答
 const payload = t2.ctx.window.LEARN_TOPIC_WS01;
 const allMc = payload.lessons.reduce((a, l) => a.concat(l.pages.reduce((b, p) => b.concat(p), [])), []);
@@ -138,6 +148,16 @@ const hintBtn = first.querySelector(".hint-row .btn");
 hintBtn.click();
 ok(first.querySelectorAll(".steps .step").length >= 1, "a step is revealed on demand");
 ok(first.querySelectorAll(".step .why").length >= 1, "each step carries the long Chinese explanation");
+
+// 回歸測試：答一題不可以影響其他題（曾經因為 qsa 少了 root 而整頁一齊鎖住）
+const q2optsAfter = Array.prototype.slice.call(qCards[1].querySelectorAll(".opt"));
+const q3optsAfter = Array.prototype.slice.call(qCards[2].querySelectorAll(".opt"));
+ok(q2optsBefore[0].disabled === false && q3optsAfter[0].disabled === false,
+   "answering question 1 leaves questions 2 and 3 answerable");
+ok(qCards[2].querySelectorAll(".opt.wrong, .opt.correct, .opt.reveal").length === 0,
+   "question 3 is not marked when question 1 is answered");
+ok(q2optsAfter.filter((o) => o.classList.contains("wrong") || o.classList.contains("correct")).length === 0,
+   "question 2 is not marked when question 1 is answered");
 
 // 答對：第二題（用答案鍵反推正確選項）
 const second = qCards[1];
@@ -177,8 +197,13 @@ ok(items.length >= 1, "wrong book lists the wrong questions (got " + items.lengt
 ok(/答錯 \d+ 次/.test(w.$("#wrong-body").textContent), "shows how many times it was attempted");
 const again = w.$$(".wrong-item .btn").filter((b) => /再練一次/.test(b.textContent))[0];
 ok(!!again, "'practise again' button present");
+const wrongBefore = Object.keys(w.store().mc || {})
+  .filter((k) => w.store().mc[k].correct === false).sort();
 again.click();
-ok(Object.keys(w.store().mc || {}).length === 0, "retrying clears that question's record");
+const wrongAfter = w.store().mc || {};
+ok(!wrongAfter[wrongBefore[0]], "retrying clears that question's record (" + wrongBefore[0] + ")");
+ok(Object.keys(wrongAfter).length === wrongBefore.length - 1,
+   "only the retried question is cleared (kept " + Object.keys(wrongAfter).length + " of " + wrongBefore.length + ")");
 ok(/錯題本/.test(w.$$("#wrong-count").length ? w.$("#wrong-count").textContent : "錯題本"),
    "header keeps the wrong-book badge");
 

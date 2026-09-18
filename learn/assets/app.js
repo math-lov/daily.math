@@ -43,8 +43,12 @@
     if (text != null) n.textContent = text;
     return n;
   }
-  function qs(sel) { return document.querySelector(sel); }
-  function qsa(sel) { return Array.prototype.slice.call(document.querySelectorAll(sel)); }
+  /* 注意：第二個參數 root 一定要保留 —— 作答時只鎖「這一題」的選項，
+     否則會把整頁其他題目的選項一併鎖住（曾經踩過的 bug）。 */
+  function qs(sel, root) { return (root || document).querySelector(sel); }
+  function qsa(sel, root) {
+    return Array.prototype.slice.call((root || document).querySelectorAll(sel));
+  }
   function esc(s) {
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -622,6 +626,7 @@
     var sol = q.solution || {};
     var steps = sol.steps || [];
     var revealed = 0;
+    var hinted = false;              // 是否看過提示（看提示不扣分，只是記錄）
 
     ["A", "B", "C", "D"].forEach(function (L) {
       var b = el("button", "opt");
@@ -635,10 +640,35 @@
     });
 
     var prev = mcState(q.id);
-    if (prev) lock(prev.picked, prev.correct);
+
+    /* 提示「一開始就顯示」：弱生可以先看提示再作答，看提示不扣分。
+       （舊版是答完才出現，等於逼學生先猜 —— 已修正） */
+    function showHints() {
+      hintRow.innerHTML = "";
+      if (revealed >= steps.length) {
+        hintRow.appendChild(el("span", "small muted", "已顯示完整解答。"));
+        return;
+      }
+      hintRow.appendChild(el("span", "small muted", "卡住了？先看提示再作答也沒問題："));
+      var b = el("button", "btn btn-sm", "提示 " + (revealed + 1) + " →");
+      b.onclick = function () {
+        hinted = true;
+        drawStep(revealed);
+        revealed++;
+        showHints();
+      };
+      var all = el("button", "btn btn-sm btn-ghost", "看完整解答");
+      all.onclick = function () {
+        hinted = true;
+        while (revealed < steps.length) { drawStep(revealed); revealed++; }
+        showHints();
+      };
+      hintRow.appendChild(b);
+      hintRow.appendChild(all);
+    }
 
     function lock(picked, correct) {
-      qsa(".opt", opts).forEach(function (b) {
+      qsa(".opt", opts).forEach(function (b) {     // 只鎖這一題的選項（root = opts）
         b.disabled = true;
         if (b.dataset.opt === q.answer) {
           b.classList.add(correct ? "correct" : "reveal");
@@ -646,9 +676,8 @@
           b.classList.add("wrong");
         }
       });
-      showHints(picked);
-      if (!correct) showTail(picked);
-      else showTail(null);
+      showHints();
+      showTail(correct ? null : picked);
     }
 
     function pick(L, btn) {
@@ -657,12 +686,13 @@
       rec.picked = L;
       rec.correct = correct;
       rec.tries = (rec.tries || 0) + 1;
+      rec.hinted = !!(hinted || rec.hinted);
       rec.ts = Date.now();
       store.mc[q.id] = rec;
       save();
       lock(L, correct);
       if (correct) {
-        toast("答對了 ✓");
+        toast(hinted ? "答對了 ✓（看過提示也可以）" : "答對了 ✓");
         // 完成這一頁的所有題目 → 更新導覽列
         var nav = qs("#pagenav");
         if (nav && page.row.every(function (x) { return !!mcState(x.id); }) && nav.children[cur]) {
@@ -674,30 +704,8 @@
       updateWrongBadge();
     }
 
-    function showHints(picked) {
-      hintRow.innerHTML = "";
-      if (revealed >= steps.length) return;
-      var b = el("button", "btn btn-sm", "看提示 " + (revealed + 1) + " →");
-      b.onclick = function () {
-        drawStep(revealed);
-        revealed++;
-        if (revealed >= steps.length) {
-          hintRow.innerHTML = "";
-          hintRow.appendChild(el("span", "small muted", "已顯示完整解答。"));
-        } else {
-          showHints(picked);
-        }
-      };
-      var all = el("button", "btn btn-sm btn-ghost", "看完整解答");
-      all.onclick = function () {
-        while (revealed < steps.length) { drawStep(revealed); revealed++; }
-        hintRow.innerHTML = "";
-        hintRow.appendChild(el("span", "small muted", "已顯示完整解答。"));
-      };
-      hintRow.appendChild(b);
-      hintRow.appendChild(all);
-      if (picked) hintRow.classList.remove("hidden");
-    }
+    showHints();                                  // 作答前就顯示提示按鈕
+    if (prev) lock(prev.picked, prev.correct);
 
     function drawStep(i) {
       var st = steps[i];
