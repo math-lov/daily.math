@@ -156,6 +156,18 @@ def main(argv: list[str] | None = None) -> int:
         if not _dollar_ok(stem):
             err("S6", "%s：題幹的 $ 不成對（貨幣請用純數字）" % qid)
 
+    # ── S7：概念卡的公式是否用 {{math:N}} 定位（否則公式會全部排在正文最後）──
+    for cid, c in cards_by_id.items():
+        maths = c.get("math") or []
+        body = _text_of((c.get("body") or {}).get("zh"))
+        if len(maths) >= 2 and "{{math" not in body:
+            warn("S7", "%s：有 %d 條公式但正文沒有 {{math:N}} 定位標記（公式會全部擠在最後）"
+                 % (cid, len(maths)))
+        marks = body.count("{{math")
+        if marks and marks != len(maths):
+            warn("S7", "%s：正文有 %d 個定位標記，但 math 有 %d 條（數量不符）"
+                 % (cid, marks, len(maths)))
+
         s = sols.get(qid)
         if not s:
             err("S3", "%s：缺少題解" % qid)

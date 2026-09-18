@@ -95,6 +95,24 @@ ok(t02mc.$$("#topic-body .opt").length === 12,
 ok(!/\\\$\\\$/.test(t02mc.$("#topic-body").textContent),
    "currency renders as $ without breaking the maths delimiters");
 
+// ws02-c2（代入法）也要把 4 條公式插在文字中間（不是全部排在最後）
+const t02c2 = boot("topic.html", "?t=ws02&p=0");
+let g2 = 0;
+while ((t02c2.$(".ccard-head h3").textContent || "").indexOf("代入法") < 0 && g2 < 8) {
+  const b = t02c2.$$(".card .row .btn").filter((x) => /下一張/.test(x.textContent))[0];
+  if (!b) break;
+  b.click();
+  g2++;
+}
+ok((t02c2.$(".ccard-head h3").textContent || "").indexOf("代入法") >= 0,
+   "reached the ws02 substitution card (" + (t02c2.$(".ccard-head h3") || {}).textContent + ")");
+const k2 = Array.prototype.slice.call(t02c2.$(".concept-body").children);
+const f2 = k2.filter((n) => n.classList.contains("formula")).length;
+ok(f2 === 4, "ws02 substitution card interleaves 4 formulas (got " + f2 + ")");
+ok(!k2[k2.length - 1].classList.contains("formula"), "ws02 substitution card ends with text, not a formula");
+ok(t02c2.$(".concept-body").querySelectorAll(".formula .katex").length === 4,
+   "all four interleaved formulas are typeset");
+
 console.log("\n— 概念卡 —");
 ok(t0.$$(".ccard-head h3").length === 1, "one concept card is shown at a time");
 ok(t0.$$(".formula .katex").length >= 1, "card formula rendered by KaTeX");
