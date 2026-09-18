@@ -8,6 +8,14 @@
       "lang": "en",
       "sourcePdf": null,
       "questions": 45
+    },
+    {
+      "id": "2026-p2",
+      "name": "2026 Paper 2",
+      "nameZh": "",
+      "lang": "en",
+      "sourcePdf": null,
+      "questions": 45
     }
   ],
   "questions": [
@@ -1495,6 +1503,1491 @@
       "transcribedBy": "ai-vision",
       "editedBy": null,
       "classifiedBy": "manual-override"
+    },
+    {
+      "id": "2026-p2-q01",
+      "code": "26-P2Q01",
+      "no": 1,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q01.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "$\\frac{1}{k+2}+\\frac{3}{5k-6}=$",
+        "html": "$\\frac{1}{k+2}+\\frac{3}{5k-6}=$",
+        "latex": "\\frac{1}{k+2}+\\frac{3}{5k-6}="
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "$\\frac{-8k}{(k+2)(5k-6)}$",
+        "B": "$\\frac{-2k}{(k+2)(5k-6)}$",
+        "C": "$\\frac{2k}{(k+2)(5k-6)}$",
+        "D": "$\\frac{8k}{(k+2)(5k-6)}$"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q02",
+      "code": "26-P2Q02",
+      "no": 2,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q02.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "$\\frac{9^{3n+1}}{(3^{2n+3})(27^{2n+1})}=$",
+        "html": "$\\frac{9^{3n+1}}{(3^{2n+3})(27^{2n+1})}=$",
+        "latex": "\\frac{9^{3n+1}}{(3^{2n+3})(27^{2n+1})}="
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "$9^{-n-2}$",
+        "B": "$9^{-n-1}$",
+        "C": "$9^{n-2}$",
+        "D": "$9^{n-1}$"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q03",
+      "code": "26-P2Q03",
+      "no": 3,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q03.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "$(2\\alpha-\\beta)^{2}+(\\alpha-2\\beta)^{2}=$",
+        "html": "$(2\\alpha-\\beta)^{2}+(\\alpha-2\\beta)^{2}=$",
+        "latex": "(2\\alpha-\\beta)^{2}+(\\alpha-2\\beta)^{2}="
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "$3\\alpha^{2}-4\\alpha\\beta+3\\beta^{2}$",
+        "B": "$3\\alpha^{2}-8\\alpha\\beta+3\\beta^{2}$",
+        "C": "$5\\alpha^{2}-4\\alpha\\beta+5\\beta^{2}$",
+        "D": "$5\\alpha^{2}-8\\alpha\\beta+5\\beta^{2}$"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q04",
+      "code": "26-P2Q04",
+      "no": 4,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q04.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "230.045678=",
+        "html": "$230.045678=$",
+        "latex": "230.045678="
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "230.0 (correct to 4 significant figures).",
+        "B": "230.046 (correct to 4 significant figures).",
+        "C": "230.0456 (correct to 4 decimal places).",
+        "D": "230.04568 (correct to 4 decimal places)."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q05",
+      "code": "26-P2Q05",
+      "no": 5,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q05.png"
+      ],
+      "topic": {
+        "unit": 4,
+        "en": "More about Polynomials",
+        "zh": "多項式續論"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "If m and n are constants such that $(x-5)(x+m)-4(x+n)\\equiv x(x+6)+1,$ then $n=$",
+        "html": "If m and n are constants such that $(x-5)(x+m)-4(x+n)\\equiv x(x+6)+1,$ then $n=$",
+        "latex": "(x-5)(x+m)-4(x+n)\\equiv x(x+6)+1"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "-19.",
+        "B": "-3.",
+        "C": "9.",
+        "D": "15."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q06",
+      "code": "26-P2Q06",
+      "no": 6,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q06.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "Solve $(x+2s)(x+t)=sx+st$, where s and t are constants.",
+        "html": "Solve $(x+2s)(x+t)=sx+st$, where s and t are constants.",
+        "latex": "(x+2s)(x+t)=sx+st"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "$x=-s$",
+        "B": "$x=-2s$",
+        "C": "$x=-s$ or $x=-t$",
+        "D": "$x=-2s$ or $x=-t$"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q07",
+      "code": "26-P2Q07",
+      "no": 7,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q07.png"
+      ],
+      "topic": {
+        "unit": 2,
+        "en": "Functions and Graphs",
+        "zh": "函數與圖像"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "Let $f(x)=(x+d)(x-2)+9x$, where d is a constant. If $f(1+d)=0$, then $d=$",
+        "html": "Let $f(x)=(x+d)(x-2)+9x$, where d is a constant. If $f(1+d)=0$, then $d=$",
+        "latex": "f(x)=(x+d)(x-2)+9x,\\quad f(1+d)=0"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "-2.",
+        "B": "-1.",
+        "C": "1.",
+        "D": "2."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q08",
+      "code": "26-P2Q08",
+      "no": 8,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q08.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "Let $g(x)=hx^{3}+2x^{2}+kx-5$, where h and k are constants. If $g(x)$ is divisible by $x-4,$ find the remainder when $g(x)$ is divided by $x+4$.",
+        "html": "Let $g(x)=hx^{3}+2x^{2}+kx-5$, where h and k are constants. If $g(x)$ is divisible by $x-4,$ find the remainder when $g(x)$ is divided by $x+4$.",
+        "latex": "g(x)=hx^{3}+2x^{2}+kx-5"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "-27",
+        "B": "-10",
+        "C": "0",
+        "D": "54"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q09",
+      "code": "26-P2Q09",
+      "no": 9,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q09.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "The solution of $x-1>\\frac{2x-9}{3}$ or $3x+12\\ge0$ is",
+        "html": "The solution of $x-1&gt;\\frac{2x-9}{3}$ or $3x+12\\ge0$ is",
+        "latex": "x-1>\\frac{2x-9}{3} \\text{ or } 3x+12\\ge0"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "$x\\le-4$.",
+        "B": "$x\\ge-4$.",
+        "C": "$x<-6$.",
+        "D": "$x>-6$."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q10",
+      "code": "26-P2Q10",
+      "no": 10,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q10.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "The costs of rice of brand S and rice of brand T are $\\$12/kg$ and $\\$18/kg$ respectively. If s kg of rice of brand S and t kg of rice of brand T are mixed so that the cost of the mixture is $\\$16/kg$, then $s:t=$",
+        "html": "The costs of rice of brand S and rice of brand T are &dollar;\\&dollar;12/kg&dollar; and &dollar;\\&dollar;18/kg&dollar; respectively. If s kg of rice of brand S and t kg of rice of brand T are mixed so that the cost of the mixture is &dollar;\\&dollar;16/kg&dollar;, then &dollar;s:t=&dollar;",
+        "latex": "s:t="
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "1:2.",
+        "B": "2:1.",
+        "C": "2:3.",
+        "D": "3:2."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q11",
+      "code": "26-P2Q11",
+      "no": 11,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q11.png"
+      ],
+      "topic": {
+        "unit": 3,
+        "en": "Exponential and Logarithmic Functions",
+        "zh": "指數與對數函數"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "A sum of \\$P is deposited at an interest rate of 4% per annum for 5 years, compounded quarterly. If the amount is \\$80000, find P correct to the nearest integer.",
+        "html": "A sum of \\$P is deposited at an interest rate of 4% per annum for 5 years, compounded quarterly. If the amount is \\$80000, find P correct to the nearest integer.",
+        "latex": "P(1+\\frac{4\\%}{4})^{20}=80000"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "65 520",
+        "B": "65 564",
+        "C": "65 754",
+        "D": "66 667"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q12",
+      "code": "26-P2Q12",
+      "no": 12,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q12.png"
+      ],
+      "topic": {
+        "unit": 6,
+        "en": "Variations",
+        "zh": "變分"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "It is given that w varies directly as the square root of u and inversely as v. If u is increased by 44% and v is decreased by 20%, then w is increased by",
+        "html": "It is given that w varies directly as the square root of u and inversely as v. If u is increased by 44% and v is decreased by 20%, then w is increased by",
+        "latex": "w \\propto \\frac{\\sqrt{u}}{v}"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "40%.",
+        "B": "50%",
+        "C": "64%",
+        "D": "80%."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q13",
+      "code": "26-P2Q13",
+      "no": 13,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q13.png"
+      ],
+      "topic": {
+        "unit": 7,
+        "en": "Arithmetic and Geometric Sequences",
+        "zh": "等差等比數列"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "Let $a_{n}$ be the nth term of a sequence. If $a_{2}=7$, $a_{5}=35$ and $a_{n+2}=3a_{n+1}-2a_{n}$ for any positive integer n, then $a_{8}=$",
+        "html": "Let $a_{n}$ be the nth term of a sequence. If $a_{2}=7$, $a_{5}=35$ and $a_{n+2}=3a_{n+1}-2a_{n}$ for any positive integer n, then $a_{8}=$",
+        "latex": "a_{n+2}=3a_{n+1}-2a_{n},\\quad a_2=7, a_5=35"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "67.",
+        "B": "131.",
+        "C": "259.",
+        "D": "515."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q14",
+      "code": "26-P2Q14",
+      "no": 14,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q14.png"
+      ],
+      "topic": {
+        "unit": 10,
+        "en": "Equations of Straight Lines",
+        "zh": "直線方程"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "In the figure, the equations of the straight lines $L_{1}$ and $L_{2}$ are $ax+y=b$ and $cx+y=d$ respectively. It is given that $L_{1}$ and $L_{2}$ intersect at a point on the positive x-axis. Which of the following are true?\nI. $a<c$\nII. $b>d$\nIII. $ad=bc$",
+        "html": "In the figure, the equations of the straight lines $L_{1}$ and $L_{2}$ are $ax+y=b$ and $cx+y=d$ respectively. It is given that $L_{1}$ and $L_{2}$ intersect at a point on the positive x-axis. Which of the following are true?<br>I. $a&lt;c$<br>II. $b&gt;d$<br>III. $ad=bc$",
+        "latex": "L_1: ax+y=b,\\quad L_2: cx+y=d"
+      },
+      "figure": "兩條直線 L1 與 L2 均具有負斜率且 y 截距為正，L1 的 y 截距 b 大於 L2 的 y 截距 d；兩線相交於正 x 軸上一點。",
+      "notes": null,
+      "options": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "II and III only",
+        "D": "I, II and III"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q15",
+      "code": "26-P2Q15",
+      "no": 15,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q15.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 1,
+      "timeSec": 60,
+      "stem": {
+        "text": "Let p and q be real constants such that $pq<0$. Which of the following statements about the graph of $y=(px+1)(qx+2)$ are true?\nI. The graph opens downwards.\nII. The graph has two x-intercepts.\nIII. The graph passes through the origin.",
+        "html": "Let p and q be real constants such that $pq&lt;0$. Which of the following statements about the graph of $y=(px+1)(qx+2)$ are true?<br>I. The graph opens downwards.<br>II. The graph has two x-intercepts.<br>III. The graph passes through the origin.",
+        "latex": "y=(px+1)(qx+2), \\quad pq<0"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "II and III only",
+        "D": "I, II and III"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q16",
+      "code": "26-P2Q16",
+      "no": 16,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q16.png"
+      ],
+      "topic": {
+        "unit": 14,
+        "en": "More about Trigonometry",
+        "zh": "三角學續論"
+      },
+      "difficulty": 2,
+      "timeSec": 90,
+      "stem": {
+        "text": "The perimeter and the area of a sector are k cm and $3k~cm^{2}$ respectively. If the radius of the sector is 14 cm, then the arc length of the sector is",
+        "html": "The perimeter and the area of a sector are k cm and $3k~cm^{2}$ respectively. If the radius of the sector is 14 cm, then the arc length of the sector is",
+        "latex": "2r+s=k,\\quad \\frac{1}{2}rs=3k,\\quad r=14"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "19 cm",
+        "B": "21 cm",
+        "C": "28 cm",
+        "D": "49 cm"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q17",
+      "code": "26-P2Q17",
+      "no": 17,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q17.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 2,
+      "timeSec": 90,
+      "stem": {
+        "text": "The base of a right pyramid is a rectangle. The length and the breadth of the base are 18 cm and 16 cm respectively. The height of the pyramid is 12 cm. The pyramid is divided into a pyramid X and a frustum Y by a plane parallel to its base. If the breadth of the base of X is 12 cm, then the volume of Y is",
+        "html": "The base of a right pyramid is a rectangle. The length and the breadth of the base are 18 cm and 16 cm respectively. The height of the pyramid is 12 cm. The pyramid is divided into a pyramid X and a frustum Y by a plane parallel to its base. If the breadth of the base of X is 12 cm, then the volume of Y is",
+        "latex": "V_Y = V_{\\text{total}} - V_X"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "$486~cm^{3}$.",
+        "B": "$666~cm^{3}$",
+        "C": "$688~cm^{3}$",
+        "D": "$944~cm^{3}$."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q18",
+      "code": "26-P2Q18",
+      "no": 18,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q18.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "In the figure, ABCD is a trapezium with $AB//DC$ and $AB:CD=3:5$. Let E be a point lying on BD such that BE: ED=2:3. It is given that $AB//EF$ and $AD//BF$. If the area of $\\Delta ABD$ is $225~cm^{2}$, then the area of the trapezium CDEF is",
+        "html": "In the figure, ABCD is a trapezium with $AB//DC$ and $AB:CD=3:5$. Let E be a point lying on BD such that BE: ED=2:3. It is given that $AB//EF$ and $AD//BF$. If the area of $\\Delta ABD$ is $225~cm^{2}$, then the area of the trapezium CDEF is",
+        "latex": "AB//DC,\\quad AB:CD=3:5,\\quad BE:ED=2:3"
+      },
+      "figure": "梯形 ABCD 中 AB//DC，E 在對角線 BD 上滿足 BE:ED=2:3，EF//AB 且 BF//AD，連線形成梯形 CDEF。",
+      "notes": null,
+      "options": {
+        "A": "$222~cm^{2}$",
+        "B": "$260~cm^{2}$",
+        "C": "$279~cm^{2}$.",
+        "D": "$285~cm^{2}$."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q19",
+      "code": "26-P2Q19",
+      "no": 19,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q19.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 2,
+      "timeSec": 90,
+      "stem": {
+        "text": "It is given that $\\Delta PQR$ is a right-angled triangle with $\\angle QPR=90^{\\circ}$. Denote the area of $\\Delta PQR$ by S. If $QR=p$, $PR=q$ and $\\angle PQR=\\theta$, which of the following must be true?",
+        "html": "It is given that $\\Delta PQR$ is a right-angled triangle with $\\angle QPR=90^{\\circ}$. Denote the area of $\\Delta PQR$ by S. If $QR=p$, $PR=q$ and $\\angle PQR=\\theta$, which of the following must be true?",
+        "latex": "\\angle QPR=90^\\circ,\\quad QR=p, PR=q, \\angle PQR=\\theta"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "$S=\\frac{1}{2}pq$",
+        "B": "$S=\\frac{1}{2}pq~sin~\\theta$",
+        "C": "$S=\\frac{1}{2}pq~cos~\\theta$",
+        "D": "$S=\\frac{1}{2}pq~tan~\\theta$"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q20",
+      "code": "26-P2Q20",
+      "no": 20,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q20.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 2,
+      "timeSec": 90,
+      "stem": {
+        "text": "In the figure, ABCD is a rectangle. Let E be a point lying on BC. AB produced and DE produced meet at the point F. If $AB=3~cm$, $BE=12~cm$ and $CE=4~cm$, then $EF=$",
+        "html": "In the figure, ABCD is a rectangle. Let E be a point lying on BC. AB produced and DE produced meet at the point F. If $AB=3~cm$, $BE=12~cm$ and $CE=4~cm$, then $EF=$",
+        "latex": "AB=3,\\quad BE=12,\\quad CE=4"
+      },
+      "figure": "長方形 ABCD 中，E 在 BC 上，CE=4，EB=12，AB=3，延長 AB 與延長 DE 交於 F，形成直角三角形 DCE 與 FBE 相似。",
+      "notes": null,
+      "options": {
+        "A": "13 cm.",
+        "B": "15 cm",
+        "C": "16 cm",
+        "D": "20 cm"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q21",
+      "code": "26-P2Q21",
+      "no": 21,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q21.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 2,
+      "timeSec": 90,
+      "stem": {
+        "text": "It is given that WXYZ is a quadrilateral, where $\\angle WXY=\\angle YWZ$ and $\\angle WYX=\\angle WZY$. If $WX=9$, $WY=40~cm$ and $XY=41~cm$, find the perimeter of the quadrilateral WXYZ.",
+        "html": "It is given that WXYZ is a quadrilateral, where $\\angle WXY=\\angle YWZ$ and $\\angle WYX=\\angle WZY$. If $WX=9$, $WY=40~cm$ and $XY=41~cm$, find the perimeter of the quadrilateral WXYZ.",
+        "latex": "\\angle WXY=\\angle YWZ,\\quad \\angle WYX=\\angle WZY"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "100 cm",
+        "B": "180 cm",
+        "C": "410 cm",
+        "D": "490 cm"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q22",
+      "code": "26-P2Q22",
+      "no": 22,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q22.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 2,
+      "timeSec": 90,
+      "stem": {
+        "text": "According to the figure, which of the following must be true?",
+        "html": "According to the figure, which of the following must be true?",
+        "latex": "p+r=q \\text{ or related}"
+      },
+      "figure": "一個具有兩個直角的五邊形/折線圖，上下兩邊與左垂直邊垂直（互相平行），折角頂點處內角分別標記為 p, q, r。",
+      "notes": null,
+      "options": {
+        "A": "$p=r$",
+        "B": "$q=90^{\\circ}$",
+        "C": "$p+r=q$",
+        "D": "$p+q+r=180^{\\circ}$"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q23",
+      "code": "26-P2Q23",
+      "no": 23,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q23.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 2,
+      "timeSec": 90,
+      "stem": {
+        "text": "It is given that ABCDEF is a regular 6-sided polygon. If AC and BF intersect at the point $G,$ which of the following are true?\nI. BG//CE\nII. $\\Delta ABG\\sim\\Delta BDC$\nIII. $\\Delta AGF\\cong\\Delta BGC$",
+        "html": "It is given that ABCDEF is a regular 6-sided polygon. If AC and BF intersect at the point $G,$ which of the following are true?<br>I. BG//CE<br>II. $\\Delta ABG\\sim\\Delta BDC$<br>III. $\\Delta AGF\\cong\\Delta BGC$",
+        "latex": "\\text{Regular hexagon } ABCDEF"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "II and III only",
+        "D": "I, II and III"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q24",
+      "code": "26-P2Q24",
+      "no": 24,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q24.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 2,
+      "timeSec": 90,
+      "stem": {
+        "text": "The point (3,1) is translated leftwards by 5 units to the point U. U is then rotated anticlockwise about the origin through $270^{\\circ}$ to the point V. Find the y-coordinate of V.",
+        "html": "The point (3,1) is translated leftwards by 5 units to the point U. U is then rotated anticlockwise about the origin through $270^{\\circ}$ to the point V. Find the y-coordinate of V.",
+        "latex": "(3,1) \\to U \\to V"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "-2",
+        "B": "-1",
+        "C": "1",
+        "D": "2"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q25",
+      "code": "26-P2Q25",
+      "no": 25,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q25.png"
+      ],
+      "topic": {
+        "unit": 13,
+        "en": "Equations of Circles",
+        "zh": "圓的方程"
+      },
+      "difficulty": 2,
+      "timeSec": 90,
+      "stem": {
+        "text": "In the figure, O is the centre of the circle PQRS. PR and OQ intersect at the point T. If $\\angle POT=82^{\\circ}$ and $\\angle PTQ=104^{\\circ}$, then $\\angle QSR=$",
+        "html": "In the figure, O is the centre of the circle PQRS. PR and OQ intersect at the point T. If $\\angle POT=82^{\\circ}$ and $\\angle PTQ=104^{\\circ}$, then $\\angle QSR=$",
+        "latex": "\\angle POT=82^{\\circ},\\quad \\angle PTQ=104^{\\circ}"
+      },
+      "figure": "圓 O 內接四邊形頂點 P, Q, R, S，PR 與 OQ 相交於 T，已知角 POT 為 82 度，對頂區域角 PTQ 為 104 度，求圓周角 QSR。",
+      "notes": null,
+      "options": {
+        "A": "$22^{\\circ}$.",
+        "B": "$27^{\\circ}$",
+        "C": "$30^{\\circ}$",
+        "D": "$49^{\\circ}$."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q26",
+      "code": "26-P2Q26",
+      "no": 26,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q26.png"
+      ],
+      "topic": {
+        "unit": 12,
+        "en": "Loci",
+        "zh": "軌跡"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "The equations of the straight lines $L_{1}$ and $L_{2}$ are $3x+5y=6$ and $6x-10y=13$ respectively. Let P be a moving point in the rectangular coordinate plane such that the perpendicular distance from P to $L_{1}$ is equal to the perpendicular distance from P to $L_{2}$. The locus of P is",
+        "html": "The equations of the straight lines $L_{1}$ and $L_{2}$ are $3x+5y=6$ and $6x-10y=13$ respectively. Let P be a moving point in the rectangular coordinate plane such that the perpendicular distance from P to $L_{1}$ is equal to the perpendicular distance from P to $L_{2}$. The locus of P is",
+        "latex": "L_1: 3x+5y=6,\\quad L_2: 6x-10y=13"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "a point.",
+        "B": "a circle.",
+        "C": "a square.",
+        "D": "a pair of straight lines."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q27",
+      "code": "26-P2Q27",
+      "no": 27,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q27.png"
+      ],
+      "topic": {
+        "unit": 13,
+        "en": "Equations of Circles",
+        "zh": "圓的方程"
+      },
+      "difficulty": 2,
+      "timeSec": 90,
+      "stem": {
+        "text": "The x-coordinate of the centre of the circle C is 5. If C passes through the points (5,0) and (11,4), then the circumference of C is",
+        "html": "The x-coordinate of the centre of the circle C is 5. If C passes through the points (5,0) and (11,4), then the circumference of C is",
+        "latex": "\\text{Centre}=(5, k), \\text{ passes through } (5,0), (11,4)"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "13π.",
+        "B": "14π.",
+        "C": "22π",
+        "D": "42π"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q28",
+      "code": "26-P2Q28",
+      "no": 28,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q28.png"
+      ],
+      "topic": {
+        "unit": 16,
+        "en": "More about Probability",
+        "zh": "概率續論"
+      },
+      "difficulty": 2,
+      "timeSec": 90,
+      "stem": {
+        "text": "A bag contains five cards numbered 2, 2, 3, 4 and 6 respectively. Two cards are randomly drawn from the bag at the same time. Find the probability that the sum of the numbers drawn is greater than 7.",
+        "html": "A bag contains five cards numbered 2, 2, 3, 4 and 6 respectively. Two cards are randomly drawn from the bag at the same time. Find the probability that the sum of the numbers drawn is greater than 7.",
+        "latex": "P(\\text{sum} > 7)"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "$\\frac{1}{2}$",
+        "B": "$\\frac{1}{5}$",
+        "C": "$\\frac{2}{5}$",
+        "D": "$\\frac{3}{10}$"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q29",
+      "code": "26-P2Q29",
+      "no": 29,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q29.png"
+      ],
+      "topic": {
+        "unit": 17,
+        "en": "Measures of Dispersion",
+        "zh": "離差的度量"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "Which of the following can be obtained from any box-and-whisker diagram?\nI. Mean\nII. Lower quartile\nIII. Inter-quartile range",
+        "html": "Which of the following can be obtained from any box-and-whisker diagram?<br>I. Mean<br>II. Lower quartile<br>III. Inter-quartile range",
+        "latex": "\\text{Box-and-whisker diagram}"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "I only",
+        "B": "II only",
+        "C": "I and III only",
+        "D": "II and III only"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q30",
+      "code": "26-P2Q30",
+      "no": 30,
+      "paper": "2026-p2",
+      "section": "A",
+      "images": [
+        "images/questions/2026-p2-q30.png"
+      ],
+      "topic": {
+        "unit": 17,
+        "en": "Measures of Dispersion",
+        "zh": "離差的度量"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "Consider the following integers:\n4, 7, 7, 7, 8, 11, 11, 13, x, y\nLet u, v and w be the variance, the median and the mode of the above integers respectively. If both the mean and the range of the above integers are 9, which of the following must be true?\nI. $u<7$\nII. $v>7$\nIII. $w=7$",
+        "html": "Consider the following integers:<br>4, 7, 7, 7, 8, 11, 11, 13, x, y<br>Let u, v and w be the variance, the median and the mode of the above integers respectively. If both the mean and the range of the above integers are 9, which of the following must be true?<br>I. $u&lt;7$<br>II. $v&gt;7$<br>III. $w=7$",
+        "latex": "4, 7, 7, 7, 8, 11, 11, 13, x, y"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "I only",
+        "B": "II only",
+        "C": "I and III only",
+        "D": "II and III only"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q31",
+      "code": "26-P2Q31",
+      "no": 31,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q31.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "$1010100000001110_2 =$",
+        "html": "$1010100000001110_2 =$",
+        "latex": "1010100000001110_2 ="
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "$21\\times2^{11}+14$.",
+        "B": "$21\\times2^{11}+28$.",
+        "C": "$21\\times2^{12}+14$.",
+        "D": "$21\\times2^{12}+28$."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q32",
+      "code": "26-P2Q32",
+      "no": 32,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q32.png"
+      ],
+      "topic": {
+        "unit": 4,
+        "en": "More about Polynomials",
+        "zh": "多項式續論"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "The H.C.F. and the L.C.M. of three expressions are $xy^{2}z^{3}$ and $x^{2}y^{4}z^{6}$ respectively. If the first expression and the second expression are $xy^{3}z^{6}$ and $xy^{2}z^{4}$ respectively, then the third expression is",
+        "html": "The H.C.F. and the L.C.M. of three expressions are $xy^{2}z^{3}$ and $x^{2}y^{4}z^{6}$ respectively. If the first expression and the second expression are $xy^{3}z^{6}$ and $xy^{2}z^{4}$ respectively, then the third expression is",
+        "latex": "\\text{HCF}=xy^2z^3, \\text{LCM}=x^2y^4z^6"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "$xy^{2}z^{3}$.",
+        "B": "$xy^{4}z^{4}$",
+        "C": "$x^{2}y^{2}z^{4}$.",
+        "D": "$x^{2}y^{4}z^{3}.$"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q33",
+      "code": "26-P2Q33",
+      "no": 33,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q33.png"
+      ],
+      "topic": {
+        "unit": 7,
+        "en": "Arithmetic and Geometric Sequences",
+        "zh": "等差等比數列"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "The sum of the first n terms of a sequence is $3^{n}-1$. Which of the following are true?\nI. The 2nd term of the sequence is 8.\nII. The sequence is a geometric sequence.\nIII. All the terms of the sequence are even numbers.",
+        "html": "The sum of the first n terms of a sequence is $3^{n}-1$. Which of the following are true?<br>I. The 2nd term of the sequence is 8.<br>II. The sequence is a geometric sequence.<br>III. All the terms of the sequence are even numbers.",
+        "latex": "S_n = 3^n - 1"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "II and III only",
+        "D": "I, II and III"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q34",
+      "code": "26-P2Q34",
+      "no": 34,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q34.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "If $\\beta$ and $\\frac{i^{4}+2i^{3}+3i^{2}+4i}{\\beta i-1}$ are real numbers, then $\\beta=$",
+        "html": "If $\\beta$ and $\\frac{i^{4}+2i^{3}+3i^{2}+4i}{\\beta i-1}$ are real numbers, then $\\beta=$",
+        "latex": "\\frac{i^{4}+2i^{3}+3i^{2}+4i}{\\beta i-1} \\in \\mathbb{R}"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "-2.",
+        "B": "-1.",
+        "C": "1.",
+        "D": "2."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q35",
+      "code": "26-P2Q35",
+      "no": 35,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q35.png"
+      ],
+      "topic": {
+        "unit": 3,
+        "en": "Exponential and Logarithmic Functions",
+        "zh": "指數與對數函數"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "Which of the following statements about the graph of $y=2-\\log_{3}(x+4)$ is/are true?\nI. y increases when x increases.\nII. The x-intercept of the graph is 5.\nIII. The y-intercept of the graph is 2.",
+        "html": "Which of the following statements about the graph of $y=2-\\log_{3}(x+4)$ is/are true?<br>I. y increases when x increases.<br>II. The x-intercept of the graph is 5.<br>III. The y-intercept of the graph is 2.",
+        "latex": "y=2-\\log_{3}(x+4)"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "I only",
+        "B": "II only",
+        "C": "I and III only",
+        "D": "II and III only"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q36",
+      "code": "26-P2Q36",
+      "no": 36,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q36.png"
+      ],
+      "topic": {
+        "unit": 3,
+        "en": "Exponential and Logarithmic Functions",
+        "zh": "指數與對數函數"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "It is given that $\\log y$ is a linear function of x. The intercepts on the vertical axis and on the horizontal axis of the graph of the linear function are 2 and 1 respectively. If $y=ab^{x}$, find a.",
+        "html": "It is given that $\\log y$ is a linear function of x. The intercepts on the vertical axis and on the horizontal axis of the graph of the linear function are 2 and 1 respectively. If $y=ab^{x}$, find a.",
+        "latex": "y=ab^x, \\text{ vertical intercept of } \\log y \\text{ vs } x \\text{ is } 2"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "0.01",
+        "B": "0.1",
+        "C": "10",
+        "D": "100"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q37",
+      "code": "26-P2Q37",
+      "no": 37,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q37.png"
+      ],
+      "topic": {
+        "unit": 8,
+        "en": "Inequalities and Linear Programming",
+        "zh": "不等式與線性規劃"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "Consider the following system of inequalities:\n$\\begin{cases}y\\le7\\\\ 3x-4y\\le2\\\\ 6x+13y\\ge25\\end{cases}$\nLet R be the region which represents the solution of the above system of inequalities. If (x, y) is a point lying in R, then the least value of $5x+4y+28$ is",
+        "html": "Consider the following system of inequalities:<br>$y\\le7<br> 3x-4y\\le2<br> 6x+13y\\ge25$<br>Let R be the region which represents the solution of the above system of inequalities. If (x, y) is a point lying in R, then the least value of $5x+4y+28$ is",
+        "latex": "\\begin{cases}y\\le7\\\\ 3x-4y\\le2\\\\ 6x+13y\\ge25\\end{cases},\\quad \\min(5x+4y+28)"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "1.",
+        "B": "19.",
+        "C": "42.",
+        "D": "106."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q38",
+      "code": "26-P2Q38",
+      "no": 38,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q38.png"
+      ],
+      "topic": {
+        "unit": 11,
+        "en": "Basic Properties of Circles",
+        "zh": "圓的基本性質"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "In the figure, ABCD is a circle. AC and BD intersect at the point E. BD is produced to the point T such that TC is tangent to the circle. It is given that $AB//TC$. If $\\angle AED=85^{\\circ}$ and $\\angle CTE=23^{\\circ}$, then $\\angle ADE=$",
+        "html": "In the figure, ABCD is a circle. AC and BD intersect at the point E. BD is produced to the point T such that TC is tangent to the circle. It is given that $AB//TC$. If $\\angle AED=85^{\\circ}$ and $\\angle CTE=23^{\\circ}$, then $\\angle ADE=$",
+        "latex": "AB//TC, \\angle AED=85^{\\circ}, \\angle CTE=23^{\\circ}"
+      },
+      "figure": "圓 ABCD 中對角線 AC 與 BD 交於 E，延長 BD 至 T，TC 為圓切線，TC//AB，已知角 AED=85 度，角 CTE=23 度，求角 ADE。",
+      "notes": null,
+      "options": {
+        "A": "$39^{\\circ}$.",
+        "B": "$56^{\\circ}$.",
+        "C": "$62^{\\circ}$.",
+        "D": "$72^{\\circ}$."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q39",
+      "code": "26-P2Q39",
+      "no": 39,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q39.png"
+      ],
+      "topic": {
+        "unit": 0,
+        "en": "Junior Math",
+        "zh": "初中數學"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "The figure shows the quadrilateral STUV, where $ST=8~cm$ and $SV=5~cm$. If $\\angle UTV=30^{\\circ}$ and $\\angle TSU=\\angle TVU=90^{\\circ}$, find $\\angle SUV$ correct to the nearest degree.",
+        "html": "The figure shows the quadrilateral STUV, where $ST=8~cm$ and $SV=5~cm$. If $\\angle UTV=30^{\\circ}$ and $\\angle TSU=\\angle TVU=90^{\\circ}$, find $\\angle SUV$ correct to the nearest degree.",
+        "latex": "ST=8, SV=5, \\angle UTV=30^{\\circ}, \\angle TSU=\\angle TVU=90^{\\circ}"
+      },
+      "figure": "四邊形 STUV，角 TSU 與角 TVU 均為 90 度，顯示 S, T, U, V 共圓且 TU 為直徑；ST=8，SV=5，角 UTV=30 度，求角 SUV。",
+      "notes": null,
+      "options": {
+        "A": "$22^{\\circ}$",
+        "B": "$28^{\\circ}$",
+        "C": "$30^{\\circ}$",
+        "D": "$38^{\\circ}$"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q40",
+      "code": "26-P2Q40",
+      "no": 40,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q40.png"
+      ],
+      "topic": {
+        "unit": 14,
+        "en": "More about Trigonometry",
+        "zh": "三角學續論"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "The figure shows the right prism ABCDEF, where $AB:AC:AE=1:1:2$. Let $\\theta$ be the angle between the plane ABC and the plane BCE. If $\\angle BAC=90^{\\circ}$, find $\\sin\\theta$.",
+        "html": "The figure shows the right prism ABCDEF, where $AB:AC:AE=1:1:2$. Let $\\theta$ be the angle between the plane ABC and the plane BCE. If $\\angle BAC=90^{\\circ}$, find $\\sin\\theta$.",
+        "latex": "AB:AC:AE=1:1:2,\\quad \\angle BAC=90^{\\circ}"
+      },
+      "figure": "直三棱柱 ABCDEF，底面 ABC 為等腰直角三角形（BAC=90度），側棱 AE 垂直底面，求底面 ABC 與截面 BCE 的線面交角正弦值。",
+      "notes": null,
+      "options": {
+        "A": "$\\frac{1}{3}$",
+        "B": "$\\frac{2}{3}$",
+        "C": "$\\frac{\\sqrt{2}}{4}$",
+        "D": "$\\frac{2\\sqrt{2}}{3}$"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q41",
+      "code": "26-P2Q41",
+      "no": 41,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q41.png"
+      ],
+      "topic": {
+        "unit": 14,
+        "en": "More about Trigonometry",
+        "zh": "三角學續論"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "For $90^{\\circ}\\le\\theta\\le360^{\\circ}$, how many roots does the equation $6\\sin^{4}\\theta-5\\sin^{2}\\theta+1=0$ have?",
+        "html": "For $90^{\\circ}\\le\\theta\\le360^{\\circ}$, how many roots does the equation $6\\sin^{4}\\theta-5\\sin^{2}\\theta+1=0$ have?",
+        "latex": "6\\sin^4\\theta - 5\\sin^2\\theta + 1 = 0,\\quad 90^\\circ\\le\\theta\\le360^\\circ"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q42",
+      "code": "26-P2Q42",
+      "no": 42,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q42.png"
+      ],
+      "topic": {
+        "unit": 15,
+        "en": "Permutations and Combinations",
+        "zh": "排列與組合"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "In a class, there are 3 boys and 7 girls. If 5 students are randomly selected from the class to form a committee, find the probability that at most 2 boys are selected.",
+        "html": "In a class, there are 3 boys and 7 girls. If 5 students are randomly selected from the class to form a committee, find the probability that at most 2 boys are selected.",
+        "latex": "P(\\text{at most 2 boys})"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "$\\frac{5}{6}$",
+        "B": "$\\frac{11}{12}$",
+        "C": "$\\frac{119}{120}$",
+        "D": "$\\frac{251}{252}$"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q43",
+      "code": "26-P2Q43",
+      "no": 43,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q43.png"
+      ],
+      "topic": {
+        "unit": 15,
+        "en": "Permutations and Combinations",
+        "zh": "排列與組合"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "There are 5 full-time employees and 3 part-time employees in a company. From the company, 7 employees are selected to form a queue. If no part-time employees are next to each other, how many different queues can be formed?",
+        "html": "There are 5 full-time employees and 3 part-time employees in a company. From the company, 7 employees are selected to form a queue. If no part-time employees are next to each other, how many different queues can be formed?",
+        "latex": "\\text{Permutations with restriction}"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "5 040",
+        "B": "14 400",
+        "C": "18 000",
+        "D": "32 400"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q44",
+      "code": "26-P2Q44",
+      "no": 44,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q44.png"
+      ],
+      "topic": {
+        "unit": 17,
+        "en": "Measures of Dispersion",
+        "zh": "離差的度量"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "The table below shows the scores (in marks) and the corresponding standard scores of four students in a test.\nScore (marks): $\\alpha$, 40, 58, $\\beta$\nStandard score: -1, 0, 2, 3\nFind $\\beta-\\alpha$.",
+        "html": "The table below shows the scores (in marks) and the corresponding standard scores of four students in a test.<br>Score (marks): $\\alpha$, 40, 58, $\\beta$<br>Standard score: -1, 0, 2, 3<br>Find $\\beta-\\alpha$.",
+        "latex": "z = \\frac{x-\\mu}{\\sigma}"
+      },
+      "figure": "四名學生的分數與標準分對應表：分數為 alpha, 40, 58, beta；標準分為 -1, 0, 2, 3。",
+      "notes": null,
+      "options": {
+        "A": "31",
+        "B": "36",
+        "C": "54",
+        "D": "98"
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
+    },
+    {
+      "id": "2026-p2-q45",
+      "code": "26-P2Q45",
+      "no": 45,
+      "paper": "2026-p2",
+      "section": "B",
+      "images": [
+        "images/questions/2026-p2-q45.png"
+      ],
+      "topic": {
+        "unit": 17,
+        "en": "Measures of Dispersion",
+        "zh": "離差的度量"
+      },
+      "difficulty": 3,
+      "timeSec": 120,
+      "stem": {
+        "text": "If the standard deviation of the five numbers p, q, r, s and t is 5, then the variance of the five numbers $\\frac{p+2}{5}, \\frac{q+2}{5}, \\frac{r+2}{5}, \\frac{s+2}{5}$ and $\\frac{t+2}{5}$ is",
+        "html": "If the standard deviation of the five numbers p, q, r, s and t is 5, then the variance of the five numbers $\\frac{p+2}{5}, \\frac{q+2}{5}, \\frac{r+2}{5}, \\frac{s+2}{5}$ and $\\frac{t+2}{5}$ is",
+        "latex": "\\text{Var}\\left(\\frac{X+2}{5}\\right)"
+      },
+      "figure": null,
+      "notes": null,
+      "options": {
+        "A": "1.",
+        "B": "5.",
+        "C": "9.",
+        "D": "25."
+      },
+      "transcribedBy": "ai-vision",
+      "editedBy": null,
+      "classifiedBy": "auto-rules"
     }
   ]
 }

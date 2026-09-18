@@ -1,0 +1,771 @@
+{
+  "exam": "2026-DSE-MATH-CP 2",
+  "paperCode": null,
+  "questions": [
+    {
+      "question_number": 1,
+      "section": "A",
+      "stem_text": "$\\frac{1}{k+2}+\\frac{3}{5k-6}=$",
+      "stem_latex": "\\frac{1}{k+2}+\\frac{3}{5k-6}=",
+      "figure": null,
+      "options": {
+        "A": "$\\frac{-8k}{(k+2)(5k-6)}$",
+        "B": "$\\frac{-2k}{(k+2)(5k-6)}$",
+        "C": "$\\frac{2k}{(k+2)(5k-6)}$",
+        "D": "$\\frac{8k}{(k+2)(5k-6)}$"
+      },
+      "unit": 0,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Algebraic fraction addition. 代數分式通分相加。"
+    },
+    {
+      "question_number": 2,
+      "section": "A",
+      "stem_text": "$\\frac{9^{3n+1}}{(3^{2n+3})(27^{2n+1})}=$",
+      "stem_latex": "\\frac{9^{3n+1}}{(3^{2n+3})(27^{2n+1})}=",
+      "figure": null,
+      "options": {
+        "A": "$9^{-n-2}$",
+        "B": "$9^{-n-1}$",
+        "C": "$9^{n-2}$",
+        "D": "$9^{n-1}$"
+      },
+      "unit": 3,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Laws of indices with base 3. 運用同底數指數律化簡。"
+    },
+    {
+      "question_number": 3,
+      "section": "A",
+      "stem_text": "$(2\\alpha-\\beta)^{2}+(\\alpha-2\\beta)^{2}=$",
+      "stem_latex": "(2\\alpha-\\beta)^{2}+(\\alpha-2\\beta)^{2}=",
+      "figure": null,
+      "options": {
+        "A": "$3\\alpha^{2}-4\\alpha\\beta+3\\beta^{2}$",
+        "B": "$3\\alpha^{2}-8\\alpha\\beta+3\\beta^{2}$",
+        "C": "$5\\alpha^{2}-4\\alpha\\beta+5\\beta^{2}$",
+        "D": "$5\\alpha^{2}-8\\alpha\\beta+5\\beta^{2}$"
+      },
+      "unit": 0,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Expansion of algebraic identities. 展開代數恆等式並合併同類項。"
+    },
+    {
+      "question_number": 4,
+      "section": "A",
+      "stem_text": "230.045678=",
+      "stem_latex": "230.045678=",
+      "figure": null,
+      "options": {
+        "A": "230.0 (correct to 4 significant figures).",
+        "B": "230.046 (correct to 4 significant figures).",
+        "C": "230.0456 (correct to 4 decimal places).",
+        "D": "230.04568 (correct to 4 decimal places)."
+      },
+      "unit": 0,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Rounding to significant figures. 涉及有效數字與小數位四捨五入。"
+    },
+    {
+      "question_number": 5,
+      "section": "A",
+      "stem_text": "If m and n are constants such that $(x-5)(x+m)-4(x+n)\\equiv x(x+6)+1,$ then $n=$",
+      "stem_latex": "(x-5)(x+m)-4(x+n)\\equiv x(x+6)+1",
+      "figure": null,
+      "options": {
+        "A": "-19.",
+        "B": "-3.",
+        "C": "9.",
+        "D": "15."
+      },
+      "unit": 4,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Comparing coefficients in identities. 比較多項式恆等式對應項係數。"
+    },
+    {
+      "question_number": 6,
+      "section": "A",
+      "stem_text": "Solve $(x+2s)(x+t)=sx+st$, where s and t are constants.",
+      "stem_latex": "(x+2s)(x+t)=sx+st",
+      "figure": null,
+      "options": {
+        "A": "$x=-s$",
+        "B": "$x=-2s$",
+        "C": "$x=-s$ or $x=-t$",
+        "D": "$x=-2s$ or $x=-t$"
+      },
+      "unit": 1,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Solving quadratic equation in x. 展開因式分解解一元二次方程。"
+    },
+    {
+      "question_number": 7,
+      "section": "A",
+      "stem_text": "Let $f(x)=(x+d)(x-2)+9x$, where d is a constant. If $f(1+d)=0$, then $d=$",
+      "stem_latex": "f(x)=(x+d)(x-2)+9x,\\quad f(1+d)=0",
+      "figure": null,
+      "options": {
+        "A": "-2.",
+        "B": "-1.",
+        "C": "1.",
+        "D": "2."
+      },
+      "unit": 2,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Function substitution and evaluation. 函數記法求值與解簡單方程。"
+    },
+    {
+      "question_number": 8,
+      "section": "A",
+      "stem_text": "Let $g(x)=hx^{3}+2x^{2}+kx-5$, where h and k are constants. If $g(x)$ is divisible by $x-4,$ find the remainder when $g(x)$ is divided by $x+4$.",
+      "stem_latex": "g(x)=hx^{3}+2x^{2}+kx-5",
+      "figure": null,
+      "options": {
+        "A": "-27",
+        "B": "-10",
+        "C": "0",
+        "D": "54"
+      },
+      "unit": 4,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Factor and Remainder Theorems. 利用因式定理及餘式定理求餘數。"
+    },
+    {
+      "question_number": 9,
+      "section": "A",
+      "stem_text": "The solution of $x-1>\\frac{2x-9}{3}$ or $3x+12\\ge0$ is",
+      "stem_latex": "x-1>\\frac{2x-9}{3} \\text{ or } 3x+12\\ge0",
+      "figure": null,
+      "options": {
+        "A": "$x\\le-4$.",
+        "B": "$x\\ge-4$.",
+        "C": "$x<-6$.",
+        "D": "$x>-6$."
+      },
+      "unit": 0,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Compound linear inequalities in one variable. 一元一次複合不等式聯立求解。"
+    },
+    {
+      "question_number": 10,
+      "section": "A",
+      "stem_text": "The costs of rice of brand S and rice of brand T are $\\$12/kg$ and $\\$18/kg$ respectively. If s kg of rice of brand S and t kg of rice of brand T are mixed so that the cost of the mixture is $\\$16/kg$, then $s:t=$",
+      "stem_latex": "s:t=",
+      "figure": null,
+      "options": {
+        "A": "1:2.",
+        "B": "2:1.",
+        "C": "2:3.",
+        "D": "3:2."
+      },
+      "unit": 0,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Rate and ratio of mixture. 初中混合物比與比率應用題。"
+    },
+    {
+      "question_number": 11,
+      "section": "A",
+      "stem_text": "A sum of \\$P is deposited at an interest rate of 4% per annum for 5 years, compounded quarterly. If the amount is \\$80000, find P correct to the nearest integer.",
+      "stem_latex": "P(1+\\frac{4\\%}{4})^{20}=80000",
+      "figure": null,
+      "options": {
+        "A": "65 520",
+        "B": "65 564",
+        "C": "65 754",
+        "D": "66 667"
+      },
+      "unit": 0,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Compound interest formula. 初中複利息公式逆運算本金。"
+    },
+    {
+      "question_number": 12,
+      "section": "A",
+      "stem_text": "It is given that w varies directly as the square root of u and inversely as v. If u is increased by 44% and v is decreased by 20%, then w is increased by",
+      "stem_latex": "w \\propto \\frac{\\sqrt{u}}{v}",
+      "figure": null,
+      "options": {
+        "A": "40%.",
+        "B": "50%",
+        "C": "64%",
+        "D": "80%."
+      },
+      "unit": 6,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Joint and inverse variation with percentages. 涉及百分變化的聯變與反變。"
+    },
+    {
+      "question_number": 13,
+      "section": "A",
+      "stem_text": "Let $a_{n}$ be the nth term of a sequence. If $a_{2}=7$, $a_{5}=35$ and $a_{n+2}=3a_{n+1}-2a_{n}$ for any positive integer n, then $a_{8}=$",
+      "stem_latex": "a_{n+2}=3a_{n+1}-2a_{n},\\quad a_2=7, a_5=35",
+      "figure": null,
+      "options": {
+        "A": "67.",
+        "B": "131.",
+        "C": "259.",
+        "D": "515."
+      },
+      "unit": 7,
+      "difficulty": 3,
+      "timeSec": 120,
+      "why": "Recursive sequence relation. 遞推數列或轉化為等比差分求項。"
+    },
+    {
+      "question_number": 14,
+      "section": "A",
+      "stem_text": "In the figure, the equations of the straight lines $L_{1}$ and $L_{2}$ are $ax+y=b$ and $cx+y=d$ respectively. It is given that $L_{1}$ and $L_{2}$ intersect at a point on the positive x-axis. Which of the following are true?\nI. $a<c$\nII. $b>d$\nIII. $ad=bc$",
+      "stem_latex": "L_1: ax+y=b,\\quad L_2: cx+y=d",
+      "figure": "兩條直線 L1 與 L2 均具有負斜率且 y 截距為正，L1 的 y 截距 b 大於 L2 的 y 截距 d；兩線相交於正 x 軸上一點。",
+      "options": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "II and III only",
+        "D": "I, II and III"
+      },
+      "unit": 10,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Features of straight lines from graphs. 直線方程斜率與截距幾何特徵。"
+    },
+    {
+      "question_number": 15,
+      "section": "A",
+      "stem_text": "Let p and q be real constants such that $pq<0$. Which of the following statements about the graph of $y=(px+1)(qx+2)$ are true?\nI. The graph opens downwards.\nII. The graph has two x-intercepts.\nIII. The graph passes through the origin.",
+      "stem_latex": "y=(px+1)(qx+2), \\quad pq<0",
+      "figure": null,
+      "options": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "II and III only",
+        "D": "I, II and III"
+      },
+      "unit": 1,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Properties of quadratic graph. 二次函數圖形開口與截距性質。"
+    },
+    {
+      "question_number": 16,
+      "section": "A",
+      "stem_text": "The perimeter and the area of a sector are k cm and $3k~cm^{2}$ respectively. If the radius of the sector is 14 cm, then the arc length of the sector is",
+      "stem_latex": "2r+s=k,\\quad \\frac{1}{2}rs=3k,\\quad r=14",
+      "figure": null,
+      "options": {
+        "A": "19 cm",
+        "B": "21 cm",
+        "C": "28 cm",
+        "D": "49 cm"
+      },
+      "unit": 0,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Arc length and area of sector. 扇形周長與面積初中幾何公式。"
+    },
+    {
+      "question_number": 17,
+      "section": "A",
+      "stem_text": "The base of a right pyramid is a rectangle. The length and the breadth of the base are 18 cm and 16 cm respectively. The height of the pyramid is 12 cm. The pyramid is divided into a pyramid X and a frustum Y by a plane parallel to its base. If the breadth of the base of X is 12 cm, then the volume of Y is",
+      "stem_latex": "V_Y = V_{\\text{total}} - V_X",
+      "figure": null,
+      "options": {
+        "A": "$486~cm^{3}$.",
+        "B": "$666~cm^{3}$",
+        "C": "$688~cm^{3}$",
+        "D": "$944~cm^{3}$."
+      },
+      "unit": 0,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Similar solid volumes and frustum. 初中相似立體體積比與平截頭體積。"
+    },
+    {
+      "question_number": 18,
+      "section": "A",
+      "stem_text": "In the figure, ABCD is a trapezium with $AB//DC$ and $AB:CD=3:5$. Let E be a point lying on BD such that BE: ED=2:3. It is given that $AB//EF$ and $AD//BF$. If the area of $\\Delta ABD$ is $225~cm^{2}$, then the area of the trapezium CDEF is",
+      "stem_latex": "AB//DC,\\quad AB:CD=3:5,\\quad BE:ED=2:3",
+      "figure": "梯形 ABCD 中 AB//DC，E 在對角線 BD 上滿足 BE:ED=2:3，EF//AB 且 BF//AD，連線形成梯形 CDEF。",
+      "options": {
+        "A": "$222~cm^{2}$",
+        "B": "$260~cm^{2}$",
+        "C": "$279~cm^{2}$.",
+        "D": "$285~cm^{2}$."
+      },
+      "unit": 0,
+      "difficulty": 3,
+      "timeSec": 150,
+      "why": "Ratio of areas of triangles and trapeziums. 初中平行線分割與三角形面積比。"
+    },
+    {
+      "question_number": 19,
+      "section": "A",
+      "stem_text": "It is given that $\\Delta PQR$ is a right-angled triangle with $\\angle QPR=90^{\\circ}$. Denote the area of $\\Delta PQR$ by S. If $QR=p$, $PR=q$ and $\\angle PQR=\\theta$, which of the following must be true?",
+      "stem_latex": "\\angle QPR=90^\\circ,\\quad QR=p, PR=q, \\angle PQR=\\theta",
+      "figure": null,
+      "options": {
+        "A": "$S=\\frac{1}{2}pq$",
+        "B": "$S=\\frac{1}{2}pq~sin~\\theta$",
+        "C": "$S=\\frac{1}{2}pq~cos~\\theta$",
+        "D": "$S=\\frac{1}{2}pq~tan~\\theta$"
+      },
+      "unit": 0,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Basic trigonometry and triangle area. 直角三角形基礎三角比與面積。"
+    },
+    {
+      "question_number": 20,
+      "section": "A",
+      "stem_text": "In the figure, ABCD is a rectangle. Let E be a point lying on BC. AB produced and DE produced meet at the point F. If $AB=3~cm$, $BE=12~cm$ and $CE=4~cm$, then $EF=$",
+      "stem_latex": "AB=3,\\quad BE=12,\\quad CE=4",
+      "figure": "長方形 ABCD 中，E 在 BC 上，CE=4，EB=12，AB=3，延長 AB 與延長 DE 交於 F，形成直角三角形 DCE 與 FBE 相似。",
+      "options": {
+        "A": "13 cm.",
+        "B": "15 cm",
+        "C": "16 cm",
+        "D": "20 cm"
+      },
+      "unit": 0,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Similar triangles and Pythagoras theorem. 初中相似三角形與勾股定理應用。"
+    },
+    {
+      "question_number": 21,
+      "section": "A",
+      "stem_text": "It is given that WXYZ is a quadrilateral, where $\\angle WXY=\\angle YWZ$ and $\\angle WYX=\\angle WZY$. If $WX=9$, $WY=40~cm$ and $XY=41~cm$, find the perimeter of the quadrilateral WXYZ.",
+      "stem_latex": "\\angle WXY=\\angle YWZ,\\quad \\angle WYX=\\angle WZY",
+      "figure": null,
+      "options": {
+        "A": "100 cm",
+        "B": "180 cm",
+        "C": "410 cm",
+        "D": "490 cm"
+      },
+      "unit": 0,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Similar triangles and perimeter. 初中相似三角形對應邊成比例求周長。"
+    },
+    {
+      "question_number": 22,
+      "section": "A",
+      "stem_text": "According to the figure, which of the following must be true?",
+      "stem_latex": "p+r=q \\text{ or related}",
+      "figure": "一個具有兩個直角的五邊形/折線圖，上下兩邊與左垂直邊垂直（互相平行），折角頂點處內角分別標記為 p, q, r。",
+      "options": {
+        "A": "$p=r$",
+        "B": "$q=90^{\\circ}$",
+        "C": "$p+r=q$",
+        "D": "$p+q+r=180^{\\circ}$"
+      },
+      "unit": 0,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Parallel lines and alternate angles. 初中平行線內錯角輔助線幾何推理。"
+    },
+    {
+      "question_number": 23,
+      "section": "A",
+      "stem_text": "It is given that ABCDEF is a regular 6-sided polygon. If AC and BF intersect at the point $G,$ which of the following are true?\nI. BG//CE\nII. $\\Delta ABG\\sim\\Delta BDC$\nIII. $\\Delta AGF\\cong\\Delta BGC$",
+      "stem_latex": "\\text{Regular hexagon } ABCDEF",
+      "figure": null,
+      "options": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "II and III only",
+        "D": "I, II and III"
+      },
+      "unit": 0,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Properties of regular polygon and congruency. 正六邊形角度性質與三角形全等判定。"
+    },
+    {
+      "question_number": 24,
+      "section": "A",
+      "stem_text": "The point (3,1) is translated leftwards by 5 units to the point U. U is then rotated anticlockwise about the origin through $270^{\\circ}$ to the point V. Find the y-coordinate of V.",
+      "stem_latex": "(3,1) \\to U \\to V",
+      "figure": null,
+      "options": {
+        "A": "-2",
+        "B": "-1",
+        "C": "1",
+        "D": "2"
+      },
+      "unit": 0,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Transformation of coordinates. 初中坐標幾何平移與旋轉變換。"
+    },
+    {
+      "question_number": 25,
+      "section": "A",
+      "stem_text": "In the figure, O is the centre of the circle PQRS. PR and OQ intersect at the point T. If $\\angle POT=82^{\\circ}$ and $\\angle PTQ=104^{\\circ}$, then $\\angle QSR=$",
+      "stem_latex": "\\angle POT=82^{\\circ},\\quad \\angle PTQ=104^{\\circ}",
+      "figure": "圓 O 內接四邊形頂點 P, Q, R, S，PR 與 OQ 相交於 T，已知角 POT 為 82 度，對頂區域角 PTQ 為 104 度，求圓周角 QSR。",
+      "options": {
+        "A": "$22^{\\circ}$.",
+        "B": "$27^{\\circ}$",
+        "C": "$30^{\\circ}$",
+        "D": "$49^{\\circ}$."
+      },
+      "unit": 11,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Angle at centre and angle in same segment. 圓心角與圓周角關係幾何推導。"
+    },
+    {
+      "question_number": 26,
+      "section": "A",
+      "stem_text": "The equations of the straight lines $L_{1}$ and $L_{2}$ are $3x+5y=6$ and $6x-10y=13$ respectively. Let P be a moving point in the rectangular coordinate plane such that the perpendicular distance from P to $L_{1}$ is equal to the perpendicular distance from P to $L_{2}$. The locus of P is",
+      "stem_latex": "L_1: 3x+5y=6,\\quad L_2: 6x-10y=13",
+      "figure": null,
+      "options": {
+        "A": "a point.",
+        "B": "a circle.",
+        "C": "a square.",
+        "D": "a pair of straight lines."
+      },
+      "unit": 12,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Locus equidistant from two intersecting lines. 與兩相交直線等距的動點軌跡。"
+    },
+    {
+      "question_number": 27,
+      "section": "A",
+      "stem_text": "The x-coordinate of the centre of the circle C is 5. If C passes through the points (5,0) and (11,4), then the circumference of C is",
+      "stem_latex": "\\text{Centre}=(5, k), \\text{ passes through } (5,0), (11,4)",
+      "figure": null,
+      "options": {
+        "A": "13π.",
+        "B": "14π.",
+        "C": "22π",
+        "D": "42π"
+      },
+      "unit": 13,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Equation and radius of circle. 圓坐標方程與半徑半徑求周長。"
+    },
+    {
+      "question_number": 28,
+      "section": "A",
+      "stem_text": "A bag contains five cards numbered 2, 2, 3, 4 and 6 respectively. Two cards are randomly drawn from the bag at the same time. Find the probability that the sum of the numbers drawn is greater than 7.",
+      "stem_latex": "P(\\text{sum} > 7)",
+      "figure": null,
+      "options": {
+        "A": "$\\frac{1}{2}$",
+        "B": "$\\frac{1}{5}$",
+        "C": "$\\frac{2}{5}$",
+        "D": "$\\frac{3}{10}$"
+      },
+      "unit": 17,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Basic probability with combination/listing. 基礎古典概型樣本空間枚舉。"
+    },
+    {
+      "question_number": 29,
+      "section": "A",
+      "stem_text": "Which of the following can be obtained from any box-and-whisker diagram?\nI. Mean\nII. Lower quartile\nIII. Inter-quartile range",
+      "stem_latex": "\\text{Box-and-whisker diagram}",
+      "figure": null,
+      "options": {
+        "A": "I only",
+        "B": "II only",
+        "C": "I and III only",
+        "D": "II and III only"
+      },
+      "unit": 19,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Interpretation of box-and-whisker plot. 箱形圖所能讀取的統計量概念。"
+    },
+    {
+      "question_number": 30,
+      "section": "A",
+      "stem_text": "Consider the following integers:\n4, 7, 7, 7, 8, 11, 11, 13, x, y\nLet u, v and w be the variance, the median and the mode of the above integers respectively. If both the mean and the range of the above integers are 9, which of the following must be true?\nI. $u<7$\nII. $v>7$\nIII. $w=7$",
+      "stem_latex": "4, 7, 7, 7, 8, 11, 11, 13, x, y",
+      "figure": null,
+      "options": {
+        "A": "I only",
+        "B": "II only",
+        "C": "I and III only",
+        "D": "II and III only"
+      },
+      "unit": 19,
+      "difficulty": 3,
+      "timeSec": 120,
+      "why": "Measures of dispersion and central tendency. 均值、分佈域、方差與中位數綜合推理。"
+    },
+    {
+      "question_number": 31,
+      "section": "B",
+      "stem_text": "$1010100000001110_2 =$",
+      "stem_latex": "1010100000001110_2 =",
+      "figure": null,
+      "options": {
+        "A": "$21\\times2^{11}+14$.",
+        "B": "$21\\times2^{11}+28$.",
+        "C": "$21\\times2^{12}+14$.",
+        "D": "$21\\times2^{12}+28$."
+      },
+      "unit": 0,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Binary numeral system conversion. 初中二進制數制位值展開表示法。"
+    },
+    {
+      "question_number": 32,
+      "section": "B",
+      "stem_text": "The H.C.F. and the L.C.M. of three expressions are $xy^{2}z^{3}$ and $x^{2}y^{4}z^{6}$ respectively. If the first expression and the second expression are $xy^{3}z^{6}$ and $xy^{2}z^{4}$ respectively, then the third expression is",
+      "stem_latex": "\\text{HCF}=xy^2z^3, \\text{LCM}=x^2y^4z^6",
+      "figure": null,
+      "options": {
+        "A": "$xy^{2}z^{3}$.",
+        "B": "$xy^{4}z^{4}$",
+        "C": "$x^{2}y^{2}z^{4}$.",
+        "D": "$x^{2}y^{4}z^{3}.$"
+      },
+      "unit": 4,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "HCF and LCM of algebraic expressions. 多項式因式之最大公因式與最小公倍式。"
+    },
+    {
+      "question_number": 33,
+      "section": "B",
+      "stem_text": "The sum of the first n terms of a sequence is $3^{n}-1$. Which of the following are true?\nI. The 2nd term of the sequence is 8.\nII. The sequence is a geometric sequence.\nIII. All the terms of the sequence are even numbers.",
+      "stem_latex": "S_n = 3^n - 1",
+      "figure": null,
+      "options": {
+        "A": "I and II only",
+        "B": "I and III only",
+        "C": "II and III only",
+        "D": "I, II and III"
+      },
+      "unit": 7,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Finding nth term from sum of terms. 由前 n 項和求等比數列通項及性質。"
+    },
+    {
+      "question_number": 34,
+      "section": "B",
+      "stem_text": "If $\\beta$ and $\\frac{i^{4}+2i^{3}+3i^{2}+4i}{\\beta i-1}$ are real numbers, then $\\beta=$",
+      "stem_latex": "\\frac{i^{4}+2i^{3}+3i^{2}+4i}{\\beta i-1} \\in \\mathbb{R}",
+      "figure": null,
+      "options": {
+        "A": "-2.",
+        "B": "-1.",
+        "C": "1.",
+        "D": "2."
+      },
+      "unit": 5,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Complex number simplification and real part. 複數除法化簡與虛部為零條件。"
+    },
+    {
+      "question_number": 35,
+      "section": "B",
+      "stem_text": "Which of the following statements about the graph of $y=2-\\log_{3}(x+4)$ is/are true?\nI. y increases when x increases.\nII. The x-intercept of the graph is 5.\nIII. The y-intercept of the graph is 2.",
+      "stem_latex": "y=2-\\log_{3}(x+4)",
+      "figure": null,
+      "options": {
+        "A": "I only",
+        "B": "II only",
+        "C": "I and III only",
+        "D": "II and III only"
+      },
+      "unit": 3,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Properties of logarithmic function graph. 對數函數圖像性質與坐標截距。"
+    },
+    {
+      "question_number": 36,
+      "section": "B",
+      "stem_text": "It is given that $\\log y$ is a linear function of x. The intercepts on the vertical axis and on the horizontal axis of the graph of the linear function are 2 and 1 respectively. If $y=ab^{x}$, find a.",
+      "stem_latex": "y=ab^x, \\text{ vertical intercept of } \\log y \\text{ vs } x \\text{ is } 2",
+      "figure": null,
+      "options": {
+        "A": "0.01",
+        "B": "0.1",
+        "C": "10",
+        "D": "100"
+      },
+      "unit": 3,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Logarithmic reduction to linear form. 指數函數轉化為對數線性圖像求常數。"
+    },
+    {
+      "question_number": 37,
+      "section": "B",
+      "stem_text": "Consider the following system of inequalities:\n$\\begin{cases}y\\le7\\\\ 3x-4y\\le2\\\\ 6x+13y\\ge25\\end{cases}$\nLet R be the region which represents the solution of the above system of inequalities. If (x, y) is a point lying in R, then the least value of $5x+4y+28$ is",
+      "stem_latex": "\\begin{cases}y\\le7\\\\ 3x-4y\\le2\\\\ 6x+13y\\ge25\\end{cases},\\quad \\min(5x+4y+28)",
+      "figure": null,
+      "options": {
+        "A": "1.",
+        "B": "19.",
+        "C": "42.",
+        "D": "106."
+      },
+      "unit": 8,
+      "difficulty": 2,
+      "timeSec": 120,
+      "why": "Linear programming optimal value. 二元一次不等式組之線性規劃求極值。"
+    },
+    {
+      "question_number": 38,
+      "section": "B",
+      "stem_text": "In the figure, ABCD is a circle. AC and BD intersect at the point E. BD is produced to the point T such that TC is tangent to the circle. It is given that $AB//TC$. If $\\angle AED=85^{\\circ}$ and $\\angle CTE=23^{\\circ}$, then $\\angle ADE=$",
+      "stem_latex": "AB//TC, \\angle AED=85^{\\circ}, \\angle CTE=23^{\\circ}",
+      "figure": "圓 ABCD 中對角線 AC 與 BD 交於 E，延長 BD 至 T，TC 為圓切線，TC//AB，已知角 AED=85 度，角 CTE=23 度，求角 ADE。",
+      "options": {
+        "A": "$39^{\\circ}$.",
+        "B": "$56^{\\circ}$.",
+        "C": "$62^{\\circ}$.",
+        "D": "$72^{\\circ}$."
+      },
+      "unit": 11,
+      "difficulty": 3,
+      "timeSec": 120,
+      "why": "Alternate segment theorem and circle geometry. 弦切角定理及圓內接四邊形推導。"
+    },
+    {
+      "question_number": 39,
+      "section": "B",
+      "stem_text": "The figure shows the quadrilateral STUV, where $ST=8~cm$ and $SV=5~cm$. If $\\angle UTV=30^{\\circ}$ and $\\angle TSU=\\angle TVU=90^{\\circ}$, find $\\angle SUV$ correct to the nearest degree.",
+      "stem_latex": "ST=8, SV=5, \\angle UTV=30^{\\circ}, \\angle TSU=\\angle TVU=90^{\\circ}",
+      "figure": "四邊形 STUV，角 TSU 與角 TVU 均為 90 度，顯示 S, T, U, V 共圓且 TU 為直徑；ST=8，SV=5，角 UTV=30 度，求角 SUV。",
+      "options": {
+        "A": "$22^{\\circ}$",
+        "B": "$28^{\\circ}$",
+        "C": "$30^{\\circ}$",
+        "D": "$38^{\\circ}$"
+      },
+      "unit": 14,
+      "difficulty": 3,
+      "timeSec": 150,
+      "why": "Concyclic points and sine rule/trigonometry. 四點共圓輔助三角學與正弦定理求角。"
+    },
+    {
+      "question_number": 40,
+      "section": "B",
+      "stem_text": "The figure shows the right prism ABCDEF, where $AB:AC:AE=1:1:2$. Let $\\theta$ be the angle between the plane ABC and the plane BCE. If $\\angle BAC=90^{\\circ}$, find $\\sin\\theta$.",
+      "stem_latex": "AB:AC:AE=1:1:2,\\quad \\angle BAC=90^{\\circ}",
+      "figure": "直三棱柱 ABCDEF，底面 ABC 為等腰直角三角形（BAC=90度），側棱 AE 垂直底面，求底面 ABC 與截面 BCE 的線面交角正弦值。",
+      "options": {
+        "A": "$\\frac{1}{3}$",
+        "B": "$\\frac{2}{3}$",
+        "C": "$\\frac{\\sqrt{2}}{4}$",
+        "D": "$\\frac{2\\sqrt{2}}{3}$"
+      },
+      "unit": 15,
+      "difficulty": 2,
+      "timeSec": 120,
+      "why": "Angle between planes in 3D geometry. 三維立體幾何中求兩平面之交角正弦。"
+    },
+    {
+      "question_number": 41,
+      "section": "B",
+      "stem_text": "For $90^{\\circ}\\le\\theta\\le360^{\\circ}$, how many roots does the equation $6\\sin^{4}\\theta-5\\sin^{2}\\theta+1=0$ have?",
+      "stem_latex": "6\\sin^4\\theta - 5\\sin^2\\theta + 1 = 0,\\quad 90^\\circ\\le\\theta\\le360^\\circ",
+      "figure": null,
+      "options": {
+        "A": "2",
+        "B": "4",
+        "C": "6",
+        "D": "8"
+      },
+      "unit": 14,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Quadratic in sine and number of roots. 三角方程因式分解與特定象限根數。"
+    },
+    {
+      "question_number": 42,
+      "section": "B",
+      "stem_text": "In a class, there are 3 boys and 7 girls. If 5 students are randomly selected from the class to form a committee, find the probability that at most 2 boys are selected.",
+      "stem_latex": "P(\\text{at most 2 boys})",
+      "figure": null,
+      "options": {
+        "A": "$\\frac{5}{6}$",
+        "B": "$\\frac{11}{12}$",
+        "C": "$\\frac{119}{120}$",
+        "D": "$\\frac{251}{252}$"
+      },
+      "unit": 18,
+      "difficulty": 2,
+      "timeSec": 90,
+      "why": "Hypergeometric probability with complement. 組合計數與對立事件求概率。"
+    },
+    {
+      "question_number": 43,
+      "section": "B",
+      "stem_text": "There are 5 full-time employees and 3 part-time employees in a company. From the company, 7 employees are selected to form a queue. If no part-time employees are next to each other, how many different queues can be formed?",
+      "stem_latex": "\\text{Permutations with restriction}",
+      "figure": null,
+      "options": {
+        "A": "5 040",
+        "B": "14 400",
+        "C": "18 000",
+        "D": "32 400"
+      },
+      "unit": 16,
+      "difficulty": 3,
+      "timeSec": 150,
+      "why": "Permutation and combination slot method. 排列組合選取與插空法排隊計數。"
+    },
+    {
+      "question_number": 44,
+      "section": "B",
+      "stem_text": "The table below shows the scores (in marks) and the corresponding standard scores of four students in a test.\nScore (marks): $\\alpha$, 40, 58, $\\beta$\nStandard score: -1, 0, 2, 3\nFind $\\beta-\\alpha$.",
+      "stem_latex": "z = \\frac{x-\\mu}{\\sigma}",
+      "figure": "四名學生的分數與標準分對應表：分數為 alpha, 40, 58, beta；標準分為 -1, 0, 2, 3。",
+      "options": {
+        "A": "31",
+        "B": "36",
+        "C": "54",
+        "D": "98"
+      },
+      "unit": 20,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Standard score linear relationship. 標準分公式及均值標準差換算。"
+    },
+    {
+      "question_number": 45,
+      "section": "B",
+      "stem_text": "If the standard deviation of the five numbers p, q, r, s and t is 5, then the variance of the five numbers $\\frac{p+2}{5}, \\frac{q+2}{5}, \\frac{r+2}{5}, \\frac{s+2}{5}$ and $\\frac{t+2}{5}$ is",
+      "stem_latex": "\\text{Var}\\left(\\frac{X+2}{5}\\right)",
+      "figure": null,
+      "options": {
+        "A": "1.",
+        "B": "5.",
+        "C": "9.",
+        "D": "25."
+      },
+      "unit": 20,
+      "difficulty": 1,
+      "timeSec": 60,
+      "why": "Effect of linear transformation on variance. 線性數據變換對標準差與方差之影響。"
+    }
+  ]
+}

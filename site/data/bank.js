@@ -9,6 +9,14 @@ window.BANK = {
    "lang": "en",
    "sourcePdf": null,
    "questions": 9
+  },
+  {
+   "id": "2026-p2",
+   "name": "2026 Paper 2",
+   "nameZh": "",
+   "lang": "en",
+   "sourcePdf": null,
+   "questions": 0
   }
  ],
  "questions": [

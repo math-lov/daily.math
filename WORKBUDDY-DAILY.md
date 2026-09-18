@@ -134,7 +134,10 @@ git push                            # GitHub Pages 1 分鐘後自動上線
 
 ```json
 {
-  "exam": "2026-DSE-MATH-CP 2",
+  "exam": "2026-DSE-MATH-CP 2",   ← 只是「卷名」中繼資料，Gemini 照封面填；不影響解題，
+                                     也不會出現在學生端。不想顯示原卷名可在
+                                     data/overrides.json 的 paperNames 覆寫（如 "2026-p2": "2026 Paper 2"）；
+                                     歷年卷（id 為 YYYY-pN）就算不覆寫，build_bank.py 也會自動改用 "2026 Paper 2"。
   "paperCode": null,
   "questions": [
     {

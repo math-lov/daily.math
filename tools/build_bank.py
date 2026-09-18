@@ -379,10 +379,18 @@ def main() -> int:
     if os.path.exists(ov_path):
         paper_names = json.load(open(ov_path, encoding="utf-8-sig")).get("paperNames") or {}
 
+    def derived_name(pid_: str) -> str | None:
+        """歷年卷 id（YYYY-pN，如 2026-p2）→ '2026 Paper 2'；非此格式則回傳 None。
+
+        這樣即使轉寫檔的 exam 帶有考評局原卷名，顯示與資料檔也不會出現那些字樣。
+        """
+        m = PAPER_ID_RE.match(pid_ or "")
+        return f"{m.group(1)} Paper {m.group(2)}" if m else None
+
     papers_meta = [
         {
             "id": pid,
-            "name": paper_names.get(pid) or src.get("exam") or pid,
+            "name": paper_names.get(pid) or derived_name(pid) or src.get("exam") or pid,
             "nameZh": src.get("examZh") or "",
             "lang": "en",
             "sourcePdf": src.get("sourcePdf"),

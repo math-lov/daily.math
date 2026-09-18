@@ -40,19 +40,31 @@ QNUM_RE = re.compile(r"^(\d{1,2})\s*\.\s*(.*)$")
 
 
 def check_dpi(doc: fitz.Document) -> tuple[bool, list[str]]:
-    """每頁嵌入圖的橫向有效 DPI 必須 >= 250，否則整卷不合格。"""
+    """每頁「內容圖」的有效 DPI 必須 >= 250，否則整卷不合格。
+
+    佔位圖不算：有些掃描器會放一張 1x1 的背景／浮水印層、拉到整頁大，
+    用它算 DPI 會得到 0 而誤判整卷不合格。只看真正承載內容的圖（邊長 >= 100px）。
+    """
     problems: list[str] = []
     imaged = 0
+    min_px = 100
     for pno in range(len(doc)):
+        page_has = False
         for im in doc[pno].get_image_info():
+            pw, ph = im.get("width") or 0, im.get("height") or 0
+            if pw < min_px or ph < min_px:
+                continue                     # 佔位圖（背景／浮水印層）
             b = im["bbox"]
             bw = b[2] - b[0]
-            pw = im.get("width")
-            if pw and bw > 1:
-                dpi = pw / (bw / 72.0)
-                imaged += 1
-                if dpi < MIN_DPI:
-                    problems.append(f"page {pno}: {dpi:.0f} DPI (< {MIN_DPI:.0f})")
+            if not pw or bw <= 1:
+                continue
+            dpi = pw / (bw / 72.0)
+            imaged += 1
+            page_has = True
+            if dpi < MIN_DPI:
+                problems.append(f"page {pno + 1}: {dpi:.0f} DPI (< {MIN_DPI:.0f})")
+        if not page_has:
+            problems.append(f"page {pno + 1}: no content image")
     if imaged == 0:
         problems.append("no embedded image found on any page")
     return (not problems), problems
