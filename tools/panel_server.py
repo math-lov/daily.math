@@ -623,6 +623,8 @@ ACTIONS = {
         py_tool("build_bank.py"),
         py_tool("validate_bank.py"),
         py_tool("make_site_data.py"),
+        # 新卷入庫就做 KaTeX 體檢：轉寫偶爾會在選項多包 $...$，早抓早修
+        [node_exe(), os.path.join("tools", "katex_check.js")],
     ],
     "check": lambda p: [
         py_tool("validate_bank.py"),

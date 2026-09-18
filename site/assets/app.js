@@ -251,6 +251,7 @@
 
     // options
     var opts = el("div", "options");
+    opts.setAttribute("data-tex-inline", "1");   // 含 $...$ 的選項由行內渲染處理
     var answered = store.attempts[q.id] || null;
     var s = sol(q.id);
     ["A", "B", "C", "D"].forEach(function (letter) {
@@ -258,7 +259,11 @@
       b.dataset.opt = letter;
       b.appendChild(el("span", "letter", letter));
       var v = el("span", "val");
-      if (q.options[letter]) tex(v, q.options[letter], false); else v.textContent = "—";
+      var ov = q.options ? q.options[letter] : null;
+      // 選項兩種寫法都支援：純 LaTeX（整串丟 KaTeX）或含 $...$ 的文字（行內渲染）
+      if (ov && ov.indexOf("$") >= 0) v.innerHTML = rich(ov);
+      else if (ov) tex(v, ov, false);
+      else v.textContent = "—";
       b.appendChild(v);
       b.onclick = function () { pick(q, letter, card, b); };
       opts.appendChild(b);

@@ -15,11 +15,32 @@ const solutions = JSON.parse(fs.readFileSync(path.join(root, "data", "solutions.
 let errors = 0;
 let checked = 0;
 
+/* 剝掉外圍數學分隔符（$...$、\(...\)、\[...\]）—— 轉寫偶爾會多包一層 */
+function stripDelims(t) {
+  const s = String(t == null ? "" : t).trim();
+  const pairs = [["$", "$"], ["\\(", "\\)"], ["\\[", "\\]"]];
+  for (const [a, b] of pairs) {
+    if (s.length > a.length + b.length - 1 && s.startsWith(a) && s.endsWith(b)) {
+      return s.slice(a.length, s.length - b.length).trim();
+    }
+  }
+  return s;
+}
+
+/* 解碼 HTML 實體 —— stem.html 裡的 $...$ 片段是「已跳脫」的字串
+ * （< → &lt;），瀏覽器渲染時會先解碼再交給 KaTeX，檢查器要比照。 */
+function decodeEntities(s) {
+  return String(s)
+    .replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, " ").replace(/&amp;/g, "&");
+}
+
 function check(tex, where) {
   if (!tex) return;
   checked++;
   try {
-    katex.renderToString(tex, { throwOnError: true, strict: false, displayMode: false });
+    katex.renderToString(stripDelims(tex), { throwOnError: true, strict: false, displayMode: false });
   } catch (e) {
     console.log("[ERROR] " + where);
     console.log("        source: " + tex);
@@ -28,13 +49,25 @@ function check(tex, where) {
   }
 }
 
-/* 從編輯文字中抽出所有 $...$ 片段 */
+/* 選項／文字欄位：含 $ 時只驗 $...$ 片段（與學生端的行內渲染一致）；否則整串當純 LaTeX */
+function checkField(v, where) {
+  if (!v) return;
+  if (v.indexOf("$") >= 0) {
+    inlineTex(v).forEach((t, i) => check(decodeEntities(t), `${where} [${i + 1}]`));
+  } else {
+    check(stripDelims(v), where);
+  }
+}
+
+/* 從編輯文字中抽出所有 $...$ 片段。
+ * 注意：\$（如錢幣 \$46\,000）是跳脫的錢幣符號，不是分隔符 → 先換成佔位再計數。 */
 function inlineTex(s) {
   const out = [];
+  const bare = String(s).replace(/\\\$/g, "\u0001");
   const re = /\$([^$]+)\$/g;
   let m;
-  while ((m = re.exec(s)) !== null) out.push(m[1]);
-  const odd = (s.match(/\$/g) || []).length % 2;
+  while ((m = re.exec(bare)) !== null) out.push(m[1]);
+  const odd = (bare.match(/\$/g) || []).length % 2;
   if (odd) {
     console.log("[ERROR] unbalanced $ delimiters: " + s);
     errors++;
@@ -50,10 +83,11 @@ function checkText(obj, where, keys) {
 // ── 題庫 ──
 bank.questions.forEach((q) => {
   check(q.stem.latex, `${q.id} · stem`);
-  ["A", "B", "C", "D"].forEach((L) => check(q.options[L], `${q.id} · option ${L}`));
-  // 文字題幹裡的 $...$ 行內數學也要驗（自動偵測若把 \text{ cm} 之類切斷就會在這裡被抓到）
+  ["A", "B", "C", "D"].forEach((L) => checkField(q.options[L], `${q.id} · option ${L}`));
+  // 文字題幹裡的 $...$ 行內數學也要驗（自動偵測若把 \text{ cm} 之類切斷就會在這裡被抓到）。
+  // 片段來自已跳脫的 HTML → 先解碼實體再驗（瀏覽器就是這樣做的）。
   if (q.stem && q.stem.html) {
-    inlineTex(q.stem.html).forEach((t, i) => check(t, `${q.id} · stem.html[${i + 1}]`));
+    inlineTex(q.stem.html).forEach((t, i) => check(decodeEntities(t), `${q.id} · stem.html[${i + 1}]`));
   }
 });
 

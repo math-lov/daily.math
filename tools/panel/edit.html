@@ -224,8 +224,22 @@
     b.textContent = msg || "";
     if (!msg) b.className = "banner";
   }
+  /* 剝掉外圍數學分隔符（$...$、\(...\)、\[...\]）—— 資料層存純 LaTeX，
+     但 Gemini 轉寫偶爾會多包一層 $，KaTeX 會把它當非法字元而只顯示原始碼。 */
+  function stripDelims(t){
+    var s = String(t == null ? "" : t).trim();
+    var pairs = [["$","$"],["\\(","\\)"],["\\[","\\]"]];
+    for (var i = 0; i < pairs.length; i++){
+      var a = pairs[i][0], b = pairs[i][1];
+      if (s.length > a.length + b.length - 1 && s.slice(0, a.length) === a && s.slice(-b.length) === b){
+        return s.slice(a.length, s.length - b.length).trim();
+      }
+    }
+    return s;
+  }
   function kx(el, tex, display){
     if (!tex) { el.textContent = "—"; return; }
+    tex = stripDelims(tex);
     if (window.katex){
       try { katex.render(tex, el, { displayMode: !!display, throwOnError: false, strict: false }); return; }
       catch(e){}
@@ -402,7 +416,9 @@
       row.style.cssText = "display:flex;gap:8px;align-items:center;margin:3px 0";
       var tag = document.createElement("b"); tag.textContent = L + ". ";
       var val = document.createElement("span");
-      kx(val, $("f_opt" + L).value, false);
+      var rawOpt = $("f_opt" + L).value;
+      /* 含 $ 的選項＝文字＋行內數學 → 用行內渲染（與學生端一致）；否則整串純 LaTeX */
+      if (rawOpt.indexOf("$") >= 0) autoTex(val, rawOpt); else kx(val, rawOpt, false);
       row.appendChild(tag); row.appendChild(val); opts.appendChild(row);
     });
     host.appendChild(opts);

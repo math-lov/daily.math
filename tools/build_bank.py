@@ -96,6 +96,23 @@ SINGLE_LETTER = re.compile(r"^[A-Za-z]$")
 TRAILING_PUNCT = re.compile(r"[.,;:]+$")
 
 
+def strip_math_delims(s: str | None) -> str | None:
+    """剝掉選項／公式外圍的數學分隔符（$...$、\\(...\\)、\\[...\\]）。
+
+    資料層約定：**選項與 stem_latex 存「純 LaTeX」**；只有 stem_text 可以用 $...$
+    （那會交給 mathify 處理）。Gemini 轉寫偶爾會多包一層 $，不剝掉的話
+    KaTeX 會把 $ 當非法字元，學生端只會看到紅色原始碼。
+    """
+    if not s:
+        return s
+    t = s.strip()
+    for a, b in (("$", "$"), ("\\(", "\\)"), ("\\[", "\\]")):
+        if t.startswith(a) and t.endswith(b) and len(t) > len(a) + len(b) - 1:
+            t = t[len(a):-len(b)].strip()
+            break
+    return t or None
+
+
 def _split_math_tokens(s: str) -> list[str]:
     """按空白切 token，但 **{...} 群組不可分割**（含群組內空白）。
 
@@ -344,7 +361,10 @@ def main() -> int:
                 },
                 "figure": (qq.get("figure") or "").strip() or None,
                 "notes": (qq.get("notes") or "").strip() or None,
-                "options": {L: ((qq.get("options") or {}).get(L) or None) for L in "ABCD"},
+                "options": {
+                    L: strip_math_delims((qq.get("options") or {}).get(L))
+                    for L in "ABCD"
+                },
                 "transcribedBy": src.get("transcribedBy", "ai-vision"),
                 "editedBy": "panel" if e else None,     # 是否經人工修訂
                 "classifiedBy": "auto-rules",          # 分類為自動推斷，可在 overrides.json 覆寫
