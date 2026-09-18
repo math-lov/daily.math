@@ -373,6 +373,47 @@
     else renderMcPage(body, p, pages, cur, tid, focusQid);
   }
 
+  /* ── 概念卡：正文與公式交錯 ─────────────────────────────────────────── */
+  /* 正文可用定位標記把公式插到指定位置：
+       {{math:0}}  插入 math[0]（0 起算）
+       {{math}}    依序插入下一條未使用的公式
+     沒有標記的公式，最後依原順序補在正文下方（與舊資料相容）。 */
+  var MATH_MARK_RE = /\{\{math(?::(\d+))?\}\}/g;
+
+  function renderMathBody(host, text, maths) {
+    maths = maths || [];
+    var used = {};
+    var last = 0;
+    var auto = 0;
+    var m;
+    MATH_MARK_RE.lastIndex = 0;
+
+    function addText(s) {
+      if (!s) return;
+      var d = el("div", "btext");
+      d.setAttribute("data-tex-inline", "1");
+      d.innerHTML = esc(s).replace(/\n/g, "<br>");
+      autoRender(d);
+      host.appendChild(d);
+    }
+    function addFormula(i) {
+      if (!maths[i]) return;
+      var f = el("div", "formula");
+      tex(f, maths[i], true);
+      host.appendChild(f);
+    }
+
+    while ((m = MATH_MARK_RE.exec(text)) !== null) {
+      addText(text.slice(last, m.index));
+      last = m.index + m[0].length;
+      var idx = (m[1] === undefined) ? auto++ : parseInt(m[1], 10);
+      used[idx] = true;
+      addFormula(idx);
+    }
+    addText(text.slice(last));
+    maths.forEach(function (mm, i) { if (!used[i]) addFormula(i); });
+  }
+
   /* ── 概念卡 ─────────────────────────────────────────────────────────── */
   function renderCards(body, page, pages, cur, tid) {
     var cards = page.lesson.cards || [];
@@ -400,16 +441,9 @@
       if (c.title && c.title.en) head.appendChild(el("span", "en", c.title.en));
       card.appendChild(head);
 
-      var b = el("div", "ccard-body");
-      richInto(b, (c.body && c.body.zh) || "");
-      autoRender(b);
+      var b = el("div", "ccard-body concept-body");
+      renderMathBody(b, (c.body && c.body.zh) || "", c.math || []);
       card.appendChild(b);
-
-      (c.math || []).forEach(function (m) {
-        var f = el("div", "formula");
-        tex(f, m, true);
-        card.appendChild(f);
-      });
 
       if (c.warn && c.warn.zh) {
         var w = el("div", "callout");

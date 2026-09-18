@@ -162,6 +162,8 @@ body {
 .ccard-head .en { font-size: 13px; color: var(--muted); }
 .ccard-body { white-space: pre-wrap; }
 .ccard-body p { margin: 0 0 10px; }
+.ccard-body .btext { margin: 0 0 8px; }
+.ccard-body .btext:last-child { margin-bottom: 0; }
 .formula {
   display: flex; justify-content: center; padding: 10px 0; margin: 8px 0;
   background: #F7FAFF; border-radius: var(--radius-sm); overflow-x: auto;

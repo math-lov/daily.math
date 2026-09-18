@@ -749,6 +749,40 @@ function prevRich(node, txt){
   try{renderMathInElement(node,{delimiters:[{left:'$',right:'$',display:false}],
       throwOnError:false,strict:false});}catch(e){}
 }
+/* 概念卡正文預覽：支援 {{math:0}} 定位標記，把公式插到文字中間（與學生端一致） */
+function prevBody(out, bodyTxt, mathTxt){
+  const maths = String(mathTxt||'').split('\\n').map(s=>s.trim()).filter(Boolean);
+  const re = /\\{\\{math(?::(\\d+))?\\}\\}/g;
+  out.innerHTML = '';
+  const used = {};
+  let last = 0, m, auto = 0;
+  const addText = (s)=>{
+    if(!s) return;
+    const d = document.createElement('div');
+    d.innerHTML = esc(s).replace(/\\n/g,'<br>');
+    out.appendChild(d);
+    try{renderMathInElement(d,{delimiters:[{left:'$',right:'$',display:false}],
+        throwOnError:false,strict:false});}catch(e){}
+  };
+  const addFormula = (i)=>{
+    const f = document.createElement('div');
+    f.style.textAlign = 'center';
+    if(maths[i]){
+      try{katex.render(maths[i], f, {displayMode:true, throwOnError:false, strict:false});}
+      catch(e){ f.innerHTML = '<span class="err">'+esc(e.message.split('\\n')[0])+'</span>'; }
+    }
+    out.appendChild(f);
+  };
+  while((m = re.exec(bodyTxt)) !== null){
+    addText(bodyTxt.slice(last, m.index));
+    last = m.index + m[0].length;
+    const idx = (m[1] === undefined) ? auto++ : parseInt(m[1], 10);
+    used[idx] = true;
+    addFormula(idx);
+  }
+  addText(bodyTxt.slice(last));
+  maths.forEach((mm, i)=>{ if(!used[i]) addFormula(i); });   // 未用標記的公式補在最後
+}
 function bindPreview(ids){
   ids.forEach(function(p){
     const src=$(p[0]), out=$(p[1]);
@@ -842,14 +876,21 @@ function editCard(id){
     `<div class="muted">id <span class="k">${c.id}</span></div>` +
     field('標題（中文）', 'f_tzh', (c.title||{}).zh, 2) +
     field('Title (English)', 'f_ten', (c.title||{}).en, 2) +
-    field('正文（中文，用 Enter 換行；數學用 $...$）', 'f_body', (c.body||{}).zh, 8) +
-    field('顯示公式（每行一條純 LaTeX，不加 $）', 'f_math', (c.math||[]).join('\\n'), 3) +
+    field('正文（中文，用 Enter 換行；數學用 $...$；用 {{math:0}} 把第 1 條公式插進文字中間）',
+          'f_body', (c.body||{}).zh, 10) +
+    field('顯示公式（每行一條純 LaTeX，不加 $）', 'f_math', (c.math||[]).join('\\n'), 4) +
     field('常見錯誤（橙框）', 'f_warn', (c.warn||{}).zh, 4) +
     field('英文生字（每行一組，格式：english 中文）', 'f_vocab',
           (c.vocab||[]).map(v=>v.en+' '+v.zh).join('\\n'), 4) +
     '<button class="primary" data-act="saveCard" data-id="' + esc(id) + '">儲存</button>';
-  bindPreview([['f_body','pv-f_body','rich'], ['f_warn','pv-f_warn','rich'],
-               ['f_math','pv-f_math','tex']]);
+  bindPreview([['f_warn','pv-f_warn','rich'], ['f_math','pv-f_math','tex']]);
+  const _b=$('f_body'), _m=$('f_math'), _o=$('pv-f_body');
+  if(_b && _m && _o){
+    const _upd=()=>prevBody(_o, _b.value, _m.value);
+    _b.addEventListener('input', _upd);
+    _m.addEventListener('input', _upd);
+    _upd();
+  }
 }
 
 function editQ(id){

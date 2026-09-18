@@ -82,14 +82,47 @@ ok(t0.$$(".ccard-head h3").length === 1, "one concept card is shown at a time");
 ok(t0.$$(".formula .katex").length >= 1, "card formula rendered by KaTeX");
 ok(!!t0.$(".callout"), "card shows the common-mistake callout");
 ok(t0.$$(".vocab span").length >= 1, "card lists English vocabulary");
-const nextCard = t0.$$(".card .row .btn").filter((b) => /下一張|開始練習/.test(b.textContent))[0];
-ok(!!nextCard, "card has a 'next card' button");
-let clicked = 0;
-while (clicked < 20) {                                  // 一路翻到最後一張
-  const b = t0.$$(".card .row .btn").filter((x) => /下一張|開始練習/.test(x.textContent))[0];
+// 公式要插在文字中間（{{math:N}} 定位），不是全部擠在最後
+const cardHead = () => { const h = t0.$(".ccard-head h3"); return h ? h.textContent : ""; };
+const nextCardBtn = () => t0.$$(".card .row .btn")
+  .filter((x) => /下一張|開始練習/.test(x.textContent))[0];
+
+// 第 1 張卡：至少有一條公式，而且排在文字之後
+let guard = 0;
+while (!t0.$(".concept-body .formula") && guard < 12) {
+  const b = nextCardBtn(); if (!b) break; b.click(); guard++;
+}
+const firstKids = Array.prototype.slice.call(t0.$(".concept-body").children);
+ok(firstKids.some((n) => n.classList.contains("formula")), "card shows at least one display formula");
+ok(firstKids.findIndex((n) => n.classList.contains("formula")) >= 1,
+   "the formula comes after the text it belongs to");
+
+// 翻到「十字相乘法」那張（正文用 {{math:N}} 把 3 條公式插在文字中間）
+guard = 0;
+while (cardHead().indexOf("十字相乘") < 0 && guard < 12) {
+  const b = nextCardBtn(); if (!b) break; b.click(); guard++;
+}
+ok(cardHead().indexOf("十字相乘") >= 0, "reached the cross-method card (" + cardHead() + ")");
+const bodyWrap = t0.$(".concept-body");
+const kids = Array.prototype.slice.call(bodyWrap.children);
+const formulaIdx = kids.map((n, i) => (n.classList.contains("formula") ? i : -1)).filter((i) => i >= 0);
+ok(formulaIdx.length >= 3, "cross-method card interleaves 3 formulas (got " + formulaIdx.length + ")");
+ok(formulaIdx[0] >= 1, "there is text before the first formula (index " + formulaIdx[0] + ")");
+ok(formulaIdx[0] < kids.length - 1, "there is text after the first formula too");
+ok(!kids[kids.length - 1].classList.contains("formula"),
+   "the card ends with text, not a stray formula (last child is " + kids[kids.length - 1].className + ")");
+ok(!/\{\{math/.test(bodyWrap.textContent), "no raw {{math:…}} marker leaks into the page");
+ok(bodyWrap.querySelectorAll(".formula .katex").length >= 3,
+   "interleaved formulas are typeset by KaTeX");
+ok(t0.$$(".formula .katex").length >= 3, "formula blocks render on the page");
+
+// 一路翻到最後一張 → 進度要記錄下來
+guard = 0;
+while (guard < 20) {
+  const b = nextCardBtn();
   if (!b) break;
   const label = b.textContent;
-  b.click(); clicked++;
+  b.click(); guard++;
   if (/開始練習/.test(label)) break;
 }
 const sCards = t0.store();

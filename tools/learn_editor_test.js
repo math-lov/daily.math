@@ -75,13 +75,28 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   ok(listBtns.filter((b) => b.getAttribute("data-act") === "card").length >= 1, "list offers concept cards");
   ok(listBtns.filter((b) => b.getAttribute("data-act") === "q").length >= 10, "list offers questions");
 
-  // 3) 點一張概念卡 → 表單與即時預覽
-  const cardBtn = listBtns.filter((b) => b.getAttribute("data-act") === "card")[0];
+  // 3) 點「十字相乘法」概念卡（有 3 條公式，最能驗證交錯排版）→ 表單與即時預覽
+  const cardBtn = listBtns.filter((b) => b.getAttribute("data-act") === "card")
+    .find((b) => b.getAttribute("data-id") === "ws01-c5")
+    || listBtns.filter((b) => b.getAttribute("data-act") === "card")[0];
   cardBtn.click();
   await sleep(120);
   ok(!!$("#f_tzh") && !!$("#f_body"), "card form renders (title + body fields)");
   ok($("#pv-f_body").innerHTML.length > 0, "live preview renders for the body field");
   ok($("#pv-f_body").querySelectorAll(".katex").length >= 1, "preview typesets the inline $...$ maths");
+  // 定位標記：正文寫 {{math:0}} 時，預覽要把公式插到文字中間（與學生端一致）
+  const bodyField = $("#f_body"), mathField = $("#f_math");
+  bodyField.value = "第一段文字\n{{math:0}}\n第二段文字 {{math:1}} 之後\n{{math:2}}";
+  bodyField.dispatchEvent(new dom.window.Event("input"));
+  await sleep(80);
+  const pvKids = Array.prototype.slice.call($("#pv-f_body").children);
+  const pvFormulas = pvKids.filter((n) => n.querySelector(".katex"));
+  ok(pvKids.length >= 5, "preview splits the body text at {{math:N}} markers (" + pvKids.length + " blocks)");
+  ok(pvFormulas.length >= 3, "all three markers render as formulas (" + pvFormulas.length + ")");
+  ok(pvKids.findIndex((n) => n.querySelector(".katex")) >= 1,
+     "the first formula is NOT the first block (it is interleaved after text)");
+  ok(!/\{\{math/.test($("#pv-f_body").textContent), "no raw marker leaks into the preview");
+
   const saveCardBtn = $$("button[data-act=saveCard]")[0];
   ok(!!saveCardBtn, "card has a save button wired via data-act");
   saveCardBtn.click();
