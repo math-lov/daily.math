@@ -97,11 +97,29 @@ git add -A; git commit -m "Learn: add WS02"; git push  # 5. 發佈（GitHub Page
 |---|---|
 | **總覽** | 題數／概念卡／待覆核統計；**課題開關**（暫緩＝學生看不到，資料檔會被自動清除）；孤兒題；最後生成時間 |
 | **覆核清單** | 列出 `review` 旗標未清的題目（嵌圖公式 `embed-fig`、可疑轉寫），逐題「通過（清除旗標＋寫審計）」或「保留（加備註）」 |
+| **內容編輯** | 直接改概念卡／題目／題解的文字（見下節），**即時 KaTeX 預覽**，儲存前驗證、儲存後自動「生成 + 結構檢查」 |
 | **發佈** | 「重新生成 + 檢查」＝ `make_learn_data` → `learn_check` → `learn_katex_check` → `learn_smoke_test`（失敗即停）；「一鍵發佈」＝ 再 git add／commit／push |
 | （右上角） | **本機預覽** ↗ `/site/index.html` —— 直接 serve `learn/` 前端，改完馬上用手機／瀏覽器看 |
 
 寫入的檔案：`data/learn/publish.json`（課題開關）、`data/learn/review_log.json`（覆核審計）、
-`data/learn/bank.json`（清除 `review` 旗標時）。
+`data/learn/edit_log.json`（編輯審計）、`data/learn/*.json`（實際內容）。
+
+### 內容編輯：改哪裡、怎麼改
+
+編輯器分四種對象，各自對應檔案：
+
+| 編輯對象 | 檔案 | 可改欄位 |
+|---|---|---|
+| 課題名稱／簡介 | `lessons.json` | `name.zh` / `name.en` / `intro.zh` |
+| 概念卡 | `concepts.json` | 標題（中英）、正文、顯示公式、常見錯誤、英文生字 |
+| 題目 | `bank.json` | 題幹、選項 A–D（MC）、長題分部、難度、來源 |
+| 題解 | `solutions.json` | 每步（標題／公式／中文解說）、干擾選項解說、帶得走的技巧、答案 |
+
+* **步驟輸入法**：每步三行一組 —— 第 1 行標題、第 2 行公式（純 LaTeX）、第 3 行起是中文解說；用空行分隔步驟。
+* **儲存前驗證**（不通過就不寫檔）：`$` 成對、概念卡正文 ≥20 字、步驟解說 ≥10 字、MC 答案必須是其中一個選項、
+  `traps` 不可指向正確答案、角度用「度」、主解法不可用坐標／向量。
+* **儲存後**會自動跑 `make_learn_data.py` + `learn_check.py` 並回報結果（其餘兩道留給發佈流程）。
+* 面板 API 自我測試：`& $py tools\learn_panel_test.py`（自己起測試行程、測完自動還原檔案）。
 
 ## 8. 已知限制
 

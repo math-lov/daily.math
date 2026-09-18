@@ -238,6 +238,240 @@ def publish(message: str, push: bool) -> dict:
     return {"ok": True, "stage": "pushed" if push else "committed", "steps": steps}
 
 
+# ── 線上編輯 ────────────────────────────────────────────────────────────
+# 只改 data/learn/*.json（編輯層）；learn/** 是生成物，永不直接寫。
+import re
+
+RAD_PAT = re.compile(  # 與 tools/syllabus_check.py / tools/learn_check.py 同源
+    r"\\operatorname\{rad\}|\\text\{\s*rad|\\mathrm\{rad\}|\bradians?\b|弧度"
+    r"|\\frac\{\\pi\}\{\d+\}|\\frac\{\d+\\pi\}\{\d+\}|\\pi\s*/\s*\d|=\s*\\pi\b", re.I)
+COORD_PAT = re.compile(
+    r"坐標|坐标|座標|(?<!-)(?<!without )\bcoordinates?\b|\\overrightarrow|\\vec\{|"
+    r"\bvectors?\b|向量", re.I)
+EDITABLE_FILES = {"lessons": "lessons.json", "concepts": "concepts.json",
+                  "bank": "bank.json", "solutions": "solutions.json"}
+
+
+def _dollars_ok(s) -> bool:
+    return str(s or "").replace("\\$", "").count("$") % 2 == 0
+
+
+def _topic_bundle(topic_id: str) -> dict:
+    """回傳某課題所有可編輯內容（給編輯器）。"""
+    bank = load("bank.json", {"questions": []})
+    lessons = load("lessons.json", {"topics": []})
+    concepts = load("concepts.json", {"cards": []})
+    sols = (load("solutions.json", {"solutions": {}}) or {}).get("solutions") or {}
+
+    topic = next((t for t in lessons.get("topics", []) if t.get("id") == topic_id), None)
+    if not topic:
+        return {"ok": False, "error": "找不到課題 " + topic_id}
+
+    by_id = {q.get("id"): q for q in bank.get("questions", [])}
+    cards_by_id = {c.get("id"): c for c in concepts.get("cards", [])}
+
+    card_ids, long_ids, mc_ids = [], [], []
+    for les in topic.get("lessons", []):
+        card_ids += les.get("conceptCards", [])
+        long_ids += les.get("longQuestionIds", [])
+        for page in les.get("mcPages", []):
+            mc_ids += page
+
+    def q_payload(qid, kind):
+        q = by_id.get(qid)
+        if not q:
+            return None
+        s = sols.get(qid) or {}
+        return {
+            "kind": kind, "id": qid, "code": q.get("code"), "type": q.get("type"),
+            "source": q.get("source"), "difficulty": q.get("difficulty"),
+            "stem": (q.get("stem") or {}).get("text", ""),
+            "parts": q.get("parts") or [], "options": q.get("options") or {},
+            "answer": s.get("answer"),
+            "steps": ((s.get("solution") or {}).get("steps")) or [],
+            "traps": ((s.get("solution") or {}).get("traps")) or [],
+            "tip": ((s.get("solution") or {}).get("tip")) or {},
+            "review": q.get("review"),
+        }
+
+    return {
+        "ok": True,
+        "topic": {"id": topic.get("id"), "name": topic.get("name", {}),
+                  "intro": topic.get("intro", {}), "source": topic.get("source"),
+                  "stage": topic.get("stage")},
+        "cards": [cards_by_id[i] for i in card_ids if i in cards_by_id],
+        "long": [x for x in (q_payload(i, "long") for i in long_ids) if x],
+        "mc": [x for x in (q_payload(i, "mc") for i in mc_ids) if x],
+        "files": {k: os.path.join("data", "learn", v) for k, v in EDITABLE_FILES.items()},
+        "topics": [{"id": t.get("id"), "name": t.get("name", {})}
+                   for t in lessons.get("topics", [])],
+    }
+
+
+def _validate(kind: str, patch: dict, ctx: dict) -> list[str]:
+    errs: list[str] = []
+
+    def check_pairs(label, vals):
+        for name, val in vals:
+            if not _dollars_ok(val):
+                errs.append("%s 的 $ 不成對：%s" % (label, name))
+
+    if kind == "topic":
+        for k in ("zh", "en"):
+            if not (patch.get("name") or {}).get(k, "").strip():
+                errs.append("課題名稱（%s）不可留空" % k)
+        check_pairs("課題簡介", [("intro.zh", patch.get("intro", {}).get("zh"))])
+
+    elif kind == "card":
+        t = patch.get("title") or {}
+        if not (t.get("zh") or "").strip():
+            errs.append("概念卡標題（中文）不可留空")
+        body = (patch.get("body") or {}).get("zh") or ""
+        if len(body.strip()) < 20:
+            errs.append("概念卡正文太短（至少 20 字，要寫給弱生看）")
+        check_pairs("概念卡", [("title.zh", t.get("zh")), ("title.en", t.get("en")),
+                            ("body.zh", body), ("warn.zh", (patch.get("warn") or {}).get("zh"))])
+        for i, m in enumerate(patch.get("math") or [], 1):
+            if "$" in m:
+                errs.append("math[%d] 只放純 LaTeX，不要加 $（例：a^{2}-b^{2}）" % i)
+
+    elif kind == "question":
+        stem = patch.get("stem") or ""
+        if not stem.strip():
+            errs.append("題幹不可留空")
+        check_pairs("題目", [("stem", stem)])
+        for p in patch.get("parts") or []:
+            check_pairs("長題分部", [("part " + str(p.get("label")), p.get("text"))])
+        if patch.get("type") == "mc":
+            opts = patch.get("options") or {}
+            miss = [k for k in ("A", "B", "C", "D") if not (opts.get(k) or "").strip()]
+            if miss:
+                errs.append("MC 缺少選項 " + ",".join(miss))
+            for k in ("A", "B", "C", "D"):
+                check_pairs("選項 " + k, [(k, opts.get(k))])
+            ans = (ctx.get("solution") or {}).get("answer")
+            if ans and ans not in opts:
+                errs.append("題解記錄的答案是 %r，但已不是其中一個選項（請同時改題解）" % ans)
+
+    elif kind == "solution":
+        steps = patch.get("steps") or []
+        if not steps:
+            errs.append("至少要有一個步驟")
+        qtype = (ctx.get("question") or {}).get("type")
+        if qtype == "mc" and not (patch.get("answer") or "").strip():
+            errs.append("MC 題必須有答案（A–D）")
+        if qtype == "mc":
+            opts = (ctx.get("question") or {}).get("options") or {}
+            if patch.get("answer") not in opts:
+                errs.append("答案必須是其中一個選項（A–D）")
+        for i, st in enumerate(steps, 1):
+            zh = (st.get("zh") or "").strip()
+            if len(zh) < 10:
+                errs.append("第 %d 步的中文解說太短（至少 10 字，要解釋「為什麼」）" % i)
+            check_pairs("第 %d 步" % i, [("math", st.get("math")), ("zh", zh),
+                                        ("title.zh", (st.get("title") or {}).get("zh"))])
+            blob = "%s %s %s" % (zh, st.get("math") or "", (st.get("title") or {}).get("zh") or "")
+            m = RAD_PAT.search(blob)
+            if m:
+                errs.append("第 %d 步出現弧度（%s）——角度一律用「度」" % (i, m.group(0)))
+            m2 = COORD_PAT.search(blob)
+            if m2 and not (ctx.get("question") or {}).get("coordAllowed"):
+                errs.append("第 %d 步用坐標／向量（%s）——主解法要在課程內（坐標法請放 alt）"
+                            % (i, m2.group(0)))
+        for tr in patch.get("traps") or []:
+            opt = tr.get("opt")
+            opts = (ctx.get("question") or {}).get("options") or {}
+            if opts and opt not in opts:
+                errs.append("干擾選項 %r 不是有效選項" % opt)
+            if opt and opt == patch.get("answer"):
+                errs.append("干擾選項 %r 就是正確答案" % opt)
+            check_pairs("干擾選項 " + str(opt), [("zh", tr.get("zh"))])
+        check_pairs("技巧", [("tip.zh", (patch.get("tip") or {}).get("zh"))])
+    return errs
+
+
+def _audit(kind: str, ident: str, fields: list[str]) -> None:
+    log = load("edit_log.json", {"entries": []})
+    log.setdefault("entries", []).append({
+        "at": now_iso(), "kind": kind, "id": ident, "fields": fields, "by": "teacher-panel",
+    })
+    save("edit_log.json", log)
+
+
+def apply_edit(kind: str, ident: str, patch: dict, run_fast_checks: bool = True) -> dict:
+    """把編輯套用到編輯層 JSON。驗證不通過就不寫入（除非 force）。"""
+    ctx: dict = {}
+    if kind == "topic":
+        doc = load("lessons.json", {"topics": []})
+        hit = next((t for t in doc.get("topics", []) if t.get("id") == ident), None)
+        if hit is None:
+            return {"ok": False, "errors": ["找不到課題 " + ident]}
+        ctx = {}
+    elif kind == "card":
+        doc = load("concepts.json", {"cards": []})
+        hit = next((c for c in doc.get("cards", []) if c.get("id") == ident), None)
+        if hit is None:
+            return {"ok": False, "errors": ["找不到概念卡 " + ident]}
+    elif kind == "question":
+        doc = load("bank.json", {"questions": []})
+        hit = next((q for q in doc.get("questions", []) if q.get("id") == ident), None)
+        if hit is None:
+            return {"ok": False, "errors": ["找不到題目 " + ident]}
+        sols = (load("solutions.json", {"solutions": {}}) or {}).get("solutions") or {}
+        ctx = {"solution": sols.get(ident) or {}}
+    elif kind == "solution":
+        doc = load("solutions.json", {"solutions": {}})
+        hit = next((s for qid, s in (doc.get("solutions") or {}).items() if qid == ident), None)
+        if hit is None:
+            return {"ok": False, "errors": ["找不到題解 " + ident]}
+        bank = load("bank.json", {"questions": []})
+        ctx = {"question": next((q for q in bank.get("questions", []) if q.get("id") == ident), {})}
+    else:
+        return {"ok": False, "errors": ["未知的編輯類型 " + kind]}
+
+    errs = _validate(kind, patch, ctx)
+    if errs:
+        return {"ok": False, "errors": errs}
+
+    changed = sorted(patch.keys())
+    if kind == "topic":
+        hit["name"] = patch.get("name", hit.get("name"))
+        hit["intro"] = patch.get("intro", hit.get("intro"))
+        save("lessons.json", doc)
+    elif kind == "card":
+        for k in ("title", "body", "math", "warn", "vocab"):
+            if k in patch:
+                hit[k] = patch[k]
+        save("concepts.json", doc)
+    elif kind == "question":
+        if "stem" in patch:
+            hit.setdefault("stem", {})["text"] = patch["stem"]
+        for k in ("options", "parts", "code", "difficulty", "source"):
+            if k in patch:
+                hit[k] = patch[k]
+        save("bank.json", doc)
+    elif kind == "solution":
+        sol = hit.setdefault("solution", {})
+        for k in ("steps", "traps", "tip"):
+            if k in patch:
+                sol[k] = patch[k]
+        if "answer" in patch:
+            hit["answer"] = patch["answer"]
+        save("solutions.json", doc)
+
+    _audit(kind, ident, changed)
+
+    out: dict = {"ok": True, "kind": kind, "id": ident, "changed": changed}
+    if run_fast_checks:                     # 即時回饋：重新生成 + 結構檢查（其餘留給發佈流程）
+        steps = []
+        for cmd in ([PY, "tools/make_learn_data.py"], [PY, "tools/learn_check.py"]):
+            r = run(cmd, timeout=180)
+            steps.append({"cmd": r["cmd"], "ok": r["code"] == 0, "out": r["out"][-3000:]})
+        out["checks"] = steps
+        out["checksOk"] = all(s["ok"] for s in steps)
+    return out
+
+
 # ── HTML ────────────────────────────────────────────────────────────────
 CSS = """
 :root{--p:#2B6CB0;--a:#319795;--bg:#F7FAFC;--line:#E2E8F0;--tx:#1A202C;--mu:#4A5568;
@@ -288,7 +522,7 @@ def page(title: str, body: str) -> bytes:
   <div><h1>自學追上站 · 維護平台</h1>
   <div class="muted">本機專用（127.0.0.1:8788）· 與每日三題站的面板完全分開</div></div>
   <div class="spacer"></div>
-  <nav><a href="/">總覽</a><a href="/review">覆核清單</a>
+  <nav><a href="/">總覽</a><a href="/review">覆核清單</a><a href="/edit">內容編輯</a>
   <a href="/site/index.html" target="_blank">本機預覽 ↗</a>
   <a href="http://127.0.0.1:8787/" target="_blank">每日站面板 ↗</a></nav>
 </div>
@@ -471,6 +705,235 @@ async function decide(qid, action){{
     return page("覆核清單", body)
 
 
+def render_edit(sel_topic: str = "") -> bytes:
+    """內容編輯器：左邊選項目、右邊表單 ＋ 即時 KaTeX 預覽（與學生端同一套 KaTeX）。"""
+    body = """
+<div class="card row">
+  <div><b>內容編輯</b>
+    <div class="muted">直接改 <span class="k">data/learn/*.json</span>（編輯層）。
+    儲存時會驗證格式（$ 成對、步驟長度、答案對應選項、度制、禁坐標主解法），
+    通過才寫入並自動「重新生成 + 結構檢查」。<br>
+    網站檔 <span class="k">learn/**</span> 是生成物，這裡永遠不會直接寫它。</div></div>
+  <div class="spacer"></div>
+  <select id="topicSel" style="font:inherit;padding:8px 12px;border-radius:8px;border:1px solid #E2E8F0"></select>
+</div>
+
+<div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap">
+  <div class="card" style="flex:0 0 250px;max-height:70vh;overflow:auto">
+    <div id="list"></div>
+  </div>
+  <div class="card" style="flex:1;min-width:320px">
+    <div id="editor"><div class="muted">← 從左邊選一張概念卡、一題示範或一題練習開始編輯</div></div>
+  </div>
+</div>
+
+<script src="/site/vendor/katex/katex.min.js"></script>
+<script src="/site/vendor/katex/auto-render.min.js"></script>
+<script>
+let BUNDLE = null, SEL = null;
+
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+  .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function $(id){return document.getElementById(id);}
+function val(id){const n=$(id);return n?n.value:'';}
+
+/* 即時預覽：整串 LaTeX 用 katex.render；含 $...$ 的文字用 renderMathInElement */
+function prevTex(node, src, display){
+  node.innerHTML='';
+  if(!src){node.innerHTML='<span class="muted">（空）</span>';return;}
+  try{katex.render(src, node, {displayMode:!!display, throwOnError:false, strict:false});}
+  catch(e){node.innerHTML='<span class="err">LaTeX 錯誤：'+esc(e.message.split('\\n')[0])+'</span>';}
+}
+function prevRich(node, txt){
+  node.innerHTML=esc(txt).replace(/\\n/g,'<br>');
+  try{renderMathInElement(node,{delimiters:[{left:'$',right:'$',display:false}],
+      throwOnError:false,strict:false});}catch(e){}
+}
+function bindPreview(ids){
+  ids.forEach(function(p){
+    const src=$(p[0]), out=$(p[1]);
+    if(!src||!out) return;
+    const upd=function(){ p[2]==='tex'?prevTex(out,src.value,false):prevRich(out,src.value); };
+    src.addEventListener('input',upd); upd();
+  });
+}
+
+async function loadTopics(){
+  const r = await fetch('/api/edit').then(x=>x.json());
+  BUNDLE = r;
+  const sel=$('topicSel');
+  sel.innerHTML = (r.topics||[]).map(t=>`<option value="${t.id}">${esc((t.name||{}).zh||t.id)}</option>`).join('');
+  sel.value = r.topic ? r.topic.id : (r.topics[0]||{}).id;
+  sel.onchange = ()=>openTopic(sel.value);
+  openTopic(sel.value);
+}
+
+async function openTopic(tid){
+  const r = await fetch('/api/edit?topic='+encodeURIComponent(tid)).then(x=>x.json());
+  if(!r.ok){ $('list').innerHTML='<span class="err">'+esc(r.error||'載入失敗')+'</span>'; return; }
+  BUNDLE = r;
+  const rows=[];
+  rows.push(`<div class="section-title"><span>課題資料</span></div>
+    <div><button onclick="editTopic()">課題名稱／簡介</button></div>`);
+  rows.push(`<div class="section-title"><span>概念卡（${r.cards.length}）</span></div>`);
+  r.cards.forEach(c=>rows.push(`<div><button onclick="editCard('${c.id}')">${esc((c.title||{}).zh||c.id)}</button></div>`));
+  rows.push(`<div class="section-title"><span>長題示範（${r.long.length}）</span></div>`);
+  r.long.forEach(q=>rows.push(`<div><button onclick="editQ('${q.id}')">${esc(q.code)} · ${esc(q.source||'')}</button></div>`));
+  rows.push(`<div class="section-title"><span>MC 練習（${r.mc.length}）</span></div>`);
+  r.mc.forEach(q=>rows.push(`<div><button onclick="editQ('${q.id}')">${esc(q.code)} · ${esc(player(q.stem))}</button></div>`));
+  $('list').innerHTML = rows.join('');
+  $('editor').innerHTML = '<div class="muted">← 選一個項目開始編輯</div>';
+}
+function player(s){return String(s||'').replace(/\\$/g,'').slice(0,26);}
+
+function head(title, file){
+  return `<div class="row"><b>${esc(title)}</b><div class="spacer"></div>
+    <span class="k">${esc(file)}</span></div>
+    <div class="muted" style="margin-bottom:10px">欄位下方是即時預覽（與學生端同一套 KaTeX）</div>`;
+}
+function field(label, id, value, rows){
+  return `<div style="margin:10px 0"><div class="muted">${label}</div>
+    <textarea id="${id}" rows="${rows||3}" style="width:100%;font:inherit;font-size:14px;
+      padding:10px;border-radius:8px;border:1px solid #E2E8F0">${esc(value)}</textarea>
+    <div class="card" id="pv-${id}" style="margin:6px 0 0;background:#F7FAFF"></div></div>`;
+}
+
+function editTopic(){
+  const t = BUNDLE.topic;
+  $('editor').innerHTML = head('課題名稱／簡介', BUNDLE.files.lessons) +
+    field('中文名稱', 'f_zh', (t.name||{}).zh) +
+    field('English name', 'f_en', (t.name||{}).en, 2) +
+    field('簡介（可含 $...$）', 'f_intro', (t.intro||{}).zh, 4) +
+    '<button class="primary" onclick="saveTopic()">儲存</button>';
+  bindPreview([['f_intro','pv-f_intro','rich']]);
+}
+
+function editCard(id){
+  const c = BUNDLE.cards.find(x=>x.id===id);
+  $('editor').innerHTML = head('概念卡 · ' + ((c.title||{}).zh||id), BUNDLE.files.concepts) +
+    `<div class="muted">id <span class="k">${c.id}</span></div>` +
+    field('標題（中文）', 'f_tzh', (c.title||{}).zh, 2) +
+    field('Title (English)', 'f_ten', (c.title||{}).en, 2) +
+    field('正文（中文，用 Enter 換行；數學用 $...$）', 'f_body', (c.body||{}).zh, 8) +
+    field('顯示公式（每行一條純 LaTeX，不加 $）', 'f_math', (c.math||[]).join('\\n'), 3) +
+    field('常見錯誤（橙框）', 'f_warn', (c.warn||{}).zh, 4) +
+    field('英文生字（每行一組，格式：english 中文）', 'f_vocab',
+          (c.vocab||[]).map(v=>v.en+' '+v.zh).join('\\n'), 4) +
+    '<button class="primary" onclick="saveCard(\'' + id + '\')">儲存</button>';
+  bindPreview([['f_body','pv-f_body','rich'], ['f_warn','pv-f_warn','rich'],
+               ['f_math','pv-f_math','tex']]);
+}
+
+function editQ(id){
+  const q = BUNDLE.long.concat(BUNDLE.mc).find(x=>x.id===id);
+  const isMc = q.type==='mc';
+  let html = head((isMc?'MC 練習 · ':'長題示範 · ') + q.code, BUNDLE.files.bank) +
+    `<div class="muted">id <span class="k">${q.id}</span>　難度
+      <input id="f_diff" type="text" value="${q.difficulty||1}" style="width:52px">　
+      來源 <input id="f_src" type="text" value="${esc(q.source||'')}" style="min-width:240px"></div>` +
+    field('題幹（可含 $...$）', 'f_stem', q.stem, 3);
+  if (!isMc) {
+    html += field('長題分部（每行一條，格式：標籤 | 內容 | 分數，例：(a)| $x+1$ | 1）', 'f_parts',
+      (q.parts||[]).map(p=>`${p.label}| ${p.text} | ${p.marks||''}`).join('\\n'), 4);
+  } else {
+    ['A','B','C','D'].forEach(L=>{
+      html += field('選項 '+L, 'f_opt'+L, (q.options||{})[L], 2);
+    });
+  }
+  html += `<div class="section-title"><span>題解（${esc(BUNDLE.files.solutions)}）</span></div>`;
+  if (isMc) html += field('答案（A–D）', 'f_ans', q.answer||'', 1);
+  html += `<div class="muted">步驟：每步 3 行一組 —— 第 1 行標題／第 2 行公式（純 LaTeX）／第 3 行中文解說（其餘行接續解說）</div>
+    <textarea id="f_steps" rows="12" style="width:100%;font:inherit;font-size:14px;padding:10px;
+      border-radius:8px;border:1px solid #E2E8F0">${esc(stepsToText(q.steps||[]))}</textarea>
+    <div class="card" id="pv-f_steps" style="margin:6px 0 0;background:#F7FAFF"></div>`;
+  html += field('干擾選項解說（每行：選項|解說，例：B| $x$ 的符號錯了）', 'f_traps',
+    (q.traps||[]).map(t=>`${t.opt}| ${t.zh}`).join('\\n'), 3);
+  html += field('帶得走的技巧', 'f_tip', (q.tip||{}).zh, 3);
+  html += '<button class="primary" onclick="saveQ(\'' + id + '\')">儲存</button>';
+  $('editor').innerHTML = html;
+  bindPreview([['f_stem','pv-f_stem','rich'], ['f_tip','pv-f_tip','rich']]);
+  ['A','B','C','D'].forEach(L=>{
+    const n=$('f_opt'+L);
+    if(n) bindPreview([['f_opt'+L,'pv-f_opt'+L,'rich']]);
+  });
+  const sp=$('f_steps'), out=$('pv-f_steps');
+  const upd=function(){ prevRich(out, textToSteps(sp.value).map(s=>s.title.zh+'  '+s.math+'\\n'+s.zh).join('\\n\\n')); };
+  sp.addEventListener('input', upd); upd();
+}
+
+function stepsToText(steps){
+  return steps.map(s=>((s.title||{}).zh||'（標題）')+'\\n'+(s.math||'')+'\\n'+(s.zh||'')).join('\\n\\n');
+}
+function textToSteps(txt){
+  return String(txt||'').split(/\\n\\s*\\n/).filter(b=>b.trim()).map(b=>{
+    const lines = b.split('\\n');
+    return { title: { zh: (lines.shift()||'').trim() },
+             math: (lines.shift()||'').trim(),
+             zh: lines.join('\\n').trim() };
+  });
+}
+function parsePairs(txt, sep){
+  return String(txt||'').split('\\n').map(l=>l.trim()).filter(Boolean).map(l=>{
+    const i = l.indexOf(sep);
+    return i<0 ? [l.trim(), ''] : [l.slice(0,i).trim(), l.slice(i+1).trim()];
+  });
+}
+
+async function post(payload){
+  const r = await fetch('/api/edit', {method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify(payload)}).then(x=>x.json());
+  if(!r.ok){
+    alert('未儲存（驗證未通過）：\\n\\n' + (r.errors||[]).join('\\n'));
+    return false;
+  }
+  const bad = (r.checks||[]).filter(c=>!c.ok);
+  const tail = (r.checks||[]).map(c=>(c.ok?'✓ ':'✗ ')+c.cmd+'\\n'+(c.out||'').split('\\n').slice(-6).join('\\n')).join('\\n\\n');
+  alert('已儲存 ✓\\n\\n' + tail + (bad.length ? '\\n\\n⚠ 檢查未全過，請看輸出' : ''));
+  openTopic(BUNDLE.topic.id);
+  return true;
+}
+function saveTopic(){
+  post({kind:'topic', id:BUNDLE.topic.id, patch:{
+    name:{zh:val('f_zh'), en:val('f_en')}, intro:{zh:val('f_intro')}}});
+}
+function saveCard(id){
+  post({kind:'card', id:id, patch:{
+    title:{zh:val('f_tzh'), en:val('f_ten')},
+    body:{zh:val('f_body')},
+    math:val('f_math').split('\\n').map(s=>s.trim()).filter(Boolean),
+    warn:{zh:val('f_warn')},
+    vocab:parsePairs(val('f_vocab'),' ').map(p=>({en:p[0], zh:p.slice(1).join(' ')}))}});
+}
+function saveQ(id){
+  const q = BUNDLE.long.concat(BUNDLE.mc).find(x=>x.id===id);
+  const isMc = q.type==='mc';
+  const patch = {stem:val('f_stem'), difficulty:parseInt(val('f_diff')||'1',10),
+                 source:val('f_src')};
+  if(!isMc){
+    patch.parts = parsePairs(val('f_parts'),'|').map(p=>{
+      const parts = p[1].split('|');
+      return {label:p[0], text:(parts[0]||'').trim(), marks:parseInt((parts[1]||'').trim()||'0',10)};
+    });
+  } else {
+    patch.options = {A:val('f_optA'), B:val('f_optB'), C:val('f_optC'), D:val('f_optD')};
+  }
+  const steps = textToSteps(val('f_steps'));
+  const solution = {
+    steps: steps,
+    traps: parsePairs(val('f_traps'),'|').map(p=>({opt:p[0].toUpperCase(), zh:p.slice(1).join('|').trim()})),
+    tip: {zh: val('f_tip')}
+  };
+  (async function(){
+    const ok1 = await post({kind:'question', id:id, patch:patch});
+    if(ok1) await post({kind:'solution', id:id, patch:Object.assign({}, solution,
+      isMc ? {answer:val('f_ans').toUpperCase()} : {})});
+  })();
+}
+loadTopics();
+</script>"""
+    return page("內容編輯", body)
+
+
 # ── HTTP ────────────────────────────────────────────────────────────────
 LAST_CHECK: dict | None = None
 LOCK = threading.Lock()
@@ -511,6 +974,17 @@ class Handler(BaseHTTPRequestHandler):
                               200, "text/html; charset=utf-8")
         if path in ("/review", "/review/"):
             return self._send(render_review(status()), 200, "text/html; charset=utf-8")
+        if path in ("/edit", "/edit/"):
+            return self._send(render_edit(), 200, "text/html; charset=utf-8")
+        if path == "/api/edit":
+            qs = urllib.parse.parse_qs(parsed.query)
+            tid = (qs.get("topic") or [""])[0].strip()
+            if not tid:
+                ldoc = load("lessons.json", {"topics": []})
+                return self._send({"ok": True, "topic": None,
+                                   "topics": [{"id": t.get("id"), "name": t.get("name", {})}
+                                              for t in ldoc.get("topics", [])]})
+            return self._send(_topic_bundle(tid))
         if path == "/api/status":
             return self._send(status())
         if path == "/api/git":
@@ -578,6 +1052,21 @@ class Handler(BaseHTTPRequestHandler):
                 })
                 save("review_log.json", log)
             return self._send({"ok": True, "qid": qid, "action": action})
+
+        if path == "/api/edit":
+            kind = str(body.get("kind") or "")
+            ident = str(body.get("id") or "")
+            patch = body.get("patch") or {}
+            if not kind or not ident or not isinstance(patch, dict):
+                return self._send({"ok": False, "errors": ["bad request"]}, 400)
+            with LOCK:
+                res = apply_edit(kind, ident, patch)
+                if res.get("checks"):
+                    LAST_CHECK = {"ok": res.get("checksOk"),
+                                  "steps": [{"name": s["cmd"], "ok": s["ok"], "out": s["out"]}
+                                            for s in res["checks"]],
+                                  "at": now_iso()}
+            return self._send(res, 200 if res.get("ok") else 400)
 
         if path == "/api/check":
             with LOCK:

@@ -4,8 +4,13 @@
  "stages": [
   {
    "id": 1,
-   "name": { "zh": "第一階段 · 初中基礎", "en": "Stage 1 · Junior Topics" },
-   "note": { "zh": "把初中最重要的四課先補回來：因式分解、二元一次方程、公式與恆等式、坐標平面上的變換。" }
+   "name": {
+    "zh": "第一階段 · 初中基礎",
+    "en": "Stage 1 · Junior Topics"
+   },
+   "note": {
+    "zh": "把初中最重要的四課先補回來：因式分解、二元一次方程、公式與恆等式、坐標平面上的變換。"
+   }
   }
  ],
  "topics": [
@@ -15,23 +20,63 @@
    "unit": 4,
    "subtopic": "factorization",
    "source": "EPH All-Round L5 · Worksheet 1",
-   "name": { "zh": "多項式的因式分解", "en": "Factorization of Polynomials" },
+   "name": {
+    "zh": "多項式的因式分解",
+    "en": "Factorization of Polynomials"
+   },
    "intro": {
     "zh": "這一課有四種方法要學：抽公因數、併項分組、恆等式、十字相乘。做 DSE 卷時，因式分解幾乎年年出現（Paper 1 每年一題、Paper 2 也常考），而且它也是解方程與約分的基礎。"
    },
    "lessons": [
     {
      "id": "ws01-1",
-     "title": { "zh": "四種方法與練習", "en": "Four methods + practice" },
-     "conceptCards": ["ws01-c1", "ws01-c2", "ws01-c3", "ws01-c4", "ws01-c5", "ws01-c6"],
-     "longQuestionIds": ["eph-ws01-ex01", "eph-ws01-ex02"],
+     "title": {
+      "zh": "四種方法與練習",
+      "en": "Four methods + practice"
+     },
+     "conceptCards": [
+      "ws01-c1",
+      "ws01-c2",
+      "ws01-c3",
+      "ws01-c4",
+      "ws01-c5",
+      "ws01-c6"
+     ],
+     "longQuestionIds": [
+      "eph-ws01-ex01",
+      "eph-ws01-ex02"
+     ],
      "mcPages": [
-      ["eph-ws01-q01", "eph-ws01-q02", "eph-ws01-q03"],
-      ["eph-ws01-q04", "eph-ws01-q05", "eph-ws01-q06"],
-      ["eph-ws01-q07", "eph-ws01-q08", "eph-ws01-q09"],
-      ["eph-ws01-q10", "eph-ws01-q11", "eph-ws01-q12"],
-      ["eph-ws01-q13", "eph-ws01-q14", "eph-ws01-q15"],
-      ["eph-ws01-q16", "eph-ws01-q17", "eph-ws01-q18"]
+      [
+       "eph-ws01-q01",
+       "eph-ws01-q02",
+       "eph-ws01-q03"
+      ],
+      [
+       "eph-ws01-q04",
+       "eph-ws01-q05",
+       "eph-ws01-q06"
+      ],
+      [
+       "eph-ws01-q07",
+       "eph-ws01-q08",
+       "eph-ws01-q09"
+      ],
+      [
+       "eph-ws01-q10",
+       "eph-ws01-q11",
+       "eph-ws01-q12"
+      ],
+      [
+       "eph-ws01-q13",
+       "eph-ws01-q14",
+       "eph-ws01-q15"
+      ],
+      [
+       "eph-ws01-q16",
+       "eph-ws01-q17",
+       "eph-ws01-q18"
+      ]
      ]
     }
    ]
