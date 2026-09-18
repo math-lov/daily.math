@@ -83,13 +83,15 @@ class Frame:
     def _axes(self) -> None:
         a = []
         if self.ymin <= 0 <= self.ymax:
-            a.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f"/>'
-                     % (self.px(self.xmin), self.py(0), self.px(self.xmax), self.py(0)))
+            # x 軸：箭咀指住正方向（右）
+            a.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" marker-end="url(#ar-%s)"/>'
+                     % (self.px(self.xmin), self.py(0), self.px(self.xmax), self.py(0), self.key))
             a.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" font-family="%s">x</text>'
-                     % (self.px(self.xmax) + 5, self.py(0) + 4, AXIS, FONT))
+                     % (self.px(self.xmax) + 5, self.py(0) - 6, AXIS, FONT))
         if self.xmin <= 0 <= self.xmax:
-            a.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f"/>'
-                     % (self.px(0), self.py(self.ymin), self.px(0), self.py(self.ymax)))
+            # y 軸：箭咀指住正方向（上）
+            a.append('<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" marker-end="url(#ar-%s)"/>'
+                     % (self.px(0), self.py(self.ymin), self.px(0), self.py(self.ymax), self.key))
             a.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" font-family="%s">y</text>'
                      % (self.px(0) + 5, self.py(self.ymax) - 2, AXIS, FONT))
         if self.xmin <= 0 <= self.xmax and self.ymin <= 0 <= self.ymax:
@@ -188,17 +190,23 @@ class Frame:
 # ──────────────────────────────────────────────────────────────────────────
 # 六張概念卡嘅圖
 # ──────────────────────────────────────────────────────────────────────────
-def fig_translation() -> str:
-    """c1 平移：用返卡入面嘅例子 —— A(−7,3) 向左 6、B(−2,−6) 向上 3"""
-    f = Frame(-15, 1, -8, 5, key="c1")
+def fig_translation_left() -> str:
+    """c1 圖一：A(−7, 3) 向左 6 單位 → A′(−13, 3)"""
+    f = Frame(-15, 1, -4, 6, key="c1a")
     f.arrow(-7, 3, -13, 3)                                   # 向左 6
-    f.arrow(-2, -6, -2, -3)                                  # 向上 3
     f.point(-7, 3, "A(−7, 3)", dx=6, dy=-12)
     f.point(-13, 3, "A′(−13, 3)", hollow=True, dx=-8, dy=-12)
-    f.point(-2, -6, "B(−2, −6)", dx=-8, dy=20)
-    f.point(-2, -3, "B′(−2, −3)", hollow=True, dx=-72, dy=-10)
-    f.text(-10, 2.3, "左 6", size=10.5, color=MID)
-    f.text(-1.6, -4.7, "上 3", size=10.5, color=MID)
+    f.text(-10, 1.9, "左 6", size=10.5, color=MID)
+    return f.svg()
+
+
+def fig_translation_up() -> str:
+    """c1 圖二：B(−2, −6) 向上 3 單位 → B′(−2, −3)"""
+    f = Frame(-8, 4, -9, 1, key="c1b")
+    f.arrow(-2, -6, -2, -3)                                  # 向上 3
+    f.point(-2, -6, "B(−2, −6)", dx=8, dy=18)
+    f.point(-2, -3, "B′(−2, −3)", hollow=True, dx=8, dy=-8)
+    f.text(-1.7, -4.6, "上 3", size=10.5, color=MID)
     return f.svg()
 
 
@@ -278,24 +286,31 @@ def fig_slope_perp() -> str:
 
 
 FIGURES = {
-    "ws04-c1": fig_translation,
-    "ws04-c2": fig_reflect_axes,
-    "ws04-c3": fig_reflect_line,
-    "ws04-c4": fig_rotate90,
-    "ws04-c5": fig_rotate180_270,
-    "ws04-c6": fig_slope_perp,
+    "ws04-c1": [(fig_translation_left, "A(−7, 3) 向左 6 單位 → A′(−13, 3)"),
+                (fig_translation_up, "B(−2, −6) 向上 3 單位 → B′(−2, −3)")],
+    "ws04-c2": [(fig_reflect_axes, "對 y 軸反射：x 變號、y 不變")],
+    "ws04-c3": [(fig_reflect_line, "對水平線 y = 6 反射：距離要乘 2")],
+    "ws04-c4": [(fig_rotate90, "逆時針 90°：(x, y) → (−y, x)")],
+    "ws04-c5": [(fig_rotate180_270, "180° 與 270°：三個位置都喺同一個圓周上")],
+    "ws04-c6": [(fig_slope_perp, "m₁ × m₂ = −1 → 兩條線互相垂直")],
 }
 
 
 def main() -> int:
-    out = {k: fn() for k, fn in FIGURES.items()}
+    out: dict[str, list[dict]] = {}
+    for cid, items in FIGURES.items():
+        out[cid] = [{"svg": fn(), "caption": cap} for fn, cap in items]
     with io.open(OUT, "w", encoding="utf-8") as f:
-        json.dump({"_note": "自動產生（python tools/make_learn_figures.py），請勿手改",
+        json.dump({"_note": "自動產生（python tools/make_learn_figures.py），請勿手改。"
+                            "一張卡可以有多幅圖（例如變換多於一次）",
                    "figures": out}, f, ensure_ascii=False, indent=1)
         f.write("\n")
-    print("已產生 %d 張概念卡示意圖 → data/learn/figures.json" % len(out))
+    n = sum(len(v) for v in out.values())
+    print("已產生 %d 張概念卡示意圖（%d 幅圖） → data/learn/figures.json"
+          % (len(out), n))
     for k, v in out.items():
-        print("  %-10s %5.1f KB" % (k, len(v) / 1024.0))
+        print("  %-10s %d 幅  %s" % (k, len(v), "／".join(
+            ("%.1f KB" % (x["svg"].__len__() / 1024.0)) for x in v)))
     return 0
 
 

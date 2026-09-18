@@ -322,16 +322,23 @@ ok(t04mc.$$("#topic-body .opt").length === 12,
 
 // 概念卡示意圖（SVG）：ws04 六張卡都要有圖；其他課題唔受影響
 const t04fig = boot("topic.html", "?t=ws04&p=0");
-let figN = 0;
+let cardWithFig = 0;
+let figTotal = 0;
+let capTotal = 0;
 let guardG = 0;
 while (guardG < 10) {
-  if (t04fig.$(".fig svg")) figN++;
+  const n = t04fig.$$(".fig svg").length;
+  if (n) cardWithFig++;
+  figTotal += n;
+  capTotal += t04fig.$$(".fig-cap").length;
   const b = t04fig.$$(".card .row .btn").filter((x) => /下一張/.test(x.textContent))[0];
   if (!b) break;
   b.click();
   guardG++;
 }
-ok(figN === 6, "all six ws04 concept cards show a figure (got " + figN + ")");
+ok(cardWithFig === 6, "all six ws04 concept cards show a figure (got " + cardWithFig + ")");
+ok(figTotal === 7, "ws04 shows 7 figures: card 1 has two (got " + figTotal + ")");
+ok(capTotal === figTotal, "every figure carries a caption (got " + capTotal + ")");
 ok((t04fig.$(".fig svg").getAttribute("viewBox") || "").indexOf("0 0") === 0,
    "the figure is a scalable SVG (viewBox: " + t04fig.$(".fig svg").getAttribute("viewBox") + ")");
 ok(!/<script/i.test(t04fig.$(".fig").innerHTML), "figure markup is inert (no <script>)");

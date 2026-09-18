@@ -171,6 +171,7 @@ body {
   text-align: center;
 }
 .fig svg { display: inline-block; width: 100%; max-width: 330px; height: auto; }
+.fig-cap { text-align: center; font-size: 13px; color: var(--muted); margin: 2px 0 14px; }
 
 .formula {
   display: flex; justify-content: center; padding: 10px 0; margin: 8px 0;

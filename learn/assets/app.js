@@ -460,11 +460,14 @@
       card.appendChild(head);
 
       // 概念卡示意圖（SVG）：由 tools/make_learn_figures.py 產生、來源可控，直接插入
-      if (c.svg) {
+      // 一張卡可以有多幅圖（例如變換多於一次，就逐步畫一次變換一幅）
+      (c.figures || []).forEach(function (fg) {
+        if (!fg || !fg.svg) return;
         var fig = el("div", "fig");
-        fig.innerHTML = c.svg;
+        fig.innerHTML = fg.svg;
         card.appendChild(fig);
-      }
+        if (fg.caption) card.appendChild(el("div", "fig-cap", fg.caption));
+      });
 
       var b = el("div", "ccard-body concept-body");
       renderMathBody(b, (c.body && c.body.zh) || "", c.math || []);

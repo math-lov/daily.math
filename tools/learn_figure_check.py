@@ -38,39 +38,46 @@ def main() -> int:
     figures = doc.get("figures") or {}
 
     bad = 0
-    for key, svg in figures.items():
-        root = ET.fromstring(svg)
-        texts = []
-        for t in root.iter(NS + "text"):
-            fs = float(t.get("font-size", 11))
-            x, y = float(t.get("x")), float(t.get("y"))
-            txt = t.text or ""
-            texts.append((x, y, label_width(txt, fs), fs, txt))
-        pts = [(float(c.get("cx")), float(c.get("cy")))
-               for c in root.iter(NS + "circle") if float(c.get("r", 0)) < 8]
+    total = 0
+    for key, items in figures.items():
+        if isinstance(items, str):                 # 舊格式（單一幅圖）都接受
+            items = [{"svg": items, "caption": ""}]
+        for idx, item in enumerate(items, 1):
+            total += 1
+            tag = key if len(items) == 1 else "%s 之%d" % (key, idx)
+            root = ET.fromstring((item or {}).get("svg", ""))
+            texts = []
+            for t in root.iter(NS + "text"):
+                fs = float(t.get("font-size", 11))
+                x, y = float(t.get("x")), float(t.get("y"))
+                txt = t.text or ""
+                texts.append((x, y, label_width(txt, fs), fs, txt))
+            pts = [(float(c.get("cx")), float(c.get("cy")))
+                   for c in root.iter(NS + "circle") if float(c.get("r", 0)) < 8]
 
-        issues = []
-        for (x, y, w, fs, txt) in texts:
-            if x < -2 or x + w > W + 2 or y < 6 or y > H - 2:
-                issues.append("出界：" + txt)
-        for i in range(len(texts)):
-            for j in range(i + 1, len(texts)):
-                x1, y1, w1, f1, t1 = texts[i]
-                x2, y2, w2, f2, t2 = texts[j]
-                if abs(y1 - y2) < (f1 + f2) / 2 and not (x1 + w1 < x2 or x2 + w2 < x1):
-                    issues.append("互疊：%s ／ %s" % (t1, t2))
-        for (x, y, w, fs, txt) in texts:
-            for (cx, cy) in pts:
-                if x - 5 <= cx <= x + w + 5 and y - fs <= cy <= y + 5:
-                    issues.append("壓住點：" + txt)
+            issues = []
+            for (x, y, w, fs, txt) in texts:
+                if x < -2 or x + w > W + 2 or y < 6 or y > H - 2:
+                    issues.append("出界：" + txt)
+            for i in range(len(texts)):
+                for j in range(i + 1, len(texts)):
+                    x1, y1, w1, f1, t1 = texts[i]
+                    x2, y2, w2, f2, t2 = texts[j]
+                    if abs(y1 - y2) < (f1 + f2) / 2 and not (x1 + w1 < x2 or x2 + w2 < x1):
+                        issues.append("互疊：%s ／ %s" % (t1, t2))
+            for (x, y, w, fs, txt) in texts:
+                for (cx, cy) in pts:
+                    if x - 5 <= cx <= x + w + 5 and y - fs <= cy <= y + 5:
+                        issues.append("壓住點：" + txt)
 
-        if issues:
-            bad += 1
-        print("%-9s 標籤 %2d 個 · 點 %d 個 · %s"
-              % (key, len(texts), len(pts), "；".join(issues) if issues else "OK ✓"))
+            if issues:
+                bad += 1
+            cap = (item or {}).get("caption") or "（無說明）"
+            print("%-12s 標籤 %2d 個 · 點 %d 個 · %s"
+                  % (tag, len(texts), len(pts), "；".join(issues) if issues else "OK ✓　" + cap))
 
-    print("\n✓ %d 張示意圖全部合格" % len(figures) if not bad
-          else "\n✗ %d / %d 張示意圖有問題，請改 tools/make_learn_figures.py 再跑一次" % (bad, len(figures)))
+    print("\n✓ %d 幅示意圖全部合格" % total if not bad
+          else "\n✗ %d / %d 幅示意圖有問題，請改 tools/make_learn_figures.py 再跑一次" % (bad, total))
     return 1 if bad else 0
 
 

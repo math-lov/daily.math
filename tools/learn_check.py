@@ -234,14 +234,21 @@ def main(argv: list[str] | None = None) -> int:
 
     # ── S9：概念卡示意圖（SVG）安全檢查 ───────────────────────────────────
     figures_doc = _load("figures.json", {"figures": {}})
-    for fid, svg in (figures_doc.get("figures") or {}).items():
-        if not isinstance(svg, str) or "<svg" not in svg or "</svg>" not in svg:
-            err("S9", "figures.json：%s 唔係完整的 SVG" % fid)
+    for fid, items in (figures_doc.get("figures") or {}).items():
+        if isinstance(items, str):                 # 舊格式（單一幅圖）都接受
+            items = [{"svg": items}]
+        if not isinstance(items, list):
+            err("S9", "figures.json：%s 要係一幅圖或圖的陣列" % fid)
             continue
-        low = svg.lower()
-        for bad in ("<script", "onerror=", "onload=", "onclick=", "javascript:"):
-            if bad in low:
-                err("S9", "figures.json：%s 含可疑內容（%s）" % (fid, bad))
+        for i, item in enumerate(items, 1):
+            svg = (item or {}).get("svg")
+            if not isinstance(svg, str) or "<svg" not in svg or "</svg>" not in svg:
+                err("S9", "figures.json：%s 第 %d 幅唔係完整的 SVG" % (fid, i))
+                continue
+            low = svg.lower()
+            for bad in ("<script", "onerror=", "onload=", "onclick=", "javascript:"):
+                if bad in low:
+                    err("S9", "figures.json：%s 第 %d 幅含可疑內容（%s）" % (fid, i, bad))
 
     # ── 統計 ──────────────────────────────────────────────────────────────
     n_mc = sum(1 for q in questions if q.get("type") == "mc")

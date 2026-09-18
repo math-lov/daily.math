@@ -82,8 +82,9 @@ def build_topic(topic: dict, bank_by_id: dict, cards_by_id: dict, sols: dict,
             card = cards_by_id.get(cid)
             if card:
                 # 示意圖只進公開檔（SVG 由 make_learn_figures.py 產生），唔寫入 concepts.json
+                # 一張卡可以有多幅圖（例如變換多於一次）
                 if figures.get(cid):
-                    card = dict(card, svg=figures[cid])
+                    card = dict(card, figures=figures[cid])
                 cards.append(card)
 
         long_qs = []
