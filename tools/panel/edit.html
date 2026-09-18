@@ -255,6 +255,7 @@
   function autoTex(el, s){
     el.innerHTML = "";
     var d = document.createElement("div");
+    d.style.whiteSpace = "pre-wrap";   /* 保留轉寫裡的換行（I. / II. / III. 各佔一行）；$...$ 行內渲染不受影響 */
     d.textContent = s || "";
     el.appendChild(d);
     if (window.renderMathInElement){
