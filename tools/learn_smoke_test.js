@@ -34,6 +34,8 @@ function boot(page, search, storage) {
   });
   const ctx = dom.getInternalVMContext();
   ctx.window.confirm = () => true;                       // 測試時直接確認
+  const scrolls = [];                                    // jsdom 未實作滾動 → 記錄呼叫（換卡要捲回頂部）
+  ctx.window.scrollTo = (x, y) => { scrolls.push(y); };
   if (storage) ctx.window.localStorage.setItem(LS_KEY, storage);
   vm.runInContext(katexJs, ctx, { filename: "katex.min.js" });
   vm.runInContext(autoRenderJs, ctx, { filename: "auto-render.min.js" });
@@ -46,7 +48,7 @@ function boot(page, search, storage) {
   if (typeof ctx.window.__LEARN_START === "function") ctx.window.__LEARN_START();
   const doc = dom.window.document;
   return {
-    dom, ctx, doc,
+    dom, ctx, doc, scrolls,
     $: (s) => doc.querySelector(s),
     $$: (s) => Array.prototype.slice.call(doc.querySelectorAll(s)),
     store: () => JSON.parse(ctx.window.localStorage.getItem(LS_KEY) || "{}"),
@@ -115,6 +117,15 @@ ok(f2 === 4, "ws02 substitution card interleaves 4 formulas (got " + f2 + ")");
 ok(!k2[k2.length - 1].classList.contains("formula"), "ws02 substitution card ends with text, not a formula");
 ok(t02c2.$(".concept-body").querySelectorAll(".formula .katex").length === 4,
    "all four interleaved formulas are typeset");
+
+// 換卡要捲回卡片頂部（否則學生停在上一張的底部）
+ok(t02c2.scrolls.length === g2, "每個「下一張」都捲了一次 (got " + t02c2.scrolls.length + " for " + g2 + " flips)");
+ok(t02c2.scrolls.every((y) => typeof y === "number" && y >= 0), "捲動位置不會是負數");
+const beforePrev = t02c2.scrolls.length;
+const prevBtn = t02c2.$$(".card .row .btn").filter((x) => /上一張/.test(x.textContent))[0];
+ok(!!prevBtn && prevBtn.disabled === false, "第 2 張卡可以按「上一張」");
+prevBtn.click();
+ok(t02c2.scrolls.length === beforePrev + 1, "按「上一張」同樣捲回卡片頂部");
 
 console.log("\n— 概念卡 —");
 ok(t0.$$(".ccard-head h3").length === 1, "one concept card is shown at a time");

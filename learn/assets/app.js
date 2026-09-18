@@ -49,6 +49,15 @@
   function qsa(sel, root) {
     return Array.prototype.slice.call((root || document).querySelectorAll(sel));
   }
+  /* 換卡／換內容後把視窗帶回頂部：要扣掉黏性頂部分頁列的高度。
+     不做這件事的話，內容重繪但滾動位置不變 → 學生會停在卡片底部。 */
+  function scrollToTopOf(node) {
+    if (!node || typeof window.scrollTo !== "function") return;
+    var bar = qs(".topbar");
+    var offset = (bar ? bar.getBoundingClientRect().height : 0) + 12;
+    var y = node.getBoundingClientRect().top + (window.pageYOffset || 0) - offset;
+    try { window.scrollTo(0, Math.max(0, y)); } catch (e) {}
+  }
   function esc(s) {
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -411,6 +420,7 @@
   function renderCards(body, page, pages, cur, tid) {
     var cards = page.lesson.cards || [];
     var i = 0;
+    var cardEl = null;          // 目前這一張卡（換卡後捲回它的頂部）
 
     function draw() {
       body.innerHTML = "";
@@ -464,7 +474,7 @@
       foot.style.marginTop = "14px";
       var prev = el("button", "btn btn-sm", "← 上一張");
       prev.disabled = i === 0;
-      prev.onclick = function () { i--; draw(); };
+      prev.onclick = function () { i--; draw(); scrollToTopOf(cardEl); };
       var next = el("button", "btn btn-sm btn-primary",
                     i === cards.length - 1 ? "看完了，開始練習 →" : "下一張 →");
       next.onclick = function () {
@@ -472,7 +482,7 @@
           store.cards[page.lesson.id] = true;
           save();
           gotoPage(tid, cur + 1);
-        } else { i++; draw(); }
+        } else { i++; draw(); scrollToTopOf(cardEl); }
       };
       foot.appendChild(prev);
       foot.appendChild(next);
@@ -482,6 +492,7 @@
       cnt.style.marginTop = "10px";
       card.appendChild(cnt);
       body.appendChild(card);
+      cardEl = card;
     }
     draw();
   }
