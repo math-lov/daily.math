@@ -328,19 +328,12 @@
 
       renderPage(pages, cur, id, focusQid);
 
-      // footer
-      var pos = qs("#pos");
-      if (pos) pos.textContent = (cur + 1) + " / " + pages.length + " 頁";
-      var prev = qs("#prev"), next = qs("#next");
-      prev.disabled = cur === 0;
-      next.disabled = cur >= pages.length - 1;
-      prev.onclick = function () { gotoPage(id, cur - 1); };
-      next.onclick = function () { gotoPage(id, cur + 1); };
-
-      // 完成度
+      // 頁數位置與完成度：都顯示在頂部（底部不再有上一頁／下一頁，跳頁一律按頂部分頁列）
       var pct = Math.round(pages.filter(pageDone).length / pages.length * 100);
       var bar = qs("#topic-progress");
-      if (bar) bar.textContent = "本課完成 " + pct + "%";
+      if (bar) {
+        bar.textContent = "第 " + (cur + 1) + " / " + pages.length + " 頁 · 本課完成 " + pct + "%";
+      }
 
       updateWrongBadge();
     });

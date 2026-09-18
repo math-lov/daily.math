@@ -73,8 +73,11 @@ ok(nav[0].textContent === "學習", "first page is the concept-card page");
 ok(t0.$$("#pagenav .pg.kind").length >= 3, "demo pages are labelled");
 ok(nav[0].classList.contains("current"), "current page is highlighted");
 ok(!!t0.$("#topic-name").textContent.trim(), "topic name rendered");
-ok(/\/ \d+ 頁/.test(t0.$("#pos").textContent), "footer shows the position (got " + t0.$("#pos").textContent + ")");
-ok(t0.$("#prev").disabled === true, "prev is disabled on the first page");
+ok(/第 1 \/ \d+ 頁/.test(t0.$("#topic-progress").textContent),
+   "topbar shows the page position (got " + t0.$("#topic-progress").textContent + ")");
+ok(!t0.$("#prev") && !t0.$("#next") && !t0.$(".footbar"),
+   "the bottom prev/next bar is gone (pages are jumped from the top nav)");
+ok(t0.$("#pagenav").children.length >= 8, "the top page nav is still the way to jump around");
 
 /* ── 3. 概念卡 ───────────────────────────────────────────────────────── */
 /* ── 2b. 第二個課題（二元一次方程）也正常 ─────────────────────────────── */
