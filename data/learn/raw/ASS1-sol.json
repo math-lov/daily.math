@@ -1,0 +1,2662 @@
+{
+ "_comment": "由 tools/extract_eph.py 自動產生（草稿層）。請勿手改；要修正內容請改 data/learn/{bank,concepts,solutions,lessons}.json。",
+ "sourceFile": "EPH_DSEL5_Ass1_e_sol.docx",
+ "code": "ASS1",
+ "variant": "solution",
+ "extractedAt": "2026-09-18T07:58:02Z",
+ "stats": {
+  "blocks": 407,
+  "dups": 127,
+  "images": 45,
+  "images_inline": 0,
+  "sup": 106,
+  "embedFig": 13,
+  "numEq": 0,
+  "marks": 10,
+  "marking": 70,
+  "examples": 0,
+  "practices": 0,
+  "solutions": 0,
+  "noise": 8,
+  "tables": 0
+ },
+ "mediaManifest": [
+  {
+   "name": "image1.png",
+   "size": 21626
+  },
+  {
+   "name": "image10.wmf",
+   "size": 1044
+  },
+  {
+   "name": "image11.wmf",
+   "size": 1248
+  },
+  {
+   "name": "image12.wmf",
+   "size": 1182
+  },
+  {
+   "name": "image13.wmf",
+   "size": 1182
+  },
+  {
+   "name": "image14.wmf",
+   "size": 1182
+  },
+  {
+   "name": "image15.wmf",
+   "size": 1182
+  },
+  {
+   "name": "image16.wmf",
+   "size": 1430
+  },
+  {
+   "name": "image17.wmf",
+   "size": 1422
+  },
+  {
+   "name": "image18.wmf",
+   "size": 2376
+  },
+  {
+   "name": "image19.wmf",
+   "size": 1332
+  },
+  {
+   "name": "image2.png",
+   "size": 21626
+  },
+  {
+   "name": "image2.wmf",
+   "size": 964
+  },
+  {
+   "name": "image20.wmf",
+   "size": 1368
+  },
+  {
+   "name": "image21.wmf",
+   "size": 1182
+  },
+  {
+   "name": "image22.wmf",
+   "size": 1154
+  },
+  {
+   "name": "image23.wmf",
+   "size": 604
+  },
+  {
+   "name": "image24.wmf",
+   "size": 1154
+  },
+  {
+   "name": "image25.wmf",
+   "size": 572
+  },
+  {
+   "name": "image26.wmf",
+   "size": 588
+  },
+  {
+   "name": "image27.wmf",
+   "size": 1042
+  },
+  {
+   "name": "image28.wmf",
+   "size": 1050
+  },
+  {
+   "name": "image29.wmf",
+   "size": 1050
+  },
+  {
+   "name": "image3.wmf",
+   "size": 1136
+  },
+  {
+   "name": "image30.wmf",
+   "size": 1198
+  },
+  {
+   "name": "image31.wmf",
+   "size": 1012
+  },
+  {
+   "name": "image32.wmf",
+   "size": 1484
+  },
+  {
+   "name": "image33.wmf",
+   "size": 1434
+  },
+  {
+   "name": "image34.wmf",
+   "size": 978
+  },
+  {
+   "name": "image35.wmf",
+   "size": 826
+  },
+  {
+   "name": "image36.wmf",
+   "size": 1038
+  },
+  {
+   "name": "image37.wmf",
+   "size": 1044
+  },
+  {
+   "name": "image38.wmf",
+   "size": 826
+  },
+  {
+   "name": "image39.wmf",
+   "size": 1044
+  },
+  {
+   "name": "image4.wmf",
+   "size": 1136
+  },
+  {
+   "name": "image40.wmf",
+   "size": 1150
+  },
+  {
+   "name": "image41.wmf",
+   "size": 1156
+  },
+  {
+   "name": "image42.wmf",
+   "size": 1086
+  },
+  {
+   "name": "image43.wmf",
+   "size": 1038
+  },
+  {
+   "name": "image44.wmf",
+   "size": 1196
+  },
+  {
+   "name": "image5.wmf",
+   "size": 1136
+  },
+  {
+   "name": "image6.wmf",
+   "size": 1136
+  },
+  {
+   "name": "image7.wmf",
+   "size": 812
+  },
+  {
+   "name": "image8.wmf",
+   "size": 930
+  },
+  {
+   "name": "image9.wmf",
+   "size": 1142
+  }
+ ],
+ "blocks": [
+  {
+   "type": "para",
+   "text": "Name: ___________________________ (    )    Class:                Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Name: ___________________________ (    )    Class:                Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 0
+  },
+  {
+   "type": "para",
+   "text": "Stage 1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Assessment 1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Stage 1",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": "Assessment 1",
+   "context": "textbox",
+   "dup": 3
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 6
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 7
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 8
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "1. x^{2} – xy – 2y^{2} – x – y ="
+  },
+  {
+   "type": "para",
+   "text": "  A. (x − y)(x − 2y + 1)."
+  },
+  {
+   "type": "para",
+   "text": "  B. (x − y)(x + 2y + 1)."
+  },
+  {
+   "type": "para",
+   "text": "  C. (x + y)(x − 2y − 1)."
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. (x + y)(x + 2y − 1)."
+  },
+  {
+   "type": "para",
+   "text": "2. 6x − 8y − 9x^{2} + 24xy − 16y^{2} ="
+  },
+  {
+   "type": "para",
+   "text": "  A. (3x − 4y)(2 − 3x − 4y)."
+  },
+  {
+   "type": "para",
+   "text": "  B. (3x − 4y)(2 − 3x + 4y)."
+  },
+  {
+   "type": "para",
+   "text": "B",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "B",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  C. (3x − 4y)(2 + 3x − 4y)."
+  },
+  {
+   "type": "para",
+   "text": "  D. (3x + 4y)(2 − 3x − 4y)."
+  },
+  {
+   "type": "para",
+   "text": "3. x^{2} + 4x – y^{2} + 4y ="
+  },
+  {
+   "type": "para",
+   "text": "  A. (x + y)(x – y – 4)."
+  },
+  {
+   "type": "para",
+   "text": "  B. (x + y)(x – y + 4)."
+  },
+  {
+   "type": "para",
+   "text": "B",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "B",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  C. (x – y)(x + y + 4)."
+  },
+  {
+   "type": "para",
+   "text": "  D. (x – y)(x + y – 4)."
+  },
+  {
+   "type": "para",
+   "text": "4. If 2m + 1 = n – 3 = 3m – n – 4, then n ="
+  },
+  {
+   "type": "para",
+   "text": " A. –9."
+  },
+  {
+   "type": "para",
+   "text": " B. –11."
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " C. –13."
+  },
+  {
+   "type": "para",
+   "text": " D. –14."
+  },
+  {
+   "type": "para",
+   "text": "5. The price of 3 files and 4 notebooks is $50 while the price of \n5 files and 6 notebooks is $78. Find the price of a notebook."
+  },
+  {
+   "type": "para",
+   "text": "  A. $5 "
+  },
+  {
+   "type": "para",
+   "text": "  B. $6"
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  C. $7"
+  },
+  {
+   "type": "para",
+   "text": "  D. $8"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "6. If [IMG:image2.wmf] = 5, then u = ",
+   "images": [
+    "image2.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 6
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 7
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 8
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 6
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 7
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 8
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": " A. [IMG:image3.wmf].",
+   "images": [
+    "image3.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " B. [IMG:image4.wmf].",
+   "images": [
+    "image4.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " C. [IMG:image5.wmf].",
+   "images": [
+    "image5.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " D. [IMG:image6.wmf].",
+   "images": [
+    "image6.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "7. If m(m – 2a) = a(2 – m), then a ="
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image7.wmf].",
+   "images": [
+    "image7.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image8.wmf].",
+   "images": [
+    "image8.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image9.wmf].",
+   "images": [
+    "image9.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image10.wmf].",
+   "images": [
+    "image10.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "8. If [IMG:image11.wmf], then a =",
+   "images": [
+    "image11.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image12.wmf].",
+   "images": [
+    "image12.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image13.wmf].",
+   "images": [
+    "image13.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image14.wmf].",
+   "images": [
+    "image14.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image15.wmf].",
+   "images": [
+    "image15.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "9. If p and q are constants such that  (x + 5)^{2} + px ≡ (x – q)(x + 7) + 12q, \n then p ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –8."
+  },
+  {
+   "type": "para",
+   "text": "  B. –2."
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  C. 5."
+  },
+  {
+   "type": "para",
+   "text": "  D. 7."
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "10. If the point (3, –2) is reflected with respect to the straight line \n parallel to the y-axis and passing through the point (4, 4), then the \n coordinates of its image are"
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 7
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 8
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 6
+  },
+  {
+   "type": "para",
+   "text": "10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 7
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 8
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 6
+  },
+  {
+   "type": "para",
+   "text": "10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "  A. (–11, –2)."
+  },
+  {
+   "type": "para",
+   "text": "  B. (3, –6)."
+  },
+  {
+   "type": "para",
+   "text": "  C. (3, 10)."
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. (5, –2)."
+  },
+  {
+   "type": "para",
+   "text": "11. The coordinates of the point A are (3, 7). A is reflected with respect \n to the x-axis to the point B. B is then rotated clockwise about the\n origin through 270° to the point C. Find the x-coordinate of C."
+  },
+  {
+   "type": "para",
+   "text": "  A. –7"
+  },
+  {
+   "type": "para",
+   "text": "  B. –3"
+  },
+  {
+   "type": "para",
+   "text": "  C. 3"
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. 7"
+  },
+  {
+   "type": "para",
+   "text": "12. Factorize"
+  },
+  {
+   "type": "para",
+   "text": " (a) a^{3} + a^{2}b – 2a^{2},"
+  },
+  {
+   "type": "para",
+   "text": " (b) a^{3} + a^{2}b – 2a^{2} – 4a – 4b + 8."
+  },
+  {
+   "type": "para",
+   "text": " (a) a^{3} + a^{2}b – 2a^{2}",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = a^{2}(a + b – 2)  (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (b) a^{3} + a^{2}b – 2a^{2} – 4a – 4b + 8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = a^{2}(a + b – 2) – 4a – 4b + 8 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  = a^{2}(a + b – 2) – 4(a + b – 2)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = (a^{2} – 4)(a + b – 2) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  = (a – 2)(a + 2)(a + b – 2) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (a) a^{3} + a^{2}b – 2a^{2}",
+   "context": "textbox",
+   "dup": 150
+  },
+  {
+   "type": "para",
+   "text": "  = a^{2}(a + b – 2)  (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 151
+  },
+  {
+   "type": "para",
+   "text": " (b) a^{3} + a^{2}b – 2a^{2} – 4a – 4b + 8",
+   "context": "textbox",
+   "dup": 152
+  },
+  {
+   "type": "para",
+   "text": "  = a^{2}(a + b – 2) – 4a – 4b + 8 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 153
+  },
+  {
+   "type": "para",
+   "text": "  = a^{2}(a + b – 2) – 4(a + b – 2)",
+   "context": "textbox",
+   "dup": 154
+  },
+  {
+   "type": "para",
+   "text": "  = (a^{2} – 4)(a + b – 2) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 155
+  },
+  {
+   "type": "para",
+   "text": "  = (a – 2)(a + 2)(a + b – 2) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 156
+  },
+  {
+   "type": "para",
+   "text": "  (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "13. Factorize"
+  },
+  {
+   "type": "para",
+   "text": " (a) 4x^{2} – 25y^{2},"
+  },
+  {
+   "type": "para",
+   "text": " (b) 10x^{2} – 11xy – 35y^{2},"
+  },
+  {
+   "type": "para",
+   "text": " (c) 4x^{2} – 25y^{2} – 10x^{2} + 11xy + 35y^{2}."
+  },
+  {
+   "type": "para",
+   "text": "   (4 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": " (a) 4x^{2} – 25y^{2} ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = (2x + 5y)(2x – 5y) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (b) 10x^{2} – 11xy – 35y^{2} ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = (5x + 7y) (2x – 5y) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (c) 4x^{2} – 25y^{2} – 10x^{2} + 11xy + 35y^{2} ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 4x^{2} – 25y^{2} – (10x^{2} – 11xy – 35y^{2})",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = (2x + 5y)(2x – 5y) – (5x + 7y) (2x – 5y) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  = (2x – 5y)(2x + 5y – 5x – 7y)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = (2x – 5y)(–3x – 2y) (or (5y – 2x)(3x + 2y) ) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (a) 4x^{2} – 25y^{2} ",
+   "context": "textbox",
+   "dup": 171
+  },
+  {
+   "type": "para",
+   "text": "  = (2x + 5y)(2x – 5y) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 172
+  },
+  {
+   "type": "para",
+   "text": " (b) 10x^{2} – 11xy – 35y^{2} ",
+   "context": "textbox",
+   "dup": 173
+  },
+  {
+   "type": "para",
+   "text": "  = (5x + 7y) (2x – 5y) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 174
+  },
+  {
+   "type": "para",
+   "text": " (c) 4x^{2} – 25y^{2} – 10x^{2} + 11xy + 35y^{2} ",
+   "context": "textbox",
+   "dup": 175
+  },
+  {
+   "type": "para",
+   "text": "  = 4x^{2} – 25y^{2} – (10x^{2} – 11xy – 35y^{2})",
+   "context": "textbox",
+   "dup": 176
+  },
+  {
+   "type": "para",
+   "text": "  = (2x + 5y)(2x – 5y) – (5x + 7y) (2x – 5y) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 177
+  },
+  {
+   "type": "para",
+   "text": "  = (2x – 5y)(2x + 5y – 5x – 7y)",
+   "context": "textbox",
+   "dup": 178
+  },
+  {
+   "type": "para",
+   "text": "  = (2x – 5y)(–3x – 2y) (or (5y – 2x)(3x + 2y) ) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 179
+  },
+  {
+   "type": "para",
+   "text": "14. Factorize"
+  },
+  {
+   "type": "para",
+   "text": " (a) 16h^{2} – 8h + 1,"
+  },
+  {
+   "type": "para",
+   "text": " (b) (9h – k)^{2} – 16h^{2} + 8h – 1."
+  },
+  {
+   "type": "para",
+   "text": "    (4 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "(a) 16h^{2} – 8h + 1 = (4h – 1)^{2} (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(b) (9h – k)^{2} – 16h^{2} + 8h – 1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = (9h – k)^{2} – (16h^{2} – 8h + 1)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = (9h – k)^{2} – (4h – 1)^{2}^{ }(1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " = (9h – k + 4h – 1)[9h – k – (4h – 1)] (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " = (13h – k – 1)(5h – k + 1) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(a) 16h^{2} – 8h + 1 = (4h – 1)^{2} (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 193
+  },
+  {
+   "type": "para",
+   "text": "(b) (9h – k)^{2} – 16h^{2} + 8h – 1",
+   "context": "textbox",
+   "dup": 194
+  },
+  {
+   "type": "para",
+   "text": " = (9h – k)^{2} – (16h^{2} – 8h + 1)",
+   "context": "textbox",
+   "dup": 195
+  },
+  {
+   "type": "para",
+   "text": " = (9h – k)^{2} – (4h – 1)^{2}^{ }(1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 196
+  },
+  {
+   "type": "para",
+   "text": " = (9h – k + 4h – 1)[9h – k – (4h – 1)] (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 197
+  },
+  {
+   "type": "para",
+   "text": " = (13h – k – 1)(5h – k + 1) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 198
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "15. The total number of bookmarks owned by Alan and Cecily is 38. If Cecily buys 7 bookmarks from a book store, the number of bookmarks owned by her will be 2 times that owned by Alan. Find the number of bookmarks owned by Alan.\n (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of bookmarks owned by Alan and Cecily respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image16.wmf]",
+   "context": "textbox",
+   "images": [
+    "image16.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (1) + (2):",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  x + 2x  = 38 + 7 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   x = 15 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of bookmarks owned by Alan is 15.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of bookmarks owned by Alan and Cecily respectively.",
+   "context": "textbox",
+   "dup": 207
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image16.wmf]",
+   "context": "textbox",
+   "images": [
+    "image16.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ],
+   "dup": 208
+  },
+  {
+   "type": "para",
+   "text": " (1) + (2):",
+   "context": "textbox",
+   "dup": 209
+  },
+  {
+   "type": "para",
+   "text": "  x + 2x  = 38 + 7 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 210
+  },
+  {
+   "type": "para",
+   "text": "   x = 15 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 211
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of bookmarks owned by Alan is 15.",
+   "context": "textbox",
+   "dup": 212
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 219
+  },
+  {
+   "type": "para",
+   "text": "16. The number of envelopes owned by Peter is 3 times that owned by Gloria. If Peter gives 6 of his own envelopes to Gloria, both of them will have the same number of envelopes. Find the total number of envelopes owned by Peter and Gloria.\n (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of envelopes owned by Peter and Gloria respectively. ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image17.wmf]",
+   "context": "textbox",
+   "images": [
+    "image17.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  3y – 6 = y + 6 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   y = 6 ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The total number of envelopes",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 3(6) + 6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 24 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of envelopes owned by Peter and Gloria respectively. ",
+   "context": "textbox",
+   "dup": 222
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image17.wmf]",
+   "context": "textbox",
+   "images": [
+    "image17.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ],
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "  3y – 6 = y + 6 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "   y = 6 ",
+   "context": "textbox",
+   "dup": 226
+  },
+  {
+   "type": "para",
+   "text": " ∴ The total number of envelopes",
+   "context": "textbox",
+   "dup": 227
+  },
+  {
+   "type": "para",
+   "text": "  = 3(6) + 6",
+   "context": "textbox",
+   "dup": 228
+  },
+  {
+   "type": "para",
+   "text": "  = 24 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 229
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 219
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 219
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "17. In a Go club, the ratio of the number of male members to the number of female members is 9 : 4. If 3 boys and 8 girls join the club, then the ratio of the number of male members to the number of female members is 3 : 2. Find the original number of male members in the club.\n (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of male members and female members in the club respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image18.wmf]",
+   "context": "textbox",
+   "images": [
+    "image18.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image19.wmf]",
+   "context": "textbox",
+   "images": [
+    "image19.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  2(x + 3) = 3(y + 8)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  2x – 3y = 18 ...... (4)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of male members and female members in the club respectively.",
+   "context": "textbox",
+   "dup": 242
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image18.wmf]",
+   "context": "textbox",
+   "images": [
+    "image18.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ],
+   "dup": 243
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have",
+   "context": "textbox",
+   "dup": 244
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image19.wmf]",
+   "context": "textbox",
+   "images": [
+    "image19.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ],
+   "dup": 245
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 246
+  },
+  {
+   "type": "para",
+   "text": "  2(x + 3) = 3(y + 8)",
+   "context": "textbox",
+   "dup": 247
+  },
+  {
+   "type": "para",
+   "text": "  2x – 3y = 18 ...... (4)",
+   "context": "textbox",
+   "dup": 248
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 219
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 219
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (4).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image20.wmf] = 18 (1M)",
+   "context": "textbox",
+   "images": [
+    "image20.wmf"
+   ],
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  6x – 4x = 54",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  x = 27  (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The original number of male members in the club is 27.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (4).",
+   "context": "textbox",
+   "dup": 258
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image20.wmf] = 18 (1M)",
+   "context": "textbox",
+   "images": [
+    "image20.wmf"
+   ],
+   "flags": [
+    "marking"
+   ],
+   "dup": 259
+  },
+  {
+   "type": "para",
+   "text": "  6x – 4x = 54",
+   "context": "textbox",
+   "dup": 260
+  },
+  {
+   "type": "para",
+   "text": "  x = 27  (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 261
+  },
+  {
+   "type": "para",
+   "text": " ∴ The original number of male members in the club is 27.",
+   "context": "textbox",
+   "dup": 262
+  },
+  {
+   "type": "para",
+   "text": "18. Make k the subject of the formula [IMG:image23.wmf]= 2h.\n  (3 marks)",
+   "images": [
+    "image23.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image21.wmf] = 2h",
+   "context": "textbox",
+   "images": [
+    "image21.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  8 – h = 2h(4 – k)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  8 – h = 8h – 2hk (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  2hk = 9h – 8 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  k =[IMG:image22.wmf] (1A)",
+   "context": "textbox",
+   "images": [
+    "image22.wmf"
+   ],
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image21.wmf] = 2h",
+   "context": "textbox",
+   "images": [
+    "image21.wmf"
+   ],
+   "dup": 269
+  },
+  {
+   "type": "para",
+   "text": "  8 – h = 2h(4 – k)",
+   "context": "textbox",
+   "dup": 270
+  },
+  {
+   "type": "para",
+   "text": "  8 – h = 8h – 2hk (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 271
+  },
+  {
+   "type": "para",
+   "text": "  2hk = 9h – 8 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 272
+  },
+  {
+   "type": "para",
+   "text": "  k =[IMG:image22.wmf] (1A)",
+   "context": "textbox",
+   "images": [
+    "image22.wmf"
+   ],
+   "flags": [
+    "marking"
+   ],
+   "dup": 273
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "19. Make y the subject of the formula x(y – 5) = 5x – y.\n  (3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " x(y – 5)  = 5x – y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  xy – 5x = 5x – y (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (x + 1)y = 10x (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  y = [IMG:image24.wmf] (1A)",
+   "context": "textbox",
+   "images": [
+    "image24.wmf"
+   ],
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " x(y – 5)  = 5x – y",
+   "context": "textbox",
+   "dup": 281
+  },
+  {
+   "type": "para",
+   "text": "  xy – 5x = 5x – y (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 282
+  },
+  {
+   "type": "para",
+   "text": " (x + 1)y = 10x (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 283
+  },
+  {
+   "type": "para",
+   "text": "  y = [IMG:image24.wmf] (1A)",
+   "context": "textbox",
+   "images": [
+    "image24.wmf"
+   ],
+   "flags": [
+    "marking"
+   ],
+   "dup": 284
+  },
+  {
+   "type": "para",
+   "text": "20. Consider the formula [IMG:image25.wmf]=[IMG:image26.wmf].",
+   "images": [
+    "image25.wmf",
+    "image26.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (a) Make b the subject of the above formula."
+  },
+  {
+   "type": "para",
+   "text": " (b) If the value of a is decreased by 6, write down the change in the value of b."
+  },
+  {
+   "type": "para",
+   "text": "  (4 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": " (a) [IMG:image27.wmf] =[IMG:image28.wmf]",
+   "context": "textbox",
+   "images": [
+    "image27.wmf",
+    "image28.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   a + 6 = 3(2a + b)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "   a + 6 = 6a + 3b (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   3b = 6 – 5a  ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "   b =[IMG:image29.wmf] (1A)",
+   "context": "textbox",
+   "images": [
+    "image29.wmf"
+   ],
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (b) The increase in the value of b (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  = 10 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (a) [IMG:image27.wmf] =[IMG:image28.wmf]",
+   "context": "textbox",
+   "images": [
+    "image27.wmf",
+    "image28.wmf"
+   ],
+   "dup": 293
+  },
+  {
+   "type": "para",
+   "text": "   a + 6 = 3(2a + b)",
+   "context": "textbox",
+   "dup": 294
+  },
+  {
+   "type": "para",
+   "text": "   a + 6 = 6a + 3b (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 295
+  },
+  {
+   "type": "para",
+   "text": "   3b = 6 – 5a  ",
+   "context": "textbox",
+   "dup": 296
+  },
+  {
+   "type": "para",
+   "text": "   b =[IMG:image29.wmf] (1A)",
+   "context": "textbox",
+   "images": [
+    "image29.wmf"
+   ],
+   "flags": [
+    "marking"
+   ],
+   "dup": 297
+  },
+  {
+   "type": "para",
+   "text": " (b) The increase in the value of b (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 298
+  },
+  {
+   "type": "para",
+   "text": "  = 10 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 299
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "21. The coordinates of the points C and D are (3, –2) and (–5, –8) respectively. C is rotated clockwise about the origin O through 90° to C'. D is translated upwards by 9 units to D'."
+  },
+  {
+   "type": "para",
+   "text": " (a) Write down the coordinates of C' and D'."
+  },
+  {
+   "type": "para",
+   "text": " (b) Prove that CD is perpendicular to C'D'."
+  },
+  {
+   "type": "para",
+   "text": "(a) Coordinates of C' = (–2, –3) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Coordinates of D' = (–5, –8 + 9) = (–5, 1) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(b) Slope of CD × slope of C'D' = [IMG:image30.wmf]  (1M for either one)",
+   "context": "textbox",
+   "images": [
+    "image30.wmf"
+   ],
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  = [IMG:image31.wmf] (1A for either one)",
+   "context": "textbox",
+   "images": [
+    "image31.wmf"
+   ],
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  = –1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " ∴ CD is perpendicular to C'D'.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(a) Coordinates of C' = (–2, –3) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 311
+  },
+  {
+   "type": "para",
+   "text": " Coordinates of D' = (–5, –8 + 9) = (–5, 1) (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 312
+  },
+  {
+   "type": "para",
+   "text": "(b) Slope of CD × slope of C'D' = [IMG:image30.wmf]  (1M for either one)",
+   "context": "textbox",
+   "images": [
+    "image30.wmf"
+   ],
+   "flags": [
+    "marking"
+   ],
+   "dup": 313
+  },
+  {
+   "type": "para",
+   "text": "  = [IMG:image31.wmf] (1A for either one)",
+   "context": "textbox",
+   "images": [
+    "image31.wmf"
+   ],
+   "flags": [
+    "marking"
+   ],
+   "dup": 314
+  },
+  {
+   "type": "para",
+   "text": "  = –1",
+   "context": "textbox",
+   "dup": 315
+  },
+  {
+   "type": "para",
+   "text": " ∴ CD is perpendicular to C'D'.",
+   "context": "textbox",
+   "dup": 316
+  },
+  {
+   "type": "para",
+   "text": "   (5 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(1)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(1)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Detailed Solutions"
+  },
+  {
+   "type": "para",
+   "text": "1. x^{2} – xy – 2y^{2} – x – y"
+  },
+  {
+   "type": "para",
+   "text": " = (x + y)(x – 2y) – (x + y)"
+  },
+  {
+   "type": "para",
+   "text": " = (x + y)(x – 2y – 1)"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is C."
+  },
+  {
+   "type": "para",
+   "text": "2. 6x – 8y – 9x^{2} + 24xy – 16y^{2}"
+  },
+  {
+   "type": "para",
+   "text": " = 6x – 8y – (9x^{2} – 24xy + 16y^{2})"
+  },
+  {
+   "type": "para",
+   "text": " = 2(3x – 4y) – (3x – 4y)^{2}"
+  },
+  {
+   "type": "para",
+   "text": " = (3x – 4y)(2 – 3x + 4y)"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is B."
+  },
+  {
+   "type": "para",
+   "text": "3. x^{2} + 4x – y^{2} + 4y"
+  },
+  {
+   "type": "para",
+   "text": " = x^{2} – y^{2} + 4x + 4y"
+  },
+  {
+   "type": "para",
+   "text": " = (x – y)(x + y) + 4(x + y)"
+  },
+  {
+   "type": "para",
+   "text": " = (x + y)(x – y + 4)"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is B.",
+   "dup": 335
+  },
+  {
+   "type": "para",
+   "text": "4. [IMG:image32.wmf]",
+   "images": [
+    "image32.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have ",
+   "dup": 246
+  },
+  {
+   "type": "para",
+   "text": " m = n + 5......(3)"
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (1)."
+  },
+  {
+   "type": "para",
+   "text": "  2(n + 5) + 1 = n − 3"
+  },
+  {
+   "type": "para",
+   "text": "  2n + 10 + 1 = n − 3"
+  },
+  {
+   "type": "para",
+   "text": "  n = −14"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is D."
+  },
+  {
+   "type": "para",
+   "text": "\n5. Let $x be the price of a file and $y be the  price of a notebook."
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image33.wmf]",
+   "images": [
+    "image33.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (1) × 5 – (2) × 3:"
+  },
+  {
+   "type": "para",
+   "text": "  5(4y) – 3(6y) = 5(50) – 3(78)"
+  },
+  {
+   "type": "para",
+   "text": "  2y = 16"
+  },
+  {
+   "type": "para",
+   "text": "  y = 8"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The price of a notebook is $8."
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is D.",
+   "dup": 348
+  },
+  {
+   "type": "para",
+   "text": "6.  [IMG:image34.wmf] = 5",
+   "images": [
+    "image34.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  [IMG:image35.wmf] = [IMG:image36.wmf]",
+   "images": [
+    "image35.wmf",
+    "image36.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  [IMG:image35.wmf] = [IMG:image37.wmf]",
+   "images": [
+    "image35.wmf",
+    "image37.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  [IMG:image38.wmf] = [IMG:image39.wmf]",
+   "images": [
+    "image38.wmf",
+    "image39.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  u = [IMG:image40.wmf]",
+   "images": [
+    "image40.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is A."
+  },
+  {
+   "type": "para",
+   "text": "7.  m(m − 2a) = a(2− m)"
+  },
+  {
+   "type": "para",
+   "text": "  m^{2} − 2am = 2a − am"
+  },
+  {
+   "type": "para",
+   "text": "  m^{2} = 2a + am"
+  },
+  {
+   "type": "para",
+   "text": "  m^{2} = a(m + 2)"
+  },
+  {
+   "type": "para",
+   "text": "  a = [IMG:image41.wmf]",
+   "images": [
+    "image41.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is C.",
+   "dup": 330
+  },
+  {
+   "type": "para",
+   "text": "\n8.  [IMG:image42.wmf] = [IMG:image43.wmf]",
+   "images": [
+    "image42.wmf",
+    "image43.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  (a + b)(b – 2) = 2a – b"
+  },
+  {
+   "type": "para",
+   "text": "  ab + b^{2} – 2a – 2b = 2a – b"
+  },
+  {
+   "type": "para",
+   "text": "  ab – 4a = b – b^{2}"
+  },
+  {
+   "type": "para",
+   "text": "  a(b – 4) = b – b^{2}"
+  },
+  {
+   "type": "para",
+   "text": "  a = [IMG:image44.wmf]",
+   "images": [
+    "image44.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is C.",
+   "dup": 330
+  },
+  {
+   "type": "para",
+   "text": "9. Put x = 0 into the identity."
+  },
+  {
+   "type": "para",
+   "text": " (0 + 5)^{2} + p(0) = (0 – q)(0 + 7) + 12q"
+  },
+  {
+   "type": "para",
+   "text": "  25 = –7q + 12q"
+  },
+  {
+   "type": "para",
+   "text": "  q = 5"
+  },
+  {
+   "type": "para",
+   "text": " Put x = –7 and q = 5 into the identity."
+  },
+  {
+   "type": "para",
+   "text": " (–7 + 5)^{2} + p(–7) = (–7 – 5)(–7 + 7) + 12(5)"
+  },
+  {
+   "type": "para",
+   "text": "  4 – 7p = 60"
+  },
+  {
+   "type": "para",
+   "text": "  p = –8"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is A.",
+   "dup": 362
+  },
+  {
+   "type": "para",
+   "text": " Alternative Solution"
+  },
+  {
+   "type": "para",
+   "text": " By comparing the constant terms on both  sides, we have"
+  },
+  {
+   "type": "para",
+   "text": "  (5)^{2} = (−q)(7) + 12q"
+  },
+  {
+   "type": "para",
+   "text": "  25 = 5q"
+  },
+  {
+   "type": "para",
+   "text": "  q = 5",
+   "dup": 379
+  },
+  {
+   "type": "para",
+   "text": " By comparing the coefficients of x on both   sides, we have"
+  },
+  {
+   "type": "para",
+   "text": "  2(5) + p = −q + 7"
+  },
+  {
+   "type": "para",
+   "text": "  10 + p = −(5) + 7"
+  },
+  {
+   "type": "para",
+   "text": "  p = −8"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is A.",
+   "dup": 362
+  },
+  {
+   "type": "para",
+   "text": "\n10. Distance between the point and the straight \n line"
+  },
+  {
+   "type": "para",
+   "text": " = 4 – 3"
+  },
+  {
+   "type": "para",
+   "text": " = 1"
+  },
+  {
+   "type": "para",
+   "text": " Coordinates of the image"
+  },
+  {
+   "type": "para",
+   "text": " = (3 + 2(1), –2)"
+  },
+  {
+   "type": "para",
+   "text": " = (5, –2)"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is D.",
+   "dup": 348
+  },
+  {
+   "type": "para",
+   "text": "11. Coordinates of B = (3, –7)"
+  },
+  {
+   "type": "para",
+   "text": " Coordinates of C = (–(–7), 3)"
+  },
+  {
+   "type": "para",
+   "text": "  = (7, 3)"
+  },
+  {
+   "type": "para",
+   "text": " ∴ x-coordinate of C = 7"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is D.",
+   "dup": 348
+  }
+ ]
+}

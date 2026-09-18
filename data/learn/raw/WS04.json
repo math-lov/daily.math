@@ -1,0 +1,3192 @@
+{
+ "_comment": "由 tools/extract_eph.py 自動產生（草稿層）。請勿手改；要修正內容請改 data/learn/{bank,concepts,solutions,lessons}.json。",
+ "sourceFile": "EPH_DSEL5_WS04_e.docx",
+ "code": "WS04",
+ "variant": "question",
+ "extractedAt": "2026-09-18T07:58:02Z",
+ "stats": {
+  "blocks": 578,
+  "dups": 208,
+  "images": 13,
+  "images_inline": 0,
+  "sup": 0,
+  "embedFig": 2,
+  "numEq": 0,
+  "marks": 16,
+  "marking": 0,
+  "examples": 8,
+  "practices": 4,
+  "solutions": 0,
+  "noise": 10,
+  "tables": 4
+ },
+ "mediaManifest": [
+  {
+   "name": "image1.png",
+   "size": 42197
+  },
+  {
+   "name": "image10.wmf",
+   "size": 928
+  },
+  {
+   "name": "image11.wmf",
+   "size": 1038
+  },
+  {
+   "name": "image12.wmf",
+   "size": 1482
+  },
+  {
+   "name": "image2.png",
+   "size": 42197
+  },
+  {
+   "name": "image3.png",
+   "size": 21626
+  },
+  {
+   "name": "image4.png",
+   "size": 21626
+  },
+  {
+   "name": "image4.wmf",
+   "size": 1260
+  },
+  {
+   "name": "image5.wmf",
+   "size": 986
+  },
+  {
+   "name": "image6.wmf",
+   "size": 872
+  },
+  {
+   "name": "image7.wmf",
+   "size": 1024
+  },
+  {
+   "name": "image8.wmf",
+   "size": 822
+  },
+  {
+   "name": "image9.wmf",
+   "size": 1018
+  }
+ ],
+ "blocks": [
+  {
+   "type": "para",
+   "text": "S"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts & DSE Paper 1 Typed Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Transformation of Points on a Rectangular Coordinate Plane",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 4.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 4.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 1
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts & DSE Paper 1 Typed Questions",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": "Transformation of Points on a Rectangular Coordinate Plane",
+   "context": "textbox",
+   "dup": 3
+  },
+  {
+   "type": "para",
+   "text": " 4.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 4.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts"
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Translation of a Point on a Rectangular Coordinate Plane"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y) is translated rightwards or leftwards by k units",
+   "style": "af2"
+  },
+  {
+   "type": "para",
+   "text": "e.g.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(i) If A(−7, 3) is translated \n leftwards by 6 units to A′, ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " coordinates of A′",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = (−7 − 6, 3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = (−13, 3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(ii) If B(−2, −6) is translated \n upwards by 3 units to B′, ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " coordinates of B′",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = (−2, −6 + 3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = (−2, −3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "e.g.",
+   "context": "textbox",
+   "dup": 16
+  },
+  {
+   "type": "para",
+   "text": "(i) If A(−7, 3) is translated \n leftwards by 6 units to A′, ",
+   "context": "textbox",
+   "dup": 17
+  },
+  {
+   "type": "para",
+   "text": " coordinates of A′",
+   "context": "textbox",
+   "dup": 18
+  },
+  {
+   "type": "para",
+   "text": " = (−7 − 6, 3)",
+   "context": "textbox",
+   "dup": 19
+  },
+  {
+   "type": "para",
+   "text": " = (−13, 3)",
+   "context": "textbox",
+   "dup": 20
+  },
+  {
+   "type": "para",
+   "text": "(ii) If B(−2, −6) is translated \n upwards by 3 units to B′, ",
+   "context": "textbox",
+   "dup": 21
+  },
+  {
+   "type": "para",
+   "text": " coordinates of B′",
+   "context": "textbox",
+   "dup": 22
+  },
+  {
+   "type": "para",
+   "text": " = (−2, −6 + 3)",
+   "context": "textbox",
+   "dup": 23
+  },
+  {
+   "type": "para",
+   "text": " = (−2, −3)",
+   "context": "textbox",
+   "dup": 24
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P_{1}(x + k, y)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "P_{2}(x – k, y)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "P_{1}(x + k, y)",
+   "context": "textbox",
+   "dup": 36
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "P_{2}(x – k, y)",
+   "context": "textbox",
+   "dup": 38
+  },
+  {
+   "type": "para",
+   "text": "P(x, y) is translated upwards or downwards by k units",
+   "style": "af2"
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "P_{3}(x, y + k)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P_{4}(x, y – k)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "P_{3}(x, y + k)",
+   "context": "textbox",
+   "dup": 47
+  },
+  {
+   "type": "para",
+   "text": "P_{4}(x, y – k)",
+   "context": "textbox",
+   "dup": 48
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Reflection of a Point on a Rectangular Coordinate Plane"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y) is reflected with respect to the x-axis or y-axis",
+   "style": "af2"
+  },
+  {
+   "type": "para",
+   "text": "e.g.",
+   "context": "textbox",
+   "dup": 16
+  },
+  {
+   "type": "para",
+   "text": "(i) If A(−4, 2) is reflected with \n respect to the y-axis to A′, ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " coordinates of A′",
+   "context": "textbox",
+   "dup": 18
+  },
+  {
+   "type": "para",
+   "text": " = (−(−4), 2)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = (4, 2)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(ii) If B(−5, −8) is reflected with\n respect to the x-axis to B′, ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " coordinates of B′",
+   "context": "textbox",
+   "dup": 22
+  },
+  {
+   "type": "para",
+   "text": " = (−5, −(−8))",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = (−5, 8)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "e.g.",
+   "context": "textbox",
+   "dup": 16
+  },
+  {
+   "type": "para",
+   "text": "(i) If A(−4, 2) is reflected with \n respect to the y-axis to A′, ",
+   "context": "textbox",
+   "dup": 60
+  },
+  {
+   "type": "para",
+   "text": " coordinates of A′",
+   "context": "textbox",
+   "dup": 18
+  },
+  {
+   "type": "para",
+   "text": " = (−(−4), 2)",
+   "context": "textbox",
+   "dup": 62
+  },
+  {
+   "type": "para",
+   "text": " = (4, 2)",
+   "context": "textbox",
+   "dup": 63
+  },
+  {
+   "type": "para",
+   "text": "(ii) If B(−5, −8) is reflected with\n respect to the x-axis to B′, ",
+   "context": "textbox",
+   "dup": 64
+  },
+  {
+   "type": "para",
+   "text": " coordinates of B′",
+   "context": "textbox",
+   "dup": 22
+  },
+  {
+   "type": "para",
+   "text": " = (−5, −(−8))",
+   "context": "textbox",
+   "dup": 66
+  },
+  {
+   "type": "para",
+   "text": " = (−5, 8)",
+   "context": "textbox",
+   "dup": 67
+  },
+  {
+   "type": "para",
+   "text": "Reflect with respect \nto the x-axis",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Reflect with respect \nto the y-axis",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Reflect with respect \nto the x-axis",
+   "context": "textbox",
+   "dup": 77
+  },
+  {
+   "type": "para",
+   "text": "Reflect with respect \nto the y-axis",
+   "context": "textbox",
+   "dup": 78
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "P_{2}(–x, y)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "P_{2}(–x, y)",
+   "context": "textbox",
+   "dup": 85
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "P_{1}(x, –y)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "P_{1}(x, –y)",
+   "context": "textbox",
+   "dup": 95
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y) is reflected with respect to a line parallel to \nthe x-axis (i.e. a horizontal line)",
+   "style": "af2"
+  },
+  {
+   "type": "para",
+   "text": "e.g.",
+   "context": "textbox",
+   "dup": 16
+  },
+  {
+   "type": "para",
+   "text": "In the figure, L is the straight line parallel to the x-axis and with \ny-intercept 6. B(3, 2) is reflected \nwith respect to L to B′.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Distance between B(3, 2) and L",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "= 6 – 2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "=4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Coordinates of B′",
+   "context": "textbox",
+   "dup": 22
+  },
+  {
+   "type": "para",
+   "text": "= (3, 2 + 2 × 4)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "= (3, 10)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "e.g.",
+   "context": "textbox",
+   "dup": 16
+  },
+  {
+   "type": "para",
+   "text": "In the figure, L is the straight line parallel to the x-axis and with \ny-intercept 6. B(3, 2) is reflected \nwith respect to L to B′.",
+   "context": "textbox",
+   "dup": 104
+  },
+  {
+   "type": "para",
+   "text": "Distance between B(3, 2) and L",
+   "context": "textbox",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": "= 6 – 2",
+   "context": "textbox",
+   "dup": 106
+  },
+  {
+   "type": "para",
+   "text": "=4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Coordinates of B′",
+   "context": "textbox",
+   "dup": 22
+  },
+  {
+   "type": "para",
+   "text": "= (3, 2 + 2 × 4)",
+   "context": "textbox",
+   "dup": 109
+  },
+  {
+   "type": "para",
+   "text": "= (3, 10)",
+   "context": "textbox",
+   "dup": 110
+  },
+  {
+   "type": "para",
+   "text": "P is below L.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P is above L.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P is below L.",
+   "context": "textbox",
+   "dup": 119
+  },
+  {
+   "type": "para",
+   "text": "P is above L.",
+   "context": "textbox",
+   "dup": 120
+  },
+  {
+   "type": "para",
+   "text": "L",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "P’(x, y – 2k)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "L",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "P’(x, y – 2k)",
+   "context": "textbox",
+   "dup": 127
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "L",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P’(x, y + 2k)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "L",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P’(x, y + 2k)",
+   "context": "textbox",
+   "dup": 142
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "B(3, 2)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "L",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "B(3, 2)",
+   "context": "textbox",
+   "dup": 155
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "L",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y) is reflected with respect to a line parallel to \nthe y-axis (i.e. a vertical line)",
+   "style": "af2"
+  },
+  {
+   "type": "para",
+   "text": "L",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P’(x + 2k, y)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "L",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P’(x + 2k, y)",
+   "context": "textbox",
+   "dup": 171
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "L",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "P’(x – 2k, y)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "L",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P(x, y)",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "P’(x – 2k, y)",
+   "context": "textbox",
+   "dup": 188
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "k units",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P is on the left of L.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P is on the right of L.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "P is on the left of L.",
+   "context": "textbox",
+   "dup": 200
+  },
+  {
+   "type": "para",
+   "text": "P is on the right of L.",
+   "context": "textbox",
+   "dup": 201
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Rotation of a Point on a Rectangular Coordinate Plane"
+  },
+  {
+   "type": "para",
+   "text": "e.g.",
+   "context": "textbox",
+   "dup": 16
+  },
+  {
+   "type": "para",
+   "text": "(i) If A(4, 6) is rotated anticlockwise \n about the origin through 90° to A′, ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " coordinates of A′",
+   "context": "textbox",
+   "dup": 18
+  },
+  {
+   "type": "para",
+   "text": " = (−6, 4)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(ii) If B(–3, –5) is rotated clockwise \n about the origin through 90° to B′, ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " coordinates of B′",
+   "context": "textbox",
+   "dup": 22
+  },
+  {
+   "type": "para",
+   "text": " = (–5, – (–3))",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = (−5, 3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "e.g.",
+   "context": "textbox",
+   "dup": 16
+  },
+  {
+   "type": "para",
+   "text": "(i) If A(4, 6) is rotated anticlockwise \n about the origin through 90° to A′, ",
+   "context": "textbox",
+   "dup": 208
+  },
+  {
+   "type": "para",
+   "text": " coordinates of A′",
+   "context": "textbox",
+   "dup": 18
+  },
+  {
+   "type": "para",
+   "text": " = (−6, 4)",
+   "context": "textbox",
+   "dup": 210
+  },
+  {
+   "type": "para",
+   "text": "(ii) If B(–3, –5) is rotated clockwise \n about the origin through 90° to B′, ",
+   "context": "textbox",
+   "dup": 211
+  },
+  {
+   "type": "para",
+   "text": " coordinates of B′",
+   "context": "textbox",
+   "dup": 22
+  },
+  {
+   "type": "para",
+   "text": " = (–5, – (–3))",
+   "context": "textbox",
+   "dup": 213
+  },
+  {
+   "type": "para",
+   "text": " = (−5, 3)",
+   "context": "textbox",
+   "dup": 214
+  },
+  {
+   "type": "para",
+   "text": "P(x, y) is rotated about the origin",
+   "style": "af2"
+  },
+  {
+   "type": "para",
+   "text": "A(4, 6)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A’",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "90°",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A(4, 6)",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A’",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "90°",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "90°",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "B(–3, –5)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "B'",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "90°",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "B(–3, –5)",
+   "context": "textbox",
+   "dup": 237
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "B'",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 1 Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 1 Questions",
+   "context": "textbox",
+   "dup": 249
+  },
+  {
+   "type": "para",
+   "text": "Practice 1",
+   "context": "textbox",
+   "flags": [
+    "practice"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "The coordinates of the points C and D are ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(−6, 10) and (8, −4) respectively. C′ is the reflection image of C with respect to the y-axis. D is rotated clockwise about O through 90° to D′, where O is the origin. ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(a) Write down the coordinates of C′ and D′.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(b) Find the slope of C′D′.  ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  (4 marks)",
+   "context": "textbox",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Practice 1",
+   "context": "textbox",
+   "flags": [
+    "practice"
+   ],
+   "dup": 251
+  },
+  {
+   "type": "para",
+   "text": "The coordinates of the points C and D are ",
+   "context": "textbox",
+   "dup": 252
+  },
+  {
+   "type": "para",
+   "text": "(−6, 10) and (8, −4) respectively. C′ is the reflection image of C with respect to the y-axis. D is rotated clockwise about O through 90° to D′, where O is the origin. ",
+   "context": "textbox",
+   "dup": 253
+  },
+  {
+   "type": "para",
+   "text": "(a) Write down the coordinates of C′ and D′.",
+   "context": "textbox",
+   "dup": 254
+  },
+  {
+   "type": "para",
+   "text": "(b) Find the slope of C′D′.  ",
+   "context": "textbox",
+   "dup": 255
+  },
+  {
+   "type": "para",
+   "text": "  (4 marks)",
+   "context": "textbox",
+   "flags": [
+    "marks"
+   ],
+   "dup": 256
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2022 Paper 1 Q7]"
+    ],
+    [
+     "The coordinates of the points A and B are (9, −13) and (−7, 5) respectively. A is rotated anticlockwise about O through 90° to A′, where O is the origin. B′ is the reflection image of B with respect to the\ny-axis.\n(a) Write down the coordinates of A′ and B′.\n(b) Find the slope of A′B′.\n(4 marks)\nSolution\n(a) Coordinates of A′ = (−(−13), 9)\n= (13, 9) (1A)\nCoordinates of B′ = (−(−7), 5)\n= (7, 5) (1A)\n(b) Slope of A′B′ = [IMG:image5.wmf] (1M)\n= [IMG:image6.wmf]  (1A)"
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 264
+  },
+  {
+   "type": "para",
+   "text": "Recall:",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "The slope m of a straight line passing through A(x_{1}, y_{1}) and B(x_{2}, y_{2}), where x_{1} ≠ x_{2}, is given by",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " m = [IMG:image4.wmf]",
+   "context": "textbox",
+   "images": [
+    "image4.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Recall:",
+   "context": "textbox",
+   "dup": 266
+  },
+  {
+   "type": "para",
+   "text": "The slope m of a straight line passing through A(x_{1}, y_{1}) and B(x_{2}, y_{2}), where x_{1} ≠ x_{2}, is given by",
+   "context": "textbox",
+   "dup": 267
+  },
+  {
+   "type": "para",
+   "text": " m = [IMG:image4.wmf]",
+   "context": "textbox",
+   "images": [
+    "image4.wmf"
+   ],
+   "dup": 268
+  },
+  {
+   "type": "para",
+   "text": "  "
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2014 Paper 1 Q8]"
+    ],
+    [
+     "The coordinates of the points R and S are\n(−5, −3) and (0, 5) respectively. R is rotated clockwise about the origin O through 270° to R′. S is translated leftwards by 13 units to S′.\n(a) Write down the coordinates of R′ and S′.\n(b) Prove that RS is perpendicular to R′S′.\n(5 marks)\nSolution\n(a) Coordinates of R′ = (−(−3), −5)\n= (3, −5) (1A)\nCoordinates of S′ = (0 − 13, 5)\n= (−13, 5) (1A)\n(b) Slope of RS = [IMG:image7.wmf] (1M)\n= [IMG:image8.wmf]  (1A)\nSlope of R′S′ = [IMG:image9.wmf]\n=[IMG:image10.wmf]\n∵ Slope of RS × slope of R′S′\n= [IMG:image8.wmf]×[IMG:image11.wmf]\n= −1\n∴ RS is perpendicular to R′S′. (1)"
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 275
+  },
+  {
+   "type": "para",
+   "text": "Recall:",
+   "context": "textbox",
+   "dup": 266
+  },
+  {
+   "type": "para",
+   "text": "Consider two straight lines L_{1} and L_{2} with slopes m_{1} and m_{2} respectively, where m_{1}, m_{2} ≠ 0.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "If m_{1} × m_{2} = –1, then L_{1}_{ }⊥ L_{2}.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Recall:",
+   "context": "textbox",
+   "dup": 266
+  },
+  {
+   "type": "para",
+   "text": "Consider two straight lines L_{1} and L_{2} with slopes m_{1} and m_{2} respectively, where m_{1}, m_{2} ≠ 0.",
+   "context": "textbox",
+   "dup": 278
+  },
+  {
+   "type": "para",
+   "text": "If m_{1} × m_{2} = –1, then L_{1}_{ }⊥ L_{2}.",
+   "context": "textbox",
+   "dup": 279
+  },
+  {
+   "type": "para",
+   "text": "either one",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "either one",
+   "context": "textbox",
+   "dup": 283
+  },
+  {
+   "type": "para",
+   "text": "either one",
+   "context": "textbox",
+   "dup": 283
+  },
+  {
+   "type": "para",
+   "text": "either one",
+   "context": "textbox",
+   "dup": 283
+  },
+  {
+   "type": "para",
+   "text": "Practice 2",
+   "context": "textbox",
+   "flags": [
+    "practice"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "The coordinates of the points P and Q are ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(4, 2) and (6, 5) respectively. P is translated leftwards by 3 units to P′. Q is rotated anticlockwise about the origin O through 90° to Q′. ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(a) Write down the coordinates of P′ and Q′.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(b) Prove that PQ is perpendicular to P′Q′.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "    (5 marks)",
+   "context": "textbox",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Practice 2",
+   "context": "textbox",
+   "flags": [
+    "practice"
+   ],
+   "dup": 287
+  },
+  {
+   "type": "para",
+   "text": "The coordinates of the points P and Q are ",
+   "context": "textbox",
+   "dup": 288
+  },
+  {
+   "type": "para",
+   "text": "(4, 2) and (6, 5) respectively. P is translated leftwards by 3 units to P′. Q is rotated anticlockwise about the origin O through 90° to Q′. ",
+   "context": "textbox",
+   "dup": 289
+  },
+  {
+   "type": "para",
+   "text": "(a) Write down the coordinates of P′ and Q′.",
+   "context": "textbox",
+   "dup": 290
+  },
+  {
+   "type": "para",
+   "text": "(b) Prove that PQ is perpendicular to P′Q′.",
+   "context": "textbox",
+   "dup": 291
+  },
+  {
+   "type": "para",
+   "text": "    (5 marks)",
+   "context": "textbox",
+   "flags": [
+    "marks"
+   ],
+   "dup": 292
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Warm-up Questions"
+  },
+  {
+   "type": "para",
+   "text": "1. The coordinates of point B are (−3, 5). Find the coordinates of the image in each of the following."
+  },
+  {
+   "type": "para",
+   "text": " (a) B is translated leftwards by 3 units."
+  },
+  {
+   "type": "para",
+   "text": " (b) B is translated downwards by 5 units."
+  },
+  {
+   "type": "para",
+   "text": "2. Point F(6, −4) is translated upwards by 9 units to point G. G is then translated rightwards by \n 5 units to point H. Find the coordinates of H."
+  },
+  {
+   "type": "para",
+   "text": "3. The coordinates of point B are (−1, −5). B′ is the reflection image of B with respect to the x-axis \n while B′′ is the reflection image of B with respect to the y-axis. Find the coordinates of B′ and B′′."
+  },
+  {
+   "type": "para",
+   "text": "4. The coordinates of point C are (−3, 1). Find the coordinates of the image in each of the following. "
+  },
+  {
+   "type": "para",
+   "text": " (a) C is reflected with respect to a line parallel to the x-axis and passing through (0, 7)."
+  },
+  {
+   "type": "para",
+   "text": " (b) C is reflected with respect to a line parallel to the y-axis and passing through (−5, 0)."
+  },
+  {
+   "type": "para",
+   "text": "5. The coordinates of point A are (2, −4). Find the coordinates of the image in each of the following."
+  },
+  {
+   "type": "para",
+   "text": " (a) A is rotated anticlockwise about the origin through 270°."
+  },
+  {
+   "type": "para",
+   "text": " (b) A is rotated anticlockwise about the origin through 180°."
+  },
+  {
+   "type": "para",
+   "text": " (c) A is rotated clockwise about the origin through 270°."
+  },
+  {
+   "type": "para",
+   "text": "6. The coordinates of point P are (5, 9). P is rotated clockwise about the origin through 90° to \n point Q."
+  },
+  {
+   "type": "para",
+   "text": " (a) Find the coordinates of Q."
+  },
+  {
+   "type": "para",
+   "text": " (b) Find the length of PQ."
+  },
+  {
+   "type": "para",
+   "text": "  (Leave the answer in surd form.) "
+  },
+  {
+   "type": "para",
+   "text": "Recall:",
+   "context": "textbox",
+   "dup": 266
+  },
+  {
+   "type": "para",
+   "text": "Distance between two points \nA(x_{1}, y_{1}) and B(x_{2}, y_{2})",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "= [IMG:image12.wmf]",
+   "context": "textbox",
+   "images": [
+    "image12.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Recall:",
+   "context": "textbox",
+   "dup": 266
+  },
+  {
+   "type": "para",
+   "text": "Distance between two points \nA(x_{1}, y_{1}) and B(x_{2}, y_{2})",
+   "context": "textbox",
+   "dup": 318
+  },
+  {
+   "type": "para",
+   "text": "= [IMG:image12.wmf]",
+   "context": "textbox",
+   "images": [
+    "image12.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ],
+   "dup": 319
+  },
+  {
+   "type": "para",
+   "text": "7. The coordinates of point G are (−7, 11). G is rotated anticlockwise about the origin through 90° \n to point H."
+  },
+  {
+   "type": "para",
+   "text": " (a) Find the coordinates of H."
+  },
+  {
+   "type": "para",
+   "text": " (b) Find the slope of GH."
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "8. The coordinates of P and Q are (–3, 6) and (–4, –8) respectively. P is rotated clockwise about the \n origin 180° to P′. Q is translated rightwards by 7 units to Q′. Find the coordinates of P′ and Q′."
+  },
+  {
+   "type": "para",
+   "text": "9. A(2, –5) is translated 9 units downwards to B. B is then reflected about the y-axis to C. Find the \n coordinates of B and C."
+  },
+  {
+   "type": "para",
+   "text": "10. P(–6, 1) is reflected about the x-axis to Q. Q is then rotated clockwise about the origin through \n 90° to R. Find the coordinates of Q and R."
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 1 Typed Questions"
+  },
+  {
+   "type": "para",
+   "text": "1. In the figure, the coordinates of the points A and B are (9, −4) and  (3, 3) respectively. A is rotated clockwise about the origin O  through 90° to A′. B′ is the reflection image of B with respect to  the x-axis."
+  },
+  {
+   "type": "para",
+   "text": " (a) Write down the coordinates of A′ and B′."
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A(9, −4)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "B(3, 3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A(9, −4)",
+   "context": "textbox",
+   "dup": 335
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "B(3, 3)",
+   "context": "textbox",
+   "dup": 337
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " (b) Are the lengths of AB and A′B′ equal? Explain your answer."
+  },
+  {
+   "type": "para",
+   "text": "    (4 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 256
+  },
+  {
+   "type": "para",
+   "text": "[HKCEE 2006 Paper 1 Q7]"
+  },
+  {
+   "type": "para",
+   "text": "2. In the figure, the coordinates of the point A are (–4, 2). A is \n rotated clockwise about the origin O through 270° to B. A is also \n translated downwards by 10 units to C."
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A(–4, 2)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A(–4, 2)",
+   "context": "textbox",
+   "dup": 351
+  },
+  {
+   "type": "para",
+   "text": " (a) Write down the coordinates of B and C.  (2 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (b) Are O, B and C collinear? Explain your answer.  (3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " [HKCEE 2008 Paper 1 Q12(a), (b)] "
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "3. In the figure, the coordinates of the points E and F are (8, 3)  and (−1, 6) respectively. E′ is the reflection image of E with  respect to the y-axis. F is translated leftwards by 13 units to F′. "
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "F",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "E",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "F",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "E",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " (a) Write down the coordinates of E′ and F′."
+  },
+  {
+   "type": "para",
+   "text": " (b) Is EF parallel to E′F′? Explain your answer."
+  },
+  {
+   "type": "para",
+   "text": "   (5 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 292
+  },
+  {
+   "type": "para",
+   "text": "   [HKCEE 2009 Paper 1 Q9]"
+  },
+  {
+   "type": "para",
+   "text": "4. In the figure, the coordinates of the point C are (6, 10). C is  rotated anticlockwise about the origin O through 90° to C′. \n C′′ is the reflection image of C′ with respect to the x-axis."
+  },
+  {
+   "type": "para",
+   "text": " (a) Write down the coordinates of C′ and C′′."
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "C(6, 10)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "O",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "C(6, 10)",
+   "context": "textbox",
+   "dup": 380
+  },
+  {
+   "type": "para",
+   "text": " (b) Is OC′ perpendicular to CC′′? Explain your answer."
+  },
+  {
+   "type": "para",
+   "text": "   (5 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 292
+  },
+  {
+   "type": "para",
+   "text": "   [HKDSE Sample Paper 1 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "5. The coordinates of the points C and D are (3, 6) and (−1, −4) respectively. C is rotated  anticlockwise about O through 180° to C′, where O is the origin. D′ is the reflection image of D  with respect to the y-axis."
+  },
+  {
+   "type": "para",
+   "text": " (a) Write down the coordinates of C′ and D′.",
+   "dup": 254
+  },
+  {
+   "type": "para",
+   "text": " (b) Find the slope of C′D′.",
+   "dup": 255
+  },
+  {
+   "type": "para",
+   "text": "   (4 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 256
+  },
+  {
+   "type": "para",
+   "text": "   [HKDSE 2022 Paper 1 Q7]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "6. The coordinates of the points E and F are (4, −11) and (−5, 9) respectively. E′ is the reflection  image of E with respect to the x-axis. F is rotated anticlockwise about O through 270° to F′,  where O is the origin. "
+  },
+  {
+   "type": "para",
+   "text": " (a) Write down the coordinates of E′ and F′.",
+   "dup": 371
+  },
+  {
+   "type": "para",
+   "text": " (b) Find the slope of E′F′."
+  },
+  {
+   "type": "para",
+   "text": "   (4 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 256
+  },
+  {
+   "type": "para",
+   "text": "   [HKDSE 2022 Paper 1 Q7]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 393
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "7. The coordinates of the points P and Q are (−1, 5) and (−5, 3) respectively. P′ is the reflection  image of P with respect to the y-axis. Q is rotated clockwise about the origin through 180° to Q′. "
+  },
+  {
+   "type": "para",
+   "text": " (a) Write down the coordinates of P′ and Q′.",
+   "dup": 290
+  },
+  {
+   "type": "para",
+   "text": " (b) Prove that PQ is perpendicular to P′Q′.",
+   "dup": 291
+  },
+  {
+   "type": "para",
+   "text": "   (4 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 256
+  },
+  {
+   "type": "para",
+   "text": "   [HKDSE 2017 Paper 1 Q6]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "8. The coordinates of the points A and B are (11, 7) and (6, −6) respectively. A is rotated clockwise  about the origin through 270° to A′. B′ is the reflection image of B with respect to the x-axis. "
+  },
+  {
+   "type": "para",
+   "text": " (a) Write down the coordinates of A′ and B′.",
+   "dup": 333
+  },
+  {
+   "type": "para",
+   "text": " (b) Prove that AB is perpendicular to A′B′."
+  },
+  {
+   "type": "para",
+   "text": "   (4 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 256
+  },
+  {
+   "type": "para",
+   "text": "   [HKDSE 2017 Paper 1 Q6]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 404
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "9. The coordinates of the points P and Q are (−10, −24) and (−28, 3) respectively. P is rotated  anticlockwise about the origin O through 270° to P′. Q is translated upwards by 13 units to Q′."
+  },
+  {
+   "type": "para",
+   "text": " (a) Write down the coordinates of P′ and Q′.",
+   "dup": 290
+  },
+  {
+   "type": "para",
+   "text": " (b) Is PQ perpendicular to P′Q′? Explain your answer."
+  },
+  {
+   "type": "para",
+   "text": "   (5 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 292
+  },
+  {
+   "type": "para",
+   "text": "   [HKDSE 2014 Paper 1 Q8]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "10. The coordinates of the point A are (6, 12). A is rotated clockwise about the origin O through 90°  to B. M is the mid-point of AB."
+  },
+  {
+   "type": "para",
+   "text": " (a) Find the coordinates of M."
+  },
+  {
+   "type": "para",
+   "text": " (b) Prove that OM is perpendicular to AB."
+  },
+  {
+   "type": "para",
+   "text": "   (5 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 292
+  },
+  {
+   "type": "para",
+   "text": "   [HKCEE 2011 Paper 1 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "11. The coordinates of the point R are (5, −3). R is translated upwards by 4 units to S. S is rotated  clockwise about the origin O through 270° to T. M is the mid-point of RT."
+  },
+  {
+   "type": "para",
+   "text": " (a) Find the coordinates of M.",
+   "dup": 417
+  },
+  {
+   "type": "para",
+   "text": " (b) Is OM perpendicular to RT? Explain your answer."
+  },
+  {
+   "type": "para",
+   "text": "   (5 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 292
+  },
+  {
+   "type": "para",
+   "text": "   [Modified from HKCEE 2011 Paper 1 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 1
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 2 Typed Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Transformation of Points on a Rectangular Coordinate Plane",
+   "context": "textbox",
+   "dup": 3
+  },
+  {
+   "type": "para",
+   "text": " 4.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 4.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 1
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 2 Typed Questions",
+   "context": "textbox",
+   "dup": 429
+  },
+  {
+   "type": "para",
+   "text": "Transformation of Points on a Rectangular Coordinate Plane",
+   "context": "textbox",
+   "dup": 3
+  },
+  {
+   "type": "para",
+   "text": " 4.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 4.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 2 Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 2 Questions",
+   "context": "textbox",
+   "dup": 438
+  },
+  {
+   "type": "para",
+   "text": "[Modified from HKDSE 2020 Paper 2 Q24]",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[Modified from HKDSE 2020 Paper 2 Q24]",
+   "context": "textbox",
+   "dup": 440
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2021 Paper 2 Q23]",
+     ""
+    ],
+    [
+     "The coordinates of the point A are (3, 1). A is reflected with respect to the x-axis to the point B. B is rotated clockwise about the origin through 90° to the point C. Find the x-coordinate of C.\nA. -3\nB. −1\nC. 1\nD. 3\nSolution\nKey Steps: Find the coordinates of B first, and  then find the coordinates of C.\nCoordinates of B = (3, −1)\nCoordinates of C = (−1, −3)\n∴ The x-coordinate of C is −1.\n∴ The answer is B.",
+     "The point P is translated rightwards by 6 units to point Q. If the coordinates of the reflection image of Q with respect to the x-axis are (–3, 5), then the coordinates of P are\nA. (–9, –5).\nB. (3, –5).\nC. (3, 5).\nD. (9, 5).\nSolution\nKey Steps: • By reflecting the point (–3, 5) with   respect to the x-axis, the point Q   can be obtained.\n• By translating the point Q leftwards   by 6 units, the point P can be \n  obtained.\nCoordinates of Q = (−3, −5) → •\nCoordinates of P = (−3 – 6, −5) → •\n= (–9, −5)\n∴ The answer is A."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 264
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 264
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 275
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 275
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Practice 1\nThe coordinates of the point P are (−7, 4). P is reflected with respect to the y-axis to the point Q. Q is rotated anticlockwise about the origin through 90° to the point R. Find the x-coordinate of R.\nA. −7\nB. −4\nC. 4\nD. 7",
+     "Practice 2\nThe point B is the reflection image of the point A with respect to the y-axis. If the point B is translated downwards by 7 units to (1, –2), then the coordinates of A are\nA. (–1, –9).\nB. (–1, 5).\nC. (1, –5).\nD.  (1, 5)."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 449
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 450
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 451
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "1. If the point (−7, −2) is rotated anticlockwise about the origin through  270°, then the coordinates of its image are"
+  },
+  {
+   "type": "para",
+   "text": "  A. (−2, 7)."
+  },
+  {
+   "type": "para",
+   "text": "  B. (7, −2)."
+  },
+  {
+   "type": "para",
+   "text": "  C. (2, −7)."
+  },
+  {
+   "type": "para",
+   "text": "  D. (−7, 2)."
+  },
+  {
+   "type": "para",
+   "text": "     [HKDSE Sample Paper 2 Q26, HKCEE 2007 P2 Q29]"
+  },
+  {
+   "type": "para",
+   "text": "2. The coordinates of the point A are (4, −4). L is a vertical line passing \n through (2, 0). If A is reflected with respect to the straight line L to the \n point B, then the distance between A and B is"
+  },
+  {
+   "type": "para",
+   "text": "   A. 1."
+  },
+  {
+   "type": "para",
+   "text": "  B. 2."
+  },
+  {
+   "type": "para",
+   "text": "  C. 3."
+  },
+  {
+   "type": "para",
+   "text": "  D. 4.  [Modified from HKCEE 2009 Paper 2 Q30]"
+  },
+  {
+   "type": "para",
+   "text": "3. If the point (3, 5) is reflected with respect to a straight line parallel to  the y-axis and passing through (−2, 0), then the x-coordinate of its  image is"
+  },
+  {
+   "type": "para",
+   "text": "  A. −7."
+  },
+  {
+   "type": "para",
+   "text": "  B. −1."
+  },
+  {
+   "type": "para",
+   "text": "  C. 1."
+  },
+  {
+   "type": "para",
+   "text": "  D. 3.  [Modified from HKDSE Practice Paper 2 Q25]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "4. If the point (8, −9) is reflected with respect to a straight line parallel to  the x-axis and passing through (0, −5), then the coordinates of its  image are"
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 449
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 450
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 451
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 449
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 450
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 451
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "  A. (−18, −9)."
+  },
+  {
+   "type": "para",
+   "text": "  B. (8, −4)."
+  },
+  {
+   "type": "para",
+   "text": "  C. (8, −1)."
+  },
+  {
+   "type": "para",
+   "text": "  D. (13, −9).  [Modified from HKDSE Practice Paper 2 Q25]"
+  },
+  {
+   "type": "para",
+   "text": "5. The coordinates of the point P are (−2, −5). P is rotated clockwise about  the origin through 270° to the point Q. Q is then translated leftwards by  4 units to the point R. Find the x-coordinate of R."
+  },
+  {
+   "type": "para",
+   "text": "   A. −2"
+  },
+  {
+   "type": "para",
+   "text": "  B. −1"
+  },
+  {
+   "type": "para",
+   "text": "  C. 1"
+  },
+  {
+   "type": "para",
+   "text": "  D. 2  [HKDSE 2019 Paper 2 Q25]"
+  },
+  {
+   "type": "para",
+   "text": "6. The coordinates of the point D are (8, −8). D is translated rightwards by  1 unit to the point E. E is then rotated anticlockwise about the origin  through 180° to the point F. Find the coordinates of F."
+  },
+  {
+   "type": "para",
+   "text": "   A. (−9, 8)"
+  },
+  {
+   "type": "para",
+   "text": "  B. (9, −8)"
+  },
+  {
+   "type": "para",
+   "text": "  C. (−7, 8)"
+  },
+  {
+   "type": "para",
+   "text": "  D. (7, −8)  [Modified from HKDSE 2019 Paper 2 Q25]"
+  },
+  {
+   "type": "para",
+   "text": "7. The coordinates of the point A are (−2, −1). A is reflected with respect  to the x-axis to the point B. B is then rotated anticlockwise about the  origin through 90° to the point C. Find the x-coordinate of C."
+  },
+  {
+   "type": "para",
+   "text": "   A. −2",
+   "dup": 516
+  },
+  {
+   "type": "para",
+   "text": "  B. −1",
+   "dup": 517
+  },
+  {
+   "type": "para",
+   "text": "  C. 1",
+   "dup": 518
+  },
+  {
+   "type": "para",
+   "text": "  D. 2  [HKDSE 2021 Paper 2 Q23]"
+  },
+  {
+   "type": "para",
+   "text": "8. The coordinates of the point R are (1, 4). R is rotated clockwise about  the origin through 270° to the point S. S is then reflected with respect to  the y-axis to the point T. Find the y-coordinate of T."
+  },
+  {
+   "type": "para",
+   "text": "   A. −4"
+  },
+  {
+   "type": "para",
+   "text": "  B. −1",
+   "dup": 517
+  },
+  {
+   "type": "para",
+   "text": "  C. 1",
+   "dup": 518
+  },
+  {
+   "type": "para",
+   "text": "  D. 4  [HKDSE 2021 Paper 2 Q23]\n"
+  },
+  {
+   "type": "para",
+   "text": "9. The coordinates of the point A are (−6, −1). L is a straight line parallel  to the y-axis and passing through (−4, 0). If A is translated upwards by "
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 449
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 450
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 451
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "12",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 449
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 450
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 451
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "12",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": " 3 units to the point B, then the coordinates of the reflection image of B  with respect to the straight line L are"
+  },
+  {
+   "type": "para",
+   "text": "   A. (2, 2)."
+  },
+  {
+   "type": "para",
+   "text": "  B. (2, −2)."
+  },
+  {
+   "type": "para",
+   "text": "  C. (−2, 2)."
+  },
+  {
+   "type": "para",
+   "text": "  D. (−2, −2). [Modified from HKCEE 2011 Paper 2 Q29]"
+  },
+  {
+   "type": "para",
+   "text": "10. The coordinates of the point D are (3, −4). L is a straight line parallel  to the x-axis and passing through (0, −1). If D is reflected with respect  to the straight line L to the point E, and then E is translated leftwards by  2 units to the point F, then the coordinates of F are"
+  },
+  {
+   "type": "para",
+   "text": "   A. (1, 2)."
+  },
+  {
+   "type": "para",
+   "text": "  B. (1, −2)."
+  },
+  {
+   "type": "para",
+   "text": "  C. (−1, 2)."
+  },
+  {
+   "type": "para",
+   "text": "  D. (−1, −2). [Modified from HKCEE 2011 Paper 2 Q29]"
+  },
+  {
+   "type": "para",
+   "text": "11. The point P is translated leftwards by 10 units to the point Q. If the  coordinates of the reflection image of Q with respect to the y-axis are \n (–4, –6), then the coordinates of P are"
+  },
+  {
+   "type": "para",
+   "text": "   A. (−14, 6)."
+  },
+  {
+   "type": "para",
+   "text": "  B. (−6, −6)."
+  },
+  {
+   "type": "para",
+   "text": "  C. (6, 6)."
+  },
+  {
+   "type": "para",
+   "text": "  D. (14, −6). [Modified from HKDSE 2020 Paper 2 Q24]"
+  },
+  {
+   "type": "para",
+   "text": "12. The point A is rotated anticlockwise about the origin through 90° to \n the point B. If B is translated upwards by 6 units to (5, –8), then the \n coordinates of A are"
+  },
+  {
+   "type": "para",
+   "text": "   A. (−14, −5)."
+  },
+  {
+   "type": "para",
+   "text": "  B. (−2, −5)."
+  },
+  {
+   "type": "para",
+   "text": "  C. (2, 5)."
+  },
+  {
+   "type": "para",
+   "text": "  D. (14, 5). [Modified from HKDSE 2020 Paper 2 Q24]"
+  }
+ ]
+}

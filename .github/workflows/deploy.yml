@@ -1,4 +1,4 @@
-name: Deploy Daily Three to GitHub Pages
+name: Deploy Daily Three + Learn site to GitHub Pages
 
 on:
   push:
@@ -39,6 +39,27 @@ jobs:
       - name: Solutions must stay inside the HKDSE syllabus
         run: python tools/syllabus_check.py
 
+      # ── 自學追上站（learn/）────────────────────────────────────────────
+      # 政策（2026-09-18 老師決定）：learn 的檢查**只作警告**，不擋住每日站的發佈。
+      # 每日站（site/）仍然是硬性閘門：它的四道檢查失敗＝整份產物不部署。
+      # learn 若失敗，該步會顯示為失敗（紅色）＋下面的警告訊息，但部署照樣繼續。
+      - name: Learn site — generate data (data/learn → learn/data)
+        continue-on-error: true
+        run: python tools/make_learn_data.py
+      - name: Learn site — structure & syllabus check
+        continue-on-error: true
+        run: python tools/learn_check.py
+      - name: Learn site — LaTeX check (real KaTeX)
+        continue-on-error: true
+        run: node tools/learn_katex_check.js
+      - name: Learn site — student-flow smoke test
+        continue-on-error: true
+        run: node tools/learn_smoke_test.js
+      - name: Learn site — warning summary
+        if: always()
+        run: |
+          echo "::warning title=自學追上站::learn 的檢查只作警告，不會擋住部署。若上面任何一步失敗，請盡快在本機修正（工具：tools/learn_check.py、tools/learn_katex_check.js、tools/learn_smoke_test.js）。"
+
   deploy:
     needs: verify
     environment:
@@ -51,8 +72,17 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           enabled: true
+      # 兩站共用同一個 Pages 產物：每日三題站在根目錄，自學追上站在 /learn/
+      # （GitHub Pages 每次部署會整份取代，所以必須一起打包）
+      - name: Assemble publish folder (daily site at /, learn site at /learn)
+        run: |
+          mkdir -p _publish
+          cp -r site/. _publish/
+          mkdir -p _publish/learn
+          cp -r learn/. _publish/learn/
+          echo "published:"; ls -1 _publish | head -20
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: _publish
       - id: deployment
         uses: actions/deploy-pages@v4

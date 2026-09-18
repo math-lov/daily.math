@@ -277,3 +277,45 @@ git push                            # GitHub Pages 1 分鐘後自動上線
     * 把關程式：`& $py tools\syllabus_check.py`（CI 與面板發佈流程都會跑，**0 錯誤**才可上線）。
 12. **例外要留痕**：真的非用不可時，寫入 `data/syllabus_exceptions.json`（附原因與 `until` 日期），
     過期會自動恢復為錯誤 —— 技術債不會無聲留下。
+
+---
+
+## 6. 自學追上站（`learn/`，2026-09 新增）
+
+給能力落後、想追上來的同學：按課題逐課學習（概念卡 → 示範題解 → MC 每頁 3 題）。
+**與每日三題站完全分開**：不同資料層（`data/learn/`）、不同 localStorage key（`dse-learn:v1`）、
+不同前端資料（`learn/data/*.js`）；每日站的檔案一律不動。
+
+* 網址：`https://math-lov.github.io/daily.math/learn/`（同一個 Pages 產物，`deploy.yml` 已改成
+  「每日站在根目錄、自學站在 `/learn/`」一起打包 —— GitHub Pages 每次部署會整份取代，所以必須一起部署）
+* 內容來源：`inbox_learn/` 的 EPH《HKDSE All-Round Level 5 Assurance Pack》（24 份工作紙＋8 份 Assessment）
+* 進度：只存在學生瀏覽器；老師端不收集任何資料
+* 詳細流程與契約：見 `learn/README.md`
+
+### 每次新增課題（例如補上 WS02）
+
+```powershell
+cd "C:\Code Buddy\HKDSE"
+& $py   tools\extract_eph.py --files WS02        # 題目版＋題解版一齊抽
+& $py   tools\wmf_to_png.py --dir data\learn\raw\media --recursive   # 公式圖轉 PNG（供讀圖轉寫）
+& $py   tools\eph_digest.py --files WS02 --variant both              # 產生閱讀摘要
+# → 整理進 data/learn/{bank,concepts,solutions,lessons}.json
+& $py   tools\make_learn_data.py                 # 產生 learn/data/*.js
+& $py   tools\learn_check.py                     # 結構＋課程合規：必須 0 錯誤
+& $node tools\learn_katex_check.js               # 真 KaTeX 逐條解析
+& $node tools\learn_smoke_test.js                # 學生流程：必須全 PASS
+git add -A; git commit -m "Learn: WS02"; git push
+```
+
+### 發佈邊界（重要）
+
+* **真正的防線在生成器**：`make_learn_data.py` **不會輸出 `review` 旗標未清的題目**
+  （嵌圖公式待覆核、可疑轉寫等），`learn_check.py` 亦會把「被課程引用但未覆核」列為錯誤。
+  所以未覆核的內容不會出現在網站上。
+* **CI 政策（2026-09-18 老師決定）**：`deploy.yml` 的 learn 四道檢查設了
+  `continue-on-error: true` —— 自學站有問題**只作警告**，不會擋住每日三題站的發佈。
+  代價是「資料層級」以外的問題（例如前端壞掉）仍可能上線，所以上線後最好開一次 `/learn/` 抽查。
+  每日三題站的四道檢查（`npm run check`、`npm test`、`verify_answers.py`、`syllabus_check.py`）
+  仍然是**硬閘門**：失敗即整份產物不部署。
+* 想在本機先看未覆核版本：`& $py tools\make_learn_data.py --include-review --out build\learn-preview`
+  （**切勿**把 `--include-review` 的輸出當成網站）。

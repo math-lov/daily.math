@@ -1,0 +1,97 @@
+# 自學追上站（learn/）
+
+給**能力落後、但有心追上**的同學：按課題逐課學習，先看概念卡，再看示範題解，然後每頁三題練習。
+無計時、無連續天數、可重做、可重置；進度只存在學生自己的瀏覽器。
+
+* 網址（與每日三題站同一個 Pages）：`https://math-lov.github.io/daily.math/learn/`
+* 進度儲存：`localStorage` key = `dse-learn:v1`（與每日三題站的 `daily3.v1` **完全分開**）
+* 內容來源：校內訂購的 EPH《HKDSE All-Round Level 5 Assurance Pack》（`inbox_learn/`）
+
+---
+
+## 1. 頁面結構
+
+| 檔案 | 用途 |
+|---|---|
+| `index.html` | 首頁：Stage 分組的課題按鈕牆、進度環、「繼續學習」、錯題本入口、清除進度 |
+| `topic.html?t=<topicId>&p=<頁碼>` | 課題頁：**頁數導覽列**（學習／示範／練習）＋常駐「← 回到主目錄」 |
+| `wrong.html` | 錯題本：只收答錯的 MC，答對就移出 |
+
+每課固定節奏：**① 概念卡（2–6 張）→ ② 長題目示範 → ③ MC 每頁 3 題**。
+頁面切換用 query param（不用 hash），所有資源路徑都是**相對路徑**（因為掛在 `/learn/` 子目錄）。
+
+## 2. 資料流
+
+```
+inbox_learn/*.docx                    原始教材（唯讀，不進 git）
+      │  python tools/extract_eph.py --stage 1
+      ▼
+data/learn/raw/*.json + media/       抽取草稿（禁手改；media 為圖，不入 git）
+      │  python tools/wmf_to_png.py --dir data/learn/raw/media --recursive
+      ▼
+data/learn/raw/media/**/*.png        公式圖轉 PNG（讓 AI／老師可讀圖轉寫）
+      │  （AI 整理＋標旗標）
+      ▼
+data/learn/bank.json                 題庫（mc / long，含 review 旗標）
+data/learn/concepts.json             概念卡
+data/learn/solutions.json            題解（steps ＋ why 詳解 ＋ marking ＋ traps ＋ tip）
+data/learn/lessons.json              課程編排（Stage → 課題 → 課 → 頁）
+      │  python tools/make_learn_data.py
+      ▼
+learn/data/*.js + learn/vendor/katex 生成檔（禁手改）＋ 自托管 KaTeX
+```
+
+**編輯層 vs 生成層**：要改內容，一律改 `data/learn/*.json`；`learn/data/*.js` 是生成物，下次生成會被覆蓋。
+
+## 3. 三支檢查器（發佈閘門）
+
+```powershell
+cd "C:\Code Buddy\HKDSE"
+$py   = "C:\Users\t073\.workbuddy\binaries\python\envs\default\Scripts\python.exe"
+$node = "C:\Users\t073\.workbuddy\binaries\node\versions\22.22.2-3\node.exe"
+
+& $py   tools\make_learn_data.py      # 產生 learn/data/*.js
+& $py   tools\learn_check.py          # 結構／契約／覆核旗標／度制／禁坐標向量 → 必須 0 錯誤
+& $node tools\learn_katex_check.js    # 用真 KaTeX 逐條解析所有數學式
+& $node tools\learn_smoke_test.js     # 模擬學生全流程（首頁→概念卡→示範→MC→錯題本）
+```
+
+CI（`.github/workflows/deploy.yml`）在發佈前也會跑齊以上四步，但**只作警告**（`continue-on-error: true`）：
+自學站有問題**不會擋住每日三題站**的發佈，但該步會在 Actions 顯示失敗並附警告訊息。
+
+> 真正的內容防線在生成器：`make_learn_data.py` 不會輸出 `review` 未清的題目，
+> `learn_check.py` 亦會把「被課程引用但未覆核」列為錯誤 —— 所以未覆核的內容不會出現在網站上，
+> 即使 CI 只作警告也一樣。（每日站的四道檢查仍是硬閘門，失敗即整份不部署。）
+
+## 4. 硬規則（與每日三題站一致）
+
+1. **角度一律用「度」**，禁弧度（`rad`、`\frac{\pi}{3}`…）。
+2. **主解法必須在 DSE 必修範圍內**：追角／全等相似／面積比／直角三角形三角比；
+   坐標法、向量法只可放 `solution.alt`（學生端摺疊顯示，**不作第一解法**）。
+3. 文字欄位內**不准裸寫 `$`**（貨幣請寫純數字，例如 `46 422`）。
+4. `review` 旗標非 `null` 的題目**不會出站**（`make_learn_data.py` 剔除、`learn_check.py` 報錯）。
+5. 教師欄位（`notes`、`review`…）不進公開檔（`strip_teacher_only()`）。
+
+## 5. 新增一個課題（之後補 WS02–WS24 / AS1–8）
+
+```powershell
+& $py tools\extract_eph.py --files WS02,WS02-sol     # 1. 抽取（-sol 為題解版，指令用 WS02 會連題解版一齊）
+& $py tools\eph_digest.py --files WS02 --variant both  # 2. 產生閱讀用摘要 data/learn/raw/digest/
+# 3. 逐題整理進 data/learn/{bank,concepts,solutions,lessons}.json
+& $py tools\make_learn_data.py                        # 4. 生成
+& $py tools\learn_check.py; & $node tools\learn_katex_check.js; & $node tools\learn_smoke_test.js
+git add -A; git commit -m "Learn: add WS02"; git push  # 5. 發佈（GitHub Pages 約 1 分鐘）
+```
+
+## 6. 嵌圖公式（EPH 把公式存成 WMF 圖）
+
+`inbox_learn` 的 Word 檔有大量公式是**圖片**（Stage 1 十個檔就有 835 個 WMF）。
+處理方式：`wmf_to_png.py` 用 Windows GDI+ 轉成高解析 PNG → 讀圖轉寫成 LaTeX →
+在 `bank.json` 標 `review` 旗標 → 老師覆核後清掉旗標才出站。
+
+## 7. 已知限制
+
+* 目前只有 **Stage 1 的第一課（WS01 因式分解）**；其餘課題按第 5 節流程逐批補上。
+* 長題目示範只展示題解與教學，**不要求學生作答**（進度記「已讀完示範」）。
+* 錯題本只收 MC；示範題答錯不記錄。
+* KaTeX 為自托管（`learn/vendor/katex`），**不要改用 CDN**（學校網絡／離線要能用）。

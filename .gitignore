@@ -29,3 +29,7 @@ Thumbs.db
 # 但 data/ai/classification.json 與 classification_review.md 要入庫（審計軌跡）
 data/ai/classification_input.json
 data/ai/_test_*
+
+# 自學追上站：EPH docx 抽取出的媒體與轉圖（可由 docx → extract_eph.py → wmf_to_png.py 重建）
+data/learn/raw/media/
+data/learn/raw/digest/

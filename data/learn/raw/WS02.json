@@ -1,0 +1,1915 @@
+{
+ "_comment": "由 tools/extract_eph.py 自動產生（草稿層）。請勿手改；要修正內容請改 data/learn/{bank,concepts,solutions,lessons}.json。",
+ "sourceFile": "EPH_DSEL5_WS02_e.docx",
+ "code": "WS02",
+ "variant": "question",
+ "extractedAt": "2026-09-18T07:58:02Z",
+ "stats": {
+  "blocks": 320,
+  "dups": 111,
+  "images": 20,
+  "images_inline": 0,
+  "sup": 0,
+  "embedFig": 0,
+  "numEq": 0,
+  "marks": 22,
+  "marking": 4,
+  "examples": 8,
+  "practices": 2,
+  "solutions": 0,
+  "noise": 12,
+  "tables": 6
+ },
+ "mediaManifest": [
+  {
+   "name": "image1.png",
+   "size": 21626
+  },
+  {
+   "name": "image10.wmf",
+   "size": 1280
+  },
+  {
+   "name": "image11.wmf",
+   "size": 1448
+  },
+  {
+   "name": "image12.png",
+   "size": 2298
+  },
+  {
+   "name": "image13.png",
+   "size": 2298
+  },
+  {
+   "name": "image14.wmf",
+   "size": 1430
+  },
+  {
+   "name": "image15.wmf",
+   "size": 1318
+  },
+  {
+   "name": "image16.png",
+   "size": 2298
+  },
+  {
+   "name": "image16.wmf",
+   "size": 1354
+  },
+  {
+   "name": "image17.png",
+   "size": 2298
+  },
+  {
+   "name": "image2.png",
+   "size": 42197
+  },
+  {
+   "name": "image3.png",
+   "size": 21626
+  },
+  {
+   "name": "image3.wmf",
+   "size": 1440
+  },
+  {
+   "name": "image4.png",
+   "size": 42197
+  },
+  {
+   "name": "image4.wmf",
+   "size": 1472
+  },
+  {
+   "name": "image5.wmf",
+   "size": 1440
+  },
+  {
+   "name": "image6.wmf",
+   "size": 1530
+  },
+  {
+   "name": "image7.wmf",
+   "size": 1226
+  },
+  {
+   "name": "image8.wmf",
+   "size": 1286
+  },
+  {
+   "name": "image9.wmf",
+   "size": 1250
+  }
+ ],
+ "blocks": [
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts & DSE Paper 1 Typed Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Linear Equations in Two Unknowns",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 2.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 0
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts & DSE Paper 1 Typed Questions",
+   "context": "textbox",
+   "dup": 1
+  },
+  {
+   "type": "para",
+   "text": "Linear Equations in Two Unknowns",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": " 2.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Method of Substitution",
+     ""
+    ],
+    [
+     "Case 1: Direct Substitution\n[IMG:image3.wmf]\nPut (1) into (2).\nx + 3x  = 12\n4x = 12\nx = 3\nPut x = 3 into (1).\n3(3)  = y\ny = 9\n∴ The solution is x = 3 and y = 9.",
+     "Case 2: Change Subject First\n[IMG:image4.wmf]\nFrom (2), we have  x = y + 1 ...... (3)\nPut (3) into (1).\n2(y + 1) + 3y  = 12\n5y + 2 = 12\ny = 2\nPut y = 2 into (3).\nx = 2 + 1 = 3\n∴ The solution is x = 3 and y = 2."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ y is the subject of (1).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ y is the subject of (1).",
+   "context": "textbox",
+   "dup": 12
+  },
+  {
+   "type": "para",
+   "text": "→ A linear equation in x is obtained.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ A linear equation in x is obtained.",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "→ Make x the subject of (2).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ Make x the subject of (2).",
+   "context": "textbox",
+   "dup": 16
+  },
+  {
+   "type": "para",
+   "text": "→ A linear equation in y is obtained.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ A linear equation in y is obtained.",
+   "context": "textbox",
+   "dup": 18
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Method of Elimination",
+     ""
+    ],
+    [
+     "3x – y = –6 ...... (1)\n2x + y = 1 ........ (2)\n(1) + (2):\n(3x – y) + (2x + y)  = –6 + 1\n5x = –5\nx = –1\nPut x = –1 into (2).\n2(–1) + y  = 1\ny = 3\n∴ The solution is x = –1 and y = 3.",
+     "3x – y = –6 .......... (1)\n2x – y = 1 ............ (2)\n(1) – (2):\n(3x – y) – (2x – y)  = –6 – 1\n3x – y – 2x + y = –7\nx = –7\nPut x = –7 into (2).\n2(–7) – y  = 1\ny = –15\n∴ The solution is x = –7 and y = –15."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "The coefficients of y are \na pair of opposite numbers.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Addition",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "The coefficients of y are \na pair of opposite numbers.",
+   "context": "textbox",
+   "dup": 23
+  },
+  {
+   "type": "para",
+   "text": "Addition",
+   "context": "textbox",
+   "dup": 24
+  },
+  {
+   "type": "para",
+   "text": "The coefficients of y are\nthe same.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "The coefficients of y are\nthe same.",
+   "context": "textbox",
+   "dup": 27
+  },
+  {
+   "type": "para",
+   "text": "Subtraction",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Subtraction",
+   "context": "textbox",
+   "dup": 29
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 1 Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 1 Questions",
+   "context": "textbox",
+   "dup": 32
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2021 Paper 1 Q5]"
+    ],
+    [
+     "The number of chocolate bars owned by Henry is 2 times that owned by Winka. If Henry gives 6 of his chocolate bars to Winka, then the number of chocolate bars owned by Winka is 5 times that owned by Henry. Find the total number of chocolate bars owned by Henry and Winka. (4 marks)\nSolution\nLet x and y be the original numbers of chocolate bars \nowned by Henry and Winka respectively.\n[IMG:image5.wmf]\nPut (1) into (2).\n5(2y – 6)  = y + 6 (1M)\n9y = 36\ny = 4\n∴ The total number of chocolate bars owned by Henry and Winka\n= 2(4) + 4\n= 12 (1A)"
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "→ Step 1: Identify the two unknowns to be  found in the question and use  different letters to represent them.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ Step 1: Identify the two unknowns to be  found in the question and use  different letters to represent them.",
+   "context": "textbox",
+   "dup": 37
+  },
+  {
+   "type": "para",
+   "text": "→ Step 2: Set up simultaneous equations.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ Step 2: Set up simultaneous equations.",
+   "context": "textbox",
+   "dup": 39
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "→ Step 3: Solve the simultaneous equations.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ Step 3: Solve the simultaneous equations.",
+   "context": "textbox",
+   "dup": 43
+  },
+  {
+   "type": "para",
+   "text": "→ Step 4: Write down the solution.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ Step 4: Write down the solution.",
+   "context": "textbox",
+   "dup": 45
+  },
+  {
+   "type": "para",
+   "text": "Practice 1",
+   "flags": [
+    "practice"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "The number of keychains owned by a boy is 3 times that owned by a girl. If the boy gives 10 of his keychains to the girl, then the number of keychains owned by the boy is half that owned by the girl. Find the total number of keychains owned by the boy and the girl. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2023 Paper 1 Q5]"
+    ],
+    [
+     "On a bus, the number of male passengers is 80% more than the number of female passengers. If\n56 male passengers get off the bus, then the number of female passengers is 80% more than the\nnumber of male passengers. Find the number of female passengers on the bus. (4 marks)\nSolution\nLet x and y be the number of female passengers and the original number of male passengers on the bus respectively.\n[IMG:image6.wmf]\nPut (1) into (2).  → To find the number of female passengers, we need to eliminate y.\nx = (1 + 80%)((1 + 80%)x – 56) (1M: for getting a linear equation in one unknown)\nx = 3.24x – 100.8\n2.24x = 100.8\nx = 45 (1A)\n∴ The number of female passengers on the bus is 45."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "Practice 2",
+   "flags": [
+    "practice"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "In a concert hall, the number of female audiences is 40% more than the number of male audiences. If \n480 more male audiences enter the hall, then the number of male audiences is 40% more than the number of female audiences. Find the number of female audiences in the hall. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Warm-up Questions"
+  },
+  {
+   "type": "para",
+   "text": "Solve each of the following simultaneous equations by the method of substitution. (1 – 2)"
+  },
+  {
+   "type": "para",
+   "text": "1. [IMG:image7.wmf] 2. [IMG:image8.wmf]",
+   "images": [
+    "image7.wmf",
+    "image8.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Solve each of the following simultaneous equations by the method of elimination. (3 – 4)"
+  },
+  {
+   "type": "para",
+   "text": "3. [IMG:image9.wmf] 4. [IMG:image10.wmf]",
+   "images": [
+    "image9.wmf",
+    "image10.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Solve each of the following simultaneous equations by an algebraic method. (5 – 8)"
+  },
+  {
+   "type": "para",
+   "text": "5. 2x – 3 = y = 3x + 1 6. m – 2n = 9m + 2n = 20"
+  },
+  {
+   "type": "para",
+   "text": "7. 4q – p = 5q – 3p = 14 8. 8a + 3b = 35 = 2a + 6b"
+  },
+  {
+   "type": "para",
+   "text": "\nDSE Paper 1 Typed Questions"
+  },
+  {
+   "type": "para",
+   "text": "1. Let x and y be two numbers. The difference of x and y is 52 while x is 5 times y. Find y. "
+  },
+  {
+   "type": "para",
+   "text": "(3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2022 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "2. The sum of two numbers x and y is 73. If x is greater than 3 times y by 1, find y. (3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2022 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 70
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "3. The price of 3 oranges and 5 apples is $37 while the price of 7 oranges and 4 apples is $48."
+  },
+  {
+   "type": "para",
+   "text": " Find the price of an orange.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2013 Paper 1 Q4]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "4. Gary buys some $2.2 stamps and $3.3 stamps for $99. If the total number of stamps bought is 35, how many $2.2 stamps does Gary buy?   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKCEE 2007 Paper 1 Q7]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "5. The total number of books owned by Amy and Billy is 84. If Amy buys 12 books from a book  store, the number of books owned by her will be 3 times that owned by Billy. Find the number of  books owned by Billy.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKCEE 2009 Paper 1 Q6]"
+  },
+  {
+   "type": "para",
+   "text": "6. In a basketball league, each team gains 2 points for a win, 1 point for a draw and 0 point for a loss.  The champion of the league plays 42 games and gains a total of 75 points. Given that the champion  does not lose any games, find the number of games that the champion draws. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE Sample Paper 1 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "7. There are only two kinds of rooms provided by a hotel: double bed rooms and single bed rooms. The prices per day of a double bed room and a single bed room are $1100 and $950 respectively. On a certain day, the number of double bed rooms booked is 3 times the number of single bed rooms booked and the sum of money for the rooms booked is $46 750. Find the total number of rooms booked that day. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2017 Paper 1 Q4]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "8. The number of stamps owned by Alan is 3 times that owned by Benny. If Alan gives 12 of his  stamps to Benny, they will have the same number of stamps. Find the total number of stamps  owned by Alan and Benny.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2015 Paper 1 Q7]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "9. The number of candies owned by a girl is 2 times that owned by a boy. If the girl gives 30 of her candies to the boy, then the number of candies owned by the boy is 3 times that owned by the girl.  Find the total number of candies owned by the girl and the boy. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2021 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "10. The number of fiction books owned by Kevin is 4 times that owned by Jessie. If Kevin gives 10 of  his fiction books to Jessie, then the number of fiction books owned by Kevin is 2 times that owned  by Jessie. Find the total number of fiction books owned by Kevin and Jessie. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2021 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 91
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "11. In a party, the ratio of the number of men to the number of women is 8 : 7. If 6 men and 4 women  leave the party, then the ratio of the number of men to the number of women is 10 : 9. Find the  original number of men in the party.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2019 Paper 1 Q7]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "12. The ratio of the number of stickers owned by Anthony to the number of stickers owned by Heidi is  5 : 3. If Anthony gives 21 of his own stickers to Heidi, then the ratio of the number of stickers  owned by Anthony to the number of stickers owned by Heidi is 7 : 9. Find the original number  of stickers owned by Anthony.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2019 Paper 1 Q7]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 96
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "13. There are 84 helpers in an open day. The helpers are divided into 4 groups, and each group has the  same number of helpers. In each group, there are 3 more male helpers than female helpers. Find  the number of female helpers in the open day.  (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2012 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "14. There are 140 guards in an international jewellery exhibition consisting of 5 zones. Each zone has  the same number of guards. In each zone, there are 6 less female guards than male guards. Find the  number of male guards in the exhibition.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2012 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 101
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "15. In a fitness centre, there are 990 members and the number of male members is 20% more than the  number of female members. Find the difference of the numbers of male members and female  members.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2016 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "16. There are 154 magazines and comic books on a bookshelf. The number of magazines is 25% less  than the number of comic books. Find the difference of the numbers of comic books and magazines."
+  },
+  {
+   "type": "para",
+   "text": "(4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2016 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 106
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "17. On a tram, the number of male passengers is 50% more than the number of female passengers. If  25 male passengers get off the tram, then the number of female passengers is 50% more than the  number of male passengers. Find the number of female passengers on the tram. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2023 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "18. In a school hall, the number of teachers is 20% more than the number of students. If 22 more students enter the hall, then the number of students is 20% more than the number of teachers. Find the number of teachers in the hall.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2023 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 112
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "19. Anson drives from city X to city Y at an average speed of 66 km/h and then he drives from city Y  to city Z at an average speed of 84 km/h. It is given that Anson drives 104 km in 85 minutes for the  whole journey. How long does Anson take to drive from city Y to city Z? (5 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2018 Paper 1 Q9]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "20. A yacht sails from pier A to pier B at an average speed of 96 km/h and then the yacht sails from  pier B to pier C at an average speed of 78 km/h. It is given that the yacht sails 98 km in 65 minutes  for the whole journey. How long does the yacht take to sail from pier A to pier B? (5 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2018 Paper 1 Q9]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 117
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 0
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 2 Typed Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Linear Equations in Two Unknowns",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": " 2.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 0
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 2 Typed Questions",
+   "context": "textbox",
+   "dup": 122
+  },
+  {
+   "type": "para",
+   "text": "Linear Equations in Two Unknowns",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": " 2.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 2 Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 2 Questions",
+   "context": "textbox",
+   "dup": 129
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2019 Paper 2 Q3]",
+     "[HKDSE 2014 Paper 2 Q8]"
+    ],
+    [
+     "If 8x – 9y = 30 = 4x + 3y, then y =\nA.  –3. B. –2.\nC.  2. D. 6.\nSolution\nKey Steps: • Rewrite the given equations as   two linear equations.\n• Eliminate one of the unknowns by   adding or subtracting two equations.\n• Solve the equation obtained.\n[IMG:image11.wmf]  → •\n(2) × 2: (4x + 3y) × 2 = 30 × 2\n8x + 6y = 60 …... (3)\n(3) – (1): (8x + 6y) – (8x – 9y) = 60 – 30  → •\n15y = 30\ny = 2  → →\n∴ The answer is C.",
+     "The price of 3 egg tarts and 4 doughnuts is $156. If the price of 5 egg tarts and the price of 2 doughnuts are the same, then the price of an egg tart is\nA.  $12. B. $14.\nC.  $30. D. $35.\nSolution\nKey Steps: • Identify the two unknowns involved   in the question and use different  letters to represent them.\n• Set up simultaneous linear \n  equations in two unknowns.\n• Find the required unknown.\nLet $x be the price of an egg tart and \n$y be the price of a doughnut.  → •\n[IMG:image14.wmf]  → •\nFrom (2), we have [IMG:image15.wmf]\nPut (3) into (1).\n[IMG:image16.wmf] = 156\n13x = 156\nx = 12\n∴ The price of an egg tart is $12.\n∴ The answer is A."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": "MCQ Alternative Strategy",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "MCQ Alternative Strategy",
+   "context": "textbox",
+   "dup": 136
+  },
+  {
+   "type": "para",
+   "text": "[By substitution.]",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Substitute the values of y in options A, B, C and D into (1) and (2). Check whether the values of x obtained in (1) and (2) are the same.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "If yes, the corresponding option is correct.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The answer must be C.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[By substitution.]",
+   "context": "textbox",
+   "dup": 138
+  },
+  {
+   "type": "para",
+   "text": "Substitute the values of y in options A, B, C and D into (1) and (2). Check whether the values of x obtained in (1) and (2) are the same.",
+   "context": "textbox",
+   "dup": 139
+  },
+  {
+   "type": "para",
+   "text": "If yes, the corresponding option is correct.",
+   "context": "textbox",
+   "dup": 140
+  },
+  {
+   "type": "para",
+   "text": "∴ The answer must be C.",
+   "context": "textbox",
+   "dup": 141
+  },
+  {
+   "type": "para",
+   "text": "→",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Practice 1\nIf 4m – 3n = 7 = 2m – 5n, then n =\nA. –6.\nB.  –1.\nC.  1.\nD. 6.",
+     "Practice 2\nThe price of 5 hats and 4 ties is $570. If the price of 8 hats and the price of 5 ties are the same, then the price of a hat is\nA. $47.5.\nB.  $50.\nC.  $76.\nD. $80."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 150
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 151
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 152
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "1. If a – 4b = 2 and 5a + 2b = –12, then a ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –2."
+  },
+  {
+   "type": "para",
+   "text": "  B. –1."
+  },
+  {
+   "type": "para",
+   "text": "  C. 1."
+  },
+  {
+   "type": "para",
+   "text": "  D. 2. [HKDSE 2015 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "2. If 3p – q = 13 and 9p + 2q = 4, then q ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –7."
+  },
+  {
+   "type": "para",
+   "text": "  B. –2."
+  },
+  {
+   "type": "para",
+   "text": "  C. 2."
+  },
+  {
+   "type": "para",
+   "text": "  D. 7. [HKDSE 2015 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "3. If p + 2q + 11 = 3p − q = 13, then p ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –7.",
+   "dup": 178
+  },
+  {
+   "type": "para",
+   "text": "  B. –1.",
+   "dup": 174
+  },
+  {
+   "type": "para",
+   "text": "  C. 4."
+  },
+  {
+   "type": "para",
+   "text": "  D. 6. [HKDSE 2012 Paper 2 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "4. If 4r − s − 10 = r + 4s = 9, then r ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –11."
+  },
+  {
+   "type": "para",
+   "text": "  B. –6."
+  },
+  {
+   "type": "para",
+   "text": "  C. 1.",
+   "dup": 175
+  },
+  {
+   "type": "para",
+   "text": "  D. 5. [HKDSE 2012 Paper 2 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "5. If 4p – q = 9p + 4q = 5, then q ="
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 150
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 151
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 152
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 150
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 151
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 152
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 150
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 151
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 152
+  },
+  {
+   "type": "para",
+   "text": "18",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "19",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "20",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 150
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 151
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 152
+  },
+  {
+   "type": "para",
+   "text": "18",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "19",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "20",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "  A. –5."
+  },
+  {
+   "type": "para",
+   "text": "  B. –1.",
+   "dup": 174
+  },
+  {
+   "type": "para",
+   "text": "  C. 1.",
+   "dup": 175
+  },
+  {
+   "type": "para",
+   "text": "  D. 5. [HKDSE 2016 Paper 2 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "6. If x + 5y = 3x + 2y = 13, then x ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –3."
+  },
+  {
+   "type": "para",
+   "text": "  B. –2.",
+   "dup": 179
+  },
+  {
+   "type": "para",
+   "text": "  C. 2.",
+   "dup": 180
+  },
+  {
+   "type": "para",
+   "text": "  D. 3. [HKDSE 2016 Paper 2 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "7. If 9m + 10n = 8 = 3m – 2n, then m ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –4."
+  },
+  {
+   "type": "para",
+   "text": "  B. –1.",
+   "dup": 174
+  },
+  {
+   "type": "para",
+   "text": "  C. 2.",
+   "dup": 180
+  },
+  {
+   "type": "para",
+   "text": "  D. 4. [HKDSE 2019 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "8. If 5a + 6b = 27 = 17a – 12b, then a ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –3.",
+   "dup": 247
+  },
+  {
+   "type": "para",
+   "text": "  B. 2."
+  },
+  {
+   "type": "para",
+   "text": "  C. 3."
+  },
+  {
+   "type": "para",
+   "text": "  D. 7. [HKDSE 2019 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "9. If a – 4 = b – 10 = a – 5b + 11, then a ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –3.",
+   "dup": 247
+  },
+  {
+   "type": "para",
+   "text": "  B. –1.",
+   "dup": 174
+  },
+  {
+   "type": "para",
+   "text": "  C. 1.",
+   "dup": 175
+  },
+  {
+   "type": "para",
+   "text": "  D. 3. [HKCEE 2008 Paper 2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "10. If 13 – 2p = q + 9 = 3q – 2p – 5, then p ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –8."
+  },
+  {
+   "type": "para",
+   "text": "  B. –6.",
+   "dup": 189
+  },
+  {
+   "type": "para",
+   "text": "  C. –1."
+  },
+  {
+   "type": "para",
+   "text": "  D. 6. [HKCEE 2008 Paper 2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "11. The price of 3 avocados and 2 pears is $70. If the price of 4 avocados "
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 150
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 151
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 152
+  },
+  {
+   "type": "para",
+   "text": "11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "12",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "13",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "14",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 150
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 151
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 152
+  },
+  {
+   "type": "para",
+   "text": "11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "12",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "13",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "14",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": " and the price of 9 pears are the same, then the price of a pear is"
+  },
+  {
+   "type": "para",
+   "text": "  A. $8."
+  },
+  {
+   "type": "para",
+   "text": "  B. $12."
+  },
+  {
+   "type": "para",
+   "text": "  C. $18."
+  },
+  {
+   "type": "para",
+   "text": "  D. $27. [HKDSE 2014 Paper 2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "12. The price of 5 hamburgers and 8 sandwiches are the same. Ivan "
+  },
+  {
+   "type": "para",
+   "text": " buys 2 hamburgers and 4 sandwiches for $108. Find the price of"
+  },
+  {
+   "type": "para",
+   "text": " a hamburger."
+  },
+  {
+   "type": "para",
+   "text": "  A. $12.5"
+  },
+  {
+   "type": "para",
+   "text": "  B. $15"
+  },
+  {
+   "type": "para",
+   "text": "  C. $20"
+  },
+  {
+   "type": "para",
+   "text": "  D. $24 [HKDSE 2014 Paper 2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "13. The price of 3 oranges and 7 apples is $53 while the price of 4 oranges"
+  },
+  {
+   "type": "para",
+   "text": " and 2 apples is $34. Find the price of 2 oranges and 3 apples."
+  },
+  {
+   "type": "para",
+   "text": "  A. $27"
+  },
+  {
+   "type": "para",
+   "text": "  B. $28"
+  },
+  {
+   "type": "para",
+   "text": "  C. $29"
+  },
+  {
+   "type": "para",
+   "text": "  D. $30 [HKCEE 2011 Paper 2 Q6]"
+  },
+  {
+   "type": "para",
+   "text": "14. In an exhibition, the total fare of 2 adults and 3 children is $105 while "
+  },
+  {
+   "type": "para",
+   "text": " the total fare of 5 adults and 4 children is $210. Find the total fare of "
+  },
+  {
+   "type": "para",
+   "text": " 2 adults and 1 child."
+  },
+  {
+   "type": "para",
+   "text": "  A. $60"
+  },
+  {
+   "type": "para",
+   "text": "  B. $70"
+  },
+  {
+   "type": "para",
+   "text": "  C. $75"
+  },
+  {
+   "type": "para",
+   "text": "  D. $90 [HKCEE 2011 Paper 2 Q6]"
+  }
+ ]
+}

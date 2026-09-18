@@ -1,0 +1,4316 @@
+{
+ "_comment": "由 tools/extract_eph.py 自動產生（草稿層）。請勿手改；要修正內容請改 data/learn/{bank,concepts,solutions,lessons}.json。",
+ "sourceFile": "EPH_DSEL5_WS03_e.docx",
+ "code": "WS03",
+ "variant": "question",
+ "extractedAt": "2026-09-18T07:58:02Z",
+ "stats": {
+  "blocks": 612,
+  "dups": 215,
+  "images": 170,
+  "images_inline": 0,
+  "sup": 35,
+  "embedFig": 2,
+  "numEq": 0,
+  "marks": 27,
+  "marking": 0,
+  "examples": 12,
+  "practices": 0,
+  "solutions": 0,
+  "noise": 24,
+  "tables": 8
+ },
+ "mediaManifest": [
+  {
+   "name": "image1.png",
+   "size": 21626
+  },
+  {
+   "name": "image10.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image100.wmf",
+   "size": 588
+  },
+  {
+   "name": "image101.wmf",
+   "size": 812
+  },
+  {
+   "name": "image102.wmf",
+   "size": 1024
+  },
+  {
+   "name": "image103.wmf",
+   "size": 1136
+  },
+  {
+   "name": "image104.wmf",
+   "size": 1136
+  },
+  {
+   "name": "image105.wmf",
+   "size": 1136
+  },
+  {
+   "name": "image106.wmf",
+   "size": 1136
+  },
+  {
+   "name": "image107.wmf",
+   "size": 624
+  },
+  {
+   "name": "image108.wmf",
+   "size": 588
+  },
+  {
+   "name": "image109.wmf",
+   "size": 588
+  },
+  {
+   "name": "image11.wmf",
+   "size": 930
+  },
+  {
+   "name": "image110.wmf",
+   "size": 604
+  },
+  {
+   "name": "image111.wmf",
+   "size": 604
+  },
+  {
+   "name": "image112.wmf",
+   "size": 604
+  },
+  {
+   "name": "image113.wmf",
+   "size": 604
+  },
+  {
+   "name": "image114.wmf",
+   "size": 604
+  },
+  {
+   "name": "image115.wmf",
+   "size": 604
+  },
+  {
+   "name": "image116.wmf",
+   "size": 620
+  },
+  {
+   "name": "image117.wmf",
+   "size": 1162
+  },
+  {
+   "name": "image118.wmf",
+   "size": 1170
+  },
+  {
+   "name": "image119.wmf",
+   "size": 1170
+  },
+  {
+   "name": "image12.wmf",
+   "size": 1036
+  },
+  {
+   "name": "image120.wmf",
+   "size": 1170
+  },
+  {
+   "name": "image121.wmf",
+   "size": 1170
+  },
+  {
+   "name": "image122.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image123.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image124.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image125.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image126.wmf",
+   "size": 930
+  },
+  {
+   "name": "image127.wmf",
+   "size": 1044
+  },
+  {
+   "name": "image128.wmf",
+   "size": 1182
+  },
+  {
+   "name": "image129.wmf",
+   "size": 1136
+  },
+  {
+   "name": "image13.wmf",
+   "size": 1434
+  },
+  {
+   "name": "image130.wmf",
+   "size": 1148
+  },
+  {
+   "name": "image131.wmf",
+   "size": 1246
+  },
+  {
+   "name": "image132.wmf",
+   "size": 1024
+  },
+  {
+   "name": "image133.wmf",
+   "size": 1024
+  },
+  {
+   "name": "image134.wmf",
+   "size": 966
+  },
+  {
+   "name": "image135.wmf",
+   "size": 966
+  },
+  {
+   "name": "image136.wmf",
+   "size": 966
+  },
+  {
+   "name": "image137.wmf",
+   "size": 966
+  },
+  {
+   "name": "image138.wmf",
+   "size": 1024
+  },
+  {
+   "name": "image139.wmf",
+   "size": 814
+  },
+  {
+   "name": "image14.wmf",
+   "size": 1036
+  },
+  {
+   "name": "image140.wmf",
+   "size": 856
+  },
+  {
+   "name": "image141.wmf",
+   "size": 856
+  },
+  {
+   "name": "image142.wmf",
+   "size": 856
+  },
+  {
+   "name": "image143.wmf",
+   "size": 856
+  },
+  {
+   "name": "image144.wmf",
+   "size": 814
+  },
+  {
+   "name": "image145.wmf",
+   "size": 1024
+  },
+  {
+   "name": "image146.wmf",
+   "size": 1184
+  },
+  {
+   "name": "image147.wmf",
+   "size": 1024
+  },
+  {
+   "name": "image148.wmf",
+   "size": 1304
+  },
+  {
+   "name": "image149.wmf",
+   "size": 1304
+  },
+  {
+   "name": "image15.wmf",
+   "size": 930
+  },
+  {
+   "name": "image150.wmf",
+   "size": 1304
+  },
+  {
+   "name": "image151.wmf",
+   "size": 1304
+  },
+  {
+   "name": "image152.wmf",
+   "size": 1190
+  },
+  {
+   "name": "image153.wmf",
+   "size": 1024
+  },
+  {
+   "name": "image154.wmf",
+   "size": 1320
+  },
+  {
+   "name": "image155.wmf",
+   "size": 1320
+  },
+  {
+   "name": "image156.wmf",
+   "size": 1320
+  },
+  {
+   "name": "image157.wmf",
+   "size": 1320
+  },
+  {
+   "name": "image158.wmf",
+   "size": 1136
+  },
+  {
+   "name": "image159.wmf",
+   "size": 1024
+  },
+  {
+   "name": "image16.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image160.wmf",
+   "size": 924
+  },
+  {
+   "name": "image161.wmf",
+   "size": 924
+  },
+  {
+   "name": "image162.wmf",
+   "size": 932
+  },
+  {
+   "name": "image163.wmf",
+   "size": 932
+  },
+  {
+   "name": "image164.wmf",
+   "size": 1142
+  },
+  {
+   "name": "image165.wmf",
+   "size": 1024
+  },
+  {
+   "name": "image166.wmf",
+   "size": 918
+  },
+  {
+   "name": "image167.wmf",
+   "size": 918
+  },
+  {
+   "name": "image168.wmf",
+   "size": 924
+  },
+  {
+   "name": "image169.wmf",
+   "size": 924
+  },
+  {
+   "name": "image17.wmf",
+   "size": 1168
+  },
+  {
+   "name": "image170.wmf",
+   "size": 812
+  },
+  {
+   "name": "image18.wmf",
+   "size": 1036
+  },
+  {
+   "name": "image19.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image2.png",
+   "size": 42197
+  },
+  {
+   "name": "image20.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image21.wmf",
+   "size": 818
+  },
+  {
+   "name": "image22.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image23.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image24.wmf",
+   "size": 1042
+  },
+  {
+   "name": "image25.wmf",
+   "size": 930
+  },
+  {
+   "name": "image26.wmf",
+   "size": 1036
+  },
+  {
+   "name": "image27.wmf",
+   "size": 1036
+  },
+  {
+   "name": "image28.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image29.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image3.png",
+   "size": 21626
+  },
+  {
+   "name": "image30.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image31.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image32.wmf",
+   "size": 608
+  },
+  {
+   "name": "image33.wmf",
+   "size": 640
+  },
+  {
+   "name": "image34.wmf",
+   "size": 396
+  },
+  {
+   "name": "image35.wmf",
+   "size": 588
+  },
+  {
+   "name": "image36.wmf",
+   "size": 1036
+  },
+  {
+   "name": "image37.wmf",
+   "size": 620
+  },
+  {
+   "name": "image38.wmf",
+   "size": 1174
+  },
+  {
+   "name": "image39.wmf",
+   "size": 636
+  },
+  {
+   "name": "image4.png",
+   "size": 42197
+  },
+  {
+   "name": "image40.wmf",
+   "size": 1164
+  },
+  {
+   "name": "image41.wmf",
+   "size": 1012
+  },
+  {
+   "name": "image42.wmf",
+   "size": 1020
+  },
+  {
+   "name": "image43.wmf",
+   "size": 930
+  },
+  {
+   "name": "image44.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image45.wmf",
+   "size": 1134
+  },
+  {
+   "name": "image46.wmf",
+   "size": 1036
+  },
+  {
+   "name": "image47.wmf",
+   "size": 1204
+  },
+  {
+   "name": "image48.wmf",
+   "size": 1168
+  },
+  {
+   "name": "image49.wmf",
+   "size": 1174
+  },
+  {
+   "name": "image5.wmf",
+   "size": 1052
+  },
+  {
+   "name": "image50.wmf",
+   "size": 1184
+  },
+  {
+   "name": "image51.wmf",
+   "size": 1174
+  },
+  {
+   "name": "image52.wmf",
+   "size": 1184
+  },
+  {
+   "name": "image53.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image54.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image55.wmf",
+   "size": 1168
+  },
+  {
+   "name": "image56.wmf",
+   "size": 1174
+  },
+  {
+   "name": "image57.wmf",
+   "size": 1440
+  },
+  {
+   "name": "image58.png",
+   "size": 2298
+  },
+  {
+   "name": "image59.png",
+   "size": 2298
+  },
+  {
+   "name": "image6.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image60.png",
+   "size": 2298
+  },
+  {
+   "name": "image61.png",
+   "size": 2298
+  },
+  {
+   "name": "image62.wmf",
+   "size": 818
+  },
+  {
+   "name": "image63.wmf",
+   "size": 924
+  },
+  {
+   "name": "image64.wmf",
+   "size": 1140
+  },
+  {
+   "name": "image65.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image66.wmf",
+   "size": 922
+  },
+  {
+   "name": "image67.wmf",
+   "size": 922
+  },
+  {
+   "name": "image68.wmf",
+   "size": 930
+  },
+  {
+   "name": "image69.wmf",
+   "size": 930
+  },
+  {
+   "name": "image7.wmf",
+   "size": 930
+  },
+  {
+   "name": "image70.wmf",
+   "size": 1172
+  },
+  {
+   "name": "image71.wmf",
+   "size": 1164
+  },
+  {
+   "name": "image72.wmf",
+   "size": 1210
+  },
+  {
+   "name": "image73.wmf",
+   "size": 818
+  },
+  {
+   "name": "image74.wmf",
+   "size": 818
+  },
+  {
+   "name": "image75.wmf",
+   "size": 1098
+  },
+  {
+   "name": "image76.wmf",
+   "size": 1052
+  },
+  {
+   "name": "image77.wmf",
+   "size": 842
+  },
+  {
+   "name": "image78.wmf",
+   "size": 842
+  },
+  {
+   "name": "image79.wmf",
+   "size": 1168
+  },
+  {
+   "name": "image8.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image80.wmf",
+   "size": 1184
+  },
+  {
+   "name": "image81.wmf",
+   "size": 1184
+  },
+  {
+   "name": "image82.wmf",
+   "size": 1184
+  },
+  {
+   "name": "image83.wmf",
+   "size": 1184
+  },
+  {
+   "name": "image84.wmf",
+   "size": 1140
+  },
+  {
+   "name": "image85.wmf",
+   "size": 1028
+  },
+  {
+   "name": "image86.wmf",
+   "size": 936
+  },
+  {
+   "name": "image87.wmf",
+   "size": 936
+  },
+  {
+   "name": "image88.wmf",
+   "size": 930
+  },
+  {
+   "name": "image89.wmf",
+   "size": 930
+  },
+  {
+   "name": "image9.wmf",
+   "size": 1292
+  },
+  {
+   "name": "image90.wmf",
+   "size": 1030
+  },
+  {
+   "name": "image91.wmf",
+   "size": 1038
+  },
+  {
+   "name": "image92.wmf",
+   "size": 1038
+  },
+  {
+   "name": "image93.wmf",
+   "size": 1030
+  },
+  {
+   "name": "image94.wmf",
+   "size": 1038
+  },
+  {
+   "name": "image95.wmf",
+   "size": 1038
+  },
+  {
+   "name": "image96.wmf",
+   "size": 608
+  },
+  {
+   "name": "image97.wmf",
+   "size": 588
+  },
+  {
+   "name": "image98.wmf",
+   "size": 588
+  },
+  {
+   "name": "image99.wmf",
+   "size": 588
+  }
+ ],
+ "blocks": [
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts & DSE Paper 1 Typed Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Formulas and Identities",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 3.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 0
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts & DSE Paper 1 Typed Questions",
+   "context": "textbox",
+   "dup": 1
+  },
+  {
+   "type": "para",
+   "text": "Formulas and Identities",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": " 3.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Change of Subject of a Formula"
+    ],
+    [
+     "Consider the formula k = [IMG:image5.wmf].\nk = [IMG:image5.wmf]\nkx = 2(x + 1)\nkx = 2x + 2\n(k − 2)x = 2\nx = [IMG:image6.wmf]"
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Transpose all the terms involving x to one side, while the others to the other side.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Transpose all the terms involving x to one side, while the others to the other side.",
+   "context": "textbox",
+   "dup": 12
+  },
+  {
+   "type": "para",
+   "text": "The subject of the formula changes from k to x.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "The subject of the formula changes from k to x.",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "Make the coefficient of x to 1.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Make the coefficient of x to 1.",
+   "context": "textbox",
+   "dup": 16
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Finding Unknown Constants in an Identity"
+    ],
+    [
+     "Consider the identity (ax – 2)(3x + b) ≡ 9x^{2} + 6x – 8, where a and b are constants.\nMethod 1:  By comparing the like terms\nBy comparing the coefficients of x^{2} on both sides, we have\n(a)(3) = 9\na = 3\nBy comparing the constant terms on both sides, we have\n(–2)(b) = –8\nb = 4\nMethod 2:  By substitution\nPut x = 0 into the identity.\n(a(0) – 2)(3(0) + b)  = 9(0)^{2} + 6(0) – 8\n–2b = –8\nb = 4"
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ (ax – 2)(3x + b)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ (ax – 2)(3x + b)",
+   "context": "textbox",
+   "dup": 21
+  },
+  {
+   "type": "para",
+   "text": "→ (ax – 2)(3x + b)",
+   "context": "textbox",
+   "dup": 21
+  },
+  {
+   "type": "para",
+   "text": "→ (ax – 2)(3x + b)",
+   "context": "textbox",
+   "dup": 21
+  },
+  {
+   "type": "para",
+   "text": "Put x = 1 and b = 4 into the identity.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " (a(1) – 2)(3(1) + 4) = 9(1)^{2} + 6(1) – 8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " a – 2 = 1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " a = 3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Put x = 1 and b = 4 into the identity.",
+   "context": "textbox",
+   "dup": 25
+  },
+  {
+   "type": "para",
+   "text": " (a(1) – 2)(3(1) + 4) = 9(1)^{2} + 6(1) – 8",
+   "context": "textbox",
+   "dup": 26
+  },
+  {
+   "type": "para",
+   "text": " a – 2 = 1",
+   "context": "textbox",
+   "dup": 27
+  },
+  {
+   "type": "para",
+   "text": " a = 3",
+   "context": "textbox",
+   "dup": 28
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 1 Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 1 Questions",
+   "context": "textbox",
+   "dup": 33
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2023 Paper 1 Q1]",
+     ""
+    ],
+    [
+     "Make h the subject of the formula [IMG:image7.wmf] = [IMG:image8.wmf].\n(3 marks)\nSolution\n[IMG:image7.wmf] = [IMG:image8.wmf]\n7(h – 2)  = k(h + k) (1M)\n7h – 14  = hk + k^{2}\n7h – hk  = 14 + k^{2}   (1M: for putting h on one side)\nh = [IMG:image9.wmf] → 7h – hk = h(7 – k)  (1A: or equivalent)",
+     "Practice 1\nMake a the subject of the formula\n[IMG:image10.wmf] = [IMG:image11.wmf].              (3 marks)"
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 36
+  },
+  {
+   "type": "para",
+   "text": " "
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2014 Paper 1 Q5]",
+     ""
+    ],
+    [
+     "Consider the formula 3(2m + n) = m + 9.\n(a) Make n the subject of the above formula.\n(b) If the value of m is increased by 3, write down the\nchange in the value of n.\n(4 marks)\nSolution\n(a) 3(2m + n) = m + 9\n6m + 3n = m + 9 (1M: for expanding)\nn = [IMG:image12.wmf] (1A: or equivalent)\n(b) The decrease in the value of n (1M)\n= 5 (1M)",
+     "Practice 2\nConsider the formula 4(x – 3y) = 8x – 7.\n(a) Make y the subject of the above\nformula.\n(b) If the value of x is decreased by 12,\n   write down the change in the value \n  of y.\n(4 marks)"
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 40
+  },
+  {
+   "type": "para",
+   "text": "→ m – 6m = –5m",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ m – 6m = –5m",
+   "context": "textbox",
+   "dup": 42
+  },
+  {
+   "type": "para",
+   "text": "→ [IMG:image13.wmf]",
+   "context": "textbox",
+   "images": [
+    "image13.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "→ [IMG:image13.wmf]",
+   "context": "textbox",
+   "images": [
+    "image13.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ],
+   "dup": 44
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Warm-up Questions"
+  },
+  {
+   "type": "para",
+   "text": "1. Make k the subject of the following formulas."
+  },
+  {
+   "type": "para",
+   "text": " (a) h = [IMG:image14.wmf]  (b) [IMG:image15.wmf] = h – 1",
+   "images": [
+    "image14.wmf",
+    "image15.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " "
+  },
+  {
+   "type": "para",
+   "text": " 2. Make a the subject of the following formulas."
+  },
+  {
+   "type": "para",
+   "text": " (a) [IMG:image16.wmf] = 2b  (b) [IMG:image17.wmf] = b",
+   "images": [
+    "image16.wmf",
+    "image17.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "3. Make m the subject of the following formulas."
+  },
+  {
+   "type": "para",
+   "text": " (a) 9(m – 3) = n + m  (b) 8(m + 7n) = m + 6"
+  },
+  {
+   "type": "para",
+   "text": " 4. Make y the subject of the following formulas."
+  },
+  {
+   "type": "para",
+   "text": " (a) [IMG:image18.wmf] = 4  (b) k = [IMG:image19.wmf]",
+   "images": [
+    "image18.wmf",
+    "image19.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "5. Make h the subject of the following formulas."
+  },
+  {
+   "type": "para",
+   "text": " (a) [IMG:image20.wmf] = [IMG:image21.wmf]  (b) [IMG:image22.wmf] = [IMG:image23.wmf]",
+   "images": [
+    "image20.wmf",
+    "image21.wmf",
+    "image22.wmf",
+    "image23.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Find m and n in each of the following identities. (6 – 9)"
+  },
+  {
+   "type": "para",
+   "text": "6. mx^{2} – 9 ≡ (3x + 2)(3x – 2) + n 7. x^{2} + mx – 14 ≡ (x + 4)(x – 5) + n"
+  },
+  {
+   "type": "para",
+   "text": "8. x(x + m) ≡ (x + 3)^{2} + n 9. x(x + 3) + m(x – 6) ≡ x^{2} + n"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Find p and q in each of the following identities. (10 – 13)"
+  },
+  {
+   "type": "para",
+   "text": "10. x^{2} + p(x – 5) + q ≡ (x + 2)^{2} 11. x(x – 8) + p ≡ x^{2} – q(2x – 3)"
+  },
+  {
+   "type": "para",
+   "text": "12. px(x + 1) + x^{2} ≡ 5x(x + 2) + qx 13. 4x^{2} – p(x + 1) + 25 ≡ 4x(x – 1) – 3(x – q)"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 1 Typed Questions"
+  },
+  {
+   "type": "para",
+   "text": "1. Make m the subject of the formula [IMG:image24.wmf] = 2. (3 marks)",
+   "images": [
+    "image24.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  [HKCEE 2009 Paper 1 Q1]"
+  },
+  {
+   "type": "para",
+   "text": "2. Make x the subject of the formula y =[IMG:image25.wmf]. (3 marks)",
+   "images": [
+    "image25.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  [HKCEE 2004 Paper 1 Q2]"
+  },
+  {
+   "type": "para",
+   "text": "3. Make a the subject of the formula Q = ab – 2bc – 3ac. (3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  [HKCEE 2005 Paper 1 Q1]"
+  },
+  {
+   "type": "para",
+   "text": "4. Make h the subject of the formula [IMG:image26.wmf] = 3.          (3 marks)",
+   "images": [
+    "image26.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2021 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "5. Make a the subject of the formula [IMG:image27.wmf] = 7.          (3 marks)",
+   "images": [
+    "image27.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2021 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 75
+  },
+  {
+   "type": "para",
+   "text": "6. Make b the subject of the formula [IMG:image28.wmf] = [IMG:image29.wmf].         (3 marks)",
+   "images": [
+    "image28.wmf",
+    "image29.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2018 Paper 1 Q1]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "7. Make y the subject of the formula [IMG:image30.wmf] = [IMG:image31.wmf].         (3 marks)",
+   "images": [
+    "image30.wmf",
+    "image31.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2018 Paper 1 Q1]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": "8. Make q the subject of the formula [IMG:image32.wmf]= 3.          (3 marks)",
+   "images": [
+    "image32.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2013 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "9. Make k the subject of the formula [IMG:image33.wmf]=[IMG:image34.wmf].         (3 marks)",
+   "images": [
+    "image33.wmf",
+    "image34.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2013 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 83
+  },
+  {
+   "type": "para",
+   "text": "10. Make a the subject of the formula [IMG:image35.wmf]= b – 3.         (3 marks)",
+   "images": [
+    "image35.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2012 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "11. Make x the subject of the formula y – 2 =[IMG:image36.wmf].         (3 marks)",
+   "images": [
+    "image36.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2012 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 87
+  },
+  {
+   "type": "para",
+   "text": "12. Make t the subject of the formula [IMG:image37.wmf]= 5s.          (3 marks)",
+   "images": [
+    "image37.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE Practice Paper 1 Q2]"
+  },
+  {
+   "type": "para",
+   "text": "13. Make a the subject of the formula [IMG:image38.wmf]= 9b.          (3 marks)",
+   "images": [
+    "image38.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE Practice Paper 1 Q2]",
+   "dup": 91
+  },
+  {
+   "type": "para",
+   "text": "14. Make h the subject of the formula 5(h + 4k) = 3h + 6.        (3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2019 Paper 1 Q1]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "15. Make n the subject of the formula 7(6m – n) = 9 – 4n.        (3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2019 Paper 1 Q1]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 95
+  },
+  {
+   "type": "para",
+   "text": "16. Make b the subject of the formula a + b = a(b + 5).          (3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE Sample Paper 1 Q2]"
+  },
+  {
+   "type": "para",
+   "text": "17. Make k the subject of the formula h(k + 6) = 3h – k.          (3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE Sample Paper 1 Q2]",
+   "dup": 99
+  },
+  {
+   "type": "para",
+   "text": "18. Make x the subject of the formula Ax = (B – 5x)C.          (3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2016 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "19. Make x the subject of the formula 2Px = (3Qx – 1)R.         (3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2016 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 103
+  },
+  {
+   "type": "para",
+   "text": "20. Make b the subject of the formula [IMG:image39.wmf]= 7.         (3 marks)",
+   "images": [
+    "image39.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2015 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "21. Make y the subject of the formula [IMG:image40.wmf]= 3.         (3 marks)",
+   "images": [
+    "image40.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2015 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 107
+  },
+  {
+   "type": "para",
+   "text": "22. Make b the subject of the formula y =[IMG:image41.wmf].           (3 marks)",
+   "images": [
+    "image41.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2017 Paper 1 Q1]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "23. Make m the subject of the formula x =[IMG:image42.wmf].          (3 marks)",
+   "images": [
+    "image42.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2017 Paper 1 Q1]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 111
+  },
+  {
+   "type": "para",
+   "text": "24. Make m the subject of the formula [IMG:image43.wmf] = [IMG:image44.wmf].         (3 marks)",
+   "images": [
+    "image43.wmf",
+    "image44.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2023 Paper 1 Q1]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "25. Make h the subject of the formula [IMG:image45.wmf] = [IMG:image46.wmf].         (3 marks)",
+   "images": [
+    "image45.wmf",
+    "image46.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2023 Paper 1 Q1]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 115
+  },
+  {
+   "type": "para",
+   "text": "26. Consider the formula 3a – 2 = 2(a + 2b)."
+  },
+  {
+   "type": "para",
+   "text": " (a) Make b the subject of the above formula."
+  },
+  {
+   "type": "para",
+   "text": " (b) If the value of a is decreased by 8, write down the change in the value of b."
+  },
+  {
+   "type": "para",
+   "text": "(4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2014 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "27. Consider the formula [IMG:image47.wmf] = 2.",
+   "images": [
+    "image47.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (a) Make d the subject of the above formula."
+  },
+  {
+   "type": "para",
+   "text": " (b) If the value of c is decreased by 18, write down the change in the value of d."
+  },
+  {
+   "type": "para",
+   "text": "(4 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 121
+  },
+  {
+   "type": "para",
+   "text": "[(b): HKDSE 2014 Paper 1 Q5 (b)]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 0
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 2 Typed Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Formulas and Identities",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": " 3.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 0
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 2 Typed Questions",
+   "context": "textbox",
+   "dup": 129
+  },
+  {
+   "type": "para",
+   "text": "Formulas and Identities",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": " 3.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 2 Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 2 Questions",
+   "context": "textbox",
+   "dup": 136
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2019 Paper 2 Q5]",
+     "[HKDSE 2017 Paper 2 Q3]"
+    ],
+    [
+     "If h = [IMG:image48.wmf], then k =\nA. [IMG:image49.wmf]. B. [IMG:image50.wmf].\nC. [IMG:image51.wmf]. D. [IMG:image52.wmf].\nSolution\nKey Steps: • Transpose the term involving k to   one side first.\n• Transpose the others to the other side.\nh = [IMG:image48.wmf] … (*)\n[IMG:image53.wmf] = 2 – h  → •\n[IMG:image54.wmf] = k + 3\nk = [IMG:image55.wmf] → •\nk = [IMG:image56.wmf] → [IMG:image57.wmf]\n∴ The answer is A.",
+     "If [IMG:image64.wmf] = [IMG:image65.wmf], then a =\nA. [IMG:image66.wmf]. B. [IMG:image67.wmf].\nC. [IMG:image68.wmf]. D. [IMG:image69.wmf].\nSolution\n[IMG:image64.wmf] = [IMG:image65.wmf]\na + 6b = 9a + 3b → Multiply both sides by 3a.\n6b – 3b = 9a – a → • and •\n3b = 8a\na =[IMG:image66.wmf]\n∴ The answer is A.\nAlternative Solution\n[IMG:image64.wmf] = [IMG:image65.wmf]\n[IMG:image70.wmf] = [IMG:image65.wmf]  → [IMG:image71.wmf] = [IMG:image72.wmf]\n[IMG:image73.wmf] = [IMG:image74.wmf]   → [IMG:image75.wmf] = [IMG:image76.wmf]\na = [IMG:image66.wmf]   → [IMG:image77.wmf] = [IMG:image78.wmf]\n∴ The answer is A."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 36
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 36
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 40
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 40
+  },
+  {
+   "type": "para",
+   "text": "MCQ Alternative Strategy",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "MCQ Alternative Strategy",
+   "context": "textbox",
+   "dup": 143
+  },
+  {
+   "type": "para",
+   "text": "[By substitution.]",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Consider h = 1. According to the options A, B, C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "and D, we obtain k = 1, –7, [IMG:image62.wmf] and [IMG:image63.wmf] respectively. Check whether (*) is correct.",
+   "context": "textbox",
+   "images": [
+    "image62.wmf",
+    "image63.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "If yes, the corresponding option is correct.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The answer must be A.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[By substitution.]",
+   "context": "textbox",
+   "dup": 145
+  },
+  {
+   "type": "para",
+   "text": "Consider h = 1. According to the options A, B, C",
+   "context": "textbox",
+   "dup": 146
+  },
+  {
+   "type": "para",
+   "text": "and D, we obtain k = 1, –7, [IMG:image62.wmf] and [IMG:image63.wmf] respectively. Check whether (*) is correct.",
+   "context": "textbox",
+   "images": [
+    "image62.wmf",
+    "image63.wmf"
+   ],
+   "dup": 147
+  },
+  {
+   "type": "para",
+   "text": "If yes, the corresponding option is correct.",
+   "context": "textbox",
+   "dup": 148
+  },
+  {
+   "type": "para",
+   "text": "∴ The answer must be A.",
+   "context": "textbox",
+   "dup": 149
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Practice 1\nIf h = [IMG:image79.wmf], then k =\nA. [IMG:image80.wmf]. B. [IMG:image81.wmf].\nC. [IMG:image82.wmf]. D. [IMG:image83.wmf].",
+     "Practice 2\nIf [IMG:image84.wmf] = [IMG:image85.wmf], then a =\nA. [IMG:image86.wmf]. B. [IMG:image87.wmf].\nC. [IMG:image88.wmf]. D. [IMG:image89.wmf]."
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2020 Paper 2 Q7]",
+     "[HKDSE 2023 Paper 2 Q5]"
+    ],
+    [
+     "If h and k are constants such that \n(x + h)(x + 7) ≡ (x + 5)^{2} + k, then k =\nA.  –46. B. –25.\nC.  –4. D. 3.\nSolution\nFacts: • An identity can be satisfied by all values of\nthe variable(s).\n• The terms on both sides of the identity after\nsimplification are exactly the same.\nMethod 1\nPut x = –7 into the identity.\n(–7 + h)(–7 + 7)  = (–7 + 5)^{2} + k → •\n= 4 + k\nk  = –4\n∴ The answer is C.\nMethod 2\nL.H.S. = (x + h)(x + 7)\n= (x + h)(x) + (x + h)(7)\n= x^{2} + hx + 7x + 7h\n= x^{2} + (h + 7)x + 7h\nR.H.S. = (x + 5)^{2} + k\n= (x^{2} + 10x + 25) + k\n= x^{2} + 10x + (25 + k)\n∴ x^{2} + (h + 7)x + 7h ≡ x^{2} + 10x + ( 25 + k )  → •\nBy comparing the like terms on both sides, we have\nh + 7  = 10 7(3)  = 25 + k  → h = 3 h = 3  k = –4\n∴ The answer is C.",
+     "If c and d are constants such that \n(x + 3)(x + c) + 5 ≡ x(x + d) + 4c(x + 1), then d =\nA.  –12. B. –5.\nC.  5. D. 18.\nSolution\nMethod 1\nPut x = 0 into the identity.\n(0 + 3)(0 + c) + 5 = 0(0 + d) + 4c(0 + 1) → •\n3c + 5 = 4c\nc = 5\nPut x = –3 and c = 5 into the identity.\n(–3 + 3)(–3 + 5) + 5 = –3(–3 + d) + 4(5)(–3 + 1)\n5 = 9 – 3d – 60 + 20\n5 = –31 – 3d\nd = –12\n∴ The answer is A.\nMethod 2\nL.H.S. = (x + 3)(x + c) + 5\n= (x + 3)(x) + (x + 3)(c) + 5\n= x^{2} + 3x + cx + 3c + 5\n= x^{2} + (3 + c)x + (3c + 5)\nR.H.S. = x(x + d) + 4c(x + 1)\n= x^{2} + dx + 4cx + 4c\n= x^{2} + (d + 4c)x + 4c\n∴ x^{2} + (3 + c)x + (3c + 5) ≡ x^{2} + (d + 4c)x + 4c → •\nBy comparing the like terms on both sides, we have\n3c + 5 = 4c 3 + (5) = d + 4(5) → c = 5\nc = 5 d = –12\n∴ The answer is A."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 3",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 3",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "Example 4",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 4",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 159
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Practice 3\nIf h and k are constants such that \n(x + h)(x + 9) ≡ (x + 6)^{2} + k, then k =\nA.  –63. B. –36.\nC.  –9. D. 3.",
+     "Practice 4\nIf c and d are constants such that \n(x + 4)(x + c) + 10 ≡ x(x + d) + 6c(x + 1), then d =\nA.  29. B. 5.\nC.  –5. D. –21."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "1. If 2n – 3m = 1, then m = "
+  },
+  {
+   "type": "para",
+   "text": "  A. –n."
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image90.wmf].",
+   "images": [
+    "image90.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image91.wmf].",
+   "images": [
+    "image91.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image92.wmf]. [HKDSE Sample Paper 2 Q2]",
+   "images": [
+    "image92.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "2. If 4x – 3 = 4(9 – y), then y = "
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image93.wmf].",
+   "images": [
+    "image93.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. –4x + 39."
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image94.wmf].",
+   "images": [
+    "image94.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image95.wmf]. [HKDSE Practice Paper 2 Q2]",
+   "images": [
+    "image95.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "3. If [IMG:image96.wmf] = 1, then x = ",
+   "images": [
+    "image96.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image97.wmf].",
+   "images": [
+    "image97.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image98.wmf].",
+   "images": [
+    "image98.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image99.wmf].",
+   "images": [
+    "image99.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image100.wmf]. [HKDSE 2022 Paper 2 Q5]",
+   "images": [
+    "image100.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "4. If [IMG:image101.wmf] = [IMG:image102.wmf], then a = ",
+   "images": [
+    "image101.wmf",
+    "image102.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image103.wmf].",
+   "images": [
+    "image103.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image104.wmf].",
+   "images": [
+    "image104.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image105.wmf].",
+   "images": [
+    "image105.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image106.wmf]. [HKDSE 2022 Paper 2 Q5]",
+   "images": [
+    "image106.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "5. If [IMG:image107.wmf] = 7, then x =",
+   "images": [
+    "image107.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image108.wmf].",
+   "images": [
+    "image108.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image109.wmf].",
+   "images": [
+    "image109.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image110.wmf].",
+   "images": [
+    "image110.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image111.wmf]. [HKDSE 2016 Paper 2 Q2]",
+   "images": [
+    "image111.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "6. If m = [IMG:image112.wmf], then n =",
+   "images": [
+    "image112.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image113.wmf].",
+   "images": [
+    "image113.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image114.wmf].",
+   "images": [
+    "image114.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image115.wmf].",
+   "images": [
+    "image115.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image116.wmf]. [HKDSE 2019 Paper 2 Q5]",
+   "images": [
+    "image116.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "7. If p = [IMG:image117.wmf], then q =",
+   "images": [
+    "image117.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image118.wmf].",
+   "images": [
+    "image118.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image119.wmf].",
+   "images": [
+    "image119.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image120.wmf].",
+   "images": [
+    "image120.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image121.wmf]. [HKDSE 2019 Paper 2 Q5]",
+   "images": [
+    "image121.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "8. If a(b – a) = –2(a + b), then b ="
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image122.wmf].",
+   "images": [
+    "image122.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image123.wmf].",
+   "images": [
+    "image123.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image124.wmf].",
+   "images": [
+    "image124.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image125.wmf]. [HKDSE 2020 Paper 2 Q2]",
+   "images": [
+    "image125.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "9. If m(m – a) = a(2 – m), then a = "
+  },
+  {
+   "type": "para",
+   "text": "  A. m."
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image126.wmf].",
+   "images": [
+    "image126.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image127.wmf].",
+   "images": [
+    "image127.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image128.wmf]. [HKDSE 2021 Paper 2 Q2]",
+   "images": [
+    "image128.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "10. If x(y + 1) = y(y – x), then x = "
+  },
+  {
+   "type": "para",
+   "text": "  A. y – 1."
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image129.wmf].",
+   "images": [
+    "image129.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image130.wmf].",
+   "images": [
+    "image130.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image131.wmf]. [HKDSE 2021 Paper 2 Q2]",
+   "images": [
+    "image131.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "11. If [IMG:image132.wmf] = [IMG:image133.wmf], then s =",
+   "images": [
+    "image132.wmf",
+    "image133.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "12",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "13",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "12",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "13",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image134.wmf].",
+   "images": [
+    "image134.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image135.wmf].",
+   "images": [
+    "image135.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image136.wmf].",
+   "images": [
+    "image136.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image137.wmf]. [HKDSE 2013 Paper 2 Q2]",
+   "images": [
+    "image137.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "12. If [IMG:image138.wmf] = [IMG:image139.wmf], then x = ",
+   "images": [
+    "image138.wmf",
+    "image139.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image140.wmf].",
+   "images": [
+    "image140.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image141.wmf].",
+   "images": [
+    "image141.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image142.wmf].",
+   "images": [
+    "image142.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image143.wmf]. [HKDSE 2018 Paper 2 Q2]",
+   "images": [
+    "image143.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "13. If [IMG:image144.wmf] = [IMG:image145.wmf], then x =",
+   "images": [
+    "image144.wmf",
+    "image145.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image140.wmf].",
+   "images": [
+    "image140.wmf"
+   ],
+   "dup": 294
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image141.wmf].",
+   "images": [
+    "image141.wmf"
+   ],
+   "dup": 295
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image142.wmf].",
+   "images": [
+    "image142.wmf"
+   ],
+   "dup": 296
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image143.wmf]. [HKDSE 2018 Paper 2 Q2]",
+   "images": [
+    "image143.wmf"
+   ],
+   "dup": 297
+  },
+  {
+   "type": "para",
+   "text": "14. If [IMG:image146.wmf] = [IMG:image147.wmf], then x = ",
+   "images": [
+    "image146.wmf",
+    "image147.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image148.wmf].",
+   "images": [
+    "image148.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "14",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "15",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "16",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "14",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "15",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "16",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image149.wmf].",
+   "images": [
+    "image149.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image150.wmf].",
+   "images": [
+    "image150.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image151.wmf]. [HKDSE 2023 Paper 2 Q1]",
+   "images": [
+    "image151.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "15. If [IMG:image152.wmf] = [IMG:image153.wmf], then p =",
+   "images": [
+    "image152.wmf",
+    "image153.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image154.wmf].",
+   "images": [
+    "image154.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image155.wmf].",
+   "images": [
+    "image155.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image156.wmf].",
+   "images": [
+    "image156.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image157.wmf]. [HKDSE 2023 Paper 2 Q1]",
+   "images": [
+    "image157.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "16. If [IMG:image158.wmf] = [IMG:image159.wmf], then p = ",
+   "images": [
+    "image158.wmf",
+    "image159.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image160.wmf].",
+   "images": [
+    "image160.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image161.wmf].",
+   "images": [
+    "image161.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image162.wmf].",
+   "images": [
+    "image162.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image163.wmf]. [HKDSE 2017 Paper 2 Q3]",
+   "images": [
+    "image163.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "17. If [IMG:image164.wmf] = [IMG:image165.wmf], then a = ",
+   "images": [
+    "image164.wmf",
+    "image165.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "17",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "18",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "19",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "20",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "21",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "17",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "18",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "19",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "20",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "21",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image166.wmf].",
+   "images": [
+    "image166.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image167.wmf].",
+   "images": [
+    "image167.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image168.wmf].",
+   "images": [
+    "image168.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image169.wmf]. [HKDSE 2017 Paper 2 Q3]",
+   "images": [
+    "image169.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "18. Let p and q be constants. If x^{2} + p(x + 5) – q ≡ (x + 3)(x – 9), then q ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –6."
+  },
+  {
+   "type": "para",
+   "text": "  B. –5."
+  },
+  {
+   "type": "para",
+   "text": "  C. –3."
+  },
+  {
+   "type": "para",
+   "text": "  D. 27. [HKDSE Sample Paper 2 Q4]"
+  },
+  {
+   "type": "para",
+   "text": "19. Let a and b be constants. If 2x^{2} + a(x + 2) + b ≡ (2x – 1)(x – 1), "
+  },
+  {
+   "type": "para",
+   "text": " then b ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –3."
+  },
+  {
+   "type": "para",
+   "text": "  B. –2."
+  },
+  {
+   "type": "para",
+   "text": "  C. 1."
+  },
+  {
+   "type": "para",
+   "text": "  D. 7. [HKDSE Sample Paper 2 Q4]"
+  },
+  {
+   "type": "para",
+   "text": "20. Let m and n be constants. If m(x + 4)^{2} + n(x – 1)^{2} ≡ x^{2} + 28x + 46, "
+  },
+  {
+   "type": "para",
+   "text": " then m ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –4."
+  },
+  {
+   "type": "para",
+   "text": "  B. –2.",
+   "dup": 375
+  },
+  {
+   "type": "para",
+   "text": "  C. 1.",
+   "dup": 376
+  },
+  {
+   "type": "para",
+   "text": "  D. 3. [HKDSE Practice Paper 2 Q4]"
+  },
+  {
+   "type": "para",
+   "text": "21. Let a and b be constants. If a(x + 3)^{2} + b(x – 4)^{2} ≡ x^{2} – 78x + 51, "
+  },
+  {
+   "type": "para",
+   "text": " then a ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –5."
+  },
+  {
+   "type": "para",
+   "text": "  B. –3."
+  },
+  {
+   "type": "para",
+   "text": "  C. 4."
+  },
+  {
+   "type": "para",
+   "text": "  D. 6. [HKDSE Practice Paper 2 Q4]"
+  },
+  {
+   "type": "para",
+   "text": "22. If h and k are constants such that (x + h)(x + 8) ≡ (x + 7)^{2} + k, "
+  },
+  {
+   "type": "para",
+   "text": " then k = "
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "22",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "23",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "24",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "25",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "26",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "27",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "22",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "23",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "24",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "25",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "26",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "27",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "  A. –18."
+  },
+  {
+   "type": "para",
+   "text": "  B. –8."
+  },
+  {
+   "type": "para",
+   "text": "  C. –1."
+  },
+  {
+   "type": "para",
+   "text": "  D. 6. [HKDSE 2020 Paper 2 Q7]"
+  },
+  {
+   "type": "para",
+   "text": "23. If p and q are constants such that (x + p)(x – 12) ≡ (x – 8)^{2} + q, then q = "
+  },
+  {
+   "type": "para",
+   "text": "  A. –16."
+  },
+  {
+   "type": "para",
+   "text": "  B. –4."
+  },
+  {
+   "type": "para",
+   "text": "  C. 8."
+  },
+  {
+   "type": "para",
+   "text": "  D. 12. [HKDSE 2020 Paper 2 Q7]"
+  },
+  {
+   "type": "para",
+   "text": "24. If a and b are constants such that x^{2} + a ≡ (x + b)(x – 3) + 5, then a ="
+  },
+  {
+   "type": "para",
+   "text": "  A. 5."
+  },
+  {
+   "type": "para",
+   "text": "  B. 3."
+  },
+  {
+   "type": "para",
+   "text": "  C. –4."
+  },
+  {
+   "type": "para",
+   "text": "  D. –9. [HKDSE 2012 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "25. If m and n are constants such that x^{2} + m ≡ (x – 4)(x + n) + 8, then m ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –16.",
+   "dup": 427
+  },
+  {
+   "type": "para",
+   "text": "  B. –8.",
+   "dup": 423
+  },
+  {
+   "type": "para",
+   "text": "  C. 4.",
+   "dup": 388
+  },
+  {
+   "type": "para",
+   "text": "  D. 8. [HKDSE 2012 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "26. If a and β are constants such that (x – 5)(x + a) – 9 ≡ (x – 8)^{2} + β, "
+  },
+  {
+   "type": "para",
+   "text": " then β = "
+  },
+  {
+   "type": "para",
+   "text": "  A. –34."
+  },
+  {
+   "type": "para",
+   "text": "  B. –18."
+  },
+  {
+   "type": "para",
+   "text": "  C. –11."
+  },
+  {
+   "type": "para",
+   "text": "  D. –9. [HKDSE 2019 Paper 2 Q4]"
+  },
+  {
+   "type": "para",
+   "text": "27. If a and β are constants such that (x + a)(x – 8) – 13 ≡ (x – 11)^{2} + β, "
+  },
+  {
+   "type": "para",
+   "text": " then β =",
+   "dup": 442
+  },
+  {
+   "type": "para",
+   "text": "  A. –22."
+  },
+  {
+   "type": "para",
+   "text": "  B. –14."
+  },
+  {
+   "type": "para",
+   "text": "  C. –13."
+  },
+  {
+   "type": "para",
+   "text": "  D. –11. [HKDSE 2019 Paper 2 Q4]"
+  },
+  {
+   "type": "para",
+   "text": "28. If p and q are constants such that px(x + 3) + 2x^{2} ≡ qx(x + 2) – x, then p ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –3.",
+   "dup": 374
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "28",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "29",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "30",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "31",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "32",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "28",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "29",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "30",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "31",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "32",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "  B. –2.",
+   "dup": 375
+  },
+  {
+   "type": "para",
+   "text": "  C. 3."
+  },
+  {
+   "type": "para",
+   "text": "  D. 5. [HKDSE 2014 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "29. If m and n are constants such that 3x^{2} – mx(x + 4) ≡ nx(x – 1) + 8x, "
+  },
+  {
+   "type": "para",
+   "text": " then n ="
+  },
+  {
+   "type": "para",
+   "text": "  A. 4."
+  },
+  {
+   "type": "para",
+   "text": "  B. 1."
+  },
+  {
+   "type": "para",
+   "text": "  C. –1.",
+   "dup": 424
+  },
+  {
+   "type": "para",
+   "text": "  D. –4. [HKDSE 2014 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "30. If p and q are constants such that x^{2} – px + q ≡ (x + p)(x – 8) + 16, "
+  },
+  {
+   "type": "para",
+   "text": " then q = "
+  },
+  {
+   "type": "para",
+   "text": "  A. –32."
+  },
+  {
+   "type": "para",
+   "text": "  B. –16."
+  },
+  {
+   "type": "para",
+   "text": "  C. 4.",
+   "dup": 388
+  },
+  {
+   "type": "para",
+   "text": "  D. 16. [HKDSE 2015 Paper 2 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "31. If h and k are constants such that x^{2} + 2hx + k ≡ (x – 6)(x + 3h) + 48, "
+  },
+  {
+   "type": "para",
+   "text": " then k = ",
+   "dup": 391
+  },
+  {
+   "type": "para",
+   "text": "  A. –108."
+  },
+  {
+   "type": "para",
+   "text": "  B. –60."
+  },
+  {
+   "type": "para",
+   "text": "  C. 6."
+  },
+  {
+   "type": "para",
+   "text": "  D. 48. [HKDSE 2015 Paper 2 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "32. If m and n are constants such that (x + 2)^{2} + mx ≡ (x – 8)(x + n) + 7n, "
+  },
+  {
+   "type": "para",
+   "text": " then m = ",
+   "dup": 379
+  },
+  {
+   "type": "para",
+   "text": "  A. –16.",
+   "dup": 427
+  },
+  {
+   "type": "para",
+   "text": "  B. –12."
+  },
+  {
+   "type": "para",
+   "text": "  C. –4.",
+   "dup": 434
+  },
+  {
+   "type": "para",
+   "text": "  D. 8. [HKDSE 2022 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "33. If u and v are constants such that ux – (x + 4)^{2} ≡ 3v – (x – v)(x + 1), "
+  },
+  {
+   "type": "para",
+   "text": " then u = "
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "33",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "34",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "35",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "36",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "37",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "33",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "34",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "35",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "36",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "37",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "  A. –5.",
+   "dup": 386
+  },
+  {
+   "type": "para",
+   "text": "  B. –4.",
+   "dup": 428
+  },
+  {
+   "type": "para",
+   "text": "  C. 3.",
+   "dup": 482
+  },
+  {
+   "type": "para",
+   "text": "  D. 11. [HKDSE 2022 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "34. If a and b are constants such that"
+  },
+  {
+   "type": "para",
+   "text": " (x + 4)(x + a) + 20 ≡ x(x + b) + 2a(x + 4), then b = "
+  },
+  {
+   "type": "para",
+   "text": "  A. –5.",
+   "dup": 386
+  },
+  {
+   "type": "para",
+   "text": "  B. –1."
+  },
+  {
+   "type": "para",
+   "text": "  C. 5."
+  },
+  {
+   "type": "para",
+   "text": "  D. 9. [HKDSE 2023 Paper 2 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "35. If h and k are constants such that "
+  },
+  {
+   "type": "para",
+   "text": " 6 – (x + h)(x + 3) ≡ 5h(x – 1) – x(x + k), then k ="
+  },
+  {
+   "type": "para",
+   "text": "  A. 21."
+  },
+  {
+   "type": "para",
+   "text": "  B. 3.",
+   "dup": 433
+  },
+  {
+   "type": "para",
+   "text": "  C. –3.",
+   "dup": 370
+  },
+  {
+   "type": "para",
+   "text": "  D. –15. [HKDSE 2023 Paper 2 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "36. If a and b are constants such that "
+  },
+  {
+   "type": "para",
+   "text": " 6x^{2} + a(x + 2) – 9 ≡ 2ax(x + 2) + b(3x + 1), then b ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –9."
+  },
+  {
+   "type": "para",
+   "text": "  B. –3.",
+   "dup": 387
+  },
+  {
+   "type": "para",
+   "text": "  C. 3.",
+   "dup": 482
+  },
+  {
+   "type": "para",
+   "text": "  D. 6. [HKDSE 2017 Paper 2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "37. If u and v are constants such that "
+  },
+  {
+   "type": "para",
+   "text": " 3x^{2} – u(x – 3) – 18 ≡ v(x + 3) – ux(x + 4), then v ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –3.",
+   "dup": 374
+  },
+  {
+   "type": "para",
+   "text": "  B. –6."
+  },
+  {
+   "type": "para",
+   "text": "  C. –9."
+  },
+  {
+   "type": "para",
+   "text": "  D. –15. [HKDSE 2017 Paper 2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "38. If a, b and c are non-zero constants such that "
+  },
+  {
+   "type": "para",
+   "text": " a(x + 9) + b(2x + 9) ≡ c(x + 8), then a : b = "
+  },
+  {
+   "type": "para",
+   "text": "  A. 1 : 2."
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "38",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "39",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "40",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "41",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 162
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 163
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "38",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "39",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "40",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "41",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "  B. 1 : 7."
+  },
+  {
+   "type": "para",
+   "text": "  C. 2 : 1."
+  },
+  {
+   "type": "para",
+   "text": "  D. 7 : 1. [HKDSE 2021 Paper 2 Q6]"
+  },
+  {
+   "type": "para",
+   "text": " [Recall: For two quantities a and b of the same kind, "
+  },
+  {
+   "type": "para",
+   "text": "  the ratio of a to b is a : b or [IMG:image170.wmf].]",
+   "images": [
+    "image170.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "39. If a, b and c are non-zero constants such that "
+  },
+  {
+   "type": "para",
+   "text": " 2a(x – 2) + b(x + 2) ≡ c(x – 1), then a : b ="
+  },
+  {
+   "type": "para",
+   "text": "  A. 1 : 2.",
+   "dup": 566
+  },
+  {
+   "type": "para",
+   "text": "  B. 2 : 3."
+  },
+  {
+   "type": "para",
+   "text": "  C. 2 : 1.",
+   "dup": 590
+  },
+  {
+   "type": "para",
+   "text": "  D. 3 : 2. [HKDSE 2021 Paper 2 Q6]"
+  },
+  {
+   "type": "para",
+   "text": "40. If a, b and c are non-zero constants such that "
+  },
+  {
+   "type": "para",
+   "text": " x(x + 4a) + a ≡ x^{2} + 3(bx + c), then a : b : c ="
+  },
+  {
+   "type": "para",
+   "text": "  A. 3 : 4 : 1."
+  },
+  {
+   "type": "para",
+   "text": "  B. 3 : 4 : 9."
+  },
+  {
+   "type": "para",
+   "text": "  C. 4 : 3 : 12."
+  },
+  {
+   "type": "para",
+   "text": "  D. 12 : 9 : 4. [HKDSE 2013 Paper 2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "41. If a, b and c are non-zero constants such that "
+  },
+  {
+   "type": "para",
+   "text": " 4a – x(x – 2a) ≡ 3(bx + c) – x^{2}, then a : b : c ="
+  },
+  {
+   "type": "para",
+   "text": "  A. 3 : 2 : 4."
+  },
+  {
+   "type": "para",
+   "text": "  B. 4 : 6 : 3."
+  },
+  {
+   "type": "para",
+   "text": "  C. 6 : 9 : 8."
+  },
+  {
+   "type": "para",
+   "text": "  D. 12 : 8 : 9. [HKDSE 2013 Paper 2 Q8]"
+  }
+ ]
+}

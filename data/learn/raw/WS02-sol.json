@@ -1,0 +1,7577 @@
+{
+ "_comment": "由 tools/extract_eph.py 自動產生（草稿層）。請勿手改；要修正內容請改 data/learn/{bank,concepts,solutions,lessons}.json。",
+ "sourceFile": "EPH_DSEL5_WS02_e_sol.docx",
+ "code": "WS02",
+ "variant": "solution",
+ "extractedAt": "2026-09-18T07:58:02Z",
+ "stats": {
+  "blocks": 1132,
+  "dups": 457,
+  "images": 128,
+  "images_inline": 0,
+  "sup": 0,
+  "embedFig": 78,
+  "numEq": 0,
+  "marks": 22,
+  "marking": 140,
+  "examples": 8,
+  "practices": 4,
+  "solutions": 0,
+  "noise": 12,
+  "tables": 6
+ },
+ "mediaManifest": [
+  {
+   "name": "image1.png",
+   "size": 21626
+  },
+  {
+   "name": "image10.wmf",
+   "size": 1530
+  },
+  {
+   "name": "image11.wmf",
+   "size": 1534
+  },
+  {
+   "name": "image12.wmf",
+   "size": 1534
+  },
+  {
+   "name": "image13.wmf",
+   "size": 1226
+  },
+  {
+   "name": "image14.wmf",
+   "size": 1286
+  },
+  {
+   "name": "image15.wmf",
+   "size": 1498
+  },
+  {
+   "name": "image150.wmf",
+   "size": 1498
+  },
+  {
+   "name": "image16.wmf",
+   "size": 1478
+  },
+  {
+   "name": "image160.wmf",
+   "size": 1478
+  },
+  {
+   "name": "image17.wmf",
+   "size": 1250
+  },
+  {
+   "name": "image18.wmf",
+   "size": 1280
+  },
+  {
+   "name": "image19.wmf",
+   "size": 1486
+  },
+  {
+   "name": "image190.wmf",
+   "size": 1486
+  },
+  {
+   "name": "image2.png",
+   "size": 42197
+  },
+  {
+   "name": "image20.wmf",
+   "size": 1438
+  },
+  {
+   "name": "image200.wmf",
+   "size": 1438
+  },
+  {
+   "name": "image21.wmf",
+   "size": 1462
+  },
+  {
+   "name": "image210.wmf",
+   "size": 1462
+  },
+  {
+   "name": "image22.wmf",
+   "size": 1430
+  },
+  {
+   "name": "image220.wmf",
+   "size": 1430
+  },
+  {
+   "name": "image23.wmf",
+   "size": 1388
+  },
+  {
+   "name": "image230.wmf",
+   "size": 1388
+  },
+  {
+   "name": "image24.wmf",
+   "size": 808
+  },
+  {
+   "name": "image240.wmf",
+   "size": 808
+  },
+  {
+   "name": "image25.wmf",
+   "size": 1112
+  },
+  {
+   "name": "image250.wmf",
+   "size": 1112
+  },
+  {
+   "name": "image26.wmf",
+   "size": 808
+  },
+  {
+   "name": "image260.wmf",
+   "size": 808
+  },
+  {
+   "name": "image27.wmf",
+   "size": 1456
+  },
+  {
+   "name": "image270.wmf",
+   "size": 1456
+  },
+  {
+   "name": "image28.wmf",
+   "size": 1412
+  },
+  {
+   "name": "image280.wmf",
+   "size": 1412
+  },
+  {
+   "name": "image29.wmf",
+   "size": 1430
+  },
+  {
+   "name": "image290.wmf",
+   "size": 1430
+  },
+  {
+   "name": "image3.png",
+   "size": 21626
+  },
+  {
+   "name": "image3.wmf",
+   "size": 1440
+  },
+  {
+   "name": "image30.wmf",
+   "size": 1470
+  },
+  {
+   "name": "image300.wmf",
+   "size": 1470
+  },
+  {
+   "name": "image31.wmf",
+   "size": 1486
+  },
+  {
+   "name": "image310.wmf",
+   "size": 1486
+  },
+  {
+   "name": "image32.wmf",
+   "size": 1444
+  },
+  {
+   "name": "image320.wmf",
+   "size": 1444
+  },
+  {
+   "name": "image33.wmf",
+   "size": 1444
+  },
+  {
+   "name": "image330.wmf",
+   "size": 1444
+  },
+  {
+   "name": "image34.wmf",
+   "size": 1484
+  },
+  {
+   "name": "image340.wmf",
+   "size": 1484
+  },
+  {
+   "name": "image35.wmf",
+   "size": 1446
+  },
+  {
+   "name": "image350.wmf",
+   "size": 1446
+  },
+  {
+   "name": "image36.wmf",
+   "size": 1470
+  },
+  {
+   "name": "image360.wmf",
+   "size": 1470
+  },
+  {
+   "name": "image37.wmf",
+   "size": 1470
+  },
+  {
+   "name": "image370.wmf",
+   "size": 1470
+  },
+  {
+   "name": "image38.wmf",
+   "size": 2384
+  },
+  {
+   "name": "image380.wmf",
+   "size": 2384
+  },
+  {
+   "name": "image39.wmf",
+   "size": 1332
+  },
+  {
+   "name": "image390.wmf",
+   "size": 1332
+  },
+  {
+   "name": "image4.png",
+   "size": 42197
+  },
+  {
+   "name": "image4.wmf",
+   "size": 1472
+  },
+  {
+   "name": "image40.wmf",
+   "size": 1378
+  },
+  {
+   "name": "image400.wmf",
+   "size": 1378
+  },
+  {
+   "name": "image41.wmf",
+   "size": 2394
+  },
+  {
+   "name": "image410.wmf",
+   "size": 2394
+  },
+  {
+   "name": "image42.wmf",
+   "size": 1332
+  },
+  {
+   "name": "image420.wmf",
+   "size": 1332
+  },
+  {
+   "name": "image43.wmf",
+   "size": 1368
+  },
+  {
+   "name": "image430.wmf",
+   "size": 1368
+  },
+  {
+   "name": "image44.wmf",
+   "size": 1690
+  },
+  {
+   "name": "image440.wmf",
+   "size": 1690
+  },
+  {
+   "name": "image45.wmf",
+   "size": 1700
+  },
+  {
+   "name": "image450.wmf",
+   "size": 1700
+  },
+  {
+   "name": "image46.wmf",
+   "size": 1476
+  },
+  {
+   "name": "image460.wmf",
+   "size": 1476
+  },
+  {
+   "name": "image47.wmf",
+   "size": 1476
+  },
+  {
+   "name": "image470.wmf",
+   "size": 1476
+  },
+  {
+   "name": "image48.wmf",
+   "size": 1544
+  },
+  {
+   "name": "image480.wmf",
+   "size": 1544
+  },
+  {
+   "name": "image49.wmf",
+   "size": 1528
+  },
+  {
+   "name": "image490.wmf",
+   "size": 1528
+  },
+  {
+   "name": "image5.wmf",
+   "size": 1440
+  },
+  {
+   "name": "image50.wmf",
+   "size": 846
+  },
+  {
+   "name": "image500.wmf",
+   "size": 846
+  },
+  {
+   "name": "image51.wmf",
+   "size": 846
+  },
+  {
+   "name": "image510.wmf",
+   "size": 846
+  },
+  {
+   "name": "image52.wmf",
+   "size": 1492
+  },
+  {
+   "name": "image520.wmf",
+   "size": 1492
+  },
+  {
+   "name": "image53.wmf",
+   "size": 846
+  },
+  {
+   "name": "image530.wmf",
+   "size": 846
+  },
+  {
+   "name": "image54.wmf",
+   "size": 846
+  },
+  {
+   "name": "image540.wmf",
+   "size": 846
+  },
+  {
+   "name": "image55.wmf",
+   "size": 1486
+  },
+  {
+   "name": "image550.wmf",
+   "size": 1486
+  },
+  {
+   "name": "image56.wmf",
+   "size": 1448
+  },
+  {
+   "name": "image57.png",
+   "size": 2298
+  },
+  {
+   "name": "image58.png",
+   "size": 2298
+  },
+  {
+   "name": "image59.png",
+   "size": 2298
+  },
+  {
+   "name": "image59.wmf",
+   "size": 1430
+  },
+  {
+   "name": "image6.wmf",
+   "size": 1808
+  },
+  {
+   "name": "image60.png",
+   "size": 2298
+  },
+  {
+   "name": "image60.wmf",
+   "size": 1318
+  },
+  {
+   "name": "image61.wmf",
+   "size": 1354
+  },
+  {
+   "name": "image62.wmf",
+   "size": 1438
+  },
+  {
+   "name": "image63.wmf",
+   "size": 1440
+  },
+  {
+   "name": "image64.wmf",
+   "size": 932
+  },
+  {
+   "name": "image65.wmf",
+   "size": 1218
+  },
+  {
+   "name": "image66.wmf",
+   "size": 1382
+  },
+  {
+   "name": "image67.wmf",
+   "size": 1438
+  },
+  {
+   "name": "image68.wmf",
+   "size": 1464
+  },
+  {
+   "name": "image69.wmf",
+   "size": 1450
+  },
+  {
+   "name": "image7.wmf",
+   "size": 1170
+  },
+  {
+   "name": "image70.wmf",
+   "size": 1432
+  },
+  {
+   "name": "image71.wmf",
+   "size": 1448
+  },
+  {
+   "name": "image710.wmf",
+   "size": 1170
+  },
+  {
+   "name": "image72.wmf",
+   "size": 1448
+  },
+  {
+   "name": "image73.wmf",
+   "size": 1472
+  },
+  {
+   "name": "image74.wmf",
+   "size": 1418
+  },
+  {
+   "name": "image75.wmf",
+   "size": 1510
+  },
+  {
+   "name": "image76.wmf",
+   "size": 1432
+  },
+  {
+   "name": "image77.wmf",
+   "size": 932
+  },
+  {
+   "name": "image78.wmf",
+   "size": 1218
+  },
+  {
+   "name": "image79.wmf",
+   "size": 1440
+  },
+  {
+   "name": "image8.wmf",
+   "size": 1808
+  },
+  {
+   "name": "image80.wmf",
+   "size": 932
+  },
+  {
+   "name": "image81.wmf",
+   "size": 1218
+  },
+  {
+   "name": "image82.wmf",
+   "size": 1456
+  },
+  {
+   "name": "image83.wmf",
+   "size": 1470
+  },
+  {
+   "name": "image9.wmf",
+   "size": 936
+  },
+  {
+   "name": "image90.wmf",
+   "size": 936
+  }
+ ],
+ "blocks": [
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts & DSE Paper 1 Typed Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Linear Equations in Two Unknowns",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 2.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 0
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts & DSE Paper 1 Typed Questions",
+   "context": "textbox",
+   "dup": 1
+  },
+  {
+   "type": "para",
+   "text": "Linear Equations in Two Unknowns",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": " 2.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Method of Substitution",
+     ""
+    ],
+    [
+     "Case 1: Direct Substitution\n[IMG:image3.wmf]\nPut (1) into (2).\nx + 3x  = 12\n4x = 12\nx = 3\nPut x = 3 into (1).\n3(3)  = y\ny = 9\n∴ The solution is x = 3 and y = 9.",
+     "Case 2: Change Subject First\n[IMG:image4.wmf]\nFrom (2), we have  x = y + 1 ...... (3)\nPut (3) into (1).\n2(y + 1) + 3y  = 12\n5y + 2 = 12\ny = 2\nPut y = 2 into (3).\nx = 2 + 1 = 3\n∴ The solution is x = 3 and y = 2."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ y is the subject of (1).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ y is the subject of (1).",
+   "context": "textbox",
+   "dup": 12
+  },
+  {
+   "type": "para",
+   "text": "→ A linear equation in x is obtained.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ A linear equation in x is obtained.",
+   "context": "textbox",
+   "dup": 14
+  },
+  {
+   "type": "para",
+   "text": "→ Make x the subject of (2).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ Make x the subject of (2).",
+   "context": "textbox",
+   "dup": 16
+  },
+  {
+   "type": "para",
+   "text": "→ A linear equation in y is obtained.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ A linear equation in y is obtained.",
+   "context": "textbox",
+   "dup": 18
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Method of Elimination",
+     ""
+    ],
+    [
+     "3x – y = –6 ...... (1)\n2x + y = 1 ........ (2)\n(1) + (2):\n(3x – y) + (2x + y)  = –6 + 1\n5x = –5\nx = –1\nPut x = –1 into (2).\n2(–1) + y  = 1\ny = 3\n∴ The solution is x = –1 and y = 3.",
+     "3x – y = –6 .......... (1)\n2x – y = 1 ............ (2)\n(1) – (2):\n(3x – y) – (2x – y)  = –6 – 1\n3x – y – 2x + y = –7\nx = –7\nPut x = –7 into (2).\n2(–7) – y  = 1\ny = –15\n∴ The solution is x = –7 and y = –15."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "The coefficients of y are \na pair of opposite numbers.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Addition",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "The coefficients of y are \na pair of opposite numbers.",
+   "context": "textbox",
+   "dup": 23
+  },
+  {
+   "type": "para",
+   "text": "Addition",
+   "context": "textbox",
+   "dup": 24
+  },
+  {
+   "type": "para",
+   "text": "The coefficients of y are\nthe same.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "The coefficients of y are\nthe same.",
+   "context": "textbox",
+   "dup": 27
+  },
+  {
+   "type": "para",
+   "text": "Subtraction",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Subtraction",
+   "context": "textbox",
+   "dup": 29
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 1 Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 1 Questions",
+   "context": "textbox",
+   "dup": 32
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2021 Paper 1 Q5]"
+    ],
+    [
+     "The number of chocolate bars owned by Henry is 2 times that owned by Winka. If Henry gives 6 of his chocolate bars to Winka, then the number of chocolate bars owned by Winka is 5 times that owned by Henry. Find the total number of chocolate bars owned by Henry and Winka. (4 marks)\nSolution\nLet x and y be the original numbers of chocolate bars \nowned by Henry and Winka respectively.\n[IMG:image5.wmf]\nPut (1) into (2).\n5(2y – 6)  = y + 6 (1M)\n9y = 36\ny = 4\n∴ The total number of chocolate bars owned by Henry and Winka\n= 2(4) + 4\n= 12 (1A)"
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "→ Step 1: Identify the two unknowns to be  found in the question and use  different letters to represent them.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ Step 1: Identify the two unknowns to be  found in the question and use  different letters to represent them.",
+   "context": "textbox",
+   "dup": 37
+  },
+  {
+   "type": "para",
+   "text": "→ Step 2: Set up simultaneous equations.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ Step 2: Set up simultaneous equations.",
+   "context": "textbox",
+   "dup": 39
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "→ Step 3: Solve the simultaneous equations.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ Step 3: Solve the simultaneous equations.",
+   "context": "textbox",
+   "dup": 43
+  },
+  {
+   "type": "para",
+   "text": "→ Step 4: Write down the solution.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→ Step 4: Write down the solution.",
+   "context": "textbox",
+   "dup": 45
+  },
+  {
+   "type": "para",
+   "text": "Practice 1",
+   "flags": [
+    "practice"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "The number of keychains owned by a boy is 3 times that owned by a girl. If the boy gives 10 of his keychains to the girl, then the number of keychains owned by the boy is half that owned by the girl. Find the total number of keychains owned by the boy and the girl. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of keychains owned by the boy and the girl respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image6.wmf]",
+   "context": "textbox",
+   "images": [
+    "image6.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of keychains owned by the boy and the girl respectively.",
+   "context": "textbox",
+   "dup": 49
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image8.wmf]",
+   "context": "textbox",
+   "images": [
+    "image8.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox",
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": " 3y – 10 =[IMG:image7.wmf] (1M)",
+   "context": "textbox",
+   "images": [
+    "image7.wmf"
+   ],
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  [IMG:image9.wmf] = 15",
+   "context": "textbox",
+   "images": [
+    "image9.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  y = 6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The total number of keychains owned by the boy and the girl",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 3(6) + 6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 24 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " 3y – 10 =[IMG:image710.wmf] (1M)",
+   "context": "textbox",
+   "images": [
+    "image710.wmf"
+   ],
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  [IMG:image90.wmf] = 15",
+   "context": "textbox",
+   "images": [
+    "image90.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  y = 6",
+   "context": "textbox",
+   "dup": 59
+  },
+  {
+   "type": "para",
+   "text": " ∴ The total number of keychains owned by the boy and the girl",
+   "context": "textbox",
+   "dup": 60
+  },
+  {
+   "type": "para",
+   "text": "  = 3(6) + 6",
+   "context": "textbox",
+   "dup": 61
+  },
+  {
+   "type": "para",
+   "text": "  = 24 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 62
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2023 Paper 1 Q5]"
+    ],
+    [
+     "On a bus, the number of male passengers is 80% more than the number of female passengers. If\n56 male passengers get off the bus, then the number of female passengers is 80% more than the\nnumber of male passengers. Find the number of female passengers on the bus. (4 marks)\nSolution\nLet x and y be the number of female passengers and the original number of male passengers on the bus respectively.\n[IMG:image10.wmf]\nPut (1) into (2).  → To find the number of female passengers, we need to eliminate y.\nx = (1 + 80%)((1 + 80%)x – 56) (1M: for getting a linear equation in one unknown)\nx = 3.24x – 100.8\n2.24x = 100.8\nx = 45 (1A)\n∴ The number of female passengers on the bus is 45."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 71
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "Practice 2",
+   "flags": [
+    "practice"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "In a concert hall, the number of female audiences is 40% more than the number of male audiences. If \n480 more male audiences enter the hall, then the number of male audiences is 40% more than the number of female audiences. Find the number of female audiences in the hall. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the number of female audiences and the original number of male audiences in the hall respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image11.wmf]",
+   "context": "textbox",
+   "images": [
+    "image11.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " y = (1 + 40%)x – 480 ...... (3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (1).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  x = (1 + 40%)((1 + 40%)x – 480) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  x = 1.96x – 672",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 0.96x = 672",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  x = 700 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of female audiences in the hall is 700.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the number of female audiences and the original number of male audiences in the hall respectively.",
+   "context": "textbox",
+   "dup": 77
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image12.wmf]",
+   "context": "textbox",
+   "images": [
+    "image12.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": " y = (1 + 40%)x – 480 ...... (3)",
+   "context": "textbox",
+   "dup": 80
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (1).",
+   "context": "textbox",
+   "dup": 81
+  },
+  {
+   "type": "para",
+   "text": "  x = (1 + 40%)((1 + 40%)x – 480) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 82
+  },
+  {
+   "type": "para",
+   "text": "  x = 1.96x – 672",
+   "context": "textbox",
+   "dup": 83
+  },
+  {
+   "type": "para",
+   "text": " 0.96x = 672",
+   "context": "textbox",
+   "dup": 84
+  },
+  {
+   "type": "para",
+   "text": "  x = 700 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 85
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of female audiences in the hall is 700.",
+   "context": "textbox",
+   "dup": 86
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Warm-up Questions"
+  },
+  {
+   "type": "para",
+   "text": "Solve each of the following simultaneous equations by the method of substitution. (1 – 2)"
+  },
+  {
+   "type": "para",
+   "text": "1. [IMG:image13.wmf] 2. [IMG:image14.wmf]",
+   "images": [
+    "image13.wmf",
+    "image14.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image15.wmf]",
+   "context": "textbox",
+   "images": [
+    "image15.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "From (1), we have x = 6y – 9 …… (3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Put (3) into (2).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 5(6y – 9) + 2y + 13 = 0",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 30y – 45 + 2y + 13 = 0",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 32y = 32",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " y = 1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Put y = 1 into (3).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x = 6(1) – 9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = –3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is x = –3 and y = 1.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image150.wmf]",
+   "context": "textbox",
+   "images": [
+    "image150.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "From (1), we have x = 6y – 9 …… (3)",
+   "context": "textbox",
+   "dup": 104
+  },
+  {
+   "type": "para",
+   "text": "Put (3) into (2).",
+   "context": "textbox",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": " 5(6y – 9) + 2y + 13 = 0",
+   "context": "textbox",
+   "dup": 106
+  },
+  {
+   "type": "para",
+   "text": " 30y – 45 + 2y + 13 = 0",
+   "context": "textbox",
+   "dup": 107
+  },
+  {
+   "type": "para",
+   "text": " 32y = 32",
+   "context": "textbox",
+   "dup": 108
+  },
+  {
+   "type": "para",
+   "text": " y = 1",
+   "context": "textbox",
+   "dup": 109
+  },
+  {
+   "type": "para",
+   "text": "Put y = 1 into (3).",
+   "context": "textbox",
+   "dup": 110
+  },
+  {
+   "type": "para",
+   "text": "x = 6(1) – 9",
+   "context": "textbox",
+   "dup": 111
+  },
+  {
+   "type": "para",
+   "text": " = –3",
+   "context": "textbox",
+   "dup": 112
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is x = –3 and y = 1.",
+   "context": "textbox",
+   "dup": 113
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image16.wmf]",
+   "context": "textbox",
+   "images": [
+    "image16.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Put (1) into (2).",
+   "context": "textbox",
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": " 7y – 2(5y) = 6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " –3y = 6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " y = –2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Put y = –2 into (1).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 5(–2) = x",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " x = –10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is x = –10 and y = –2.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image160.wmf]",
+   "context": "textbox",
+   "images": [
+    "image160.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Put (1) into (2).",
+   "context": "textbox",
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": " 7y – 2(5y) = 6",
+   "context": "textbox",
+   "dup": 127
+  },
+  {
+   "type": "para",
+   "text": " –3y = 6",
+   "context": "textbox",
+   "dup": 128
+  },
+  {
+   "type": "para",
+   "text": " y = –2",
+   "context": "textbox",
+   "dup": 129
+  },
+  {
+   "type": "para",
+   "text": "Put y = –2 into (1).",
+   "context": "textbox",
+   "dup": 130
+  },
+  {
+   "type": "para",
+   "text": " 5(–2) = x",
+   "context": "textbox",
+   "dup": 131
+  },
+  {
+   "type": "para",
+   "text": " x = –10",
+   "context": "textbox",
+   "dup": 132
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is x = –10 and y = –2.",
+   "context": "textbox",
+   "dup": 133
+  },
+  {
+   "type": "para",
+   "text": "Solve each of the following simultaneous equations by the method of elimination. (3 – 4)"
+  },
+  {
+   "type": "para",
+   "text": "3. [IMG:image17.wmf] 4. [IMG:image18.wmf]",
+   "images": [
+    "image17.wmf",
+    "image18.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image19.wmf]",
+   "context": "textbox",
+   "images": [
+    "image19.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(1) × 2:",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " (–3x – 2y) × 2 = 3 × 2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " –6x – 4y = 6 …… (3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(2) + (3):",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " (6x + 5y) + (–6x – 4y) = –12 + 6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 6x + 5y – 6x – 4y = –6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " y = –6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Put y = –6 into (1).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " –3x – 2(–6) = 3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " –3x + 12 = 3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " –3x = –9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " x = 3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is x = 3 and y = –6.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image190.wmf]",
+   "context": "textbox",
+   "images": [
+    "image190.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(1) × 2:",
+   "context": "textbox",
+   "dup": 146
+  },
+  {
+   "type": "para",
+   "text": " (–3x – 2y) × 2 = 3 × 2",
+   "context": "textbox",
+   "dup": 147
+  },
+  {
+   "type": "para",
+   "text": " –6x – 4y = 6 …… (3)",
+   "context": "textbox",
+   "dup": 148
+  },
+  {
+   "type": "para",
+   "text": "(2) + (3):",
+   "context": "textbox",
+   "dup": 149
+  },
+  {
+   "type": "para",
+   "text": " (6x + 5y) + (–6x – 4y) = –12 + 6",
+   "context": "textbox",
+   "dup": 150
+  },
+  {
+   "type": "para",
+   "text": " 6x + 5y – 6x – 4y = –6",
+   "context": "textbox",
+   "dup": 151
+  },
+  {
+   "type": "para",
+   "text": " y = –6",
+   "context": "textbox",
+   "dup": 152
+  },
+  {
+   "type": "para",
+   "text": "Put y = –6 into (1).",
+   "context": "textbox",
+   "dup": 153
+  },
+  {
+   "type": "para",
+   "text": " –3x – 2(–6) = 3",
+   "context": "textbox",
+   "dup": 154
+  },
+  {
+   "type": "para",
+   "text": " –3x + 12 = 3",
+   "context": "textbox",
+   "dup": 155
+  },
+  {
+   "type": "para",
+   "text": " –3x = –9",
+   "context": "textbox",
+   "dup": 156
+  },
+  {
+   "type": "para",
+   "text": " x = 3",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is x = 3 and y = –6.",
+   "context": "textbox",
+   "dup": 158
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image20.wmf]",
+   "context": "textbox",
+   "images": [
+    "image20.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(1) × 2:",
+   "context": "textbox",
+   "dup": 146
+  },
+  {
+   "type": "para",
+   "text": " (5x + 2y) × 2 = 0 × 2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 10x + 4y = 0 …… (3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(3) – (2):",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " (10x + 4y) – (7x + 4y) = 0 – 6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 10x + 4y – 7x – 4y = –6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 3x = –6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " x = –2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Put x = –2 into (1).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 5(–2) + 2y = 0",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " –10 + 2y = 0",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 2y = 10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " y = 5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is x = –2 and y = 5.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image200.wmf]",
+   "context": "textbox",
+   "images": [
+    "image200.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(1) × 2:",
+   "context": "textbox",
+   "dup": 146
+  },
+  {
+   "type": "para",
+   "text": " (5x + 2y) × 2 = 0 × 2",
+   "context": "textbox",
+   "dup": 175
+  },
+  {
+   "type": "para",
+   "text": " 10x + 4y = 0 …… (3)",
+   "context": "textbox",
+   "dup": 176
+  },
+  {
+   "type": "para",
+   "text": "(3) – (2):",
+   "context": "textbox",
+   "dup": 177
+  },
+  {
+   "type": "para",
+   "text": " (10x + 4y) – (7x + 4y) = 0 – 6",
+   "context": "textbox",
+   "dup": 178
+  },
+  {
+   "type": "para",
+   "text": " 10x + 4y – 7x – 4y = –6",
+   "context": "textbox",
+   "dup": 179
+  },
+  {
+   "type": "para",
+   "text": " 3x = –6",
+   "context": "textbox",
+   "dup": 180
+  },
+  {
+   "type": "para",
+   "text": " x = –2",
+   "context": "textbox",
+   "dup": 181
+  },
+  {
+   "type": "para",
+   "text": "Put x = –2 into (1).",
+   "context": "textbox",
+   "dup": 182
+  },
+  {
+   "type": "para",
+   "text": " 5(–2) + 2y = 0",
+   "context": "textbox",
+   "dup": 183
+  },
+  {
+   "type": "para",
+   "text": " –10 + 2y = 0",
+   "context": "textbox",
+   "dup": 184
+  },
+  {
+   "type": "para",
+   "text": " 2y = 10",
+   "context": "textbox",
+   "dup": 185
+  },
+  {
+   "type": "para",
+   "text": " y = 5",
+   "context": "textbox",
+   "dup": 186
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is x = –2 and y = 5.",
+   "context": "textbox",
+   "dup": 187
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Solve each of the following simultaneous equations by an algebraic method. (5 – 8)"
+  },
+  {
+   "type": "para",
+   "text": "5. 2x – 3 = y = 3x + 1 6. m – 2n = 9m + 2n = 20"
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image21.wmf]",
+   "context": "textbox",
+   "images": [
+    "image21.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "From (1), we have m = 20 + 2n …… (3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Put (3) into (2).",
+   "context": "textbox",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": " 9(20 + 2n) + 2n = 20",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 180 + 18n + 2n = 20",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 20n = –160",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " n = –8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Put n = –8 into (3).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "m = 20 + 2(–8)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = 20 – 16",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = 4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is m = 4 and n = –8.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image210.wmf]",
+   "context": "textbox",
+   "images": [
+    "image210.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "From (1), we have m = 20 + 2n …… (3)",
+   "context": "textbox",
+   "dup": 207
+  },
+  {
+   "type": "para",
+   "text": "Put (3) into (2).",
+   "context": "textbox",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": " 9(20 + 2n) + 2n = 20",
+   "context": "textbox",
+   "dup": 209
+  },
+  {
+   "type": "para",
+   "text": " 180 + 18n + 2n = 20",
+   "context": "textbox",
+   "dup": 210
+  },
+  {
+   "type": "para",
+   "text": " 20n = –160",
+   "context": "textbox",
+   "dup": 211
+  },
+  {
+   "type": "para",
+   "text": " n = –8",
+   "context": "textbox",
+   "dup": 212
+  },
+  {
+   "type": "para",
+   "text": "Put n = –8 into (3).",
+   "context": "textbox",
+   "dup": 213
+  },
+  {
+   "type": "para",
+   "text": "m = 20 + 2(–8)",
+   "context": "textbox",
+   "dup": 214
+  },
+  {
+   "type": "para",
+   "text": " = 20 – 16",
+   "context": "textbox",
+   "dup": 215
+  },
+  {
+   "type": "para",
+   "text": " = 4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is m = 4 and n = –8.",
+   "context": "textbox",
+   "dup": 217
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image22.wmf]",
+   "context": "textbox",
+   "images": [
+    "image22.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Put (2) into (1).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 2x – 3 = 3x + 1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " x = –4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Put x = –4 into (2).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "y = 3(–4) + 1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = –12 + 1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = –11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is x = –4 and y = –11.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image220.wmf]",
+   "context": "textbox",
+   "images": [
+    "image220.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Put (2) into (1).",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": " 2x – 3 = 3x + 1",
+   "context": "textbox",
+   "dup": 232
+  },
+  {
+   "type": "para",
+   "text": " x = –4",
+   "context": "textbox",
+   "dup": 233
+  },
+  {
+   "type": "para",
+   "text": "Put x = –4 into (2).",
+   "context": "textbox",
+   "dup": 234
+  },
+  {
+   "type": "para",
+   "text": "y = 3(–4) + 1",
+   "context": "textbox",
+   "dup": 235
+  },
+  {
+   "type": "para",
+   "text": " = –12 + 1",
+   "context": "textbox",
+   "dup": 236
+  },
+  {
+   "type": "para",
+   "text": " = –11",
+   "context": "textbox",
+   "dup": 237
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is x = –4 and y = –11.",
+   "context": "textbox",
+   "dup": 238
+  },
+  {
+   "type": "para",
+   "text": "7. 4q – p = 5q – 3p = 14 8. 8a + 3b = 35 = 2a + 6b"
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image23.wmf]",
+   "context": "textbox",
+   "images": [
+    "image23.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(1) × 2:",
+   "context": "textbox",
+   "dup": 146
+  },
+  {
+   "type": "para",
+   "text": " (8a + 3β) × 2 = 35 × 2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 16a + 6β = 70 …… (3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(3) – (2):",
+   "context": "textbox",
+   "dup": 177
+  },
+  {
+   "type": "para",
+   "text": " (16a + 6β) – (2a + 6β) = 70 – 35",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 16a + 6β – 2a – 6β = 35",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 14a = 35",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " a = [IMG:image24.wmf]",
+   "context": "textbox",
+   "images": [
+    "image24.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Put a = [IMG:image24.wmf] into (2).",
+   "context": "textbox",
+   "images": [
+    "image24.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image25.wmf]+ 6β = 35",
+   "context": "textbox",
+   "images": [
+    "image25.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " 5 + 6β = 35",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 6β = 30",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " β = 5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is a = [IMG:image26.wmf] and b = 5.",
+   "context": "textbox",
+   "images": [
+    "image26.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image230.wmf]",
+   "context": "textbox",
+   "images": [
+    "image230.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(1) × 2:",
+   "context": "textbox",
+   "dup": 146
+  },
+  {
+   "type": "para",
+   "text": " (8a + 3β) × 2 = 35 × 2",
+   "context": "textbox",
+   "dup": 251
+  },
+  {
+   "type": "para",
+   "text": " 16a + 6β = 70 …… (3)",
+   "context": "textbox",
+   "dup": 252
+  },
+  {
+   "type": "para",
+   "text": "(3) – (2):",
+   "context": "textbox",
+   "dup": 177
+  },
+  {
+   "type": "para",
+   "text": " (16a + 6β) – (2a + 6β) = 70 – 35",
+   "context": "textbox",
+   "dup": 254
+  },
+  {
+   "type": "para",
+   "text": " 16a + 6β – 2a – 6β = 35",
+   "context": "textbox",
+   "dup": 255
+  },
+  {
+   "type": "para",
+   "text": " 14a = 35",
+   "context": "textbox",
+   "dup": 256
+  },
+  {
+   "type": "para",
+   "text": " a = [IMG:image240.wmf]",
+   "context": "textbox",
+   "images": [
+    "image240.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Put a = [IMG:image240.wmf] into (2).",
+   "context": "textbox",
+   "images": [
+    "image240.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image250.wmf]+ 6β = 35",
+   "context": "textbox",
+   "images": [
+    "image250.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " 5 + 6β = 35",
+   "context": "textbox",
+   "dup": 260
+  },
+  {
+   "type": "para",
+   "text": " 6β = 30",
+   "context": "textbox",
+   "dup": 261
+  },
+  {
+   "type": "para",
+   "text": " β = 5",
+   "context": "textbox",
+   "dup": 262
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is a = [IMG:image260.wmf] and b = 5.",
+   "context": "textbox",
+   "images": [
+    "image260.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image27.wmf]",
+   "context": "textbox",
+   "images": [
+    "image27.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "From (1), we have p = 4q – 14 …… (3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Put (3) into (2).",
+   "context": "textbox",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": " 5q – 3(4q – 14) = 14",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 5q – 12q + 42 = 14",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " –7q = –28",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " q = 4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Put q = 4 into (3).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "p = 4(4) – 14",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = 16 – 14",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " = 2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is p = 2 and q = 4.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image270.wmf]",
+   "context": "textbox",
+   "images": [
+    "image270.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "From (1), we have p = 4q – 14 …… (3)",
+   "context": "textbox",
+   "dup": 280
+  },
+  {
+   "type": "para",
+   "text": "Put (3) into (2).",
+   "context": "textbox",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": " 5q – 3(4q – 14) = 14",
+   "context": "textbox",
+   "dup": 282
+  },
+  {
+   "type": "para",
+   "text": " 5q – 12q + 42 = 14",
+   "context": "textbox",
+   "dup": 283
+  },
+  {
+   "type": "para",
+   "text": " –7q = –28",
+   "context": "textbox",
+   "dup": 284
+  },
+  {
+   "type": "para",
+   "text": " q = 4",
+   "context": "textbox",
+   "dup": 285
+  },
+  {
+   "type": "para",
+   "text": "Put q = 4 into (3).",
+   "context": "textbox",
+   "dup": 286
+  },
+  {
+   "type": "para",
+   "text": "p = 4(4) – 14",
+   "context": "textbox",
+   "dup": 287
+  },
+  {
+   "type": "para",
+   "text": " = 16 – 14",
+   "context": "textbox",
+   "dup": 288
+  },
+  {
+   "type": "para",
+   "text": " = 2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The solution is p = 2 and q = 4.",
+   "context": "textbox",
+   "dup": 290
+  },
+  {
+   "type": "para",
+   "text": "\nDSE Paper 1 Typed Questions"
+  },
+  {
+   "type": "para",
+   "text": "1. Let x and y be two numbers. The difference of x and y is 52 while x is 5 times y. Find y. "
+  },
+  {
+   "type": "para",
+   "text": "(3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2022 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  [IMG:image28.wmf]",
+   "context": "textbox",
+   "images": [
+    "image28.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  Put (2) into (1).",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "   5y – y = 52 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   4y = 52",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "   y = 13 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  [IMG:image280.wmf]",
+   "context": "textbox",
+   "images": [
+    "image280.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  Put (2) into (1).",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "   5y – y = 52 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 309
+  },
+  {
+   "type": "para",
+   "text": "   4y = 52",
+   "context": "textbox",
+   "dup": 310
+  },
+  {
+   "type": "para",
+   "text": "   y = 13 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 311
+  },
+  {
+   "type": "para",
+   "text": "(1A: for either correct)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(1A: for either correct)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 317
+  },
+  {
+   "type": "para",
+   "text": "2. The sum of two numbers x and y is 73. If x is greater than 3 times y by 1, find y. (3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2022 Paper 1 Q2]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 306
+  },
+  {
+   "type": "para",
+   "text": "  [IMG:image29.wmf]",
+   "context": "textbox",
+   "images": [
+    "image29.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  (1) – (2):",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  y – (–3y)  = 73 – 1 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   4y = 72 ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "   y = 18 (1A)弓",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  [IMG:image290.wmf]",
+   "context": "textbox",
+   "images": [
+    "image290.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  (1) – (2):",
+   "context": "textbox",
+   "dup": 322
+  },
+  {
+   "type": "para",
+   "text": "  y – (–3y)  = 73 – 1 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 323
+  },
+  {
+   "type": "para",
+   "text": "   4y = 72 ",
+   "context": "textbox",
+   "dup": 324
+  },
+  {
+   "type": "para",
+   "text": "   y = 18 (1A)弓",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 325
+  },
+  {
+   "type": "para",
+   "text": "(1A: for either correct)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 317
+  },
+  {
+   "type": "para",
+   "text": "(1A: for either correct)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 317
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "3. The price of 3 oranges and 5 apples is $37 while the price of 7 oranges and 4 apples is $48."
+  },
+  {
+   "type": "para",
+   "text": " Find the price of an orange.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2013 Paper 1 Q4]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let $x be the price of an orange and $y be the price of an apple.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image30.wmf]",
+   "context": "textbox",
+   "images": [
+    "image30.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (2) × 5 – (1) × 4:",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 5(7x) – 4(3x)  = 5(48) – 4(37) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  23x = 92",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  x = 4  (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The price of an orange is $4. ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let $x be the price of an orange and $y be the price of an apple.",
+   "context": "textbox",
+   "dup": 337
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image300.wmf]",
+   "context": "textbox",
+   "images": [
+    "image300.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (2) × 5 – (1) × 4:",
+   "context": "textbox",
+   "dup": 339
+  },
+  {
+   "type": "para",
+   "text": " 5(7x) – 4(3x)  = 5(48) – 4(37) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 340
+  },
+  {
+   "type": "para",
+   "text": "  23x = 92",
+   "context": "textbox",
+   "dup": 341
+  },
+  {
+   "type": "para",
+   "text": "  x = 4  (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 342
+  },
+  {
+   "type": "para",
+   "text": " ∴ The price of an orange is $4. ",
+   "context": "textbox",
+   "dup": 343
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "4. Gary buys some $2.2 stamps and $3.3 stamps for $99. If the total number of stamps bought is 35, how many $2.2 stamps does Gary buy?   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKCEE 2007 Paper 1 Q7]"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of $2.2 stamps and $3.3 stamps bought respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image31.wmf]",
+   "context": "textbox",
+   "images": [
+    "image31.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": " y = 35 – x ...... (3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (1).",
+   "context": "textbox",
+   "dup": 81
+  },
+  {
+   "type": "para",
+   "text": " 2.2x + 3.3(35 – x) = 99 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  1.1x = 16.5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  x = 15 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ Gary buys 15 $2.2 stamps. ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of $2.2 stamps and $3.3 stamps bought respectively.",
+   "context": "textbox",
+   "dup": 355
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image310.wmf]",
+   "context": "textbox",
+   "images": [
+    "image310.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": " y = 35 – x ...... (3)",
+   "context": "textbox",
+   "dup": 358
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (1).",
+   "context": "textbox",
+   "dup": 81
+  },
+  {
+   "type": "para",
+   "text": " 2.2x + 3.3(35 – x) = 99 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 360
+  },
+  {
+   "type": "para",
+   "text": "  1.1x = 16.5",
+   "context": "textbox",
+   "dup": 361
+  },
+  {
+   "type": "para",
+   "text": "  x = 15 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 362
+  },
+  {
+   "type": "para",
+   "text": " ∴ Gary buys 15 $2.2 stamps. ",
+   "context": "textbox",
+   "dup": 363
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "5. The total number of books owned by Amy and Billy is 84. If Amy buys 12 books from a book  store, the number of books owned by her will be 3 times that owned by Billy. Find the number of  books owned by Billy.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKCEE 2009 Paper 1 Q6]"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of books owned by Amy and Billy respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image32.wmf]",
+   "context": "textbox",
+   "images": [
+    "image32.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (1) – (2):",
+   "context": "textbox",
+   "dup": 322
+  },
+  {
+   "type": "para",
+   "text": "  y – 12 = 84 – 3y (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   4y = 96",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "   y = 24 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of books owned by Billy is 24. ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of books owned by Amy and Billy respectively.",
+   "context": "textbox",
+   "dup": 378
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image320.wmf]",
+   "context": "textbox",
+   "images": [
+    "image320.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (1) – (2):",
+   "context": "textbox",
+   "dup": 322
+  },
+  {
+   "type": "para",
+   "text": "  y – 12 = 84 – 3y (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 381
+  },
+  {
+   "type": "para",
+   "text": "   4y = 96",
+   "context": "textbox",
+   "dup": 382
+  },
+  {
+   "type": "para",
+   "text": "   y = 24 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 383
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of books owned by Billy is 24. ",
+   "context": "textbox",
+   "dup": 384
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "6. In a basketball league, each team gains 2 points for a win, 1 point for a draw and 0 point for a loss.  The champion of the league plays 42 games and gains a total of 75 points. Given that the champion  does not lose any games, find the number of games that the champion draws. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE Sample Paper 1 Q5]"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of games that the champion wins and draws respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image33.wmf]",
+   "context": "textbox",
+   "images": [
+    "image33.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (1) × 2 – (2):",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 2y – y = 2(42) – 75 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  y = 9  (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The champion draws 9 games.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of games that the champion wins and draws respectively.",
+   "context": "textbox",
+   "dup": 396
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image330.wmf]",
+   "context": "textbox",
+   "images": [
+    "image330.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (1) × 2 – (2):",
+   "context": "textbox",
+   "dup": 398
+  },
+  {
+   "type": "para",
+   "text": " 2y – y = 2(42) – 75 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 399
+  },
+  {
+   "type": "para",
+   "text": "  y = 9  (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 400
+  },
+  {
+   "type": "para",
+   "text": " ∴ The champion draws 9 games.",
+   "context": "textbox",
+   "dup": 401
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "7. There are only two kinds of rooms provided by a hotel: double bed rooms and single bed rooms. The prices per day of a double bed room and a single bed room are $1100 and $950 respectively. On a certain day, the number of double bed rooms booked is 3 times the number of single bed rooms booked and the sum of money for the rooms booked is $46 750. Find the total number of rooms booked that day. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2017 Paper 1 Q4]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of double bed rooms and single bed rooms booked that day respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image34.wmf]",
+   "context": "textbox",
+   "images": [
+    "image34.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox",
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": " 1100(3y) + 950y = 46 750 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  4250y  = 46 750 ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  y = 11 ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The total number of rooms booked ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 3(11) + 11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 44 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of double bed rooms and single bed rooms booked that day respectively.",
+   "context": "textbox",
+   "dup": 413
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image340.wmf]",
+   "context": "textbox",
+   "images": [
+    "image340.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox",
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": " 1100(3y) + 950y = 46 750 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 416
+  },
+  {
+   "type": "para",
+   "text": "  4250y  = 46 750 ",
+   "context": "textbox",
+   "dup": 417
+  },
+  {
+   "type": "para",
+   "text": "  y = 11 ",
+   "context": "textbox",
+   "dup": 418
+  },
+  {
+   "type": "para",
+   "text": " ∴ The total number of rooms booked ",
+   "context": "textbox",
+   "dup": 419
+  },
+  {
+   "type": "para",
+   "text": "  = 3(11) + 11",
+   "context": "textbox",
+   "dup": 420
+  },
+  {
+   "type": "para",
+   "text": "  = 44 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 421
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "8. The number of stamps owned by Alan is 3 times that owned by Benny. If Alan gives 12 of his  stamps to Benny, they will have the same number of stamps. Find the total number of stamps  owned by Alan and Benny.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2015 Paper 1 Q7]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of stamps owned by Alan and Benny respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image35.wmf]",
+   "context": "textbox",
+   "images": [
+    "image35.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox",
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": " 3y – 12 = y + 12 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  y = 12 ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The total number of stamps owned by Alan and Benny",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 3(12) + 12",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 48 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of stamps owned by Alan and Benny respectively.",
+   "context": "textbox",
+   "dup": 435
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image350.wmf]",
+   "context": "textbox",
+   "images": [
+    "image350.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox",
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": " 3y – 12 = y + 12 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 438
+  },
+  {
+   "type": "para",
+   "text": "  y = 12 ",
+   "context": "textbox",
+   "dup": 439
+  },
+  {
+   "type": "para",
+   "text": " ∴ The total number of stamps owned by Alan and Benny",
+   "context": "textbox",
+   "dup": 440
+  },
+  {
+   "type": "para",
+   "text": "  = 3(12) + 12",
+   "context": "textbox",
+   "dup": 441
+  },
+  {
+   "type": "para",
+   "text": "  = 48 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 442
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "9. The number of candies owned by a girl is 2 times that owned by a boy. If the girl gives 30 of her candies to the boy, then the number of candies owned by the boy is 3 times that owned by the girl.  Find the total number of candies owned by the girl and the boy. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2021 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of candies owned by the girl and the boy respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image36.wmf]",
+   "context": "textbox",
+   "images": [
+    "image36.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox",
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": " 3(2y – 30) = y + 30 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  5y = 120",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  y = 24",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The total number of candies owned by the girl and the boy",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 2(24) + 24",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 72 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of candies owned by the girl and the boy respectively.",
+   "context": "textbox",
+   "dup": 456
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image360.wmf]",
+   "context": "textbox",
+   "images": [
+    "image360.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox",
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": " 3(2y – 30) = y + 30 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 459
+  },
+  {
+   "type": "para",
+   "text": "  5y = 120",
+   "context": "textbox",
+   "dup": 460
+  },
+  {
+   "type": "para",
+   "text": "  y = 24",
+   "context": "textbox",
+   "dup": 461
+  },
+  {
+   "type": "para",
+   "text": " ∴ The total number of candies owned by the girl and the boy",
+   "context": "textbox",
+   "dup": 462
+  },
+  {
+   "type": "para",
+   "text": "  = 2(24) + 24",
+   "context": "textbox",
+   "dup": 463
+  },
+  {
+   "type": "para",
+   "text": "  = 72 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 464
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "10. The number of fiction books owned by Kevin is 4 times that owned by Jessie. If Kevin gives 10 of  his fiction books to Jessie, then the number of fiction books owned by Kevin is 2 times that owned  by Jessie. Find the total number of fiction books owned by Kevin and Jessie. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2021 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 455
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of fiction books owned by Kevin and Jessie respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image37.wmf]",
+   "context": "textbox",
+   "images": [
+    "image37.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox",
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": " 4y – 10 = 2(y + 10) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  2y = 30",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  y = 15",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The total number of fiction books owned by Kevin and Jessie",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 4(15) + 15",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 75 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of fiction books owned by Kevin and Jessie respectively.",
+   "context": "textbox",
+   "dup": 478
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image370.wmf]",
+   "context": "textbox",
+   "images": [
+    "image370.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox",
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": " 4y – 10 = 2(y + 10) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 481
+  },
+  {
+   "type": "para",
+   "text": "  2y = 30",
+   "context": "textbox",
+   "dup": 482
+  },
+  {
+   "type": "para",
+   "text": "  y = 15",
+   "context": "textbox",
+   "dup": 483
+  },
+  {
+   "type": "para",
+   "text": " ∴ The total number of fiction books owned by Kevin and Jessie",
+   "context": "textbox",
+   "dup": 484
+  },
+  {
+   "type": "para",
+   "text": "  = 4(15) + 15",
+   "context": "textbox",
+   "dup": 485
+  },
+  {
+   "type": "para",
+   "text": "  = 75 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 486
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "11. In a party, the ratio of the number of men to the number of women is 8 : 7. If 6 men and 4 women  leave the party, then the ratio of the number of men to the number of women is 10 : 9. Find the  original number of men in the party.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2019 Paper 1 Q7]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of men and women in the party respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image38.wmf]",
+   "context": "textbox",
+   "images": [
+    "image38.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image39.wmf]",
+   "context": "textbox",
+   "images": [
+    "image39.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": "  9(x – 6) = 10(y – 4)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 9x – 10y = 14 ...... (4)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of men and women in the party respectively.",
+   "context": "textbox",
+   "dup": 501
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image380.wmf]",
+   "context": "textbox",
+   "images": [
+    "image380.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have",
+   "context": "textbox",
+   "dup": 503
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image390.wmf]",
+   "context": "textbox",
+   "images": [
+    "image390.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": "  9(x – 6) = 10(y – 4)",
+   "context": "textbox",
+   "dup": 506
+  },
+  {
+   "type": "para",
+   "text": " 9x – 10y = 14 ...... (4)",
+   "context": "textbox",
+   "dup": 507
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (4).",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image40.wmf] = 14 (1M)",
+   "context": "textbox",
+   "images": [
+    "image40.wmf"
+   ],
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  36x – 35x = 56",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  x = 56  (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The original number of men in the party is 56.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (4).",
+   "context": "textbox",
+   "dup": 515
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image400.wmf] = 14 (1M)",
+   "context": "textbox",
+   "images": [
+    "image400.wmf"
+   ],
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  36x – 35x = 56",
+   "context": "textbox",
+   "dup": 517
+  },
+  {
+   "type": "para",
+   "text": "  x = 56  (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 518
+  },
+  {
+   "type": "para",
+   "text": " ∴ The original number of men in the party is 56.",
+   "context": "textbox",
+   "dup": 519
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "12. The ratio of the number of stickers owned by Anthony to the number of stickers owned by Heidi is  5 : 3. If Anthony gives 21 of his own stickers to Heidi, then the ratio of the number of stickers  owned by Anthony to the number of stickers owned by Heidi is 7 : 9. Find the original number  of stickers owned by Anthony.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2019 Paper 1 Q7]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 500
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of stickers owned by Anthony and Heidi respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image41.wmf]",
+   "context": "textbox",
+   "images": [
+    "image41.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have",
+   "context": "textbox",
+   "dup": 503
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image42.wmf]",
+   "context": "textbox",
+   "images": [
+    "image42.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": "  9(x – 21) = 7(y + 21)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  9x – 7y = 336 ...... (4)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the original numbers of stickers owned by Anthony and Heidi respectively.",
+   "context": "textbox",
+   "dup": 529
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image410.wmf]",
+   "context": "textbox",
+   "images": [
+    "image410.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have",
+   "context": "textbox",
+   "dup": 503
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image420.wmf]",
+   "context": "textbox",
+   "images": [
+    "image420.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": "  9(x – 21) = 7(y + 21)",
+   "context": "textbox",
+   "dup": 534
+  },
+  {
+   "type": "para",
+   "text": "  9x – 7y = 336 ...... (4)",
+   "context": "textbox",
+   "dup": 535
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (4).",
+   "context": "textbox",
+   "dup": 515
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image43.wmf] = 336 (1M)",
+   "context": "textbox",
+   "images": [
+    "image43.wmf"
+   ],
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  45x – 21x = 1680",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  24x = 1680",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "   x = 70 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The original number of stickers owned by Anthony is 70.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (4).",
+   "context": "textbox",
+   "dup": 515
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image430.wmf] = 336 (1M)",
+   "context": "textbox",
+   "images": [
+    "image430.wmf"
+   ],
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  45x – 21x = 1680",
+   "context": "textbox",
+   "dup": 545
+  },
+  {
+   "type": "para",
+   "text": "  24x = 1680",
+   "context": "textbox",
+   "dup": 546
+  },
+  {
+   "type": "para",
+   "text": "   x = 70 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 547
+  },
+  {
+   "type": "para",
+   "text": " ∴ The original number of stickers owned by Anthony is 70.",
+   "context": "textbox",
+   "dup": 548
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "13. There are 84 helpers in an open day. The helpers are divided into 4 groups, and each group has the  same number of helpers. In each group, there are 3 more male helpers than female helpers. Find  the number of female helpers in the open day.  (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2012 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of male helpers and female helpers in the open day respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image44.wmf]",
+   "context": "textbox",
+   "images": [
+    "image44.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": " x – y = 12 ...... (3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " (1) – (3):",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 2y = 72 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  y = 36 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of female helpers in the open day is 36. ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of male helpers and female helpers in the open day respectively.",
+   "context": "textbox",
+   "dup": 560
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image440.wmf]",
+   "context": "textbox",
+   "images": [
+    "image440.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": " x – y = 12 ...... (3)",
+   "context": "textbox",
+   "dup": 563
+  },
+  {
+   "type": "para",
+   "text": " (1) – (3):",
+   "context": "textbox",
+   "dup": 564
+  },
+  {
+   "type": "para",
+   "text": " 2y = 72 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 565
+  },
+  {
+   "type": "para",
+   "text": "  y = 36 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 566
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of female helpers in the open day is 36. ",
+   "context": "textbox",
+   "dup": 567
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "14. There are 140 guards in an international jewellery exhibition consisting of 5 zones. Each zone has  the same number of guards. In each zone, there are 6 less female guards than male guards. Find the  number of male guards in the exhibition.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2012 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 559
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of male guards and female guards in the exhibition respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image45.wmf]",
+   "context": "textbox",
+   "images": [
+    "image45.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": " x – y = 30 ...... (3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " (1) + (3):",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 2x = 170 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  x = 85 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of male guards in the exhibition is 85.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of male guards and female guards in the exhibition respectively.",
+   "context": "textbox",
+   "dup": 580
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image450.wmf]",
+   "context": "textbox",
+   "images": [
+    "image450.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": " x – y = 30 ...... (3)",
+   "context": "textbox",
+   "dup": 583
+  },
+  {
+   "type": "para",
+   "text": " (1) + (3):",
+   "context": "textbox",
+   "dup": 584
+  },
+  {
+   "type": "para",
+   "text": " 2x = 170 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 585
+  },
+  {
+   "type": "para",
+   "text": "  x = 85 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 586
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of male guards in the exhibition is 85.",
+   "context": "textbox",
+   "dup": 587
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "15. In a fitness centre, there are 990 members and the number of male members is 20% more than the  number of female members. Find the difference of the numbers of male members and female  members.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2016 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of male members and female members respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image46.wmf]",
+   "context": "textbox",
+   "images": [
+    "image46.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (2) into (1).",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": " (1 + 20%)y + y = 990 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  2.2y = 990",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  y = 450",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The difference of the numbers of male members and female members",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 450 × 20%",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 90 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of male members and female members respectively.",
+   "context": "textbox",
+   "dup": 601
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image460.wmf]",
+   "context": "textbox",
+   "images": [
+    "image460.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (2) into (1).",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": " (1 + 20%)y + y = 990 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 604
+  },
+  {
+   "type": "para",
+   "text": "  2.2y = 990",
+   "context": "textbox",
+   "dup": 605
+  },
+  {
+   "type": "para",
+   "text": "  y = 450",
+   "context": "textbox",
+   "dup": 606
+  },
+  {
+   "type": "para",
+   "text": " ∴ The difference of the numbers of male members and female members",
+   "context": "textbox",
+   "dup": 607
+  },
+  {
+   "type": "para",
+   "text": "  = 450 × 20%",
+   "context": "textbox",
+   "dup": 608
+  },
+  {
+   "type": "para",
+   "text": "  = 90 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 609
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "16. There are 154 magazines and comic books on a bookshelf. The number of magazines is 25% less  than the number of comic books. Find the difference of the numbers of comic books and magazines."
+  },
+  {
+   "type": "para",
+   "text": "(4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2016 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 600
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of magazines and comic books respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image47.wmf]",
+   "context": "textbox",
+   "images": [
+    "image47.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (2) into (1).",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": " (1 – 25%)y + y = 154 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  1.75y = 154",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  y = 88",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The difference of the numbers of comic books and magazines",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 88 × 25%",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  = 22 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the numbers of magazines and comic books respectively.",
+   "context": "textbox",
+   "dup": 624
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image470.wmf]",
+   "context": "textbox",
+   "images": [
+    "image470.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (2) into (1).",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": " (1 – 25%)y + y = 154 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 627
+  },
+  {
+   "type": "para",
+   "text": "  1.75y = 154",
+   "context": "textbox",
+   "dup": 628
+  },
+  {
+   "type": "para",
+   "text": "  y = 88",
+   "context": "textbox",
+   "dup": 629
+  },
+  {
+   "type": "para",
+   "text": " ∴ The difference of the numbers of comic books and magazines",
+   "context": "textbox",
+   "dup": 630
+  },
+  {
+   "type": "para",
+   "text": "  = 88 × 25%",
+   "context": "textbox",
+   "dup": 631
+  },
+  {
+   "type": "para",
+   "text": "  = 22 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 632
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "17. On a tram, the number of male passengers is 50% more than the number of female passengers. If  25 male passengers get off the tram, then the number of female passengers is 50% more than the  number of male passengers. Find the number of female passengers on the tram. (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2023 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the number of female passengers and the original number of male passengers on the tram respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image48.wmf]",
+   "context": "textbox",
+   "images": [
+    "image48.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox",
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": "  x = (1 + 50%)((1 + 50%)x – 25) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " 1.25x = 37.5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  x = 30 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of female passengers on the tram is 30.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the number of female passengers and the original number of male passengers on the tram respectively.",
+   "context": "textbox",
+   "dup": 647
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image480.wmf]",
+   "context": "textbox",
+   "images": [
+    "image480.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (1) into (2).",
+   "context": "textbox",
+   "dup": 51
+  },
+  {
+   "type": "para",
+   "text": "  x = (1 + 50%)((1 + 50%)x – 25) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 650
+  },
+  {
+   "type": "para",
+   "text": " 1.25x = 37.5",
+   "context": "textbox",
+   "dup": 651
+  },
+  {
+   "type": "para",
+   "text": "  x = 30 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 652
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of female passengers on the tram is 30.",
+   "context": "textbox",
+   "dup": 653
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "18. In a school hall, the number of teachers is 20% more than the number of students. If 22 more students enter the hall, then the number of students is 20% more than the number of teachers. Find the number of teachers in the hall.   (4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2023 Paper 1 Q5]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 646
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the number of teachers and the original number of students in the hall respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image49.wmf]",
+   "context": "textbox",
+   "images": [
+    "image49.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": " y = (1 + 20%)x – 22 ...... (3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (1).",
+   "context": "textbox",
+   "dup": 81
+  },
+  {
+   "type": "para",
+   "text": "  x = (1 + 20%)((1 + 20%)x – 22) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " 0.44x = 26.4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  x = 60 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of teachers in the hall is 60.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x and y be the number of teachers and the original number of students in the hall respectively.",
+   "context": "textbox",
+   "dup": 665
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image490.wmf]",
+   "context": "textbox",
+   "images": [
+    "image490.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have",
+   "context": "textbox",
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": " y = (1 + 20%)x – 22 ...... (3)",
+   "context": "textbox",
+   "dup": 668
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (1).",
+   "context": "textbox",
+   "dup": 81
+  },
+  {
+   "type": "para",
+   "text": "  x = (1 + 20%)((1 + 20%)x – 22) (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 670
+  },
+  {
+   "type": "para",
+   "text": " 0.44x = 26.4",
+   "context": "textbox",
+   "dup": 671
+  },
+  {
+   "type": "para",
+   "text": "  x = 60 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 672
+  },
+  {
+   "type": "para",
+   "text": " ∴ The number of teachers in the hall is 60.",
+   "context": "textbox",
+   "dup": 673
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "19. Anson drives from city X to city Y at an average speed of 66 km/h and then he drives from city Y  to city Z at an average speed of 84 km/h. It is given that Anson drives 104 km in 85 minutes for the  whole journey. How long does Anson take to drive from city Y to city Z? (5 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2018 Paper 1 Q9]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Let x minutes and y minutes be the time required for Anson to drive from city X to city Y, and from city Y to city Z respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 66 km/h = [IMG:image50.wmf] km/min",
+   "context": "textbox",
+   "images": [
+    "image50.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   = 1.1 km/min",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 84 km/h = [IMG:image51.wmf] km/min",
+   "context": "textbox",
+   "images": [
+    "image51.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   = 1.4 km/min",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image52.wmf]",
+   "context": "textbox",
+   "images": [
+    "image52.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have",
+   "context": "textbox",
+   "dup": 503
+  },
+  {
+   "type": "para",
+   "text": " x = 85 – y ...... (3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (2).",
+   "context": "textbox",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": " 1.1(85 – y) + 1.4y = 104 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  0.3y = 10.5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  y = 35 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ Anson takes 35 minutes to drive from city Y to city Z.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x minutes and y minutes be the time required for Anson to drive from city X to city Y, and from city Y to city Z respectively.",
+   "context": "textbox",
+   "dup": 688
+  },
+  {
+   "type": "para",
+   "text": " 66 km/h = [IMG:image500.wmf] km/min",
+   "context": "textbox",
+   "images": [
+    "image500.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   = 1.1 km/min",
+   "context": "textbox",
+   "dup": 690
+  },
+  {
+   "type": "para",
+   "text": " 84 km/h = [IMG:image510.wmf] km/min",
+   "context": "textbox",
+   "images": [
+    "image510.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   = 1.4 km/min",
+   "context": "textbox",
+   "dup": 692
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image520.wmf]",
+   "context": "textbox",
+   "images": [
+    "image520.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have",
+   "context": "textbox",
+   "dup": 503
+  },
+  {
+   "type": "para",
+   "text": " x = 85 – y ...... (3)",
+   "context": "textbox",
+   "dup": 695
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (2).",
+   "context": "textbox",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": " 1.1(85 – y) + 1.4y = 104 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 697
+  },
+  {
+   "type": "para",
+   "text": "  0.3y = 10.5",
+   "context": "textbox",
+   "dup": 698
+  },
+  {
+   "type": "para",
+   "text": "  y = 35 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 699
+  },
+  {
+   "type": "para",
+   "text": " ∴ Anson takes 35 minutes to drive from city Y to city Z.",
+   "context": "textbox",
+   "dup": 700
+  },
+  {
+   "type": "para",
+   "text": "(1M: either one)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(1M: either one)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 714
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "20. A yacht sails from pier A to pier B at an average speed of 96 km/h and then the yacht sails from  pier B to pier C at an average speed of 78 km/h. It is given that the yacht sails 98 km in 65 minutes  for the whole journey. How long does the yacht take to sail from pier A to pier B? (5 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2018 Paper 1 Q9]",
+   "flags": [
+    "dse-ref"
+   ],
+   "dup": 687
+  },
+  {
+   "type": "para",
+   "text": " Let x minutes and y minutes be the time required for the yacht to sail from pier A to pier B, and from pier B to pier C respectively.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 96 km/h = [IMG:image53.wmf] km/min",
+   "context": "textbox",
+   "images": [
+    "image53.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   = 1.6 km/min",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 78 km/h = [IMG:image54.wmf] km/min",
+   "context": "textbox",
+   "images": [
+    "image54.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   = 1.3 km/min",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image55.wmf]",
+   "context": "textbox",
+   "images": [
+    "image55.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have",
+   "context": "textbox",
+   "dup": 503
+  },
+  {
+   "type": "para",
+   "text": " y = 65 – x ...... (3)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (2).",
+   "context": "textbox",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": " 1.6x + 1.3(65 – x) = 98 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  0.3x = 13.5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  x = 45 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " ∴ The yacht takes 45 minutes to sail from pier A to pier B.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " Let x minutes and y minutes be the time required for the yacht to sail from pier A to pier B, and from pier B to pier C respectively.",
+   "context": "textbox",
+   "dup": 720
+  },
+  {
+   "type": "para",
+   "text": " 96 km/h = [IMG:image530.wmf] km/min",
+   "context": "textbox",
+   "images": [
+    "image530.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   = 1.6 km/min",
+   "context": "textbox",
+   "dup": 722
+  },
+  {
+   "type": "para",
+   "text": " 78 km/h = [IMG:image540.wmf] km/min",
+   "context": "textbox",
+   "images": [
+    "image540.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "   = 1.3 km/min",
+   "context": "textbox",
+   "dup": 724
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image550.wmf]",
+   "context": "textbox",
+   "images": [
+    "image550.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have",
+   "context": "textbox",
+   "dup": 503
+  },
+  {
+   "type": "para",
+   "text": " y = 65 – x ...... (3)",
+   "context": "textbox",
+   "dup": 727
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (2).",
+   "context": "textbox",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": " 1.6x + 1.3(65 – x) = 98 (1M)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 729
+  },
+  {
+   "type": "para",
+   "text": "  0.3x = 13.5",
+   "context": "textbox",
+   "dup": 730
+  },
+  {
+   "type": "para",
+   "text": "  x = 45 (1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 731
+  },
+  {
+   "type": "para",
+   "text": " ∴ The yacht takes 45 minutes to sail from pier A to pier B.",
+   "context": "textbox",
+   "dup": 732
+  },
+  {
+   "type": "para",
+   "text": "(1M: either one)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 714
+  },
+  {
+   "type": "para",
+   "text": "(1M: either one)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 714
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "(1A + 1A)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 0
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 2 Typed Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Linear Equations in Two Unknowns",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": " 2.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 0
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 2 Typed Questions",
+   "context": "textbox",
+   "dup": 752
+  },
+  {
+   "type": "para",
+   "text": "Linear Equations in Two Unknowns",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": " 2.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 2 Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 2 Questions",
+   "context": "textbox",
+   "dup": 759
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2019 Paper 2 Q3]",
+     "[HKDSE 2014 Paper 2 Q8]"
+    ],
+    [
+     "If 8x – 9y = 30 = 4x + 3y, then y =\nA.  –3. B. –2.\nC.  2. D. 6.\nSolution\nKey Steps: • Rewrite the given equations as   two linear equations.\n• Eliminate one of the unknowns by   adding or subtracting two equations.\n• Solve the equation obtained.\n[IMG:image56.wmf]  → •\n(2) × 2: (4x + 3y) × 2 = 30 × 2\n8x + 6y = 60 …... (3)\n(3) – (1): (8x + 6y) – (8x – 9y) = 60 – 30  → •\n15y = 30\ny = 2  → →\n∴ The answer is C.",
+     "The price of 3 egg tarts and 4 doughnuts is $156. If the price of 5 egg tarts and the price of 2 doughnuts are the same, then the price of an egg tart is\nA.  $12. B. $14.\nC.  $30. D. $35.\nSolution\nKey Steps: • Identify the two unknowns involved   in the question and use different  letters to represent them.\n• Set up simultaneous linear \n  equations in two unknowns.\n• Find the required unknown.\nLet $x be the price of an egg tart and \n$y be the price of a doughnut.  → •\n[IMG:image59.wmf]  → •\nFrom (2), we have [IMG:image60.wmf]\nPut (3) into (1).\n[IMG:image61.wmf] = 156\n13x = 156\nx = 12\n∴ The price of an egg tart is $12.\n∴ The answer is A."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 71
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 71
+  },
+  {
+   "type": "para",
+   "text": "MCQ Alternative Strategy",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "MCQ Alternative Strategy",
+   "context": "textbox",
+   "dup": 766
+  },
+  {
+   "type": "para",
+   "text": "[By substitution.]",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Substitute the values of y in options A, B, C and D into (1) and (2). Check whether the values of x obtained in (1) and (2) are the same.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "If yes, the corresponding option is correct.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The answer must be C.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[By substitution.]",
+   "context": "textbox",
+   "dup": 768
+  },
+  {
+   "type": "para",
+   "text": "Substitute the values of y in options A, B, C and D into (1) and (2). Check whether the values of x obtained in (1) and (2) are the same.",
+   "context": "textbox",
+   "dup": 769
+  },
+  {
+   "type": "para",
+   "text": "If yes, the corresponding option is correct.",
+   "context": "textbox",
+   "dup": 770
+  },
+  {
+   "type": "para",
+   "text": "∴ The answer must be C.",
+   "context": "textbox",
+   "dup": 771
+  },
+  {
+   "type": "para",
+   "text": "→",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "→",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Practice 1\nIf 4m – 3n = 7 = 2m – 5n, then n =\nA. –6.\nB.  –1.\nC.  1.\nD. 6.   B",
+     "Practice 2\nThe price of 5 hats and 4 ties is $570. If the price of 8 hats and the price of 5 ties are the same, then the price of a hat is\nA. $47.5.\nB.  $50.\nC.  $76.\nD. $80.   B"
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 780
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 781
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 782
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "1. If a – 4b = 2 and 5a + 2b = –12, then a ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –2."
+  },
+  {
+   "type": "para",
+   "text": "  B. –1."
+  },
+  {
+   "type": "para",
+   "text": "  C. 1."
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. 2. [HKDSE 2015 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "2. If 3p – q = 13 and 9p + 2q = 4, then q ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –7."
+  },
+  {
+   "type": "para",
+   "text": "  B. –2."
+  },
+  {
+   "type": "para",
+   "text": "  C. 2."
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. 7. [HKDSE 2015 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "3. If p + 2q + 11 = 3p − q = 13, then p ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –7.",
+   "dup": 810
+  },
+  {
+   "type": "para",
+   "text": "  B. –1.",
+   "dup": 804
+  },
+  {
+   "type": "para",
+   "text": "  C. 4."
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. 6. [HKDSE 2012 Paper 2 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "4. If 4r − s − 10 = r + 4s = 9, then r ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –11."
+  },
+  {
+   "type": "para",
+   "text": "  B. –6."
+  },
+  {
+   "type": "para",
+   "text": "  C. 1.",
+   "dup": 805
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. 5. [HKDSE 2012 Paper 2 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "5. If 4p – q = 9p + 4q = 5, then q ="
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 780
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 781
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 782
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 780
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 781
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 782
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 780
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 781
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 782
+  },
+  {
+   "type": "para",
+   "text": "18",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "19",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "20",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 780
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 781
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 782
+  },
+  {
+   "type": "para",
+   "text": "18",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "19",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "20",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "  A. –5."
+  },
+  {
+   "type": "para",
+   "text": "  B. –1.",
+   "dup": 804
+  },
+  {
+   "type": "para",
+   "text": "  C. 1.",
+   "dup": 805
+  },
+  {
+   "type": "para",
+   "text": "B",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "B",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. 5. [HKDSE 2016 Paper 2 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "6. If x + 5y = 3x + 2y = 13, then x ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –3."
+  },
+  {
+   "type": "para",
+   "text": "  B. –2.",
+   "dup": 811
+  },
+  {
+   "type": "para",
+   "text": "  C. 2.",
+   "dup": 812
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. 3. [HKDSE 2016 Paper 2 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "7. If 9m + 10n = 8 = 3m – 2n, then m ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –4."
+  },
+  {
+   "type": "para",
+   "text": "  B. –1.",
+   "dup": 804
+  },
+  {
+   "type": "para",
+   "text": "  C. 2.",
+   "dup": 812
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. 4. [HKDSE 2019 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "8. If 5a + 6b = 27 = 17a – 12b, then a ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –3.",
+   "dup": 887
+  },
+  {
+   "type": "para",
+   "text": "  B. 2."
+  },
+  {
+   "type": "para",
+   "text": "  C. 3."
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. 7. [HKDSE 2019 Paper 2 Q3]"
+  },
+  {
+   "type": "para",
+   "text": "9. If a – 4 = b – 10 = a – 5b + 11, then a ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –3.",
+   "dup": 887
+  },
+  {
+   "type": "para",
+   "text": "  B. –1.",
+   "dup": 804
+  },
+  {
+   "type": "para",
+   "text": "  C. 1.",
+   "dup": 805
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. 3. [HKCEE 2008 Paper 2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "10. If 13 – 2p = q + 9 = 3q – 2p – 5, then p ="
+  },
+  {
+   "type": "para",
+   "text": "  A. –8."
+  },
+  {
+   "type": "para",
+   "text": "  B. –6.",
+   "dup": 825
+  },
+  {
+   "type": "para",
+   "text": "  C. –1."
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. 6. [HKCEE 2008 Paper 2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "11. The price of 3 avocados and 2 pears is $70. If the price of 4 avocados "
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 780
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 781
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 782
+  },
+  {
+   "type": "para",
+   "text": "11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "12",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "13",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "14",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 780
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 781
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 782
+  },
+  {
+   "type": "para",
+   "text": "11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "12",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "13",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "14",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 787
+  },
+  {
+   "type": "para",
+   "text": " and the price of 9 pears are the same, then the price of a pear is"
+  },
+  {
+   "type": "para",
+   "text": "  A. $8."
+  },
+  {
+   "type": "para",
+   "text": "  B. $12."
+  },
+  {
+   "type": "para",
+   "text": "  C. $18."
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. $27. [HKDSE 2014 Paper 2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "12. The price of 5 hamburgers and 8 sandwiches are the same. Ivan "
+  },
+  {
+   "type": "para",
+   "text": " buys 2 hamburgers and 4 sandwiches for $108. Find the price of"
+  },
+  {
+   "type": "para",
+   "text": " a hamburger."
+  },
+  {
+   "type": "para",
+   "text": "  A. $12.5"
+  },
+  {
+   "type": "para",
+   "text": "  B. $15"
+  },
+  {
+   "type": "para",
+   "text": "  C. $20"
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. $24 [HKDSE 2014 Paper 2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "13. The price of 3 oranges and 7 apples is $53 while the price of 4 oranges"
+  },
+  {
+   "type": "para",
+   "text": " and 2 apples is $34. Find the price of 2 oranges and 3 apples."
+  },
+  {
+   "type": "para",
+   "text": "  A. $27"
+  },
+  {
+   "type": "para",
+   "text": "  B. $28"
+  },
+  {
+   "type": "para",
+   "text": "  C. $29"
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. $30 [HKCEE 2011 Paper 2 Q6]"
+  },
+  {
+   "type": "para",
+   "text": "14. In an exhibition, the total fare of 2 adults and 3 children is $105 while "
+  },
+  {
+   "type": "para",
+   "text": " the total fare of 5 adults and 4 children is $210. Find the total fare of "
+  },
+  {
+   "type": "para",
+   "text": " 2 adults and 1 child."
+  },
+  {
+   "type": "para",
+   "text": "  A. $60"
+  },
+  {
+   "type": "para",
+   "text": "  B. $70"
+  },
+  {
+   "type": "para",
+   "text": "  C. $75"
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "C",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "  D. $90 [HKCEE 2011 Paper 2 Q6]"
+  },
+  {
+   "type": "para",
+   "text": "Detailed Solutions"
+  },
+  {
+   "type": "para",
+   "text": "Practice 1 (p.17)",
+   "flags": [
+    "practice"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image62.wmf]",
+   "images": [
+    "image62.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(2) × 2: (2m – 5n) × 2 = 7 × 2"
+  },
+  {
+   "type": "para",
+   "text": "  4m – 10n = 14 ...... (3)"
+  },
+  {
+   "type": "para",
+   "text": "(1) – (3): (4m – 3n) – (4m – 10n) = 7 – 14"
+  },
+  {
+   "type": "para",
+   "text": "  7n = –7"
+  },
+  {
+   "type": "para",
+   "text": "  n = –1"
+  },
+  {
+   "type": "para",
+   "text": "∴ The answer is B."
+  },
+  {
+   "type": "para",
+   "text": "Practice 2 (p.17)",
+   "flags": [
+    "practice"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Let $x be the price of a hat and $y be the price \nof a tie."
+  },
+  {
+   "type": "para",
+   "text": "[IMG:image63.wmf]",
+   "images": [
+    "image63.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "From (2), we have y = [IMG:image64.wmf] ...... (3)",
+   "images": [
+    "image64.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Put (3) into (1).",
+   "dup": 81
+  },
+  {
+   "type": "para",
+   "text": " 5x + [IMG:image65.wmf] = 570",
+   "images": [
+    "image65.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " 11.4x = 570"
+  },
+  {
+   "type": "para",
+   "text": " x = 50"
+  },
+  {
+   "type": "para",
+   "text": "∴ The price of a hat is $50."
+  },
+  {
+   "type": "para",
+   "text": "∴ The answer is B.",
+   "dup": 986
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 2 Typed Questions (p.17)"
+  },
+  {
+   "type": "para",
+   "text": "1. [IMG:image66.wmf]",
+   "images": [
+    "image66.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (2) × 2: (5a + 2β) × 2 = –12 × 2"
+  },
+  {
+   "type": "para",
+   "text": "  10a + 4β = –24 ...... (3)"
+  },
+  {
+   "type": "para",
+   "text": " (1) + (3): ",
+   "dup": 584
+  },
+  {
+   "type": "para",
+   "text": "  (a – 4β) + (10a + 4β) = 2 + (–24)"
+  },
+  {
+   "type": "para",
+   "text": "  11a = –22"
+  },
+  {
+   "type": "para",
+   "text": "  a = –2"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is A."
+  },
+  {
+   "type": "para",
+   "text": "\n2. [IMG:image67.wmf]",
+   "images": [
+    "image67.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (1) × 3: (3p – q) × 3 = 13 × 3"
+  },
+  {
+   "type": "para",
+   "text": "  9p – 3q = 39 ...... (3)"
+  },
+  {
+   "type": "para",
+   "text": " (2) – (3): "
+  },
+  {
+   "type": "para",
+   "text": "  (9p + 2q) – (9p – 3q) = 4 – 39"
+  },
+  {
+   "type": "para",
+   "text": "  5q = –35"
+  },
+  {
+   "type": "para",
+   "text": "  q = –7"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is A.",
+   "dup": 1005
+  },
+  {
+   "type": "para",
+   "text": "3. [IMG:image68.wmf]",
+   "images": [
+    "image68.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have q = 3p – 13 ...... (3)"
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (1).",
+   "dup": 81
+  },
+  {
+   "type": "para",
+   "text": "  p + 2(3p – 13) + 11 = 13"
+  },
+  {
+   "type": "para",
+   "text": "  7p = 28"
+  },
+  {
+   "type": "para",
+   "text": "  p = 4"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is C."
+  },
+  {
+   "type": "para",
+   "text": "4. [IMG:image69.wmf]",
+   "images": [
+    "image69.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have s = 4r – 19 ...... (3)"
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (2).",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": "  r + 4(4r – 19) = 9"
+  },
+  {
+   "type": "para",
+   "text": "  17r = 85"
+  },
+  {
+   "type": "para",
+   "text": "  r = 5"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is D."
+  },
+  {
+   "type": "para",
+   "text": "5. [IMG:image70.wmf]",
+   "images": [
+    "image70.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (1) × 9: (4p – q) × 9 = 5 × 9"
+  },
+  {
+   "type": "para",
+   "text": "  36p – 9q = 45 ...... (3)"
+  },
+  {
+   "type": "para",
+   "text": " (2) × 4: (9p + 4q) × 4 = 5 × 4"
+  },
+  {
+   "type": "para",
+   "text": "  36p + 16q = 20 ...... (4)"
+  },
+  {
+   "type": "para",
+   "text": " (4) – (3): "
+  },
+  {
+   "type": "para",
+   "text": "  (36p + 16q) – (36p – 9q) = 20 – 45"
+  },
+  {
+   "type": "para",
+   "text": "  25q = –25"
+  },
+  {
+   "type": "para",
+   "text": "  q = –1"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is B.\n6. [IMG:image71.wmf]",
+   "images": [
+    "image71.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (1) × 2: (x + 5y) × 2 = 13 × 2"
+  },
+  {
+   "type": "para",
+   "text": "  2x + 10y = 26 ...... (3)"
+  },
+  {
+   "type": "para",
+   "text": " (2) × 5: (3x + 2y) × 5 = 13 × 5"
+  },
+  {
+   "type": "para",
+   "text": "  15x + 10y = 65 ...... (4)"
+  },
+  {
+   "type": "para",
+   "text": " (4) – (3): ",
+   "dup": 1033
+  },
+  {
+   "type": "para",
+   "text": "  (15x + 10y) – (2x + 10y) = 65 – 26"
+  },
+  {
+   "type": "para",
+   "text": "  13x = 39"
+  },
+  {
+   "type": "para",
+   "text": "  x = 3",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is D.",
+   "dup": 1027
+  },
+  {
+   "type": "para",
+   "text": "7. [IMG:image72.wmf]",
+   "images": [
+    "image72.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (2) × 5: (3m – 2n) × 5 = 8 × 5"
+  },
+  {
+   "type": "para",
+   "text": "  15m – 10n = 40 ...... (3)"
+  },
+  {
+   "type": "para",
+   "text": " (1) + (3): ",
+   "dup": 584
+  },
+  {
+   "type": "para",
+   "text": "  (9m + 10n) + (15m – 10n) = 8 + 40"
+  },
+  {
+   "type": "para",
+   "text": "  24m = 48"
+  },
+  {
+   "type": "para",
+   "text": "  m = 2"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is C.",
+   "dup": 1020
+  },
+  {
+   "type": "para",
+   "text": "8. [IMG:image73.wmf]",
+   "images": [
+    "image73.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (1) × 2: (5a + 6b) × 2 = 27 × 2"
+  },
+  {
+   "type": "para",
+   "text": "  10a + 12b = 54 ...... (3)"
+  },
+  {
+   "type": "para",
+   "text": " (2) + (3):",
+   "dup": 149
+  },
+  {
+   "type": "para",
+   "text": "  (17a – 12b) + (10a + 12b) = 27 + 54"
+  },
+  {
+   "type": "para",
+   "text": "  27a = 81"
+  },
+  {
+   "type": "para",
+   "text": "  a = 3"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is C.",
+   "dup": 1020
+  },
+  {
+   "type": "para",
+   "text": "\n9. [IMG:image74.wmf]",
+   "images": [
+    "image74.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have β = a + 6 ...... (3)"
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (2).",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": "  a – 4 = a – 5(a + 6) + 11"
+  },
+  {
+   "type": "para",
+   "text": "  a – 4 = a – 5a – 30 + 11"
+  },
+  {
+   "type": "para",
+   "text": "  5a = –15"
+  },
+  {
+   "type": "para",
+   "text": "  a = –3"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is A.",
+   "dup": 1005
+  },
+  {
+   "type": "para",
+   "text": "10. [IMG:image75.wmf]",
+   "images": [
+    "image75.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have q = 4 – 2p ...... (3)"
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (2).",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": "  13 – 2p = 3(4 – 2p) – 2p – 5"
+  },
+  {
+   "type": "para",
+   "text": "  13 – 2p = 12 – 6p – 2p – 5"
+  },
+  {
+   "type": "para",
+   "text": "  6p = –6"
+  },
+  {
+   "type": "para",
+   "text": "  p = –1"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is C.",
+   "dup": 1020
+  },
+  {
+   "type": "para",
+   "text": "11. Let $x be the price of an avocado and \n $y be the price of a pear."
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image76.wmf]",
+   "images": [
+    "image76.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (2), we have x = [IMG:image77.wmf] ...... (3)",
+   "images": [
+    "image77.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (1).",
+   "dup": 81
+  },
+  {
+   "type": "para",
+   "text": "  [IMG:image78.wmf] + 2y = 70",
+   "images": [
+    "image78.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  8.75y = 70"
+  },
+  {
+   "type": "para",
+   "text": "  y = 8"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The price of a pear is $8."
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is A.",
+   "dup": 1005
+  },
+  {
+   "type": "para",
+   "text": "\n12. Let $x be the price of a hamburger and \n $y be the price of a sandwich. "
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image79.wmf]",
+   "images": [
+    "image79.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " From (1), we have y = [IMG:image80.wmf] ...... (3)",
+   "images": [
+    "image80.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " Put (3) into (2).",
+   "dup": 105
+  },
+  {
+   "type": "para",
+   "text": "  2x + [IMG:image81.wmf] = 108",
+   "images": [
+    "image81.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  4.5x = 108"
+  },
+  {
+   "type": "para",
+   "text": "  x = 24"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The price of a hamburger is $24."
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is D.",
+   "dup": 1027
+  },
+  {
+   "type": "para",
+   "text": "13. Let $x be the price of an orange and \n $y be the price of an apple."
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image82.wmf]",
+   "images": [
+    "image82.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (1) × 4: (3x + 7y) × 4 = 53 × 4"
+  },
+  {
+   "type": "para",
+   "text": "  12x + 28y = 212 ...... (3)"
+  },
+  {
+   "type": "para",
+   "text": " (2) × 3: (4x + 2y) × 3 = 34 × 3"
+  },
+  {
+   "type": "para",
+   "text": "  12x + 6y = 102 ...... (4)"
+  },
+  {
+   "type": "para",
+   "text": " (3) – (4): "
+  },
+  {
+   "type": "para",
+   "text": "  (12x + 28y) – (12x + 6y) = 212 – 102"
+  },
+  {
+   "type": "para",
+   "text": "  22y = 110"
+  },
+  {
+   "type": "para",
+   "text": "  y = 5",
+   "dup": 186
+  },
+  {
+   "type": "para",
+   "text": " Put y = 5 into (1)."
+  },
+  {
+   "type": "para",
+   "text": "  3x + 7(5) = 53"
+  },
+  {
+   "type": "para",
+   "text": "  3x = 18"
+  },
+  {
+   "type": "para",
+   "text": "  x = 6"
+  },
+  {
+   "type": "para",
+   "text": " Price of 2 oranges and 3 apples "
+  },
+  {
+   "type": "para",
+   "text": " = $(2(6) + 3(5))"
+  },
+  {
+   "type": "para",
+   "text": " = $27"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is A.",
+   "dup": 1005
+  },
+  {
+   "type": "para",
+   "text": "\n14. Let $x be the fare of an adult and \n $y be the fare of a child."
+  },
+  {
+   "type": "para",
+   "text": " [IMG:image83.wmf]",
+   "images": [
+    "image83.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (1) × 5: (2x + 3y) × 5 = 105 × 5"
+  },
+  {
+   "type": "para",
+   "text": "  10x + 15y = 525 ...... (3)"
+  },
+  {
+   "type": "para",
+   "text": " (2) × 2: (5x + 4y) × 2 = 210 × 2"
+  },
+  {
+   "type": "para",
+   "text": "  10x + 8y = 420 ...... (4)"
+  },
+  {
+   "type": "para",
+   "text": " (3) – (4): ",
+   "dup": 1103
+  },
+  {
+   "type": "para",
+   "text": "  (10x + 15y) – (10x + 8y) = 525 – 420"
+  },
+  {
+   "type": "para",
+   "text": "  7y = 105"
+  },
+  {
+   "type": "para",
+   "text": "  y = 15",
+   "dup": 483
+  },
+  {
+   "type": "para",
+   "text": " Put y = 15 into (1)."
+  },
+  {
+   "type": "para",
+   "text": "  2x + 3(15) = 105"
+  },
+  {
+   "type": "para",
+   "text": "  x = 30"
+  },
+  {
+   "type": "para",
+   "text": " Total fare of 2 adults and 1 child"
+  },
+  {
+   "type": "para",
+   "text": " = $(2(30) + 15)"
+  },
+  {
+   "type": "para",
+   "text": " = $75"
+  },
+  {
+   "type": "para",
+   "text": " ∴ The answer is C.",
+   "dup": 1020
+  }
+ ]
+}
