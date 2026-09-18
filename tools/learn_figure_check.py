@@ -20,7 +20,7 @@ import xml.etree.ElementTree as ET
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIGURES = os.path.join(BASE, "data", "learn", "figures.json")
 NS = "{http://www.w3.org/2000/svg}"
-W, H = 268, 212          # 同 make_learn_figures.py 嘅畫布一致
+W, H = 260, 260          # 同 make_learn_figures.py 嘅畫布一致（正方形）
 
 
 def label_width(s: str, fs: float) -> float:
