@@ -74,6 +74,10 @@ CI（`.github/workflows/deploy.yml`）在發佈前也會跑齊以上四步，但
 
 ## 5. 新增一個課題（之後補 WS02–WS24 / AS1–8）
 
+> **接手前先讀 [`docs/LEARN-ADD-TOPICS-HANDOFF.md`](../docs/LEARN-ADD-TOPICS-HANDOFF.md)**：
+> 現況統計、過渡題（Bridging）標準做法、**頁碼對照表**（改 `mcPages` 時要同步改 smoke test 的哪幾行）、
+> 硬規則、已有前端功能清單、以及可直接貼到新 chat 的開場白。
+
 ```powershell
 & $py tools\extract_eph.py --files WS02,WS02-sol     # 1. 抽取（-sol 為題解版，指令用 WS02 會連題解版一齊）
 & $py tools\eph_digest.py --files WS02 --variant both  # 2. 產生閱讀用摘要 data/learn/raw/digest/

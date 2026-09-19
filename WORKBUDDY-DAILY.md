@@ -290,7 +290,7 @@ git push                            # GitHub Pages 1 分鐘後自動上線
   「每日站在根目錄、自學站在 `/learn/`」一起打包 —— GitHub Pages 每次部署會整份取代，所以必須一起部署）
 * 內容來源：`inbox_learn/` 的 EPH《HKDSE All-Round Level 5 Assurance Pack》（24 份工作紙＋8 份 Assessment）
 * 進度：只存在學生瀏覽器；老師端不收集任何資料
-* 詳細流程與契約：見 `learn/README.md`
+* 詳細流程與契約：見 `learn/README.md`；**新增課題（WS05 起）的接手文件：`docs/LEARN-ADD-TOPICS-HANDOFF.md`**
 
 ### 每次新增課題（例如補上 WS02）
 
