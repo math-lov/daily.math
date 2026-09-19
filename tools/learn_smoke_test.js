@@ -6,8 +6,8 @@
  *   2. 課題頁：頁數導覽列（學習／示範／練習頁）
  *   3. 概念卡：翻頁、看完 → 記住進度
  *   4. 長題示範：逐步揭示 → 完成橫幅 → 記住進度
- *   5. MC：答錯（紅色標示 + 干擾項解說 + 進錯題本）／答對（綠色 + 答案行 + 提示逐步）
- *   6. 錯題本：列出錯題、清空
+ *   5. MC：答錯（陷阱解說 + 進弱點升級庫）／答對（綠色 + 答案行 + 提示逐步）
+ *   6. 弱點升級庫：列出答錯的題目、清空
  */
 const fs = require("fs");
 const path = require("path");
@@ -80,6 +80,15 @@ ok(/第 1 \/ \d+ 頁/.test(t0.$("#topic-progress").textContent),
 ok(!t0.$("#prev") && !t0.$("#next") && !t0.$(".footbar"),
    "the bottom prev/next bar is gone (pages are jumped from the top nav)");
 ok(t0.$("#pagenav").children.length >= 8, "the top page nav is still the way to jump around");
+// ws01 分兩節：分頁列要有「第 N 節」分隔，否則兩個「學習」分不清
+const sep = t0.$$("#pagenav .pg-lesson");
+ok(sep.length === 2, "ws01 nav marks the two lessons (got " + sep.length + ")");
+ok(/第 1 節/.test(sep[0].textContent) && /第 2 節/.test(sep[1].textContent),
+   "lesson separators are numbered (" + sep.map((s) => s.textContent).join(" / ") + ")");
+ok(/^第 1 節 · 第 1 \/ \d+ 頁/.test(t0.$("#topic-progress").textContent),
+   "the top bar names the current lesson (" + t0.$("#topic-progress").textContent + ")");
+ok(sep[1].nextElementSibling && sep[1].nextElementSibling.textContent === "學習",
+   "the second lesson separator sits right before its own 學習 button");
 
 /* ── 3. 概念卡 ───────────────────────────────────────────────────────── */
 /* ── 2b. 第二個課題（二元一次方程）也正常 ─────────────────────────────── */
@@ -87,14 +96,23 @@ console.log("\n— 課題 2：二元一次方程 —");
 ok(home.$$(".topic-btn").length >= 2,
    "home page lists both topics (got " + home.$$(".topic-btn").length + ")");
 const t02 = boot("topic.html", "?t=ws02&p=0");
-ok(t02.$$("#pagenav .pg").length === 8,
-   "ws02 has 1 card page + 2 demos + 5 MC pages (got " + t02.$$("#pagenav .pg").length + ")");
+ok(t02.$$("#pagenav .pg").length === 9,
+   "ws02 has 1 card page + 2 demos + 6 MC pages (got " + t02.$$("#pagenav .pg").length + ")");
 ok((t02.$("#topic-name").textContent || "").indexOf("二元一次") >= 0,
    "ws02 topic name rendered (" + t02.$("#topic-name").textContent + ")");
 ok(!!t02.$(".concept-body") && t02.$$(".formula .katex").length >= 1, "ws02 concept card renders formulas");
-const t02mc = boot("topic.html", "?t=ws02&p=3");
+// 過渡梯級：第一個練習頁全部是 Bridging 題（由最單純的加減消去開始，減少起步斷層）
+const t02bridge = boot("topic.html", "?t=ws02&p=3");
+const bridgeCards = t02bridge.$$("#topic-body .card[data-qid]");
+ok(bridgeCards.length === 3, "ws02 first MC page is the bridging ladder (got " + bridgeCards.length + ")");
+ok(bridgeCards.length >= 1 && bridgeCards.every((c) => /-w0\d$/.test(c.getAttribute("data-qid"))),
+   "the first MC page is all bridging questions (" +
+   bridgeCards.map((c) => c.querySelector(".q-code").textContent).join(", ") + ")");
+ok(bridgeCards.length >= 1 && bridgeCards[0].querySelector(".q-diff").textContent.indexOf("★") >= 0,
+   "the first bridging question is marked as easy");
+const t02mc = boot("topic.html", "?t=ws02&p=4");   // 第 2 頁練習：過渡題 W04 + q01 + q02
 const q02 = t02mc.$$("#topic-body .card[data-qid]");
-ok(q02.length === 3, "ws02 first MC page holds 3 questions (got " + q02.length + ")");
+ok(q02.length === 3, "ws02 second MC page holds 3 questions (got " + q02.length + ")");
 ok(t02mc.$$("#topic-body .opt").length === 12,
    "each question has 4 options (got " + t02mc.$$("#topic-body .opt").length + ")");
 ok(!/\\\$\\\$/.test(t02mc.$("#topic-body").textContent),
@@ -147,13 +165,19 @@ ok(firstKids.some((n) => n.classList.contains("formula")), "card shows at least 
 ok(firstKids.findIndex((n) => n.classList.contains("formula")) >= 1,
    "the formula comes after the text it belongs to");
 
-// 翻到「十字相乘法」那張（正文用 {{math:N}} 把 3 條公式插在文字中間）
+// 翻到「十字相乘法」那張（正文用 {{math:N}} 把公式插在文字中間）
+// ws01 已拆成兩節：基礎（p=0 起）與進階（p=4 的學習頁）→ 十字相乘法在第二節
+const t0L2 = boot("topic.html", "?t=ws01&p=4");
+const cardHeadL2 = () => { const h = t0L2.$(".ccard-head h3"); return h ? h.textContent : ""; };
+const nextCardL2 = () => t0L2.$$(".card .row .btn")
+  .filter((x) => /下一張|開始練習/.test(x.textContent))[0];
 guard = 0;
-while (cardHead().indexOf("十字相乘") < 0 && guard < 12) {
-  const b = nextCardBtn(); if (!b) break; b.click(); guard++;
+while (cardHeadL2().indexOf("十字相乘") < 0 && guard < 12) {
+  const b = nextCardL2(); if (!b) break; b.click(); guard++;
 }
-ok(cardHead().indexOf("十字相乘") >= 0, "reached the cross-method card (" + cardHead() + ")");
-const bodyWrap = t0.$(".concept-body");
+ok(cardHeadL2().indexOf("十字相乘") >= 0,
+   "reached the cross-method card on the second lesson page (" + cardHeadL2() + ")");
+const bodyWrap = t0L2.$(".concept-body");
 const kids = Array.prototype.slice.call(bodyWrap.children);
 const formulaIdx = kids.map((n, i) => (n.classList.contains("formula") ? i : -1)).filter((i) => i >= 0);
 ok(formulaIdx.length >= 3, "cross-method card interleaves 3 formulas (got " + formulaIdx.length + ")");
@@ -164,7 +188,16 @@ ok(!kids[kids.length - 1].classList.contains("formula"),
 ok(!/\{\{math/.test(bodyWrap.textContent), "no raw {{math:…}} marker leaks into the page");
 ok(bodyWrap.querySelectorAll(".formula .katex").length >= 3,
    "interleaved formulas are typeset by KaTeX");
-ok(t0.$$(".formula .katex").length >= 3, "formula blocks render on the page");
+ok(t0L2.$$(".formula .katex").length >= 3, "formula blocks render on the page");
+
+// vocab 不可以被空格拆散（曾經出現 en="cross"、zh="method 十字相乘法"）
+const vocabBad = t0L2.$$(".vocab span").filter((sp) => {
+  const b = sp.querySelector("b");
+  const rest = b ? sp.textContent.slice(b.textContent.length).trim() : sp.textContent;
+  return /^[a-zA-Z]/.test(rest);
+});
+ok(vocabBad.length === 0,
+   "vocab Chinese does not start with a stray English word (" + vocabBad.length + ")");
 
 // 一路翻到最後一張 → 進度要記錄下來
 guard = 0;
@@ -193,7 +226,7 @@ ok(!!mcHit, "found the first MC page");
 const t2 = mcHit.boot;
 const qCards = t2.$$("#topic-body > div > .card").filter((c) => c.querySelector(".opt"));
 ok(qCards.length === 3, "an MC page holds exactly 3 questions (got " + qCards.length + ")");
-ok(mcHit.page >= 3, "MC pages come after the concept cards and demo pages (page index " + mcHit.page + ")");
+ok(mcHit.page >= 1, "MC pages come after the concept cards (page index " + mcHit.page + ")");
 const first = qCards[0];
 ok(first.querySelectorAll(".opt").length === 4, "each question has 4 options");
 ok(t2.$$("#topic-body .opts").length === 3, "all three questions render option lists");
@@ -247,14 +280,14 @@ const second = qCards[1];
 const st2 = second.querySelectorAll(".opt");
 const sStore = t2.store();
 ok(!!q1id, "question code read (" + q1id + ")");
-// 先答錯，確認會進錯題本
+// 先答錯，確認會進弱點升級庫
 st2[0].click();
 const s2 = t2.store();
 ok(Object.keys(s2.mc || {}).length >= 1, "answers are persisted to localStorage");
 
 /* ── 5. 長題示範 ─────────────────────────────────────────────────────── */
 console.log("\n— 長題示範 —");
-const t1 = boot("topic.html", "?t=ws01&p=1");
+const t1 = boot("topic.html", "?t=ws01&p=5");     // ws01 第 1 條長題示範（EX1）
 ok(!!t1.$(".demo-try"), "demo page invites the student to try first");
 ok(t1.$$(".q-stem").length >= 2, "demo shows the stem and its parts");
 const startBtn = t1.$(".demo-try .btn");
@@ -270,7 +303,7 @@ ok(t1.$$(".step .marking").length >= 1, "DSE marking codes (1A/1M) are shown");
 ok(t1.$$(".hl .katex").length >= 1 || t1.$$(".hl").length >= 1, "step highlights rendered");
 
 // 步驟標題本身可以含 $...$（例：第 2 步 · 由 (2) 寫出 $q$）→ 必須渲染成數學，不能露出 $ 字元
-const t02q = boot("topic.html", "?t=ws02&p=3");
+const t02q = boot("topic.html", "?t=ws02&p=5");     // q03 移到第 3 個練習頁
 const card03 = t02q.$('.card[data-qid="eph-ws02-q03"]');
 ok(!!card03, "found the ws02 q03 card (step titles contain $...$)");
 // 每次揭一步後提示列會重建 → 每輪重新抓目前的按鈕（模擬真人逐次按）
@@ -287,7 +320,7 @@ ok(titles03.every((h) => h.textContent.indexOf("$") < 0),
 ok(titles03.some((h) => h.querySelector(".katex")), "step titles with $...$ are typeset by KaTeX");
 
 // 金銀符號：資料層寫成 \$（跳脫）→ 畫面要顯示成 $，且不可以被誤配成數學
-const t02cur = boot("topic.html", "?t=ws02&p=7");
+const t02cur = boot("topic.html", "?t=ws02&p=8");   // q13 移到最後一個練習頁
 const stem13 = t02cur.$('.card[data-qid="eph-ws02-q13"] .q-stem');
 ok(!!stem13, "found the q13 currency card");
 ok(stem13.textContent.indexOf("\\$") < 0,
@@ -306,19 +339,36 @@ ok(home.$$(".topic-btn").length === 4,
 const t03 = boot("topic.html", "?t=ws03&p=0");
 ok((t03.$("#topic-name").textContent || "").indexOf("主項") >= 0,
    "ws03 name rendered (" + t03.$("#topic-name").textContent + ")");
-ok(t03.$$("#pagenav .pg").length === 10,
-   "ws03 = 1 card page + 3 demos + 6 MC pages (got " + t03.$$("#pagenav .pg").length + ")");
+ok(t03.$$("#pagenav .pg").length === 12,
+   "ws03 = 1 card page + 3 demos + 8 MC pages (got " + t03.$$("#pagenav .pg").length + ")");
 ok(t03.$$(".formula .katex").length >= 2, "ws03 concept card renders formulas");
 const t03mc = boot("topic.html", "?t=ws03&p=4");
 ok(t03mc.$$("#topic-body .card[data-qid]").length === 3, "ws03 MC page holds 3 questions");
+// 過渡梯級：第一個練習頁全部是 Bridging 題（兩步換主項 → 抽公因式 → 比較係數）
+const b3 = t03mc.$$("#topic-body .card[data-qid]");
+ok(b3.length >= 1 && b3.every((c) => /-w0\d$/.test(c.getAttribute("data-qid"))),
+   "ws03 first MC page is all bridging questions (" +
+   b3.map((c) => c.querySelector(".q-code").textContent).join(", ") + ")");
 const t04 = boot("topic.html", "?t=ws04&p=0");
 ok((t04.$("#topic-name").textContent || "").indexOf("坐標") >= 0,
    "ws04 name rendered (" + t04.$("#topic-name").textContent + ")");
-ok(t04.$$("#pagenav .pg").length === 8,
-   "ws04 = 1 card page + 3 demos + 4 MC pages (got " + t04.$$("#pagenav .pg").length + ")");
+ok(t04.$$("#pagenav .pg-lesson").length === 0,
+   "single-lesson topics show no lesson separators");
+ok(t04.$$("#pagenav .pg").length === 10,
+   "ws04 = 1 card page + 3 demos + 6 MC pages (got " + t04.$$("#pagenav .pg").length + ")");
 const t04mc = boot("topic.html", "?t=ws04&p=4");
 ok(t04mc.$$("#topic-body .opt").length === 12,
    "ws04 MC page has 3 questions × 4 options (got " + t04mc.$$("#topic-body .opt").length + ")");
+// 過渡梯級：第一個練習頁全部是 Bridging 題（平移 → 對軸反射 → 90° 旋轉）
+const b4 = t04mc.$$("#topic-body .card[data-qid]");
+ok(b4.length >= 1 && b4.every((c) => /-w0\d$/.test(c.getAttribute("data-qid"))),
+   "ws04 first MC page is all bridging questions (" +
+   b4.map((c) => c.querySelector(".q-code").textContent).join(", ") + ")");
+// 過渡題也是「單一動作一幅圖」：作答後才出圖
+const b4q = b4[0];
+b4q.querySelector(".opt").click();
+ok(b4q.querySelectorAll(".fig svg").length >= 1,
+   "a bridging question reveals its single-step figure after answering");
 
 // 概念卡示意圖（SVG）：ws04 六張卡都要有圖；其他課題唔受影響
 const t04fig = boot("topic.html", "?t=ws04&p=0");
@@ -345,7 +395,7 @@ ok(!/<script/i.test(t04fig.$(".fig").innerHTML), "figure markup is inert (no <sc
 ok(!boot("topic.html", "?t=ws01&p=0").$(".fig"), "topics without figures are unaffected");
 
 // MC 題嘅圖要放喺答案欄：作答前唔可以見到（圖入面有影像點＝洩漏答案），作答後先出場
-const t04q = boot("topic.html", "?t=ws04&p=5");       // 第二個 MC 頁：q04、q05、q06
+const t04q = boot("topic.html", "?t=ws04&p=6");       // MC 頁：q03、q04、q05
 const qCards04 = t04q.$$("#topic-body .card[data-qid]");
 ok(qCards04.length === 3, "the MC page holds 3 question cards (got " + qCards04.length + ")");
 ok(t04q.$$("#topic-body .fig").length === 0, "no figure before answering (no spoiler)");
@@ -354,12 +404,12 @@ const qFigN = t04q.$$("#topic-body .card[data-qid]").map(
   (c) => c.querySelectorAll(".fig svg").length);
 ok(qFigN.every((n) => n >= 1),
    "every MC question shows its figure after answering (" + qFigN.join(", ") + ")");
-ok(qFigN[1] === 2, "the two-step question (q05) shows two figures (got " + qFigN[1] + ")");
+ok(qFigN[2] === 2, "the two-step question (q05, third card) shows two figures (got " + qFigN[2] + ")");
 ok(t04q.$$(".fig-cap").length === qFigN.reduce((a, b) => a + b, 0),
    "each MC figure carries a caption too");
 
 // 未作答但按「看完整解答」＝放棄作答 → 圖都要出場
-const t04q2 = boot("topic.html", "?t=ws04&p=5");
+const t04q2 = boot("topic.html", "?t=ws04&p=6");
 const c04 = t04q2.$("#topic-body .card[data-qid]");
 const allBtn04 = c04.querySelectorAll(".hint-row .btn")[1];   // 第二個＝看完整解答
 allBtn04.click();
@@ -368,8 +418,86 @@ ok(c04.querySelectorAll(".fig svg").length >= 1,
 const sLong = t1.store();
 ok(Object.keys(sLong.long || {}).length >= 1, "finishing the demo is recorded in progress");
 
-/* ── 6. 錯題本 ───────────────────────────────────────────────────────── */
-console.log("\n— 錯題本 —");
+/* 長題示範：圖跟步驟逐幅出（未開始唔可以見到，每揭一步先出一幅） */
+console.log("\n— 長題示範：逐步出圖 —");
+const demo1 = boot("topic.html", "?t=ws04&p=1");       // EX1：3 步 → 3 幅
+ok(demo1.$$("#topic-body .fig").length === 0, "long demo shows no figure before starting (no spoiler)");
+demo1.$(".demo-try .btn").click();
+ok(demo1.$$(".steps .step").length === 1, "first step revealed");
+ok(demo1.$$("#topic-body .fig").length === 1,
+   "the first step brings exactly one figure (got " + demo1.$$("#topic-body .fig").length + ")");
+ok(!!demo1.$(".step .fig"), "the figure sits inside the revealed step");
+demo1.$$(".card .row .btn").filter((b) => /下一步/.test(b.textContent))[0].click();
+ok(demo1.$$("#topic-body .fig").length === 2,
+   "the second step adds one more figure (got " + demo1.$$("#topic-body .fig").length + ")");
+demo1.$$(".card .row .btn").filter((b) => /全部顯示/.test(b.textContent))[0].click();
+ok(demo1.$$("#topic-body .fig").length === 3,
+   "all three EX1 figures revealed (got " + demo1.$$("#topic-body .fig").length + ")");
+ok(demo1.$$("#topic-body .fig-cap").length === 3, "every demo figure carries a caption");
+const demo2 = boot("topic.html", "?t=ws04&p=2");       // EX2：4 步 → 4 幅
+demo2.$(".demo-try .btn").click();
+demo2.$$(".card .row .btn").filter((b) => /全部顯示/.test(b.textContent))[0].click();
+ok(demo2.$$("#topic-body .fig").length === 4,
+   "EX2 shows four step figures (got " + demo2.$$("#topic-body .fig").length + ")");
+const demo3 = boot("topic.html", "?t=ws04&p=3");       // EX3：4 步 → 4 幅
+demo3.$(".demo-try .btn").click();
+demo3.$$(".card .row .btn").filter((b) => /全部顯示/.test(b.textContent))[0].click();
+ok(demo3.$$("#topic-body .fig").length === 4,
+   "EX3 shows four step figures (got " + demo3.$$("#topic-body .fig").length + ")");
+
+/* ── 5c. 考試指令提示、微成就、心理安全（弱生）───────────────────────── */
+console.log("\n— 回饋設計（弱生）—");
+ok(!!home.$(".safety-note"), "home page states: no grading, no ranking");
+ok(/沒有老師打分/.test(home.$(".safety-note").textContent),
+   "the safety note spells out the no-pressure design");
+
+const tHint = boot("topic.html", "?t=ws01&p=1");
+ok(!!tHint.$(".cmd-hints"), "every topic page shows the exam-command hints");
+ok(tHint.$$(".cmd-hints .ch-chip").length >= 2,
+   "hint chips list the command words (" + tHint.$$(".cmd-hints .ch-chip").length + ")");
+ok(/Factorize completely/.test(tHint.$(".cmd-hints").textContent),
+   "hint: 'Factorize completely'");
+ok(/Hence/.test(tHint.$(".cmd-hints").textContent), "hint: 'Hence'");
+ok(/徹底分解/.test(tHint.$(".cmd-hints").textContent), "the hints are glossed in Chinese");
+
+// 暖身題：第一頁第一題（極簡，先建立「我做得到」的經驗）
+const tWarm = boot("topic.html", "?t=ws01&p=1");
+const warmCards = tWarm.$$("#topic-body .card[data-qid]");
+ok(warmCards.length === 3, "the first MC page holds 3 questions (got " + warmCards.length + ")");
+ok(/^WS1-W0/.test(warmCards[0].querySelector(".q-code").textContent),
+   "the first question is a warm-up (" + warmCards[0].querySelector(".q-code").textContent + ")");
+warmCards.forEach((c) => c.querySelector(".opt").click());
+ok(!!tWarm.$("#page-done.pd-finish"), "finishing every question shows the micro-achievement");
+// 分節標籤不可打亂「完成」標記：要標在正確那一頁（用 .pg 索引，不是 children 索引）
+const marked = tWarm.$$("#pagenav .pg.done").map((b) => b.getAttribute("data-page"));
+ok(marked.indexOf("1") >= 0, "the finished page is marked done (data-page=" + marked.join(",") + ")");
+ok(marked.every((n) => n === "1"), "no other page is wrongly marked done (" + marked.join(",") + ")");
+ok(/本課已完成 \d+%/.test(tWarm.$("#page-done").textContent),
+   "micro-achievement shows the topic progress % (" + tWarm.$("#page-done").textContent.trim() + ")");
+
+// 答錯的框架：先講「陷阱」，不是只彈紅色
+const tWrong = boot("topic.html", "?t=ws01&p=1");
+const wCard = tWrong.$$("#topic-body .card[data-qid]")[0];
+const wFirst = tWrong.ctx.window.LEARN_TOPIC_WS01.lessons
+  .reduce((a, l) => a.concat(l.pages.reduce((b, p) => b.concat(p), [])), [])[0];
+const wPicked = ["A", "B", "C", "D"].filter((L) => L !== wFirst.answer)[0];
+Array.prototype.slice.call(wCard.querySelectorAll(".opt"))
+  .filter((o) => o.dataset.opt === wPicked)[0].click();
+ok(!!wCard.querySelector(".trap-head"), "a wrong answer shows the 'you fell into a trap' header");
+ok(/陷阱/.test(wCard.querySelector(".trap-head").textContent),
+   "the header uses trap framing, not blame");
+ok(!!wCard.querySelector(".answer-line.miss"), "the correct answer is still shown after a wrong pick");
+
+// (a)→(b) 的「整塊打包替換」高亮（EX1 第 4 步）
+const tLink = boot("topic.html", "?t=ws01&p=5");
+tLink.$(".demo-try .btn").click();
+tLink.$$(".card .row .btn").filter((b) => /全部顯示/.test(b.textContent))[0].click();
+ok(!!tLink.$(".step-link"), "the (b) step carries a 'take it from (a)' highlight block");
+ok(/\(a\)/.test(tLink.$(".step-link").textContent), "the block names part (a)");
+ok(!!tLink.$(".step-link .lk-formula .katex"), "the linked (a) formula is typeset");
+
+/* ── 6. 弱點升級庫（前稱錯題本）───────────────────────────────────────── */
+console.log("\n— 弱點升級庫 —");
 const wrongStore = JSON.stringify(t2.store());
 const w = boot("wrong.html", "", wrongStore);
 const items = w.$$(".wrong-item");
@@ -382,13 +510,15 @@ const wrongBefore = Object.keys(w.store().mc || {})
 again.click();
 const wrongAfter = w.store().mc || {};
 ok(!wrongAfter[wrongBefore[0]], "retrying clears that question's record (" + wrongBefore[0] + ")");
-ok(Object.keys(wrongAfter).length === wrongBefore.length - 1,
-   "only the retried question is cleared (kept " + Object.keys(wrongAfter).length + " of " + wrongBefore.length + ")");
-ok(/錯題本/.test(w.$$("#wrong-count").length ? w.$("#wrong-count").textContent : "錯題本"),
-   "header keeps the wrong-book badge");
+// 只數「仍然答錯」的題目（頁面上可能同時有其他答對的記錄）
+const stillWrong = Object.keys(wrongAfter).filter((k) => wrongAfter[k].correct === false);
+ok(stillWrong.length === wrongBefore.length - 1,
+   "only the retried question is cleared (kept " + stillWrong.length + " wrong of " + wrongBefore.length + ")");
+ok(/弱點升級庫/.test(w.$$("#wrong-count").length ? w.$("#wrong-count").textContent : "弱點升級庫"),
+   "header keeps the (renamed) weak-point badge");
 
 /* ── 6b. 再練一次 → 回到該題且是未作答狀態 ───────────────────────────── */
-console.log("\n— 錯題本：再練一次回到該題 —");
+console.log("\n— 弱點升級庫：再練一次回到該題 —");
 const targetQid = wrongBefore[0];
 const navUrl = String(w.ctx.window.__LEARN_LAST_NAV || "");
 ok(navUrl.indexOf(targetQid) >= 0, "retry navigates to that question (" + navUrl + ")");
@@ -405,7 +535,7 @@ const othersMarked = retryPage.$$("#topic-body .card[data-qid]")
   .filter((c) => c.getAttribute("data-qid") !== targetQid)
   .filter((c) => c.querySelectorAll(".opt[disabled]").length > 0).length;
 ok(othersMarked >= 0, "other questions on the page keep their own state (" + othersMarked + " previously answered)");
-// 回到課題頁後作答，應該可以正常判分並移出錯題本
+// 回到課題頁後作答，應該可以正常判分並移出弱點升級庫
 const retryOpts = retryCard.querySelectorAll(".opt");
 const retryQid = targetQid;
 const retryData = allMc.filter((q) => q.id === retryQid)[0];
@@ -415,8 +545,8 @@ retryOpts[correctIdx].click();
 ok(!!retryCard.querySelector(".opt.correct"), "answering correctly marks the option green");
 ok(retryPage.store().mc[retryQid].correct === true, "correct retry is recorded (will leave the wrong book)");
 
-/* ── 7. 乾淨狀態的錯題本 ─────────────────────────────────────────────── */
-console.log("\n— 錯題本（乾淨）—");
+/* ── 7. 乾淨狀態的弱點升級庫 ─────────────────────────────────────────── */
+console.log("\n— 弱點升級庫（乾淨）—");
 const w2 = boot("wrong.html", "", JSON.stringify({ mc: {}, long: {}, cards: {} }));
 ok(/空的/.test(w2.$("#wrong-body").textContent), "empty state explains there is nothing to review");
 

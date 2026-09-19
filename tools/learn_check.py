@@ -8,6 +8,7 @@
   S4 答案：mc 的 answer 必須是其中一個選項；traps 指向的選項必須真實存在
   S5 覆核：被課程引用但 review 未清的題目 → 錯誤（不得出站）
   S6 貨幣／定界符：文字欄位不准出現單數 $（會被當成數學定界符）
+  S8 概念卡 vocab：每組要有 en／zh，中文欄不可被英文詞頭污染（english = 中文）
   R1 課程合規：角度一律用度（禁 rad／弧度／\\frac{\\pi}{n}）
   R2 主解法不得用坐標法或向量法（幾何題）
       → R1／R2 的樣式與 tools/syllabus_check.py 一致，重用同一套規則
@@ -232,6 +233,20 @@ def main(argv: list[str] | None = None) -> int:
         if not _dollar_ok(blob_all):
             err("S6", "%s：題解整體 $ 不成對" % qid)
 
+    # ── S8：概念卡的 vocab 格式（英文詞組不可以被空格拆散）──────────────────
+    # 面板舊版用「english 中文」以空格分隔，遇到 "cross method 十字相乘法" 會存成
+    # en="cross"、zh="method 十字相乘法"（詞被拆裂）。改為 "english = 中文" 後，
+    # 這裡把「zh 以英文小寫字開頭」視為錯誤，防止再靜靜地寫壞。
+    for cid, c in cards_by_id.items():
+        for v in (c.get("vocab") or []):
+            en = ((v or {}).get("en") or "").strip()
+            zh = ((v or {}).get("zh") or "").strip()
+            if not en or not zh:
+                err("S8", "%s：vocab 有一組缺少 en 或 zh（%r / %r）" % (cid, en, zh))
+            elif re.match(r"^[a-z]{2,}\s", zh):
+                err("S8", "%s：vocab 的中文欄以英文字開頭（en=%r, zh=%r）—— "
+                          "疑似「english 中文」被空格拆散，請用「english = 中文」" % (cid, en, zh))
+
     # ── S9：示意圖（SVG）安全檢查（概念卡同題目都用同一套）────────────────
     figures_doc = _load("figures.json", {"figures": {}})
     known_ids = {c.get("id") for c in concepts.get("cards", [])} | \
@@ -254,6 +269,16 @@ def main(argv: list[str] | None = None) -> int:
             for bad in ("<script", "onerror=", "onload=", "onclick=", "javascript:"):
                 if bad in low:
                     err("S9", "figures.json：%s 第 %d 幅含可疑內容（%s）" % (fid, i, bad))
+            # 長題示範：圖要標明屬於題解第幾步（前端跟住那一步出場）
+            q = by_id.get(fid)
+            if q is not None and q.get("type") == "long":
+                n_steps = len(((sols.get(fid) or {}).get("solution") or {}).get("steps") or [])
+                step = (item or {}).get("step")
+                if step is None:
+                    err("S9", "figures.json：%s 第 %d 幅冇標 step（長題示範要跟步驟出圖）" % (fid, i))
+                elif isinstance(step, bool) or not isinstance(step, int) or not (1 <= step <= n_steps):
+                    err("S9", "figures.json：%s 第 %d 幅 step=%r 超出題解步數（1–%d）"
+                        % (fid, i, step, n_steps))
 
     # ── 統計 ──────────────────────────────────────────────────────────────
     n_mc = sum(1 for q in questions if q.get("type") == "mc")

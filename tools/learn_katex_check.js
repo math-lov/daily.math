@@ -58,11 +58,18 @@ function inlineTex(s, where) {
   return out;
 }
 
-/* 一個欄位：含 $ 只驗 $...$ 片段；否則整串當純 LaTeX */
+/* 純文字欄位（無 $ 又無任何 LaTeX 特徵）不要當成數學渲染 ——
+   否則中文解說／①② 之類會被丟進 KaTeX，產生一堆無意義的
+   「No character metrics for '①'」警告。真正的數學欄位（math、highlight）
+   仍然一定會被檢查，所以不會漏。 */
+const TEX_HINT = /[\\^_{}]/;
+/* 一個欄位：含 $ 只驗 $...$ 片段；否則有 LaTeX 特徵才整串當 LaTeX */
 function checkField(v, where) {
   if (!v) return;
-  if (String(v).indexOf("$") >= 0) inlineTex(v, where).forEach((t, i) => check(t, `${where} [${i + 1}]`));
-  else check(stripDelims(v), where);
+  const s = String(v);
+  if (s.indexOf("$") >= 0) { inlineTex(s, where).forEach((t, i) => check(t, `${where} [${i + 1}]`)); return; }
+  if (!TEX_HINT.test(s)) return;          // 純文字（中文解說、標題）→ 不是數學
+  check(stripDelims(s), where);
 }
 
 // ── 題庫 ──

@@ -13,9 +13,9 @@
 
 | 檔案 | 用途 |
 |---|---|
-| `index.html` | 首頁：Stage 分組的課題按鈕牆、進度環、「繼續學習」、錯題本入口、清除進度 |
-| `topic.html?t=<topicId>&p=<頁碼>` | 課題頁：**頁數導覽列**（學習／示範／練習）＋常駐「← 回到主目錄」 |
-| `wrong.html` | 錯題本：只收答錯的 MC，答對就移出 |
+| `index.html` | 首頁：Stage 分組的課題按鈕牆、進度環、「繼續學習」、弱點升級庫入口、清除進度；另有「無打分、無排名」的安心提示 |
+| `topic.html?t=<topicId>&p=<頁碼>` | 課題頁：**頁數導覽列**（學習／示範／練習；**多節課題會插入「第 N 節」分隔**，避免兩個「學習」分不清）＋常駐「← 回到主目錄」＋頁頂「題目字眼」提示（Factorize completely／Hence…）；題目列會顯示「第 N 節 · 第 X / Y 頁」 |
+| `wrong.html` | 弱點升級庫（前稱錯題本）：只收答錯的 MC，答對就移出 |
 
 每課固定節奏：**① 概念卡（2–6 張）→ ② 長題目示範 → ③ MC 每頁 3 題**。
 頁面切換用 query param（不用 hash），所有資源路徑都是**相對路徑**（因為掛在 `/learn/` 子目錄）。
@@ -53,7 +53,7 @@ $node = "C:\Users\t073\.workbuddy\binaries\node\versions\22.22.2-3\node.exe"
 & $py   tools\make_learn_data.py      # 產生 learn/data/*.js
 & $py   tools\learn_check.py          # 結構／契約／覆核旗標／度制／禁坐標向量 → 必須 0 錯誤
 & $node tools\learn_katex_check.js    # 用真 KaTeX 逐條解析所有數學式
-& $node tools\learn_smoke_test.js     # 模擬學生全流程（首頁→概念卡→示範→MC→錯題本）
+& $node tools\learn_smoke_test.js     # 模擬學生全流程（首頁→概念卡→示範→MC→弱點升級庫）
 ```
 
 CI（`.github/workflows/deploy.yml`）在發佈前也會跑齊以上四步，但**只作警告**（`continue-on-error: true`）：
@@ -125,6 +125,8 @@ git add -A; git commit -m "Learn: add WS02"; git push  # 5. 發佈（GitHub Page
 | 題解 | `solutions.json` | 每步（標題／公式／中文解說）、干擾選項解說、帶得走的技巧、答案 |
 
 * **步驟輸入法**：每步三行一組 —— 第 1 行標題、第 2 行公式（純 LaTeX）、第 3 行起是中文解說；用空行分隔步驟。
+* **英文生字輸入法**：每行一組，用 **`english = 中文`**（等號分隔）。不要用空格 ——
+  英文詞組含空格（例：`cross method`）會被拆成 en=`cross`、zh=`method 十字相乘法`（`learn_check` S8 會擋）。
 * **公式定位標記**：概念卡的正文可用 `{{math:0}}`（0 起算）或 `{{math}}`（依序）把 `math[]` 的公式**插到文字中間**，
   例如「檢驗中間項：\n{{math:1}}\n與題目的中間項相同」；沒有標記的公式會依原順序補在正文下方。
   編輯器的即時預覽會同步顯示插好的位置。
@@ -138,5 +140,7 @@ git add -A; git commit -m "Learn: add WS02"; git push  # 5. 發佈（GitHub Page
 
 * 目前只有 **Stage 1 的第一課（WS01 因式分解）**；其餘課題按第 5 節流程逐批補上。
 * 長題目示範只展示題解與教學，**不要求學生作答**（進度記「已讀完示範」）。
-* 錯題本只收 MC；示範題答錯不記錄。
+* 弱點升級庫只收 MC；示範題答錯不記錄。
+* 一堂課的概念卡如果太多（≥7 張）或 MC 太多（≥18 題），要拆成兩節（例：ws01-1 基礎／ws01-2 進階），
+  避免弱生一次過面對太多內容而放棄。
 * KaTeX 為自托管（`learn/vendor/katex`），**不要改用 CDN**（學校網絡／離線要能用）。

@@ -461,6 +461,272 @@ window.LEARN_TOPIC_WS03 = {
    "pages": [
     [
      {
+      "id": "eph-ws03-w01",
+      "type": "mc",
+      "topic": "ws03",
+      "unit": 0,
+      "subtopic": "change-of-subject",
+      "difficulty": 1,
+      "code": "WS3-W01",
+      "source": "WS03 過渡題（自編）· Level 1 兩步換主項",
+      "stem": {
+       "text": "If $3a+2b=7$, then $a=$"
+      },
+      "options": {
+       "A": "$\\frac{7-2b}{3}$",
+       "B": "$\\frac{7+2b}{3}$",
+       "C": "$7-2b$",
+       "D": "$\\frac{2b-7}{3}$"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 把不是主角的項移走",
+          "en": "Step 1 · Transpose the other term"
+         },
+         "math": "3a=7-2b",
+         "zh": "換主項就像收拾房間：要留的字母留在左邊，其他全部搬去右邊。題目要 $a$ 做主項，就把 $+2b$ 搬過等號 —— 口訣是「跨過等號要變號」，所以變成 $-2b$，得 $3a=7-2b$。",
+         "en": "Keep 3a on the left; moving +2b across the equals sign changes it to -2b."
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 把係數變成 1（整條除以 3）",
+          "en": "Step 2 · Divide by the coefficient"
+         },
+         "math": "a=\\frac{7-2b}{3}",
+         "zh": "左邊是 $3a$ 不是 $a$，所以兩邊都要除以 3。關鍵：右邊是「整條」寫在分子上面、分母寫 3，不是只除某一項。答案是 A。",
+         "en": "Divide the whole right-hand side by 3: a = (7 - 2b) / 3. Answer: A.",
+         "highlight": [
+          "\\frac{7-2b}{3}"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "C",
+         "zh": "$7-2b$ 只是 $3a$ 的值，忘記最後除以 3。見到答案沒有分母，就要反問自己「係數消了沒有」。",
+         "en": "Forgot to divide by 3."
+        },
+        {
+         "opt": "B",
+         "zh": "移項時忘記變號：把 $+2b$ 搬去右邊應該寫 $-2b$。",
+         "en": "Sign error when moving +2b."
+        }
+       ],
+       "tip": {
+        "zh": "換主項的標準兩步節奏：① 加減移項（把目標項孤立出來）；② 乘除消係數（讓字母單獨站立）。",
+        "en": "Two standard steps: transpose, then divide by the coefficient."
+       }
+      },
+      "answer": "A",
+      "verify": "checked"
+     },
+     {
+      "id": "eph-ws03-w02",
+      "type": "mc",
+      "topic": "ws03",
+      "unit": 0,
+      "subtopic": "change-of-subject",
+      "difficulty": 2,
+      "code": "WS3-W02",
+      "source": "WS03 過渡題（自編）· Level 2 目標字母在兩側（抽公因式）",
+      "stem": {
+       "text": "If $kx+3=2x+h$, then $x=$"
+      },
+      "options": {
+       "A": "$\\frac{h-3}{k+2}$",
+       "B": "$\\frac{h-3}{k-2}$",
+       "C": "$\\frac{3-h}{k-2}$",
+       "D": "$\\frac{h+3}{k-2}$"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 把含 x 的項集合在同一邊",
+          "en": "Step 1 · Collect the x-terms on one side"
+         },
+         "math": "kx-2x=h-3",
+         "zh": "題目要 $x$，但左邊有 $kx$、右邊有 $2x$。第一步永遠是「大集合」：含 $x$ 的項全部搬去左邊（右邊的 $+2x$ 搬過來變 $-2x$），不含 $x$ 的常數全部搬去右邊（左邊的 $+3$ 搬過去變 $-3$）。",
+         "en": "Move 2x to the left (becomes -2x) and 3 to the right (becomes -3)."
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 抽公因式：兩個 x 合成一個",
+          "en": "Step 2 · Factor out x"
+         },
+         "math": "x(k-2)=h-3",
+         "zh": "很多同學卡在這裡：左邊有 $kx$ 和 $-2x$ 兩個 $x$，怎樣變成一個？就是用上一課學過的「提取公因式」：把 $x$ 抽到括號外面，括號內剩下 $(k-2)$。",
+         "en": "Factor out x: x(k - 2) = h - 3."
+        },
+        {
+         "title": {
+          "zh": "第 3 步 · 把整個括號除過去",
+          "en": "Step 3 · Divide by the bracket"
+         },
+         "math": "x=\\frac{h-3}{k-2}",
+         "zh": "把整個括號 $(k-2)$ 當成「一個數字」除到分母：$x=\\frac{h-3}{k-2}$，所以答案選 B。不要拆散括號，也不要只除其中一項。",
+         "en": "Divide by (k - 2): x = (h - 3)/(k - 2). Answer: B.",
+         "highlight": [
+          "\\frac{h-3}{k-2}"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "A",
+         "zh": "分母寫成 $k+2$：把右邊的 $2x$ 搬過來時忘記變號（應為 $-2x$，所以括號內是 $k-2$）。",
+         "en": "Sign error when moving 2x to the left."
+        },
+        {
+         "opt": "D",
+         "zh": "分子寫成 $h+3$：把左邊的 $+3$ 搬到右邊時忘記變號（應為 $-3$）。",
+         "en": "Sign error when moving 3 to the right."
+        }
+       ],
+       "tip": {
+        "zh": "只要目標字母在等號「兩邊」都出現，就照這三步走：搬到同一邊 → 抽公因式 → 括號除過去。",
+        "en": "Target on both sides: collect terms, factor out, divide by the bracket."
+       }
+      },
+      "answer": "B",
+      "verify": "checked"
+     },
+     {
+      "id": "eph-ws03-w03",
+      "type": "mc",
+      "topic": "ws03",
+      "unit": 0,
+      "subtopic": "identities",
+      "difficulty": 1,
+      "code": "WS3-W03",
+      "source": "WS03 過渡題（自編）· Level 3 恆等式直接比較係數",
+      "stem": {
+       "text": "If $2x^{2}+kx-5\\equiv mx^{2}-4x-5$, then $k=$"
+      },
+      "options": {
+       "A": "$-4$",
+       "B": "$2$",
+       "C": "$4$",
+       "D": "$5$"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 先弄清 ≡ 是什麼意思",
+          "en": "Step 1 · What does the identity symbol mean?"
+         },
+         "math": "2x^{2}+kx-5\\equiv mx^{2}-4x-5",
+         "zh": "符號 $\\equiv$ 讀作「恆等於（identical to）」：左右兩邊寫法雖然不同，但其實是同一個式子，對任何 $x$ 都成立。既然一模一樣，同一次方的係數就必須完全相等 —— 所以看到 $\\equiv$ 不要當成方程去解 $x$。",
+         "en": "The identity is true for all x, so like powers must have equal coefficients."
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 同類項「排隊對齊」",
+          "en": "Step 2 · Align like terms"
+         },
+         "math": "x^{2}:2=m,\\qquad x:k=-4,\\qquad \\text{常數}:-5=-5",
+         "zh": "像排隊一樣逐項對齊：$x^{2}$ 項得 $m=2$；$x$ 項左邊是 $+k$、右邊是 $-4$，所以 $k=-4$；常數項 $-5=-5$ 剛好吻合。題目問 $k$，直接讀出 $-4$，答案選 A。",
+         "en": "Comparing the x-coefficients gives k = -4. Answer: A.",
+         "highlight": [
+          "k=-4"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "B",
+         "zh": "$2$ 是 $m$ 的值（$x^{2}$ 項的係數），題目問的是 $k$。",
+         "en": "2 is the value of m, not k."
+        },
+        {
+         "opt": "C",
+         "zh": "漏了負號：右邊 $x$ 前面是 $-4$，所以 $k$ 是 $-4$ 而不是 $4$。",
+         "en": "Lost the negative sign in front of 4."
+        }
+       ],
+       "tip": {
+        "zh": "看到 $\\equiv$ 千萬不要去解 $x$：用筆把同類項圈出來，直接比較前面的數字與正負號。",
+        "en": "Never solve for x in an identity; match the coefficients instead."
+       }
+      },
+      "answer": "A",
+      "verify": "checked"
+     }
+    ],
+    [
+     {
+      "id": "eph-ws03-w04",
+      "type": "mc",
+      "topic": "ws03",
+      "unit": 0,
+      "subtopic": "identities",
+      "difficulty": 2,
+      "code": "WS3-W04",
+      "source": "WS03 過渡題（自編）· Level 4 恆等式代入特殊值",
+      "stem": {
+       "text": "If $A(x-3)+4\\equiv 2x-2$, then $A=$"
+      },
+      "options": {
+       "A": "$-2$",
+       "B": "$1$",
+       "C": "$2$",
+       "D": "$4$"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 方法一：展開後比較係數",
+          "en": "Step 1 · Method 1: expand and compare"
+         },
+         "math": "Ax-3A+4\\equiv 2x-2\\ \\Rightarrow\\ A=2",
+         "zh": "把左邊展開：$A(x-3)+4=Ax-3A+4$。對齊 $x$ 的係數：左邊 $x$ 前面是 $A$、右邊是 $2$，所以 $A=2$。再用常數項驗算：左邊常數 $-3(2)+4=-2$，與右邊的 $-2$ 相同 ✓。答案是 C。",
+         "en": "Expand to Ax - 3A + 4; comparing x-coefficients gives A = 2. Answer: C.",
+         "highlight": [
+          "A=2"
+         ]
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 方法二：代入特殊值（不用展開）",
+          "en": "Step 2 · Method 2: substitute a clever value"
+         },
+         "math": "x=0:\\ -3A+4=-2\\ \\Rightarrow\\ -3A=-6\\ \\Rightarrow\\ A=2",
+         "zh": "恆等式對「任何」$x$ 都成立，所以可以挑最方便的數字代入，完全不用展開。這題挑 $x=0$：左邊 $=A(0-3)+4=-3A+4$，右邊 $=2(0)-2=-2$，解得 $-3A=-6$，即 $A=2$，與方法一相同。挑哪個 $x$ 的原則是「令你想消掉的東西變成 0」：想求常數項時就代 $x=3$，讓 $A(x-3)$ 消失。",
+         "en": "Substituting x = 0 gives -3A + 4 = -2, so A = 2 — no expansion needed.",
+         "highlight": [
+          "A=2"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "A",
+         "zh": "$-2$ 是右邊的常數項，不是 $A$ 的值。",
+         "en": "-2 is the right-hand side constant."
+        },
+        {
+         "opt": "D",
+         "zh": "$4$ 是左邊單獨的常數項，同樣不是 $A$ 的值。",
+         "en": "4 is the separate constant term."
+        }
+       ],
+       "tip": {
+        "zh": "卷二看到恆等式，若不想展開括號，就代入 $x=0$；想消掉某一個括號，就代「令該括號為 0」的值 —— 通常 15 秒內算完。",
+        "en": "In Paper 2, substitute x = 0 (or a value that zeroes a bracket) instead of expanding."
+       }
+      },
+      "answer": "C",
+      "verify": "checked"
+     },
+     {
       "id": "eph-ws03-q01",
       "type": "mc",
       "topic": "ws03",
@@ -594,7 +860,9 @@ window.LEARN_TOPIC_WS03 = {
       },
       "answer": "A",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws03-q03",
       "type": "mc",
@@ -666,9 +934,7 @@ window.LEARN_TOPIC_WS03 = {
       },
       "answer": "A",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws03-q04",
       "type": "mc",
@@ -818,7 +1084,9 @@ window.LEARN_TOPIC_WS03 = {
       },
       "answer": "C",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws03-q06",
       "type": "mc",
@@ -893,9 +1161,7 @@ window.LEARN_TOPIC_WS03 = {
       },
       "answer": "D",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws03-q07",
       "type": "mc",
@@ -1039,7 +1305,9 @@ window.LEARN_TOPIC_WS03 = {
       },
       "answer": "A",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws03-q09",
       "type": "mc",
@@ -1114,9 +1382,7 @@ window.LEARN_TOPIC_WS03 = {
       },
       "answer": "C",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws03-q10",
       "type": "mc",
@@ -1266,7 +1532,9 @@ window.LEARN_TOPIC_WS03 = {
       },
       "answer": "C",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws03-q12",
       "type": "mc",
@@ -1341,9 +1609,7 @@ window.LEARN_TOPIC_WS03 = {
       },
       "answer": "A",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws03-q13",
       "type": "mc",
@@ -1493,7 +1759,9 @@ window.LEARN_TOPIC_WS03 = {
       },
       "answer": "A",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws03-q15",
       "type": "mc",
@@ -1565,9 +1833,7 @@ window.LEARN_TOPIC_WS03 = {
       },
       "answer": "C",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws03-q16",
       "type": "mc",
@@ -1639,7 +1905,9 @@ window.LEARN_TOPIC_WS03 = {
       },
       "answer": "D",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws03-q17",
       "type": "mc",
@@ -1789,9 +2057,9 @@ window.LEARN_TOPIC_WS03 = {
   }
  ],
  "stats": {
-  "mc": 18,
+  "mc": 22,
   "long": 3,
   "cards": 6,
-  "pages": 6
+  "pages": 8
  }
 };

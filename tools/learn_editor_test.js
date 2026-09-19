@@ -83,6 +83,11 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   await sleep(120);
   ok(!!$("#f_tzh") && !!$("#f_body"), "card form renders (title + body fields)");
   ok($("#pv-f_body").innerHTML.length > 0, "live preview renders for the body field");
+  // vocab 用「english = 中文」：英文詞組不可以被空格拆散（曾把 "cross method" 存成 en="cross"）
+  const vocabField = $("#f_vocab");
+  ok(!!vocabField, "card form has the vocabulary field");
+  ok(/cross method = 十字相乘法/.test(vocabField.value),
+     "vocabulary keeps the English phrase intact (" + vocabField.value.split("\n")[0] + ")");
   ok($("#pv-f_body").querySelectorAll(".katex").length >= 1, "preview typesets the inline $...$ maths");
   // 定位標記：正文寫 {{math:0}} 時，預覽要把公式插到文字中間（與學生端一致）
   const bodyField = $("#f_body"), mathField = $("#f_math");

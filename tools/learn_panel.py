@@ -880,8 +880,8 @@ function editCard(id){
           'f_body', (c.body||{}).zh, 10) +
     field('顯示公式（每行一條純 LaTeX，不加 $）', 'f_math', (c.math||[]).join('\\n'), 4) +
     field('常見錯誤（橙框）', 'f_warn', (c.warn||{}).zh, 4) +
-    field('英文生字（每行一組，格式：english 中文）', 'f_vocab',
-          (c.vocab||[]).map(v=>v.en+' '+v.zh).join('\\n'), 4) +
+    field('英文生字（每行一組，格式：english = 中文）', 'f_vocab',
+          (c.vocab||[]).map(v=>v.en+' = '+v.zh).join('\\n'), 4) +
     '<button class="primary" data-act="saveCard" data-id="' + esc(id) + '">儲存</button>';
   bindPreview([['f_warn','pv-f_warn','rich'], ['f_math','pv-f_math','tex']]);
   const _b=$('f_body'), _m=$('f_math'), _o=$('pv-f_body');
@@ -971,7 +971,7 @@ function saveCard(id){
     body:{zh:val('f_body')},
     math:val('f_math').split('\\n').map(s=>s.trim()).filter(Boolean),
     warn:{zh:val('f_warn')},
-    vocab:parsePairs(val('f_vocab'),' ').map(p=>({en:p[0], zh:p.slice(1).join(' ')}))}});
+    vocab:parsePairs(val('f_vocab'),'=').map(p=>({en:p[0].trim(), zh:p.slice(1).join('=').trim()}))}});
 }
 function saveQ(id){
   const q = BUNDLE.long.concat(BUNDLE.mc).find(x=>x.id===id);

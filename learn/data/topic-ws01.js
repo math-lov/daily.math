@@ -10,14 +10,14 @@ window.LEARN_TOPIC_WS01 = {
   "en": "Factorization of Polynomials"
  },
  "intro": {
-  "zh": "這一課有四種方法要學：抽公因數、併項分組、恆等式、十字相乘。做 DSE 卷時，因式分解幾乎年年出現（Paper 1 每年一題、Paper 2 也常考），而且它也是解方程與約分的基礎。"
+  "zh": "這一課分兩節：第一節先打好三個基礎（提公因式、併項分組、恆等式／平方差），第二節再學十字相乘、拆項法與「3+1 分組」的綜合題型。做 DSE 卷時，因式分解幾乎年年出現（Paper 1 每年一題、Paper 2 也常考），而且它也是解方程與約分的基礎。"
  },
  "lessons": [
   {
    "id": "ws01-1",
    "title": {
-    "zh": "四種方法與練習",
-    "en": "Four methods + practice"
+    "zh": "基礎三招：提公因式、分組、平方差",
+    "en": "Basics · Common factor, grouping, squares"
    },
    "cards": [
     {
@@ -28,7 +28,7 @@ window.LEARN_TOPIC_WS01 = {
       "en": "What is Factorization?"
      },
      "body": {
-      "zh": "因式分解（factorization）就是把一個多項式寫成「幾個因式相乘」的形式。例如 $6r^{2}+4rs$ 可以寫成 $2r(3r+2s)$，這裡 $2r$ 和 $3r+2s$ 就是因式（factors）。\n為什麼要學？因為很多題目（解方程、約分、證明恆等式）都要先把式子分解，才看得清結構。\n做因式分解的第一步，永遠是：先看有沒有公因數可以抽出來。"
+      "zh": "因式分解（factorization）就是把一個多項式寫成「幾個因式相乘」的形式。例如 $6r^{2}+4rs$ 可以寫成 $2r(3r+2s)$，這裡 $2r$ 和 $3r+2s$ 就是因式（factors）。\n為什麼要學？因為很多題目（解方程、約分、證明恆等式）都要先把式子分解，才看得清結構。\n做因式分解的第一步，永遠是：先看有沒有公因式可以抽出來。"
      },
      "math": [
       "6r^{2}+4rs=2r(3r+2s)"
@@ -55,11 +55,11 @@ window.LEARN_TOPIC_WS01 = {
      "id": "ws01-c2",
      "topic": "ws01",
      "title": {
-      "zh": "方法一：提取公因數",
+      "zh": "方法一：提取公因式",
       "en": "Method 1 · Taking out the Common Factor"
      },
      "body": {
-      "zh": "每一項都有的因式，叫做公因數（common factor）。把它抽到括號外面，括號內就是「每一項除以公因數」之後剩下的部分。\n抽公因數的做法，係數與字母分開處理：\n・係數：取所有係數的最大公因數（H.C.F.）；\n・字母：取每個共同字母的「最低次方」。\n例：$6r^{2}+4rs$ —— 係數 $6$ 與 $4$ 的最大公因數是 $2$；字母同時有 $r$，最低次方是 $r^{1}$，所以公因數是 $2r$。抽出來就是：\n{{math:0}}\n如果共同部分是一個括號而不是單項，做法完全一樣 —— 把整個括號當成一個「字母」看待：\n{{math:1}}\n這裡 $(b+1)$ 就是公因數，抽走後第一項剩下 $a$、第二項剩下 $-2$。\n抽完後要檢查括號內仍可不可以再分解，可以就繼續分解到不能再分為止。"
+      "zh": "每一項都有的因式，叫做公因式（common factor）。把它抽到括號外面，括號內就是「每一項除以公因式」之後剩下的部分。\n留意用詞：含字母的多項式叫「公因式」（common factor）；「公因數」通常只指純數字的最大公因數（H.C.F.）。做代數時一律說「抽公因式」。\n抽公因式的做法，係數與字母分開處理：\n・係數：取所有係數的最大公因數（H.C.F.）；\n・字母：取每個共同字母的「最低次方」。\n例：$6r^{2}+4rs$ —— 係數 $6$ 與 $4$ 的最大公因數是 $2$；字母同時有 $r$，最低次方是 $r^{1}$，所以公因式是 $2r$。抽出來就是：\n{{math:0}}\n如果共同部分是一個括號而不是單項，做法完全一樣 —— 把整個括號當成一個「字母」看待：\n{{math:1}}\n這裡 $(b+1)$ 就是公因式，抽走後第一項剩下 $a$、第二項剩下 $-2$。\n抽完後要檢查括號內仍可不可以再分解，可以就繼續分解到不能再分為止。"
      },
      "math": [
       "6r^{2}+4rs=2r(3r)+2r(2s)=2r(3r+2s)",
@@ -68,7 +68,7 @@ window.LEARN_TOPIC_WS01 = {
      "vocab": [
       {
        "en": "common factor",
-       "zh": "公因數"
+       "zh": "公因式"
       },
       {
        "en": "take out / extract",
@@ -76,7 +76,7 @@ window.LEARN_TOPIC_WS01 = {
       }
      ],
      "warn": {
-      "zh": "整個括號也可以是公因數。例如 $a(b+1)-2(b+1)$ 中，$(b+1)$ 就是公因數，抽出來得 $(b+1)(a-2)$。很多同學只抽數字，就會卡住。"
+      "zh": "整個括號也可以是公因式。例如 $a(b+1)-2(b+1)$ 中，$(b+1)$ 就是公因式，抽出來得 $(b+1)(a-2)$。很多同學只抽數字，就會卡住。"
      }
     },
     {
@@ -87,7 +87,7 @@ window.LEARN_TOPIC_WS01 = {
       "en": "Method 2 · By Grouping Terms"
      },
      "body": {
-      "zh": "四項或以上的式子，先把它們分成兩組，每組各自抽公因數，令兩組出現「同一個括號」，再抽這個括號。\n例：$hk+1+h+k$。先調位（move the terms）：$hk+h+1+k$，然後分組：$h(k+1)+(k+1)$，此時 $(k+1)$ 是公因數，答案是 $(k+1)(h+1)$。\n分組的秘訣是：先觀察哪兩項有明顯共同的東西，把它們放在同一組；兩組之間通常相差一個負號，要小心變號。"
+      "zh": "四項或以上的式子，先把它們分成兩組，每組各自抽公因式，令兩組出現「同一個括號」，再抽這個括號。\n例：$hk+1+h+k$。先調位（move the terms）：$hk+h+1+k$，然後分組：$h(k+1)+(k+1)$，此時 $(k+1)$ 是公因數，答案是 $(k+1)(h+1)$。\n分組的秘訣是：先觀察哪兩項有明顯共同的東西，把它們放在同一組；兩組之間通常相差一個負號，要小心變號。"
      },
      "math": [
       "hk+1+h+k=h(k+1)+(k+1)=(k+1)(h+1)"
@@ -138,290 +138,179 @@ window.LEARN_TOPIC_WS01 = {
       }
      ],
      "warn": {
-      "zh": "平方差是「減」，完全平方中間可以是「加」或「減」。$a^{2}+b^{2}$ 在實數範圍內**不能**分解，不要寫成 $(a+b)^{2}$。"
-     }
-    },
-    {
-     "id": "ws01-c5",
-     "topic": "ws01",
-     "title": {
-      "zh": "方法四：十字相乘法",
-      "en": "Method 4 · Cross Method"
-     },
-     "body": {
-      "zh": "十字相乘法用來分解 $ax^{2}+bx+c$（二次三項式）：把首項與末項各拆成兩個因數，排成兩欄，交叉相乘後相加，要等於中間項。\n例如要因式分解 $6x^{2}-13x-5$，我們通常會在黑板上排成兩欄（左欄放首項的因數、右欄放常數項的因數，中間畫交叉線），並在右側寫出檢驗：\n{{math:0}}\n檢驗中間項（交叉相乘後相加）：\n{{math:1}}\n與題目的中間項 $-13x$ 相同 ✓\n配對時要「橫向」取同一行的兩個數：第一行取 $2x$ 與 $-5$ 得 $(2x-5)$，第二行取 $3x$ 與 $+1$ 得 $(3x+1)$，所以：\n{{math:2}}\n草稿上的次序：先把左右兩欄的因數寫好 → 畫出交叉箭頭並算和 → 確認符號與數值無誤 → 最後才橫向配對寫出答案。"
-     },
-     "math": [
-      "\\begin{array}{ccc} 2x & \\searrow\\swarrow & -5 \\\\ 3x & \\nearrow\\nwarrow & +1 \\end{array}",
-      "(2x)(+1)+(3x)(-5)=-13x",
-      "6x^{2}-13x-5=(2x-5)(3x+1)"
-     ],
-     "vocab": [
-      {
-       "en": "cross",
-       "zh": "method 十字相乘法"
-      },
-      {
-       "en": "middle",
-       "zh": "term 中間項"
-      },
-      {
-       "en": "coefficient",
-       "zh": "係數"
-      },
-      {
-       "en": "constant",
-       "zh": "term 常數項"
-      }
-     ],
-     "warn": {
-      "zh": "符號規則：末項是負數 → 兩個因數一正一負；末項是正、中間項是負 → 兩個因數都負。如果交叉相乘的「和」數值對了但符號相反，把右欄兩個數同時變號再試一次即可。最後一定要檢查中間項 —— 錯符號是最常見的失分位。"
-     }
-    },
-    {
-     "id": "ws01-c7",
-     "topic": "ws01",
-     "title": {
-      "zh": "方法五：拆項法（不用試組合）",
-      "en": "Method 5 · Splitting the Middle Term"
-     },
-     "body": {
-      "zh": "很多同學覺得十字相乘法「要試很多組合」。澳洲課本教另一個方法 —— 拆項法（split the middle term）：步驟固定，不用試，把中間項拆成兩項，再分組抽公因數。\n以 $6x^{2}-13x-5$ 為例：\n第 1 步 · 首項係數 × 常數項：\n{{math:0}}\n第 2 步 · 找兩個數，相乘等於 $-30$、相加等於中間項係數 $-13$：\n{{math:1}}\n（$(-15)\\times 2=-30$ 而且 $(-15)+2=-13$ ✓，所以用 $-15$ 與 $2$。）\n第 3 步 · 把中間項 $-13x$ 拆成 $-15x+2x$，然後分組抽公因數：\n{{math:2}}\n「兩個數的次序不重要」：把次序對調也一樣做到結果：\n{{math:3}}\n兩種方法都可以用：十字相乘熟練後較快；拆項法步驟固定，首項係數較大時特別順手。"
-     },
-     "math": [
-      "6\\times(-5)=-30",
-      "(-15)\\times 2=-30,\\quad (-15)+2=-13",
-      "6x^{2}-15x+2x-5=3x(2x-5)+1(2x-5)=(2x-5)(3x+1)",
-      "6x^{2}+2x-15x-5=2x(3x+1)-5(3x+1)=(3x+1)(2x-5)"
-     ],
-     "vocab": [
-      {
-       "en": "split the middle term",
-       "zh": "拆項法"
-      },
-      {
-       "en": "product",
-       "zh": "積（相乘的結果）"
-      },
-      {
-       "en": "sum",
-       "zh": "和（相加的結果）"
-      },
-      {
-       "en": "grouping",
-       "zh": "分組"
-      }
-     ],
-     "warn": {
-      "zh": "第 2 步的兩個數要同時滿足兩個條件：積等於「首項係數 × 常數項」、和等於中間項係數。若最後分組後兩組括號不相同，就是這兩個數找錯了 —— 回到第 2 步重找，不要硬做下去。"
-     }
-    },
-    {
-     "id": "ws01-c6",
-     "topic": "ws01",
-     "title": {
-      "zh": "解題流程與常見錯誤",
-      "en": "Checklist & Common Mistakes"
-     },
-     "body": {
-      "zh": "考試時的固定流程：\n1. 先抽公因數（common factor）—— 這一步幾乎每題都用得上。\n2. 數一數有幾項：兩項想平方差，三項想十字相乘或完全平方，四項想分組。\n3. 分解完再檢查括號內能否繼續分解。\n4. 最後展開驗算一次，確認回到原式。\n常見失分：抽公因數抽不乾淨（例如 $2x^{2}-8=2(x^{2}-4)$ 其實可以再分解成 $2(x+2)(x-2)$）；分組時忘記變號；把 $a^{2}+b^{2}$ 誤當平方差。"
-     },
-     "math": [
-      "2x^{2}-8=2(x^{2}-4)=2(x+2)(x-2)"
-     ],
-     "vocab": [
-      {
-       "en": "completely factorized",
-       "zh": "完全分解"
-      },
-      {
-       "en": "check by expansion",
-       "zh": "展開驗算"
-      }
-     ],
-     "warn": {
-      "zh": "「完全分解」是評分要求：留著 $2(x^{2}-4)$ 通常會失分。"
+      "zh": "平方差是「減」，完全平方中間可以是「加」或「減」。$a^{2}+b^{2}$ 在實數範圍內不能分解 —— 它跟 $(a+b)^{2}$ 相差了中間那一項：$(a+b)^{2}=a^{2}+2ab+b^{2}$，所以 $a^{2}+b^{2}\\neq(a+b)^{2}$，千萬不要當成完全平方。"
      }
     }
    ],
-   "long": [
-    {
-     "id": "eph-ws01-ex01",
-     "type": "long",
-     "topic": "ws01",
-     "unit": 4,
-     "subtopic": "factorization",
-     "difficulty": 2,
-     "code": "WS1-EX1",
-     "source": "WS01 Example 1 · [HKDSE 2021 Paper 1 Q3]",
-     "stem": {
-      "text": "Factorize"
-     },
-     "parts": [
-      {
-       "label": "(a)",
-       "text": "$15x^{2}+xy-2y^{2}$,",
-       "marks": 1
-      },
-      {
-       "label": "(b)",
-       "text": "$9x-3y-15x^{2}-xy+2y^{2}$.",
-       "marks": 1
-      }
-     ],
-     "marks": 3,
-     "review": null,
-     "solution": {
-      "steps": [
-       {
-        "title": {
-         "zh": "第 1 步 · 認清題目要什麼",
-         "en": "Step 1 · Read the question"
-        },
-        "math": "",
-        "zh": "題目要求 factorize（因式分解）。(a) 是二次三項式 $15x^{2}+xy-2y^{2}$，用十字相乘法（cross method）；(b) 是四項，而且明顯「(a) 的答案會再用一次」——DSE 長題目幾乎都是這種設計：先分解 (a)，(b) 就是用 (a) 的結果。",
-        "en": "Part (a) is a quadratic trinomial — use the cross method. Part (b) reuses the result of (a); that is the standard HKDSE Paper 1 design."
-       },
-       {
-        "title": {
-         "zh": "第 2 步 · (a) 十字相乘",
-         "en": "Step 2 · Factorize (a)"
-        },
-        "math": "15x^{2}+xy-2y^{2}=(3x-y)(5x+2y)",
-        "zh": "首項 $15x^{2}$ 拆成 $3x\\cdot 5x$，末項 $-2y^{2}$ 拆成 $(-y)\\cdot(+2y)$。交叉相乘檢查中間項：$(3x)(+2y)+(-y)(5x)=6xy-5xy=xy$，與題目的 $+xy$ 相符，所以分解正確。這一步是 A 分，答案寫對就得分。",
-        "en": "Split the first term into $3x\\cdot5x$ and the last term into $(-y)(+2y)$; the cross products give $+xy$, matching the middle term. (1A)",
-        "marking": "(1A)",
-        "highlight": [
-         "(3x-y)(5x+2y)"
-        ]
-       },
-       {
-        "title": {
-         "zh": "第 3 步 · (b) 先分組，再抽公因數",
-         "en": "Step 3 · Group the terms in (b)"
-        },
-        "math": "9x-3y-15x^{2}-xy+2y^{2}=(9x-3y)-(15x^{2}+xy-2y^{2})",
-        "zh": "四項的式子要用 grouping（併項分組）。看見後三項 $-15x^{2}-xy+2y^{2}$ 就是 (a) 的相反數，所以把負號提出來：變成 $-(15x^{2}+xy-2y^{2})$。很多同學在這裡直接寫 $-15x^{2}-xy+2y^{2}$ 而不加括號，之後就無法用 (a) 的結果。",
-        "en": "Group as $(9x-3y)-(15x^{2}+xy-2y^{2})$; the bracket is exactly part (a). Remember to insert the brackets when taking out the minus sign.",
-        "highlight": [
-         "(9x-3y)-(15x^{2}+xy-2y^{2})"
-        ]
-       },
-       {
-        "title": {
-         "zh": "第 4 步 · 用 (a) 的結果完成分解",
-         "en": "Step 4 · Use the result of (a)"
-        },
-        "math": "=3(3x-y)-(3x-y)(5x+2y)=(3x-y)(3-5x-2y)",
-        "zh": "先抽公因數：$9x-3y=3(3x-y)$；再用 (a) 的答案 $15x^{2}+xy-2y^{2}=(3x-y)(5x+2y)$。此時 $(3x-y)$ 是兩項的共同因式，抽出來得 $(3x-y)\\big[3-(5x+2y)\\big]=(3x-y)(3-5x-2y)$。",
-        "en": "Factor $9x-3y$ as $3(3x-y)$ and use (a): $(3x-y)$ is now a common factor, so the answer is $(3x-y)(3-5x-2y)$. (1M + 1A)",
-        "marking": "(1M: Use the result of (a).) (1A)",
-        "highlight": [
-         "(3x-y)(3-5x-2y)"
-        ]
-       }
-      ],
-      "traps": [],
-      "tip": {
-       "zh": "DSE Paper 1 的因式分解題幾乎都是「(a) 先分解一個二次三項式，(b) 再用 (a) 的結果」。(b) 見到四項，先想「哪兩項可以抽公因數、哪三項是 (a) 的式子」，通常就通了。",
-       "en": "In Paper 1, part (b) almost always reuses part (a). Look for the group that matches (a) — and add brackets before taking out a minus sign."
-      }
-     },
-     "answer": null,
-     "verify": "checked"
-    },
-    {
-     "id": "eph-ws01-ex02",
-     "type": "long",
-     "topic": "ws01",
-     "unit": 4,
-     "subtopic": "factorization",
-     "difficulty": 3,
-     "code": "WS1-EX2",
-     "source": "WS01 Example 2 · [HKDSE 2022 Paper 1 Q4]",
-     "stem": {
-      "text": "Factorize"
-     },
-     "parts": [
-      {
-       "label": "(a)",
-       "text": "$16c^{2}-8c+1$,",
-       "marks": 1
-      },
-      {
-       "label": "(b)",
-       "text": "$(5c+d)^{2}-16c^{2}+8c-1$.",
-       "marks": 1
-      }
-     ],
-     "marks": 4,
-     "review": null,
-     "solution": {
-      "steps": [
-       {
-        "title": {
-         "zh": "第 1 步 · (a) 認出完全平方",
-         "en": "Step 1 · Recognise a perfect square"
-        },
-        "math": "16c^{2}-8c+1=(4c)^{2}-2(4c)(1)+1^{2}=(4c-1)^{2}",
-        "zh": "首項 $16c^{2}=(4c)^{2}$、末項 $1=1^{2}$，中間項 $-8c=-2(4c)(1)$，完全符合 $a^{2}-2ab+b^{2}\\equiv(a-b)^{2}$（perfect square，完全平方）。所以答案是 $(4c-1)^{2}$，這步 1A。",
-        "en": "The expression matches $a^{2}-2ab+b^{2}\\equiv(a-b)^{2}$, so (a) is $(4c-1)^{2}$. (1A)",
-        "marking": "(1A)",
-        "highlight": [
-         "(4c-1)^{2}"
-        ]
-       },
-       {
-        "title": {
-         "zh": "第 2 步 · (b) 把 (a) 的結果整塊用上",
-         "en": "Step 2 · Spot (a) inside (b)"
-        },
-        "math": "(5c+d)^{2}-16c^{2}+8c-1=(5c+d)^{2}-(16c^{2}-8c+1)",
-        "zh": "後三項 $-16c^{2}+8c-1$ 與 (a) 的 $16c^{2}-8c+1$ 只差一個負號，所以要提出負號並加括號：$-(16c^{2}-8c+1)$。提出時每一項都要變號 —— 這是本題最容易失分的地方。",
-        "en": "Take out a minus sign with brackets: $-(16c^{2}-8c+1)$. Every term inside must change sign. (1M)",
-        "marking": "(1M)",
-        "highlight": [
-         "-(16c^{2}-8c+1)"
-        ]
-       },
-       {
-        "title": {
-         "zh": "第 3 步 · 化成平方差",
-         "en": "Step 3 · Form a difference of two squares"
-        },
-        "math": "=(5c+d)^{2}-(4c-1)^{2}",
-        "zh": "把 (a) 的答案代回去，就得到「兩個平方相減」$A^{2}-B^{2}$ 的形式，其中 $A=5c+d$、$B=4c-1$。看到這個形式就要立刻想 $A^{2}-B^{2}\\equiv(A+B)(A-B)$。",
-        "en": "Now it is $A^{2}-B^{2}$ with $A=5c+d$, $B=4c-1$ — apply the difference of two squares.",
-        "highlight": [
-         "A^{2}-B^{2}"
-        ]
-       },
-       {
-        "title": {
-         "zh": "第 4 步 · 用平方差分解並化簡",
-         "en": "Step 4 · Apply $A^{2}-B^{2}=(A+B)(A-B)$"
-        },
-        "math": "=(5c+d+4c-1)(5c+d-4c+1)=(9c+d-1)(c+d+1)",
-        "zh": "$A+B=(5c+d)+(4c-1)=9c+d-1$；$A-B=(5c+d)-(4c-1)=5c+d-4c+1$。注意減號後面整條 $4c-1$ 都要變號，寫成 $5c+d-4c+1$ 才會對。答案是 $(9c+d-1)(c+d+1)$，這步 1A。",
-        "en": "$A+B=9c+d-1$ and $A-B=c+d+1$, giving $(9c+d-1)(c+d+1)$. (1A)",
-        "marking": "(1A)",
-        "highlight": [
-         "(9c+d-1)(c+d+1)"
-        ]
-       }
-      ],
-      "traps": [],
-      "tip": {
-       "zh": "「(b) 內藏 (a)」是 Paper 1 的固定套路。做法：在 (b) 找出 (a) 那串式子，前面加負號並補括號，然後它就會變成 $A^{2}-B^{2}$ 或 $A^{2}+2AB+B^{2}$，一步就能收尾。",
-       "en": "Look for part (a) hidden inside part (b). Wrap it in brackets (watch the signs) and it becomes a standard identity."
-      }
-     },
-     "answer": null,
-     "verify": "checked"
-    }
-   ],
+   "long": [],
    "pages": [
     [
+     {
+      "id": "eph-ws01-w01",
+      "type": "mc",
+      "topic": "ws01",
+      "unit": 4,
+      "subtopic": "factorization",
+      "difficulty": 1,
+      "code": "WS1-W01",
+      "source": "WS01 暖身題（自編）· 提取公因式",
+      "stem": {
+       "text": "$3x^{2}-6x=$"
+      },
+      "options": {
+       "A": "$3x(x-2)$",
+       "B": "$3(x^{2}-2x)$",
+       "C": "$x(3x-6)$",
+       "D": "$3x(x-6)$"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 先找係數的公因數",
+          "en": "Step 1 · H.C.F. of the coefficients"
+         },
+         "math": "\\text{H.C.F.}(3,6)=3",
+         "zh": "係數 $3$ 與 $6$ 的最大公因數（H.C.F.）是 $3$。抽公因式的第一步，永遠是先看係數。",
+         "en": "The H.C.F. of 3 and 6 is 3 — always start with the coefficients.",
+         "highlight": [
+          "3"
+         ]
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 再找共同字母的最低次方",
+          "en": "Step 2 · Lowest power of the common letter"
+         },
+         "math": "3x^{2}-6x=3x\\cdot x-3x\\cdot 2",
+         "zh": "兩項都有 $x$：第一項是 $x^{2}$、第二項是 $x^{1}$，取最低次方 $x^{1}$。所以公因式是 $3x$；把每一項都寫成「$3x$ 乘某個東西」就不會出錯。",
+         "en": "Both terms contain $x$; take the lowest power. The common factor is $3x$.",
+         "highlight": [
+          "3x"
+         ]
+        },
+        {
+         "title": {
+          "zh": "第 3 步 · 抽出來寫成答案",
+          "en": "Step 3 · Write the answer"
+         },
+         "math": "3x^{2}-6x=3x(x-2)",
+         "zh": "$3x\\cdot x-3x\\cdot 2=3x(x-2)$。驗算：把 $3x$ 乘回括號 $3x(x-2)=3x^{2}-6x$，與原式相同 ✓。",
+         "en": "$3x(x-2)$. Check by expanding: $3x(x-2)=3x^{2}-6x$ ✓.",
+         "highlight": [
+          "3x(x-2)"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "B",
+         "zh": "$3(x^{2}-2x)$：你已經抽了 $3$，但括號內 $x^{2}-2x$ 仍然可以再抽 $x$。因式分解要抽到括號內「再抽不動」為止。",
+         "en": "Not fully factorized — $x^{2}-2x$ still has a common factor $x$."
+        },
+        {
+         "opt": "C",
+         "zh": "$x(3x-6)$：括號內 $3x-6$ 仍然可以再抽 $3$，屬於未完全分解，DSE 會失分。",
+         "en": "Not fully factorized — $3x-6$ still has the factor 3."
+        },
+        {
+         "opt": "D",
+         "zh": "$3x(x-6)$：$-6x\\div 3x=-2$，不是 $-6$。抽完可以把答案展開驗算一次，立即知道對錯。",
+         "en": "The constant inside the bracket is wrong: $-6x \\div 3x = -2$."
+        }
+       ],
+       "tip": {
+        "zh": "抽公因式的口訣：係數取 H.C.F.、字母取最低次方。抽完一定要回頭看括號內還能不能再抽 ——「完全分解」才是答案。",
+        "en": "Coefficients take the H.C.F., letters take the lowest power, then check the bracket cannot be factored again."
+       }
+      },
+      "answer": "A",
+      "verify": "checked"
+     },
+     {
+      "id": "eph-ws01-w02",
+      "type": "mc",
+      "topic": "ws01",
+      "unit": 4,
+      "subtopic": "factorization",
+      "difficulty": 1,
+      "code": "WS1-W02",
+      "source": "WS01 暖身題（自編）· 平方差",
+      "stem": {
+       "text": "$x^{2}-16=$"
+      },
+      "options": {
+       "A": "$(x-4)(x+4)$",
+       "B": "$(x-4)^{2}$",
+       "C": "$(x+4)^{2}$",
+       "D": "$(x-8)(x+2)$"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 認出兩個平方",
+          "en": "Step 1 · Spot the two squares"
+         },
+         "math": "x^{2}-16=x^{2}-4^{2}",
+         "zh": "看到「相減」而且兩項都是完全平方，就要想平方差。這裡 $x^{2}=(x)^{2}$、$16=4^{2}$，所以先寫成 $x^{2}-4^{2}$，看清楚「誰的平方」。",
+         "en": "A subtraction of two squares: $x^{2}=(x)^{2}$ and $16=4^{2}$.",
+         "highlight": [
+          "x^{2}-4^{2}"
+         ]
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 套用平方差公式",
+          "en": "Step 2 · Apply $A^{2}-B^{2}=(A+B)(A-B)$"
+         },
+         "math": "A=x,\\ B=4\\ \\Rightarrow\\ (x+4)(x-4)",
+         "zh": "對應 $A=x$、$B=4$，代入 $A^{2}-B^{2}\\equiv(A+B)(A-B)$，得 $(x+4)(x-4)$。",
+         "en": "With $A=x$ and $B=4$, $A^{2}-B^{2}=(A+B)(A-B)=(x+4)(x-4)$.",
+         "highlight": [
+          "(x+4)(x-4)"
+         ]
+        },
+        {
+         "title": {
+          "zh": "第 3 步 · 寫成答案並驗算",
+          "en": "Step 3 · Write and check"
+         },
+         "math": "x^{2}-16=(x-4)(x+4)",
+         "zh": "兩個括號的次序可以對調，寫成 $(x-4)(x+4)$ 也可以。驗算：$(x-4)(x+4)=x^{2}-16$ ✓。",
+         "en": "The order of the two brackets does not matter. Check: $(x-4)(x+4)=x^{2}-16$ ✓.",
+         "highlight": [
+          "(x-4)(x+4)"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "B",
+         "zh": "$(x-4)^{2}$ 漏了中間項：$(x-4)^{2}=x^{2}-8x+16$，多出 $-8x$、常數也變成 $+16$，不等於 $x^{2}-16$。",
+         "en": "$(x-4)^{2}=x^{2}-8x+16 \\neq x^{2}-16$ — the middle term is missing."
+        },
+        {
+         "opt": "C",
+         "zh": "$(x+4)^{2}=x^{2}+8x+16$，同樣多出中間項 $+8x$。平方差沒有中間項，完全平方才有。",
+         "en": "$(x+4)^{2}$ has a middle term $+8x$; a difference of squares has none."
+        },
+        {
+         "opt": "D",
+         "zh": "$(x-8)(x+2)=x^{2}-6x-16$，中間多出 $-6x$。平方差一定要「一加一減、數字相同」。",
+         "en": "$(x-8)(x+2)=x^{2}-6x-16$ — the two numbers must be the same."
+        }
+       ],
+       "tip": {
+        "zh": "看到「兩個平方相減」就問自己兩件事：誰的平方？數字是多少？答案就是「一加一減」的那兩個括號。",
+        "en": "For a difference of two squares, ask: square of what, by what number? The answer is $(A+B)(A-B)$."
+       }
+      },
+      "answer": "A",
+      "verify": "checked"
+     },
      {
       "id": "eph-ws01-q01",
       "type": "mc",
@@ -487,7 +376,9 @@ window.LEARN_TOPIC_WS01 = {
       },
       "answer": "A",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws01-q02",
       "type": "mc",
@@ -643,9 +534,7 @@ window.LEARN_TOPIC_WS01 = {
       },
       "answer": "D",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws01-q04",
       "type": "mc",
@@ -723,7 +612,9 @@ window.LEARN_TOPIC_WS01 = {
       },
       "answer": "C",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws01-q05",
       "type": "mc",
@@ -879,9 +770,7 @@ window.LEARN_TOPIC_WS01 = {
       },
       "answer": "D",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws01-q07",
       "type": "mc",
@@ -959,7 +848,347 @@ window.LEARN_TOPIC_WS01 = {
       },
       "answer": "C",
       "verify": "checked"
+     }
+    ]
+   ]
+  },
+  {
+   "id": "ws01-2",
+   "title": {
+    "zh": "進階：十字相乘、拆項法與綜合題型",
+    "en": "Cross method, splitting, mixed types"
+   },
+   "cards": [
+    {
+     "id": "ws01-c5",
+     "topic": "ws01",
+     "title": {
+      "zh": "方法四：十字相乘法",
+      "en": "Method 4 · Cross Method"
      },
+     "body": {
+      "zh": "十字相乘法用來分解 $ax^{2}+bx+c$（二次三項式）：把首項與末項各拆成兩個因數，排成兩欄，交叉相乘後相加，要等於中間項。\n例如要因式分解 $6x^{2}-13x-5$，我們通常會在黑板上排成兩欄（左欄放首項的因數、右欄放常數項的因數，中間畫交叉線），並在右側寫出檢驗：\n{{math:0}}\n檢驗中間項（交叉相乘後相加）：\n{{math:1}}\n與題目的中間項 $-13x$ 相同 ✓\n配對時要「橫向」取同一行的兩個數：第一行取 $2x$ 與 $-5$ 得 $(2x-5)$，第二行取 $3x$ 與 $+1$ 得 $(3x+1)$，所以：\n{{math:2}}\n草稿上的次序：先把左右兩欄的因數寫好 → 畫出交叉箭頭並算和 → 確認符號與數值無誤 → 最後才橫向配對寫出答案。\n用計算機驗算（Casio fx-50FH II）：十字相乘要試很多組合，慢又容易灰心。其實可以反過來做 —— 把 $ax^{2}+bx+c$ 當成方程 $ax^{2}+bx+c=0$，用計算機內置的二次方程程式求出兩個根，再由根反推因式：\n{{math:3}}\n反推的規則：根 $x=\\frac{p}{q}$ 對應因式 $(qx-p)$，例如根 $x=\\frac{y}{3}$ 就對應 $(3x-y)$。\n{{math:4}}\n先知道答案，再回去把十字相乘的過程寫齊 —— 這是保底拿分的安全網（過程分仍然要寫，計算機只是幫你確認因式）。"
+     },
+     "math": [
+      "\\begin{array}{ccc} 2x & \\searrow\\swarrow & -5 \\\\ 3x & \\nearrow\\nwarrow & +1 \\end{array}",
+      "(2x)(+1)+(3x)(-5)=-13x",
+      "6x^{2}-13x-5=(2x-5)(3x+1)",
+      "15x^{2}+xy-2y^{2}=0\\ \\Rightarrow\\ x=\\frac{y}{3}\\ \\text{或}\\ x=-\\frac{2y}{5}",
+      "\\text{根 }x=\\frac{p}{q}\\ \\Rightarrow\\ \\text{因式 }(qx-p);\\qquad (3x-y)(5x+2y)"
+     ],
+     "vocab": [
+      {
+       "en": "cross method",
+       "zh": "十字相乘法"
+      },
+      {
+       "en": "middle term",
+       "zh": "中間項"
+      },
+      {
+       "en": "coefficient",
+       "zh": "係數"
+      },
+      {
+       "en": "constant term",
+       "zh": "常數項"
+      },
+      {
+       "en": "root",
+       "zh": "根（方程的解）"
+      }
+     ],
+     "warn": {
+      "zh": "符號規則：末項是負數 → 兩個因數一正一負；末項是正、中間項是負 → 兩個因數都負。如果交叉相乘的「和」數值對了但符號相反，把右欄兩個數同時變號再試一次即可。最後一定要檢查中間項 —— 錯符號是最常見的失分位。"
+     }
+    },
+    {
+     "id": "ws01-c7",
+     "topic": "ws01",
+     "title": {
+      "zh": "方法五：拆項法（不用試組合）",
+      "en": "Method 5 · Splitting the Middle Term"
+     },
+     "body": {
+      "zh": "很多同學覺得十字相乘法「要試很多組合」。澳洲課本教另一個方法 —— 拆項法（split the middle term）：步驟固定，不用試，把中間項拆成兩項，再分組抽公因數。\n以 $6x^{2}-13x-5$ 為例：\n第 1 步 · 首項係數 × 常數項：\n{{math:0}}\n第 2 步 · 找兩個數，相乘等於 $-30$、相加等於中間項係數 $-13$：\n{{math:1}}\n（$(-15)\\times 2=-30$ 而且 $(-15)+2=-13$ ✓，所以用 $-15$ 與 $2$。）\n第 3 步 · 把中間項 $-13x$ 拆成 $-15x+2x$，然後分組抽公因式：\n{{math:2}}\n「兩個數的次序不重要」：把次序對調也一樣做到結果：\n{{math:3}}\n兩種方法都可以用：十字相乘熟練後較快；拆項法步驟固定，首項係數較大時特別順手。"
+     },
+     "math": [
+      "6\\times(-5)=-30",
+      "(-15)\\times 2=-30,\\quad (-15)+2=-13",
+      "6x^{2}-15x+2x-5=3x(2x-5)+1(2x-5)=(2x-5)(3x+1)",
+      "6x^{2}+2x-15x-5=2x(3x+1)-5(3x+1)=(3x+1)(2x-5)"
+     ],
+     "vocab": [
+      {
+       "en": "split the middle term",
+       "zh": "拆項法"
+      },
+      {
+       "en": "product",
+       "zh": "積（相乘的結果）"
+      },
+      {
+       "en": "sum",
+       "zh": "和（相加的結果）"
+      },
+      {
+       "en": "grouping",
+       "zh": "分組"
+      }
+     ],
+     "warn": {
+      "zh": "第 2 步的兩個數要同時滿足兩個條件：積等於「首項係數 × 常數項」、和等於中間項係數。若最後分組後兩組括號不相同，就是這兩個數找錯了 —— 回到第 2 步重找，不要硬做下去。"
+     }
+    },
+    {
+     "id": "ws01-c8",
+     "topic": "ws01",
+     "title": {
+      "zh": "方法六：三加一分組（DSE 最常考）",
+      "en": "Method 6 · Group 3 + 1"
+     },
+     "body": {
+      "zh": "這是 DSE Paper 2 因式分解題最常見的形態：一條式子看似雜亂，其實只要分成「先 3 項、後餘項」兩部分就通了。\n做法固定四步：\n1. 先用十字相乘法，把前面 3 項寫成兩個括號。\n2. 餘下的項抽公因式，要刻意抽出與其中一個括號相同的括號。\n3. 兩部分合起來，就會出現同一個公因式：\n{{math:0}}\n4. 抽走共同括號，收工：\n{{math:1}}\n另一種常見寫法，是把「完全平方」藏在括號裡面 —— 用 $16=4^{2}$ 與 $4a^{2}-20ab+25b^{2}=(2a-5b)^{2}$ 湊出平方差：\n{{math:2}}\n{{math:3}}\n口訣：「先分 3+1，再找共同括號」。抽出來的括號一定要是前 3 項的其中一個因式；如果接不上，就是正負號或抽錯數，換個抽法再試。"
+     },
+     "math": [
+      "x^{2}-3xy-10y^{2}+3x-15y=(x-5y)(x+2y)+3(x-5y)",
+      "=(x-5y)(x+2y+3)",
+      "16-4a^{2}+20ab-25b^{2}=4^{2}-(2a-5b)^{2}",
+      "=(4+2a-5b)(4-2a+5b)"
+     ],
+     "vocab": [
+      {
+       "en": "group the terms",
+       "zh": "併項分組"
+      },
+      {
+       "en": "common bracket",
+       "zh": "共同括號"
+      }
+     ],
+     "warn": {
+      "zh": "第 2 步是關鍵：要刻意抽出與前 3 項相同的括號，通常需要提負號或抽負數。如果餘下兩項抽出來的括號跟前 3 項兩個括號都對不上，就是前 3 項分解錯了（回去檢查中間項），不要硬寫下去。"
+     }
+    },
+    {
+     "id": "ws01-c6",
+     "topic": "ws01",
+     "title": {
+      "zh": "解題流程與常見錯誤",
+      "en": "Checklist & Common Mistakes"
+     },
+     "body": {
+      "zh": "考試時的固定流程：\n1. 先抽公因式（common factor）—— 這一步幾乎每題都用得上。\n2. 數一數有幾項：兩項想平方差，三項想十字相乘或完全平方，四項想分組。\n3. 分解完再檢查括號內能否繼續分解。\n4. 最後展開驗算一次，確認回到原式。\n常見失分：抽公因式抽不乾淨（例如 $2x^{2}-8=2(x^{2}-4)$ 其實可以再分解成 $2(x+2)(x-2)$）；分組時忘記變號；把 $a^{2}+b^{2}$ 誤當平方差。"
+     },
+     "math": [
+      "2x^{2}-8=2(x^{2}-4)=2(x+2)(x-2)"
+     ],
+     "vocab": [
+      {
+       "en": "completely factorized",
+       "zh": "完全分解"
+      },
+      {
+       "en": "check by expansion",
+       "zh": "展開驗算"
+      }
+     ],
+     "warn": {
+      "zh": "「完全分解」是評分要求：留著 $2(x^{2}-4)$ 通常會失分。"
+     }
+    }
+   ],
+   "long": [
+    {
+     "id": "eph-ws01-ex01",
+     "type": "long",
+     "topic": "ws01",
+     "unit": 4,
+     "subtopic": "factorization",
+     "difficulty": 2,
+     "code": "WS1-EX1",
+     "source": "WS01 Example 1 · [HKDSE 2021 Paper 1 Q3]",
+     "stem": {
+      "text": "Factorize"
+     },
+     "parts": [
+      {
+       "label": "(a)",
+       "text": "$15x^{2}+xy-2y^{2}$,",
+       "marks": 1
+      },
+      {
+       "label": "(b)",
+       "text": "$9x-3y-15x^{2}-xy+2y^{2}$.",
+       "marks": 1
+      }
+     ],
+     "marks": 3,
+     "review": null,
+     "solution": {
+      "steps": [
+       {
+        "title": {
+         "zh": "第 1 步 · 認清題目要什麼",
+         "en": "Step 1 · Read the question"
+        },
+        "math": "",
+        "zh": "題目要求 factorize（因式分解）。(a) 是二次三項式 $15x^{2}+xy-2y^{2}$，用十字相乘法（cross method）；(b) 是四項，而且明顯「(a) 的答案會再用一次」——DSE 長題目幾乎都是這種設計：先分解 (a)，(b) 就是用 (a) 的結果。",
+        "en": "Part (a) is a quadratic trinomial — use the cross method. Part (b) reuses the result of (a); that is the standard HKDSE Paper 1 design."
+       },
+       {
+        "title": {
+         "zh": "第 2 步 · (a) 十字相乘",
+         "en": "Step 2 · Factorize (a)"
+        },
+        "math": "15x^{2}+xy-2y^{2}=(3x-y)(5x+2y)",
+        "zh": "首項 $15x^{2}$ 拆成 $3x\\cdot 5x$，末項 $-2y^{2}$ 拆成 $(-y)\\cdot(+2y)$。交叉相乘檢查中間項：$(3x)(+2y)+(-y)(5x)=6xy-5xy=xy$，與題目的 $+xy$ 相符，所以分解正確。這一步是 A 分，答案寫對就得分。",
+        "en": "Split the first term into $3x\\cdot5x$ and the last term into $(-y)(+2y)$; the cross products give $+xy$, matching the middle term. (1A)",
+        "marking": "(1A)",
+        "highlight": [
+         "(3x-y)(5x+2y)"
+        ]
+       },
+       {
+        "title": {
+         "zh": "第 3 步 · (b) 先分組，再抽公因式",
+         "en": "Step 3 · Group the terms in (b)"
+        },
+        "math": "9x-3y-15x^{2}-xy+2y^{2}=(9x-3y)-(15x^{2}+xy-2y^{2})",
+        "zh": "四項的式子要用 grouping（併項分組）。看見後三項 $-15x^{2}-xy+2y^{2}$ 就是 (a) 的相反數，所以把負號提出來：變成 $-(15x^{2}+xy-2y^{2})$。很多同學在這裡直接寫 $-15x^{2}-xy+2y^{2}$ 而不加括號，之後就無法用 (a) 的結果。",
+        "en": "Group as $(9x-3y)-(15x^{2}+xy-2y^{2})$; the bracket is exactly part (a). Remember to insert the brackets when taking out the minus sign.",
+        "highlight": [
+         "(9x-3y)-(15x^{2}+xy-2y^{2})"
+        ]
+       },
+       {
+        "title": {
+         "zh": "第 4 步 · 用 (a) 的結果完成分解",
+         "en": "Step 4 · Use the result of (a)"
+        },
+        "math": "=3(3x-y)-(3x-y)(5x+2y)=(3x-y)(3-5x-2y)",
+        "zh": "先抽公因式：$9x-3y=3(3x-y)$；再用 (a) 的答案 $15x^{2}+xy-2y^{2}=(3x-y)(5x+2y)$。此時 $(3x-y)$ 是兩項的共同因式，抽出來得 $(3x-y)\\big[3-(5x+2y)\\big]=(3x-y)(3-5x-2y)$。",
+        "en": "Factor $9x-3y$ as $3(3x-y)$ and use (a): $(3x-y)$ is now a common factor, so the answer is $(3x-y)(3-5x-2y)$. (1M + 1A)",
+        "marking": "(1M: Use the result of (a).) (1A)",
+        "highlight": [
+         "(3x-y)(3-5x-2y)"
+        ],
+        "link": {
+         "from": "(a)",
+         "math": "15x^{2}+xy-2y^{2}=(3x-y)(5x+2y)"
+        }
+       }
+      ],
+      "traps": [],
+      "tip": {
+       "zh": "DSE Paper 1 的因式分解題幾乎都是「(a) 先分解一個二次三項式，(b) 再用 (a) 的結果」。(b) 見到四項，先想「哪兩項可以抽公因式、哪三項是 (a) 的式子」，通常就通了。",
+       "en": "In Paper 1, part (b) almost always reuses part (a). Look for the group that matches (a) — and add brackets before taking out a minus sign."
+      }
+     },
+     "answer": null,
+     "verify": "checked"
+    },
+    {
+     "id": "eph-ws01-ex02",
+     "type": "long",
+     "topic": "ws01",
+     "unit": 4,
+     "subtopic": "factorization",
+     "difficulty": 3,
+     "code": "WS1-EX2",
+     "source": "WS01 Example 2 · [HKDSE 2022 Paper 1 Q4]",
+     "stem": {
+      "text": "Factorize"
+     },
+     "parts": [
+      {
+       "label": "(a)",
+       "text": "$16c^{2}-8c+1$,",
+       "marks": 1
+      },
+      {
+       "label": "(b)",
+       "text": "$(5c+d)^{2}-16c^{2}+8c-1$.",
+       "marks": 1
+      }
+     ],
+     "marks": 4,
+     "review": null,
+     "solution": {
+      "steps": [
+       {
+        "title": {
+         "zh": "第 1 步 · (a) 認出完全平方",
+         "en": "Step 1 · Recognise a perfect square"
+        },
+        "math": "16c^{2}-8c+1=(4c)^{2}-2(4c)(1)+1^{2}=(4c-1)^{2}",
+        "zh": "首項 $16c^{2}=(4c)^{2}$、末項 $1=1^{2}$，中間項 $-8c=-2(4c)(1)$，完全符合 $a^{2}-2ab+b^{2}\\equiv(a-b)^{2}$（perfect square，完全平方）。所以答案是 $(4c-1)^{2}$，這步 1A。",
+        "en": "The expression matches $a^{2}-2ab+b^{2}\\equiv(a-b)^{2}$, so (a) is $(4c-1)^{2}$. (1A)",
+        "marking": "(1A)",
+        "highlight": [
+         "(4c-1)^{2}"
+        ]
+       },
+       {
+        "title": {
+         "zh": "第 2 步 · (b) 把 (a) 的結果整塊用上",
+         "en": "Step 2 · Spot (a) inside (b)"
+        },
+        "math": "(5c+d)^{2}-16c^{2}+8c-1=(5c+d)^{2}-(16c^{2}-8c+1)",
+        "zh": "後三項 $-16c^{2}+8c-1$ 與 (a) 的 $16c^{2}-8c+1$ 只差一個負號，所以要提出負號並加括號：$-(16c^{2}-8c+1)$。提出時每一項都要變號 —— 這是本題最容易失分的地方。",
+        "en": "Take out a minus sign with brackets: $-(16c^{2}-8c+1)$. Every term inside must change sign. (1M)",
+        "marking": "(1M)",
+        "highlight": [
+         "-(16c^{2}-8c+1)"
+        ],
+        "link": {
+         "from": "(a)",
+         "label": "認出 (a) 的整塊，加括號",
+         "math": "-\\big(16c^{2}-8c+1\\big)"
+        }
+       },
+       {
+        "title": {
+         "zh": "第 3 步 · 化成平方差",
+         "en": "Step 3 · Form a difference of two squares"
+        },
+        "math": "=(5c+d)^{2}-(4c-1)^{2}",
+        "zh": "把 (a) 的答案代回去，就得到「兩個平方相減」$A^{2}-B^{2}$ 的形式，其中 $A=5c+d$、$B=4c-1$。看到這個形式就要立刻想 $A^{2}-B^{2}\\equiv(A+B)(A-B)$。",
+        "en": "Now it is $A^{2}-B^{2}$ with $A=5c+d$, $B=4c-1$ — apply the difference of two squares.",
+        "highlight": [
+         "A^{2}-B^{2}"
+        ],
+        "link": {
+         "from": "(a)",
+         "math": "16c^{2}-8c+1=(4c-1)^{2}"
+        }
+       },
+       {
+        "title": {
+         "zh": "第 4 步 · 用平方差分解並化簡",
+         "en": "Step 4 · Apply $A^{2}-B^{2}=(A+B)(A-B)$"
+        },
+        "math": "=(5c+d+4c-1)(5c+d-4c+1)=(9c+d-1)(c+d+1)",
+        "zh": "$A+B=(5c+d)+(4c-1)=9c+d-1$；$A-B=(5c+d)-(4c-1)=5c+d-4c+1$。注意減號後面整條 $4c-1$ 都要變號，寫成 $5c+d-4c+1$ 才會對。答案是 $(9c+d-1)(c+d+1)$，這步 1A。",
+        "en": "$A+B=9c+d-1$ and $A-B=c+d+1$, giving $(9c+d-1)(c+d+1)$. (1A)",
+        "marking": "(1A)",
+        "highlight": [
+         "(9c+d-1)(c+d+1)"
+        ]
+       }
+      ],
+      "traps": [],
+      "tip": {
+       "zh": "「(b) 內藏 (a)」是 Paper 1 的固定套路。做法：在 (b) 找出 (a) 那串式子，前面加負號並補括號，然後它就會變成 $A^{2}-B^{2}$ 或 $A^{2}+2AB+B^{2}$，一步就能收尾。",
+       "en": "Look for part (a) hidden inside part (b). Wrap it in brackets (watch the signs) and it becomes a standard identity."
+      }
+     },
+     "answer": null,
+     "verify": "checked"
+    }
+   ],
+   "pages": [
+    [
      {
       "id": "eph-ws01-q08",
       "type": "mc",
@@ -1115,9 +1344,7 @@ window.LEARN_TOPIC_WS01 = {
       },
       "answer": "A",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws01-q10",
       "type": "mc",
@@ -1195,7 +1422,9 @@ window.LEARN_TOPIC_WS01 = {
       },
       "answer": "C",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws01-q11",
       "type": "mc",
@@ -1351,9 +1580,7 @@ window.LEARN_TOPIC_WS01 = {
       },
       "answer": "A",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws01-q13",
       "type": "mc",
@@ -1431,7 +1658,9 @@ window.LEARN_TOPIC_WS01 = {
       },
       "answer": "A",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws01-q14",
       "type": "mc",
@@ -1587,9 +1816,7 @@ window.LEARN_TOPIC_WS01 = {
       },
       "answer": "C",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws01-q16",
       "type": "mc",
@@ -1667,7 +1894,9 @@ window.LEARN_TOPIC_WS01 = {
       },
       "answer": "B",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws01-q17",
       "type": "mc",
@@ -1829,9 +2058,9 @@ window.LEARN_TOPIC_WS01 = {
   }
  ],
  "stats": {
-  "mc": 18,
+  "mc": 20,
   "long": 2,
-  "cards": 7,
-  "pages": 6
+  "cards": 8,
+  "pages": 7
  }
 };

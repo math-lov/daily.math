@@ -3,7 +3,7 @@
    純靜態、無框架、無 build step。三種頁面共用這支檔案：
      body[data-page="index"]  首頁（課題按鈕牆）
      body[data-page="topic"]  課題頁（概念卡 → 長題示範 → MC 每頁 3 題）
-     body[data-page="wrong"]  錯題本
+     body[data-page="wrong"]  弱點升級庫（前稱「錯題本」）
    進度存 localStorage：key = dse-learn:v1（與每日三題站分開）
 
    數學渲染沿用每日三題站已驗證的兩路機制：
@@ -253,7 +253,7 @@
     var n = wrongList().length;
     var b = qs("#wrong-count");
     if (b) {
-      b.textContent = n ? "錯題本 (" + n + ")" : "錯題本";
+      b.textContent = n ? "弱點升級庫 (" + n + ")" : "弱點升級庫";
       if (n) b.classList.add("has-items"); else b.classList.remove("has-items");
     }
   }
@@ -275,7 +275,7 @@
     var n = parseInt(p.get("p") || "0", 10);
     return isNaN(n) || n < 0 ? 0 : n;
   }
-  /* ?q=<qid>：跳到含這條題目的那一頁（錯題本「再練一次」用） */
+  /* ?q=<qid>：跳到含這條題目的那一頁（弱點升級庫「再練一次」用） */
   function pageOfQuestion(pages, qid) {
     if (!qid) return -1;
     for (var i = 0; i < pages.length; i++) {
@@ -335,17 +335,32 @@
       if (enEl) enEl.textContent = (topic.name && topic.name.en) || "";
       document.title = ((topic.name && topic.name.zh) || topic.id) + " · 自學追上站";
 
-      // 頁數導覽列
+      // 頁數導覽列（多節課題插入「第 N 節」分隔 —— 否則兩個「學習」分不清是哪一節）
       var nav = qs("#pagenav");
+      var lessons = topic.lessons || [];
+      var multiLesson = lessons.length > 1;
       nav.innerHTML = "";
       pages.forEach(function (p, i) {
+        if (multiLesson && p.lesson && (i === 0 || pages[i - 1].lesson !== p.lesson)) {
+          var sep = el("span", "pg-lesson", "第 " + (lessons.indexOf(p.lesson) + 1) + " 節");
+          sep.title = (p.lesson.title && p.lesson.title.zh) || "";
+          nav.appendChild(sep);
+        }
         var b = el("button", "pg" + (i === cur ? " current" : "") + (pageDone(p) ? " done" : ""));
-        if (p.kind === "cards") { b.textContent = "學習"; b.classList.add("kind"); }
-        else if (p.kind === "long") { b.textContent = "示範"; b.classList.add("kind"); }
-        else {
+        if (p.kind === "cards") {
+          b.textContent = "學習";
+          b.classList.add("kind");
+          b.title = (p.lesson && p.lesson.title && p.lesson.title.zh) || "概念卡";
+        } else if (p.kind === "long") {
+          b.textContent = "示範";
+          b.classList.add("kind");
+          b.title = (p.q && p.q.code) ? ("長題示範 " + p.q.code) : "長題示範";
+        } else {
           var mcIdx = pages.slice(0, i + 1).filter(function (x) { return x.kind === "mc"; }).length;
           b.textContent = String(mcIdx);
+          b.title = "練習 第 " + mcIdx + " 頁";
         }
+        b.dataset.page = String(i);
         b.onclick = function () { gotoPage(id, i); };
         nav.appendChild(b);
       });
@@ -356,11 +371,24 @@
       var pct = Math.round(pages.filter(pageDone).length / pages.length * 100);
       var bar = qs("#topic-progress");
       if (bar) {
-        bar.textContent = "第 " + (cur + 1) + " / " + pages.length + " 頁 · 本課完成 " + pct + "%";
+        // 多節課題順便講清楚「你現在在第幾節」
+        var sec = "";
+        if (multiLesson && pages[cur] && pages[cur].lesson) {
+          var li = lessons.indexOf(pages[cur].lesson);
+          if (li >= 0) sec = "第 " + (li + 1) + " 節 · ";
+        }
+        bar.textContent = sec + "第 " + (cur + 1) + " / " + pages.length + " 頁 · 本課完成 " + pct + "%";
       }
 
       updateWrongBadge();
     });
+  }
+
+  /* 分頁列的「第 i 頁」按鈕。
+     注意：分頁列中間可能夾雜「第 N 節」分隔元素，所以**不可以**用 nav.children[i]，
+     一定要用 .pg 清單取第 i 個，否則會標錯完成的頁。 */
+  function navPageBtn(i) {
+    return qsa("#pagenav .pg")[i] || null;
   }
 
   function gotoPage(tid, n) {
@@ -384,6 +412,8 @@
       intro.appendChild(it);
       body.appendChild(intro);
     }
+
+    appendCommandHints(body);      // 常駐考試指令提示：做之前先看，減少「睇錯題目」的失分
 
     if (p.kind === "cards") renderCards(body, p, pages, cur, tid);
     else if (p.kind === "long") renderLong(body, p, pages, cur, tid);
@@ -433,14 +463,54 @@
 
   /* ── 概念卡 ─────────────────────────────────────────────────────────── */
   /* 示意圖（SVG）：概念卡／題目都係「一組圖」，逐幅插入（來源可控） */
+  function appendFigure(host, fg) {
+    if (!fg || !fg.svg) return;
+    var fig = el("div", "fig");
+    fig.innerHTML = fg.svg;
+    host.appendChild(fig);
+    if (fg.caption) host.appendChild(el("div", "fig-cap", fg.caption));
+  }
   function appendFigures(host, node) {
-    (node.figures || []).forEach(function (fg) {
-      if (!fg || !fg.svg) return;
-      var fig = el("div", "fig");
-      fig.innerHTML = fg.svg;
-      host.appendChild(fig);
-      if (fg.caption) host.appendChild(el("div", "fig-cap", fg.caption));
+    (node.figures || []).forEach(function (fg) { appendFigure(host, fg); });
+  }
+
+  /* 步驟附加內容：(a)→(b) 的「整塊打包替換」提示 + 高亮答案。
+     長題示範與 MC 提示共用，避免兩處各寫一次。 */
+  function appendStepExtras(box, st) {
+    if (st.link && st.link.math) {
+      var lk = el("div", "step-link");
+      lk.appendChild(el("span", "lk-tag",
+        st.link.label || ("用 " + (st.link.from || "(a)") + " 的答案")));
+      var lf = el("span", "lk-formula");
+      tex(lf, st.link.math, false);
+      lk.appendChild(lf);
+      box.appendChild(lk);
+    }
+    (st.highlight || []).forEach(function (h2) {
+      var hl = el("div", "hl");
+      tex(hl, h2, false);
+      box.appendChild(hl);
     });
+  }
+
+  /* 常駐考試指令提示：DSE 題目用英文字眼，弱生最常誤解這幾個字。
+     放在每一頁的最頂，看完提示再開始做（不是測驗，不扣分）。 */
+  var CMD_HINTS = [
+    ["Factorize completely", "徹底分解（要分解到不能再分解為止）"],
+    ["Hence", "由此（必須用上一小題的答案）"],
+    ["Show that", "證明（要把推導過程寫出來）"],
+    ["Write down", "直接寫出（通常一步就有分）"]
+  ];
+  function appendCommandHints(body) {
+    var box = el("div", "cmd-hints");
+    box.appendChild(el("span", "ch-title", "題目字眼"));
+    CMD_HINTS.forEach(function (p) {
+      var chip = el("span", "ch-chip");
+      chip.appendChild(el("b", null, p[0]));
+      chip.appendChild(el("span", null, p[1]));
+      box.appendChild(chip);
+    });
+    body.appendChild(box);
   }
 
   function renderCards(body, page, pages, cur, tid) {
@@ -594,12 +664,12 @@
       autoRender(why);
       box.appendChild(why);
       if (st.marking) box.appendChild(el("span", "marking", st.marking));
-      (st.highlight || []).forEach(function (h2) {
-        var hl = el("div", "hl");
-        tex(hl, h2, false);
-        box.appendChild(hl);
-      });
+      appendStepExtras(box, st);
       stepsHost.appendChild(box);
+      // 逐步出圖：標了 step 的圖跟住那一步出場（圖跟步驟逐幅出，唔會一次過爆出來）
+      (q.figures || []).forEach(function (fg) {
+        if (fg && fg.svg && (Number(fg.step) || 1) === i + 1) appendFigure(box, fg);
+      });
       // scrollIntoView 在部分環境（jsdom／舊瀏覽器）不存在 → 保護，不讓它中斷揭示流程
       if (typeof box.scrollIntoView === "function") {
         try { box.scrollIntoView({ block: "nearest", behavior: "smooth" }); } catch (e) {}
@@ -641,37 +711,57 @@
 
       store.long[q.id] = true;
       save();
-      if (document.getElementById("pagenav")) {
-        var nav = document.getElementById("pagenav");
-        var btns = nav.children;
-        if (btns[cur]) btns[cur].classList.add("done");
-      }
+      var nb = navPageBtn(cur);
+      if (nb) nb.classList.add("done");
     }
     body.appendChild(card);
   }
 
   /* ── MC 頁 ──────────────────────────────────────────────────────────── */
+  /* 完成一頁的即時回饋：不是分數，而是「你已經拿下本課 X%」的進度感。
+     弱生需要的是微小而立即的成功訊號（否則很快就放棄）。 */
+  function refreshPageDone(page) {
+    var n = qs("#page-done");
+    if (!n || !page || !page.row || !page.row.length) return;
+    var done = page.row.filter(function (q) { return !!mcState(q.id); }).length;
+    var t = null;
+    (INDEX.topics || []).some(function (x) {
+      if (x.id === (TOPIC && TOPIC.id)) { t = x; return true; }
+      return false;
+    });
+    if (done >= page.row.length) {
+      n.classList.add("pd-finish");
+      n.innerHTML = '<b class="pd-title">✓ 這一頁 ' + page.row.length + ' 題完成了</b>' +
+        '<span class="pd-sub">本課已完成 ' + (t ? topicPercent(t) : 0) +
+        '%　按「下一頁」繼續。</span>';
+    } else {
+      n.classList.remove("pd-finish");
+      n.textContent = "做完這 " + page.row.length + " 題，按「下一頁」繼續" +
+        "（答錯的會自動進「弱點升級庫」，隔天再練一次就好）。";
+    }
+  }
+
   function renderMcPage(body, page, pages, cur, tid, focusQid) {
     var wrap = el("div");
     page.row.forEach(function (q, idx) {
       wrap.appendChild(mcCard(q, page, pages, cur, tid, idx + 1, page.row.length));
     });
-    // 從錯題本「再練一次」回來：標出這一題，並且讓它回到未作答狀態
+    // 從弱點升級庫「再練一次」回來：標出這一題，並且讓它回到未作答狀態
     if (focusQid) {
       var focus = qs('.card[data-qid="' + focusQid + '"]', wrap);
       if (focus) {
         focus.classList.add("focus-card");
-        var note = el("div", "focus-note", "從錯題本回來：這一題已清空作答記錄，重新試一次吧。");
+        var note = el("div", "focus-note", "從弱點升級庫回來：這一題已清空作答記錄，重新試一次吧。");
         wrap.insertBefore(note, focus);
       }
     }
     body.appendChild(wrap);
 
     var nextRow = el("div", "card");
-    var txt = el("div", "small muted", page.row.every(function (q) { return !!mcState(q.id); })
-      ? "這一頁完成了，可以按「下一頁」繼續。"
-      : "做完這 3 題，按「下一頁」繼續（答錯的會自動進錯題本，隔天再練一次就好）。");
+    var txt = el("div", "small muted page-done");
+    txt.id = "page-done";
     nextRow.appendChild(txt);
+    refreshPageDone(page);
     var row = el("div", "row");
     row.style.marginTop = "10px";
     var nx = el("button", "btn btn-sm btn-primary", "下一頁 →");
@@ -783,13 +873,17 @@
       if (correct) {
         toast(hinted ? "答對了 ✓（看過提示也可以）" : "答對了 ✓");
         // 完成這一頁的所有題目 → 更新導覽列
-        var nav = qs("#pagenav");
-        if (nav && page.row.every(function (x) { return !!mcState(x.id); }) && nav.children[cur]) {
-          nav.children[cur].classList.add("done");
+        var pageAll = page.row.every(function (x) { return !!mcState(x.id); });
+        if (pageAll) {
+          var nb = navPageBtn(cur);
+          if (nb) nb.classList.add("done");
         }
+        if (pageAll) toast("✓ 這一頁完成了 —— 繼續下一頁");
       } else {
-        toast("沒關係，看看下面的解說");
+        // 答錯是「掉進陷阱」，不是「你不會」→ 先安撫，再指向陷阱解說
+        toast("差一點！看看陷阱在哪裡");
       }
+      refreshPageDone(page);
       updateWrongBadge();
     }
 
@@ -811,19 +905,16 @@
       autoRender(why);
       box.appendChild(why);
       if (st.marking) box.appendChild(el("span", "marking", st.marking));
-      (st.highlight || []).forEach(function (h) {
-        var hl = el("div", "hl");
-        tex(hl, h, false);
-        box.appendChild(hl);
-      });
+      appendStepExtras(box, st);
       stepsHost.appendChild(box);
     }
 
     function showTail(picked) {
       tail.innerHTML = "";
       if (!picked) {
-        var line = el("div", "answer-line", "答案：" + q.answer + " ✓");
-        tail.appendChild(line);
+        tail.appendChild(el("div", "answer-line", "答案：" + q.answer + " ✓"));
+      } else {
+        tail.appendChild(el("div", "answer-line miss", "正確答案：" + q.answer));
       }
       // 示意圖放喺答案欄：先睇答案，再睇圖配上解說（兩次變換嘅題目有兩幅）
       appendFigures(tail, q);
@@ -842,7 +933,10 @@
           box.appendChild(t);
         });
         if (box.children.length) {
-          tail.appendChild(el("div", "small muted", "為什麼會這樣選？"));
+          // 把「答錯」重新框架成「掉進陷阱」：內部歸因 → 具體策略修正
+          tail.appendChild(el("div", "trap-head",
+            picked ? "✕ 差一點 —— 你不是不懂，而是掉進了出卷人設計的陷阱。看看偏差出在哪一步："
+                   : "為什麼會這樣選？"));
           tail.appendChild(box);
         }
       }
@@ -876,7 +970,7 @@
     return card;
   }
 
-  /* ── 錯題本 ─────────────────────────────────────────────────────────── */
+  /* ── 弱點升級庫（前稱錯題本）───────────────────────────────────────────── */
   function renderWrong() {
     var host = qs("#wrong-body");
     if (!host) return;
@@ -884,7 +978,7 @@
     if (!ids.length) {
       var e = el("div", "card");
       e.appendChild(el("div", "done-banner"));
-      var b1 = el("div", "empty", "錯題本是空的 —— 或者你已經把錯的題目都弄懂了 ✓");
+      var b1 = el("div", "empty", "升級庫是空的 —— 或者你已經把弱點全部補好了 ✓");
       e.appendChild(b1);
       var b2 = el("button", "btn btn-primary", "回主目錄");
       b2.onclick = function () { go("index.html"); };
@@ -932,7 +1026,7 @@
 
     var clr = qs("#wrong-clear");
     if (clr) clr.onclick = function () {
-      if (!confirm("要把錯題本清空嗎？")) return;
+      if (!confirm("要把弱點升級庫清空嗎？")) return;
       Object.keys(store.mc).forEach(function (qid) {
         if (store.mc[qid].correct === false) delete store.mc[qid];
       });

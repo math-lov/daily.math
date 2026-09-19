@@ -318,6 +318,292 @@ window.LEARN_TOPIC_WS02 = {
    "pages": [
     [
      {
+      "id": "eph-ws02-w01",
+      "type": "mc",
+      "topic": "ws02",
+      "unit": 0,
+      "subtopic": "simultaneous-equations",
+      "difficulty": 1,
+      "code": "WS2-W01",
+      "source": "WS02 過渡題（自編）· Level 1 符號相反：兩式相加",
+      "stem": {
+       "text": "If $x+y=7$ and $x-y=3$, then $x=$"
+      },
+      "options": {
+       "A": "$2$",
+       "B": "$4$",
+       "C": "$5$",
+       "D": "$10$"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 先看係數：是相反數",
+          "en": "Step 1 · Spot the opposite coefficients"
+         },
+         "math": "x+y=7\\ \\cdots(1),\\qquad x-y=3\\ \\cdots(2)",
+         "zh": "解方程組最重要的一秒：不要急著算，先看未知數前面的係數。這裡第一條是 $+y$、第二條是 $-y$，它們是一對「相反數」。原則：符號相反就「兩式相加」，這個未知數就會自動抵消。",
+         "en": "Notice that +y and -y are opposites. Adding the two equations eliminates y instantly."
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 兩式相加求出 x",
+          "en": "Step 2 · Add to find x"
+         },
+         "math": "(1)+(2):\\ (x+x)+(y-y)=7+3\\ \\Rightarrow\\ 2x=10\\ \\Rightarrow\\ x=5",
+         "zh": "左邊相加：$x+x=2x$，而 $y$ 與 $-y$ 抵消為 0；右邊相加：$7+3=10$。得 $2x=10$，兩邊除以 2 得 $x=5$，所以答案選 C。注意這裡完全不需要乘任何數字。",
+         "en": "Adding both sides gives 2x = 10, so x = 5. Answer: C.",
+         "highlight": [
+          "x=5"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "A",
+         "zh": "$2$ 是 $y$ 的值（代回 $5+y=7$ 得 $y=2$）。題目問的是 $x$ —— 每次作答前都要圈出題目最後要的那個字母。",
+         "en": "2 is the value of y. Always check which unknown is asked for."
+        },
+        {
+         "opt": "D",
+         "zh": "$10$ 是相加後右邊的結果（$2x=10$），忘記最後要除以係數 $2$。見到 $2x=10$，一定要再做一步 $x=5$。",
+         "en": "10 is 2x; you still have to divide by 2."
+        }
+       ],
+       "tip": {
+        "zh": "建立第一步的直覺：看到符號相反（$+y$ 與 $-y$）就「相加」；看到符號完全相同（$+x$ 與 $+x$）就「相減」。這兩種情況都不需要乘任何數字。",
+        "en": "Opposite signs cancel by adding; identical signs cancel by subtracting."
+       }
+      },
+      "answer": "C",
+      "verify": "checked"
+     },
+     {
+      "id": "eph-ws02-w02",
+      "type": "mc",
+      "topic": "ws02",
+      "unit": 0,
+      "subtopic": "simultaneous-equations",
+      "difficulty": 1,
+      "code": "WS2-W02",
+      "source": "WS02 過渡題（自編）· Level 2 代入法：整塊代入",
+      "stem": {
+       "text": "If $y=2x$ and $3x+y=15$, then $y=$"
+      },
+      "options": {
+       "A": "$3$",
+       "B": "$5$",
+       "C": "$6$",
+       "D": "$10$"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 題目已給主項，用代入法",
+          "en": "Step 1 · A subject is already given"
+         },
+         "math": "y=2x\\ \\cdots(1),\\qquad 3x+y=15\\ \\cdots(2)",
+         "zh": "如果題目已經寫成「$y=\\ldots$」或「$x=\\ldots$」，這就是代入法最強的信號：第 (1) 條告訴你「$y$ 的替身就是 $2x$」，於是把第 (2) 條裡面的 $y$ 整塊換成 $2x$。",
+         "en": "Since y is already the subject, substitute 2x into the second equation."
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 代入後只剩一個未知數",
+          "en": "Step 2 · Substitute and solve for x"
+         },
+         "math": "3x+(2x)=15\\ \\Rightarrow\\ 5x=15\\ \\Rightarrow\\ x=3",
+         "zh": "把 $y$ 換掉後整條式只剩 $x$：$3x+2x=15$，合併同類項得 $5x=15$，除以 5 得 $x=3$。代入時習慣加一個括號（$3x+(2x)$），日後遇到負號或係數就不會出錯。",
+         "en": "Substituting gives 5x = 15, so x = 3."
+        },
+        {
+         "title": {
+          "zh": "第 3 步 · 代回求 y（題目問的是 y）",
+          "en": "Step 3 · Find y"
+         },
+         "math": "y=2(3)=6",
+         "zh": "題目問的是 $y$，不是 $x$！代回第 (1) 條：$y=2\\times3=6$，所以答案選 C。求出 $x$ 之後沒有代回，是這類題目最常見的失分位。",
+         "en": "The question asks for y: y = 2(3) = 6. Answer: C.",
+         "highlight": [
+          "y=6"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "A",
+         "zh": "$3$ 是中途算出的 $x$ 值。考評局很喜歡把「中途求出的另一個未知數」放在選項裡，所以一定要圈住題目最後要問的字母。",
+         "en": "3 is the value of x — a classic distractor."
+        },
+        {
+         "opt": "B",
+         "zh": "$5$ 是把 $3x+y=15$ 誤當成 $5x=15$ 之後再當成答案的結果（$5$ 其實是 $x$ 的係數，不是 $x$）。",
+         "en": "5 is the coefficient, not the value of x."
+        }
+       ],
+       "tip": {
+        "zh": "代入時在替身外面加括號，例如 $3x+(2x)=15$。如果替身前面有負號或係數，括號能保證正負號絕對不出錯。",
+        "en": "Always wrap the substituted expression in brackets to avoid sign errors."
+       }
+      },
+      "answer": "C",
+      "verify": "checked"
+     },
+     {
+      "id": "eph-ws02-w03",
+      "type": "mc",
+      "topic": "ws02",
+      "unit": 0,
+      "subtopic": "simultaneous-equations",
+      "difficulty": 2,
+      "code": "WS2-W03",
+      "source": "WS02 過渡題（自編）· Level 3 只乘一條方程消去",
+      "stem": {
+       "text": "If $2x+y=11$ and $x+2y=7$, then $x=$"
+      },
+      "options": {
+       "A": "$1$",
+       "B": "$3$",
+       "C": "$5$",
+       "D": "$6$"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 鎖定目標，只動一條方程",
+          "en": "Step 1 · Match one pair of coefficients"
+         },
+         "math": "2x+y=11\\ \\cdots(1),\\qquad x+2y=7\\ \\cdots(2)",
+         "zh": "題目問 $x$，所以我們想讓 $y$ 消失。第 (1) 條的 $y$ 係數是 $1$、第 (2) 條是 $2$ —— 只要把第 (1) 條整條乘 $2$，$y$ 的係數就變成 $2$，與第 (2) 條相同。這種情況只需乘一條方程，比兩條都要乘的題目簡單得多。",
+         "en": "To eliminate y, multiply equation (1) by 2 so that both y-coefficients become 2."
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 整條乘 2（連右邊常數）",
+          "en": "Step 2 · Multiply every term by 2"
+         },
+         "math": "(1)\\times2:\\ 4x+2y=22\\ \\cdots(3)",
+         "zh": "整條方程每一項都要乘 2：$2x\\times2=4x$、$y\\times2=2y$，右邊常數 $11\\times2=22$。最常犯的錯是漏乘等號右邊。",
+         "en": "Multiply every term by 2: 4x + 2y = 22."
+        },
+        {
+         "title": {
+          "zh": "第 3 步 · 兩式相減消去 y",
+          "en": "Step 3 · Subtract to eliminate y"
+         },
+         "math": "(3)-(2):\\ (4x+2y)-(x+2y)=22-7\\ \\Rightarrow\\ 3x=15\\ \\Rightarrow\\ x=5",
+         "zh": "兩條方程的 $y$ 係數都是 $+2y$（符號相同，所以用「相減」）：左邊 $4x-x=3x$、$2y-2y$ 抵消；右邊 $22-7=15$。得 $3x=15$，解得 $x=5$，答案選 C。",
+         "en": "Subtracting (2) from (3) eliminates y: 3x = 15, so x = 5. Answer: C.",
+         "highlight": [
+          "x=5"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "A",
+         "zh": "$1$ 是 $y$ 的值（代回 $2(5)+y=11$ 得 $y=1$）。題目問的是 $x$。",
+         "en": "1 is the value of y, not x."
+        },
+        {
+         "opt": "D",
+         "zh": "$6$ 通常來自第 2 步漏乘右邊常數（把 (3) 誤寫成 $4x+2y=11$），之後的計算就全部接不上。乘完整條式之後，記得檢查三個位：$x$ 項、$y$ 項、以及等號右邊。",
+         "en": "Usually caused by forgetting to multiply the right-hand side by 2."
+        }
+       ],
+       "tip": {
+        "zh": "消去法的升級技巧：哪一邊的係數小，就乘那一邊（這裡把 $y$ 由 1 變 2，只乘一次）。乘完一定要檢查三項都乘過：左項、中項、右邊常數。",
+        "en": "Multiply the side with the smaller coefficient, and check all three terms were multiplied."
+       }
+      },
+      "answer": "C",
+      "verify": "checked"
+     }
+    ],
+    [
+     {
+      "id": "eph-ws02-w04",
+      "type": "mc",
+      "topic": "ws02",
+      "unit": 0,
+      "subtopic": "simultaneous-equations",
+      "difficulty": 2,
+      "code": "WS2-W04",
+      "source": "WS02 過渡題（自編）· Level 4 文字題設未知數",
+      "stem": {
+       "text": "The price of 2 cups of milk tea and 1 egg tart is \\$56. The price of 1 cup of milk tea is the same as the price of 3 egg tarts. Find the price of a cup of milk tea."
+      },
+      "options": {
+       "A": "\\$8",
+       "B": "\\$14",
+       "C": "\\$24",
+       "D": "\\$28"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 設未知數，譯第一句",
+          "en": "Step 1 · Set up and translate the first sentence"
+         },
+         "math": "x:\\ \\text{milk tea},\\quad y:\\ \\text{egg tart}\\ \\Rightarrow\\ 2x+y=56\\ \\cdots(1)",
+         "zh": "設一杯奶茶 $x$ 元、一個蛋撻 $y$ 元。「2 杯奶茶和 1 個蛋撻共 \\$56」順著字面寫就是 $2x+y=56$。設未知數時寫清楚「$x$ 代表什麼、以什麼為單位」，最後才知道要答什麼。",
+         "en": "Let x be the price of a milk tea and y that of an egg tart. The first sentence gives 2x + y = 56."
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 譯第二句（倍數關係）",
+          "en": "Step 2 · Translate the comparison"
+         },
+         "math": "x=3y\\ \\cdots(2)",
+         "zh": "「1 杯奶茶的價錢等於 3 個蛋撻」→ $x=3y$。英文的「is the same as」就是等號。先想誰比較貴：奶茶較貴，所以 $x$ 較大，寫成 $x=3y$（不是 $3x=y$）—— 這是最多人第一步就寫反的地方。",
+         "en": "'Is the same as' means '='. Milk tea is dearer, so x = 3y."
+        },
+        {
+         "title": {
+          "zh": "第 3 步 · 代入求解，並答題目問的量",
+          "en": "Step 3 · Substitute and answer the question"
+         },
+         "math": "2(3y)+y=56\\ \\Rightarrow\\ 7y=56\\ \\Rightarrow\\ y=8,\\qquad x=3(8)=24",
+         "zh": "把 (2) 代入 (1)：$2(3y)+y=56\\Rightarrow7y=56\\Rightarrow y=8$，再代回 (2) 得奶茶 $x=24$ 元。題目問「奶茶的價錢」，所以答 \\$24，即 C。驗算：$2(24)+8=56$ ✓、$24=3\\times8$ ✓。",
+         "en": "Substituting gives 7y = 56, so y = 8 and x = 24. Answer: \\$24 (C).",
+         "highlight": [
+          "x=24"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "A",
+         "zh": "\\$8 是蛋撻（$y$）的價錢 —— 你已經算對了，只是答了另一個未知數。文字題最後一句問什麼，就答什麼。",
+         "en": "\\$8 is the price of an egg tart (y); the question asks for the milk tea."
+        },
+        {
+         "opt": "B",
+         "zh": "\\$14 通常來自把 \\$56 直接除以 4（誤當成「4 份東西」）。正確做法是先列兩條方程 $2x+y=56$、$x=3y$，再代入。",
+         "en": "Usually 56 ÷ 4 — the two equations must be set up first."
+        },
+        {
+         "opt": "D",
+         "zh": "\\$28 是 $56\\div2$ —— 只除以奶茶的杯數，忘記那 1 個蛋撻也要計入 $y$。總數是「2 杯奶茶 + 1 個蛋撻」三件東西，不能只除 2。",
+         "en": "56 ÷ 2 ignores the egg tart in the total."
+        }
+       ],
+       "tip": {
+        "zh": "英文文字題看到「is the same as」、「is equal to」就畫一個等號。誰等於幾倍的誰，先判斷誰較貴，把較貴那個字母單獨放一邊，就不會寫反。",
+        "en": "'Is the same as' maps straight to '='. Put the dearer item alone on one side."
+       }
+      },
+      "answer": "C",
+      "verify": "checked"
+     },
+     {
       "id": "eph-ws02-q01",
       "type": "mc",
       "topic": "ws02",
@@ -448,7 +734,9 @@ window.LEARN_TOPIC_WS02 = {
       },
       "answer": "A",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws02-q03",
       "type": "mc",
@@ -520,9 +808,7 @@ window.LEARN_TOPIC_WS02 = {
       },
       "answer": "C",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws02-q04",
       "type": "mc",
@@ -657,7 +943,9 @@ window.LEARN_TOPIC_WS02 = {
       },
       "answer": "B",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws02-q06",
       "type": "mc",
@@ -729,9 +1017,7 @@ window.LEARN_TOPIC_WS02 = {
       },
       "answer": "D",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws02-q07",
       "type": "mc",
@@ -875,7 +1161,9 @@ window.LEARN_TOPIC_WS02 = {
       },
       "answer": "C",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws02-q09",
       "type": "mc",
@@ -947,9 +1235,7 @@ window.LEARN_TOPIC_WS02 = {
       },
       "answer": "A",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws02-q10",
       "type": "mc",
@@ -1093,7 +1379,9 @@ window.LEARN_TOPIC_WS02 = {
       },
       "answer": "A",
       "verify": "checked"
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws02-q12",
       "type": "mc",
@@ -1165,9 +1453,7 @@ window.LEARN_TOPIC_WS02 = {
       },
       "answer": "D",
       "verify": "checked"
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws02-q13",
       "type": "mc",
@@ -1335,9 +1621,9 @@ window.LEARN_TOPIC_WS02 = {
   }
  ],
  "stats": {
-  "mc": 14,
+  "mc": 18,
   "long": 2,
   "cards": 5,
-  "pages": 5
+  "pages": 6
  }
 };

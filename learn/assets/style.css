@@ -155,6 +155,13 @@ body {
   background: var(--ok); color: #fff; border-radius: 999px; padding: 0 4px; line-height: 15px;
 }
 .pagenav .pg.kind { font-size: 12px; letter-spacing: .02em; }
+/* 多節課題的分節標籤：讓兩個「學習」不會分不清 */
+.pagenav .pg-lesson {
+  flex: none; align-self: center; white-space: nowrap; font-size: 11px; font-weight: 700;
+  color: var(--muted); letter-spacing: .04em; padding: 0 6px;
+  border-left: 2px solid var(--line);
+}
+.pagenav .pg-lesson:first-child { border-left: 0; padding-left: 0; }
 
 /* ── 概念卡 ──────────────────────────────────────────────────────────── */
 .ccard-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 10px; }
@@ -261,6 +268,52 @@ body {
 .alt-toggle { margin-top: 10px; }
 .alt-body { margin-top: 8px; font-size: 15px; }
 
+/* ── (a)→(b) 的「整塊打包替換」提示（顏色高亮）───────────────────────── */
+.step-link {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  margin-top: 10px; padding: 8px 12px; border-radius: var(--radius-sm);
+  background: #FFFAF0; border-left: 4px solid #DD6B20;
+}
+.step-link .lk-tag {
+  font-size: 12px; font-weight: 700; color: #7B341E;
+  background: #FEEBC8; border-radius: 999px; padding: 2px 10px; white-space: nowrap;
+}
+.step-link .lk-formula { color: #7B341E; }
+
+/* ── 考試指令提示（常駐頁頂，做之前先看）────────────────────────────── */
+.cmd-hints {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  margin: 0 0 12px; padding: 8px 10px; border-radius: var(--radius-sm);
+  background: #F7FAFF; border: 1px dashed #BEE3F8; font-size: 12.5px;
+}
+.cmd-hints .ch-title { font-weight: 700; color: var(--muted); }
+.cmd-hints .ch-chip {
+  display: inline-flex; align-items: baseline; gap: 6px; background: #fff;
+  border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; color: var(--muted);
+}
+.cmd-hints .ch-chip b { color: var(--primary-dark); font-weight: 700; }
+
+/* ── 完成一頁的微成就（不是分數，是進度）────────────────────────────── */
+.page-done.pd-finish {
+  background: #F0FFF4; border: 1px solid #C6F6D5; border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+.page-done .pd-title { display: block; font-size: 15px; color: var(--ok); }
+.page-done .pd-sub { display: block; margin-top: 2px; color: var(--muted); }
+
+/* ── 答錯重新框架：是「掉進陷阱」，不是「你不行」────────────────────── */
+.trap-head {
+  margin-top: 14px; font-size: 14.5px; color: #7B341E; background: #FFFAF0;
+  border-radius: var(--radius-sm); padding: 10px 12px; border-left: 4px solid #DD6B20;
+}
+.answer-line.miss { background: #FFF5F5; border-left-color: var(--err); color: #742A2A; }
+
+/* ── 心理安全（無評價壓力）────────────────────────────────────────────── */
+.safety-note {
+  background: #F0FFF4; border: 1px solid #C6F6D5; font-size: 14px; color: #22543D;
+}
+.safety-note b { color: var(--ok); }
+
 .demo-try {
   display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
   background: #EBF8FF; border-radius: var(--radius-sm); padding: 12px 14px; margin-top: 6px;
@@ -283,7 +336,7 @@ body {
 .done-banner .big { font-size: 22px; font-weight: 700; color: var(--ok); }
 .done-banner p { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
 
-/* 從錯題本回來的那一題：加邊框提示，避免學生混淆「其他題目已作答」的狀態 */
+/* 從弱點升級庫回來的那一題：加邊框提示，避免學生混淆「其他題目已作答」的狀態 */
 .focus-card { box-shadow: 0 0 0 3px #BEE3F8, var(--shadow-lift); scroll-margin-top: 120px; }
 .focus-note {
   font-size: 14px; color: #2C5282; background: #EBF8FF;

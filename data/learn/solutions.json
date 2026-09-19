@@ -33,7 +33,7 @@
      },
      {
       "title": {
-       "zh": "第 3 步 · (b) 先分組，再抽公因數",
+       "zh": "第 3 步 · (b) 先分組，再抽公因式",
        "en": "Step 3 · Group the terms in (b)"
       },
       "math": "9x-3y-15x^{2}-xy+2y^{2}=(9x-3y)-(15x^{2}+xy-2y^{2})",
@@ -49,17 +49,21 @@
        "en": "Step 4 · Use the result of (a)"
       },
       "math": "=3(3x-y)-(3x-y)(5x+2y)=(3x-y)(3-5x-2y)",
-      "zh": "先抽公因數：$9x-3y=3(3x-y)$；再用 (a) 的答案 $15x^{2}+xy-2y^{2}=(3x-y)(5x+2y)$。此時 $(3x-y)$ 是兩項的共同因式，抽出來得 $(3x-y)\\big[3-(5x+2y)\\big]=(3x-y)(3-5x-2y)$。",
+      "zh": "先抽公因式：$9x-3y=3(3x-y)$；再用 (a) 的答案 $15x^{2}+xy-2y^{2}=(3x-y)(5x+2y)$。此時 $(3x-y)$ 是兩項的共同因式，抽出來得 $(3x-y)\\big[3-(5x+2y)\\big]=(3x-y)(3-5x-2y)$。",
       "en": "Factor $9x-3y$ as $3(3x-y)$ and use (a): $(3x-y)$ is now a common factor, so the answer is $(3x-y)(3-5x-2y)$. (1M + 1A)",
       "marking": "(1M: Use the result of (a).) (1A)",
       "highlight": [
        "(3x-y)(3-5x-2y)"
-      ]
+      ],
+      "link": {
+       "from": "(a)",
+       "math": "15x^{2}+xy-2y^{2}=(3x-y)(5x+2y)"
+      }
      }
     ],
     "traps": [],
     "tip": {
-     "zh": "DSE Paper 1 的因式分解題幾乎都是「(a) 先分解一個二次三項式，(b) 再用 (a) 的結果」。(b) 見到四項，先想「哪兩項可以抽公因數、哪三項是 (a) 的式子」，通常就通了。",
+     "zh": "DSE Paper 1 的因式分解題幾乎都是「(a) 先分解一個二次三項式，(b) 再用 (a) 的結果」。(b) 見到四項，先想「哪兩項可以抽公因式、哪三項是 (a) 的式子」，通常就通了。",
      "en": "In Paper 1, part (b) almost always reuses part (a). Look for the group that matches (a) — and add brackets before taking out a minus sign."
     }
    }
@@ -95,7 +99,12 @@
       "marking": "(1M)",
       "highlight": [
        "-(16c^{2}-8c+1)"
-      ]
+      ],
+      "link": {
+       "from": "(a)",
+       "label": "認出 (a) 的整塊，加括號",
+       "math": "-\\big(16c^{2}-8c+1\\big)"
+      }
      },
      {
       "title": {
@@ -107,7 +116,11 @@
       "en": "Now it is $A^{2}-B^{2}$ with $A=5c+d$, $B=4c-1$ — apply the difference of two squares.",
       "highlight": [
        "A^{2}-B^{2}"
-      ]
+      ],
+      "link": {
+       "from": "(a)",
+       "math": "16c^{2}-8c+1=(4c-1)^{2}"
+      }
      },
      {
       "title": {
@@ -127,6 +140,140 @@
     "tip": {
      "zh": "「(b) 內藏 (a)」是 Paper 1 的固定套路。做法：在 (b) 找出 (a) 那串式子，前面加負號並補括號，然後它就會變成 $A^{2}-B^{2}$ 或 $A^{2}+2AB+B^{2}$，一步就能收尾。",
      "en": "Look for part (a) hidden inside part (b). Wrap it in brackets (watch the signs) and it becomes a standard identity."
+    }
+   }
+  },
+  "eph-ws01-w01": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws01",
+   "source": "WS01 暖身題（自編）· 提取公因式",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 先找係數的公因數",
+       "en": "Step 1 · H.C.F. of the coefficients"
+      },
+      "math": "\\text{H.C.F.}(3,6)=3",
+      "zh": "係數 $3$ 與 $6$ 的最大公因數（H.C.F.）是 $3$。抽公因式的第一步，永遠是先看係數。",
+      "en": "The H.C.F. of 3 and 6 is 3 — always start with the coefficients.",
+      "highlight": [
+       "3"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 再找共同字母的最低次方",
+       "en": "Step 2 · Lowest power of the common letter"
+      },
+      "math": "3x^{2}-6x=3x\\cdot x-3x\\cdot 2",
+      "zh": "兩項都有 $x$：第一項是 $x^{2}$、第二項是 $x^{1}$，取最低次方 $x^{1}$。所以公因式是 $3x$；把每一項都寫成「$3x$ 乘某個東西」就不會出錯。",
+      "en": "Both terms contain $x$; take the lowest power. The common factor is $3x$.",
+      "highlight": [
+       "3x"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 抽出來寫成答案",
+       "en": "Step 3 · Write the answer"
+      },
+      "math": "3x^{2}-6x=3x(x-2)",
+      "zh": "$3x\\cdot x-3x\\cdot 2=3x(x-2)$。驗算：把 $3x$ 乘回括號 $3x(x-2)=3x^{2}-6x$，與原式相同 ✓。",
+      "en": "$3x(x-2)$. Check by expanding: $3x(x-2)=3x^{2}-6x$ ✓.",
+      "highlight": [
+       "3x(x-2)"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$3(x^{2}-2x)$：你已經抽了 $3$，但括號內 $x^{2}-2x$ 仍然可以再抽 $x$。因式分解要抽到括號內「再抽不動」為止。",
+      "en": "Not fully factorized — $x^{2}-2x$ still has a common factor $x$."
+     },
+     {
+      "opt": "C",
+      "zh": "$x(3x-6)$：括號內 $3x-6$ 仍然可以再抽 $3$，屬於未完全分解，DSE 會失分。",
+      "en": "Not fully factorized — $3x-6$ still has the factor 3."
+     },
+     {
+      "opt": "D",
+      "zh": "$3x(x-6)$：$-6x\\div 3x=-2$，不是 $-6$。抽完可以把答案展開驗算一次，立即知道對錯。",
+      "en": "The constant inside the bracket is wrong: $-6x \\div 3x = -2$."
+     }
+    ],
+    "tip": {
+     "zh": "抽公因式的口訣：係數取 H.C.F.、字母取最低次方。抽完一定要回頭看括號內還能不能再抽 ——「完全分解」才是答案。",
+     "en": "Coefficients take the H.C.F., letters take the lowest power, then check the bracket cannot be factored again."
+    }
+   }
+  },
+  "eph-ws01-w02": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws01",
+   "source": "WS01 暖身題（自編）· 平方差",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 認出兩個平方",
+       "en": "Step 1 · Spot the two squares"
+      },
+      "math": "x^{2}-16=x^{2}-4^{2}",
+      "zh": "看到「相減」而且兩項都是完全平方，就要想平方差。這裡 $x^{2}=(x)^{2}$、$16=4^{2}$，所以先寫成 $x^{2}-4^{2}$，看清楚「誰的平方」。",
+      "en": "A subtraction of two squares: $x^{2}=(x)^{2}$ and $16=4^{2}$.",
+      "highlight": [
+       "x^{2}-4^{2}"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 套用平方差公式",
+       "en": "Step 2 · Apply $A^{2}-B^{2}=(A+B)(A-B)$"
+      },
+      "math": "A=x,\\ B=4\\ \\Rightarrow\\ (x+4)(x-4)",
+      "zh": "對應 $A=x$、$B=4$，代入 $A^{2}-B^{2}\\equiv(A+B)(A-B)$，得 $(x+4)(x-4)$。",
+      "en": "With $A=x$ and $B=4$, $A^{2}-B^{2}=(A+B)(A-B)=(x+4)(x-4)$.",
+      "highlight": [
+       "(x+4)(x-4)"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 寫成答案並驗算",
+       "en": "Step 3 · Write and check"
+      },
+      "math": "x^{2}-16=(x-4)(x+4)",
+      "zh": "兩個括號的次序可以對調，寫成 $(x-4)(x+4)$ 也可以。驗算：$(x-4)(x+4)=x^{2}-16$ ✓。",
+      "en": "The order of the two brackets does not matter. Check: $(x-4)(x+4)=x^{2}-16$ ✓.",
+      "highlight": [
+       "(x-4)(x+4)"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$(x-4)^{2}$ 漏了中間項：$(x-4)^{2}=x^{2}-8x+16$，多出 $-8x$、常數也變成 $+16$，不等於 $x^{2}-16$。",
+      "en": "$(x-4)^{2}=x^{2}-8x+16 \\neq x^{2}-16$ — the middle term is missing."
+     },
+     {
+      "opt": "C",
+      "zh": "$(x+4)^{2}=x^{2}+8x+16$，同樣多出中間項 $+8x$。平方差沒有中間項，完全平方才有。",
+      "en": "$(x+4)^{2}$ has a middle term $+8x$; a difference of squares has none."
+     },
+     {
+      "opt": "D",
+      "zh": "$(x-8)(x+2)=x^{2}-6x-16$，中間多出 $-6x$。平方差一定要「一加一減、數字相同」。",
+      "en": "$(x-8)(x+2)=x^{2}-6x-16$ — the two numbers must be the same."
+     }
+    ],
+    "tip": {
+     "zh": "看到「兩個平方相減」就問自己兩件事：誰的平方？數字是多少？答案就是「一加一減」的那兩個括號。",
+     "en": "For a difference of two squares, ask: square of what, by what number? The answer is $(A+B)(A-B)$."
     }
    }
   },
@@ -1234,6 +1381,226 @@
     }
    }
   },
+  "eph-ws02-w01": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws02",
+   "source": "WS02 過渡題（自編）· Level 1 符號相反：兩式相加",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 先看係數：是相反數",
+       "en": "Step 1 · Spot the opposite coefficients"
+      },
+      "math": "x+y=7\\ \\cdots(1),\\qquad x-y=3\\ \\cdots(2)",
+      "zh": "解方程組最重要的一秒：不要急著算，先看未知數前面的係數。這裡第一條是 $+y$、第二條是 $-y$，它們是一對「相反數」。原則：符號相反就「兩式相加」，這個未知數就會自動抵消。",
+      "en": "Notice that +y and -y are opposites. Adding the two equations eliminates y instantly."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 兩式相加求出 x",
+       "en": "Step 2 · Add to find x"
+      },
+      "math": "(1)+(2):\\ (x+x)+(y-y)=7+3\\ \\Rightarrow\\ 2x=10\\ \\Rightarrow\\ x=5",
+      "zh": "左邊相加：$x+x=2x$，而 $y$ 與 $-y$ 抵消為 0；右邊相加：$7+3=10$。得 $2x=10$，兩邊除以 2 得 $x=5$，所以答案選 C。注意這裡完全不需要乘任何數字。",
+      "en": "Adding both sides gives 2x = 10, so x = 5. Answer: C.",
+      "highlight": [
+       "x=5"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$2$ 是 $y$ 的值（代回 $5+y=7$ 得 $y=2$）。題目問的是 $x$ —— 每次作答前都要圈出題目最後要的那個字母。",
+      "en": "2 is the value of y. Always check which unknown is asked for."
+     },
+     {
+      "opt": "D",
+      "zh": "$10$ 是相加後右邊的結果（$2x=10$），忘記最後要除以係數 $2$。見到 $2x=10$，一定要再做一步 $x=5$。",
+      "en": "10 is 2x; you still have to divide by 2."
+     }
+    ],
+    "tip": {
+     "zh": "建立第一步的直覺：看到符號相反（$+y$ 與 $-y$）就「相加」；看到符號完全相同（$+x$ 與 $+x$）就「相減」。這兩種情況都不需要乘任何數字。",
+     "en": "Opposite signs cancel by adding; identical signs cancel by subtracting."
+    }
+   }
+  },
+  "eph-ws02-w02": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws02",
+   "source": "WS02 過渡題（自編）· Level 2 代入法：整塊代入",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 題目已給主項，用代入法",
+       "en": "Step 1 · A subject is already given"
+      },
+      "math": "y=2x\\ \\cdots(1),\\qquad 3x+y=15\\ \\cdots(2)",
+      "zh": "如果題目已經寫成「$y=\\ldots$」或「$x=\\ldots$」，這就是代入法最強的信號：第 (1) 條告訴你「$y$ 的替身就是 $2x$」，於是把第 (2) 條裡面的 $y$ 整塊換成 $2x$。",
+      "en": "Since y is already the subject, substitute 2x into the second equation."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 代入後只剩一個未知數",
+       "en": "Step 2 · Substitute and solve for x"
+      },
+      "math": "3x+(2x)=15\\ \\Rightarrow\\ 5x=15\\ \\Rightarrow\\ x=3",
+      "zh": "把 $y$ 換掉後整條式只剩 $x$：$3x+2x=15$，合併同類項得 $5x=15$，除以 5 得 $x=3$。代入時習慣加一個括號（$3x+(2x)$），日後遇到負號或係數就不會出錯。",
+      "en": "Substituting gives 5x = 15, so x = 3."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 代回求 y（題目問的是 y）",
+       "en": "Step 3 · Find y"
+      },
+      "math": "y=2(3)=6",
+      "zh": "題目問的是 $y$，不是 $x$！代回第 (1) 條：$y=2\\times3=6$，所以答案選 C。求出 $x$ 之後沒有代回，是這類題目最常見的失分位。",
+      "en": "The question asks for y: y = 2(3) = 6. Answer: C.",
+      "highlight": [
+       "y=6"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$3$ 是中途算出的 $x$ 值。考評局很喜歡把「中途求出的另一個未知數」放在選項裡，所以一定要圈住題目最後要問的字母。",
+      "en": "3 is the value of x — a classic distractor."
+     },
+     {
+      "opt": "B",
+      "zh": "$5$ 是把 $3x+y=15$ 誤當成 $5x=15$ 之後再當成答案的結果（$5$ 其實是 $x$ 的係數，不是 $x$）。",
+      "en": "5 is the coefficient, not the value of x."
+     }
+    ],
+    "tip": {
+     "zh": "代入時在替身外面加括號，例如 $3x+(2x)=15$。如果替身前面有負號或係數，括號能保證正負號絕對不出錯。",
+     "en": "Always wrap the substituted expression in brackets to avoid sign errors."
+    }
+   }
+  },
+  "eph-ws02-w03": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws02",
+   "source": "WS02 過渡題（自編）· Level 3 只乘一條方程消去",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 鎖定目標，只動一條方程",
+       "en": "Step 1 · Match one pair of coefficients"
+      },
+      "math": "2x+y=11\\ \\cdots(1),\\qquad x+2y=7\\ \\cdots(2)",
+      "zh": "題目問 $x$，所以我們想讓 $y$ 消失。第 (1) 條的 $y$ 係數是 $1$、第 (2) 條是 $2$ —— 只要把第 (1) 條整條乘 $2$，$y$ 的係數就變成 $2$，與第 (2) 條相同。這種情況只需乘一條方程，比兩條都要乘的題目簡單得多。",
+      "en": "To eliminate y, multiply equation (1) by 2 so that both y-coefficients become 2."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 整條乘 2（連右邊常數）",
+       "en": "Step 2 · Multiply every term by 2"
+      },
+      "math": "(1)\\times2:\\ 4x+2y=22\\ \\cdots(3)",
+      "zh": "整條方程每一項都要乘 2：$2x\\times2=4x$、$y\\times2=2y$，右邊常數 $11\\times2=22$。最常犯的錯是漏乘等號右邊。",
+      "en": "Multiply every term by 2: 4x + 2y = 22."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 兩式相減消去 y",
+       "en": "Step 3 · Subtract to eliminate y"
+      },
+      "math": "(3)-(2):\\ (4x+2y)-(x+2y)=22-7\\ \\Rightarrow\\ 3x=15\\ \\Rightarrow\\ x=5",
+      "zh": "兩條方程的 $y$ 係數都是 $+2y$（符號相同，所以用「相減」）：左邊 $4x-x=3x$、$2y-2y$ 抵消；右邊 $22-7=15$。得 $3x=15$，解得 $x=5$，答案選 C。",
+      "en": "Subtracting (2) from (3) eliminates y: 3x = 15, so x = 5. Answer: C.",
+      "highlight": [
+       "x=5"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$1$ 是 $y$ 的值（代回 $2(5)+y=11$ 得 $y=1$）。題目問的是 $x$。",
+      "en": "1 is the value of y, not x."
+     },
+     {
+      "opt": "D",
+      "zh": "$6$ 通常來自第 2 步漏乘右邊常數（把 (3) 誤寫成 $4x+2y=11$），之後的計算就全部接不上。乘完整條式之後，記得檢查三個位：$x$ 項、$y$ 項、以及等號右邊。",
+      "en": "Usually caused by forgetting to multiply the right-hand side by 2."
+     }
+    ],
+    "tip": {
+     "zh": "消去法的升級技巧：哪一邊的係數小，就乘那一邊（這裡把 $y$ 由 1 變 2，只乘一次）。乘完一定要檢查三項都乘過：左項、中項、右邊常數。",
+     "en": "Multiply the side with the smaller coefficient, and check all three terms were multiplied."
+    }
+   }
+  },
+  "eph-ws02-w04": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws02",
+   "source": "WS02 過渡題（自編）· Level 4 文字題設未知數",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 設未知數，譯第一句",
+       "en": "Step 1 · Set up and translate the first sentence"
+      },
+      "math": "x:\\ \\text{milk tea},\\quad y:\\ \\text{egg tart}\\ \\Rightarrow\\ 2x+y=56\\ \\cdots(1)",
+      "zh": "設一杯奶茶 $x$ 元、一個蛋撻 $y$ 元。「2 杯奶茶和 1 個蛋撻共 \\$56」順著字面寫就是 $2x+y=56$。設未知數時寫清楚「$x$ 代表什麼、以什麼為單位」，最後才知道要答什麼。",
+      "en": "Let x be the price of a milk tea and y that of an egg tart. The first sentence gives 2x + y = 56."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 譯第二句（倍數關係）",
+       "en": "Step 2 · Translate the comparison"
+      },
+      "math": "x=3y\\ \\cdots(2)",
+      "zh": "「1 杯奶茶的價錢等於 3 個蛋撻」→ $x=3y$。英文的「is the same as」就是等號。先想誰比較貴：奶茶較貴，所以 $x$ 較大，寫成 $x=3y$（不是 $3x=y$）—— 這是最多人第一步就寫反的地方。",
+      "en": "'Is the same as' means '='. Milk tea is dearer, so x = 3y."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 代入求解，並答題目問的量",
+       "en": "Step 3 · Substitute and answer the question"
+      },
+      "math": "2(3y)+y=56\\ \\Rightarrow\\ 7y=56\\ \\Rightarrow\\ y=8,\\qquad x=3(8)=24",
+      "zh": "把 (2) 代入 (1)：$2(3y)+y=56\\Rightarrow7y=56\\Rightarrow y=8$，再代回 (2) 得奶茶 $x=24$ 元。題目問「奶茶的價錢」，所以答 \\$24，即 C。驗算：$2(24)+8=56$ ✓、$24=3\\times8$ ✓。",
+      "en": "Substituting gives 7y = 56, so y = 8 and x = 24. Answer: \\$24 (C).",
+      "highlight": [
+       "x=24"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "\\$8 是蛋撻（$y$）的價錢 —— 你已經算對了，只是答了另一個未知數。文字題最後一句問什麼，就答什麼。",
+      "en": "\\$8 is the price of an egg tart (y); the question asks for the milk tea."
+     },
+     {
+      "opt": "B",
+      "zh": "\\$14 通常來自把 \\$56 直接除以 4（誤當成「4 份東西」）。正確做法是先列兩條方程 $2x+y=56$、$x=3y$，再代入。",
+      "en": "Usually 56 ÷ 4 — the two equations must be set up first."
+     },
+     {
+      "opt": "D",
+      "zh": "\\$28 是 $56\\div2$ —— 只除以奶茶的杯數，忘記那 1 個蛋撻也要計入 $y$。總數是「2 杯奶茶 + 1 個蛋撻」三件東西，不能只除 2。",
+      "en": "56 ÷ 2 ignores the egg tart in the total."
+     }
+    ],
+    "tip": {
+     "zh": "英文文字題看到「is the same as」、「is equal to」就畫一個等號。誰等於幾倍的誰，先判斷誰較貴，把較貴那個字母單獨放一邊，就不會寫反。",
+     "en": "'Is the same as' maps straight to '='. Put the dearer item alone on one side."
+    }
+   }
+  },
   "eph-ws02-ex01": {
    "answer": null,
    "verify": "checked",
@@ -2120,6 +2487,206 @@
     "tip": {
      "zh": "先圈出題目最後要的組合（這裡是 $2x+y$），解方程時就朝這個目標走，避免答錯量。",
      "en": "Circle the combination the question asks for before solving."
+    }
+   }
+  },
+  "eph-ws03-w01": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "WS03 過渡題（自編）· Level 1 兩步換主項",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 把不是主角的項移走",
+       "en": "Step 1 · Transpose the other term"
+      },
+      "math": "3a=7-2b",
+      "zh": "換主項就像收拾房間：要留的字母留在左邊，其他全部搬去右邊。題目要 $a$ 做主項，就把 $+2b$ 搬過等號 —— 口訣是「跨過等號要變號」，所以變成 $-2b$，得 $3a=7-2b$。",
+      "en": "Keep 3a on the left; moving +2b across the equals sign changes it to -2b."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 把係數變成 1（整條除以 3）",
+       "en": "Step 2 · Divide by the coefficient"
+      },
+      "math": "a=\\frac{7-2b}{3}",
+      "zh": "左邊是 $3a$ 不是 $a$，所以兩邊都要除以 3。關鍵：右邊是「整條」寫在分子上面、分母寫 3，不是只除某一項。答案是 A。",
+      "en": "Divide the whole right-hand side by 3: a = (7 - 2b) / 3. Answer: A.",
+      "highlight": [
+       "\\frac{7-2b}{3}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "zh": "$7-2b$ 只是 $3a$ 的值，忘記最後除以 3。見到答案沒有分母，就要反問自己「係數消了沒有」。",
+      "en": "Forgot to divide by 3."
+     },
+     {
+      "opt": "B",
+      "zh": "移項時忘記變號：把 $+2b$ 搬去右邊應該寫 $-2b$。",
+      "en": "Sign error when moving +2b."
+     }
+    ],
+    "tip": {
+     "zh": "換主項的標準兩步節奏：① 加減移項（把目標項孤立出來）；② 乘除消係數（讓字母單獨站立）。",
+     "en": "Two standard steps: transpose, then divide by the coefficient."
+    }
+   }
+  },
+  "eph-ws03-w02": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "WS03 過渡題（自編）· Level 2 目標字母在兩側（抽公因式）",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 把含 x 的項集合在同一邊",
+       "en": "Step 1 · Collect the x-terms on one side"
+      },
+      "math": "kx-2x=h-3",
+      "zh": "題目要 $x$，但左邊有 $kx$、右邊有 $2x$。第一步永遠是「大集合」：含 $x$ 的項全部搬去左邊（右邊的 $+2x$ 搬過來變 $-2x$），不含 $x$ 的常數全部搬去右邊（左邊的 $+3$ 搬過去變 $-3$）。",
+      "en": "Move 2x to the left (becomes -2x) and 3 to the right (becomes -3)."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 抽公因式：兩個 x 合成一個",
+       "en": "Step 2 · Factor out x"
+      },
+      "math": "x(k-2)=h-3",
+      "zh": "很多同學卡在這裡：左邊有 $kx$ 和 $-2x$ 兩個 $x$，怎樣變成一個？就是用上一課學過的「提取公因式」：把 $x$ 抽到括號外面，括號內剩下 $(k-2)$。",
+      "en": "Factor out x: x(k - 2) = h - 3."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 把整個括號除過去",
+       "en": "Step 3 · Divide by the bracket"
+      },
+      "math": "x=\\frac{h-3}{k-2}",
+      "zh": "把整個括號 $(k-2)$ 當成「一個數字」除到分母：$x=\\frac{h-3}{k-2}$，所以答案選 B。不要拆散括號，也不要只除其中一項。",
+      "en": "Divide by (k - 2): x = (h - 3)/(k - 2). Answer: B.",
+      "highlight": [
+       "\\frac{h-3}{k-2}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "分母寫成 $k+2$：把右邊的 $2x$ 搬過來時忘記變號（應為 $-2x$，所以括號內是 $k-2$）。",
+      "en": "Sign error when moving 2x to the left."
+     },
+     {
+      "opt": "D",
+      "zh": "分子寫成 $h+3$：把左邊的 $+3$ 搬到右邊時忘記變號（應為 $-3$）。",
+      "en": "Sign error when moving 3 to the right."
+     }
+    ],
+    "tip": {
+     "zh": "只要目標字母在等號「兩邊」都出現，就照這三步走：搬到同一邊 → 抽公因式 → 括號除過去。",
+     "en": "Target on both sides: collect terms, factor out, divide by the bracket."
+    }
+   }
+  },
+  "eph-ws03-w03": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "WS03 過渡題（自編）· Level 3 恆等式直接比較係數",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 先弄清 ≡ 是什麼意思",
+       "en": "Step 1 · What does the identity symbol mean?"
+      },
+      "math": "2x^{2}+kx-5\\equiv mx^{2}-4x-5",
+      "zh": "符號 $\\equiv$ 讀作「恆等於（identical to）」：左右兩邊寫法雖然不同，但其實是同一個式子，對任何 $x$ 都成立。既然一模一樣，同一次方的係數就必須完全相等 —— 所以看到 $\\equiv$ 不要當成方程去解 $x$。",
+      "en": "The identity is true for all x, so like powers must have equal coefficients."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 同類項「排隊對齊」",
+       "en": "Step 2 · Align like terms"
+      },
+      "math": "x^{2}:2=m,\\qquad x:k=-4,\\qquad \\text{常數}:-5=-5",
+      "zh": "像排隊一樣逐項對齊：$x^{2}$ 項得 $m=2$；$x$ 項左邊是 $+k$、右邊是 $-4$，所以 $k=-4$；常數項 $-5=-5$ 剛好吻合。題目問 $k$，直接讀出 $-4$，答案選 A。",
+      "en": "Comparing the x-coefficients gives k = -4. Answer: A.",
+      "highlight": [
+       "k=-4"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$2$ 是 $m$ 的值（$x^{2}$ 項的係數），題目問的是 $k$。",
+      "en": "2 is the value of m, not k."
+     },
+     {
+      "opt": "C",
+      "zh": "漏了負號：右邊 $x$ 前面是 $-4$，所以 $k$ 是 $-4$ 而不是 $4$。",
+      "en": "Lost the negative sign in front of 4."
+     }
+    ],
+    "tip": {
+     "zh": "看到 $\\equiv$ 千萬不要去解 $x$：用筆把同類項圈出來，直接比較前面的數字與正負號。",
+     "en": "Never solve for x in an identity; match the coefficients instead."
+    }
+   }
+  },
+  "eph-ws03-w04": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws03",
+   "source": "WS03 過渡題（自編）· Level 4 恆等式代入特殊值",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 方法一：展開後比較係數",
+       "en": "Step 1 · Method 1: expand and compare"
+      },
+      "math": "Ax-3A+4\\equiv 2x-2\\ \\Rightarrow\\ A=2",
+      "zh": "把左邊展開：$A(x-3)+4=Ax-3A+4$。對齊 $x$ 的係數：左邊 $x$ 前面是 $A$、右邊是 $2$，所以 $A=2$。再用常數項驗算：左邊常數 $-3(2)+4=-2$，與右邊的 $-2$ 相同 ✓。答案是 C。",
+      "en": "Expand to Ax - 3A + 4; comparing x-coefficients gives A = 2. Answer: C.",
+      "highlight": [
+       "A=2"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 方法二：代入特殊值（不用展開）",
+       "en": "Step 2 · Method 2: substitute a clever value"
+      },
+      "math": "x=0:\\ -3A+4=-2\\ \\Rightarrow\\ -3A=-6\\ \\Rightarrow\\ A=2",
+      "zh": "恆等式對「任何」$x$ 都成立，所以可以挑最方便的數字代入，完全不用展開。這題挑 $x=0$：左邊 $=A(0-3)+4=-3A+4$，右邊 $=2(0)-2=-2$，解得 $-3A=-6$，即 $A=2$，與方法一相同。挑哪個 $x$ 的原則是「令你想消掉的東西變成 0」：想求常數項時就代 $x=3$，讓 $A(x-3)$ 消失。",
+      "en": "Substituting x = 0 gives -3A + 4 = -2, so A = 2 — no expansion needed.",
+      "highlight": [
+       "A=2"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$-2$ 是右邊的常數項，不是 $A$ 的值。",
+      "en": "-2 is the right-hand side constant."
+     },
+     {
+      "opt": "D",
+      "zh": "$4$ 是左邊單獨的常數項，同樣不是 $A$ 的值。",
+      "en": "4 is the separate constant term."
+     }
+    ],
+    "tip": {
+     "zh": "卷二看到恆等式，若不想展開括號，就代入 $x=0$；想消掉某一個括號，就代「令該括號為 0」的值 —— 通常 15 秒內算完。",
+     "en": "In Paper 2, substitute x = 0 (or a value that zeroes a bracket) instead of expanding."
     }
    }
   },
@@ -3326,6 +3893,194 @@
     "tip": {
      "zh": "式子前面有負號時，展開後**每一項**都要變號 —— 這是這題唯一的陷阱。",
      "en": ""
+    }
+   }
+  },
+  "eph-ws04-w01": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "WS04 過渡題（自編）· Level 1 基本平移（單一方向）",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 先讀方向字，決定動哪個坐標",
+       "en": "Step 1 · Direction tells you which coordinate moves"
+      },
+      "math": "\\text{左右睇 }x\\text{，上下睇 }y",
+      "zh": "平移題第一秒不是計數，而是讀方向：「leftwards（向左）」是水平移動，所以只會改變橫坐標 $x$，$y$ 坐標完全不動，仍然是 $-5$。",
+      "en": "A horizontal translation changes only the x-coordinate; y stays at -5."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 向左是減，計出新坐標",
+       "en": "Step 2 · Leftwards means subtract"
+      },
+      "math": "x'=3-4=-1,\\quad y'=-5\\ \\Rightarrow\\ P(-1,-5)",
+      "zh": "向左＝數值變小＝用「減」：$3-4=-1$，$y$ 維持 $-5$，所以 $P=(-1,-5)$，答案選 A。",
+      "en": "3 - 4 = -1, so P = (-1, -5). Answer: A.",
+      "highlight": [
+       "(-1,-5)"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$(7,-5)$ 是把「向左」誤算成加法（$3+4=7$）。向右（rightwards）才是加，向左（leftwards）一定是減。",
+      "en": "Added instead of subtracted."
+     },
+     {
+      "opt": "C",
+      "zh": "$(3,-9)$ 是把平移算到 $y$ 上（$-5-4=-9$）。左右移動絕對不可以動 $y$。",
+      "en": "Moved in the y-direction instead of the x-direction."
+     }
+    ],
+    "tip": {
+     "zh": "平移口訣：右加左減動 $x$、上加下減動 $y$。題目說動哪邊，另一個坐標就原地不動。",
+     "en": "Right/up adds; left/down subtracts. The other coordinate never changes."
+    }
+   }
+  },
+  "eph-ws04-w02": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "WS04 過渡題（自編）· Level 2 對坐標軸反射（只改一個號）",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 鏡射原則：對哪條軸，哪條就不動",
+       "en": "Step 1 · The named axis stays unchanged"
+      },
+      "math": "\\text{對 }x\\text{ 軸反射：}(x,y)\\to(x,-y)",
+      "zh": "反射就是照鏡。把鏡子放在水平的 $x$ 軸上，原本在上面的點會翻到下面，左右位置完全不變。所以「對 $x$ 軸反射：$x$ 不動，只改 $y$ 的正負號」。",
+      "en": "Reflecting across the x-axis keeps x and changes the sign of y."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 只把 y 變號",
+       "en": "Step 2 · Change the sign of y"
+      },
+      "math": "(-4,7)\\to(-4,-7)",
+      "zh": "$x$ 仍然是 $-4$；$y$ 由 $7$ 變成 $-7$，所以 $Q=(-4,-7)$，答案選 B。",
+      "en": "x stays -4 and y becomes -7, so Q = (-4, -7). Answer: B.",
+      "highlight": [
+       "(-4,-7)"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$(4,7)$ 是改了 $x$ 的符號 —— 那是「對 $y$ 軸反射」的結果。這是最多同學記反的一個位。",
+      "en": "That is the result of reflecting across the y-axis."
+     },
+     {
+      "opt": "C",
+      "zh": "$(4,-7)$ 是把兩個坐標都變號 —— 那是「繞原點旋轉 $180^{\\circ}$」的結果。",
+      "en": "Both signs flipped — that is a 180-degree rotation."
+     }
+    ],
+    "tip": {
+     "zh": "口訣：題目提到哪條軸，那條軸的坐標就不改（對 $x$ 軸反射不改 $x$；對 $y$ 軸反射不改 $y$），只改另一個。",
+     "en": "Keep the named axis fixed and flip only the other coordinate."
+    }
+   }
+  },
+  "eph-ws04-w03": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "WS04 過渡題（自編）· Level 3 繞原點逆時針旋轉 90°",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 90°／270° 的第一步：數字調位",
+       "en": "Step 1 · Swap the two numbers"
+      },
+      "math": "(x,y)\\to(y,x)\\ \\text{再判斷正負號}",
+      "zh": "轉 $90^{\\circ}$ 或 $270^{\\circ}$，第一步必定是把橫、縱坐標的「數值」對調：$(2,5)$ 先變成 $(5,2)$。這一步只是調位，正負號之後才處理。",
+      "en": "For a 90 or 270 degree rotation, first swap the x and y numbers."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 逆時針 90° 的正負號規則",
+       "en": "Step 2 · Sign rule for anticlockwise 90°"
+      },
+      "math": "\\text{逆 }90^{\\circ}:(x,y)\\to(-y,x)",
+      "zh": "公式是 $(x,y)\\to(-y,x)$：原本的 $y$ 是 $5$，搬到前面要加負號變成 $-5$；原本的 $x$ 是 $2$，保持原號放到後面。所以 $R=(-5,2)$，答案選 A。",
+      "en": "Anticlockwise 90°: (x, y) → (-y, x), so R = (-5, 2). Answer: A.",
+      "highlight": [
+       "(-5,2)"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$(5,-2)$ 是「順時針 $90^{\\circ}$」的公式 $(y,-x)$。記法：逆時針是「前面的 $y$ 變號」，順時針是「後面的 $x$ 變號」。",
+      "en": "That is the clockwise 90° rule (y, -x)."
+     },
+     {
+      "opt": "C",
+      "zh": "$(-2,-5)$ 完全沒有調位，只是加了負號 —— 這不是 $90^{\\circ}$ 旋轉。",
+      "en": "No swap was done."
+     }
+    ],
+    "tip": {
+     "zh": "用象限自我檢查：$(2,5)$ 在第一象限（右上），逆時針轉四分之一圈必定落在第二象限（左上），而左上的坐標一定是「負 $x$、正 $y$」—— 一眼就鎖定 $(-5,2)$。",
+     "en": "Quadrant check: from Quadrant I anticlockwise by 90° must land in Quadrant II (−, +)."
+    }
+   }
+  },
+  "eph-ws04-w04": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws04",
+   "source": "WS04 過渡題（自編）· Level 4 繞原點旋轉 180°（兩個號一齊改）",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 認清 180° 的特徵：不調位",
+       "en": "Step 1 · 180° does not swap"
+      },
+      "math": "\\text{轉 }180^{\\circ}:(x,y)\\to(-x,-y)",
+      "zh": "轉 $180^{\\circ}$ 就是轉半個圈，落點在完全相反的方向：位置不用對調，純粹「兩個坐標一齊變號」。順時針或逆時針轉 $180^{\\circ}$，結果都一樣。",
+      "en": "Rotating 180° inverts both signs without swapping; direction does not matter."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 逐個坐標變號",
+       "en": "Step 2 · Invert both signs"
+      },
+      "math": "x:-6\\to 6,\\qquad y:1\\to -1\\ \\Rightarrow\\ S(6,-1)",
+      "zh": "$x$ 由 $-6$ 變成 $6$；$y$ 由 $1$ 變成 $-1$。所以 $S=(6,-1)$，答案選 C。驗算：$(6,-1)$ 與 $(-6,1)$ 到原點的距離一樣（都是 $\\sqrt{37}$），方向剛好相反 ✓。",
+      "en": "(-6, 1) becomes (6, -1): the image is directly opposite. Answer: C.",
+      "highlight": [
+       "(6,-1)"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$(6,1)$ 只改了 $x$ 的符號，忘記 $y$ 也要變號。",
+      "en": "Forgot to flip the sign of y."
+     },
+     {
+      "opt": "D",
+      "zh": "$(1,-6)$ 把數字調了位 —— 只有 $90^{\\circ}$ 與 $270^{\\circ}$ 才需要調位，$180^{\\circ}$ 一定不調位。",
+      "en": "Swapped the coordinates; only 90°/270° need a swap."
+     }
+    ],
+    "tip": {
+     "zh": "$180^{\\circ}$ 旋轉是送分題：不用理會順時針還是逆時針，看到 $180^{\\circ}$ 就把兩個坐標的正負號一齊倒轉。",
+     "en": "For 180°, just invert both signs — the direction is irrelevant."
     }
    }
   },

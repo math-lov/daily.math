@@ -58,6 +58,46 @@
    "review": null
   },
   {
+   "id": "eph-ws01-w01",
+   "type": "mc",
+   "topic": "ws01",
+   "unit": 4,
+   "subtopic": "factorization",
+   "difficulty": 1,
+   "code": "WS1-W01",
+   "source": "WS01 暖身題（自編）· 提取公因式",
+   "stem": {
+    "text": "$3x^{2}-6x=$"
+   },
+   "options": {
+    "A": "$3x(x-2)$",
+    "B": "$3(x^{2}-2x)$",
+    "C": "$x(3x-6)$",
+    "D": "$3x(x-6)$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws01-w02",
+   "type": "mc",
+   "topic": "ws01",
+   "unit": 4,
+   "subtopic": "factorization",
+   "difficulty": 1,
+   "code": "WS1-W02",
+   "source": "WS01 暖身題（自編）· 平方差",
+   "stem": {
+    "text": "$x^{2}-16=$"
+   },
+   "options": {
+    "A": "$(x-4)(x+4)$",
+    "B": "$(x-4)^{2}$",
+    "C": "$(x+4)^{2}$",
+    "D": "$(x-8)(x+2)$"
+   },
+   "review": null
+  },
+  {
    "id": "eph-ws01-q01",
    "type": "mc",
    "topic": "ws01",
@@ -418,6 +458,86 @@
    "review": null
   },
   {
+   "id": "eph-ws02-w01",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 1,
+   "code": "WS2-W01",
+   "source": "WS02 過渡題（自編）· Level 1 符號相反：兩式相加",
+   "stem": {
+    "text": "If $x+y=7$ and $x-y=3$, then $x=$"
+   },
+   "options": {
+    "A": "$2$",
+    "B": "$4$",
+    "C": "$5$",
+    "D": "$10$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-w02",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 1,
+   "code": "WS2-W02",
+   "source": "WS02 過渡題（自編）· Level 2 代入法：整塊代入",
+   "stem": {
+    "text": "If $y=2x$ and $3x+y=15$, then $y=$"
+   },
+   "options": {
+    "A": "$3$",
+    "B": "$5$",
+    "C": "$6$",
+    "D": "$10$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-w03",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 2,
+   "code": "WS2-W03",
+   "source": "WS02 過渡題（自編）· Level 3 只乘一條方程消去",
+   "stem": {
+    "text": "If $2x+y=11$ and $x+2y=7$, then $x=$"
+   },
+   "options": {
+    "A": "$1$",
+    "B": "$3$",
+    "C": "$5$",
+    "D": "$6$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws02-w04",
+   "type": "mc",
+   "topic": "ws02",
+   "unit": 0,
+   "subtopic": "simultaneous-equations",
+   "difficulty": 2,
+   "code": "WS2-W04",
+   "source": "WS02 過渡題（自編）· Level 4 文字題設未知數",
+   "stem": {
+    "text": "The price of 2 cups of milk tea and 1 egg tart is \\$56. The price of 1 cup of milk tea is the same as the price of 3 egg tarts. Find the price of a cup of milk tea."
+   },
+   "options": {
+    "A": "\\$8",
+    "B": "\\$14",
+    "C": "\\$24",
+    "D": "\\$28"
+   },
+   "review": null
+  },
+  {
    "id": "eph-ws02-ex01",
    "type": "long",
    "topic": "ws02",
@@ -724,6 +844,86 @@
     "B": "\\$70",
     "C": "\\$75",
     "D": "\\$90"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-w01",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "change-of-subject",
+   "difficulty": 1,
+   "code": "WS3-W01",
+   "source": "WS03 過渡題（自編）· Level 1 兩步換主項",
+   "stem": {
+    "text": "If $3a+2b=7$, then $a=$"
+   },
+   "options": {
+    "A": "$\\frac{7-2b}{3}$",
+    "B": "$\\frac{7+2b}{3}$",
+    "C": "$7-2b$",
+    "D": "$\\frac{2b-7}{3}$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-w02",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "change-of-subject",
+   "difficulty": 2,
+   "code": "WS3-W02",
+   "source": "WS03 過渡題（自編）· Level 2 目標字母在兩側（抽公因式）",
+   "stem": {
+    "text": "If $kx+3=2x+h$, then $x=$"
+   },
+   "options": {
+    "A": "$\\frac{h-3}{k+2}$",
+    "B": "$\\frac{h-3}{k-2}$",
+    "C": "$\\frac{3-h}{k-2}$",
+    "D": "$\\frac{h+3}{k-2}$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-w03",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 1,
+   "code": "WS3-W03",
+   "source": "WS03 過渡題（自編）· Level 3 恆等式直接比較係數",
+   "stem": {
+    "text": "If $2x^{2}+kx-5\\equiv mx^{2}-4x-5$, then $k=$"
+   },
+   "options": {
+    "A": "$-4$",
+    "B": "$2$",
+    "C": "$4$",
+    "D": "$5$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws03-w04",
+   "type": "mc",
+   "topic": "ws03",
+   "unit": 0,
+   "subtopic": "identities",
+   "difficulty": 2,
+   "code": "WS3-W04",
+   "source": "WS03 過渡題（自編）· Level 4 恆等式代入特殊值",
+   "stem": {
+    "text": "If $A(x-3)+4\\equiv 2x-2$, then $A=$"
+   },
+   "options": {
+    "A": "$-2$",
+    "B": "$1$",
+    "C": "$2$",
+    "D": "$4$"
    },
    "review": null
   },
@@ -1165,6 +1365,86 @@
     "B": "$4:6:3$",
     "C": "$6:9:8$",
     "D": "$12:8:9$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-w01",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 1,
+   "code": "WS4-W01",
+   "source": "WS04 過渡題（自編）· Level 1 基本平移（單一方向）",
+   "stem": {
+    "text": "If the point $(3,-5)$ is translated leftwards by $4$ units to the point $P$, then the coordinates of $P$ are"
+   },
+   "options": {
+    "A": "$(-1,-5)$",
+    "B": "$(7,-5)$",
+    "C": "$(3,-9)$",
+    "D": "$(3,-1)$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-w02",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 1,
+   "code": "WS4-W02",
+   "source": "WS04 過渡題（自編）· Level 2 對坐標軸反射（只改一個號）",
+   "stem": {
+    "text": "If the point $(-4,7)$ is reflected with respect to the $x$-axis to the point $Q$, then the coordinates of $Q$ are"
+   },
+   "options": {
+    "A": "$(4,7)$",
+    "B": "$(-4,-7)$",
+    "C": "$(4,-7)$",
+    "D": "$(7,-4)$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-w03",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 1,
+   "code": "WS4-W03",
+   "source": "WS04 過渡題（自編）· Level 3 繞原點逆時針旋轉 90°",
+   "stem": {
+    "text": "If the point $(2,5)$ is rotated anticlockwise about the origin through $90^{\\circ}$ to the point $R$, then the coordinates of $R$ are"
+   },
+   "options": {
+    "A": "$(-5,2)$",
+    "B": "$(5,-2)$",
+    "C": "$(-2,-5)$",
+    "D": "$(5,2)$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws04-w04",
+   "type": "mc",
+   "topic": "ws04",
+   "unit": 10,
+   "subtopic": "coordinate-transformation",
+   "difficulty": 1,
+   "code": "WS4-W04",
+   "source": "WS04 過渡題（自編）· Level 4 繞原點旋轉 180°（兩個號一齊改）",
+   "stem": {
+    "text": "If the point $(-6,1)$ is rotated about the origin through $180^{\\circ}$ to the point $S$, then the coordinates of $S$ are"
+   },
+   "options": {
+    "A": "$(6,1)$",
+    "B": "$(-6,-1)$",
+    "C": "$(6,-1)$",
+    "D": "$(1,-6)$"
    },
    "review": null
   },

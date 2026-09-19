@@ -10,7 +10,7 @@ window.LEARN_TOPIC_WS04 = {
   "en": "Transformation of Points on a Coordinate Plane"
  },
  "intro": {
-  "zh": "這一課學三種變換：平移（translation）、反射（reflection）、旋轉（rotation），以及怎麼用斜率（slope）證明兩條線垂直或平行。\n好消息是：**每種變換都只有一條公式**。平移是加減、反射是變號或兩倍距離、旋轉只要記兩條 $90^{\\circ}$ 公式（$270^{\\circ}$ 換成反向 $90^{\\circ}$ 就好）。DSE 這類題幾乎年年出在 Paper 1 第 6–8 題，是既易拿分又容易因方向搞錯而失分的一題 —— 慢慢做、做完驗算，是最划算的策略。"
+  "zh": "這一課學三種變換：平移（translation）、反射（reflection）、旋轉（rotation），以及怎麼用斜率（slope）證明兩條線垂直或平行。\n好消息是：每種變換都只有一條公式。平移是加減、反射是變號或兩倍距離、旋轉只要記兩條 $90^{\\circ}$ 公式（$270^{\\circ}$ 換成反向 $90^{\\circ}$ 就好）。DSE 這類題幾乎年年出在 Paper 1 第 6–8 題，是既易拿分又容易因方向搞錯而失分的一題 —— 慢慢做、做完驗算，是最划算的策略。"
  },
  "lessons": [
   {
@@ -328,7 +328,24 @@ window.LEARN_TOPIC_WS04 = {
       }
      },
      "answer": null,
-     "verify": "checked"
+     "verify": "checked",
+     "figures": [
+      {
+       "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-ex1a\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"59.4\" y1=\"238.0\" x2=\"59.4\" y2=\"22.0\"/><line x1=\"67.7\" y1=\"238.0\" x2=\"67.7\" y2=\"22.0\"/><line x1=\"76.0\" y1=\"238.0\" x2=\"76.0\" y2=\"22.0\"/><line x1=\"84.3\" y1=\"238.0\" x2=\"84.3\" y2=\"22.0\"/><line x1=\"92.6\" y1=\"238.0\" x2=\"92.6\" y2=\"22.0\"/><line x1=\"100.9\" y1=\"238.0\" x2=\"100.9\" y2=\"22.0\"/><line x1=\"109.2\" y1=\"238.0\" x2=\"109.2\" y2=\"22.0\"/><line x1=\"117.5\" y1=\"238.0\" x2=\"117.5\" y2=\"22.0\"/><line x1=\"125.8\" y1=\"238.0\" x2=\"125.8\" y2=\"22.0\"/><line x1=\"134.2\" y1=\"238.0\" x2=\"134.2\" y2=\"22.0\"/><line x1=\"142.5\" y1=\"238.0\" x2=\"142.5\" y2=\"22.0\"/><line x1=\"150.8\" y1=\"238.0\" x2=\"150.8\" y2=\"22.0\"/><line x1=\"159.1\" y1=\"238.0\" x2=\"159.1\" y2=\"22.0\"/><line x1=\"167.4\" y1=\"238.0\" x2=\"167.4\" y2=\"22.0\"/><line x1=\"175.7\" y1=\"238.0\" x2=\"175.7\" y2=\"22.0\"/><line x1=\"184.0\" y1=\"238.0\" x2=\"184.0\" y2=\"22.0\"/><line x1=\"192.3\" y1=\"238.0\" x2=\"192.3\" y2=\"22.0\"/><line x1=\"200.6\" y1=\"238.0\" x2=\"200.6\" y2=\"22.0\"/><line x1=\"59.4\" y1=\"238.0\" x2=\"200.6\" y2=\"238.0\"/><line x1=\"59.4\" y1=\"229.7\" x2=\"200.6\" y2=\"229.7\"/><line x1=\"59.4\" y1=\"221.4\" x2=\"200.6\" y2=\"221.4\"/><line x1=\"59.4\" y1=\"213.1\" x2=\"200.6\" y2=\"213.1\"/><line x1=\"59.4\" y1=\"204.8\" x2=\"200.6\" y2=\"204.8\"/><line x1=\"59.4\" y1=\"196.5\" x2=\"200.6\" y2=\"196.5\"/><line x1=\"59.4\" y1=\"188.2\" x2=\"200.6\" y2=\"188.2\"/><line x1=\"59.4\" y1=\"179.8\" x2=\"200.6\" y2=\"179.8\"/><line x1=\"59.4\" y1=\"171.5\" x2=\"200.6\" y2=\"171.5\"/><line x1=\"59.4\" y1=\"163.2\" x2=\"200.6\" y2=\"163.2\"/><line x1=\"59.4\" y1=\"154.9\" x2=\"200.6\" y2=\"154.9\"/><line x1=\"59.4\" y1=\"146.6\" x2=\"200.6\" y2=\"146.6\"/><line x1=\"59.4\" y1=\"138.3\" x2=\"200.6\" y2=\"138.3\"/><line x1=\"59.4\" y1=\"130.0\" x2=\"200.6\" y2=\"130.0\"/><line x1=\"59.4\" y1=\"121.7\" x2=\"200.6\" y2=\"121.7\"/><line x1=\"59.4\" y1=\"113.4\" x2=\"200.6\" y2=\"113.4\"/><line x1=\"59.4\" y1=\"105.1\" x2=\"200.6\" y2=\"105.1\"/><line x1=\"59.4\" y1=\"96.8\" x2=\"200.6\" y2=\"96.8\"/><line x1=\"59.4\" y1=\"88.5\" x2=\"200.6\" y2=\"88.5\"/><line x1=\"59.4\" y1=\"80.2\" x2=\"200.6\" y2=\"80.2\"/><line x1=\"59.4\" y1=\"71.8\" x2=\"200.6\" y2=\"71.8\"/><line x1=\"59.4\" y1=\"63.5\" x2=\"200.6\" y2=\"63.5\"/><line x1=\"59.4\" y1=\"55.2\" x2=\"200.6\" y2=\"55.2\"/><line x1=\"59.4\" y1=\"46.9\" x2=\"200.6\" y2=\"46.9\"/><line x1=\"59.4\" y1=\"38.6\" x2=\"200.6\" y2=\"38.6\"/><line x1=\"59.4\" y1=\"30.3\" x2=\"200.6\" y2=\"30.3\"/><line x1=\"59.4\" y1=\"22.0\" x2=\"200.6\" y2=\"22.0\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"59.4\" y1=\"113.4\" x2=\"200.6\" y2=\"113.4\" marker-end=\"url(#ar-ex1a)\"/><text x=\"205.6\" y=\"127.4\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"76.0\" y1=\"238.0\" x2=\"76.0\" y2=\"22.0\" marker-end=\"url(#ar-ex1a)\"/><text x=\"81.0\" y=\"20.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text></g><line x1=\"76.0\" y1=\"113.4\" x2=\"150.8\" y2=\"221.4\" stroke=\"#666\" stroke-width=\"1.1\"/><line x1=\"76.0\" y1=\"113.4\" x2=\"184.0\" y2=\"38.6\" stroke=\"#666\" stroke-width=\"1.1\"/><path d=\"M 102.2 151.2 A 46.0 46.0 0 0 0 113.8 87.2\" fill=\"none\" stroke=\"#111\" stroke-width=\"1.5\" marker-end=\"url(#ar-ex1a)\"/><text x=\"136.0\" y=\"128.3\" font-size=\"11\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">90°</text><circle cx=\"150.8\" cy=\"221.4\" r=\"4.6\" fill=\"#111\"/><text x=\"158.8\" y=\"211.4\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">A(9, −13)</text><circle cx=\"184.0\" cy=\"38.6\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"176.0\" y=\"26.6\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">A′(13, 9)</text><text x=\"68.0\" y=\"105.4\" font-size=\"10.0\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></svg>",
+       "caption": "第 1 步：A(9, −13) 逆時針轉 90° → A′(13, 9)",
+       "step": 1
+      },
+      {
+       "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-ex1b\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"22.0\" y1=\"211.0\" x2=\"22.0\" y2=\"49.0\"/><line x1=\"32.8\" y1=\"211.0\" x2=\"32.8\" y2=\"49.0\"/><line x1=\"43.6\" y1=\"211.0\" x2=\"43.6\" y2=\"49.0\"/><line x1=\"54.4\" y1=\"211.0\" x2=\"54.4\" y2=\"49.0\"/><line x1=\"65.2\" y1=\"211.0\" x2=\"65.2\" y2=\"49.0\"/><line x1=\"76.0\" y1=\"211.0\" x2=\"76.0\" y2=\"49.0\"/><line x1=\"86.8\" y1=\"211.0\" x2=\"86.8\" y2=\"49.0\"/><line x1=\"97.6\" y1=\"211.0\" x2=\"97.6\" y2=\"49.0\"/><line x1=\"108.4\" y1=\"211.0\" x2=\"108.4\" y2=\"49.0\"/><line x1=\"119.2\" y1=\"211.0\" x2=\"119.2\" y2=\"49.0\"/><line x1=\"130.0\" y1=\"211.0\" x2=\"130.0\" y2=\"49.0\"/><line x1=\"140.8\" y1=\"211.0\" x2=\"140.8\" y2=\"49.0\"/><line x1=\"151.6\" y1=\"211.0\" x2=\"151.6\" y2=\"49.0\"/><line x1=\"162.4\" y1=\"211.0\" x2=\"162.4\" y2=\"49.0\"/><line x1=\"173.2\" y1=\"211.0\" x2=\"173.2\" y2=\"49.0\"/><line x1=\"184.0\" y1=\"211.0\" x2=\"184.0\" y2=\"49.0\"/><line x1=\"194.8\" y1=\"211.0\" x2=\"194.8\" y2=\"49.0\"/><line x1=\"205.6\" y1=\"211.0\" x2=\"205.6\" y2=\"49.0\"/><line x1=\"216.4\" y1=\"211.0\" x2=\"216.4\" y2=\"49.0\"/><line x1=\"227.2\" y1=\"211.0\" x2=\"227.2\" y2=\"49.0\"/><line x1=\"238.0\" y1=\"211.0\" x2=\"238.0\" y2=\"49.0\"/><line x1=\"22.0\" y1=\"211.0\" x2=\"238.0\" y2=\"211.0\"/><line x1=\"22.0\" y1=\"200.2\" x2=\"238.0\" y2=\"200.2\"/><line x1=\"22.0\" y1=\"189.4\" x2=\"238.0\" y2=\"189.4\"/><line x1=\"22.0\" y1=\"178.6\" x2=\"238.0\" y2=\"178.6\"/><line x1=\"22.0\" y1=\"167.8\" x2=\"238.0\" y2=\"167.8\"/><line x1=\"22.0\" y1=\"157.0\" x2=\"238.0\" y2=\"157.0\"/><line x1=\"22.0\" y1=\"146.2\" x2=\"238.0\" y2=\"146.2\"/><line x1=\"22.0\" y1=\"135.4\" x2=\"238.0\" y2=\"135.4\"/><line x1=\"22.0\" y1=\"124.6\" x2=\"238.0\" y2=\"124.6\"/><line x1=\"22.0\" y1=\"113.8\" x2=\"238.0\" y2=\"113.8\"/><line x1=\"22.0\" y1=\"103.0\" x2=\"238.0\" y2=\"103.0\"/><line x1=\"22.0\" y1=\"92.2\" x2=\"238.0\" y2=\"92.2\"/><line x1=\"22.0\" y1=\"81.4\" x2=\"238.0\" y2=\"81.4\"/><line x1=\"22.0\" y1=\"70.6\" x2=\"238.0\" y2=\"70.6\"/><line x1=\"22.0\" y1=\"59.8\" x2=\"238.0\" y2=\"59.8\"/><line x1=\"22.0\" y1=\"49.0\" x2=\"238.0\" y2=\"49.0\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"22.0\" y1=\"157.0\" x2=\"238.0\" y2=\"157.0\" marker-end=\"url(#ar-ex1b)\"/><text x=\"243.0\" y=\"171.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"130.0\" y1=\"211.0\" x2=\"130.0\" y2=\"49.0\" marker-end=\"url(#ar-ex1b)\"/><text x=\"135.0\" y=\"47.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text><text x=\"136.0\" y=\"171.0\" font-size=\"10\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></g><line x1=\"130.0\" y1=\"211.0\" x2=\"130.0\" y2=\"49.0\" stroke=\"#111\" stroke-width=\"2.6\"/><line x1=\"54.4\" y1=\"103.0\" x2=\"205.6\" y2=\"103.0\" stroke=\"#666\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/><circle cx=\"54.4\" cy=\"103.0\" r=\"4.6\" fill=\"#111\"/><text x=\"62.4\" y=\"73.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">B(−7, 5)</text><circle cx=\"205.6\" cy=\"103.0\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"147.0\" y=\"127.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">B′(7, 5)</text><text x=\"27.4\" y=\"54.4\" font-size=\"11.0\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y 軸（鏡軸）</text><text x=\"92.2\" y=\"92.2\" font-size=\"10.5\" fill=\"#666\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">7</text><text x=\"165.6\" y=\"92.2\" font-size=\"10.5\" fill=\"#666\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">7</text></svg>",
+       "caption": "第 2 步：B(−7, 5) 對 y 軸反射 → B′(7, 5)",
+       "step": 2
+      },
+      {
+       "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-ex1c\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"22.0\" y1=\"214.0\" x2=\"22.0\" y2=\"46.0\"/><line x1=\"34.0\" y1=\"214.0\" x2=\"34.0\" y2=\"46.0\"/><line x1=\"46.0\" y1=\"214.0\" x2=\"46.0\" y2=\"46.0\"/><line x1=\"58.0\" y1=\"214.0\" x2=\"58.0\" y2=\"46.0\"/><line x1=\"70.0\" y1=\"214.0\" x2=\"70.0\" y2=\"46.0\"/><line x1=\"82.0\" y1=\"214.0\" x2=\"82.0\" y2=\"46.0\"/><line x1=\"94.0\" y1=\"214.0\" x2=\"94.0\" y2=\"46.0\"/><line x1=\"106.0\" y1=\"214.0\" x2=\"106.0\" y2=\"46.0\"/><line x1=\"118.0\" y1=\"214.0\" x2=\"118.0\" y2=\"46.0\"/><line x1=\"130.0\" y1=\"214.0\" x2=\"130.0\" y2=\"46.0\"/><line x1=\"142.0\" y1=\"214.0\" x2=\"142.0\" y2=\"46.0\"/><line x1=\"154.0\" y1=\"214.0\" x2=\"154.0\" y2=\"46.0\"/><line x1=\"166.0\" y1=\"214.0\" x2=\"166.0\" y2=\"46.0\"/><line x1=\"178.0\" y1=\"214.0\" x2=\"178.0\" y2=\"46.0\"/><line x1=\"190.0\" y1=\"214.0\" x2=\"190.0\" y2=\"46.0\"/><line x1=\"202.0\" y1=\"214.0\" x2=\"202.0\" y2=\"46.0\"/><line x1=\"214.0\" y1=\"214.0\" x2=\"214.0\" y2=\"46.0\"/><line x1=\"226.0\" y1=\"214.0\" x2=\"226.0\" y2=\"46.0\"/><line x1=\"238.0\" y1=\"214.0\" x2=\"238.0\" y2=\"46.0\"/><line x1=\"22.0\" y1=\"214.0\" x2=\"238.0\" y2=\"214.0\"/><line x1=\"22.0\" y1=\"202.0\" x2=\"238.0\" y2=\"202.0\"/><line x1=\"22.0\" y1=\"190.0\" x2=\"238.0\" y2=\"190.0\"/><line x1=\"22.0\" y1=\"178.0\" x2=\"238.0\" y2=\"178.0\"/><line x1=\"22.0\" y1=\"166.0\" x2=\"238.0\" y2=\"166.0\"/><line x1=\"22.0\" y1=\"154.0\" x2=\"238.0\" y2=\"154.0\"/><line x1=\"22.0\" y1=\"142.0\" x2=\"238.0\" y2=\"142.0\"/><line x1=\"22.0\" y1=\"130.0\" x2=\"238.0\" y2=\"130.0\"/><line x1=\"22.0\" y1=\"118.0\" x2=\"238.0\" y2=\"118.0\"/><line x1=\"22.0\" y1=\"106.0\" x2=\"238.0\" y2=\"106.0\"/><line x1=\"22.0\" y1=\"94.0\" x2=\"238.0\" y2=\"94.0\"/><line x1=\"22.0\" y1=\"82.0\" x2=\"238.0\" y2=\"82.0\"/><line x1=\"22.0\" y1=\"70.0\" x2=\"238.0\" y2=\"70.0\"/><line x1=\"22.0\" y1=\"58.0\" x2=\"238.0\" y2=\"58.0\"/><line x1=\"22.0\" y1=\"46.0\" x2=\"238.0\" y2=\"46.0\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"22.0\" y1=\"190.0\" x2=\"238.0\" y2=\"190.0\" marker-end=\"url(#ar-ex1c)\"/><text x=\"243.0\" y=\"204.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"46.0\" y1=\"214.0\" x2=\"46.0\" y2=\"46.0\" marker-end=\"url(#ar-ex1c)\"/><text x=\"51.0\" y=\"44.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text><text x=\"52.0\" y=\"204.0\" font-size=\"10\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></g><line x1=\"22.0\" y1=\"202.0\" x2=\"238.0\" y2=\"58.0\" stroke=\"#111\" stroke-width=\"1.6\"/><line x1=\"130.0\" y1=\"130.0\" x2=\"202.0\" y2=\"130.0\" stroke=\"#666\" stroke-width=\"1.2\" stroke-dasharray=\"3 2.5\"/><line x1=\"202.0\" y1=\"130.0\" x2=\"202.0\" y2=\"82.0\" stroke=\"#666\" stroke-width=\"1.2\" stroke-dasharray=\"3 2.5\"/><circle cx=\"202.0\" cy=\"82.0\" r=\"4.6\" fill=\"#111\"/><text x=\"137.1\" y=\"70.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">A′(13, 9)</text><circle cx=\"130.0\" cy=\"130.0\" r=\"4.6\" fill=\"#111\"/><text x=\"138.0\" y=\"118.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">B′(7, 5)</text><text x=\"158.8\" y=\"134.8\" font-size=\"10.5\" fill=\"#666\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">6</text><text x=\"205.6\" y=\"103.6\" font-size=\"10.5\" fill=\"#666\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">4</text></svg>",
+       "caption": "第 3 步：A′(13, 9)、B′(7, 5) 的斜率 = 2/3",
+       "step": 3
+      }
+     ]
     },
     {
      "id": "eph-ws04-ex02",
@@ -413,7 +430,29 @@ window.LEARN_TOPIC_WS04 = {
       }
      },
      "answer": null,
-     "verify": "checked"
+     "verify": "checked",
+     "figures": [
+      {
+       "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-ex2a\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"22.0\" y1=\"217.8\" x2=\"22.0\" y2=\"42.2\"/><line x1=\"35.5\" y1=\"217.8\" x2=\"35.5\" y2=\"42.2\"/><line x1=\"49.0\" y1=\"217.8\" x2=\"49.0\" y2=\"42.2\"/><line x1=\"62.5\" y1=\"217.8\" x2=\"62.5\" y2=\"42.2\"/><line x1=\"76.0\" y1=\"217.8\" x2=\"76.0\" y2=\"42.2\"/><line x1=\"89.5\" y1=\"217.8\" x2=\"89.5\" y2=\"42.2\"/><line x1=\"103.0\" y1=\"217.8\" x2=\"103.0\" y2=\"42.2\"/><line x1=\"116.5\" y1=\"217.8\" x2=\"116.5\" y2=\"42.2\"/><line x1=\"130.0\" y1=\"217.8\" x2=\"130.0\" y2=\"42.2\"/><line x1=\"143.5\" y1=\"217.8\" x2=\"143.5\" y2=\"42.2\"/><line x1=\"157.0\" y1=\"217.8\" x2=\"157.0\" y2=\"42.2\"/><line x1=\"170.5\" y1=\"217.8\" x2=\"170.5\" y2=\"42.2\"/><line x1=\"184.0\" y1=\"217.8\" x2=\"184.0\" y2=\"42.2\"/><line x1=\"197.5\" y1=\"217.8\" x2=\"197.5\" y2=\"42.2\"/><line x1=\"211.0\" y1=\"217.8\" x2=\"211.0\" y2=\"42.2\"/><line x1=\"224.5\" y1=\"217.8\" x2=\"224.5\" y2=\"42.2\"/><line x1=\"238.0\" y1=\"217.8\" x2=\"238.0\" y2=\"42.2\"/><line x1=\"22.0\" y1=\"217.8\" x2=\"238.0\" y2=\"217.8\"/><line x1=\"22.0\" y1=\"204.2\" x2=\"238.0\" y2=\"204.2\"/><line x1=\"22.0\" y1=\"190.8\" x2=\"238.0\" y2=\"190.8\"/><line x1=\"22.0\" y1=\"177.2\" x2=\"238.0\" y2=\"177.2\"/><line x1=\"22.0\" y1=\"163.8\" x2=\"238.0\" y2=\"163.8\"/><line x1=\"22.0\" y1=\"150.2\" x2=\"238.0\" y2=\"150.2\"/><line x1=\"22.0\" y1=\"136.8\" x2=\"238.0\" y2=\"136.8\"/><line x1=\"22.0\" y1=\"123.2\" x2=\"238.0\" y2=\"123.2\"/><line x1=\"22.0\" y1=\"109.8\" x2=\"238.0\" y2=\"109.8\"/><line x1=\"22.0\" y1=\"96.2\" x2=\"238.0\" y2=\"96.2\"/><line x1=\"22.0\" y1=\"82.8\" x2=\"238.0\" y2=\"82.8\"/><line x1=\"22.0\" y1=\"69.2\" x2=\"238.0\" y2=\"69.2\"/><line x1=\"22.0\" y1=\"55.8\" x2=\"238.0\" y2=\"55.8\"/><line x1=\"22.0\" y1=\"42.2\" x2=\"238.0\" y2=\"42.2\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"22.0\" y1=\"96.2\" x2=\"238.0\" y2=\"96.2\" marker-end=\"url(#ar-ex2a)\"/><text x=\"243.0\" y=\"110.2\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"143.5\" y1=\"217.8\" x2=\"143.5\" y2=\"42.2\" marker-end=\"url(#ar-ex2a)\"/><text x=\"148.5\" y=\"40.2\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text><text x=\"149.5\" y=\"110.2\" font-size=\"10\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></g><line x1=\"143.5\" y1=\"96.2\" x2=\"76.0\" y2=\"136.8\" stroke=\"#666\" stroke-width=\"1.1\"/><line x1=\"143.5\" y1=\"96.2\" x2=\"184.0\" y2=\"163.8\" stroke=\"#666\" stroke-width=\"1.1\"/><path d=\"M 105.8 118.9 A 44.0 44.0 0 0 0 166.1 134.0\" fill=\"none\" stroke=\"#111\" stroke-width=\"1.5\" marker-end=\"url(#ar-ex2a)\"/><text x=\"129.2\" y=\"157.5\" font-size=\"11\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">90°</text><circle cx=\"76.0\" cy=\"136.8\" r=\"4.6\" fill=\"#111\"/><text x=\"68.0\" y=\"124.8\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">R(−5, −3)</text><circle cx=\"184.0\" cy=\"163.8\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"176.0\" y=\"183.8\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">R′(3, −5)</text></svg>",
+       "caption": "第 1 步：順 270° ＝ 逆 90°：R(−5, −3) → R′(3, −5)",
+       "step": 1
+      },
+      {
+       "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-ex2b\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"22.0\" y1=\"213.5\" x2=\"22.0\" y2=\"46.5\"/><line x1=\"31.8\" y1=\"213.5\" x2=\"31.8\" y2=\"46.5\"/><line x1=\"41.6\" y1=\"213.5\" x2=\"41.6\" y2=\"46.5\"/><line x1=\"51.5\" y1=\"213.5\" x2=\"51.5\" y2=\"46.5\"/><line x1=\"61.3\" y1=\"213.5\" x2=\"61.3\" y2=\"46.5\"/><line x1=\"71.1\" y1=\"213.5\" x2=\"71.1\" y2=\"46.5\"/><line x1=\"80.9\" y1=\"213.5\" x2=\"80.9\" y2=\"46.5\"/><line x1=\"90.7\" y1=\"213.5\" x2=\"90.7\" y2=\"46.5\"/><line x1=\"100.5\" y1=\"213.5\" x2=\"100.5\" y2=\"46.5\"/><line x1=\"110.4\" y1=\"213.5\" x2=\"110.4\" y2=\"46.5\"/><line x1=\"120.2\" y1=\"213.5\" x2=\"120.2\" y2=\"46.5\"/><line x1=\"130.0\" y1=\"213.5\" x2=\"130.0\" y2=\"46.5\"/><line x1=\"139.8\" y1=\"213.5\" x2=\"139.8\" y2=\"46.5\"/><line x1=\"149.6\" y1=\"213.5\" x2=\"149.6\" y2=\"46.5\"/><line x1=\"159.5\" y1=\"213.5\" x2=\"159.5\" y2=\"46.5\"/><line x1=\"169.3\" y1=\"213.5\" x2=\"169.3\" y2=\"46.5\"/><line x1=\"179.1\" y1=\"213.5\" x2=\"179.1\" y2=\"46.5\"/><line x1=\"188.9\" y1=\"213.5\" x2=\"188.9\" y2=\"46.5\"/><line x1=\"198.7\" y1=\"213.5\" x2=\"198.7\" y2=\"46.5\"/><line x1=\"208.5\" y1=\"213.5\" x2=\"208.5\" y2=\"46.5\"/><line x1=\"218.4\" y1=\"213.5\" x2=\"218.4\" y2=\"46.5\"/><line x1=\"228.2\" y1=\"213.5\" x2=\"228.2\" y2=\"46.5\"/><line x1=\"238.0\" y1=\"213.5\" x2=\"238.0\" y2=\"46.5\"/><line x1=\"22.0\" y1=\"213.5\" x2=\"238.0\" y2=\"213.5\"/><line x1=\"22.0\" y1=\"203.6\" x2=\"238.0\" y2=\"203.6\"/><line x1=\"22.0\" y1=\"193.8\" x2=\"238.0\" y2=\"193.8\"/><line x1=\"22.0\" y1=\"184.0\" x2=\"238.0\" y2=\"184.0\"/><line x1=\"22.0\" y1=\"174.2\" x2=\"238.0\" y2=\"174.2\"/><line x1=\"22.0\" y1=\"164.4\" x2=\"238.0\" y2=\"164.4\"/><line x1=\"22.0\" y1=\"154.5\" x2=\"238.0\" y2=\"154.5\"/><line x1=\"22.0\" y1=\"144.7\" x2=\"238.0\" y2=\"144.7\"/><line x1=\"22.0\" y1=\"134.9\" x2=\"238.0\" y2=\"134.9\"/><line x1=\"22.0\" y1=\"125.1\" x2=\"238.0\" y2=\"125.1\"/><line x1=\"22.0\" y1=\"115.3\" x2=\"238.0\" y2=\"115.3\"/><line x1=\"22.0\" y1=\"105.5\" x2=\"238.0\" y2=\"105.5\"/><line x1=\"22.0\" y1=\"95.6\" x2=\"238.0\" y2=\"95.6\"/><line x1=\"22.0\" y1=\"85.8\" x2=\"238.0\" y2=\"85.8\"/><line x1=\"22.0\" y1=\"76.0\" x2=\"238.0\" y2=\"76.0\"/><line x1=\"22.0\" y1=\"66.2\" x2=\"238.0\" y2=\"66.2\"/><line x1=\"22.0\" y1=\"56.4\" x2=\"238.0\" y2=\"56.4\"/><line x1=\"22.0\" y1=\"46.5\" x2=\"238.0\" y2=\"46.5\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"22.0\" y1=\"134.9\" x2=\"238.0\" y2=\"134.9\" marker-end=\"url(#ar-ex2b)\"/><text x=\"243.0\" y=\"148.9\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"179.1\" y1=\"213.5\" x2=\"179.1\" y2=\"46.5\" marker-end=\"url(#ar-ex2b)\"/><text x=\"184.1\" y=\"44.5\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text><text x=\"185.1\" y=\"148.9\" font-size=\"10\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></g><line x1=\"179.1\" y1=\"134.9\" x2=\"130.0\" y2=\"164.4\" stroke=\"#666\" stroke-width=\"1.1\" stroke-dasharray=\"3 2.5\"/><line x1=\"179.1\" y1=\"134.9\" x2=\"208.5\" y2=\"184.0\" stroke=\"#666\" stroke-width=\"1.1\" stroke-dasharray=\"3 2.5\"/><line x1=\"179.1\" y1=\"85.8\" x2=\"51.5\" y2=\"85.8\" stroke=\"#111\" stroke-width=\"1.7\" marker-end=\"url(#ar-ex2b)\"/><circle cx=\"130.0\" cy=\"164.4\" r=\"4.6\" fill=\"#111\"/><text x=\"122.0\" y=\"150.4\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">R(−5, −3)</text><circle cx=\"208.5\" cy=\"184.0\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"143.6\" y=\"194.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">R′(3, −5)</text><circle cx=\"179.1\" cy=\"85.8\" r=\"4.6\" fill=\"#111\"/><text x=\"187.1\" y=\"75.8\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">S(0, 5)</text><circle cx=\"51.5\" cy=\"85.8\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"43.5\" y=\"75.8\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">S′(−13, 5)</text><text x=\"95.6\" y=\"94.7\" font-size=\"10.5\" fill=\"#666\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">左 13</text></svg>",
+       "caption": "第 2 步：R′(3, −5)；S 向左 13 → S′(−13, 5)",
+       "step": 2
+      },
+      {
+       "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-ex2c\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"22.0\" y1=\"213.5\" x2=\"22.0\" y2=\"46.5\"/><line x1=\"31.8\" y1=\"213.5\" x2=\"31.8\" y2=\"46.5\"/><line x1=\"41.6\" y1=\"213.5\" x2=\"41.6\" y2=\"46.5\"/><line x1=\"51.5\" y1=\"213.5\" x2=\"51.5\" y2=\"46.5\"/><line x1=\"61.3\" y1=\"213.5\" x2=\"61.3\" y2=\"46.5\"/><line x1=\"71.1\" y1=\"213.5\" x2=\"71.1\" y2=\"46.5\"/><line x1=\"80.9\" y1=\"213.5\" x2=\"80.9\" y2=\"46.5\"/><line x1=\"90.7\" y1=\"213.5\" x2=\"90.7\" y2=\"46.5\"/><line x1=\"100.5\" y1=\"213.5\" x2=\"100.5\" y2=\"46.5\"/><line x1=\"110.4\" y1=\"213.5\" x2=\"110.4\" y2=\"46.5\"/><line x1=\"120.2\" y1=\"213.5\" x2=\"120.2\" y2=\"46.5\"/><line x1=\"130.0\" y1=\"213.5\" x2=\"130.0\" y2=\"46.5\"/><line x1=\"139.8\" y1=\"213.5\" x2=\"139.8\" y2=\"46.5\"/><line x1=\"149.6\" y1=\"213.5\" x2=\"149.6\" y2=\"46.5\"/><line x1=\"159.5\" y1=\"213.5\" x2=\"159.5\" y2=\"46.5\"/><line x1=\"169.3\" y1=\"213.5\" x2=\"169.3\" y2=\"46.5\"/><line x1=\"179.1\" y1=\"213.5\" x2=\"179.1\" y2=\"46.5\"/><line x1=\"188.9\" y1=\"213.5\" x2=\"188.9\" y2=\"46.5\"/><line x1=\"198.7\" y1=\"213.5\" x2=\"198.7\" y2=\"46.5\"/><line x1=\"208.5\" y1=\"213.5\" x2=\"208.5\" y2=\"46.5\"/><line x1=\"218.4\" y1=\"213.5\" x2=\"218.4\" y2=\"46.5\"/><line x1=\"228.2\" y1=\"213.5\" x2=\"228.2\" y2=\"46.5\"/><line x1=\"238.0\" y1=\"213.5\" x2=\"238.0\" y2=\"46.5\"/><line x1=\"22.0\" y1=\"213.5\" x2=\"238.0\" y2=\"213.5\"/><line x1=\"22.0\" y1=\"203.6\" x2=\"238.0\" y2=\"203.6\"/><line x1=\"22.0\" y1=\"193.8\" x2=\"238.0\" y2=\"193.8\"/><line x1=\"22.0\" y1=\"184.0\" x2=\"238.0\" y2=\"184.0\"/><line x1=\"22.0\" y1=\"174.2\" x2=\"238.0\" y2=\"174.2\"/><line x1=\"22.0\" y1=\"164.4\" x2=\"238.0\" y2=\"164.4\"/><line x1=\"22.0\" y1=\"154.5\" x2=\"238.0\" y2=\"154.5\"/><line x1=\"22.0\" y1=\"144.7\" x2=\"238.0\" y2=\"144.7\"/><line x1=\"22.0\" y1=\"134.9\" x2=\"238.0\" y2=\"134.9\"/><line x1=\"22.0\" y1=\"125.1\" x2=\"238.0\" y2=\"125.1\"/><line x1=\"22.0\" y1=\"115.3\" x2=\"238.0\" y2=\"115.3\"/><line x1=\"22.0\" y1=\"105.5\" x2=\"238.0\" y2=\"105.5\"/><line x1=\"22.0\" y1=\"95.6\" x2=\"238.0\" y2=\"95.6\"/><line x1=\"22.0\" y1=\"85.8\" x2=\"238.0\" y2=\"85.8\"/><line x1=\"22.0\" y1=\"76.0\" x2=\"238.0\" y2=\"76.0\"/><line x1=\"22.0\" y1=\"66.2\" x2=\"238.0\" y2=\"66.2\"/><line x1=\"22.0\" y1=\"56.4\" x2=\"238.0\" y2=\"56.4\"/><line x1=\"22.0\" y1=\"46.5\" x2=\"238.0\" y2=\"46.5\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"22.0\" y1=\"134.9\" x2=\"238.0\" y2=\"134.9\" marker-end=\"url(#ar-ex2c)\"/><text x=\"243.0\" y=\"148.9\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"179.1\" y1=\"213.5\" x2=\"179.1\" y2=\"46.5\" marker-end=\"url(#ar-ex2c)\"/><text x=\"184.1\" y=\"44.5\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text><text x=\"185.1\" y=\"148.9\" font-size=\"10\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></g><line x1=\"130.0\" y1=\"164.4\" x2=\"179.1\" y2=\"85.8\" stroke=\"#111\" stroke-width=\"1.6\"/><line x1=\"208.5\" y1=\"184.0\" x2=\"51.5\" y2=\"85.8\" stroke=\"#111\" stroke-width=\"1.6\"/><line x1=\"130.0\" y1=\"164.4\" x2=\"179.1\" y2=\"164.4\" stroke=\"#666\" stroke-width=\"1.2\" stroke-dasharray=\"3 2.5\"/><line x1=\"179.1\" y1=\"164.4\" x2=\"179.1\" y2=\"85.8\" stroke=\"#666\" stroke-width=\"1.2\" stroke-dasharray=\"3 2.5\"/><circle cx=\"130.0\" cy=\"164.4\" r=\"4.6\" fill=\"#111\"/><text x=\"122.0\" y=\"154.4\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">R(−5, −3)</text><circle cx=\"179.1\" cy=\"85.8\" r=\"4.6\" fill=\"#111\"/><text x=\"187.1\" y=\"75.8\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">S(0, 5)</text><circle cx=\"208.5\" cy=\"184.0\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"143.6\" y=\"196.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">R′(3, −5)</text><circle cx=\"51.5\" cy=\"85.8\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"43.5\" y=\"75.8\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">S′(−13, 5)</text><text x=\"154.5\" y=\"173.2\" font-size=\"10.5\" fill=\"#666\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">5</text><text x=\"183.0\" y=\"125.1\" font-size=\"10.5\" fill=\"#666\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">8</text></svg>",
+       "caption": "第 3 步：m(RS) = 8/5、m(R′S′) = −5/8",
+       "step": 3
+      },
+      {
+       "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-ex2d\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"22.0\" y1=\"213.5\" x2=\"22.0\" y2=\"46.5\"/><line x1=\"31.8\" y1=\"213.5\" x2=\"31.8\" y2=\"46.5\"/><line x1=\"41.6\" y1=\"213.5\" x2=\"41.6\" y2=\"46.5\"/><line x1=\"51.5\" y1=\"213.5\" x2=\"51.5\" y2=\"46.5\"/><line x1=\"61.3\" y1=\"213.5\" x2=\"61.3\" y2=\"46.5\"/><line x1=\"71.1\" y1=\"213.5\" x2=\"71.1\" y2=\"46.5\"/><line x1=\"80.9\" y1=\"213.5\" x2=\"80.9\" y2=\"46.5\"/><line x1=\"90.7\" y1=\"213.5\" x2=\"90.7\" y2=\"46.5\"/><line x1=\"100.5\" y1=\"213.5\" x2=\"100.5\" y2=\"46.5\"/><line x1=\"110.4\" y1=\"213.5\" x2=\"110.4\" y2=\"46.5\"/><line x1=\"120.2\" y1=\"213.5\" x2=\"120.2\" y2=\"46.5\"/><line x1=\"130.0\" y1=\"213.5\" x2=\"130.0\" y2=\"46.5\"/><line x1=\"139.8\" y1=\"213.5\" x2=\"139.8\" y2=\"46.5\"/><line x1=\"149.6\" y1=\"213.5\" x2=\"149.6\" y2=\"46.5\"/><line x1=\"159.5\" y1=\"213.5\" x2=\"159.5\" y2=\"46.5\"/><line x1=\"169.3\" y1=\"213.5\" x2=\"169.3\" y2=\"46.5\"/><line x1=\"179.1\" y1=\"213.5\" x2=\"179.1\" y2=\"46.5\"/><line x1=\"188.9\" y1=\"213.5\" x2=\"188.9\" y2=\"46.5\"/><line x1=\"198.7\" y1=\"213.5\" x2=\"198.7\" y2=\"46.5\"/><line x1=\"208.5\" y1=\"213.5\" x2=\"208.5\" y2=\"46.5\"/><line x1=\"218.4\" y1=\"213.5\" x2=\"218.4\" y2=\"46.5\"/><line x1=\"228.2\" y1=\"213.5\" x2=\"228.2\" y2=\"46.5\"/><line x1=\"238.0\" y1=\"213.5\" x2=\"238.0\" y2=\"46.5\"/><line x1=\"22.0\" y1=\"213.5\" x2=\"238.0\" y2=\"213.5\"/><line x1=\"22.0\" y1=\"203.6\" x2=\"238.0\" y2=\"203.6\"/><line x1=\"22.0\" y1=\"193.8\" x2=\"238.0\" y2=\"193.8\"/><line x1=\"22.0\" y1=\"184.0\" x2=\"238.0\" y2=\"184.0\"/><line x1=\"22.0\" y1=\"174.2\" x2=\"238.0\" y2=\"174.2\"/><line x1=\"22.0\" y1=\"164.4\" x2=\"238.0\" y2=\"164.4\"/><line x1=\"22.0\" y1=\"154.5\" x2=\"238.0\" y2=\"154.5\"/><line x1=\"22.0\" y1=\"144.7\" x2=\"238.0\" y2=\"144.7\"/><line x1=\"22.0\" y1=\"134.9\" x2=\"238.0\" y2=\"134.9\"/><line x1=\"22.0\" y1=\"125.1\" x2=\"238.0\" y2=\"125.1\"/><line x1=\"22.0\" y1=\"115.3\" x2=\"238.0\" y2=\"115.3\"/><line x1=\"22.0\" y1=\"105.5\" x2=\"238.0\" y2=\"105.5\"/><line x1=\"22.0\" y1=\"95.6\" x2=\"238.0\" y2=\"95.6\"/><line x1=\"22.0\" y1=\"85.8\" x2=\"238.0\" y2=\"85.8\"/><line x1=\"22.0\" y1=\"76.0\" x2=\"238.0\" y2=\"76.0\"/><line x1=\"22.0\" y1=\"66.2\" x2=\"238.0\" y2=\"66.2\"/><line x1=\"22.0\" y1=\"56.4\" x2=\"238.0\" y2=\"56.4\"/><line x1=\"22.0\" y1=\"46.5\" x2=\"238.0\" y2=\"46.5\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"22.0\" y1=\"134.9\" x2=\"238.0\" y2=\"134.9\" marker-end=\"url(#ar-ex2d)\"/><text x=\"243.0\" y=\"148.9\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"179.1\" y1=\"213.5\" x2=\"179.1\" y2=\"46.5\" marker-end=\"url(#ar-ex2d)\"/><text x=\"184.1\" y=\"44.5\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text><text x=\"185.1\" y=\"148.9\" font-size=\"10\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></g><line x1=\"130.0\" y1=\"164.4\" x2=\"179.1\" y2=\"85.8\" stroke=\"#111\" stroke-width=\"1.6\"/><line x1=\"208.5\" y1=\"184.0\" x2=\"51.5\" y2=\"85.8\" stroke=\"#111\" stroke-width=\"1.6\"/><polygon points=\"143.2,143.2 146.9,137.4 141.0,133.7 137.4,139.5\" fill=\"none\" stroke=\"#111\" stroke-width=\"1.2\"/><circle cx=\"130.0\" cy=\"164.4\" r=\"4.6\" fill=\"#111\"/><text x=\"122.0\" y=\"154.4\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">R(−5, −3)</text><circle cx=\"179.1\" cy=\"85.8\" r=\"4.6\" fill=\"#111\"/><text x=\"187.1\" y=\"75.8\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">S(0, 5)</text><circle cx=\"208.5\" cy=\"184.0\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"143.6\" y=\"196.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">R′(3, −5)</text><circle cx=\"51.5\" cy=\"85.8\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"43.5\" y=\"75.8\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">S′(−13, 5)</text></svg>",
+       "caption": "第 4 步：8/5 × (−5/8) = −1 → RS ⟂ R′S′",
+       "step": 4
+      }
+     ]
     },
     {
      "id": "eph-ws04-ex03",
@@ -500,11 +539,311 @@ window.LEARN_TOPIC_WS04 = {
       }
      },
      "answer": null,
-     "verify": "checked"
+     "verify": "checked",
+     "figures": [
+      {
+       "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-ex3a\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"22.0\" y1=\"214.0\" x2=\"22.0\" y2=\"46.0\"/><line x1=\"46.0\" y1=\"214.0\" x2=\"46.0\" y2=\"46.0\"/><line x1=\"70.0\" y1=\"214.0\" x2=\"70.0\" y2=\"46.0\"/><line x1=\"94.0\" y1=\"214.0\" x2=\"94.0\" y2=\"46.0\"/><line x1=\"118.0\" y1=\"214.0\" x2=\"118.0\" y2=\"46.0\"/><line x1=\"142.0\" y1=\"214.0\" x2=\"142.0\" y2=\"46.0\"/><line x1=\"166.0\" y1=\"214.0\" x2=\"166.0\" y2=\"46.0\"/><line x1=\"190.0\" y1=\"214.0\" x2=\"190.0\" y2=\"46.0\"/><line x1=\"214.0\" y1=\"214.0\" x2=\"214.0\" y2=\"46.0\"/><line x1=\"238.0\" y1=\"214.0\" x2=\"238.0\" y2=\"46.0\"/><line x1=\"22.0\" y1=\"214.0\" x2=\"238.0\" y2=\"214.0\"/><line x1=\"22.0\" y1=\"190.0\" x2=\"238.0\" y2=\"190.0\"/><line x1=\"22.0\" y1=\"166.0\" x2=\"238.0\" y2=\"166.0\"/><line x1=\"22.0\" y1=\"142.0\" x2=\"238.0\" y2=\"142.0\"/><line x1=\"22.0\" y1=\"118.0\" x2=\"238.0\" y2=\"118.0\"/><line x1=\"22.0\" y1=\"94.0\" x2=\"238.0\" y2=\"94.0\"/><line x1=\"22.0\" y1=\"70.0\" x2=\"238.0\" y2=\"70.0\"/><line x1=\"22.0\" y1=\"46.0\" x2=\"238.0\" y2=\"46.0\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"22.0\" y1=\"166.0\" x2=\"238.0\" y2=\"166.0\" marker-end=\"url(#ar-ex3a)\"/><text x=\"243.0\" y=\"180.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"70.0\" y1=\"214.0\" x2=\"70.0\" y2=\"46.0\" marker-end=\"url(#ar-ex3a)\"/><text x=\"75.0\" y=\"44.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text><text x=\"76.0\" y=\"180.0\" font-size=\"10\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></g><line x1=\"166.0\" y1=\"118.0\" x2=\"94.0\" y2=\"118.0\" stroke=\"#111\" stroke-width=\"1.7\" marker-end=\"url(#ar-ex3a)\"/><circle cx=\"166.0\" cy=\"118.0\" r=\"4.6\" fill=\"#111\"/><text x=\"174.0\" y=\"106.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">P(4, 2)</text><circle cx=\"94.0\" cy=\"118.0\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"86.0\" y=\"106.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">P′(1, 2)</text><text x=\"127.6\" y=\"139.6\" font-size=\"10.5\" fill=\"#666\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">左 3</text></svg>",
+       "caption": "第 1 步：P(4, 2) 向左 3 單位 → P′(1, 2)",
+       "step": 1
+      },
+      {
+       "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-ex3b\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"22.0\" y1=\"184.0\" x2=\"22.0\" y2=\"76.0\"/><line x1=\"35.5\" y1=\"184.0\" x2=\"35.5\" y2=\"76.0\"/><line x1=\"49.0\" y1=\"184.0\" x2=\"49.0\" y2=\"76.0\"/><line x1=\"62.5\" y1=\"184.0\" x2=\"62.5\" y2=\"76.0\"/><line x1=\"76.0\" y1=\"184.0\" x2=\"76.0\" y2=\"76.0\"/><line x1=\"89.5\" y1=\"184.0\" x2=\"89.5\" y2=\"76.0\"/><line x1=\"103.0\" y1=\"184.0\" x2=\"103.0\" y2=\"76.0\"/><line x1=\"116.5\" y1=\"184.0\" x2=\"116.5\" y2=\"76.0\"/><line x1=\"130.0\" y1=\"184.0\" x2=\"130.0\" y2=\"76.0\"/><line x1=\"143.5\" y1=\"184.0\" x2=\"143.5\" y2=\"76.0\"/><line x1=\"157.0\" y1=\"184.0\" x2=\"157.0\" y2=\"76.0\"/><line x1=\"170.5\" y1=\"184.0\" x2=\"170.5\" y2=\"76.0\"/><line x1=\"184.0\" y1=\"184.0\" x2=\"184.0\" y2=\"76.0\"/><line x1=\"197.5\" y1=\"184.0\" x2=\"197.5\" y2=\"76.0\"/><line x1=\"211.0\" y1=\"184.0\" x2=\"211.0\" y2=\"76.0\"/><line x1=\"224.5\" y1=\"184.0\" x2=\"224.5\" y2=\"76.0\"/><line x1=\"238.0\" y1=\"184.0\" x2=\"238.0\" y2=\"76.0\"/><line x1=\"22.0\" y1=\"184.0\" x2=\"238.0\" y2=\"184.0\"/><line x1=\"22.0\" y1=\"170.5\" x2=\"238.0\" y2=\"170.5\"/><line x1=\"22.0\" y1=\"157.0\" x2=\"238.0\" y2=\"157.0\"/><line x1=\"22.0\" y1=\"143.5\" x2=\"238.0\" y2=\"143.5\"/><line x1=\"22.0\" y1=\"130.0\" x2=\"238.0\" y2=\"130.0\"/><line x1=\"22.0\" y1=\"116.5\" x2=\"238.0\" y2=\"116.5\"/><line x1=\"22.0\" y1=\"103.0\" x2=\"238.0\" y2=\"103.0\"/><line x1=\"22.0\" y1=\"89.5\" x2=\"238.0\" y2=\"89.5\"/><line x1=\"22.0\" y1=\"76.0\" x2=\"238.0\" y2=\"76.0\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"22.0\" y1=\"184.0\" x2=\"238.0\" y2=\"184.0\" marker-end=\"url(#ar-ex3b)\"/><text x=\"243.0\" y=\"198.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"130.0\" y1=\"184.0\" x2=\"130.0\" y2=\"76.0\" marker-end=\"url(#ar-ex3b)\"/><text x=\"135.0\" y=\"74.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text><text x=\"136.0\" y=\"198.0\" font-size=\"10\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></g><line x1=\"130.0\" y1=\"184.0\" x2=\"211.0\" y2=\"116.5\" stroke=\"#666\" stroke-width=\"1.1\"/><line x1=\"130.0\" y1=\"184.0\" x2=\"62.5\" y2=\"103.0\" stroke=\"#666\" stroke-width=\"1.1\"/><path d=\"M 163.8 155.8 A 44.0 44.0 0 0 0 101.8 150.2\" fill=\"none\" stroke=\"#111\" stroke-width=\"1.5\" marker-end=\"url(#ar-ex3b)\"/><text x=\"135.3\" y=\"129.2\" font-size=\"11\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">90°</text><circle cx=\"211.0\" cy=\"116.5\" r=\"4.6\" fill=\"#111\"/><text x=\"158.7\" y=\"104.5\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">Q(6, 5)</text><circle cx=\"62.5\" cy=\"103.0\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"54.5\" y=\"91.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">Q′(−5, 6)</text></svg>",
+       "caption": "第 2 步：Q(6, 5) 逆時針轉 90° → Q′(−5, 6)",
+       "step": 2
+      },
+      {
+       "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-ex3c\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"22.0\" y1=\"199.9\" x2=\"22.0\" y2=\"60.1\"/><line x1=\"34.7\" y1=\"199.9\" x2=\"34.7\" y2=\"60.1\"/><line x1=\"47.4\" y1=\"199.9\" x2=\"47.4\" y2=\"60.1\"/><line x1=\"60.1\" y1=\"199.9\" x2=\"60.1\" y2=\"60.1\"/><line x1=\"72.8\" y1=\"199.9\" x2=\"72.8\" y2=\"60.1\"/><line x1=\"85.5\" y1=\"199.9\" x2=\"85.5\" y2=\"60.1\"/><line x1=\"98.2\" y1=\"199.9\" x2=\"98.2\" y2=\"60.1\"/><line x1=\"110.9\" y1=\"199.9\" x2=\"110.9\" y2=\"60.1\"/><line x1=\"123.6\" y1=\"199.9\" x2=\"123.6\" y2=\"60.1\"/><line x1=\"136.4\" y1=\"199.9\" x2=\"136.4\" y2=\"60.1\"/><line x1=\"149.1\" y1=\"199.9\" x2=\"149.1\" y2=\"60.1\"/><line x1=\"161.8\" y1=\"199.9\" x2=\"161.8\" y2=\"60.1\"/><line x1=\"174.5\" y1=\"199.9\" x2=\"174.5\" y2=\"60.1\"/><line x1=\"187.2\" y1=\"199.9\" x2=\"187.2\" y2=\"60.1\"/><line x1=\"199.9\" y1=\"199.9\" x2=\"199.9\" y2=\"60.1\"/><line x1=\"212.6\" y1=\"199.9\" x2=\"212.6\" y2=\"60.1\"/><line x1=\"225.3\" y1=\"199.9\" x2=\"225.3\" y2=\"60.1\"/><line x1=\"238.0\" y1=\"199.9\" x2=\"238.0\" y2=\"60.1\"/><line x1=\"22.0\" y1=\"199.9\" x2=\"238.0\" y2=\"199.9\"/><line x1=\"22.0\" y1=\"187.2\" x2=\"238.0\" y2=\"187.2\"/><line x1=\"22.0\" y1=\"174.5\" x2=\"238.0\" y2=\"174.5\"/><line x1=\"22.0\" y1=\"161.8\" x2=\"238.0\" y2=\"161.8\"/><line x1=\"22.0\" y1=\"149.1\" x2=\"238.0\" y2=\"149.1\"/><line x1=\"22.0\" y1=\"136.4\" x2=\"238.0\" y2=\"136.4\"/><line x1=\"22.0\" y1=\"123.6\" x2=\"238.0\" y2=\"123.6\"/><line x1=\"22.0\" y1=\"110.9\" x2=\"238.0\" y2=\"110.9\"/><line x1=\"22.0\" y1=\"98.2\" x2=\"238.0\" y2=\"98.2\"/><line x1=\"22.0\" y1=\"85.5\" x2=\"238.0\" y2=\"85.5\"/><line x1=\"22.0\" y1=\"72.8\" x2=\"238.0\" y2=\"72.8\"/><line x1=\"22.0\" y1=\"60.1\" x2=\"238.0\" y2=\"60.1\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"22.0\" y1=\"174.5\" x2=\"238.0\" y2=\"174.5\" marker-end=\"url(#ar-ex3c)\"/><text x=\"243.0\" y=\"188.5\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"123.6\" y1=\"199.9\" x2=\"123.6\" y2=\"60.1\" marker-end=\"url(#ar-ex3c)\"/><text x=\"128.6\" y=\"58.1\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text><text x=\"129.6\" y=\"188.5\" font-size=\"10\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></g><line x1=\"174.5\" y1=\"149.1\" x2=\"199.9\" y2=\"110.9\" stroke=\"#111\" stroke-width=\"1.6\"/><line x1=\"136.4\" y1=\"149.1\" x2=\"60.1\" y2=\"98.2\" stroke=\"#111\" stroke-width=\"1.6\"/><line x1=\"174.5\" y1=\"149.1\" x2=\"199.9\" y2=\"149.1\" stroke=\"#666\" stroke-width=\"1.2\" stroke-dasharray=\"3 2.5\"/><line x1=\"199.9\" y1=\"149.1\" x2=\"199.9\" y2=\"110.9\" stroke=\"#666\" stroke-width=\"1.2\" stroke-dasharray=\"3 2.5\"/><circle cx=\"174.5\" cy=\"149.1\" r=\"4.6\" fill=\"#111\"/><text x=\"182.5\" y=\"163.1\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">P(4, 2)</text><circle cx=\"199.9\" cy=\"110.9\" r=\"4.6\" fill=\"#111\"/><text x=\"147.6\" y=\"98.9\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">Q(6, 5)</text><circle cx=\"136.4\" cy=\"149.1\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"128.4\" y=\"137.1\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">P′(1, 2)</text><circle cx=\"60.1\" cy=\"98.2\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"52.1\" y=\"86.2\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">Q′(−5, 6)</text><text x=\"187.2\" y=\"137.6\" font-size=\"10.5\" fill=\"#666\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">2</text><text x=\"204.3\" y=\"131.3\" font-size=\"10.5\" fill=\"#666\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">3</text></svg>",
+       "caption": "第 3 步：m(PQ) = 3/2、m(P′Q′) = −2/3",
+       "step": 3
+      },
+      {
+       "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-ex3d\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"22.0\" y1=\"199.9\" x2=\"22.0\" y2=\"60.1\"/><line x1=\"34.7\" y1=\"199.9\" x2=\"34.7\" y2=\"60.1\"/><line x1=\"47.4\" y1=\"199.9\" x2=\"47.4\" y2=\"60.1\"/><line x1=\"60.1\" y1=\"199.9\" x2=\"60.1\" y2=\"60.1\"/><line x1=\"72.8\" y1=\"199.9\" x2=\"72.8\" y2=\"60.1\"/><line x1=\"85.5\" y1=\"199.9\" x2=\"85.5\" y2=\"60.1\"/><line x1=\"98.2\" y1=\"199.9\" x2=\"98.2\" y2=\"60.1\"/><line x1=\"110.9\" y1=\"199.9\" x2=\"110.9\" y2=\"60.1\"/><line x1=\"123.6\" y1=\"199.9\" x2=\"123.6\" y2=\"60.1\"/><line x1=\"136.4\" y1=\"199.9\" x2=\"136.4\" y2=\"60.1\"/><line x1=\"149.1\" y1=\"199.9\" x2=\"149.1\" y2=\"60.1\"/><line x1=\"161.8\" y1=\"199.9\" x2=\"161.8\" y2=\"60.1\"/><line x1=\"174.5\" y1=\"199.9\" x2=\"174.5\" y2=\"60.1\"/><line x1=\"187.2\" y1=\"199.9\" x2=\"187.2\" y2=\"60.1\"/><line x1=\"199.9\" y1=\"199.9\" x2=\"199.9\" y2=\"60.1\"/><line x1=\"212.6\" y1=\"199.9\" x2=\"212.6\" y2=\"60.1\"/><line x1=\"225.3\" y1=\"199.9\" x2=\"225.3\" y2=\"60.1\"/><line x1=\"238.0\" y1=\"199.9\" x2=\"238.0\" y2=\"60.1\"/><line x1=\"22.0\" y1=\"199.9\" x2=\"238.0\" y2=\"199.9\"/><line x1=\"22.0\" y1=\"187.2\" x2=\"238.0\" y2=\"187.2\"/><line x1=\"22.0\" y1=\"174.5\" x2=\"238.0\" y2=\"174.5\"/><line x1=\"22.0\" y1=\"161.8\" x2=\"238.0\" y2=\"161.8\"/><line x1=\"22.0\" y1=\"149.1\" x2=\"238.0\" y2=\"149.1\"/><line x1=\"22.0\" y1=\"136.4\" x2=\"238.0\" y2=\"136.4\"/><line x1=\"22.0\" y1=\"123.6\" x2=\"238.0\" y2=\"123.6\"/><line x1=\"22.0\" y1=\"110.9\" x2=\"238.0\" y2=\"110.9\"/><line x1=\"22.0\" y1=\"98.2\" x2=\"238.0\" y2=\"98.2\"/><line x1=\"22.0\" y1=\"85.5\" x2=\"238.0\" y2=\"85.5\"/><line x1=\"22.0\" y1=\"72.8\" x2=\"238.0\" y2=\"72.8\"/><line x1=\"22.0\" y1=\"60.1\" x2=\"238.0\" y2=\"60.1\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"22.0\" y1=\"174.5\" x2=\"238.0\" y2=\"174.5\" marker-end=\"url(#ar-ex3d)\"/><text x=\"243.0\" y=\"188.5\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"123.6\" y1=\"199.9\" x2=\"123.6\" y2=\"60.1\" marker-end=\"url(#ar-ex3d)\"/><text x=\"128.6\" y=\"58.1\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text><text x=\"129.6\" y=\"188.5\" font-size=\"10\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></g><line x1=\"174.5\" y1=\"149.1\" x2=\"199.9\" y2=\"110.9\" stroke=\"#111\" stroke-width=\"1.6\"/><line x1=\"136.4\" y1=\"149.1\" x2=\"60.1\" y2=\"98.2\" stroke=\"#111\" stroke-width=\"1.6\"/><polygon points=\"162.7,166.7 167.7,159.3 160.3,154.3 155.3,161.7\" fill=\"none\" stroke=\"#111\" stroke-width=\"1.2\"/><circle cx=\"174.5\" cy=\"149.1\" r=\"4.6\" fill=\"#111\"/><text x=\"182.5\" y=\"137.1\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">P(4, 2)</text><circle cx=\"199.9\" cy=\"110.9\" r=\"4.6\" fill=\"#111\"/><text x=\"147.6\" y=\"98.9\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">Q(6, 5)</text><circle cx=\"136.4\" cy=\"149.1\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"128.4\" y=\"171.1\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">P′(1, 2)</text><circle cx=\"60.1\" cy=\"98.2\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"52.1\" y=\"86.2\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">Q′(−5, 6)</text></svg>",
+       "caption": "第 4 步：3/2 × (−2/3) = −1 → PQ ⟂ P′Q′",
+       "step": 4
+      }
+     ]
     }
    ],
    "pages": [
     [
+     {
+      "id": "eph-ws04-w01",
+      "type": "mc",
+      "topic": "ws04",
+      "unit": 10,
+      "subtopic": "coordinate-transformation",
+      "difficulty": 1,
+      "code": "WS4-W01",
+      "source": "WS04 過渡題（自編）· Level 1 基本平移（單一方向）",
+      "stem": {
+       "text": "If the point $(3,-5)$ is translated leftwards by $4$ units to the point $P$, then the coordinates of $P$ are"
+      },
+      "options": {
+       "A": "$(-1,-5)$",
+       "B": "$(7,-5)$",
+       "C": "$(3,-9)$",
+       "D": "$(3,-1)$"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 先讀方向字，決定動哪個坐標",
+          "en": "Step 1 · Direction tells you which coordinate moves"
+         },
+         "math": "\\text{左右睇 }x\\text{，上下睇 }y",
+         "zh": "平移題第一秒不是計數，而是讀方向：「leftwards（向左）」是水平移動，所以只會改變橫坐標 $x$，$y$ 坐標完全不動，仍然是 $-5$。",
+         "en": "A horizontal translation changes only the x-coordinate; y stays at -5."
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 向左是減，計出新坐標",
+          "en": "Step 2 · Leftwards means subtract"
+         },
+         "math": "x'=3-4=-1,\\quad y'=-5\\ \\Rightarrow\\ P(-1,-5)",
+         "zh": "向左＝數值變小＝用「減」：$3-4=-1$，$y$ 維持 $-5$，所以 $P=(-1,-5)$，答案選 A。",
+         "en": "3 - 4 = -1, so P = (-1, -5). Answer: A.",
+         "highlight": [
+          "(-1,-5)"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "B",
+         "zh": "$(7,-5)$ 是把「向左」誤算成加法（$3+4=7$）。向右（rightwards）才是加，向左（leftwards）一定是減。",
+         "en": "Added instead of subtracted."
+        },
+        {
+         "opt": "C",
+         "zh": "$(3,-9)$ 是把平移算到 $y$ 上（$-5-4=-9$）。左右移動絕對不可以動 $y$。",
+         "en": "Moved in the y-direction instead of the x-direction."
+        }
+       ],
+       "tip": {
+        "zh": "平移口訣：右加左減動 $x$、上加下減動 $y$。題目說動哪邊，另一個坐標就原地不動。",
+        "en": "Right/up adds; left/down subtracts. The other coordinate never changes."
+       }
+      },
+      "answer": "A",
+      "verify": "checked",
+      "figures": [
+       {
+        "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-bw1\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"46.9\" y1=\"238.0\" x2=\"46.9\" y2=\"22.0\"/><line x1=\"63.5\" y1=\"238.0\" x2=\"63.5\" y2=\"22.0\"/><line x1=\"80.2\" y1=\"238.0\" x2=\"80.2\" y2=\"22.0\"/><line x1=\"96.8\" y1=\"238.0\" x2=\"96.8\" y2=\"22.0\"/><line x1=\"113.4\" y1=\"238.0\" x2=\"113.4\" y2=\"22.0\"/><line x1=\"130.0\" y1=\"238.0\" x2=\"130.0\" y2=\"22.0\"/><line x1=\"146.6\" y1=\"238.0\" x2=\"146.6\" y2=\"22.0\"/><line x1=\"163.2\" y1=\"238.0\" x2=\"163.2\" y2=\"22.0\"/><line x1=\"179.8\" y1=\"238.0\" x2=\"179.8\" y2=\"22.0\"/><line x1=\"196.5\" y1=\"238.0\" x2=\"196.5\" y2=\"22.0\"/><line x1=\"213.1\" y1=\"238.0\" x2=\"213.1\" y2=\"22.0\"/><line x1=\"46.9\" y1=\"238.0\" x2=\"213.1\" y2=\"238.0\"/><line x1=\"46.9\" y1=\"221.4\" x2=\"213.1\" y2=\"221.4\"/><line x1=\"46.9\" y1=\"204.8\" x2=\"213.1\" y2=\"204.8\"/><line x1=\"46.9\" y1=\"188.2\" x2=\"213.1\" y2=\"188.2\"/><line x1=\"46.9\" y1=\"171.5\" x2=\"213.1\" y2=\"171.5\"/><line x1=\"46.9\" y1=\"154.9\" x2=\"213.1\" y2=\"154.9\"/><line x1=\"46.9\" y1=\"138.3\" x2=\"213.1\" y2=\"138.3\"/><line x1=\"46.9\" y1=\"121.7\" x2=\"213.1\" y2=\"121.7\"/><line x1=\"46.9\" y1=\"105.1\" x2=\"213.1\" y2=\"105.1\"/><line x1=\"46.9\" y1=\"88.5\" x2=\"213.1\" y2=\"88.5\"/><line x1=\"46.9\" y1=\"71.8\" x2=\"213.1\" y2=\"71.8\"/><line x1=\"46.9\" y1=\"55.2\" x2=\"213.1\" y2=\"55.2\"/><line x1=\"46.9\" y1=\"38.6\" x2=\"213.1\" y2=\"38.6\"/><line x1=\"46.9\" y1=\"22.0\" x2=\"213.1\" y2=\"22.0\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"46.9\" y1=\"88.5\" x2=\"213.1\" y2=\"88.5\" marker-end=\"url(#ar-bw1)\"/><text x=\"218.1\" y=\"102.5\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"113.4\" y1=\"238.0\" x2=\"113.4\" y2=\"22.0\" marker-end=\"url(#ar-bw1)\"/><text x=\"118.4\" y=\"20.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text><text x=\"119.4\" y=\"102.5\" font-size=\"10\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></g><line x1=\"163.2\" y1=\"171.5\" x2=\"96.8\" y2=\"171.5\" stroke=\"#111\" stroke-width=\"1.7\" marker-end=\"url(#ar-bw1)\"/><circle cx=\"163.2\" cy=\"171.5\" r=\"4.6\" fill=\"#111\"/><text x=\"171.2\" y=\"145.5\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">(3, −5)</text><circle cx=\"96.8\" cy=\"171.5\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"104.8\" y=\"131.5\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">P(−1, −5)</text><text x=\"115.0\" y=\"148.3\" font-size=\"10.5\" fill=\"#666\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">左 4</text></svg>",
+        "caption": "向左 4 單位：x 減 4，y 不變（3, −5）→ P(−1, −5)"
+       }
+      ]
+     },
+     {
+      "id": "eph-ws04-w02",
+      "type": "mc",
+      "topic": "ws04",
+      "unit": 10,
+      "subtopic": "coordinate-transformation",
+      "difficulty": 1,
+      "code": "WS4-W02",
+      "source": "WS04 過渡題（自編）· Level 2 對坐標軸反射（只改一個號）",
+      "stem": {
+       "text": "If the point $(-4,7)$ is reflected with respect to the $x$-axis to the point $Q$, then the coordinates of $Q$ are"
+      },
+      "options": {
+       "A": "$(4,7)$",
+       "B": "$(-4,-7)$",
+       "C": "$(4,-7)$",
+       "D": "$(7,-4)$"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 鏡射原則：對哪條軸，哪條就不動",
+          "en": "Step 1 · The named axis stays unchanged"
+         },
+         "math": "\\text{對 }x\\text{ 軸反射：}(x,y)\\to(x,-y)",
+         "zh": "反射就是照鏡。把鏡子放在水平的 $x$ 軸上，原本在上面的點會翻到下面，左右位置完全不變。所以「對 $x$ 軸反射：$x$ 不動，只改 $y$ 的正負號」。",
+         "en": "Reflecting across the x-axis keeps x and changes the sign of y."
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 只把 y 變號",
+          "en": "Step 2 · Change the sign of y"
+         },
+         "math": "(-4,7)\\to(-4,-7)",
+         "zh": "$x$ 仍然是 $-4$；$y$ 由 $7$ 變成 $-7$，所以 $Q=(-4,-7)$，答案選 B。",
+         "en": "x stays -4 and y becomes -7, so Q = (-4, -7). Answer: B.",
+         "highlight": [
+          "(-4,-7)"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "A",
+         "zh": "$(4,7)$ 是改了 $x$ 的符號 —— 那是「對 $y$ 軸反射」的結果。這是最多同學記反的一個位。",
+         "en": "That is the result of reflecting across the y-axis."
+        },
+        {
+         "opt": "C",
+         "zh": "$(4,-7)$ 是把兩個坐標都變號 —— 那是「繞原點旋轉 $180^{\\circ}$」的結果。",
+         "en": "Both signs flipped — that is a 180-degree rotation."
+        }
+       ],
+       "tip": {
+        "zh": "口訣：題目提到哪條軸，那條軸的坐標就不改（對 $x$ 軸反射不改 $x$；對 $y$ 軸反射不改 $y$），只改另一個。",
+        "en": "Keep the named axis fixed and flip only the other coordinate."
+       }
+      },
+      "answer": "B",
+      "verify": "checked",
+      "figures": [
+       {
+        "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-bw2\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"58.0\" y1=\"238.0\" x2=\"58.0\" y2=\"22.0\"/><line x1=\"70.0\" y1=\"238.0\" x2=\"70.0\" y2=\"22.0\"/><line x1=\"82.0\" y1=\"238.0\" x2=\"82.0\" y2=\"22.0\"/><line x1=\"94.0\" y1=\"238.0\" x2=\"94.0\" y2=\"22.0\"/><line x1=\"106.0\" y1=\"238.0\" x2=\"106.0\" y2=\"22.0\"/><line x1=\"118.0\" y1=\"238.0\" x2=\"118.0\" y2=\"22.0\"/><line x1=\"130.0\" y1=\"238.0\" x2=\"130.0\" y2=\"22.0\"/><line x1=\"142.0\" y1=\"238.0\" x2=\"142.0\" y2=\"22.0\"/><line x1=\"154.0\" y1=\"238.0\" x2=\"154.0\" y2=\"22.0\"/><line x1=\"166.0\" y1=\"238.0\" x2=\"166.0\" y2=\"22.0\"/><line x1=\"178.0\" y1=\"238.0\" x2=\"178.0\" y2=\"22.0\"/><line x1=\"190.0\" y1=\"238.0\" x2=\"190.0\" y2=\"22.0\"/><line x1=\"202.0\" y1=\"238.0\" x2=\"202.0\" y2=\"22.0\"/><line x1=\"58.0\" y1=\"238.0\" x2=\"202.0\" y2=\"238.0\"/><line x1=\"58.0\" y1=\"226.0\" x2=\"202.0\" y2=\"226.0\"/><line x1=\"58.0\" y1=\"214.0\" x2=\"202.0\" y2=\"214.0\"/><line x1=\"58.0\" y1=\"202.0\" x2=\"202.0\" y2=\"202.0\"/><line x1=\"58.0\" y1=\"190.0\" x2=\"202.0\" y2=\"190.0\"/><line x1=\"58.0\" y1=\"178.0\" x2=\"202.0\" y2=\"178.0\"/><line x1=\"58.0\" y1=\"166.0\" x2=\"202.0\" y2=\"166.0\"/><line x1=\"58.0\" y1=\"154.0\" x2=\"202.0\" y2=\"154.0\"/><line x1=\"58.0\" y1=\"142.0\" x2=\"202.0\" y2=\"142.0\"/><line x1=\"58.0\" y1=\"130.0\" x2=\"202.0\" y2=\"130.0\"/><line x1=\"58.0\" y1=\"118.0\" x2=\"202.0\" y2=\"118.0\"/><line x1=\"58.0\" y1=\"106.0\" x2=\"202.0\" y2=\"106.0\"/><line x1=\"58.0\" y1=\"94.0\" x2=\"202.0\" y2=\"94.0\"/><line x1=\"58.0\" y1=\"82.0\" x2=\"202.0\" y2=\"82.0\"/><line x1=\"58.0\" y1=\"70.0\" x2=\"202.0\" y2=\"70.0\"/><line x1=\"58.0\" y1=\"58.0\" x2=\"202.0\" y2=\"58.0\"/><line x1=\"58.0\" y1=\"46.0\" x2=\"202.0\" y2=\"46.0\"/><line x1=\"58.0\" y1=\"34.0\" x2=\"202.0\" y2=\"34.0\"/><line x1=\"58.0\" y1=\"22.0\" x2=\"202.0\" y2=\"22.0\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"58.0\" y1=\"130.0\" x2=\"202.0\" y2=\"130.0\" marker-end=\"url(#ar-bw2)\"/><text x=\"207.0\" y=\"144.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"166.0\" y1=\"238.0\" x2=\"166.0\" y2=\"22.0\" marker-end=\"url(#ar-bw2)\"/><text x=\"171.0\" y=\"20.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text><text x=\"172.0\" y=\"144.0\" font-size=\"10\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></g><line x1=\"58.0\" y1=\"130.0\" x2=\"202.0\" y2=\"130.0\" stroke=\"#111\" stroke-width=\"2.6\"/><text x=\"173.2\" y=\"109.6\" font-size=\"11.0\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">鏡軸</text><line x1=\"118.0\" y1=\"46.0\" x2=\"118.0\" y2=\"214.0\" stroke=\"#666\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/><circle cx=\"118.0\" cy=\"46.0\" r=\"4.6\" fill=\"#111\"/><text x=\"126.0\" y=\"34.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">(−4, 7)</text><circle cx=\"118.0\" cy=\"214.0\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"126.0\" y=\"234.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">(−4, −7)</text><text x=\"123.4\" y=\"89.2\" font-size=\"10.5\" fill=\"#666\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">7</text><text x=\"123.4\" y=\"170.8\" font-size=\"10.5\" fill=\"#666\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">7</text></svg>",
+        "caption": "對 x 軸反射：x 不變、y 變號（−4, 7）→ (−4, −7)"
+       }
+      ]
+     },
+     {
+      "id": "eph-ws04-w03",
+      "type": "mc",
+      "topic": "ws04",
+      "unit": 10,
+      "subtopic": "coordinate-transformation",
+      "difficulty": 1,
+      "code": "WS4-W03",
+      "source": "WS04 過渡題（自編）· Level 3 繞原點逆時針旋轉 90°",
+      "stem": {
+       "text": "If the point $(2,5)$ is rotated anticlockwise about the origin through $90^{\\circ}$ to the point $R$, then the coordinates of $R$ are"
+      },
+      "options": {
+       "A": "$(-5,2)$",
+       "B": "$(5,-2)$",
+       "C": "$(-2,-5)$",
+       "D": "$(5,2)$"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 90°／270° 的第一步：數字調位",
+          "en": "Step 1 · Swap the two numbers"
+         },
+         "math": "(x,y)\\to(y,x)\\ \\text{再判斷正負號}",
+         "zh": "轉 $90^{\\circ}$ 或 $270^{\\circ}$，第一步必定是把橫、縱坐標的「數值」對調：$(2,5)$ 先變成 $(5,2)$。這一步只是調位，正負號之後才處理。",
+         "en": "For a 90 or 270 degree rotation, first swap the x and y numbers."
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 逆時針 90° 的正負號規則",
+          "en": "Step 2 · Sign rule for anticlockwise 90°"
+         },
+         "math": "\\text{逆 }90^{\\circ}:(x,y)\\to(-y,x)",
+         "zh": "公式是 $(x,y)\\to(-y,x)$：原本的 $y$ 是 $5$，搬到前面要加負號變成 $-5$；原本的 $x$ 是 $2$，保持原號放到後面。所以 $R=(-5,2)$，答案選 A。",
+         "en": "Anticlockwise 90°: (x, y) → (-y, x), so R = (-5, 2). Answer: A.",
+         "highlight": [
+          "(-5,2)"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "B",
+         "zh": "$(5,-2)$ 是「順時針 $90^{\\circ}$」的公式 $(y,-x)$。記法：逆時針是「前面的 $y$ 變號」，順時針是「後面的 $x$ 變號」。",
+         "en": "That is the clockwise 90° rule (y, -x)."
+        },
+        {
+         "opt": "C",
+         "zh": "$(-2,-5)$ 完全沒有調位，只是加了負號 —— 這不是 $90^{\\circ}$ 旋轉。",
+         "en": "No swap was done."
+        }
+       ],
+       "tip": {
+        "zh": "用象限自我檢查：$(2,5)$ 在第一象限（右上），逆時針轉四分之一圈必定落在第二象限（左上），而左上的坐標一定是「負 $x$、正 $y$」—— 一眼就鎖定 $(-5,2)$。",
+        "en": "Quadrant check: from Quadrant I anticlockwise by 90° must land in Quadrant II (−, +)."
+       }
+      },
+      "answer": "A",
+      "verify": "checked",
+      "figures": [
+       {
+        "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-bw3\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"29.7\" y1=\"238.0\" x2=\"29.7\" y2=\"22.0\"/><line x1=\"45.1\" y1=\"238.0\" x2=\"45.1\" y2=\"22.0\"/><line x1=\"60.6\" y1=\"238.0\" x2=\"60.6\" y2=\"22.0\"/><line x1=\"76.0\" y1=\"238.0\" x2=\"76.0\" y2=\"22.0\"/><line x1=\"91.4\" y1=\"238.0\" x2=\"91.4\" y2=\"22.0\"/><line x1=\"106.9\" y1=\"238.0\" x2=\"106.9\" y2=\"22.0\"/><line x1=\"122.3\" y1=\"238.0\" x2=\"122.3\" y2=\"22.0\"/><line x1=\"137.7\" y1=\"238.0\" x2=\"137.7\" y2=\"22.0\"/><line x1=\"153.1\" y1=\"238.0\" x2=\"153.1\" y2=\"22.0\"/><line x1=\"168.6\" y1=\"238.0\" x2=\"168.6\" y2=\"22.0\"/><line x1=\"184.0\" y1=\"238.0\" x2=\"184.0\" y2=\"22.0\"/><line x1=\"199.4\" y1=\"238.0\" x2=\"199.4\" y2=\"22.0\"/><line x1=\"214.9\" y1=\"238.0\" x2=\"214.9\" y2=\"22.0\"/><line x1=\"230.3\" y1=\"238.0\" x2=\"230.3\" y2=\"22.0\"/><line x1=\"29.7\" y1=\"238.0\" x2=\"230.3\" y2=\"238.0\"/><line x1=\"29.7\" y1=\"222.6\" x2=\"230.3\" y2=\"222.6\"/><line x1=\"29.7\" y1=\"207.1\" x2=\"230.3\" y2=\"207.1\"/><line x1=\"29.7\" y1=\"191.7\" x2=\"230.3\" y2=\"191.7\"/><line x1=\"29.7\" y1=\"176.3\" x2=\"230.3\" y2=\"176.3\"/><line x1=\"29.7\" y1=\"160.9\" x2=\"230.3\" y2=\"160.9\"/><line x1=\"29.7\" y1=\"145.4\" x2=\"230.3\" y2=\"145.4\"/><line x1=\"29.7\" y1=\"130.0\" x2=\"230.3\" y2=\"130.0\"/><line x1=\"29.7\" y1=\"114.6\" x2=\"230.3\" y2=\"114.6\"/><line x1=\"29.7\" y1=\"99.1\" x2=\"230.3\" y2=\"99.1\"/><line x1=\"29.7\" y1=\"83.7\" x2=\"230.3\" y2=\"83.7\"/><line x1=\"29.7\" y1=\"68.3\" x2=\"230.3\" y2=\"68.3\"/><line x1=\"29.7\" y1=\"52.9\" x2=\"230.3\" y2=\"52.9\"/><line x1=\"29.7\" y1=\"37.4\" x2=\"230.3\" y2=\"37.4\"/><line x1=\"29.7\" y1=\"22.0\" x2=\"230.3\" y2=\"22.0\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"29.7\" y1=\"145.4\" x2=\"230.3\" y2=\"145.4\" marker-end=\"url(#ar-bw3)\"/><text x=\"235.3\" y=\"159.4\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"153.1\" y1=\"238.0\" x2=\"153.1\" y2=\"22.0\" marker-end=\"url(#ar-bw3)\"/><text x=\"158.1\" y=\"20.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text></g><line x1=\"153.1\" y1=\"145.4\" x2=\"184.0\" y2=\"68.3\" stroke=\"#666\" stroke-width=\"1.1\"/><line x1=\"153.1\" y1=\"145.4\" x2=\"76.0\" y2=\"114.6\" stroke=\"#666\" stroke-width=\"1.1\"/><path d=\"M 169.5 104.6 A 44.0 44.0 0 0 0 112.3 129.1\" fill=\"none\" stroke=\"#111\" stroke-width=\"1.5\" marker-end=\"url(#ar-bw3)\"/><text x=\"129.9\" y=\"95.2\" font-size=\"11\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">90°</text><circle cx=\"184.0\" cy=\"68.3\" r=\"4.6\" fill=\"#111\"/><text x=\"192.0\" y=\"58.3\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">(2, 5)</text><circle cx=\"76.0\" cy=\"114.6\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"68.0\" y=\"102.6\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">R(−5, 2)</text><text x=\"145.1\" y=\"137.4\" font-size=\"10.0\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></svg>",
+        "caption": "逆時針 90°：(x, y) → (−y, x)，(2, 5) → R(−5, 2)"
+       }
+      ]
+     }
+    ],
+    [
+     {
+      "id": "eph-ws04-w04",
+      "type": "mc",
+      "topic": "ws04",
+      "unit": 10,
+      "subtopic": "coordinate-transformation",
+      "difficulty": 1,
+      "code": "WS4-W04",
+      "source": "WS04 過渡題（自編）· Level 4 繞原點旋轉 180°（兩個號一齊改）",
+      "stem": {
+       "text": "If the point $(-6,1)$ is rotated about the origin through $180^{\\circ}$ to the point $S$, then the coordinates of $S$ are"
+      },
+      "options": {
+       "A": "$(6,1)$",
+       "B": "$(-6,-1)$",
+       "C": "$(6,-1)$",
+       "D": "$(1,-6)$"
+      },
+      "review": null,
+      "solution": {
+       "steps": [
+        {
+         "title": {
+          "zh": "第 1 步 · 認清 180° 的特徵：不調位",
+          "en": "Step 1 · 180° does not swap"
+         },
+         "math": "\\text{轉 }180^{\\circ}:(x,y)\\to(-x,-y)",
+         "zh": "轉 $180^{\\circ}$ 就是轉半個圈，落點在完全相反的方向：位置不用對調，純粹「兩個坐標一齊變號」。順時針或逆時針轉 $180^{\\circ}$，結果都一樣。",
+         "en": "Rotating 180° inverts both signs without swapping; direction does not matter."
+        },
+        {
+         "title": {
+          "zh": "第 2 步 · 逐個坐標變號",
+          "en": "Step 2 · Invert both signs"
+         },
+         "math": "x:-6\\to 6,\\qquad y:1\\to -1\\ \\Rightarrow\\ S(6,-1)",
+         "zh": "$x$ 由 $-6$ 變成 $6$；$y$ 由 $1$ 變成 $-1$。所以 $S=(6,-1)$，答案選 C。驗算：$(6,-1)$ 與 $(-6,1)$ 到原點的距離一樣（都是 $\\sqrt{37}$），方向剛好相反 ✓。",
+         "en": "(-6, 1) becomes (6, -1): the image is directly opposite. Answer: C.",
+         "highlight": [
+          "(6,-1)"
+         ]
+        }
+       ],
+       "traps": [
+        {
+         "opt": "A",
+         "zh": "$(6,1)$ 只改了 $x$ 的符號，忘記 $y$ 也要變號。",
+         "en": "Forgot to flip the sign of y."
+        },
+        {
+         "opt": "D",
+         "zh": "$(1,-6)$ 把數字調了位 —— 只有 $90^{\\circ}$ 與 $270^{\\circ}$ 才需要調位，$180^{\\circ}$ 一定不調位。",
+         "en": "Swapped the coordinates; only 90°/270° need a swap."
+        }
+       ],
+       "tip": {
+        "zh": "$180^{\\circ}$ 旋轉是送分題：不用理會順時針還是逆時針，看到 $180^{\\circ}$ 就把兩個坐標的正負號一齊倒轉。",
+        "en": "For 180°, just invert both signs — the direction is irrelevant."
+       }
+      },
+      "answer": "C",
+      "verify": "checked",
+      "figures": [
+       {
+        "svg": "<svg viewBox=\"0 0 260 260\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\"><defs><marker id=\"ar-bw4\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6.5\" markerHeight=\"6.5\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#111\"/></marker></defs><g stroke=\"#E3E3E3\" stroke-width=\"1\"><line x1=\"22.0\" y1=\"190.0\" x2=\"22.0\" y2=\"70.0\"/><line x1=\"34.0\" y1=\"190.0\" x2=\"34.0\" y2=\"70.0\"/><line x1=\"46.0\" y1=\"190.0\" x2=\"46.0\" y2=\"70.0\"/><line x1=\"58.0\" y1=\"190.0\" x2=\"58.0\" y2=\"70.0\"/><line x1=\"70.0\" y1=\"190.0\" x2=\"70.0\" y2=\"70.0\"/><line x1=\"82.0\" y1=\"190.0\" x2=\"82.0\" y2=\"70.0\"/><line x1=\"94.0\" y1=\"190.0\" x2=\"94.0\" y2=\"70.0\"/><line x1=\"106.0\" y1=\"190.0\" x2=\"106.0\" y2=\"70.0\"/><line x1=\"118.0\" y1=\"190.0\" x2=\"118.0\" y2=\"70.0\"/><line x1=\"130.0\" y1=\"190.0\" x2=\"130.0\" y2=\"70.0\"/><line x1=\"142.0\" y1=\"190.0\" x2=\"142.0\" y2=\"70.0\"/><line x1=\"154.0\" y1=\"190.0\" x2=\"154.0\" y2=\"70.0\"/><line x1=\"166.0\" y1=\"190.0\" x2=\"166.0\" y2=\"70.0\"/><line x1=\"178.0\" y1=\"190.0\" x2=\"178.0\" y2=\"70.0\"/><line x1=\"190.0\" y1=\"190.0\" x2=\"190.0\" y2=\"70.0\"/><line x1=\"202.0\" y1=\"190.0\" x2=\"202.0\" y2=\"70.0\"/><line x1=\"214.0\" y1=\"190.0\" x2=\"214.0\" y2=\"70.0\"/><line x1=\"226.0\" y1=\"190.0\" x2=\"226.0\" y2=\"70.0\"/><line x1=\"238.0\" y1=\"190.0\" x2=\"238.0\" y2=\"70.0\"/><line x1=\"22.0\" y1=\"190.0\" x2=\"238.0\" y2=\"190.0\"/><line x1=\"22.0\" y1=\"178.0\" x2=\"238.0\" y2=\"178.0\"/><line x1=\"22.0\" y1=\"166.0\" x2=\"238.0\" y2=\"166.0\"/><line x1=\"22.0\" y1=\"154.0\" x2=\"238.0\" y2=\"154.0\"/><line x1=\"22.0\" y1=\"142.0\" x2=\"238.0\" y2=\"142.0\"/><line x1=\"22.0\" y1=\"130.0\" x2=\"238.0\" y2=\"130.0\"/><line x1=\"22.0\" y1=\"118.0\" x2=\"238.0\" y2=\"118.0\"/><line x1=\"22.0\" y1=\"106.0\" x2=\"238.0\" y2=\"106.0\"/><line x1=\"22.0\" y1=\"94.0\" x2=\"238.0\" y2=\"94.0\"/><line x1=\"22.0\" y1=\"82.0\" x2=\"238.0\" y2=\"82.0\"/><line x1=\"22.0\" y1=\"70.0\" x2=\"238.0\" y2=\"70.0\"/></g><g stroke=\"#333\" stroke-width=\"1.3\" fill=\"#333\"><line x1=\"22.0\" y1=\"130.0\" x2=\"238.0\" y2=\"130.0\" marker-end=\"url(#ar-bw4)\"/><text x=\"243.0\" y=\"144.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">x</text><line x1=\"130.0\" y1=\"190.0\" x2=\"130.0\" y2=\"70.0\" marker-end=\"url(#ar-bw4)\"/><text x=\"135.0\" y=\"68.0\" font-size=\"11\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">y</text></g><line x1=\"130.0\" y1=\"130.0\" x2=\"58.0\" y2=\"118.0\" stroke=\"#666\" stroke-width=\"1.1\"/><line x1=\"130.0\" y1=\"130.0\" x2=\"202.0\" y2=\"142.0\" stroke=\"#666\" stroke-width=\"1.1\"/><path d=\"M 90.5 123.4 A 40.0 40.0 0 0 0 169.5 136.6\" fill=\"none\" stroke=\"#111\" stroke-width=\"1.5\" marker-end=\"url(#ar-bw4)\"/><text x=\"121.0\" y=\"188.3\" font-size=\"11\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">180°</text><circle cx=\"58.0\" cy=\"118.0\" r=\"4.6\" fill=\"#111\"/><text x=\"50.0\" y=\"106.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">(−6, 1)</text><circle cx=\"202.0\" cy=\"142.0\" r=\"4.6\" fill=\"#fff\" stroke=\"#111\" stroke-width=\"1.7\"/><text x=\"143.4\" y=\"154.0\" font-size=\"11.5\" fill=\"#111\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">S(6, −1)</text><text x=\"122.0\" y=\"122.0\" font-size=\"10.0\" fill=\"#333\" font-family=\"system-ui, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif\">O</text></svg>",
+        "caption": "180° 旋轉：(x, y) → (−x, −y)，(−6, 1) → S(6, −1)"
+       }
+      ]
+     },
      {
       "id": "eph-ws04-q01",
       "type": "mc",
@@ -654,7 +993,9 @@ window.LEARN_TOPIC_WS04 = {
         "caption": "對 x = 2 反射：A 與 B 的距離 = 2 + 2 = 4"
        }
       ]
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws04-q03",
       "type": "mc",
@@ -735,9 +1076,7 @@ window.LEARN_TOPIC_WS04 = {
         "caption": "對 x = −2 反射：影像的 x 座標 = −7"
        }
       ]
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws04-q04",
       "type": "mc",
@@ -900,7 +1239,9 @@ window.LEARN_TOPIC_WS04 = {
         "caption": "第二步：向左 4 單位 → R 的 x 座標 = 1"
        }
       ]
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws04-q06",
       "type": "mc",
@@ -976,9 +1317,7 @@ window.LEARN_TOPIC_WS04 = {
         "caption": "第二步：逆時針 180°（兩個座標都變號）→ F(−9, 8)"
        }
       ]
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws04-q07",
       "type": "mc",
@@ -1154,7 +1493,9 @@ window.LEARN_TOPIC_WS04 = {
         "caption": "第二步：對 y 軸反射 → T 的 y 座標 = 1"
        }
       ]
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws04-q09",
       "type": "mc",
@@ -1239,9 +1580,7 @@ window.LEARN_TOPIC_WS04 = {
         "caption": "第二步：對 x = −4 反射 → 影像 = (−2, 2)"
        }
       ]
-     }
-    ],
-    [
+     },
      {
       "id": "eph-ws04-q10",
       "type": "mc",
@@ -1326,7 +1665,9 @@ window.LEARN_TOPIC_WS04 = {
         "caption": "第二步：向左 2 單位 → F(1, 2)"
        }
       ]
-     },
+     }
+    ],
+    [
      {
       "id": "eph-ws04-q11",
       "type": "mc",
@@ -1511,9 +1852,9 @@ window.LEARN_TOPIC_WS04 = {
   }
  ],
  "stats": {
-  "mc": 12,
+  "mc": 16,
   "long": 3,
   "cards": 6,
-  "pages": 4
+  "pages": 6
  }
 };

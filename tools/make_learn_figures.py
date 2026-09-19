@@ -16,7 +16,9 @@
   ▬ 粗黑線   = 鏡軸（反射軸）  ↷ 弧形箭嘴 = 旋轉方向
 
 輸出
-  data/learn/figures.json   { "<card id>": "<svg …>…</svg>" }（自動產生，勿手改）
+  data/learn/figures.json   { "<id>": [ {"svg": …, "caption": …, "step": ?}, … ] }（自動產生，勿手改）
+  概念卡／MC 題唔會有 step → 前端一次過顯示全部圖；
+  長題示範會有 step（1 起算）→ 圖跟住題解第 step 步出場（逐步揭示，唔會一次過爆出來）。
 改完圖要跑：
   python tools/make_learn_figures.py
   python tools/learn_figure_check.py        （自動驗標籤出界／互疊／壓點）
@@ -383,6 +385,223 @@ def _ang(x, y) -> float:
     return math.degrees(math.atan2(y, x))
 
 
+# ──────────────────────────────────────────────────────────────────────────
+# 長題示範（WS04）：一幅圖配題解的一步
+#   每幅圖都標明 step（1 起算）＝題解的第幾步；前端逐步揭示題解時，
+#   圖就會跟住那一步出場，弱生唔會一次過被兩三個變換淹沒。
+# ──────────────────────────────────────────────────────────────────────────
+def _du(f: Frame, px_off: float) -> float:
+    """把像素偏移換成資料單位（每幅圖縮放不同，唔可以寫死）。"""
+    return px_off / f.scale
+
+
+def _right_angle(f: Frame, pt, d1, d2, k: float = 0.7) -> None:
+    """在 pt 畫直角標記；d1、d2 是兩條線的單位方向向量。"""
+    a = (pt[0] + d1[0] * k, pt[1] + d1[1] * k)
+    b = (pt[0] + (d1[0] + d2[0]) * k, pt[1] + (d1[1] + d2[1]) * k)
+    c = (pt[0] + d2[0] * k, pt[1] + d2[1] * k)
+    f.parts.append('<polygon points="%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f" fill="none" '
+                   'stroke="%s" stroke-width="1.2"/>'
+                   % (f.px(pt[0]), f.py(pt[1]), f.px(a[0]), f.py(a[1]),
+                      f.px(b[0]), f.py(b[1]), f.px(c[0]), f.py(c[1]), INK))
+
+
+def long_ex01_s1() -> str:
+    """EX1 第 1 步：A(9, −13) 逆時針轉 90° → A′(13, 9)"""
+    f = Frame(-2, 15, -15, 11, key="ex1a", show_o=False)
+    du = _du(f, 8)
+    f.seg(0, 0, 9, -13, color=MID, width=1.1)
+    f.seg(0, 0, 13, 9, color=MID, width=1.1)
+    f.arc(46, _ang(9, -13), _ang(13, 9), "90°")
+    f.point(9, -13, "A(9, −13)")
+    f.point(13, 9, "A′(13, 9)", hollow=True, dx=-8, dy=-12)
+    f.text(-du, du, "O", size=10, color=AXIS)      # 手動放 O，避開弧形標籤
+    return f.svg()
+
+
+def long_ex01_s2() -> str:
+    """EX1 第 2 步：B(−7, 5) 對 y 軸反射 → B′(7, 5)"""
+    f = Frame(-10, 10, -5, 10, key="ex1b")
+    f.mirror_v(0)                                  # 粗黑線＝鏡軸（就係 y 軸）
+    f.seg(-7, 5, 7, 5, dash="4 3")
+    f.point(-7, 5, "B(−7, 5)", dy=-30)
+    f.point(7, 5, "B′(7, 5)", hollow=True, dy=24)
+    f.text(-9.5, 9.5, "y 軸（鏡軸）", size=11)
+    f.text(-3.5, 6.0, "7", size=10.5, color=MID)
+    f.text(3.3, 6.0, "7", size=10.5, color=MID)
+    return f.svg()
+
+
+def long_ex01_s3() -> str:
+    """EX1 第 3 步：A′B′ 的斜率（水平 6、垂直 4）"""
+    f = Frame(-2, 16, -2, 12, key="ex1c")
+    f.line_by_eq(2.0 / 3.0, 1.0 / 3.0)
+    f.seg(7, 5, 13, 5, dash="3 2.5")
+    f.seg(13, 5, 13, 9, dash="3 2.5")
+    f.point(13, 9, "A′(13, 9)", dx=8, dy=-12)
+    f.point(7, 5, "B′(7, 5)", dx=8, dy=-12)
+    f.text(9.4, 4.6, "6", size=10.5, color=MID)
+    f.text(13.3, 7.2, "4", size=10.5, color=MID)
+    return f.svg()
+
+
+def long_ex02_s1() -> str:
+    """EX2 第 1 步：順 270° ＝ 逆 90°，R(−5, −3) → R′(3, −5)"""
+    f = Frame(-9, 7, -9, 4, key="ex2a")
+    f.seg(0, 0, -5, -3, color=MID, width=1.1)
+    f.seg(0, 0, 3, -5, color=MID, width=1.1)
+    f.arc(44, _ang(-5, -3), _ang(3, -5), "90°")
+    f.point(-5, -3, "R(−5, −3)", dx=-8, dy=-12)
+    f.point(3, -5, "R′(3, −5)", hollow=True, dx=-8, dy=20)
+    return f.svg()
+
+
+def long_ex02_s2() -> str:
+    """EX2 第 2 步：R′ 與 S′（旋轉 + 平移）"""
+    f = Frame(-16, 6, -8, 9, key="ex2b")
+    f.seg(0, 0, -5, -3, color=MID, width=1.1, dash="3 2.5")
+    f.seg(0, 0, 3, -5, color=MID, width=1.1, dash="3 2.5")
+    f.arrow(0, 5, -13, 5)                          # S 向左 13
+    f.point(-5, -3, "R(−5, −3)", dx=-8, dy=-14)
+    f.point(3, -5, "R′(3, −5)", hollow=True, dx=8, dy=10)
+    f.point(0, 5, "S(0, 5)", dx=8, dy=-10)
+    f.point(-13, 5, "S′(−13, 5)", hollow=True, dx=-8, dy=-10)
+    f.text(-8.5, 4.1, "左 13", size=10.5, color=MID)
+    return f.svg()
+
+
+def long_ex02_s3() -> str:
+    """EX2 第 3 步：RS 與 R′S′ 的斜率（RS 畫斜率三角形 5、8）"""
+    f = Frame(-16, 6, -8, 9, key="ex2c")
+    f.seg(-5, -3, 0, 5, color=INK, width=1.6)      # RS
+    f.seg(3, -5, -13, 5, color=INK, width=1.6)     # R′S′
+    f.seg(-5, -3, 0, -3, dash="3 2.5")             # 水平 5
+    f.seg(0, -3, 0, 5, dash="3 2.5")               # 垂直 8
+    f.point(-5, -3, "R(−5, −3)", dx=-8, dy=-10)
+    f.point(0, 5, "S(0, 5)", dx=8, dy=-10)
+    f.point(3, -5, "R′(3, −5)", hollow=True, dx=8, dy=12)
+    f.point(-13, 5, "S′(−13, 5)", hollow=True, dx=-8, dy=-10)
+    f.text(-2.5, -3.9, "5", size=10.5, color=MID)
+    f.text(0.4, 1.0, "8", size=10.5, color=MID)
+    return f.svg()
+
+
+def long_ex02_s4() -> str:
+    """EX2 第 4 步：兩斜率相乘 = −1 → RS ⟂ R′S′（畫直角標記）"""
+    f = Frame(-16, 6, -8, 9, key="ex2d")
+    f.seg(-5, -3, 0, 5, color=INK, width=1.6)
+    f.seg(3, -5, -13, 5, color=INK, width=1.6)
+    _right_angle(f, (-3.652, -0.843), (0.530, 0.848), (-0.848, 0.530))
+    f.point(-5, -3, "R(−5, −3)", dx=-8, dy=-10)
+    f.point(0, 5, "S(0, 5)", dx=8, dy=-10)
+    f.point(3, -5, "R′(3, −5)", hollow=True, dx=8, dy=12)
+    f.point(-13, 5, "S′(−13, 5)", hollow=True, dx=-8, dy=-10)
+    return f.svg()
+
+
+def long_ex03_s1() -> str:
+    """EX3 第 1 步：P(4, 2) 向左 3 單位 → P′(1, 2)"""
+    f = Frame(-2, 7, -2, 5, key="ex3a")
+    f.arrow(4, 2, 1, 2)
+    f.point(4, 2, "P(4, 2)", dx=8, dy=-12)
+    f.point(1, 2, "P′(1, 2)", hollow=True, dx=-8, dy=-12)
+    f.text(2.4, 1.1, "左 3", size=10.5, color=MID)
+    return f.svg()
+
+
+def long_ex03_s2() -> str:
+    """EX3 第 2 步：Q(6, 5) 逆時針轉 90° → Q′(−5, 6)"""
+    f = Frame(-8, 8, 0, 8, key="ex3b")
+    f.seg(0, 0, 6, 5, color=MID, width=1.1)
+    f.seg(0, 0, -5, 6, color=MID, width=1.1)
+    f.arc(44, _ang(6, 5), _ang(-5, 6), "90°")
+    f.point(6, 5, "Q(6, 5)", dx=8, dy=-12)
+    f.point(-5, 6, "Q′(−5, 6)", hollow=True, dx=-8, dy=-12)
+    return f.svg()
+
+
+def long_ex03_s3() -> str:
+    """EX3 第 3 步：PQ 與 P′Q′ 的斜率（PQ 畫斜率三角形 2、3）"""
+    f = Frame(-8, 9, -2, 9, key="ex3c")
+    f.seg(4, 2, 6, 5, color=INK, width=1.6)        # PQ
+    f.seg(1, 2, -5, 6, color=INK, width=1.6)       # P′Q′
+    f.seg(4, 2, 6, 2, dash="3 2.5")                # 水平 2
+    f.seg(6, 2, 6, 5, dash="3 2.5")                # 垂直 3
+    f.point(4, 2, "P(4, 2)", dx=8, dy=14)
+    f.point(6, 5, "Q(6, 5)", dx=8, dy=-12)
+    f.point(1, 2, "P′(1, 2)", hollow=True, dx=-8, dy=-12)
+    f.point(-5, 6, "Q′(−5, 6)", hollow=True, dx=-8, dy=-12)
+    f.text(5.0, 2.9, "2", size=10.5, color=MID)
+    f.text(6.35, 3.4, "3", size=10.5, color=MID)
+    return f.svg()
+
+
+def long_ex03_s4() -> str:
+    """EX3 第 4 步：兩斜率相乘 = −1 → PQ ⟂ P′Q′（畫直角標記）"""
+    f = Frame(-8, 9, -2, 9, key="ex3d")
+    f.seg(4, 2, 6, 5, color=INK, width=1.6)
+    f.seg(1, 2, -5, 6, color=INK, width=1.6)
+    _right_angle(f, (3.077, 0.615), (2 / 3.606, 3 / 3.606), (-6 / 7.211, 4 / 7.211))
+    f.point(4, 2, "P(4, 2)", dx=8, dy=-12)
+    f.point(6, 5, "Q(6, 5)", dx=8, dy=-12)
+    f.point(1, 2, "P′(1, 2)", hollow=True, dx=-8, dy=22)
+    f.point(-5, 6, "Q′(−5, 6)", hollow=True, dx=-8, dy=-12)
+    return f.svg()
+
+
+# ──────────────────────────────────────────────────────────────────────────
+# WS04 過渡題（Bridging）：單一動作各一幅，先建立「左減右加」、「對邊軸反射」、
+# 「90° 調位變號」、「180° 兩個號一齊改」的直覺。
+# ──────────────────────────────────────────────────────────────────────────
+def bridge_ws04_w1() -> str:
+    """W01 平移：向左 4 單位 (3, −5) → P(−1, −5)"""
+    f = Frame(-4, 6, -9, 4, key="bw1")
+    f.arrow(3, -5, -1, -5)
+    f.point(3, -5, "(3, −5)", dy=-26)
+    f.point(-1, -5, "P(−1, −5)", hollow=True, dy=-40)
+    f.text(0.1, -3.6, "左 4", size=10.5, color=MID)
+    return f.svg()
+
+
+def bridge_ws04_w2() -> str:
+    """W02 對 x 軸反射：(−4, 7) → (−4, −7)"""
+    f = Frame(-9, 3, -9, 9, key="bw2")
+    f.seg(f.xmin, 0, f.xmax, 0, color=INK, width=2.6)    # 加粗＝鏡軸（就是 x 軸）
+    f.text(0.6, 1.7, "鏡軸", size=11)
+    f.seg(-4, 7, -4, -7, dash="4 3")
+    f.point(-4, 7, "(−4, 7)", dy=-12)
+    f.point(-4, -7, "(−4, −7)", hollow=True, dy=20)
+    f.text(-3.55, 3.4, "7", size=10.5, color=MID)
+    f.text(-3.55, -3.4, "7", size=10.5, color=MID)
+    return f.svg()
+
+
+def bridge_ws04_w3() -> str:
+    """W03 逆時針 90°：(2, 5) → R(−5, 2)"""
+    f = Frame(-8, 5, -6, 8, key="bw3", show_o=False)
+    du = _du(f, 8)
+    f.seg(0, 0, 2, 5, color=MID, width=1.1)
+    f.seg(0, 0, -5, 2, color=MID, width=1.1)
+    f.arc(44, _ang(2, 5), _ang(-5, 2), "90°")
+    f.point(2, 5, "(2, 5)")
+    f.point(-5, 2, "R(−5, 2)", hollow=True, dx=-8, dy=-12)
+    f.text(-du, du, "O", size=10, color=AXIS)          # 手動放 O，避開弧形標籤
+    return f.svg()
+
+
+def bridge_ws04_w4() -> str:
+    """W04 旋轉 180°：(−6, 1) → S(6, −1)"""
+    f = Frame(-9, 9, -5, 5, key="bw4", show_o=False)
+    du = _du(f, 8)
+    f.seg(0, 0, -6, 1, color=MID, width=1.1)
+    f.seg(0, 0, 6, -1, color=MID, width=1.1)
+    f.arc(40, _ang(-6, 1), _ang(-6, 1) + 180, "180°")
+    f.point(-6, 1, "(−6, 1)", dx=-8, dy=-12)
+    f.point(6, -1, "S(6, −1)", hollow=True, dx=8, dy=12)
+    f.text(-du, du, "O", size=10, color=AXIS)
+    return f.svg()
+
+
 FIGURES = {
     "ws04-c1": [(fig_translation_left, "A(−7, 3) 向左 6 單位 → A′(−13, 3)"),
                 (fig_translation_up, "B(−2, −6) 向上 3 單位 → B′(−2, −3)")],
@@ -439,20 +658,47 @@ FIGURES = {
                      (lambda: rotate_fig((5, -14), (-14, -5), _ang(5, -14), _ang(5, -14) - 90,
                                          "90°", "q12b", "B(5, −14)", "A(−14, −5)"),
                       "倒推第二步：順時針 90°（逆 90° 的反向）→ A(−14, −5)")],
+
+    # ── 長題示範（WS04）：一幅圖配題解的一步（第三個元素＝step，1 起算）──
+    "eph-ws04-ex01": [(long_ex01_s1, "第 1 步：A(9, −13) 逆時針轉 90° → A′(13, 9)", 1),
+                      (long_ex01_s2, "第 2 步：B(−7, 5) 對 y 軸反射 → B′(7, 5)", 2),
+                      (long_ex01_s3, "第 3 步：A′(13, 9)、B′(7, 5) 的斜率 = 2/3", 3)],
+    "eph-ws04-ex02": [(long_ex02_s1, "第 1 步：順 270° ＝ 逆 90°：R(−5, −3) → R′(3, −5)", 1),
+                      (long_ex02_s2, "第 2 步：R′(3, −5)；S 向左 13 → S′(−13, 5)", 2),
+                      (long_ex02_s3, "第 3 步：m(RS) = 8/5、m(R′S′) = −5/8", 3),
+                      (long_ex02_s4, "第 4 步：8/5 × (−5/8) = −1 → RS ⟂ R′S′", 4)],
+    "eph-ws04-ex03": [(long_ex03_s1, "第 1 步：P(4, 2) 向左 3 單位 → P′(1, 2)", 1),
+                      (long_ex03_s2, "第 2 步：Q(6, 5) 逆時針轉 90° → Q′(−5, 6)", 2),
+                      (long_ex03_s3, "第 3 步：m(PQ) = 3/2、m(P′Q′) = −2/3", 3),
+                      (long_ex03_s4, "第 4 步：3/2 × (−2/3) = −1 → PQ ⟂ P′Q′", 4)],
+
+    # ── WS04 過渡題：單一變換各一幅 ──
+    "eph-ws04-w01": [(bridge_ws04_w1, "向左 4 單位：x 減 4，y 不變（3, −5）→ P(−1, −5)")],
+    "eph-ws04-w02": [(bridge_ws04_w2, "對 x 軸反射：x 不變、y 變號（−4, 7）→ (−4, −7)")],
+    "eph-ws04-w03": [(bridge_ws04_w3, "逆時針 90°：(x, y) → (−y, x)，(2, 5) → R(−5, 2)")],
+    "eph-ws04-w04": [(bridge_ws04_w4, "180° 旋轉：(x, y) → (−x, −y)，(−6, 1) → S(6, −1)")],
 }
 
 
 def main() -> int:
     out: dict[str, list[dict]] = {}
     for cid, items in FIGURES.items():
-        out[cid] = [{"svg": fn(), "caption": cap} for fn, cap in items]
+        figs = []
+        for it in items:
+            fn, cap = it[0], it[1]
+            fig = {"svg": fn(), "caption": cap}
+            if len(it) > 2 and it[2] is not None:   # 長題示範：標明屬於第幾步
+                fig["step"] = int(it[2])
+            figs.append(fig)
+        out[cid] = figs
     with io.open(OUT, "w", encoding="utf-8") as f:
         json.dump({"_note": "自動產生（python tools/make_learn_figures.py），請勿手改。"
-                            "一張卡可以有多幅圖（例如變換多於一次）",
+                            "一張卡可以有多幅圖（例如變換多於一次）；"
+                            "長題示範的圖帶 step＝題解的第幾步（逐步揭示時出場）",
                    "figures": out}, f, ensure_ascii=False, indent=1)
         f.write("\n")
     n = sum(len(v) for v in out.values())
-    print("已產生 %d 張概念卡示意圖（%d 幅圖） → data/learn/figures.json"
+    print("已產生 %d 張示意圖（%d 幅圖） → data/learn/figures.json"
           % (len(out), n))
     for k, v in out.items():
         print("  %-10s %d 幅  %s" % (k, len(v), "／".join(
