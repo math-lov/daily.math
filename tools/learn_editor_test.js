@@ -134,6 +134,28 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
     .forEach((id) => ok(!!$("#" + id), "MC form has #" + id));
   ok($("#pv-f_steps").innerHTML.length > 0, "step preview renders (MC)");
 
+  // 5) 課題資訊編輯器：名稱／簡介／題目字眼（cmdHints）
+  //    字眼用「English | 中文解釋」每行一組（與 vocab 的「english = 中文」同類做法）
+  const topicBtn = $$("#list [data-act=topic]")[0];
+  ok(!!topicBtn, "list offers the topic editor");
+  topicBtn.click();
+  await sleep(200);
+  const hintsField = $("#f_hints");
+  ok(!!hintsField, "topic form has the command-words field (#f_hints)");
+  ok(/Factorize completely \| /.test(hintsField.value),
+     "command words are prefilled as 'English | 中文' (" + hintsField.value.split("\n")[0] + ")");
+  ok(/Hence \| /.test(hintsField.value), "this course's own words are shown (Hence)");
+  const beforeTopic = posted.length;
+  $$("button[data-act=saveTopic]")[0].click();
+  await sleep(300);
+  ok(posted.length > beforeTopic, "clicking save POSTs the topic edit");
+  const tPayload = JSON.parse(posted[posted.length - 1].body);
+  ok(tPayload.kind === "topic", "payload identifies the topic being saved");
+  ok(Array.isArray(tPayload.patch.cmdHints) && tPayload.patch.cmdHints.length >= 4 &&
+     !!tPayload.patch.cmdHints[0].en && !!tPayload.patch.cmdHints[0].zh,
+     "the command words are sent as en + zh pairs (" +
+     JSON.stringify(tPayload.patch.cmdHints && tPayload.patch.cmdHints[0]) + ")");
+
   console.log("\n" + (fails ? fails + " test(s) FAILED" : "all editor tests passed"));
   process.exit(fails ? 1 : 0);
 })().catch((e) => {

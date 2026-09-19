@@ -12,6 +12,101 @@
     "warn"
    ],
    "by": "teacher-panel"
+  },
+  {
+   "at": "2026-09-19T15:36:23",
+   "kind": "card",
+   "id": "ws05b-c4",
+   "fields": [
+    "body",
+    "math",
+    "title",
+    "vocab",
+    "warn"
+   ],
+   "by": "teacher-panel"
+  },
+  {
+   "at": "2026-09-19T15:39:31",
+   "kind": "card",
+   "id": "ws05b-c4",
+   "fields": [
+    "body",
+    "math",
+    "title",
+    "vocab",
+    "warn"
+   ],
+   "by": "teacher-panel"
+  },
+  {
+   "at": "2026-09-19T15:41:14",
+   "kind": "question",
+   "id": "eph-ws05b-ex01",
+   "fields": [
+    "difficulty",
+    "parts",
+    "source",
+    "stem"
+   ],
+   "by": "teacher-panel"
+  },
+  {
+   "at": "2026-09-19T15:41:15",
+   "kind": "solution",
+   "id": "eph-ws05b-ex01",
+   "fields": [
+    "steps",
+    "tip",
+    "traps"
+   ],
+   "by": "teacher-panel"
+  },
+  {
+   "at": "2026-09-19T15:43:08",
+   "kind": "question",
+   "id": "eph-ws05b-ex03",
+   "fields": [
+    "difficulty",
+    "parts",
+    "source",
+    "stem"
+   ],
+   "by": "teacher-panel"
+  },
+  {
+   "at": "2026-09-19T15:43:10",
+   "kind": "solution",
+   "id": "eph-ws05b-ex03",
+   "fields": [
+    "steps",
+    "tip",
+    "traps"
+   ],
+   "by": "teacher-panel"
+  },
+  {
+   "at": "2026-09-19T15:45:13",
+   "kind": "question",
+   "id": "eph-ws05b-ex02",
+   "fields": [
+    "difficulty",
+    "parts",
+    "source",
+    "stem"
+   ],
+   "by": "teacher-panel"
+  },
+  {
+   "at": "2026-09-19T15:45:15",
+   "kind": "solution",
+   "id": "eph-ws05b-ex02",
+   "fields": [
+    "steps",
+    "tip",
+    "traps"
+   ],
+   "by": "teacher-panel"
   }
  ]
 }

@@ -9,7 +9,7 @@
     "en": "Stage 1 · Junior Topics"
    },
    "note": {
-    "zh": "把初中最重要的四課先補回來：因式分解、二元一次方程、公式與恆等式、坐標平面上的變換。"
+    "zh": "把最基礎的幾課逐課補回來：因式分解、二元一次方程、公式與恆等式、坐標平面上的變換、一元二次方程、複數。"
    }
   }
  ],
@@ -97,6 +97,28 @@
       ]
      ]
     }
+   ],
+   "cmdHints": [
+    {
+     "en": "Factorize completely",
+     "zh": "徹底分解（要分解到不能再分解為止）"
+    },
+    {
+     "en": "common factor",
+     "zh": "公因式（各項共同擁有的因式：先抽走它，再看剩下的部分）"
+    },
+    {
+     "en": "difference of two squares",
+     "zh": "平方差：$a^{2}-b^{2}=(a+b)(a-b)$"
+    },
+    {
+     "en": "perfect square",
+     "zh": "完全平方：$a^{2}\\pm 2ab+b^{2}=(a\\pm b)^{2}$"
+    },
+    {
+     "en": "Hence",
+     "zh": "由此（必須用上一小題的答案）"
+    }
    ]
   },
   {
@@ -163,6 +185,28 @@
        "eph-ws02-q14"
       ]
      ]
+    }
+   ],
+   "cmdHints": [
+    {
+     "en": "Find the price of ...",
+     "zh": "求某物的價錢（文字題最後一句通常就是它）"
+    },
+    {
+     "en": "is the same as ...",
+     "zh": "「…和…一樣」＝ 可以直接寫成等號"
+    },
+    {
+     "en": "is 2 times that of ...",
+     "zh": "「是…的兩倍」＝ 另一個關係式（數字先看清楚）"
+    },
+    {
+     "en": "per / each",
+     "zh": "每一（單位：每個 $x$ 幾多元、每小時幾公里）"
+    },
+    {
+     "en": "Solve the simultaneous equations",
+     "zh": "解聯立方程（要同時寫出兩個未知數的值才算答完）"
     }
    ]
   },
@@ -240,6 +284,28 @@
       ]
      ]
     }
+   ],
+   "cmdHints": [
+    {
+     "en": "Make ... the subject",
+     "zh": "把…變為主項（令它單獨留在等號左邊，其餘全部搬去右邊）"
+    },
+    {
+     "en": "write down the change in the value of ...",
+     "zh": "寫出…值的變化（增／減之後相差多少，通常一步就有分）"
+    },
+    {
+     "en": "is increased / decreased by ...",
+     "zh": "「增加了／減少了…」（注意是「變成」還是「相差」）"
+    },
+    {
+     "en": "identity",
+     "zh": "恆等式（$\\equiv$：對所有 $x$ 都成立，不只是某一個 $x$）"
+    },
+    {
+     "en": "constants",
+     "zh": "常數（例如「$h$ 與 $k$ 是常數」，即它們不會變）"
+    }
    ]
   },
   {
@@ -305,6 +371,233 @@
        "eph-ws04-q12"
       ]
      ]
+    }
+   ],
+   "cmdHints": [
+    {
+     "en": "the coordinates of ... are ...",
+     "zh": "座標（答案要寫成 $(x,\\ y)$ 的完整形式，不要只寫一個數）"
+    },
+    {
+     "en": "respectively",
+     "zh": "分別（兩點的座標按先後次序對應，不要對錯）"
+    },
+    {
+     "en": "translated leftwards / upwards by ... units",
+     "zh": "平移：左／右只改 $x$，上／下只改 $y$"
+    },
+    {
+     "en": "reflected with respect to ...",
+     "zh": "對…反射（鏡像；對垂直線只改 $x$、對水平線只改 $y$）"
+    },
+    {
+     "en": "rotated anticlockwise about the origin through $90^{\\circ}$",
+     "zh": "繞原點逆時針旋轉 $90^{\\circ}$（順／逆時針要看清）"
+    },
+    {
+     "en": "Prove that ... is perpendicular to ...",
+     "zh": "證明兩線垂直（寫「斜率相乘 $=-1$」才有分）"
+    }
+   ]
+  },
+  {
+   "id": "ws05a",
+   "stage": 1,
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "source": "EPH All-Round L5 · Worksheet 5（5.1 一元二次方程）",
+   "name": {
+    "zh": "一元二次方程",
+    "en": "Quadratic Equations in One Unknown"
+   },
+   "intro": {
+    "zh": "這一課把二次方程的三種解法（因式分解、取平方根、二次公式）一次過補回來，再加上判別式與「根的和與積」。\nDSE Paper 1 幾乎每年都有一條二次方程題（3–5 分的應用題或證明題），Paper 2 年年考判別式與根的和積。這一課的特點是：方法固定、步驟不多，只要符號不出錯，就是必拿的分。\n這一課分兩節：第一節「三種解法與應用題」先把三種解法做熟；第二節「判別式與根的性質」才處理 $\\Delta$、根的和積與證明題。\n（複數已經分拆成獨立一課「複數」，見主目錄。）"
+   },
+   "lessons": [
+    {
+     "id": "ws05a-1",
+     "title": {
+      "zh": "三種解法與應用題",
+      "en": "Three Methods & Applications"
+     },
+     "conceptCards": [
+      "ws05a-c1",
+      "ws05a-c2",
+      "ws05a-c3",
+      "ws05a-c4"
+     ],
+     "longQuestionIds": [
+      "eph-ws05a-ex01",
+      "eph-ws05a-ex03"
+     ],
+     "mcPages": [
+      [
+       "eph-ws05a-w01",
+       "eph-ws05a-w02",
+       "eph-ws05a-w03"
+      ],
+      [
+       "eph-ws05a-q01",
+       "eph-ws05a-q02",
+       "eph-ws05a-q03"
+      ],
+      [
+       "eph-ws05a-q04",
+       "eph-ws05a-q05",
+       "eph-ws05a-q06"
+      ]
+     ]
+    },
+    {
+     "id": "ws05a-2",
+     "title": {
+      "zh": "判別式與根的性質",
+      "en": "Discriminant & Nature of Roots"
+     },
+     "conceptCards": [
+      "ws05a-c5",
+      "ws05a-c6"
+     ],
+     "longQuestionIds": [
+      "eph-ws05a-ex02",
+      "eph-ws05a-ex04",
+      "eph-ws05a-ex05"
+     ],
+     "mcPages": [
+      [
+       "eph-ws05a-w04",
+       "eph-ws05a-q07",
+       "eph-ws05a-q08"
+      ],
+      [
+       "eph-ws05a-q09",
+       "eph-ws05a-q10",
+       "eph-ws05a-q11"
+      ],
+      [
+       "eph-ws05a-q12",
+       "eph-ws05a-q13"
+      ]
+     ]
+    }
+   ],
+   "cmdHints": [
+    {
+     "en": "two distinct real roots",
+     "zh": "兩個相異實根（$\\Delta>0$）"
+    },
+    {
+     "en": "two equal real roots",
+     "zh": "兩個相等實根（重根，$\\Delta=0$）"
+    },
+    {
+     "en": "no real roots",
+     "zh": "沒有實根（$\\Delta<0$）"
+    },
+    {
+     "en": "the roots are $\\alpha$ and $\\beta$",
+     "zh": "兩根是 $\\alpha$ 與 $\\beta$（用根的和與積，不要硬解）"
+    },
+    {
+     "en": "is a root of the equation",
+     "zh": "是方程的根（把 $x$ 換成它，等式就成立）"
+    },
+    {
+     "en": "Find the range of values of $k$",
+     "zh": "求 $k$ 的取值範圍（答案是不等式，例如 $k<-\\frac{3}{5}$）"
+    }
+   ]
+  },
+  {
+   "id": "ws05b",
+   "stage": 1,
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "source": "EPH All-Round L5 · Worksheet 5（5.2 複數）",
+   "name": {
+    "zh": "複數",
+    "en": "Complex Numbers"
+   },
+   "intro": {
+    "zh": "這一課只做一件事：認得複數，並且把 $i$ 的次方與四則運算練熟。\n內容少而機械，固定三步：① 記住 $i^{2}=-1$；② $i$ 的次方用「÷ 4 看餘數」化簡；③ 加減乘除之後整理成 $a+bi$。\nDSE Paper 2 每年固定一至兩題複數題，題型幾乎不變，是投資報酬率最高的一課。學完之後回頭看二次方程，「沒有實根」也不再是問題 —— 那只是複數的世界剛剛開始。"
+   },
+   "lessons": [
+    {
+     "id": "ws05b-1",
+     "title": {
+      "zh": "i 的次方、實部虛部與四則運算",
+      "en": "Powers of i, real & imaginary parts, arithmetic"
+     },
+     "conceptCards": [
+      "ws05b-c1",
+      "ws05b-c2",
+      "ws05b-c3",
+      "ws05b-c4",
+      "ws05b-c5"
+     ],
+     "longQuestionIds": [
+      "eph-ws05b-ex01",
+      "eph-ws05b-ex02",
+      "eph-ws05b-ex03",
+      "eph-ws05b-ex04"
+     ],
+     "mcPages": [
+      [
+       "eph-ws05b-w01",
+       "eph-ws05b-w02",
+       "eph-ws05b-w03"
+      ],
+      [
+       "eph-ws05b-w04",
+       "eph-ws05b-q01",
+       "eph-ws05b-q02"
+      ],
+      [
+       "eph-ws05b-q03",
+       "eph-ws05b-q04",
+       "eph-ws05b-q05"
+      ],
+      [
+       "eph-ws05b-q06",
+       "eph-ws05b-q07",
+       "eph-ws05b-q08"
+      ],
+      [
+       "eph-ws05b-q09",
+       "eph-ws05b-q10",
+       "eph-ws05b-q13"
+      ],
+      [
+       "eph-ws05b-q11",
+       "eph-ws05b-q12"
+      ]
+     ]
+    }
+   ],
+   "cmdHints": [
+    {
+     "en": "the real part",
+     "zh": "實部（$i$ 前面的係數，不含 $i$）"
+    },
+    {
+     "en": "the imaginary part",
+     "zh": "虛部（同樣不含 $i$；負號要一齊寫）"
+    },
+    {
+     "en": "in the form $a+bi$",
+     "zh": "寫成 $a+bi$ 的形式（實部在前、虛部在後）"
+    },
+    {
+     "en": "where $k$ is a real number",
+     "zh": "其中 $k$ 是實數（不是複數，所以可以比較大小）"
+    },
+    {
+     "en": "If $z$ is real / purely imaginary",
+     "zh": "「$z$ 是實數」＝ 虛部 $=0$；「$z$ 是純虛數」＝ 實部 $=0$（兩者剛好相反）"
+    },
+    {
+     "en": "Hence / show that",
+     "zh": "由此／證明（要用上一小題的結果）"
     }
    ]
   }

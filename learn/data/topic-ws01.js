@@ -12,6 +12,28 @@ window.LEARN_TOPIC_WS01 = {
  "intro": {
   "zh": "這一課分兩節：第一節先打好三個基礎（提公因式、併項分組、恆等式／平方差），第二節再學十字相乘、拆項法與「3+1 分組」的綜合題型。做 DSE 卷時，因式分解幾乎年年出現（Paper 1 每年一題、Paper 2 也常考），而且它也是解方程與約分的基礎。"
  },
+ "cmdHints": [
+  {
+   "en": "Factorize completely",
+   "zh": "徹底分解（要分解到不能再分解為止）"
+  },
+  {
+   "en": "common factor",
+   "zh": "公因式（各項共同擁有的因式：先抽走它，再看剩下的部分）"
+  },
+  {
+   "en": "difference of two squares",
+   "zh": "平方差：$a^{2}-b^{2}=(a+b)(a-b)$"
+  },
+  {
+   "en": "perfect square",
+   "zh": "完全平方：$a^{2}\\pm 2ab+b^{2}=(a\\pm b)^{2}$"
+  },
+  {
+   "en": "Hence",
+   "zh": "由此（必須用上一小題的答案）"
+  }
+ ],
  "lessons": [
   {
    "id": "ws01-1",

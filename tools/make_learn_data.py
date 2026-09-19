@@ -123,6 +123,8 @@ def build_topic(topic: dict, bank_by_id: dict, cards_by_id: dict, sols: dict,
         "source": topic.get("source"),
         "name": topic.get("name", {}),
         "intro": topic.get("intro", {}),
+        # 這一課自己的「題目字眼」（常駐提示列；未提供時前端用預設那組）
+        "cmdHints": topic.get("cmdHints", []),
         "lessons": lessons_out,
         "stats": {"mc": n_mc, "long": n_long,
                   "cards": sum(len(les["cards"]) for les in lessons_out),

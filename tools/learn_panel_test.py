@@ -147,7 +147,44 @@ def main(argv: list[str] | None = None) -> int:
         ok(code == 400 and any("太短" in e for e in res.get("errors", [])),
            "題解步驟太短被擋下")
 
+        print("\n— 課題「題目字眼」（cmdHints）—")
+        lessons_before = read_json("lessons.json")
+        topic = next(x for x in lessons_before["topics"] if x["id"] == TEST_TOPIC)
+        other = next(x for x in lessons_before["topics"] if x["id"] != TEST_TOPIC
+                     and len(x.get("cmdHints") or []) >= 4)
+        hints = list(topic.get("cmdHints") or [])
+        ok(len(hints) >= 4, "%s 有 %d 組題目字眼" % (TEST_TOPIC, len(hints)))
+        topic_patch = {"name": topic["name"], "intro": topic["intro"],
+                       "cmdHints": hints + [{"en": "Write down", "zh": MARKER + "直接寫出（通常一步就有分）"}]}
+        code, res = req(base + "/api/edit", {"kind": "topic", "id": TEST_TOPIC, "patch": topic_patch})
+        ok(code == 200 and res.get("ok"), "可以儲存題目字眼")
+        on_disk = next(x for x in read_json("lessons.json")["topics"] if x["id"] == TEST_TOPIC)
+        ok(any(MARKER in (h.get("zh") or "") for h in on_disk.get("cmdHints", [])),
+           "題目字眼寫入 lessons.json（中文沒有變亂碼）")
+        ok(on_disk["name"] == topic["name"] and on_disk["intro"] == topic["intro"],
+           "名稱與簡介沒有被破壞")
+        ok([h.get("en") for h in on_disk["cmdHints"]][:len(hints)] == [h.get("en") for h in hints],
+           "原有字眼次序與內容保持不變")
+
+        print("\n— 題目字眼驗證會擋錯 —")
+        for label, bad, needle in (
+            ("只有 1 組被擋下", [{"en": "Hence", "zh": "由此"}], "至少"),
+            ("缺中文解釋被擋下", [{"en": "Hence", "zh": ""}, {"en": "Show that", "zh": "證明"}], "中文解釋"),
+            ("字眼重複被擋下", [{"en": "Hence", "zh": "由此"}, {"en": "Hence", "zh": "再由此"}], "重複"),
+            ("未成對的 $ 被擋下", [{"en": "a", "zh": "$x"}, {"en": "b", "zh": "y"}], "$"),
+            ("整組照抄別課被擋下", other["cmdHints"], "完全相同"),
+        ):
+            code, res = req(base + "/api/edit", {"kind": "topic", "id": TEST_TOPIC,
+                                                 "patch": {**topic_patch, "cmdHints": bad}})
+            ok(code == 400 and any(needle in e for e in res.get("errors", [])),
+               label + "：" + str(res.get("errors")))
+
         print("\n— 還原 —")
+        code, res = req(base + "/api/edit", {"kind": "topic", "id": TEST_TOPIC,
+                                             "patch": {"name": topic["name"], "intro": topic["intro"],
+                                                       "cmdHints": hints}})
+        ok(code == 200 and res.get("ok"), "題目字眼改回原狀成功")
+        ok(read_json("lessons.json") == lessons_before, "lessons.json 與測試前完全相同")
         code, res = req(base + "/api/edit", {"kind": "card", "id": card["id"], "patch": {
             "title": card["title"], "math": card.get("math") or [],
             "warn": card.get("warn") or {}, "vocab": card.get("vocab") or [],

@@ -365,8 +365,8 @@ ok(!!optA13 && optA13.querySelector(".cur") && optA13.textContent.indexOf("\\$")
 
 /* ── 2c. 第 3、4 課 ───────────────────────────────────────────────────── */
 console.log("\n— 課題 3、4 —");
-ok(home.$$(".topic-btn").length === 4,
-   "home lists all four topics (got " + home.$$(".topic-btn").length + ")");
+ok(home.$$(".topic-btn").length === 6,
+   "home lists all six topics (got " + home.$$(".topic-btn").length + ")");
 const t03 = boot("topic.html", "?t=ws03&p=0");
 ok((t03.$("#topic-name").textContent || "").indexOf("主項") >= 0,
    "ws03 name rendered (" + t03.$("#topic-name").textContent + ")");
@@ -439,6 +439,219 @@ ok(qFigN[2] === 2, "the two-step question (q05, third card) shows two figures (g
 ok(t04q.$$(".fig-cap").length === qFigN.reduce((a, b) => a + b, 0),
    "each MC figure carries a caption too");
 
+/* ── 2d. 第 5、6 課：同一份工作紙（WS05）拆成兩課 ─────────────────────── */
+console.log("\n— 課題 5、6：一元二次方程 / 複數（WS05 拆兩課）—");
+const t05 = boot("topic.html", "?t=ws05a&p=0");
+ok((t05.$("#topic-name").textContent || "").indexOf("一元二次方程") >= 0,
+   "ws05a name rendered (" + t05.$("#topic-name").textContent + ")");
+ok(t05.$$("#pagenav .pg").length === 13,
+   "ws05a = two lessons (1+2+3 and 1+3+3 pages) = 13 pages (got " + t05.$$("#pagenav .pg").length + ")");
+ok(t05.$$("#pagenav .pg-lesson").length === 2,
+   "ws05a now shows one separator per lesson (got " + t05.$$("#pagenav .pg-lesson").length + ")");
+ok(t05.$$("#pagenav .pg-lesson")[0].textContent === "第 1 節" &&
+   t05.$$("#pagenav .pg-lesson")[1].textContent === "第 2 節",
+   "the separators are numbered 第 1 節 / 第 2 節");
+ok(!!t05.$(".concept-body") && t05.$$(".formula .katex").length >= 2,
+   "ws05a concept card renders formulas");
+// 純代數課題：課程內不需要圖形（handoff §3.5「如需要」），所以不出圖
+ok(!t05.$(".fig"), "ws05a (quadratic equations) uses no figures");
+
+// 第一節：三種解法與應用題（2 條示範 <4 條，所以一條一頁）
+const d5 = boot("topic.html", "?t=ws05a&p=1");
+ok(d5.$$("#pagenav .pg").filter((b) => b.textContent === "示範").length === 5,
+   "every ws05a demo keeps its own page (2 + 3 = 5 demo buttons, got " +
+   d5.$$("#pagenav .pg").filter((b) => b.textContent === "示範").length + ")");
+ok(!d5.$(".demo-count"),
+   "a lesson with fewer than four demos has no demo switcher (no demo-count)");
+ok(!d5.$$("#topic-body .opt").length, "the demo page holds no MC options");
+ok(/WS5A-EX1/.test(d5.$("#topic-body").textContent), "the first demo is the bridging one (WS5A-EX1)");
+d5.$(".demo-try .btn").click();
+ok(d5.$$(".steps .step").length === 1, "the first demo still reveals steps one at a time");
+d5.$$(".card .row .btn").filter((b) => /全部顯示/.test(b.textContent))[0].click();
+ok(!!d5.$(".done-banner"), "finishing the demo shows the completion banner");
+// 橫幅的「帶得走的技巧」可以含 $...$（例如 $\Delta$、$^{2}$）→ 一定要行內渲染
+ok(!!d5.$(".done-banner .katex"), "the demo tip is typeset by KaTeX");
+ok(!/\$/.test(d5.$(".done-banner").textContent),
+   "the demo tip leaks no raw $ (" + (d5.$(".done-banner").textContent || "").slice(0, 40) + ")");
+ok(!!d5.$$(".btn").filter((b) => /下一頁/.test(b.textContent)).length,
+   "without a demo switcher the banner offers the next page, not 'next demo'");
+const d5b = boot("topic.html", "?t=ws05a&p=2");
+ok(/WS5A-EX3/.test(d5b.$("#topic-body").textContent) && /2019/.test(d5b.$("#topic-body").textContent),
+   "lesson 1's second demo is the rectangle application (WS5A-EX3, HKDSE 2019)");
+const t05mc = boot("topic.html", "?t=ws05a&p=3");
+ok(t05mc.$$("#topic-body .opt").length === 12,
+   "ws05a MC page has 3 questions × 4 options (got " + t05mc.$$("#topic-body .opt").length + ")");
+// 過渡梯級：第一個練習頁全部是 Bridging 題（因式分解 → 兩邊有 x 不可約 → 開平方）
+const b5 = t05mc.$$("#topic-body .card[data-qid]");
+ok(b5.length >= 1 && b5.every((c) => /-w0\d$/.test(c.getAttribute("data-qid"))),
+   "ws05a first MC page is all bridging questions (" +
+   b5.map((c) => c.querySelector(".q-code").textContent).join(", ") + ")");
+ok(b5.length >= 1 && b5[0].querySelector(".q-diff").textContent.indexOf("★") >= 0,
+   "the first ws05a bridging question is marked as easy");
+ok(Array.prototype.every.call(b5[0].querySelectorAll(".opt"), (o) => o.querySelector(".katex")),
+   "every bridging option goes through KaTeX (" +
+   b5[0].querySelectorAll(".opt .katex").length + " fragments, the 'or' form gives two)");
+
+// 兩節的內容分工（老師指定）：第一節＝解法＋應用題；第二節＝判別式／根的性質
+const payload5 = t05.ctx.window.LEARN_TOPIC_WS05A;
+ok(payload5.lessons.length === 2 && payload5.lessons[0].id === "ws05a-1" &&
+   payload5.lessons[1].id === "ws05a-2",
+   "ws05a is split into two lessons (" + payload5.lessons.map((l) => l.id).join(", ") + ")");
+ok(payload5.lessons[0].cards.length === 4 && payload5.lessons[1].cards.length === 2,
+   "lesson 1 takes the four solving cards, lesson 2 the discriminant / roots cards (" +
+   payload5.lessons.map((l) => l.cards.length).join(" / ") + ")");
+ok(payload5.lessons[0].long.length === 2 && payload5.lessons[1].long.length === 3 &&
+   payload5.lessons[0].long[0].source.indexOf("銜接示範") >= 0,
+   "lesson 1 opens with the bridging demo (2 demos) and lesson 2 has three (" +
+   payload5.lessons.map((l) => l.long.length).join(" / ") + ")");
+const pages5 = payload5.lessons.map((l) => l.pages.map((p) => p.length));
+ok(JSON.stringify(pages5) === JSON.stringify([[3, 3, 3], [3, 3, 2]]),
+   "MC pages stay 3 per page with a 2-question closer: " + JSON.stringify(pages5));
+ok(payload5.lessons[1].pages[0][0].code === "WS5A-W04" &&
+   /-q07$/.test(payload5.lessons[1].pages[0][1].id),
+   "lesson 2 opens with the discriminant bridging question then the review question (" +
+   payload5.lessons[1].pages[0].map((q) => q.code).join(", ") + ")");
+// 第二節的示範順序：判別式（EX2）→ α 是方程的根（EX4）→ 根的證明（EX5）
+const d5c = boot("topic.html", "?t=ws05a&p=8");
+ok(/暖身題 5/.test(d5c.$("#topic-body").textContent),
+   "the 'a is a root' demo follows the discriminant demo in lesson 2");
+const d5d = boot("topic.html", "?t=ws05a&p=9");
+ok(/WS5A-EX5/.test(d5d.$("#topic-body").textContent),
+   "lesson 2 closes with the proof, WS5A-EX5");
+
+// 第二課：複數（獨立課題 —— 學生可以先做完一元二次方程，不必一次面對複數）
+const t06 = boot("topic.html", "?t=ws05b&p=0");
+ok((t06.$("#topic-name").textContent || "").indexOf("複數") >= 0,
+   "ws05b name rendered (" + t06.$("#topic-name").textContent + ")");
+ok(t06.$$("#pagenav .pg").length === 8,
+   "ws05b = 1 card page + 1 demo page (4 demos) + 6 MC pages (got " + t06.$$("#pagenav .pg").length + ")");
+ok(!!t06.$(".concept-body") && t06.$$(".formula .katex").length >= 2,
+   "ws05b concept card renders formulas");
+const d6 = boot("topic.html", "?t=ws05b&p=1");
+ok(/示範 1 \/ 4/.test((d6.$(".demo-count") || {}).textContent || ""),
+   "ws05b collects its four demos on one page (" + ((d6.$(".demo-count") || {}).textContent) + ")");
+ok(/WS5B-EX1/.test(d6.$("#topic-body").textContent),
+   "the collapsed demo page opens with the bridging demo (WS5B-EX1)");
+// 一頁多條示範的切換器（≥4 條才出現）：ws05a 拆兩節後再沒有這種頁，改由 ws05b 把關
+const d6prev = () => d6.$$(".demo-nav .btn").filter((b) => /上一條/.test(b.textContent))[0];
+const d6next = () => d6.$$(".demo-nav .btn").filter((b) => /下一條/.test(b.textContent))[0];
+ok(!!d6prev() && d6prev().disabled === true, "the first demo's 'previous' button is disabled");
+d6.$(".demo-try .btn").click();
+d6.$$(".card .row .btn").filter((b) => /全部顯示/.test(b.textContent))[0].click();
+ok(!!d6.$$(".btn").filter((b) => /下一條示範/.test(b.textContent)).length,
+   "the completion banner offers 'next demo' when the lesson holds several");
+d6next().click();
+ok(/示範 2 \/ 4/.test((d6.$(".demo-count") || {}).textContent || ""),
+   "clicking 'next demo' moves to the second demo (" + ((d6.$(".demo-count") || {}).textContent) + ")");
+ok(/WS5B-EX2/.test(d6.$("#topic-body").textContent), "the second demo is WS5B-EX2");
+ok(d6prev().disabled === false, "the second demo can go back");
+d6prev().click();
+ok(/示範 1 \/ 4/.test((d6.$(".demo-count") || {}).textContent || ""),
+   "going back returns to the first demo");
+const t06mc = boot("topic.html", "?t=ws05b&p=2");
+ok(t06mc.$$("#topic-body .opt").length === 12,
+   "ws05b MC page has 3 questions × 4 options (got " + t06mc.$$("#topic-body .opt").length + ")");
+const b6 = t06mc.$$("#topic-body .card[data-qid]");
+ok(b6.length >= 1 && b6.every((c) => /-w0\d$/.test(c.getAttribute("data-qid"))),
+   "ws05b first MC page is all bridging questions (" +
+   b6.map((c) => c.querySelector(".q-code").textContent).join(", ") + ")");
+const payload6 = t06.ctx.window.LEARN_TOPIC_WS05B;
+ok(payload6.lessons[0].long.length === 4 &&
+   payload6.lessons[0].long[0].source.indexOf("銜接示範") >= 0,
+   "ws05b keeps four demos and opens with the bridging one (" +
+   payload6.lessons[0].long[0].source + ")");
+// 實際做一題複數題：核對答案、解說、提示都出得來
+const t06ans = boot("topic.html", "?t=ws05b&p=2");
+const c06 = t06ans.$('.card[data-qid="eph-ws05b-w02"]');
+ok(!!c06, "found the ws05b bridging card (powers of i)");
+const o06 = c06.querySelectorAll(".opt");
+o06[2].click();                                   // 這一題的答案鍵是 C
+ok(!!c06.querySelector(".opt.correct"), "answering ws05b w02 correctly turns the option green");
+ok(!!c06.querySelector(".tip"), "the ws05b solution shows its takeaway tip");
+ok(c06.textContent.indexOf("\\$") < 0, "no raw backslash-$ leaks into the ws05b question");
+
+// 兩課的題目資料：答案鍵、干擾項解說、tip 都要齊
+const flatMc = (p) => p.lessons.reduce(
+  (a, l) => a.concat(l.pages.reduce((b, r) => b.concat(r), [])), []);
+const mc5 = flatMc(payload5), mc6 = flatMc(payload6);
+ok(mc5.length === 17, "ws05a carries 17 MC questions (got " + mc5.length + ")");
+ok(mc6.length === 17, "ws05b carries 17 MC questions (got " + mc6.length + ")");
+
+// 審閱修正（第三方審核 ＋ 自行核實）：題幹不可以「未完成」；步驟分要加得起來等於該題分數
+const allPayloads = ["WS01", "WS02", "WS03", "WS04", "WS05A", "WS05B"]
+  .map((k) => t05.ctx.window["LEARN_TOPIC_" + k]);
+const allDemoQs = allPayloads.reduce(
+  (a, p) => a.concat(p.lessons.reduce((b, l) => b.concat(l.long), [])), []);
+const demos5b = payload5.lessons[0].long.concat(payload6.lessons[0].long);
+const dangling = allDemoQs.filter((q) => /,\s*$/.test(q.stem.text));
+ok(dangling.length === 0, "no demo stem ends with a dangling comma" +
+   (dangling.length ? " (" + dangling.map((q) => q.code).join(", ") + ")" : ""));
+const markSum = (q) => (q.solution.steps || []).reduce((n, st) =>
+  n + ((st.marking || "").match(/\d+\s*[MA]/g) || [])
+    .reduce((m, s) => m + parseInt(s, 10), 0), 0);
+const badMarks = allDemoQs.filter((q) => markSum(q) !== q.marks);
+ok(badMarks.length === 0,
+   "every demo's step marks add up to its marks, all six topics (" + allDemoQs.length + " demos" +
+   (badMarks.length ? ": " + badMarks.map((q) => q.code + ":" + markSum(q) + "/" + q.marks).join(", ") : "") + ")");
+// 前端不支援 Markdown（§5.1 第 7 條）：資料裡不可以有 **粗體**
+const mdLeak = allPayloads.filter((p) => /\*\*/.test(JSON.stringify(p))).map((p) => p.id);
+ok(mdLeak.length === 0, "no Markdown ** leaks into any topic payload" +
+   (mdLeak.length ? " (" + mdLeak.join(", ") + ")" : ""));
+// 純虛數：c5／cmdHints 教了「實部 = 0」，題庫要有一題真的練
+const q13 = mc6.filter((q) => q.id === "eph-ws05b-q13")[0];
+ok(!!q13 && /purely imaginary/.test(q13.stem.text) && q13.answer === "A",
+   "ws05b adds the purely-imaginary question (q13) with a checked answer");
+const page5b = payload6.lessons[0].pages[4];
+ok(page5b.length === 3 && page5b.some((q) => q.id === "eph-ws05b-q13"),
+   "the three condition questions fill a full page (" +
+   page5b.map((q) => q.code).join(", ") + ")");
+
+// 共軛（複數最難的一步）要教得夠詳細：獨立一張卡 ＋ 兩題除法練習
+const cards6 = payload6.lessons[0].cards;
+const divCard = cards6.filter((c) => /共軛/.test(c.title.zh) && /除法/.test(c.title.zh))[0];
+ok(!!divCard, "ws05b teaches the conjugate in a card of its own (" +
+   cards6.map((c) => c.id).join(", ") + ")");
+ok(!!divCard && (divCard.math || []).length >= 4 && /\{\{math:2\}\}/.test(divCard.body.zh),
+   "that card carries the full (a+bi)/(c+di) formula and a worked example (" +
+   ((divCard || {}).math || []).length + " formulas)");
+ok(!!divCard && /c\^\{2\}\+d\^\{2\}/.test(divCard.body.zh) && /驗算/.test(divCard.body.zh),
+   "the card shows the c²+d² shortcut and how to check the answer");
+const div11 = mc6.filter((q) => q.id === "eph-ws05b-q11")[0];
+const div12 = mc6.filter((q) => q.id === "eph-ws05b-q12")[0];
+ok(!!div11 && /1-i/.test(div11.stem.text) && /1\+i/.test(div11.solution.steps[0].math),
+   "q11 practises multiplying by the conjugate of 1 − i");
+ok(!!div12 && /2\+i/.test(div12.stem.text) && /2-i/.test(div12.stem.text),
+   "q12 adds two conjugate denominators (1/(2+i) + 1/(2−i))");
+ok(!!div11 && !!div12 && div11.answer === "B" && div12.answer === "A",
+   "the two division questions keep their verified answer keys (B, A)");
+ok(!!div12 && /\\frac\{4\}\{5\}/.test(div12.options.A) && /\\frac\{4\}\{5\}\+\\frac\{2\}\{5\}i/.test(div12.options.C),
+   "q12's options include the cancelled answer (4/5) and the not-cancelled trap");
+const last6 = payload6.lessons[0].pages[payload6.lessons[0].pages.length - 1];
+ok(last6.length === 2 && last6.every((q) => /-q1[12]$/.test(q.id)),
+   "the division practice sits on the last MC page (" + last6.map((q) => q.code).join(", ") + ")");
+
+const allNew = mc5.concat(mc6);
+ok(allNew.every((q) => ["A", "B", "C", "D"].includes(q.answer)),
+   "every ws05a/ws05b MC has a real answer key");
+ok(allNew.filter((q) => (q.solution.traps || []).length >= 2).length === allNew.length,
+   "every ws05a/ws05b MC explains at least two real distractors");
+ok(allNew.every((q) => q.solution.tip && q.solution.tip.zh),
+   "every ws05a/ws05b MC carries a takeaway tip");
+
+// 弱點升級庫要把兩課分開兩組（課題 id 帶小寫尾碼時 belongsTo 仍要認得）
+const w05store = JSON.stringify({
+  mc: { "eph-ws05a-w01": { correct: false, tries: 1 }, "eph-ws05b-w01": { correct: false, tries: 1 } },
+  long: {}, cards: {},
+});
+const w05 = boot("wrong.html", "", w05store);
+ok(w05.$$(".section-title").length === 2,
+   "the weak-point library groups ws05a and ws05b separately (got " +
+   w05.$$(".section-title").length + " groups)");
+ok(/一元二次方程/.test(w05.$("#wrong-body").textContent) &&
+   /複數/.test(w05.$("#wrong-body").textContent),
+   "each group is labelled with its own course name");
+
+
 // 未作答但按「看完整解答」＝放棄作答 → 圖都要出場
 const t04q2 = boot("topic.html", "?t=ws04&p=6");
 const c04 = t04q2.$("#topic-body .card[data-qid]");
@@ -490,6 +703,58 @@ ok(/Factorize completely/.test(tHint.$(".cmd-hints").textContent),
    "hint: 'Factorize completely'");
 ok(/Hence/.test(tHint.$(".cmd-hints").textContent), "hint: 'Hence'");
 ok(/徹底分解/.test(tHint.$(".cmd-hints").textContent), "the hints are glossed in Chinese");
+
+// 每課的「題目字眼」要為該課而設（規則見 handoff §3.4）：
+//   ① 每課 4–6 個；② 至少 3 個是自己獨有；③ 任兩課最多重覆 2 個；④ 不可整組照抄另一課
+const hintWords = {};
+const hintTexts = {};
+["ws01", "ws02", "ws03", "ws04", "ws05a", "ws05b"].forEach((hid) => {
+  const hp = boot("topic.html", "?t=" + hid + "&p=0");
+  hintWords[hid] = Array.prototype.map.call(
+    hp.$$(".cmd-hints .ch-chip"), (c) => c.querySelector("b").textContent.trim());
+  hintTexts[hid] = hintWords[hid].join(" ｜ ");
+});
+const hintIds = Object.keys(hintWords);
+const ownWords = {};
+hintIds.forEach((id) => {
+  ownWords[id] = hintWords[id].filter(
+    (w) => hintIds.every((o) => o === id || hintWords[o].indexOf(w) < 0)).length;
+});
+ok(hintIds.filter((id) => ownWords[id] < 3).length === 0,
+   "each course carries at least 3 words of its own (" +
+   hintIds.map((id) => id + ":" + ownWords[id]).join(" ") + ")");
+ok(hintIds.filter((id) => hintWords[id].length < 4 || hintWords[id].length > 6).length === 0,
+   "each course keeps 4–6 words (" + hintIds.map((id) => id + ":" + hintWords[id].length).join(" ") + ")");
+const twinSets = [];
+const pairShared = [];
+hintIds.forEach((a) => hintIds.forEach((b) => {
+  if (a >= b) return;
+  const n = hintWords[a].filter((w) => hintWords[b].indexOf(w) >= 0).length;
+  if (n === hintWords[a].length && n === hintWords[b].length) twinSets.push(a + "=" + b);
+  if (n > 2) pairShared.push(a + "/" + b + ":" + n);
+}));
+ok(twinSets.length === 0, "no two courses share exactly the same word list" +
+   (twinSets.length ? " (" + twinSets.join(", ") + ")" : ""));
+ok(pairShared.length === 0, "two courses overlap on at most 2 words" +
+   (pairShared.length ? " (" + pairShared.join(", ") + ")" : ""));
+ok(/no real roots/.test(hintTexts.ws05a) && /two distinct real roots/.test(hintTexts.ws05a),
+   "ws05a carries the roots vocabulary (" + hintTexts.ws05a.slice(0, 46) + " …)");
+ok(/imaginary part/.test(hintTexts.ws05b) && /a\+bi/.test(hintTexts.ws05b),
+   "ws05b carries the complex-number vocabulary");
+ok(/rotated anticlockwise/.test(hintTexts.ws04) && /reflected with respect to/.test(hintTexts.ws04),
+   "ws04 carries the transformation vocabulary");
+ok(/Make \.\.\. the subject/.test(hintTexts.ws03), "ws03 carries the formula vocabulary");
+ok(/Solve the simultaneous equations/.test(hintTexts.ws02),
+   "ws02 carries the simultaneous-equation vocabulary");
+ok(!/real roots/.test(hintTexts.ws01) && !/imaginary/.test(hintTexts.ws01),
+   "ws01 does not re-use other courses' words");
+ok(new Set(Object.values(hintTexts)).size === 6,
+   "all six courses carry a different set of command words (got " +
+   new Set(Object.values(hintTexts)).size + ")");
+const tHint5 = boot("topic.html", "?t=ws05a&p=0");
+ok(!!tHint5.$(".cmd-hints .katex"), "the command-word glosses are typeset by KaTeX");
+ok(!/\$/.test((tHint5.$(".cmd-hints") || {}).textContent || ""),
+   "no raw $ leaks into the command-word row");
 
 // 暖身題：第一頁第一題（極簡，先建立「我做得到」的經驗）
 const tWarm = boot("topic.html", "?t=ws01&p=1");

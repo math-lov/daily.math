@@ -1,0 +1,4106 @@
+{
+ "_comment": "由 tools/extract_eph.py 自動產生（草稿層）。請勿手改；要修正內容請改 data/learn/{bank,concepts,solutions,lessons}.json。",
+ "sourceFile": "EPH_DSEL5_WS05_e.docx",
+ "code": "WS05",
+ "variant": "question",
+ "extractedAt": "2026-09-19T06:41:41Z",
+ "stats": {
+  "blocks": 683,
+  "dups": 219,
+  "images": 93,
+  "images_inline": 0,
+  "sup": 192,
+  "embedFig": 4,
+  "numEq": 0,
+  "marks": 9,
+  "marking": 2,
+  "examples": 12,
+  "practices": 4,
+  "solutions": 0,
+  "noise": 22,
+  "tables": 11
+ },
+ "mediaManifest": [
+  {
+   "name": "image1.png",
+   "size": 42197
+  },
+  {
+   "name": "image10.wmf",
+   "size": 822
+  },
+  {
+   "name": "image11.wmf",
+   "size": 1004
+  },
+  {
+   "name": "image12.wmf",
+   "size": 928
+  },
+  {
+   "name": "image13.wmf",
+   "size": 822
+  },
+  {
+   "name": "image14.wmf",
+   "size": 982
+  },
+  {
+   "name": "image15.wmf",
+   "size": 1152
+  },
+  {
+   "name": "image16.wmf",
+   "size": 1052
+  },
+  {
+   "name": "image17.wmf",
+   "size": 1038
+  },
+  {
+   "name": "image18.wmf",
+   "size": 1300
+  },
+  {
+   "name": "image19.wmf",
+   "size": 1374
+  },
+  {
+   "name": "image2.png",
+   "size": 42197
+  },
+  {
+   "name": "image20.wmf",
+   "size": 1116
+  },
+  {
+   "name": "image21.wmf",
+   "size": 964
+  },
+  {
+   "name": "image22.wmf",
+   "size": 952
+  },
+  {
+   "name": "image23.wmf",
+   "size": 934
+  },
+  {
+   "name": "image24.wmf",
+   "size": 918
+  },
+  {
+   "name": "image25.wmf",
+   "size": 1250
+  },
+  {
+   "name": "image26.wmf",
+   "size": 1224
+  },
+  {
+   "name": "image27.wmf",
+   "size": 1162
+  },
+  {
+   "name": "image28.wmf",
+   "size": 1170
+  },
+  {
+   "name": "image29.wmf",
+   "size": 1072
+  },
+  {
+   "name": "image3.png",
+   "size": 21626
+  },
+  {
+   "name": "image30.wmf",
+   "size": 1030
+  },
+  {
+   "name": "image31.wmf",
+   "size": 1056
+  },
+  {
+   "name": "image32.wmf",
+   "size": 1056
+  },
+  {
+   "name": "image33.png",
+   "size": 2298
+  },
+  {
+   "name": "image34.png",
+   "size": 2298
+  },
+  {
+   "name": "image35.png",
+   "size": 2298
+  },
+  {
+   "name": "image36.png",
+   "size": 2298
+  },
+  {
+   "name": "image37.wmf",
+   "size": 952
+  },
+  {
+   "name": "image38.wmf",
+   "size": 826
+  },
+  {
+   "name": "image39.wmf",
+   "size": 926
+  },
+  {
+   "name": "image4.png",
+   "size": 21626
+  },
+  {
+   "name": "image4.wmf",
+   "size": 918
+  },
+  {
+   "name": "image40.png",
+   "size": 21626
+  },
+  {
+   "name": "image40.wmf",
+   "size": 1004
+  },
+  {
+   "name": "image41.wmf",
+   "size": 1128
+  },
+  {
+   "name": "image42.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image43.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image44.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image45.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image46.wmf",
+   "size": 1128
+  },
+  {
+   "name": "image47.wmf",
+   "size": 1334
+  },
+  {
+   "name": "image48.wmf",
+   "size": 1412
+  },
+  {
+   "name": "image49.wmf",
+   "size": 1514
+  },
+  {
+   "name": "image5.wmf",
+   "size": 918
+  },
+  {
+   "name": "image50.wmf",
+   "size": 1528
+  },
+  {
+   "name": "image51.wmf",
+   "size": 1354
+  },
+  {
+   "name": "image52.wmf",
+   "size": 1532
+  },
+  {
+   "name": "image53.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image54.wmf",
+   "size": 1094
+  },
+  {
+   "name": "image55.wmf",
+   "size": 822
+  },
+  {
+   "name": "image56.wmf",
+   "size": 822
+  },
+  {
+   "name": "image57.wmf",
+   "size": 822
+  },
+  {
+   "name": "image58.wmf",
+   "size": 822
+  },
+  {
+   "name": "image59.wmf",
+   "size": 1120
+  },
+  {
+   "name": "image6.wmf",
+   "size": 866
+  },
+  {
+   "name": "image60.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image61.wmf",
+   "size": 1296
+  },
+  {
+   "name": "image62.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image63.wmf",
+   "size": 1280
+  },
+  {
+   "name": "image64.wmf",
+   "size": 1474
+  },
+  {
+   "name": "image65.wmf",
+   "size": 812
+  },
+  {
+   "name": "image66.wmf",
+   "size": 918
+  },
+  {
+   "name": "image67.wmf",
+   "size": 1542
+  },
+  {
+   "name": "image68.wmf",
+   "size": 1562
+  },
+  {
+   "name": "image69.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image7.wmf",
+   "size": 986
+  },
+  {
+   "name": "image70.wmf",
+   "size": 1316
+  },
+  {
+   "name": "image71.wmf",
+   "size": 1232
+  },
+  {
+   "name": "image72.wmf",
+   "size": 1280
+  },
+  {
+   "name": "image73.wmf",
+   "size": 1280
+  },
+  {
+   "name": "image74.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image75.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image76.wmf",
+   "size": 1454
+  },
+  {
+   "name": "image77.wmf",
+   "size": 1452
+  },
+  {
+   "name": "image78.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image79.wmf",
+   "size": 1288
+  },
+  {
+   "name": "image8.wmf",
+   "size": 1502
+  },
+  {
+   "name": "image80.wmf",
+   "size": 1420
+  },
+  {
+   "name": "image81.wmf",
+   "size": 1420
+  },
+  {
+   "name": "image82.wmf",
+   "size": 1184
+  },
+  {
+   "name": "image83.wmf",
+   "size": 1426
+  },
+  {
+   "name": "image84.wmf",
+   "size": 1434
+  },
+  {
+   "name": "image85.wmf",
+   "size": 1170
+  },
+  {
+   "name": "image86.wmf",
+   "size": 1178
+  },
+  {
+   "name": "image87.wmf",
+   "size": 812
+  },
+  {
+   "name": "image88.wmf",
+   "size": 812
+  },
+  {
+   "name": "image89.wmf",
+   "size": 1038
+  },
+  {
+   "name": "image9.wmf",
+   "size": 962
+  },
+  {
+   "name": "image90.wmf",
+   "size": 1038
+  },
+  {
+   "name": "image91.wmf",
+   "size": 1442
+  }
+ ],
+ "blocks": [
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts & DSE Paper 1 Typed Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Quadratic Equations in One Unknown and Complex Numbers",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 5.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 5.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 0
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts & DSE Paper 1 Typed Questions",
+   "context": "textbox",
+   "dup": 1
+  },
+  {
+   "type": "para",
+   "text": "Quadratic Equations in One Unknown and Complex Numbers",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": " 5.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 5.1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Key Concepts"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Solving Quadratic Equations in One Unknown"
+    ],
+    [
+     "Factor Method",
+     "Method of Taking Square Roots"
+    ],
+    [
+     "For example,\n(px + q)(rx + s) = 0, where p ≠ 0 and r ≠ 0\npx + q = 0 or rx + s  = 0\ni.e. x =[IMG:image4.wmf] or  x =[IMG:image5.wmf]",
+     "For example,\n(x + m)^{2}^{ }^{ }= n, where n ≥ 0\nx + m = ±[IMG:image6.wmf]\nx = [IMG:image7.wmf]"
+    ],
+    [
+     "Quadratic Formula",
+     "Example:\nx(2x + 1) = x(x – 2)\nx(2x + 1) – x(x – 2) = 0\nx[(2x + 1) – (x – 2)] = 0\nx(x + 3) = 0\nx = 0  or  x = –3"
+    ],
+    [
+     "The roots of ax^{2} + bx + c = 0 (where a ≠ 0) are given by\nx =[IMG:image8.wmf].",
+     ""
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Nature of Roots of Quadratic Equations",
+     "Example:\n3x^{2} – 6x + k = 0, where k is a constant. ……•\n(i) If • has real roots, then\n∆ ≥ 0\n(−6)^{2} − 4(3)(k)  ≥ 0\n36 − 12k ≥ 0\nk ≤ 3\n(ii) Suppose that k = 2 and b is a root of •.\nFind the value of –9b ^{2} + 18b.\nb is a root of •.\n∴ 3b ^{2} – 6b + 2  = 0\n3b ^{2} – 6b = –2\n–9b ^{2} + 18b = –3(3b ^{2} – 6b )\n= –3(–2)\n= 6"
+    ],
+    [
+     "Consider ax^{2} + bx + c = 0, where a ≠ 0. ……(*)\n• If a is a root of (*), then we have:\naa^{2} + ba + c = 0",
+     ""
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Sum and Product of Roots of Quadratic Equations",
+     "Example:\n2x^{2} – 6x + 3 = 0 ……•\nIf a and b are the roots of •, then\n• a + b = [IMG:image9.wmf] = 3 • ab = [IMG:image10.wmf]\n………………………………......\na ^{2} + b  ^{2}^{ }= (a + b )^{2} − 2ab\n= 3^{2} − 2[IMG:image11.wmf]\n= 6"
+    ],
+    [
+     "If a and b are the roots of ax^{2} + bx + c = 0 (where a ≠ 0),\nthen\nsum of roots = a + b = [IMG:image12.wmf];\nproduct of roots = ab = [IMG:image13.wmf].",
+     ""
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[SYM:F084]",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[SYM:F084]",
+   "context": "textbox",
+   "dup": 24
+  },
+  {
+   "type": "para",
+   "text": "a ^{2} + 2ab + b ^{2}  = (a + b )^{2}",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " a ^{2} + b ^{2}^{ }^{ }= (a + b )^{2} − 2ab",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "a ^{2} + 2ab + b ^{2}  = (a + b )^{2}",
+   "context": "textbox",
+   "dup": 26
+  },
+  {
+   "type": "para",
+   "text": " a ^{2} + b ^{2}^{ }^{ }= (a + b )^{2} − 2ab",
+   "context": "textbox",
+   "dup": 27
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Complex Numbers",
+     "Example:"
+    ],
+    [
+     "• A complex number is a number in the form a + bi,\nwhere a and b are real numbers, and i = [IMG:image14.wmf].\n• For a complex number a + bi,\nthe real number a is called the real part and\nthe real number b is called the imaginary part.\n• For any positive integer n,\nif the remainder of n ÷ 4 is 1, then i ^{n} = i ^{1} = i;\nif the remainder of n ÷ 4 is 2, then i ^{n} = i ^{2} = –1;\nif the remainder of n ÷ 4 is 3, then i ^{n} = i ^{3} = –i;\nif the remainder of n ÷ 4 is 0, then i ^{n} = i ^{4} = 1.",
+     ""
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(a) Let k be a real number.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " For complex number 4 – ki,",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " the real part = 4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " the imaginary part = –k",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(a) Let k be a real number.",
+   "context": "textbox",
+   "dup": 33
+  },
+  {
+   "type": "para",
+   "text": " For complex number 4 – ki,",
+   "context": "textbox",
+   "dup": 34
+  },
+  {
+   "type": "para",
+   "text": " the real part = 4",
+   "context": "textbox",
+   "dup": 35
+  },
+  {
+   "type": "para",
+   "text": " the imaginary part = –k",
+   "context": "textbox",
+   "dup": 36
+  },
+  {
+   "type": "para",
+   "text": "(b) (i) i^{9} = (i^{4})^{2} ⋅ i = (1)^{2} ⋅ i = i",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " (ii) i^{18} = (i^{4})^{4} ⋅ i^{2} = (1)^{4}(–1) = –1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " (iii) i^{27} = (i^{4})^{6} ⋅ i^{3} = (1)^{6}(–i) = –i",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " (iv) i^{36} = (i^{4})^{9} = (1)^{9} = 1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(b) (i) i^{9} = (i^{4})^{2} ⋅ i = (1)^{2} ⋅ i = i",
+   "context": "textbox",
+   "dup": 41
+  },
+  {
+   "type": "para",
+   "text": " (ii) i^{18} = (i^{4})^{4} ⋅ i^{2} = (1)^{4}(–1) = –1",
+   "context": "textbox",
+   "dup": 42
+  },
+  {
+   "type": "para",
+   "text": " (iii) i^{27} = (i^{4})^{6} ⋅ i^{3} = (1)^{6}(–i) = –i",
+   "context": "textbox",
+   "dup": 43
+  },
+  {
+   "type": "para",
+   "text": " (iv) i^{36} = (i^{4})^{9} = (1)^{9} = 1",
+   "context": "textbox",
+   "dup": 44
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Addition and Subtraction of \nComplex Numbers",
+     "Multiplication of Complex Numbers"
+    ],
+    [
+     "If a, b, m and n are real numbers, then\n(i) (a + bi) + (m + ni) = (a + m) + (b + n)i\n(ii) (a + bi) − (m + ni) = (a − m) + (b − n)i",
+     "If a, m and n are real numbers, then\nai(m + ni) = (ai)(m) + (ai)(ni)\n= ami + ani^{2}\n= −an + ami"
+    ],
+    [
+     "Division of Complex Numbers",
+     "Example:\n[IMG:image17.wmf] = [IMG:image18.wmf] = [IMG:image19.wmf]= [IMG:image20.wmf]"
+    ],
+    [
+     "If a, b and n are non-zero real numbers, then\n[IMG:image21.wmf] = [IMG:image22.wmf][IMG:image23.wmf]",
+     ""
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[SYM:F085] i^{2} = −1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[SYM:F085] i^{2} = −1",
+   "context": "textbox",
+   "dup": 54
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "= [IMG:image15.wmf]",
+   "context": "textbox",
+   "images": [
+    "image15.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "= [IMG:image16.wmf]",
+   "context": "textbox",
+   "images": [
+    "image16.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "= [IMG:image15.wmf]",
+   "context": "textbox",
+   "images": [
+    "image15.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ],
+   "dup": 58
+  },
+  {
+   "type": "para",
+   "text": "= [IMG:image16.wmf]",
+   "context": "textbox",
+   "images": [
+    "image16.wmf"
+   ],
+   "flags": [
+    "embed-fig"
+   ],
+   "dup": 59
+  },
+  {
+   "type": "para",
+   "text": "Eliminate this ‘i’.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Eliminate this ‘i’.",
+   "context": "textbox",
+   "dup": 62
+  },
+  {
+   "type": "para",
+   "text": "(ni)(i)",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "= ni^{2} = n(−1) = −n",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(ni)(i)",
+   "context": "textbox",
+   "dup": 64
+  },
+  {
+   "type": "para",
+   "text": "= ni^{2} = n(−1) = −n",
+   "context": "textbox",
+   "dup": 65
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 1 Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 1 Questions",
+   "context": "textbox",
+   "dup": 68
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2019 Paper 1 Q3]"
+    ],
+    [
+     "The length and the breadth of a rectangle are 12 cm and (13 + r) cm respectively. If the length of a diagonal of the rectangle is (7 – 2r) cm, find r. (3 marks)\nSolution\n12^{2} + (13 + r)^{2} = (7 – 2r)^{2}   (1M)\n144 + 169 + 26r + r^{2} = 49 – 28r + 4r^{2}\n3r^{2} – 54r – 264 = 0 (1M: for ar^{2} + br + c = 0)\nr^{2} – 18r – 88 = 0\n(r + 4)(r – 22) = 0\nr + 4 = 0  or  r – 22  = 0\nr = –4 or  r = 22  (rejected) (1A)\nThus, we have r = –4."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 71
+  },
+  {
+   "type": "para",
+   "text": "12 cm",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(13 + r) cm",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "(7 – 2r) cm",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "12 cm",
+   "context": "textbox",
+   "dup": 73
+  },
+  {
+   "type": "para",
+   "text": "(13 + r) cm",
+   "context": "textbox",
+   "dup": 74
+  },
+  {
+   "type": "para",
+   "text": "(7 – 2r) cm",
+   "context": "textbox",
+   "dup": 75
+  },
+  {
+   "type": "para",
+   "text": "Practice 1",
+   "flags": [
+    "practice"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "The breadth and the length of a rectangle are (10 + r) cm and (15 – 3r) cm respectively. If the length of a diagonal of the rectangle is 25 cm, find r. (3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2023 Paper 1 Q16(a)]"
+    ],
+    [
+     "Let a and b be real constants. If the roots of the equation x^{2} + ax + b = 0 are p and 4p, \nprove that 4a^{2} = 25b.                 (2 marks)\nSolution\np + 4p = –a ◄ Sum of roots\n5p = –a …… (1)\np(4p) = b    ◄ Product of roots\n4p^{2} = b …… (2)\nFrom (1), p = [IMG:image24.wmf] …… (3)     ◄ Make p the subject of (1).\nPut (3) into (2), we have  [IMG:image25.wmf] = b    ◄ Eliminate p.\n[IMG:image26.wmf] = b\n∴ 4a^{2} = 25b (1)"
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 82
+  },
+  {
+   "type": "para",
+   "text": "Analysis",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Since the relation 4a^{2} = 25b does not involve p, the key step is to eliminate p.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Analysis",
+   "context": "textbox",
+   "dup": 84
+  },
+  {
+   "type": "para",
+   "text": "Since the relation 4a^{2} = 25b does not involve p, the key step is to eliminate p.",
+   "context": "textbox",
+   "dup": 85
+  },
+  {
+   "type": "para",
+   "text": "(1M for either one)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(1M for either one)",
+   "context": "textbox",
+   "flags": [
+    "marking"
+   ],
+   "dup": 88
+  },
+  {
+   "type": "para",
+   "text": "Practice 2",
+   "flags": [
+    "practice"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Let a and b be real constants. If the roots of the equation x^{2} + ax + b = 0 are p and 9p, \nprove that 9a^{2} = 100b.                 (2 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "Warm-up Questions"
+  },
+  {
+   "type": "para",
+   "text": "Solve the following quadratic equations. (1 – 4)"
+  },
+  {
+   "type": "para",
+   "text": "1. x^{2} + 10x + 25 = 0  2. 2x^{2} – x – 7 = 1"
+  },
+  {
+   "type": "para",
+   "text": "3. 4(x + 3)^{2} = 9  4. (x + 1)(x – 2) = (x + 1)(4 – x)"
+  },
+  {
+   "type": "para",
+   "text": "5. If a is a root of the quadratic equation 3x^{2} – 2x – 4 = 0,"
+  },
+  {
+   "type": "para",
+   "text": "find the values of"
+  },
+  {
+   "type": "para",
+   "text": " (a) 6a ^{2} – 4a, (b) –9a ^{2} + 6a."
+  },
+  {
+   "type": "para",
+   "text": "6. If b is a root of the quadratic equation –5x^{2} – 4x + 6 = 0,"
+  },
+  {
+   "type": "para",
+   "text": " find the values of",
+   "dup": 98
+  },
+  {
+   "type": "para",
+   "text": " (a) –15b ^{2} – 12b, (b) 20b ^{2} + 16b."
+  },
+  {
+   "type": "para",
+   "text": "In each of the following, find the discriminant and hence determine the nature of the roots. (7 – 8)"
+  },
+  {
+   "type": "para",
+   "text": "7. –2x^{2} + 6x = 5 8. (2x – 3)(x + 4) = 1"
+  },
+  {
+   "type": "para",
+   "text": "9. If each of the following quadratic equations has two equal real roots, find k."
+  },
+  {
+   "type": "para",
+   "text": " (a) x^{2} + 4x + k = 0 (b) kx^{2} – 30x + 9 = 0"
+  },
+  {
+   "type": "para",
+   "text": "10. For each of the following quadratic equations, find the range of values of k."
+  },
+  {
+   "type": "para",
+   "text": " (a) x^{2} – 6x + k = 0 has no real roots. (b) 2x^{2} – 4x + k = 1 has real roots."
+  },
+  {
+   "type": "para",
+   "text": "Simplify the following and express the results in the form a + bi. (11 – 13)"
+  },
+  {
+   "type": "para",
+   "text": "11. 5i^{5} + 6i^{6} 12. i^{8} – 2i^{13} + 3i^{19} 13. 9i^{9} + 6i^{10} – 3i^{15} – i^{24}"
+  },
+  {
+   "type": "para",
+   "text": "Simplify the following and express the results in the form a + bi. (14 – 16)"
+  },
+  {
+   "type": "para",
+   "text": "14. (4 + 5i) – (6 – 7i) 15. (1 – 2i)(3 + 4i) 16. [IMG:image27.wmf]",
+   "images": [
+    "image27.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "17. Find the real part and the imaginary part of [IMG:image28.wmf].",
+   "images": [
+    "image28.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "18. If k and [IMG:image29.wmf] are real numbers, find k.",
+   "images": [
+    "image29.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 1 Typed Questions"
+  },
+  {
+   "type": "para",
+   "text": "1. The breadth and the length of a rectangle are (26 + 2r) cm and (10 – 4r) cm respectively. If the length of a diagonal of the rectangle is 34 cm, find r."
+  },
+  {
+   "type": "para",
+   "text": " (3 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE 2019 Paper 1 Q3]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "2. Let k be a constant. If the quadratic equation 15x^{2} + 6x – k = 0 has no real roots, find the range of values of k."
+  },
+  {
+   "type": "para",
+   "text": "(4 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKCEE 2007 Paper 1 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "3. Find the range of values of a such that the quadratic equation –5x^{2} + 10x – 2 = a has real roots."
+  },
+  {
+   "type": "para",
+   "text": "(2 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "[HKDSE Practice Paper 1 Q17(b)(ii)]"
+  },
+  {
+   "type": "para",
+   "text": "4. Let b be a real constant. The roots of the equation 2x^{2} – bx + 8 = 0 are a and b. Express a ^{2} + b ^{2} in terms of b."
+  },
+  {
+   "type": "para",
+   "text": "(3 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 117
+  },
+  {
+   "type": "para",
+   "text": " [HKDSE 2022 Paper 1 Q17(a)]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "5. Let r and s be real constants. If the roots of the equation x^{2} + rx + s = 0 are 3p and 4p, prove that 12r^{2} = 49s."
+  },
+  {
+   "type": "para",
+   "text": "(2 marks)",
+   "flags": [
+    "marks"
+   ],
+   "dup": 123
+  },
+  {
+   "type": "para",
+   "text": " [HKDSE 2023 Paper 1 Q16(a)]",
+   "flags": [
+    "dse-ref"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "6. (a) Express [IMG:image30.wmf] in the form of a + bi, where a and b are real numbers.  (2 marks)",
+   "images": [
+    "image30.wmf"
+   ],
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "(b) The roots of the quadratic equation x^{2} + px + q = 0 are [IMG:image31.wmf]and [IMG:image32.wmf]. Find",
+   "images": [
+    "image31.wmf",
+    "image32.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " (i) p and q,"
+  },
+  {
+   "type": "para",
+   "text": "(ii) the range of values of r such that the quadratic equation x^{2} + px + q = r has real roots."
+  },
+  {
+   "type": "para",
+   "text": "(5 marks)",
+   "flags": [
+    "marks"
+   ]
+  },
+  {
+   "type": "para",
+   "text": " [HKDSE Practice Paper 1 Q17]"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 0
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 2 Typed Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Quadratic Equations in One Unknown and Complex Numbers",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": " 5.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 5.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Name: ____________________ (    )    Class:              Date:          ",
+   "context": "textbox",
+   "style": "a3",
+   "flags": [
+    "header-noise"
+   ],
+   "dup": 0
+  },
+  {
+   "type": "para",
+   "text": "DSE Paper 2 Typed Questions",
+   "context": "textbox",
+   "dup": 138
+  },
+  {
+   "type": "para",
+   "text": "Quadratic Equations in One Unknown and Complex Numbers",
+   "context": "textbox",
+   "dup": 2
+  },
+  {
+   "type": "para",
+   "text": " 5.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": " 5.2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 2 Questions",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Related HKDSE Paper 2 Questions",
+   "context": "textbox",
+   "dup": 147
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE Sample Paper 2 Q6]"
+    ],
+    [
+     "Let a be a constant. Solve the equation (x + a)(x – a – 2) = (x + a).\nA. x = a + 2\nB. x = a + 3\nC. x = –a  or  x = a + 2\nD. x = –a  or  x = a + 3\nSolution\n(x + a)(x – a – 2) = (x + a)\n(x + a)(x – a – 2) – (x + a) = 0\n(x + a)(x – a – 2 – 1) = 0\nx + a = 0 or x – a – 2 – 1 = 0\nx = –a or x = a + 3\n∴ The answer is D."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 71
+  },
+  {
+   "type": "para",
+   "text": "Example 1",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 71
+  },
+  {
+   "type": "para",
+   "text": "[By substituting x = a + 2, x = a + 3, \nx = –a into the equation respectively.]",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "For example, consider x = a + 2.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "L.H.S = (a + 2 + a)(a + 2 – a – 2) = 0",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "R.H.S. = a + 2 + a = 2a + 2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Since L.H.S. ≠ R.H.S., x = a + 2 is not a solution of the equation.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "MCQ Alternative Strategy",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "[By substituting x = a + 2, x = a + 3, \nx = –a into the equation respectively.]",
+   "context": "textbox",
+   "dup": 152
+  },
+  {
+   "type": "para",
+   "text": "For example, consider x = a + 2.",
+   "context": "textbox",
+   "dup": 153
+  },
+  {
+   "type": "para",
+   "text": "L.H.S = (a + 2 + a)(a + 2 – a – 2) = 0",
+   "context": "textbox",
+   "dup": 154
+  },
+  {
+   "type": "para",
+   "text": "R.H.S. = a + 2 + a = 2a + 2",
+   "context": "textbox",
+   "dup": 155
+  },
+  {
+   "type": "para",
+   "text": "Since L.H.S. ≠ R.H.S., x = a + 2 is not a solution of the equation.",
+   "context": "textbox",
+   "dup": 156
+  },
+  {
+   "type": "para",
+   "text": "MCQ Alternative Strategy",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "No not cancel x + a from both sides.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "No not cancel x + a from both sides.",
+   "context": "textbox",
+   "dup": 164
+  },
+  {
+   "type": "para",
+   "text": "Practice 1",
+   "flags": [
+    "practice"
+   ],
+   "dup": 79
+  },
+  {
+   "type": "para",
+   "text": "Let k be a constant. Solve the equation (x – k)(x – 2k + 1) = (x – k)."
+  },
+  {
+   "type": "para",
+   "text": "A. x = 2k"
+  },
+  {
+   "type": "para",
+   "text": "B. x = 2k – 1"
+  },
+  {
+   "type": "para",
+   "text": "C. x = k  or  x = 2k"
+  },
+  {
+   "type": "para",
+   "text": "D. x = k  or  x = 2k – 1"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2018 Paper 2 Q36]",
+     "[HKDSE 2023 Paper 2 Q34]"
+    ],
+    [
+     "If m ≠ n and 3m^{2} – 7m = 3n^{2} – 7n = 12, then \n(m – 3)(n – 3) =\nA. –2.\nB. 6.\nC. 12.\nD. 20.\nSolution\nNote that m and n are the roots of the quadratic equation 3x^{2} – 7x = 12.\n3x^{2} – 7x = 12\n3x^{2} – 7x – 12 = 0\n∴ m + n = [IMG:image37.wmf] = [IMG:image38.wmf]\nmn = [IMG:image39.wmf] = –4\n(m – 3)(n – 3) = mn – 3m – 3n + 9\n= mn – 3(m + n) + 9\n= –4 – 3[IMG:image40.wmf] + 9\n= –2\n∴ The answer is A.",
+     "If k is a real number, then the real part of [IMG:image41.wmf] is\nA. [IMG:image42.wmf].\nB. [IMG:image43.wmf].\nC. [IMG:image44.wmf].\nD. [IMG:image45.wmf].\nSolution\n[IMG:image46.wmf] = [IMG:image47.wmf]\n= [IMG:image48.wmf]\n= [IMG:image49.wmf]\n= [IMG:image50.wmf]  → i^{2} = –1\n= [IMG:image51.wmf]\n= [IMG:image52.wmf]\n∴ The real part is [IMG:image53.wmf].\n∴ The answer is D."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 82
+  },
+  {
+   "type": "para",
+   "text": "Example 2",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 82
+  },
+  {
+   "type": "para",
+   "text": "Example 3",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 3",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 176
+  },
+  {
+   "type": "para",
+   "text": "[By solving 3x^{2} – 7x = 12.]",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "Since m and n are the roots of 3x^{2} – 7x = 12, solve 3x^{2} – 7x = 12 first.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "By using a calculator, x ≈ 3.48 or x ≈ –1.15.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∵ (3.48 – 3)(–1.15 – 3) ≈ –1.992 ≈ –2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "∴ The answer is A.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "MCQ Alternative Strategy",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "[By solving 3x^{2} – 7x = 12.]",
+   "context": "textbox",
+   "dup": 178
+  },
+  {
+   "type": "para",
+   "text": "Since m and n are the roots of 3x^{2} – 7x = 12, solve 3x^{2} – 7x = 12 first.",
+   "context": "textbox",
+   "dup": 179
+  },
+  {
+   "type": "para",
+   "text": "By using a calculator, x ≈ 3.48 or x ≈ –1.15.",
+   "context": "textbox",
+   "dup": 180
+  },
+  {
+   "type": "para",
+   "text": "∵ (3.48 – 3)(–1.15 – 3) ≈ –1.992 ≈ –2",
+   "context": "textbox",
+   "dup": 181
+  },
+  {
+   "type": "para",
+   "text": "∴ The answer is A.",
+   "context": "textbox",
+   "dup": 182
+  },
+  {
+   "type": "para",
+   "text": "MCQ Alternative Strategy",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "[By substitution and using a calculator]",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "For example, take k = 2. By using a calculator, \nthe given expression is [IMG:image54.wmf], while the expressions in options A, B, C and D are [IMG:image55.wmf], [IMG:image56.wmf], [IMG:image57.wmf] and [IMG:image58.wmf] respectively. ",
+   "context": "textbox",
+   "images": [
+    "image54.wmf",
+    "image55.wmf",
+    "image56.wmf",
+    "image57.wmf",
+    "image58.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "∴ The answer is D.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "MCQ Alternative Strategy",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "[By substitution and using a calculator]",
+   "context": "textbox",
+   "dup": 190
+  },
+  {
+   "type": "para",
+   "text": "For example, take k = 2. By using a calculator, \nthe given expression is [IMG:image54.wmf], while the expressions in options A, B, C and D are [IMG:image55.wmf], [IMG:image56.wmf], [IMG:image57.wmf] and [IMG:image58.wmf] respectively. ",
+   "context": "textbox",
+   "images": [
+    "image54.wmf",
+    "image55.wmf",
+    "image56.wmf",
+    "image57.wmf",
+    "image58.wmf"
+   ],
+   "dup": 191
+  },
+  {
+   "type": "para",
+   "text": "∴ The answer is D.",
+   "context": "textbox",
+   "dup": 192
+  },
+  {
+   "type": "para",
+   "text": "MCQ Alternative Strategy",
+   "context": "textbox",
+   "dup": 157
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Practice 2\nIf a ≠ b and 5a^{2} – 8a = 5b^{2} – 8b = 10, then \n(a + 5)(b + 5) =\nA. 15.\nB. 19.\nC. 31.\nD. 35.",
+     "Practice 3\nIf k is a real number, then the imaginary part of [IMG:image59.wmf] is\nA. [IMG:image60.wmf].\nB. [IMG:image61.wmf].\nC. [IMG:image62.wmf].\nD. [IMG:image63.wmf]."
+    ]
+   ]
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "[HKDSE 2022 Paper 2 Q35]"
+    ],
+    [
+     "Let z = 19 – ki^{9} + 2ki^{14} – 6i^{20} – 11i^{23}, where k is a real number. If the real part and the imaginary part of z are equal, then the real part of z is\nA. –8.\nB. –3.\nC. 2.\nD. 9.\nSolution\n19 – ki^{9} + 2ki^{14} – 6i^{20} – 11i^{23}\n= 19 – k(i) + 2k(–1) – 6(1) – 11(–i) →\n= (13 – 2k) + (–k + 11)i\n∴ 13 – 2k = –k + 11\nk = 2       → Do not forget to find the real part of z.\n∴ Real part of z = 13 – 2(2) = 9\n∴ The answer is D."
+    ]
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 4",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Example 4",
+   "context": "textbox",
+   "flags": [
+    "example"
+   ],
+   "dup": 201
+  },
+  {
+   "type": "para",
+   "text": "i ^{9} = i^{1} = i, \ni^{14} = i^{2} = –1, \ni^{20} = i^{4} = 1, \ni^{23} = i^{3} = –i",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "i ^{9} = i^{1} = i, \ni^{14} = i^{2} = –1, \ni^{20} = i^{4} = 1, \ni^{23} = i^{3} = –i",
+   "context": "textbox",
+   "dup": 203
+  },
+  {
+   "type": "para",
+   "text": "For any positive integer n,",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "if the remainder of n ÷ 4 is 1,  then i^{n} = i^{1} = i;",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "if the remainder of n ÷ 4 is 2,  then i^{n} = i^{2} = –1;",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "if the remainder of n ÷ 4 is 3,  then i^{n} = i^{3} = –i;",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "if the remainder of n ÷ 4 is 0,  then i^{n} = i^{4} = 1.",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "For any positive integer n,",
+   "context": "textbox",
+   "dup": 205
+  },
+  {
+   "type": "para",
+   "text": "if the remainder of n ÷ 4 is 1,  then i^{n} = i^{1} = i;",
+   "context": "textbox",
+   "dup": 206
+  },
+  {
+   "type": "para",
+   "text": "if the remainder of n ÷ 4 is 2,  then i^{n} = i^{2} = –1;",
+   "context": "textbox",
+   "dup": 207
+  },
+  {
+   "type": "para",
+   "text": "if the remainder of n ÷ 4 is 3,  then i^{n} = i^{3} = –i;",
+   "context": "textbox",
+   "dup": 208
+  },
+  {
+   "type": "para",
+   "text": "if the remainder of n ÷ 4 is 0,  then i^{n} = i^{4} = 1.",
+   "context": "textbox",
+   "dup": 209
+  },
+  {
+   "type": "para",
+   "text": "Practice 4",
+   "flags": [
+    "practice"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "Let z = –6k – 17i^{6} + 9i^{8} – 7i^{13} – 5ki^{1}^{9}, where k is a real number. If the real part and the imaginary part of z are equal, then the real part of z is"
+  },
+  {
+   "type": "para",
+   "text": "A. –1."
+  },
+  {
+   "type": "para",
+   "text": "B. 2."
+  },
+  {
+   "type": "para",
+   "text": "C. 3."
+  },
+  {
+   "type": "para",
+   "text": "D. 8."
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "1. Let x be the larger one of two consecutive even numbers. If the sum of the squares of the two even numbers is less than three times the product of the two even numbers by 4, then"
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "1",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "2",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "3",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "4",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "5",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "  A. x^{2} + (x – 1)^{2} = 3x(x – 1) + 4."
+  },
+  {
+   "type": "para",
+   "text": "  B. x^{2} + (x – 1)^{2} = 3x(x – 1) – 4."
+  },
+  {
+   "type": "para",
+   "text": "  C. x^{2} + (x – 2)^{2} = 3x(x – 2) + 4."
+  },
+  {
+   "type": "para",
+   "text": "  D. x^{2} + (x – 2)^{2} = 3x(x – 2) – 4.\n    [HKCEE 2010 Paper 2 Q7, HKCEE 2007 Paper 2 Q4]"
+  },
+  {
+   "type": "para",
+   "text": "2. In the figure, the area of the trapezium is 80 cm^{2}. Which of the  following equations can be used to find x?"
+  },
+  {
+   "type": "para",
+   "text": "  A. x(x + 6) = 80"
+  },
+  {
+   "type": "para",
+   "text": "x cm",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x cm",
+   "context": "textbox",
+   "dup": 255
+  },
+  {
+   "type": "para",
+   "text": "6 cm",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "x cm",
+   "context": "textbox",
+   "dup": 255
+  },
+  {
+   "type": "para",
+   "text": "x cm",
+   "context": "textbox",
+   "dup": 255
+  },
+  {
+   "type": "para",
+   "text": "6 cm",
+   "context": "textbox",
+   "dup": 257
+  },
+  {
+   "type": "para",
+   "text": "  B. x(x + 6) = 160"
+  },
+  {
+   "type": "para",
+   "text": "  C. x^{2} – x(x – 6) = 80"
+  },
+  {
+   "type": "para",
+   "text": "  D.  x^{2} – x(x – 6) = 160"
+  },
+  {
+   "type": "para",
+   "text": "    [HKCEE 2005 Paper 2 Q5]"
+  },
+  {
+   "type": "para",
+   "text": "3 Solve 7x^{2} = 14x."
+  },
+  {
+   "type": "para",
+   "text": "  A. x = 2"
+  },
+  {
+   "type": "para",
+   "text": "  B. x = 7"
+  },
+  {
+   "type": "para",
+   "text": "  C. x = 0  or  x = 2"
+  },
+  {
+   "type": "para",
+   "text": "  D. x = 0  or  x = 7"
+  },
+  {
+   "type": "para",
+   "text": "    [HKCEE 2006 Paper 2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "4. Solve x(x – 2) = 6x."
+  },
+  {
+   "type": "para",
+   "text": "  A. x = 4"
+  },
+  {
+   "type": "para",
+   "text": "  B. x = 8"
+  },
+  {
+   "type": "para",
+   "text": "  C. x = 0  or  x = 4"
+  },
+  {
+   "type": "para",
+   "text": "  D. x = 0  or  x = 8"
+  },
+  {
+   "type": "para",
+   "text": "    [HKCEE 2004 Paper 2 Q7]"
+  },
+  {
+   "type": "para",
+   "text": "5. Let k be a constant. Solve the equation (x + k)^{2} = 9k^{2}."
+  },
+  {
+   "type": "para",
+   "text": "  A. x = 2k",
+   "dup": 168
+  },
+  {
+   "type": "para",
+   "text": "  B. x = 8k"
+  },
+  {
+   "type": "para",
+   "text": "  C. x = −4k  or  x = 2k"
+  },
+  {
+   "type": "para",
+   "text": "  D. x = −10k  or  x = 8k"
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2013 Paper 2 Q6]"
+  },
+  {
+   "type": "para",
+   "text": "6. Let a be a constant. Solve the equation (x − 5a)^{2} = 4a^{2}."
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "6",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "7",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "8",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "9",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "10",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "  A. x = 9a"
+  },
+  {
+   "type": "para",
+   "text": "  B. x = 7a"
+  },
+  {
+   "type": "para",
+   "text": "  C. x = a  or  x = 9a"
+  },
+  {
+   "type": "para",
+   "text": "  D. x = 3a  or  x = 7a"
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2013 Paper 2 Q6]",
+   "dup": 282
+  },
+  {
+   "type": "para",
+   "text": "7. Let c be a constant. Solve the equation (x + 3c)(x − c + 1) = (x + 3c)."
+  },
+  {
+   "type": "para",
+   "text": "  A. x = c"
+  },
+  {
+   "type": "para",
+   "text": "  B. x = c − 1"
+  },
+  {
+   "type": "para",
+   "text": "  C. x = −3c  or  x = c"
+  },
+  {
+   "type": "para",
+   "text": "  D. x = −3c  or  x = c − 1"
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE Sample Paper 2 Q6]"
+  },
+  {
+   "type": "para",
+   "text": "8. Let t be a constant. Solve the equation\n (x – 2t)(x – 3t) = (6t – x)(x – 3t)."
+  },
+  {
+   "type": "para",
+   "text": "  A. x = 3t"
+  },
+  {
+   "type": "para",
+   "text": "  B. x = 6t"
+  },
+  {
+   "type": "para",
+   "text": "  C. x = 2t  or  x = 6t"
+  },
+  {
+   "type": "para",
+   "text": "  D. x = 3t  or  x = 4t"
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2022 Paper 2 Q4]"
+  },
+  {
+   "type": "para",
+   "text": "9. Let h be a constant. Solve the equation \n (x + 6h)(x + 4h) = (8h – x)(x + 4h)."
+  },
+  {
+   "type": "para",
+   "text": "  A. x = 8h"
+  },
+  {
+   "type": "para",
+   "text": "  B. x = –4h"
+  },
+  {
+   "type": "para",
+   "text": "  C. x = –4h  or  x = h "
+  },
+  {
+   "type": "para",
+   "text": "  D. x = –6h  or  x = 8h"
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2022 Paper 2 Q4]",
+   "dup": 326
+  },
+  {
+   "type": "para",
+   "text": "10. If α is a root of the equation x^{2} – 4x – 2 = 0, then 3 + 8α – 2α^{2} = "
+  },
+  {
+   "type": "para",
+   "text": "  A. –3."
+  },
+  {
+   "type": "para",
+   "text": "  B. –1."
+  },
+  {
+   "type": "para",
+   "text": "  C. 7."
+  },
+  {
+   "type": "para",
+   "text": "  D. 9."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2015 Paper 2 Q7]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "11. Let m be a constant. If the quadratic equation x^{2} – mx + 6m = 0 has \n equal roots, then m = "
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "12",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "13",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "14",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "15",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "11",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "12",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "13",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "14",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "15",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "  A. 6."
+  },
+  {
+   "type": "para",
+   "text": "  B. 24."
+  },
+  {
+   "type": "para",
+   "text": "  C. 0  or  6."
+  },
+  {
+   "type": "para",
+   "text": "  D. 0  or  24."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE Practice Paper 2 Q6, HKCEE 2009 Paper 2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "12. If k is a constant such that the quadratic equation 3x^{2} – kx + k + 9 = 0\n has equal roots, then k = "
+  },
+  {
+   "type": "para",
+   "text": "  A. –3.",
+   "dup": 334
+  },
+  {
+   "type": "para",
+   "text": "  B. 12."
+  },
+  {
+   "type": "para",
+   "text": "  C. –6  or  18."
+  },
+  {
+   "type": "para",
+   "text": "  D. –12  or  9."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2016 Paper 2 Q8, HKCEE 2005 P2 Q8]"
+  },
+  {
+   "type": "para",
+   "text": "13. Find the range of values of p such that the quadratic equation \n x^{2} – 2x = 9 + p has no real roots."
+  },
+  {
+   "type": "para",
+   "text": "  A. p > –10"
+  },
+  {
+   "type": "para",
+   "text": "  B. p < –10"
+  },
+  {
+   "type": "para",
+   "text": "  C. p > –8"
+  },
+  {
+   "type": "para",
+   "text": "  D. p < –8"
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE Sample Paper 2 Q7, HKCEE 2010 Paper 2 Q10]"
+  },
+  {
+   "type": "para",
+   "text": "14. Find the range of values of k such that the quadratic equation \n x^{2} – 4x + k = 1 has no real roots."
+  },
+  {
+   "type": "para",
+   "text": "  A. k > 4"
+  },
+  {
+   "type": "para",
+   "text": "  B. k < 4"
+  },
+  {
+   "type": "para",
+   "text": "  C. k > 5"
+  },
+  {
+   "type": "para",
+   "text": "  D. k < 5"
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE Sample Paper 2 Q7, HKCEE 2010 Paper 2 Q10]",
+   "dup": 383
+  },
+  {
+   "type": "para",
+   "text": "15. Find the range of values of m such that the quadratic equation "
+  },
+  {
+   "type": "para",
+   "text": " x^{2} + 8x – m = 7 has two distinct real roots."
+  },
+  {
+   "type": "para",
+   "text": "  A. m > –23 "
+  },
+  {
+   "type": "para",
+   "text": "  B. m ≥ –23"
+  },
+  {
+   "type": "para",
+   "text": "  C. m > –16"
+  },
+  {
+   "type": "para",
+   "text": "  D. m ≥ –16"
+  },
+  {
+   "type": "para",
+   "text": "    [HKCEE 2006 Paper 2 Q9]"
+  },
+  {
+   "type": "para",
+   "text": "16. Let k be a constant. If the quadratic equation 3x^{2} + kx – k = –24 has equal roots, then k = "
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "16",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "17",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "18",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "19",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "16",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "17",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "18",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "19",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "  A. –24  or  12."
+  },
+  {
+   "type": "para",
+   "text": "  B. –12  or  24."
+  },
+  {
+   "type": "para",
+   "text": "  C. –12  or  8."
+  },
+  {
+   "type": "para",
+   "text": "  D. –8  or  12."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2014 Paper 2 Q4]"
+  },
+  {
+   "type": "para",
+   "text": "17. If the equation 4x^{2} + kx + 36 = 0 has equal positive roots, then k = "
+  },
+  {
+   "type": "para",
+   "text": "  A. –24."
+  },
+  {
+   "type": "para",
+   "text": "  B. –12."
+  },
+  {
+   "type": "para",
+   "text": "  C. 12."
+  },
+  {
+   "type": "para",
+   "text": "  D. 24."
+  },
+  {
+   "type": "para",
+   "text": "    [HKCEE 2004 Paper 2 Q6]"
+  },
+  {
+   "type": "para",
+   "text": "18. If the equation 9x^{2} + hx + 25 = 0 has equal negative roots, then h = "
+  },
+  {
+   "type": "para",
+   "text": "  A. –15."
+  },
+  {
+   "type": "para",
+   "text": "  B. 15."
+  },
+  {
+   "type": "para",
+   "text": "  C. –30."
+  },
+  {
+   "type": "para",
+   "text": "  D. 30."
+  },
+  {
+   "type": "para",
+   "text": "    [HKCEE 2004 Paper 2 Q6]",
+   "dup": 430
+  },
+  {
+   "type": "para",
+   "text": "19. If α ≠ β and [IMG:image64.wmf], then αβ =",
+   "images": [
+    "image64.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image65.wmf].",
+   "images": [
+    "image65.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image66.wmf].",
+   "images": [
+    "image66.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. 3.",
+   "dup": 219
+  },
+  {
+   "type": "para",
+   "text": "  D. –3."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2013 Paper 2 Q35]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "20. If a ≠ b and [IMG:image67.wmf], then (a – 1)(b – 1) =",
+   "images": [
+    "image67.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "20",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "21",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "22",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "23",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "24",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "20",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "21",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "22",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "23",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "24",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "  A. –14."
+  },
+  {
+   "type": "para",
+   "text": "  B. –8."
+  },
+  {
+   "type": "para",
+   "text": "  C. 10. "
+  },
+  {
+   "type": "para",
+   "text": "  D. 16."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2018 Paper 2 Q36, HKCEE 2004 Paper 2 Q42]"
+  },
+  {
+   "type": "para",
+   "text": "21. If m ≠ n and 4m^{2} – 15m = 4n^{2} – 15n = 10, then (m – 6)(n – 6) ="
+  },
+  {
+   "type": "para",
+   "text": "  A. 11."
+  },
+  {
+   "type": "para",
+   "text": "  B. 16."
+  },
+  {
+   "type": "para",
+   "text": "  C. 56."
+  },
+  {
+   "type": "para",
+   "text": "  D. 61."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2018 Paper 2 Q36, HKCEE 2004 Paper 2 Q42]",
+   "dup": 475
+  },
+  {
+   "type": "para",
+   "text": "22. If a, b are distinct real numbers and [IMG:image68.wmf], find a^{2} + b^{2}.",
+   "images": [
+    "image68.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. –14"
+  },
+  {
+   "type": "para",
+   "text": "  B. 4"
+  },
+  {
+   "type": "para",
+   "text": "  C. 22"
+  },
+  {
+   "type": "para",
+   "text": "  D. 81"
+  },
+  {
+   "type": "para",
+   "text": "    [HKCEE 2001 Paper 2 Q39]"
+  },
+  {
+   "type": "para",
+   "text": "23. Let q be a constant. If the roots of the quadratic equation x^{2} + qx + 6 = 0 are α and β, then α^{2} + β ^{2} ="
+  },
+  {
+   "type": "para",
+   "text": "  A. q^{2}."
+  },
+  {
+   "type": "para",
+   "text": "  B. q^{2} – 12."
+  },
+  {
+   "type": "para",
+   "text": "  C. q^{2} + 12."
+  },
+  {
+   "type": "para",
+   "text": "  D. q^{2} + 24."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2015 Paper 2 Q34]"
+  },
+  {
+   "type": "para",
+   "text": "24. Let m be a constant. If the roots of the quadratic equation \nx^{2} – mx – 8 = 0 are α and β, then α^{2} + αβ + β ^{2} ="
+  },
+  {
+   "type": "para",
+   "text": "  A. m^{2} – 16."
+  },
+  {
+   "type": "para",
+   "text": "  B. m^{2} – 8."
+  },
+  {
+   "type": "para",
+   "text": "  C. m^{2} + 8."
+  },
+  {
+   "type": "para",
+   "text": "  D. m^{2} + 16."
+  },
+  {
+   "type": "para",
+   "text": "    [Modified from HKDSE 2015 Paper 2 Q34]"
+  },
+  {
+   "type": "para",
+   "text": "25. Let k be a constant. If α and β are the roots of the equation \nx^{2} + 6x – k = 0, then 6α – β ^{2} ="
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "25",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "26",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "27",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "28",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "29",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "25",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "26",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "27",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "28",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "29",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "  A. k – 6."
+  },
+  {
+   "type": "para",
+   "text": "  B. –k – 6."
+  },
+  {
+   "type": "para",
+   "text": "  C. k – 36."
+  },
+  {
+   "type": "para",
+   "text": "  D. –k – 36."
+  },
+  {
+   "type": "para",
+   "text": "    [HKCEE 2003 Paper 2 Q41]"
+  },
+  {
+   "type": "para",
+   "text": "26. i^{7}(αi – 6) ="
+  },
+  {
+   "type": "para",
+   "text": "  A. α + 6i."
+  },
+  {
+   "type": "para",
+   "text": "  B. α – 6i."
+  },
+  {
+   "type": "para",
+   "text": "  C. –α + 6i."
+  },
+  {
+   "type": "para",
+   "text": "  D. –α – 6i."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2012 Paper 2 Q35]"
+  },
+  {
+   "type": "para",
+   "text": "27. If k is a real number, then the real part of (k – 4i)(4 – i) = "
+  },
+  {
+   "type": "para",
+   "text": "  A. 4k."
+  },
+  {
+   "type": "para",
+   "text": "  B. k – 4."
+  },
+  {
+   "type": "para",
+   "text": "  C. 4k + 4."
+  },
+  {
+   "type": "para",
+   "text": "  D. 4k – 4."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE Practice Paper 2 Q34]"
+  },
+  {
+   "type": "para",
+   "text": "28. If k is a real number, then [IMG:image69.wmf] = ",
+   "images": [
+    "image69.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. 3 + 5ki."
+  },
+  {
+   "type": "para",
+   "text": "  B. –3 + 5ki."
+  },
+  {
+   "type": "para",
+   "text": "  C. 3 + ki."
+  },
+  {
+   "type": "para",
+   "text": "  D. –3 + ki."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE Sample Paper 2 Q34]"
+  },
+  {
+   "type": "para",
+   "text": "29. If β is a real number, then [IMG:image70.wmf] = ",
+   "images": [
+    "image70.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. β – 3i."
+  },
+  {
+   "type": "para",
+   "text": "  B. β + 3i."
+  },
+  {
+   "type": "para",
+   "text": "  C. 3 – βi."
+  },
+  {
+   "type": "para",
+   "text": "  D. 3 + βi."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2014 Paper 2 Q36]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "30. If k is a real number, then the imaginary part of [IMG:image71.wmf] is",
+   "images": [
+    "image71.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "30",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "31",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "32",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "33",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "30",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "31",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "32",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "33",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image72.wmf].",
+   "images": [
+    "image72.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image73.wmf].",
+   "images": [
+    "image73.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image74.wmf].",
+   "images": [
+    "image74.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image75.wmf].",
+   "images": [
+    "image75.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2023 Paper 2 Q34]"
+  },
+  {
+   "type": "para",
+   "text": "31. The real part of 3i^{18} + 2i^{19} – 3i^{20} – 5i^{21} is"
+  },
+  {
+   "type": "para",
+   "text": "  A. –7."
+  },
+  {
+   "type": "para",
+   "text": "  B. –6."
+  },
+  {
+   "type": "para",
+   "text": "  C. 0."
+  },
+  {
+   "type": "para",
+   "text": "  D. 6."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2013 Paper 2 Q36]"
+  },
+  {
+   "type": "para",
+   "text": "32. The imaginary part of [IMG:image76.wmf] is",
+   "images": [
+    "image76.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. –9."
+  },
+  {
+   "type": "para",
+   "text": "  B. –7."
+  },
+  {
+   "type": "para",
+   "text": "  C. 7.",
+   "dup": 336
+  },
+  {
+   "type": "para",
+   "text": "  D. 9.",
+   "dup": 337
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2018 Paper 2 Q37]"
+  },
+  {
+   "type": "para",
+   "text": "33. If a is a real number, then the real part of [IMG:image77.wmf] is",
+   "images": [
+    "image77.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. [IMG:image78.wmf].",
+   "images": [
+    "image78.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  B. [IMG:image79.wmf].",
+   "images": [
+    "image79.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  C. [IMG:image80.wmf].",
+   "images": [
+    "image80.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  D. [IMG:image81.wmf].",
+   "images": [
+    "image81.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2019 Paper 2 Q34]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "34. Let z = (k – 4)i^{11} + (k – 9)i^{14}, where k is a real number. If z is a real number, then k ="
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "34",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "35",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "36",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "37",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "34",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "35",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "36",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "37",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "  A. –9.",
+   "dup": 592
+  },
+  {
+   "type": "para",
+   "text": "  B. –4."
+  },
+  {
+   "type": "para",
+   "text": "  C. 4."
+  },
+  {
+   "type": "para",
+   "text": "  D. 9.",
+   "dup": 337
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2015 Paper 2 Q35]"
+  },
+  {
+   "type": "para",
+   "text": "35. If k and [IMG:image82.wmf] are real numbers, then k =",
+   "images": [
+    "image82.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. –3.",
+   "dup": 334
+  },
+  {
+   "type": "para",
+   "text": "  B. –2."
+  },
+  {
+   "type": "para",
+   "text": "  C. 2."
+  },
+  {
+   "type": "para",
+   "text": "  D. 3."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2017 Paper 2 Q35]"
+  },
+  {
+   "type": "para",
+   "text": "36. Let z = 9i + 3ki^{7} + 2i^{20} + 2ki^{28} + 3i^{30}, where k is a real number. If the real part and the imaginary part of z are equal, then the real part of z is "
+  },
+  {
+   "type": "para",
+   "text": "  A. –1.",
+   "dup": 217
+  },
+  {
+   "type": "para",
+   "text": "  B. 2.",
+   "dup": 218
+  },
+  {
+   "type": "para",
+   "text": "  C. 3.",
+   "dup": 219
+  },
+  {
+   "type": "para",
+   "text": "  D. 5."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2022 Paper 2 Q35]"
+  },
+  {
+   "type": "para",
+   "text": "37. Define [IMG:image83.wmf] and [IMG:image84.wmf], where k is a real number. If the imaginary part of z_{1} is equal to the imaginary part of z_{2}, then z_{2} – z_{1} =",
+   "images": [
+    "image83.wmf",
+    "image84.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. –1.",
+   "dup": 217
+  },
+  {
+   "type": "para",
+   "text": "  B. 0."
+  },
+  {
+   "type": "para",
+   "text": "  C. 1."
+  },
+  {
+   "type": "para",
+   "text": "  D. 2."
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2020 Paper 2 Q37]"
+  },
+  {
+   "type": "para",
+   "text": "\n"
+  },
+  {
+   "type": "para",
+   "text": "38. Let [IMG:image85.wmf] and [IMG:image86.wmf], where k is a real number. Which of the following must be true?",
+   "images": [
+    "image85.wmf",
+    "image86.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "38",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "39",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "YOU ARE ADVISED TO ",
+   "context": "textbox",
+   "dup": 223
+  },
+  {
+   "type": "para",
+   "text": "USE H.B. PENCILS",
+   "context": "textbox",
+   "dup": 224
+  },
+  {
+   "type": "para",
+   "text": "MCQ ANSWER SHEET",
+   "context": "textbox",
+   "flags": [
+    "answer-sheet-noise"
+   ],
+   "dup": 225
+  },
+  {
+   "type": "para",
+   "text": "38",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "39",
+   "context": "textbox"
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "A B C D",
+   "context": "textbox",
+   "dup": 231
+  },
+  {
+   "type": "para",
+   "text": "  I. uv is a rational number."
+  },
+  {
+   "type": "para",
+   "text": "  II. The real part of u is equal to the real part of v. "
+  },
+  {
+   "type": "para",
+   "text": " III. The imaginary part of [IMG:image87.wmf] is equal to the imaginary part of [IMG:image88.wmf].",
+   "images": [
+    "image87.wmf",
+    "image88.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  A. I only"
+  },
+  {
+   "type": "para",
+   "text": "  B. III only"
+  },
+  {
+   "type": "para",
+   "text": "  C. I and II only"
+  },
+  {
+   "type": "para",
+   "text": "  D. II and III only"
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2016 Paper 2 Q34]"
+  },
+  {
+   "type": "para",
+   "text": "39. Let β be a real number. Define [IMG:image89.wmf] and [IMG:image90.wmf], where [IMG:image91.wmf]. Which of the following must be true?",
+   "images": [
+    "image89.wmf",
+    "image90.wmf",
+    "image91.wmf"
+   ]
+  },
+  {
+   "type": "para",
+   "text": "  I. u is a real number."
+  },
+  {
+   "type": "para",
+   "text": "  II. The real part of v is equal to 0."
+  },
+  {
+   "type": "para",
+   "text": " III. The imaginary part of v is equal to the imaginary part of 2w."
+  },
+  {
+   "type": "para",
+   "text": "  A. I and II only"
+  },
+  {
+   "type": "para",
+   "text": "  B. I and III only"
+  },
+  {
+   "type": "para",
+   "text": "  C. II and III only"
+  },
+  {
+   "type": "para",
+   "text": "  D. I, II and III only"
+  },
+  {
+   "type": "para",
+   "text": "    [HKDSE 2021 Paper 2 Q35]"
+  }
+ ]
+}

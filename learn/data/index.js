@@ -9,7 +9,7 @@ window.LEARN_INDEX = {
     "en": "Stage 1 · Junior Topics"
    },
    "note": {
-    "zh": "把初中最重要的四課先補回來：因式分解、二元一次方程、公式與恆等式、坐標平面上的變換。"
+    "zh": "把最基礎的幾課逐課補回來：因式分解、二元一次方程、公式與恆等式、坐標平面上的變換、一元二次方程、複數。"
    }
   }
  ],
@@ -103,16 +103,61 @@ window.LEARN_INDEX = {
    "lessonIds": [
     "ws04-1"
    ]
+  },
+  {
+   "id": "ws05a",
+   "stage": 1,
+   "unit": 1,
+   "name": {
+    "zh": "一元二次方程",
+    "en": "Quadratic Equations in One Unknown"
+   },
+   "intro": {
+    "zh": "這一課把二次方程的三種解法（因式分解、取平方根、二次公式）一次過補回來，再加上判別式與「根的和與積」。\nDSE Paper 1 幾乎每年都有一條二次方程題（3–5 分的應用題或證明題），Paper 2 年年考判別式與根的和積。這一課的特點是：方法固定、步驟不多，只要符號不出錯，就是必拿的分。\n這一課分兩節：第一節「三種解法與應用題」先把三種解法做熟；第二節「判別式與根的性質」才處理 $\\Delta$、根的和積與證明題。\n（複數已經分拆成獨立一課「複數」，見主目錄。）"
+   },
+   "source": "EPH All-Round L5 · Worksheet 5（5.1 一元二次方程）",
+   "stats": {
+    "mc": 17,
+    "long": 5,
+    "cards": 6,
+    "pages": 6
+   },
+   "lessonIds": [
+    "ws05a-1",
+    "ws05a-2"
+   ]
+  },
+  {
+   "id": "ws05b",
+   "stage": 1,
+   "unit": 1,
+   "name": {
+    "zh": "複數",
+    "en": "Complex Numbers"
+   },
+   "intro": {
+    "zh": "這一課只做一件事：認得複數，並且把 $i$ 的次方與四則運算練熟。\n內容少而機械，固定三步：① 記住 $i^{2}=-1$；② $i$ 的次方用「÷ 4 看餘數」化簡；③ 加減乘除之後整理成 $a+bi$。\nDSE Paper 2 每年固定一至兩題複數題，題型幾乎不變，是投資報酬率最高的一課。學完之後回頭看二次方程，「沒有實根」也不再是問題 —— 那只是複數的世界剛剛開始。"
+   },
+   "source": "EPH All-Round L5 · Worksheet 5（5.2 複數）",
+   "stats": {
+    "mc": 17,
+    "long": 4,
+    "cards": 5,
+    "pages": 6
+   },
+   "lessonIds": [
+    "ws05b-1"
+   ]
   }
  ],
  "assessments": [],
- "generatedAt": "2026-09-19T06:18:50Z",
+ "generatedAt": "2026-09-19T08:18:35Z",
  "counts": {
-  "topics": 4,
+  "topics": 6,
   "held": 0,
-  "mc": 76,
-  "long": 10,
-  "cards": 25,
+  "mc": 110,
+  "long": 19,
+  "cards": 36,
   "blocked": 0
  }
 };

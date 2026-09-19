@@ -1768,6 +1768,903 @@
     "D": "$(14,5)$"
    },
    "review": null
+  },
+  {
+   "id": "eph-ws05a-w01",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 1,
+   "code": "WS5A-W01",
+   "source": "WS05 過渡題（自編）· Level 1 因式分解法：兩個根都是整數",
+   "stem": {
+    "text": "Solve $x^{2}-5x+6=0$."
+   },
+   "options": {
+    "A": "$x=2$ or $x=3$",
+    "B": "$x=-2$ or $x=-3$",
+    "C": "$x=2$ or $x=-3$",
+    "D": "$x=1$ or $x=6$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-w02",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 1,
+   "code": "WS5A-W02",
+   "source": "WS05 過渡題（自編）· Level 2 兩邊都有 x：不可以約走",
+   "stem": {
+    "text": "Solve $2x^{2}=6x$."
+   },
+   "options": {
+    "A": "$x=3$",
+    "B": "$x=0$",
+    "C": "$x=0$ or $x=3$",
+    "D": "$x=0$ or $x=-3$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-w03",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 1,
+   "code": "WS5A-W03",
+   "source": "WS05 過渡題（自編）· Level 3 取平方根法：開方要寫正負",
+   "stem": {
+    "text": "Solve $(x-2)^{2}=9$."
+   },
+   "options": {
+    "A": "$x=5$",
+    "B": "$x=-1$",
+    "C": "$x=5$ or $x=-1$",
+    "D": "$x=-5$ or $x=1$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-w04",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 1,
+   "code": "WS5A-W04",
+   "source": "WS05 過渡題（自編）· Level 4 判別式：先算 b² − 4ac 再判斷",
+   "stem": {
+    "text": "How many real roots does the quadratic equation $x^{2}+4x+5=0$ have?"
+   },
+   "options": {
+    "A": "Two distinct real roots",
+    "B": "Two equal real roots",
+    "C": "No real roots",
+    "D": "Infinitely many real roots"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-q01",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 2,
+   "code": "WS5A-Q01",
+   "source": "EPH WS05 Q3 · [HKCEE 2006 Paper 2 Q8]",
+   "stem": {
+    "text": "Solve $7x^{2}=14x$."
+   },
+   "options": {
+    "A": "$x=2$",
+    "B": "$x=7$",
+    "C": "$x=0$ or $x=2$",
+    "D": "$x=0$ or $x=7$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-q02",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 2,
+   "code": "WS5A-Q02",
+   "source": "EPH WS05 Q4 · [HKCEE 2004 Paper 2 Q7]",
+   "stem": {
+    "text": "Solve $x(x-2)=6x$."
+   },
+   "options": {
+    "A": "$x=4$",
+    "B": "$x=8$",
+    "C": "$x=0$ or $x=4$",
+    "D": "$x=0$ or $x=8$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-q03",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 2,
+   "code": "WS5A-Q03",
+   "source": "EPH WS05 Q5 · [HKDSE 2013 Paper 2 Q6]",
+   "stem": {
+    "text": "Let $k$ be a constant. Solve the equation $(x+k)^{2}=9k^{2}$."
+   },
+   "options": {
+    "A": "$x=2k$",
+    "B": "$x=8k$",
+    "C": "$x=-4k$ or $x=2k$",
+    "D": "$x=-10k$ or $x=8k$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-q04",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 2,
+   "code": "WS5A-Q04",
+   "source": "EPH WS05 Q6",
+   "stem": {
+    "text": "Let $a$ be a constant. Solve the equation $(x-5a)^{2}=4a^{2}$."
+   },
+   "options": {
+    "A": "$x=9a$",
+    "B": "$x=7a$",
+    "C": "$x=a$ or $x=9a$",
+    "D": "$x=3a$ or $x=7a$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-q05",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 2,
+   "code": "WS5A-Q05",
+   "source": "EPH WS05 Q7 · [HKDSE Sample Paper 2 Q6]",
+   "stem": {
+    "text": "Let $c$ be a constant. Solve the equation $(x+3c)(x-c+1)=(x+3c)$."
+   },
+   "options": {
+    "A": "$x=c$",
+    "B": "$x=c-1$",
+    "C": "$x=-3c$ or $x=c$",
+    "D": "$x=-3c$ or $x=c-1$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-q06",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 3,
+   "code": "WS5A-Q06",
+   "source": "EPH WS05 Q8 · [HKDSE 2022 Paper 2 Q4]",
+   "stem": {
+    "text": "Let $t$ be a constant. Solve the equation $(x-2t)(x-3t)=(6t-x)(x-3t)$."
+   },
+   "options": {
+    "A": "$x=3t$",
+    "B": "$x=6t$",
+    "C": "$x=2t$ or $x=6t$",
+    "D": "$x=3t$ or $x=4t$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-q07",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 3,
+   "code": "WS5A-Q07",
+   "source": "EPH WS05 Q9",
+   "stem": {
+    "text": "Let $h$ be a constant. Solve the equation $(x+6h)(x+4h)=(8h-x)(x+4h)$."
+   },
+   "options": {
+    "A": "$x=8h$",
+    "B": "$x=-4h$",
+    "C": "$x=-4h$ or $x=h$",
+    "D": "$x=-6h$ or $x=8h$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-q08",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 3,
+   "code": "WS5A-Q08",
+   "source": "EPH WS05 Q10 · [HKDSE 2015 Paper 2 Q7]",
+   "stem": {
+    "text": "If $\\alpha$ is a root of the equation $x^{2}-4x-2=0$, then $3+8\\alpha-2\\alpha^{2}=$"
+   },
+   "options": {
+    "A": "$-3$",
+    "B": "$-1$",
+    "C": "$7$",
+    "D": "$9$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-q09",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 2,
+   "code": "WS5A-Q09",
+   "source": "EPH WS05 Q11 · [HKDSE Practice Paper 2 Q6]",
+   "stem": {
+    "text": "Let $m$ be a constant. If the quadratic equation $x^{2}-mx+6m=0$ has equal roots, then $m=$"
+   },
+   "options": {
+    "A": "$6$",
+    "B": "$24$",
+    "C": "$0$ or $6$",
+    "D": "$0$ or $24$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-q10",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 2,
+   "code": "WS5A-Q10",
+   "source": "EPH WS05 Q12 · [HKDSE 2016 Paper 2 Q8]",
+   "stem": {
+    "text": "If $k$ is a constant such that the quadratic equation $3x^{2}-kx+k+9=0$ has equal roots, then $k=$"
+   },
+   "options": {
+    "A": "$-3$",
+    "B": "$12$",
+    "C": "$-6$ or $18$",
+    "D": "$-12$ or $9$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-q11",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 2,
+   "code": "WS5A-Q11",
+   "source": "EPH WS05 Q13 · [HKDSE Sample Paper 2 Q7]",
+   "stem": {
+    "text": "Find the range of values of $p$ such that the quadratic equation $x^{2}-2x=9+p$ has no real roots."
+   },
+   "options": {
+    "A": "$p>-10$",
+    "B": "$p<-10$",
+    "C": "$p>-8$",
+    "D": "$p<-8$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-q12",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 2,
+   "code": "WS5A-Q12",
+   "source": "EPH WS05 Q23 · [HKDSE 2015 Paper 2 Q34]",
+   "stem": {
+    "text": "Let $q$ be a constant. If the roots of the quadratic equation $x^{2}+qx+6=0$ are $\\alpha$ and $\\beta$, then $\\alpha^{2}+\\beta^{2}=$"
+   },
+   "options": {
+    "A": "$q^{2}$",
+    "B": "$q^{2}-12$",
+    "C": "$q^{2}+12$",
+    "D": "$q^{2}+24$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-q13",
+   "type": "mc",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 3,
+   "code": "WS5A-Q13",
+   "source": "EPH WS05 Q20 · [HKDSE 2018 Paper 2 Q36]",
+   "stem": {
+    "text": "If $m\\neq n$ and $3m^{2}-7m=3n^{2}-7n=12$, then $(m-3)(n-3)=$"
+   },
+   "options": {
+    "A": "$-2$",
+    "B": "$6$",
+    "C": "$12$",
+    "D": "$20$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-ex03",
+   "type": "long",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 2,
+   "code": "WS5A-EX3",
+   "source": "WS05 Example 1 · [HKDSE 2019 Paper 1 Q3]",
+   "stem": {
+    "text": "The length and the breadth of a rectangle are $12$ cm and $(13+r)$ cm respectively. If the length of a diagonal of the rectangle is $(7-2r)$ cm, find $r$."
+   },
+   "marks": 3,
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-q01",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 1,
+   "code": "WS5B-Q01",
+   "source": "EPH WS05 暖身題 11 · 選項自擬",
+   "stem": {
+    "text": "Simplify $5i^{5}+6i^{6}$ and express the answer in the form $a+bi$."
+   },
+   "options": {
+    "A": "$6+5i$",
+    "B": "$-6+5i$",
+    "C": "$-6-5i$",
+    "D": "$5-6i$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-q02",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 1,
+   "code": "WS5B-Q02",
+   "source": "EPH WS05 暖身題 12 · 選項自擬",
+   "stem": {
+    "text": "Simplify $i^{8}-2i^{13}+3i^{19}$ and express the answer in the form $a+bi$."
+   },
+   "options": {
+    "A": "$1+5i$",
+    "B": "$1-2i$",
+    "C": "$1-5i$",
+    "D": "$-1-5i$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-q03",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 1,
+   "code": "WS5B-Q03",
+   "source": "EPH WS05 暖身題 13 · 選項自擬",
+   "stem": {
+    "text": "Simplify $9i^{9}+6i^{10}-3i^{15}-i^{24}$ and express the answer in the form $a+bi$."
+   },
+   "options": {
+    "A": "$-7+12i$",
+    "B": "$7+12i$",
+    "C": "$-7-12i$",
+    "D": "$7-12i$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-q04",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 1,
+   "code": "WS5B-Q04",
+   "source": "EPH WS05 暖身題 14 · 選項自擬",
+   "stem": {
+    "text": "Simplify $(4+5i)-(6-7i)$ and express the answer in the form $a+bi$."
+   },
+   "options": {
+    "A": "$2+12i$",
+    "B": "$-2-2i$",
+    "C": "$2-12i$",
+    "D": "$-2+12i$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-q05",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 1,
+   "code": "WS5B-Q05",
+   "source": "EPH WS05 暖身題 15 · 選項自擬",
+   "stem": {
+    "text": "Simplify $(1-2i)(3+4i)$ and express the answer in the form $a+bi$."
+   },
+   "options": {
+    "A": "$11+2i$",
+    "B": "$11-2i$",
+    "C": "$3-8i$",
+    "D": "$-5-2i$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-q06",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 2,
+   "code": "WS5B-Q06",
+   "source": "EPH WS05 Q26 · [HKDSE 2012 Paper 2 Q35]",
+   "stem": {
+    "text": "$i^{7}(\\alpha i-6)=$"
+   },
+   "options": {
+    "A": "$\\alpha+6i$",
+    "B": "$\\alpha-6i$",
+    "C": "$-\\alpha+6i$",
+    "D": "$-\\alpha-6i$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-q07",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 2,
+   "code": "WS5B-Q07",
+   "source": "EPH WS05 Q27 · [HKDSE Practice Paper 2 Q34]",
+   "stem": {
+    "text": "If $k$ is a real number, then the real part of $(k-4i)(4-i)$ is"
+   },
+   "options": {
+    "A": "$4k$",
+    "B": "$k-4$",
+    "C": "$4k+4$",
+    "D": "$4k-4$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-q08",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 2,
+   "code": "WS5B-Q08",
+   "source": "EPH WS05 Q31 · [HKDSE 2013 Paper 2 Q36]",
+   "stem": {
+    "text": "The real part of $3i^{18}+2i^{19}-3i^{20}-5i^{21}$ is"
+   },
+   "options": {
+    "A": "$-7$",
+    "B": "$-6$",
+    "C": "$0$",
+    "D": "$6$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-q09",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 3,
+   "code": "WS5B-Q09",
+   "source": "EPH WS05 Q34 · [HKDSE 2015 Paper 2 Q35]",
+   "stem": {
+    "text": "Let $z=(k-4)i^{11}+(k-9)i^{14}$, where $k$ is a real number. If $z$ is a real number, then $k=$"
+   },
+   "options": {
+    "A": "$-9$",
+    "B": "$-4$",
+    "C": "$4$",
+    "D": "$9$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-q10",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 3,
+   "code": "WS5B-Q10",
+   "source": "EPH WS05 Q36 · [HKDSE 2022 Paper 2 Q35]",
+   "stem": {
+    "text": "Let $z=9i+3ki^{7}+2i^{20}+2ki^{28}+3i^{30}$, where $k$ is a real number. If the real part and the imaginary part of $z$ are equal, then the real part of $z$ is"
+   },
+   "options": {
+    "A": "$-1$",
+    "B": "$2$",
+    "C": "$3$",
+    "D": "$5$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-q11",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 2,
+   "code": "WS5B-Q11",
+   "source": "WS05 補充題（自編）· 複數除法（乘分母的共軛）",
+   "stem": {
+    "text": "Simplify $\\dfrac{3+2i}{1-i}$ and express the answer in the form $a+bi$."
+   },
+   "options": {
+    "A": "$1+5i$",
+    "B": "$\\frac{1}{2}+\\frac{5}{2}i$",
+    "C": "$\\frac{5}{2}-\\frac{1}{2}i$",
+    "D": "$\\frac{5}{2}+\\frac{5}{2}i$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-q12",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 3,
+   "code": "WS5B-Q12",
+   "source": "WS05 補充題（自編）· 兩項共軛分母相加",
+   "stem": {
+    "text": "Simplify $\\dfrac{1}{2+i}+\\dfrac{1}{2-i}$ and express the answer in the form $a+bi$."
+   },
+   "options": {
+    "A": "$\\frac{4}{5}$",
+    "B": "$\\frac{2}{5}$",
+    "C": "$\\frac{4}{5}+\\frac{2}{5}i$",
+    "D": "$4$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-q13",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 2,
+   "code": "WS5B-Q13",
+   "source": "WS05 補充題（自編）· 純虛數條件（實部 = 0）",
+   "stem": {
+    "text": "Let $z=(3k-6)+(2k+5)i$, where $k$ is a real number. If $z$ is a purely imaginary number, then $k=$"
+   },
+   "options": {
+    "A": "$2$",
+    "B": "$-2$",
+    "C": "$-\\frac{5}{2}$",
+    "D": "$\\frac{5}{2}$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-ex02",
+   "type": "long",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 2,
+   "code": "WS5B-EX2",
+   "source": "WS05 Example 4 · [HKDSE 2022 Paper 2 Q35]",
+   "stem": {
+    "text": "Let $z=19-ki^{9}+2ki^{14}-6i^{20}-11i^{23}$, where $k$ is a real number."
+   },
+   "parts": [
+    {
+     "label": "(a)",
+     "text": "Express $z$ in the form $a+bi$ in terms of $k$, where $a$ and $b$ are real numbers.",
+     "marks": 2
+    },
+    {
+     "label": "(b)",
+     "text": "Hence, if the real part and the imaginary part of $z$ are equal, find the real part of $z$.",
+     "marks": 2
+    }
+   ],
+   "marks": 4,
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-w01",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 1,
+   "code": "WS5B-W01",
+   "source": "WS05 過渡題（自編）· Level 1 記住 i² = −1",
+   "stem": {
+    "text": "$i^{2}=$"
+   },
+   "options": {
+    "A": "$-1$",
+    "B": "$1$",
+    "C": "$-i$",
+    "D": "$i$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-w02",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 1,
+   "code": "WS5B-W02",
+   "source": "WS05 過渡題（自編）· Level 2 用「÷ 4 餘數」求 i 的次方",
+   "stem": {
+    "text": "$i^{7}=$"
+   },
+   "options": {
+    "A": "$i$",
+    "B": "$-1$",
+    "C": "$-i$",
+    "D": "$1$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-w03",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 1,
+   "code": "WS5B-W03",
+   "source": "WS05 過渡題（自編）· Level 3 認得實部與虛部",
+   "stem": {
+    "text": "For the complex number $4-3i$, the imaginary part is"
+   },
+   "options": {
+    "A": "$3$",
+    "B": "$-3$",
+    "C": "$-3i$",
+    "D": "$4$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-w04",
+   "type": "mc",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 2,
+   "code": "WS5B-W04",
+   "source": "WS05 過渡題（自編）· Level 4 複數加法：實部還實部、虛部還虛部",
+   "stem": {
+    "text": "$(2+3i)+(5-i)=$"
+   },
+   "options": {
+    "A": "$7+2i$",
+    "B": "$7+4i$",
+    "C": "$3+2i$",
+    "D": "$7-2i$"
+   },
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-ex01",
+   "type": "long",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 1,
+   "code": "WS5A-EX1",
+   "source": "WS05 銜接示範（自編）· 三招各做一次",
+   "stem": {
+    "text": "Work out the following."
+   },
+   "parts": [
+    {
+     "label": "(a)",
+     "text": "Solve $x^{2}-7x+12=0$ by the factor method.",
+     "marks": 2
+    },
+    {
+     "label": "(b)",
+     "text": "Solve $(x-3)^{2}=16$ by taking square roots.",
+     "marks": 2
+    },
+    {
+     "label": "(c)",
+     "text": "Determine the number of real roots of (i) $x^{2}-6x+1=0$, (ii) $x^{2}-6x+9=0$ and (iii) $x^{2}-6x+13=0$.",
+     "marks": 3
+    }
+   ],
+   "marks": 7,
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-ex01",
+   "type": "long",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 1,
+   "code": "WS5B-EX1",
+   "source": "WS05 銜接示範（自編）· 複數入門三步",
+   "stem": {
+    "text": "Work out the following."
+   },
+   "parts": [
+    {
+     "label": "(a)",
+     "text": "Find the value of $i^{23}$.",
+     "marks": 2
+    },
+    {
+     "label": "(b)",
+     "text": "Write down the real part and the imaginary part of the complex number $5-3i$.",
+     "marks": 2
+    },
+    {
+     "label": "(c)",
+     "text": "Simplify $2i(3-4i)$ and express the answer in the form $a+bi$.",
+     "marks": 2
+    }
+   ],
+   "marks": 6,
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-ex04",
+   "type": "long",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 2,
+   "code": "WS5A-EX4",
+   "source": "EPH WS05 暖身題 5",
+   "stem": {
+    "text": "If $a$ is a root of the quadratic equation $3x^{2}-2x-4=0$, find the values of"
+   },
+   "parts": [
+    {
+     "label": "(a)",
+     "text": "$6a^{2}-4a$.",
+     "marks": 2
+    },
+    {
+     "label": "(b)",
+     "text": "$-9a^{2}+6a$.",
+     "marks": 2
+    }
+   ],
+   "marks": 4,
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-ex02",
+   "type": "long",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 2,
+   "code": "WS5A-EX2",
+   "source": "WS05 Paper 1 Q2 · [HKCEE 2007 Paper 1 Q5]",
+   "stem": {
+    "text": "Let $k$ be a constant. If the quadratic equation $15x^{2}+6x-k=0$ has no real roots, find the range of values of $k$."
+   },
+   "marks": 4,
+   "review": null
+  },
+  {
+   "id": "eph-ws05a-ex05",
+   "type": "long",
+   "topic": "ws05a",
+   "unit": 1,
+   "subtopic": "quadratic-equations",
+   "difficulty": 3,
+   "code": "WS5A-EX5",
+   "source": "WS05 Example 2 · [HKDSE 2023 Paper 1 Q16(a)]",
+   "stem": {
+    "text": "Let $a$ and $b$ be real constants. If the roots of the equation $x^{2}+ax+b=0$ are $p$ and $4p$, prove that $4a^{2}=25b$."
+   },
+   "marks": 2,
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-ex03",
+   "type": "long",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 3,
+   "code": "WS5B-EX3",
+   "source": "WS05 Practice 4",
+   "stem": {
+    "text": "Let $z=-6k-17i^{6}+9i^{8}-7i^{13}-5ki^{19}$, where $k$ is a real number."
+   },
+   "parts": [
+    {
+     "label": "(a)",
+     "text": "Express $z$ in the form $a+bi$ in terms of $k$, where $a$ and $b$ are real numbers.",
+     "marks": 2
+    },
+    {
+     "label": "(b)",
+     "text": "Hence, if the real part and the imaginary part of $z$ are equal, find the real part of $z$.",
+     "marks": 2
+    }
+   ],
+   "marks": 4,
+   "review": null
+  },
+  {
+   "id": "eph-ws05b-ex04",
+   "type": "long",
+   "topic": "ws05b",
+   "unit": 1,
+   "subtopic": "complex-numbers",
+   "difficulty": 2,
+   "code": "WS5B-EX4",
+   "source": "WS05 銜接示範（自編）· 複數除法（分母有理化）",
+   "stem": {
+    "text": "Consider the complex number $\\dfrac{4+2i}{1-i}$."
+   },
+   "parts": [
+    {
+     "label": "(a)",
+     "text": "Express it in the form $a+bi$, where $a$ and $b$ are real numbers.",
+     "marks": 3
+    },
+    {
+     "label": "(b)",
+     "text": "Using the result of (a), show that $\\dfrac{4+2i}{1-i}\\times(1-3i)$ is a real number.",
+     "marks": 3
+    }
+   ],
+   "marks": 6,
+   "review": null
   }
  ]
 }

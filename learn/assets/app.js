@@ -168,9 +168,10 @@
     if (lessons.length && lessons.every(function (lid) { return !!store.cards[lid]; })) done += 1;
     return Math.min(100, Math.round(done / total * 100));
   }
-  /* 題目屬於哪個課題：以 id 前綴判斷（eph-ws01-… → ws01） */
+  /* 題目屬於哪個課題：以 id 前綴判斷（eph-ws01-… → ws01）
+     課題可以帶小寫尾碼（一份工作紙拆成兩課時，例如 ws05a／ws05b）。 */
   function belongsTo(qid, t) {
-    var m = /^eph-(ws\d+|as\d+)-/.exec(qid);
+    var m = /^eph-(ws\d+[a-z]?|as\d+)-/.exec(qid);
     return m && m[1] === t.id;
   }
 
@@ -282,6 +283,7 @@
       var p = pages[i];
       if (p.kind === "mc" && p.row.some(function (q) { return q.id === qid; })) return i;
       if (p.kind === "long" && p.q && p.q.id === qid) return i;
+      if (p.kind === "demos" && (p.demos || []).some(function (q) { return q.id === qid; })) return i;
     }
     return -1;
   }
@@ -295,11 +297,21 @@
     document.head.appendChild(s);
   }
 
+  /* 同一課的示範收成一頁的門檻（見 buildPages） */
+  var DEMO_GROUP_MIN = 4;
+
   function buildPages(topic) {
     var pages = [];
     (topic.lessons || []).forEach(function (les) {
       if (les.cards && les.cards.length) pages.push({ kind: "cards", lesson: les });
-      (les.long || []).forEach(function (q) { pages.push({ kind: "long", q: q, lesson: les }); });
+      // 示範頁：一條示範一頁；同一課有 4 條或以上時收成「一頁多條」（用「下一條」切換，
+      // 像學習頁那樣），否則分頁列會被示範塞爆。示範數量不設上限。
+      var longs = les.long || [];
+      if (longs.length >= DEMO_GROUP_MIN) {
+        pages.push({ kind: "demos", lesson: les, demos: longs });
+      } else {
+        longs.forEach(function (q) { pages.push({ kind: "long", q: q, lesson: les }); });
+      }
       (les.pages || []).forEach(function (row) { pages.push({ kind: "mc", row: row, lesson: les }); });
     });
     return pages;
@@ -308,6 +320,10 @@
   function pageDone(p) {
     if (p.kind === "cards") return !!store.cards[p.lesson.id];
     if (p.kind === "long") return !!store.long[p.q.id];
+    if (p.kind === "demos") {
+      return (p.demos || []).length > 0 &&
+        p.demos.every(function (q) { return !!store.long[q.id]; });
+    }
     return p.row.every(function (q) { return !!mcState(q.id); });
   }
 
@@ -355,6 +371,11 @@
           b.textContent = "示範";
           b.classList.add("kind");
           b.title = (p.q && p.q.code) ? ("長題示範 " + p.q.code) : "長題示範";
+        } else if (p.kind === "demos") {
+          b.textContent = "示範";
+          b.classList.add("kind");
+          b.title = "長題示範 ×" + (p.demos || []).length +
+            (p.lesson && p.lesson.title && p.lesson.title.zh ? "（" + p.lesson.title.zh + "）" : "");
         } else {
           var mcIdx = pages.slice(0, i + 1).filter(function (x) { return x.kind === "mc"; }).length;
           b.textContent = String(mcIdx);
@@ -378,6 +399,13 @@
           if (li >= 0) sec = "第 " + (li + 1) + " 節 · ";
         }
         bar.textContent = sec + "第 " + (cur + 1) + " / " + pages.length + " 頁 · 本課完成 " + pct + "%";
+      }
+
+      // 分頁列係橫向捲動（捲軸隱藏），要自動捲到「目前這一頁」——
+      // 否則學生只看得到左邊幾頁，右邊（第 2 節／後面的練習頁）永遠「顯示不了」。
+      var curBtn = navPageBtn(cur);
+      if (curBtn && typeof curBtn.scrollIntoView === "function") {
+        try { curBtn.scrollIntoView({ block: "nearest", inline: "center" }); } catch (e) {}
       }
 
       updateWrongBadge();
@@ -417,6 +445,7 @@
 
     if (p.kind === "cards") renderCards(body, p, pages, cur, tid);
     else if (p.kind === "long") renderLong(body, p, pages, cur, tid);
+    else if (p.kind === "demos") renderDemoSet(body, p, pages, cur, tid);
     else renderMcPage(body, p, pages, cur, tid, focusQid);
 
     // 卡住時才需要的東西：放在頁尾，不干擾作答
@@ -499,20 +528,42 @@
   }
 
   /* 常駐考試指令提示：DSE 題目用英文字眼，弱生最常誤解這幾個字。
-     放在每一頁的最頂，看完提示再開始做（不是測驗，不扣分）。 */
+     放在每一頁的最頂，看完提示再開始做（不是測驗，不扣分）。
+     每一課的字眼不同（見 lessons.json 的 cmdHints）——
+     例如二次方程要認得 two distinct real roots／no real roots，
+     坐標變換要認得 reflected with respect to／rotated anticlockwise。
+     課題沒有提供時，才退回下面這組通用字眼。 */
   var CMD_HINTS = [
     ["Factorize completely", "徹底分解（要分解到不能再分解為止）"],
     ["Hence", "由此（必須用上一小題的答案）"],
     ["Show that", "證明（要把推導過程寫出來）"],
     ["Write down", "直接寫出（通常一步就有分）"]
   ];
+  function cmdHints() {
+    var h = TOPIC && TOPIC.cmdHints;
+    if (!h || !h.length) return CMD_HINTS;
+    var out = [];
+    h.forEach(function (x) {
+      var en = Array.isArray(x) ? x[0] : (x && x.en);
+      var zh = Array.isArray(x) ? x[1] : (x && x.zh);
+      if (en) out.push([en, zh || ""]);
+    });
+    return out.length ? out : CMD_HINTS;
+  }
   function appendCommandHints(body) {
     var box = el("div", "cmd-hints");
     box.appendChild(el("span", "ch-title", "題目字眼"));
-    CMD_HINTS.forEach(function (p) {
+    cmdHints().forEach(function (p) {
       var chip = el("span", "ch-chip");
-      chip.appendChild(el("b", null, p[0]));
-      chip.appendChild(el("span", null, p[1]));
+      // 英文與中文都可以含 $...$（例如 $a+bi$、$\Delta>0$）→ 兩邊都要行內渲染
+      var en = el("b");
+      richInto(en, p[0]);
+      autoRender(en);
+      chip.appendChild(en);
+      var z = el("span");
+      richInto(z, p[1]);
+      autoRender(z);
+      chip.appendChild(z);
       box.appendChild(chip);
     });
     body.appendChild(box);
@@ -537,6 +588,9 @@
         intro.appendChild(it);
         body.appendChild(intro);
       }
+
+      // 提示列要「常駐」：換卡時 body 被清空，所以要重新加上（否則學習頁會冇咗）
+      appendCommandHints(body);
 
       var c = cards[i];
       var card = el("div", "card");
@@ -602,7 +656,9 @@
   }
 
   /* ── 長題目示範 ─────────────────────────────────────────────────────── */
-  function renderLong(body, page, pages, cur, tid) {
+  /* opt（選填）：同一頁放多條示範時用來做「下一條／上一條」切換
+     { header: "示範 2 / 5", nextLabel: "下一條示範 →", onNext: fn, prev: fn|null } */
+  function renderLong(body, page, pages, cur, tid, opt) {
     var q = page.q;
     var sol = q.solution || {};
     var steps = sol.steps || [];
@@ -614,6 +670,21 @@
     head.appendChild(el("span", "q-source", q.source || ""));
     if (q.marks) head.appendChild(el("span", "q-source", "（" + q.marks + " 分）"));
     card.appendChild(head);
+
+    // 同一頁放多條示範時：頂部提供「上一條／下一條」（像學習頁翻卡），可即時回頭或跳去下一條
+    if (opt && opt.total > 1) {
+      var demoNav = el("div", "row demo-nav");
+      var pv = el("button", "btn btn-sm", "← 上一條");
+      pv.disabled = !opt.prev;
+      pv.onclick = function () { if (opt.prev) opt.prev(); };
+      demoNav.appendChild(pv);
+      demoNav.appendChild(el("span", "small muted demo-count", opt.header || ""));
+      var nx = el("button", "btn btn-sm", opt.isLast ? "（最後一條）" : "下一條 →");
+      nx.disabled = !!opt.isLast;
+      nx.onclick = function () { if (!opt.isLast && opt.onNext) opt.onNext(); };
+      demoNav.appendChild(nx);
+      card.appendChild(demoNav);
+    }
 
     var stem = el("div", "q-stem");
     richInto(stem, (q.stem && q.stem.text) || "");
@@ -701,25 +772,70 @@
       moreRow.classList.add("hidden");
       var boxt = el("div", "done-banner");
       boxt.appendChild(el("div", "big", "✓ 看完示範"));
-      var t = el("p", null, (sol.tip && sol.tip.zh) || "");
+      // tip 可以含 $...$（例如 $\Delta$、$^{2}$）→ 一定要行內渲染，否則會露出原字元
+      var t = el("p");
+      richInto(t, (sol.tip && sol.tip.zh) || "");
+      autoRender(t);
       boxt.appendChild(t);
       endRow.appendChild(boxt);
       endRow.classList.remove("hidden");
-      var goNext = el("button", "btn btn-block btn-primary", "下一頁 →");
-      goNext.onclick = function () { gotoPage(tid, cur + 1); };
+      var row = el("div", "row");
+      if (opt && opt.prev) {
+        var pb = el("button", "btn", "← 上一條");
+        pb.onclick = opt.prev;
+        row.appendChild(pb);
+      }
+      var goNext = el("button", "btn btn-block btn-primary",
+                      (opt && opt.nextLabel) || "下一頁 →");
+      goNext.onclick = function () {
+        if (opt && opt.onNext) { opt.onNext(); return; }
+        gotoPage(tid, cur + 1);
+      };
       var back = el("button", "btn btn-block btn-ghost", "← 回主目錄");
       back.onclick = function () { go("index.html"); };
-      var row = el("div", "row");
       row.appendChild(goNext); row.appendChild(back);
       row.style.marginTop = "10px";
       endRow.appendChild(row);
 
       store.long[q.id] = true;
       save();
-      var nb = navPageBtn(cur);
-      if (nb) nb.classList.add("done");
+      // 打「已完成」勾：單條示範頁做一次就夠；一頁多條時要全部看完才算
+      var allDone = page.kind !== "demos" ||
+        (page.demos || []).every(function (x) { return !!store.long[x.id]; });
+      if (allDone) {
+        var nb = navPageBtn(cur);
+        if (nb) nb.classList.add("done");
+      }
     }
     body.appendChild(card);
+  }
+
+  /* ── 同一頁看多條示範（像學習頁那樣用「下一條」切換）──────────────────── */
+  function renderDemoSet(body, page, pages, cur, tid) {
+    var demos = page.demos || [];
+    var i = 0;
+
+    function draw() {
+      body.innerHTML = "";
+      appendCommandHints(body);              // 換示範時提示列要重新加上（示範題也常用 Hence／Show that）
+      var last = i === demos.length - 1;
+      renderLong(body, { kind: "demo", q: demos[i], lesson: page.lesson }, pages, cur, tid, {
+        header: "示範 " + (i + 1) + " / " + demos.length,
+        total: demos.length,
+        isLast: last,
+        nextLabel: last ? "看完示範，開始練習 →" : "下一條示範 →",
+        onNext: function () {
+          if (last) { gotoPage(tid, cur + 1); return; }
+          i++; draw();
+          try { window.scrollTo(0, 0); } catch (e) {}
+        },
+        prev: i > 0 ? function () {
+          i--; draw();
+          try { window.scrollTo(0, 0); } catch (e) {}
+        } : null
+      });
+    }
+    draw();
   }
 
   /* ── MC 頁 ──────────────────────────────────────────────────────────── */
@@ -994,7 +1110,7 @@
 
     var groups = {};
     ids.forEach(function (qid) {
-      var m = /^eph-(ws\d+|as\d+)-/.exec(qid);
+      var m = /^eph-(ws\d+[a-z]?|as\d+)-/.exec(qid);
       var t = m ? m[1] : "其他";
       (groups[t] = groups[t] || []).push(qid);
     });

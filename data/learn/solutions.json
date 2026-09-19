@@ -2705,7 +2705,7 @@
       "math": "6m+3n=m+9",
       "zh": "先把左邊的括號展開：$3(2m+n)=6m+3n$。有括號就先拆，這是換主項的固定第一步。",
       "en": "",
-      "marking": "1M"
+      "marking": "(1M)"
      },
      {
       "title": {
@@ -2722,12 +2722,12 @@
        "en": ""
       },
       "math": "n=\\frac{9-5m}{3}=3-\\frac{5}{3}m",
-      "zh": "左邊是 $3n$，所以**整條式子**除以 3：$\\frac{9-5m}{3}$。兩個寫法都可以，題目問「變化」時用 $3-\\frac{5}{3}m$ 更方便。",
+      "zh": "左邊是 $3n$，所以「整條式子」除以 3：$\\frac{9-5m}{3}$。兩個寫法都可以，題目問「變化」時用 $3-\\frac{5}{3}m$ 更方便。",
       "en": "",
       "highlight": [
        "n=\\frac{9-5m}{3}"
       ],
-      "marking": "1A"
+      "marking": "(1A)"
      },
      {
       "title": {
@@ -2740,7 +2740,7 @@
       "highlight": [
        "-5"
       ],
-      "marking": "1A"
+      "marking": "(1M) (1M)"
      }
     ],
     "traps": [],
@@ -2765,7 +2765,7 @@
       "math": "4x-12y=8x-7",
       "zh": "$4(x-3y)=4x-12y$。展開後右邊維持 $8x-7$。",
       "en": "",
-      "marking": "1M"
+      "marking": "(1M)"
      },
      {
       "title": {
@@ -2787,7 +2787,7 @@
       "highlight": [
        "y=\\frac{7-4x}{12}"
       ],
-      "marking": "1A"
+      "marking": "(1A)"
      },
      {
       "title": {
@@ -2795,12 +2795,12 @@
        "en": ""
       },
       "math": "\\Delta y=-\\frac{1}{3}\\times(-12)=+4",
-      "zh": "$y=\\frac{7}{12}-\\frac{1}{3}x$，$x$ 的係數是 $-\\frac{1}{3}$。$x$ 減少 12 → $y$ **增加** 4（負負得正）。",
+      "zh": "$y=\\frac{7}{12}-\\frac{1}{3}x$，$x$ 的係數是 $-\\frac{1}{3}$。$x$ 減少 12 → $y$ 「增加」 4（負負得正）。",
       "en": "",
       "highlight": [
        "+4"
       ],
-      "marking": "1A"
+      "marking": "(1M) (1M)"
      }
     ],
     "traps": [],
@@ -2825,7 +2825,7 @@
       "math": "(x+6)^{2}+k=x^{2}+12x+36+k",
       "zh": "完全平方：$(x+6)^{2}=x^{2}+2(6)x+36=x^{2}+12x+36$。中間的 $12x$ 千萬不要漏。",
       "en": "",
-      "marking": "1M"
+      "marking": "(1M)"
      },
      {
       "title": {
@@ -2847,7 +2847,7 @@
       "highlight": [
        "h=3"
       ],
-      "marking": "1A"
+      "marking": "(1A)"
      },
      {
       "title": {
@@ -2860,7 +2860,7 @@
       "highlight": [
        "k=-9"
       ],
-      "marking": "1A"
+      "marking": "(1M) (1A)"
      }
     ],
     "traps": [],
@@ -3024,7 +3024,7 @@
      }
     ],
     "tip": {
-     "zh": "當目標字母出現在兩項、而且**不在同一邊**時，先集中、再抽公因式，最後才除過去。",
+     "zh": "當目標字母出現在兩項、而且「不在同一邊」時，先集中、再抽公因式，最後才除過去。",
      "en": ""
     }
    }
@@ -3458,7 +3458,7 @@
        "en": ""
       },
       "math": "b-3=0\\ \\Rightarrow\\ b=3",
-      "zh": "左邊 $x^{2}+a$ **沒有 $x$ 項**，表示 $x$ 的係數是 $0$：$b-3=0$ → $b=3$。這是這題的關鍵。",
+      "zh": "左邊 $x^{2}+a$ 「沒有 $x$ 項」，表示 $x$ 的係數是 $0$：$b-3=0$ → $b=3$。這是這題的關鍵。",
       "en": "",
       "highlight": [
        "b=3"
@@ -3891,7 +3891,7 @@
      }
     ],
     "tip": {
-     "zh": "式子前面有負號時，展開後**每一項**都要變號 —— 這是這題唯一的陷阱。",
+     "zh": "式子前面有負號時，展開後「每一項」都要變號 —— 這是這題唯一的陷阱。",
      "en": ""
     }
    }
@@ -4128,7 +4128,7 @@
       "highlight": [
        "\\frac{2}{3}"
       ],
-      "marking": "1A"
+      "marking": "(1M) (1A)"
      }
     ],
     "traps": [],
@@ -4152,8 +4152,7 @@
       },
       "math": "\\text{順 }270^{\\circ}=\\text{逆 }90^{\\circ}:(x,y)\\to(-y,x)",
       "zh": "順時針 $270^{\\circ}$ 等於逆時針 $90^{\\circ}$，直接用 $(x,y)\\to(-y,x)$。",
-      "en": "",
-      "marking": "1M"
+      "en": ""
      },
      {
       "title": {
@@ -4167,7 +4166,7 @@
        "R'(3,-5)",
        "S'(-13,5)"
       ],
-      "marking": "1A"
+      "marking": "(1A) (1A)"
      },
      {
       "title": {
@@ -4177,7 +4176,7 @@
       "math": "m_{RS}=\\frac{5-(-3)}{0-(-5)}=\\frac{8}{5},\\qquad m_{R'S'}=\\frac{5-(-5)}{-13-3}=\\frac{10}{-16}=-\\frac{5}{8}",
       "zh": "兩條斜率都要算出來，DSE 每一步都給分。",
       "en": "",
-      "marking": "1M"
+      "marking": "(1M) (1A)"
      },
      {
       "title": {
@@ -4241,7 +4240,7 @@
       "math": "m_{PQ}=\\frac{5-2}{6-4}=\\frac{3}{2},\\qquad m_{P'Q'}=\\frac{6-2}{-5-1}=\\frac{4}{-6}=-\\frac{2}{3}",
       "zh": "代斜率公式，注意 $P'Q'$ 的分母是 $-5-1=-6$（負號不要漏）。",
       "en": "",
-      "marking": "1M"
+      "marking": "(1M) (1A)"
      },
      {
       "title": {
@@ -4890,7 +4889,7 @@
      }
     ],
     "tip": {
-     "zh": "「已知影像求原點」的題：把每一步變換做**反動作**，由後往前推回去。",
+     "zh": "「已知影像求原點」的題：把每一步變換做「反動作」，由後往前推回去。",
      "en": ""
     }
    }
@@ -4959,6 +4958,2437 @@
     ],
     "tip": {
      "zh": "倒推題一定要「順做一次」驗算：由你求出的 $A$ 出發，照題目做一次，看是否回到題目給的點。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-w01": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "WS05 過渡題（自編）· Level 1 因式分解法：兩個根都是整數",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 先確認一邊是 0",
+       "en": "Step 1 · One side must be 0"
+      },
+      "math": "x^{2}-5x+6=0",
+      "zh": "因式分解法的第一步，是確認方程已經寫成「一邊是 $0$」。這題右邊本來就是 $0$，所以可以直接跳到分解；如果右邊不是 $0$（例如 $x^{2}-5x=-6$），一定要先移項。",
+      "en": "Make sure one side is 0 before factorizing."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 用十字相乘分解左邊",
+       "en": "Step 2 · Factorize the left side"
+      },
+      "math": "x^{2}-5x+6=(x-2)(x-3)",
+      "zh": "要找兩個數：相乘等於 $6$、相加等於 $-5$。$2\\times3=6$、$-2+(-3)=-5$，所以取 $-2$ 與 $-3$，分解成 $(x-2)(x-3)$。",
+      "en": "Two numbers: product 6, sum -5, i.e. -2 and -3."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 每個括號各自等於 0",
+       "en": "Step 3 · Set each bracket to 0"
+      },
+      "math": "x-2=0\\ \\text{或}\\ x-3=0\\ \\Rightarrow\\ x=2\\ \\text{或}\\ x=3",
+      "zh": "兩個括號相乘等於 $0$，代表至少一個括號等於 $0$，所以分開解兩條一元一次方程，得出 $x=2$ 或 $x=3$，答案選 A。",
+      "en": "x = 2 or x = 3. Answer: A.",
+      "highlight": [
+       "x=2",
+       "x=3"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "兩個根都變成負數：$(x+2)(x+3)$ 展開是 $x^{2}+5x+6$，中間項是 $+5x$，跟題目的 $-5x$ 不同。",
+      "en": "Both signs flipped; check the middle term."
+     },
+     {
+      "opt": "D",
+      "zh": "$1\\times6=6$ 但 $1+6=7$，相加不等於中間項 $-5$，所以這組數不可以用。",
+      "en": "1 and 6 do not add up to -5."
+     }
+    ],
+    "tip": {
+     "zh": "分解完一定要心算展開檢查中間項：$(x-2)(x-3)=x^{2}-5x+6$ ✓。中間項對不上，就是分解錯了。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-w02": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "WS05 過渡題（自編）· Level 2 兩邊都有 x：不可以約走",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 移項令右邊變成 0",
+       "en": "Step 1 · Move everything to one side"
+      },
+      "math": "2x^{2}-6x=0",
+      "zh": "方程右邊有 $x$，所以第一步是兩邊同時減 $6x$，令右邊變成 $0$。只有一邊是 $0$ 才可以抽公因式。",
+      "en": "Subtract 6x from both sides."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 抽公因式",
+       "en": "Step 2 · Take out the common factor"
+      },
+      "math": "2x(x-3)=0",
+      "zh": "$2x^{2}$ 與 $6x$ 的公因式是 $2x$：係數取 $2$、字母取最低次方 $x$。抽出來之後括號內是 $x-3$（$6x\\div2x=3$）。",
+      "en": "2x is the common factor."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 兩個括號各自等於 0",
+       "en": "Step 3 · Set each bracket to 0"
+      },
+      "math": "2x=0\\ \\text{或}\\ x-3=0\\ \\Rightarrow\\ x=0\\ \\text{或}\\ x=3",
+      "zh": "$2x=0$ 給出 $x=0$；$x-3=0$ 給出 $x=3$。兩個都是答案，所以選 C。",
+      "en": "x = 0 or x = 3. Answer: C.",
+      "highlight": [
+       "x=0",
+       "x=3"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$x=3$ 是兩邊直接約走 $x$（或同除 $2x$）的結果 —— 這樣做會把 $x=0$ 這個根丟掉。含未知數的因式不可以約。",
+      "en": "Cancelling x removes the root x = 0."
+     },
+     {
+      "opt": "B",
+      "zh": "$x=0$ 只取了第一個括號，漏了 $x-3=0$ 給出的 $x=3$。",
+      "en": "Only one bracket was solved."
+     }
+    ],
+    "tip": {
+     "zh": "看到方程兩邊都有 $x$，第一反應不是「約」，而是「移項 + 抽公因式」。約走了就會少一個根。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-w03": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "WS05 過渡題（自編）· Level 3 取平方根法：開方要寫正負",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 開平方根，寫上正負號",
+       "en": "Step 1 · Take square roots with ±"
+      },
+      "math": "(x-2)^{2}=9\\ \\Rightarrow\\ x-2=\\pm 3",
+      "zh": "方程已經是「（一次式）$^{2}$ = 常數」的形態，可以直接開平方根。開方一定要寫 $\\pm$，因為 $3^{2}=9$，而 $(-3)^{2}$ 同樣是 $9$。",
+      "en": "Taking square roots gives x − 2 = ±3."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 移項求出兩個根",
+       "en": "Step 2 · Solve both cases"
+      },
+      "math": "x=2+3=5\\ \\text{或}\\ x=2-3=-1",
+      "zh": "兩邊加 $2$（把 $-2$ 移項），得出 $x=5$ 或 $x=-1$，答案選 C。",
+      "en": "x = 5 or x = -1. Answer: C.",
+      "highlight": [
+       "x=5",
+       "x=-1"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$x=5$ 只取了正的那一邊，漏了 $x-2=-3$ 的情況 —— 開方不寫 $\\pm$ 就會少一個根。",
+      "en": "Only the positive case was used."
+     },
+     {
+      "opt": "D",
+      "zh": "$x=-5$ 或 $x=1$ 是把括號寫成 $x+2$ 再開方（移項方向錯），符號位置整個反了。",
+      "en": "Sign error before taking the square root."
+     }
+    ],
+    "tip": {
+     "zh": "取平方根法只有兩步：開方（寫 ±）→ 移項。開方後先寫成 $x-2=3$ 與 $x-2=-3$ 兩行，再各自解，就不會漏根。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-w04": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "WS05 過渡題（自編）· Level 4 判別式：先算 b² − 4ac 再判斷",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 寫出 $a$、$b$、$c$ 並算判別式",
+       "en": "Step 1 · Compute the discriminant"
+      },
+      "math": "\\Delta=4^{2}-4(1)(5)=16-20=-4",
+      "zh": "標準形式 $x^{2}+4x+5=0$ 中 $a=1$、$b=4$、$c=5$。判別式 $\\Delta=b^{2}-4ac=16-20=-4$。",
+      "en": "a = 1, b = 4, c = 5, so Δ = -4."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 用 $\\Delta$ 的正負判斷根的性質",
+       "en": "Step 2 · Read off the nature of roots"
+      },
+      "math": "\\Delta<0\\ \\Rightarrow\\ \\text{沒有實根}",
+      "zh": "$\\Delta=-4<0$，負數不能開平方根，所以方程沒有實根，答案選 C。另一個檢查方法：$x^{2}+4x+5=(x+2)^{2}+1$，最小值是 $1$，永遠不可能等於 $0$。",
+      "en": "Δ < 0: no real roots. Answer: C.",
+      "highlight": [
+       "沒有實根"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$\\Delta<0$ 是「沒有實根」，跟「兩個相異實根」剛好相反；$\\Delta>0$ 才是兩個相異實根。",
+      "en": "Negative Δ means no real roots."
+     },
+     {
+      "opt": "B",
+      "zh": "「兩個相等的實根」要求 $\\Delta=0$；這題 $\\Delta=-4$，不是 $0$。",
+      "en": "Equal roots need Δ = 0."
+     }
+    ],
+    "tip": {
+     "zh": "判別式題只需抄三個數：$a$、$b$、$c$。抄的時候連負號一齊抄，$b^{2}$ 那一項即使是負數平方後也是正數。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-q01": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 Q3 · [HKCEE 2006 Paper 2 Q8]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 移項令右邊變成 0",
+       "en": "Step 1 · Move all terms to one side"
+      },
+      "math": "7x^{2}-14x=0",
+      "zh": "方程兩邊都有 $x$，第一步是兩邊同時減 $14x$，令右邊變成 $0$，這樣才可以抽公因式。",
+      "en": "Subtract 14x from both sides."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 抽公因式",
+       "en": "Step 2 · Take out the common factor"
+      },
+      "math": "7x(x-2)=0",
+      "zh": "$7x^{2}$ 與 $14x$ 的公因式是 $7x$（係數取 $7$、字母取最低次方 $x$），抽出來得 $7x(x-2)$。",
+      "en": "7x is the common factor."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 各自等於 0",
+       "en": "Step 3 · Set each bracket to 0"
+      },
+      "math": "7x=0\\ \\text{或}\\ x-2=0\\ \\Rightarrow\\ x=0\\ \\text{或}\\ x=2",
+      "zh": "$7x=0$ 給出 $x=0$；$x-2=0$ 給出 $x=2$。所以答案是 $x=0$ 或 $x=2$，選 C。",
+      "en": "x = 0 or x = 2. Answer: C.",
+      "highlight": [
+       "x=0",
+       "x=2"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$x=2$ 是兩邊直接約走 $x$（或除以 $7x$）的結果，會失去 $x=0$ 這個根。",
+      "en": "Cancelling x loses the root x = 0."
+     },
+     {
+      "opt": "D",
+      "zh": "$x=7$ 是解 $7x=0$ 時把係數 $7$ 當成答案 —— $7x=0$ 應該給出 $x=0$。",
+      "en": "7x = 0 gives x = 0, not 7."
+     }
+    ],
+    "tip": {
+     "zh": "「兩邊都有 $x$」的方程：先移項、再抽公因式，永遠不要把 $x$ 約走。這是 DSE Paper 2 最常見的送分陷阱。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-q02": {
+   "answer": "D",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 Q4 · [HKCEE 2004 Paper 2 Q7]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 移項令右邊變成 0",
+       "en": "Step 1 · Move all terms to one side"
+      },
+      "math": "x(x-2)-6x=0",
+      "zh": "兩邊同時減 $6x$，把所有項移到左邊。",
+      "en": "Subtract 6x from both sides."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 抽公因式 $x$",
+       "en": "Step 2 · Take out the common factor x"
+      },
+      "math": "x[(x-2)-6]=x(x-8)=0",
+      "zh": "$x(x-2)$ 與 $6x$ 都有公因式 $x$。抽出來後括號內要逐項相減：$(x-2)-6=x-8$，所以是 $x(x-8)=0$。",
+      "en": "(x − 2) − 6 = x − 8."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 各自等於 0",
+       "en": "Step 3 · Set each bracket to 0"
+      },
+      "math": "x=0\\ \\text{或}\\ x-8=0\\ \\Rightarrow\\ x=0\\ \\text{或}\\ x=8",
+      "zh": "得出 $x=0$ 或 $x=8$，答案選 D。",
+      "en": "x = 0 or x = 8. Answer: D.",
+      "highlight": [
+       "x=0",
+       "x=8"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$x=4$ 是約走 $x$ 之後把 $x-2=6$ 算成 $x=6-2=4$（移項方向錯），同時也丟掉了 $x=0$ 這個根。",
+      "en": "Cancelled x and then made a sign slip."
+     },
+     {
+      "opt": "B",
+      "zh": "$x=8$ 是約走 $x$ 之後解 $x-2=6$ 的結果 —— 只得到一個根，$x=0$ 被丟掉了。",
+      "en": "Cancelling x loses the root x = 0."
+     }
+    ],
+    "tip": {
+     "zh": "抽公因式後，括號內是「每一項除以公因式」的結果，一項一項對清楚符號，才不會少算一個減號。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-q03": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 Q5 · [HKDSE 2013 Paper 2 Q6]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 開平方根",
+       "en": "Step 1 · Take square roots"
+      },
+      "math": "(x+k)^{2}=9k^{2}\\ \\Rightarrow\\ x+k=\\pm 3k",
+      "zh": "右邊 $9k^{2}=(3k)^{2}$，開方後得 $x+k=3k$ 或 $x+k=-3k$ —— 正負兩種都要寫（這是取平方根法）。",
+      "en": "9k² = (3k)², so x + k = ±3k."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 移項求兩個根",
+       "en": "Step 2 · Solve both cases"
+      },
+      "math": "x=3k-k=2k\\ \\text{或}\\ x=-3k-k=-4k",
+      "zh": "兩邊減 $k$：$x=3k-k=2k$；另一邊 $x=-3k-k=-4k$。所以答案選 C。",
+      "en": "x = 2k or x = -4k. Answer: C.",
+      "highlight": [
+       "x=2k",
+       "x=-4k"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$x=2k$ 只寫了正的那一邊，漏了 $x=-4k$。",
+      "en": "Only the positive case."
+     },
+     {
+      "opt": "D",
+      "zh": "$x=-10k$ 或 $8k$ 是開方時漏了平方根，把 $9k^{2}$ 開成 $9k$：$x+k=\\pm 9k$ 就得出這兩個值。",
+      "en": "The square root of 9k² is 3k, not 9k."
+     }
+    ],
+    "tip": {
+     "zh": "$9k^{2}$ 要先看成 $(3k)^{2}$ 才開方；開方後兩個情況都要解，最後把 $k$ 移項。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-q04": {
+   "answer": "D",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 Q6",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 開平方根",
+       "en": "Step 1 · Take square roots"
+      },
+      "math": "(x-5a)^{2}=4a^{2}\\ \\Rightarrow\\ x-5a=\\pm 2a",
+      "zh": "$4a^{2}=(2a)^{2}$，開方後寫 $\\pm$：$x-5a=2a$ 或 $x-5a=-2a$。",
+      "en": "4a² = (2a)², so x − 5a = ±2a."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 移項求兩個根",
+       "en": "Step 2 · Solve both cases"
+      },
+      "math": "x=5a+2a=7a\\ \\text{或}\\ x=5a-2a=3a",
+      "zh": "兩邊加 $5a$：得出 $x=7a$ 或 $x=3a$，答案選 D。",
+      "en": "x = 7a or x = 3a. Answer: D.",
+      "highlight": [
+       "x=7a",
+       "x=3a"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$x=9a$ 是把 $4a^{2}$ 開方成 $4a$（只開數字、忘記開字母），得 $5a+4a=9a$。",
+      "en": "Square root of 4a² is 2a, not 4a."
+     },
+     {
+      "opt": "C",
+      "zh": "$x=a$ 或 $x=9a$ 是把 $4a^{2}$ 開方成 $4a$（只開數字、忘記開字母），再把正負兩個情況都取：$5a+4a=9a$ 或 $5a-4a=a$。",
+      "en": "The square root of 4a² is 2a, not 4a."
+     }
+    ],
+    "tip": {
+     "zh": "開方是開「整塊」：$4a^{2}$ 開方是 $2a$。係數與字母都要開方，開完之後兩個情況都要解。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-q05": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 Q7 · [HKDSE Sample Paper 2 Q6]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 移項，不要約走 $(x+3c)$",
+       "en": "Step 1 · Move terms, do not cancel"
+      },
+      "math": "(x+3c)(x-c+1)-(x+3c)=0",
+      "zh": "兩邊都有 $(x+3c)$，但無論如何都不可以約走它（會失去 $x=-3c$ 這個根）。做法是先把所有項移到左邊，令右邊是 $0$。",
+      "en": "Never cancel the common bracket."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 抽公因式 $(x+3c)$",
+       "en": "Step 2 · Factor out the bracket"
+      },
+      "math": "(x+3c)[(x-c+1)-1]=(x+3c)(x-c)=0",
+      "zh": "把 $(x+3c)$ 當成一個整體抽出來，括號內是 $(x-c+1)-1$，化簡成 $x-c$。",
+      "en": "(x − c + 1) − 1 = x − c."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 各自等於 0",
+       "en": "Step 3 · Set each bracket to 0"
+      },
+      "math": "x+3c=0\\ \\text{或}\\ x-c=0\\ \\Rightarrow\\ x=-3c\\ \\text{或}\\ x=c",
+      "zh": "兩個括號分別解出 $x=-3c$ 與 $x=c$，答案選 C。",
+      "en": "x = -3c or x = c. Answer: C.",
+      "highlight": [
+       "x=-3c",
+       "x=c"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$x=c$ 是兩邊約走 $(x+3c)$ 的結果 —— 約走之後只剩下一個根，$x=-3c$ 就被丟掉了。",
+      "en": "Cancelling removes the root x = -3c."
+     },
+     {
+      "opt": "D",
+      "zh": "$x=-3c$ 或 $x=c-1$ 是抽公因式時漏了減 $1$（把括號內寫成 $x-c+1$），所以第二個根錯成 $c-1$。",
+      "en": "Forgot to subtract 1."
+     }
+    ],
+    "tip": {
+     "zh": "「左右有相同括號」的方程，口號是：不要約，要移項再抽。約走就會少一個根，DSE 的選項一定把那個缺失的根做成干擾項。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-q06": {
+   "answer": "D",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 Q8 · [HKDSE 2022 Paper 2 Q4]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 移項，令右邊是 0",
+       "en": "Step 1 · Move terms to one side"
+      },
+      "math": "(x-2t)(x-3t)-(6t-x)(x-3t)=0",
+      "zh": "兩邊有相同的括號 $(x-3t)$，先移項令右邊是 $0$，不可以直接約走。",
+      "en": "Bring all terms to the left."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 抽公因式，注意變號",
+       "en": "Step 2 · Factor out, mind the signs"
+      },
+      "math": "(x-3t)[(x-2t)-(6t-x)]=(x-3t)(2x-8t)=0",
+      "zh": "抽出 $(x-3t)$ 之後，括號內是 $(x-2t)-(6t-x)$。逐項變號：$x-2t-6t+x=2x-8t$。",
+      "en": "(x − 2t) − (6t − x) = 2x − 8t."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 各自等於 0",
+       "en": "Step 3 · Set each bracket to 0"
+      },
+      "math": "x-3t=0\\ \\text{或}\\ 2x-8t=0\\ \\Rightarrow\\ x=3t\\ \\text{或}\\ x=4t",
+      "zh": "得出 $x=3t$ 或 $x=4t$，答案選 D。",
+      "en": "x = 3t or x = 4t. Answer: D.",
+      "highlight": [
+       "x=3t",
+       "x=4t"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$x=3t$ 只寫了其中一個根（來自 $(x-3t)$），漏了另一邊解出的 $x=4t$。",
+      "en": "Only one of the two roots was given."
+     },
+     {
+      "opt": "B",
+      "zh": "$x=6t$ 是誤把 $6t-x$ 當成一個因式並令它等於 $0$。真正的因式是 $(x-3t)$ 與 $(x-2t)$，$6t-x$ 不是因式（它是等號右邊的其中一個括號）。",
+      "en": "The right-hand bracket is not a factor."
+     }
+    ],
+    "tip": {
+     "zh": "相減時括號內每一項都要變號：$-(6t-x)=-6t+x$。這一步錯了，之後的答案一定錯。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-q07": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 Q9",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 移項，令右邊是 0",
+       "en": "Step 1 · Move terms to one side"
+      },
+      "math": "(x+6h)(x+4h)-(8h-x)(x+4h)=0",
+      "zh": "兩邊有相同的括號 $(x+4h)$，先把所有項移到左邊。",
+      "en": "Bring all terms to the left."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 抽公因式 $(x+4h)$",
+       "en": "Step 2 · Factor out (x + 4h)"
+      },
+      "math": "(x+4h)[(x+6h)-(8h-x)]=(x+4h)(2x-2h)=0",
+      "zh": "抽出 $(x+4h)$，括號內 $(x+6h)-(8h-x)=x+6h-8h+x=2x-2h$。",
+      "en": "(x + 6h) − (8h − x) = 2x − 2h."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 各自等於 0",
+       "en": "Step 3 · Set each bracket to 0"
+      },
+      "math": "x+4h=0\\ \\text{或}\\ 2x-2h=0\\ \\Rightarrow\\ x=-4h\\ \\text{或}\\ x=h",
+      "zh": "得出 $x=-4h$ 或 $x=h$，答案選 C。",
+      "en": "x = -4h or x = h. Answer: C.",
+      "highlight": [
+       "x=-4h",
+       "x=h"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$x=-4h$ 只寫了其中一個根（來自 $(x+4h)$），漏了另一邊解出的 $x=h$。",
+      "en": "Only one of the two roots was given."
+     },
+     {
+      "opt": "D",
+      "zh": "$x=-6h$ 或 $x=8h$ 是把 $(x+6h)$ 與 $(8h-x)$ 各令等於 $0$ —— 這兩個括號分別在等號兩邊，不是同一邊的因式，這樣做等於沒有移項。",
+      "en": "The two brackets sit on opposite sides of the equation."
+     }
+    ],
+    "tip": {
+     "zh": "與前一題同一招式：相同括號不可以約，要走「移項 → 抽公因式 → 各自等於 0」三步。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-q08": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 Q10 · [HKDSE 2015 Paper 2 Q7]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 由「$\\alpha$ 是方程的根」寫出關係式",
+       "en": "Step 1 · Use the fact that α is a root"
+      },
+      "math": "\\alpha^{2}-4\\alpha-2=0\\ \\Rightarrow\\ \\alpha^{2}=4\\alpha+2",
+      "zh": "「$\\alpha$ 是方程 $x^{2}-4x-2=0$ 的根」意思是把 $x$ 換成 $\\alpha$ 之後等式成立：$\\alpha^{2}-4\\alpha-2=0$。移項得到 $\\alpha^{2}=4\\alpha+2$，用它可以把 $\\alpha^{2}$ 降到一次。",
+      "en": "Substituting x = α gives α² = 4α + 2."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 把 $\\alpha^{2}$ 整塊替換（記得加括號）",
+       "en": "Step 2 · Replace α² as a whole"
+      },
+      "math": "3+8\\alpha-2\\alpha^{2}=3+8\\alpha-2(4\\alpha+2)",
+      "zh": "把 $\\alpha^{2}$ 換成 $(4\\alpha+2)$。前面是 $-2$，所以一定要加括號，否則只會乘到第一項。",
+      "en": "−2(4α + 2), not −2 × 4α + 2."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 展開化簡",
+       "en": "Step 3 · Expand and simplify"
+      },
+      "math": "=3+8\\alpha-8\\alpha-4=-1",
+      "zh": "展開 $=3+8\\alpha-8\\alpha-4$。$8\\alpha$ 與 $-8\\alpha$ 互相抵消，剩下 $3-4=-1$，答案選 B。",
+      "en": "-1. Answer: B.",
+      "highlight": [
+       "-1"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "zh": "$7$ 是移項時把 $\\alpha^{2}=4\\alpha+2$ 寫成 $\\alpha^{2}=4\\alpha-2$（負號錯），得出 $3+8\\alpha-8\\alpha+4=7$。",
+      "en": "Sign slip when rearranging."
+     },
+     {
+      "opt": "D",
+      "zh": "$9$ 是把 $\\alpha=1$ 硬代入求出的值 —— $1$ 不是這個方程的根，所以不可以用。",
+      "en": "Substituted a number that is not a root."
+     }
+    ],
+    "tip": {
+     "zh": "看到「$\\alpha$ 是方程的根」就想「降次」：把 $\\alpha^{2}$ 換成一次式，答案裡的 $\\alpha$ 通常會自動抵消。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-q09": {
+   "answer": "D",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 Q11 · [HKDSE Practice Paper 2 Q6]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 相等實根 ⇒ $\\Delta=0$",
+       "en": "Step 1 · Equal roots means Δ = 0"
+      },
+      "math": "\\Delta=(-m)^{2}-4(1)(6m)=m^{2}-24m",
+      "zh": "「有兩個相等的實根」＝ 判別式等於 $0$。這裡 $a=1$、$b=-m$、$c=6m$，$4ac=24m$。注意 $b=-m$，平方之後是 $m^{2}$（正數）。",
+      "en": "a = 1, b = -m, c = 6m."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 解這個二次方程",
+       "en": "Step 2 · Solve the resulting equation"
+      },
+      "math": "m^{2}-24m=0\\ \\Rightarrow\\ m(m-24)=0",
+      "zh": "$m^{2}$ 與 $24m$ 有公因式 $m$，抽出來得 $m(m-24)=0$。很多同學在這裡只寫 $m=24$ —— 但 $m=0$ 也合法（那時方程是 $x^{2}=0$，同樣有兩個相等的實根）。",
+      "en": "Factor out m."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 兩個根都寫出來",
+       "en": "Step 3 · Give both values"
+      },
+      "math": "m=0\\ \\text{或}\\ m=24",
+      "zh": "所以 $m=0$ 或 $m=24$，答案選 D。",
+      "en": "m = 0 or m = 24. Answer: D.",
+      "highlight": [
+       "m=0",
+       "m=24"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$24$ 是漏了 $m=0$：抽完公因式後只取了括號那一邊。",
+      "en": "Missed the factor m = 0."
+     },
+     {
+      "opt": "A",
+      "zh": "$6$ 只是 $6m$ 裡面的係數，代入判別式並不會令 $\\Delta=0$。",
+      "en": "6 is just a coefficient."
+     }
+    ],
+    "tip": {
+     "zh": "當判別式是未知數的二次式時，最後要解一條二次方程 —— 抽公因式之後記得兩個因式都要等於 0。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-q10": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 Q12 · [HKDSE 2016 Paper 2 Q8]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 相等實根 ⇒ $\\Delta=0$",
+       "en": "Step 1 · Equal roots means Δ = 0"
+      },
+      "math": "\\Delta=(-k)^{2}-4(3)(k+9)=k^{2}-12k-108",
+      "zh": "$a=3$、$b=-k$、$c=k+9$。$4ac=4(3)(k+9)=12k+108$，所以 $\\Delta=k^{2}-12k-108$。",
+      "en": "a = 3, b = -k, c = k + 9."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 十字相乘分解",
+       "en": "Step 2 · Factorize"
+      },
+      "math": "k^{2}-12k-108=0\\ \\Rightarrow\\ (k+6)(k-18)=0",
+      "zh": "找兩個數：相乘 $-108$、相加 $-12$。取 $+6$ 與 $-18$（$6\\times(-18)=-108$、$6-18=-12$），分解成 $(k+6)(k-18)$。",
+      "en": "6 × (-18) = -108 and 6 - 18 = -12."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 讀出兩個 $k$",
+       "en": "Step 3 · Solve for k"
+      },
+      "math": "k=-6\\ \\text{或}\\ k=18",
+      "zh": "所以 $k=-6$ 或 $k=18$，答案選 C。",
+      "en": "k = -6 or k = 18. Answer: C.",
+      "highlight": [
+       "k=-6",
+       "k=18"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$-3$ 是判別式只算了 $4(3)(9)=108$（把 $c$ 當成 $9$、漏了 $k$），$\\Delta$ 已經算錯，之後再解方程當然得不到正確答案。",
+      "en": "Wrong c in the discriminant."
+     },
+     {
+      "opt": "D",
+      "zh": "$-12$ 或 $9$ 是分解錯了：展開 $(k-12)(k+9)$ 得 $k^{2}-3k-108$，中間項是 $-3k$ 而不是 $-12k$。",
+      "en": "Wrong factorisation; check the middle term."
+     }
+    ],
+    "tip": {
+     "zh": "分解完一定要心算展開核對中間項。$c$ 代入時要整塊 $(k+9)$ 代入，不可以只拿 $9$。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-q11": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 Q13 · [HKDSE Sample Paper 2 Q7]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 整理成標準形式",
+       "en": "Step 1 · Write it in standard form"
+      },
+      "math": "x^{2}-2x-(9+p)=0",
+      "zh": "把 $9+p$ 移到左邊：$x^{2}-2x-9-p=0$。所以 $a=1$、$b=-2$、$c=-9-p$。",
+      "en": "a = 1, b = -2, c = -9 - p."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 沒有實根 ⇒ $\\Delta<0$",
+       "en": "Step 2 · No real roots means Δ < 0"
+      },
+      "math": "\\Delta=(-2)^{2}-4(1)(-9-p)=4+36+4p=40+4p",
+      "zh": "代入時要小心：$-4(1)(-9-p)=+36+4p$（兩個負號相乘變正）。",
+      "en": "-4(1)(-9 - p) = +36 + 4p."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 解不等式",
+       "en": "Step 3 · Solve the inequality"
+      },
+      "math": "40+4p<0\\ \\Rightarrow\\ 4p<-40\\ \\Rightarrow\\ p<-10",
+      "zh": "$40+4p<0$ → $4p<-40$ → 兩邊同除正數 $4$，不等號方向不變 → $p<-10$，答案選 B。",
+      "en": "p < -10. Answer: B.",
+      "highlight": [
+       "p<-10"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "zh": "$p>-8$ 是把判別式寫成 $b^{2}+4ac$（忘記那個減號）：$4+4(-9-p)=-32-4p<0$，方向剛好相反。",
+      "en": "Used b² + 4ac instead of b² − 4ac."
+     },
+     {
+      "opt": "D",
+      "zh": "$p<-8$ 同時犯了兩個錯：判別式用了 $+4ac$，而且不等號方向也搞錯。",
+      "en": "Two mistakes: sign of 4ac and the inequality direction."
+     }
+    ],
+    "tip": {
+     "zh": "判別式是 $b^{2}-4ac$（減號），而 $c=-9-p$ 整個要加括號代入。兩處都是負號，一處都不能省。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-q12": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 Q23 · [HKDSE 2015 Paper 2 Q34]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 用根的和與積",
+       "en": "Step 1 · Sum and product of roots"
+      },
+      "math": "\\alpha+\\beta=-q,\\qquad \\alpha\\beta=6",
+      "zh": "對 $x^{2}+qx+6=0$：和 $=-\\frac{b}{a}=-q$（記得有負號），積 $=\\frac{c}{a}=6$。",
+      "en": "Sum = -q, product = 6."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 把目標式展開",
+       "en": "Step 2 · Rewrite α² + β²"
+      },
+      "math": "\\alpha^{2}+\\beta^{2}=(\\alpha+\\beta)^{2}-2\\alpha\\beta",
+      "zh": "這個恆等式來自 $(\\alpha+\\beta)^{2}=\\alpha^{2}+2\\alpha\\beta+\\beta^{2}$，把中間項移到另一邊就得到。目標式一定要先湊成 $\\alpha+\\beta$ 與 $\\alpha\\beta$ 才能代入。",
+      "en": "α² + β² = (α + β)² − 2αβ."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 代入求答案",
+       "en": "Step 3 · Substitute"
+      },
+      "math": "=(-q)^{2}-2(6)=q^{2}-12",
+      "zh": "$(-q)^{2}=q^{2}$（負數平方變正），$2(6)=12$，所以答案是 $q^{2}-12$，選 B。",
+      "en": "q² - 12. Answer: B.",
+      "highlight": [
+       "q^{2}-12"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$q^{2}$ 是漏了 $-2\\alpha\\beta$ 那一項，只算 $(\\alpha+\\beta)^{2}$。",
+      "en": "Forgot the -2αβ term."
+     },
+     {
+      "opt": "C",
+      "zh": "$q^{2}+12$ 是把 $-2\\alpha\\beta$ 的減號寫成加號（$-2(6)$ 應該等於 $-12$）。",
+      "en": "Sign of 2αβ flipped."
+     }
+    ],
+    "tip": {
+     "zh": "$\\alpha^{2}+\\beta^{2}$ 一律先寫成 $(\\alpha+\\beta)^{2}-2\\alpha\\beta$；$-2\\alpha\\beta$ 的減號不可以漏。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-q13": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 Q20 · [HKDSE 2018 Paper 2 Q36]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 看出 $m$、$n$ 是同一條方程的兩個根",
+       "en": "Step 1 · m and n are the two roots"
+      },
+      "math": "3x^{2}-7x-12=0\\ \\Rightarrow\\ m+n=\\frac{7}{3},\\quad mn=-4",
+      "zh": "$m$、$n$ 都滿足 $3x^{2}-7x=12$，而且 $m\\neq n$，所以它們是 $3x^{2}-7x-12=0$ 的兩個根。用根的和與積：和 $=-\\frac{-7}{3}=\\frac{7}{3}$，積 $=\\frac{-12}{3}=-4$。",
+      "en": "Sum = 7/3, product = -4."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開目標式，湊出和與積",
+       "en": "Step 2 · Expand the target expression"
+      },
+      "math": "(m-3)(n-3)=mn-3(m+n)+9",
+      "zh": "展開成 $mn-3m-3n+9$，再寫成 $mn-3(m+n)+9$。這是這類題的固定做法 —— 不要嘗試硬解 $m$、$n$（它們是無理數）。",
+      "en": "mn − 3(m + n) + 9."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 代入",
+       "en": "Step 3 · Substitute"
+      },
+      "math": "=-4-3\\left(\\frac{7}{3}\\right)+9=-4-7+9=-2",
+      "zh": "代入得 $-4-7+9=-2$，答案選 A。",
+      "en": "-2. Answer: A.",
+      "highlight": [
+       "-2"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$6$ 是展開時把 $-3(m+n)$ 寫成 $+3(m+n)$，又把 $+9$ 寫成 $+3$（$-4+7+3=6$）。",
+      "en": "Sign errors in the expansion."
+     },
+     {
+      "opt": "C",
+      "zh": "$12$ 同樣把 $-3(m+n)$ 寫成 $+3(m+n)$，得 $-4+7+9=12$。",
+      "en": "Sign of 3(m + n) flipped."
+     }
+    ],
+    "tip": {
+     "zh": "題目說「$m\\neq n$ 而且兩個式子相等」，就是提示「它們是同一條方程的兩個根」。用和與積，不必求出根的數值。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-ex03": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "WS05 Example 1 · [HKDSE 2019 Paper 1 Q3]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 用畢氏定理列出方程",
+       "en": ""
+      },
+      "math": "12^{2}+(13+r)^{2}=(7-2r)^{2}",
+      "zh": "矩形的長、闊與對角線組成一個直角三角形（對角線是斜邊），所以用畢氏定理：$12^{2}+(13+r)^{2}=(7-2r)^{2}$。把這條方程寫出來就拿到 (1M)。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開並整理成 $ar^{2}+br+c=0$",
+       "en": ""
+      },
+      "math": "144+169+26r+r^{2}=49-28r+4r^{2}\\ \\Rightarrow\\ 3r^{2}-54r-264=0",
+      "zh": "左邊 $(13+r)^{2}=169+26r+r^{2}$（交叉項 $2\\times13\\times r=26r$ 不可以漏），所以左邊是 $313+26r+r^{2}$；右邊 $(7-2r)^{2}=49-28r+4r^{2}$。把所有項移到同一邊並化簡，得 $3r^{2}-54r-264=0$ —— 這一步的 (1M) 是給「寫成 $ar^{2}+br+c=0$ 的形態」。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 化簡後因式分解",
+       "en": ""
+      },
+      "math": "r^{2}-18r-88=0\\ \\Rightarrow\\ (r+4)(r-22)=0",
+      "zh": "三項都除以 $3$，令首項係數變成 $1$（方便分解）：$r^{2}-18r-88=0$。找兩個數：相乘 $-88$、相加 $-18$，即 $+4$ 與 $-22$，分解成 $(r+4)(r-22)$。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · 解方程並剔除不合題意的根",
+       "en": ""
+      },
+      "math": "r=-4\\ \\text{或}\\ r=22;\\qquad (7-2r)>0\\ \\Rightarrow\\ r<3.5\\ \\Rightarrow\\ r=-4",
+      "zh": "$r=22$ 會令對角線 $7-2r=7-44=-37$，長度不可能是負數，所以要剔除（rejected）；因此 $r=-4$。驗算：$r=-4$ 時闊 $=13-4=9$，對角線 $=7+8=15$，而 $12^{2}+9^{2}=225=15^{2}$ ✓。",
+      "en": "",
+      "highlight": [
+       "r=-4"
+      ],
+      "marking": "1A"
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "文字題的幾何部分（長方形的對角線）只是包裝，列完方程之後就是一條普通的二次方程。最後的「驗算並剔除不合題意的根」是 DSE 固定給分位，一定要寫。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-q01": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "EPH WS05 暖身題 11 · 選項自擬",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 先把 $i$ 的次方化成四個值之一",
+       "en": "Step 1 · Reduce each power of i"
+      },
+      "math": "i^{5}=i,\\qquad i^{6}=-1",
+      "zh": "$5\\div4$ 餘 $1$，所以 $i^{5}=i$；$6\\div4$ 餘 $2$，所以 $i^{6}=i^{2}=-1$。餘數對照表：$1\\to i$、$2\\to-1$、$3\\to-i$、$0\\to1$。",
+      "en": "Looking at the remainder when the index is divided by 4."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 代入並整理成 $a+bi$",
+       "en": "Step 2 · Write the answer as a + bi"
+      },
+      "math": "5i^{5}+6i^{6}=5i+6(-1)=-6+5i",
+      "zh": "實部是 $-6$，虛部是 $5$，所以答案是 $-6+5i$，選 B。",
+      "en": "-6 + 5i. Answer: B.",
+      "highlight": [
+       "-6+5i"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$6+5i$ 是把 $i^{6}$ 當成 $+1$（餘數 $2$ 應該是 $-1$）。",
+      "en": "i⁶ should be -1."
+     },
+     {
+      "opt": "C",
+      "zh": "$-6-5i$ 是把 $i^{5}$ 當成 $-i$（餘數 $1$ 應該是 $i$）。",
+      "en": "i⁵ should be i."
+     }
+    ],
+    "tip": {
+     "zh": "先逐個查出 $i^{n}$ 的值（最好寫在題目旁邊），才做加減。一邊查一邊算最容易掉符號。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-q02": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "EPH WS05 暖身題 12 · 選項自擬",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 化 $i$ 的次方",
+       "en": "Step 1 · Reduce each power of i"
+      },
+      "math": "i^{8}=1,\\quad i^{13}=i,\\quad i^{19}=-i",
+      "zh": "$8\\div4$ 餘 $0$ → $i^{8}=1$；$13\\div4$ 餘 $1$ → $i^{13}=i$；$19\\div4$ 餘 $3$ → $i^{19}=i^{3}=-i$。",
+      "en": "Remainders 0, 1 and 3."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 逐項代入並合併",
+       "en": "Step 2 · Substitute and collect"
+      },
+      "math": "=1-2(i)+3(-i)=1-2i-3i=1-5i",
+      "zh": "實部只有 $1$；虛部是 $-2i-3i=-5i$。所以答案是 $1-5i$，選 C。",
+      "en": "1 - 5i. Answer: C.",
+      "highlight": [
+       "1-5i"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$1+5i$ 是把 $i^{13}$ 當成 $-i$（餘數 $1$ 應該是 $i$），虛部就變成 $+2i+3i=5i$。",
+      "en": "i¹³ should be +i, not -i."
+     },
+     {
+      "opt": "D",
+      "zh": "$-1-5i$ 是把 $i^{8}$ 當成 $-1$（餘數 $0$ 應該是 $1$）。",
+      "en": "i⁸ should be 1."
+     }
+    ],
+    "tip": {
+     "zh": "餘數 $0$ 最容易記錯：被 $4$ 整除時 $i^{n}=1$，不是 $0$ 也不是 $-1$。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-q03": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "EPH WS05 暖身題 13 · 選項自擬",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 四個次方一齊化簡",
+       "en": "Step 1 · Reduce the four powers"
+      },
+      "math": "i^{9}=i,\\quad i^{10}=-1,\\quad i^{15}=-i,\\quad i^{24}=1",
+      "zh": "餘數分別是 $1$、$2$、$3$、$0$，對應 $i$、$-1$、$-i$、$1$。",
+      "en": "Remainders 1, 2, 3, 0."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 代入，小心係數的負號",
+       "en": "Step 2 · Substitute carefully"
+      },
+      "math": "=9i+6(-1)-3(-i)-1",
+      "zh": "$-3i^{15}=-3(-i)=+3i$（兩個負號相乘變正），$-i^{24}=-1$。這兩處是最容易掉符號的地方。",
+      "en": "-3(-i) = +3i."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 分開實部與虛部相加",
+       "en": "Step 3 · Collect real and imaginary parts"
+      },
+      "math": "=-6-1+9i+3i=-7+12i",
+      "zh": "實部 $-6-1=-7$；虛部 $9+3=12$。所以答案是 $-7+12i$，選 A。",
+      "en": "-7 + 12i. Answer: A.",
+      "highlight": [
+       "-7+12i"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$7+12i$ 是實部算成 $6+1=7$（把 $-1$ 與 $-i^{24}$ 的符號都讀成正）。",
+      "en": "Signs of the real part flipped."
+     },
+     {
+      "opt": "D",
+      "zh": "$7-12i$ 是實部與虛部的正負號全部掉轉（$-3i^{15}$ 當成 $-3i$、$-i^{24}$ 當成 $+1$）。",
+      "en": "All signs flipped."
+     }
+    ],
+    "tip": {
+     "zh": "逐項寫成一行（例如 $=9i-6+3i-1$）之後才合併，比心算安全得多。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-q04": {
+   "answer": "D",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "EPH WS05 暖身題 14 · 選項自擬",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 拆括號，每一項都要變號",
+       "en": "Step 1 · Remove the bracket"
+      },
+      "math": "=4+5i-6+7i",
+      "zh": "減一個括號等於把括號內每一項都變號：$-(6-7i)=-6+7i$。$-7i$ 變成 $+7i$ 是最多人漏掉的一步。",
+      "en": "-(6 - 7i) = -6 + 7i."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 分開實部與虛部",
+       "en": "Step 2 · Collect like parts"
+      },
+      "math": "=(4-6)+(5+7)i=-2+12i",
+      "zh": "實部 $4-6=-2$；虛部 $5+7=12$。所以答案是 $-2+12i$，選 D。",
+      "en": "-2 + 12i. Answer: D.",
+      "highlight": [
+       "-2+12i"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$-2-2i$ 是減括號時只變了 $6$ 的符號，忘記 $-7i$ 也要變成 $+7i$（$5-7=-2$）。",
+      "en": "Only the real part was negated."
+     },
+     {
+      "opt": "A",
+      "zh": "$2+12i$ 是把 $4-6$ 算成 $+2$（實部符號錯），虛部反而是對的。",
+      "en": "Real part sign error."
+     }
+    ],
+    "tip": {
+     "zh": "括號前面是減號，就逐項變號再合併。心算最容易只改第一個數，所以建議寫出來。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-q05": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "EPH WS05 暖身題 15 · 選項自擬",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 逐項展開",
+       "en": "Step 1 · Expand term by term"
+      },
+      "math": "=3+4i-6i-8i^{2}",
+      "zh": "像展開 $(a+b)(c+d)$ 一樣：$1\\times3=3$、$1\\times4i=4i$、$-2i\\times3=-6i$、$-2i\\times4i=-8i^{2}$。",
+      "en": "Four products."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 用 $i^{2}=-1$ 化簡",
+       "en": "Step 2 · Use i² = -1"
+      },
+      "math": "=3-2i+8=11-2i",
+      "zh": "$-8i^{2}=-8(-1)=+8$，併回實部：$3+8=11$；虛部 $4i-6i=-2i$。所以答案是 $11-2i$，選 B。",
+      "en": "11 - 2i. Answer: B.",
+      "highlight": [
+       "11-2i"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$11+2i$ 是虛部算成 $4i+6i$（把 $-6i$ 的符號讀成正）。",
+      "en": "Imaginary part sign error."
+     },
+     {
+      "opt": "D",
+      "zh": "$-5-2i$ 是沒有用 $i^{2}=-1$：$-8i^{2}$ 被當成 $-8$ 留在實部（$3-8=-5$）。",
+      "en": "Forgot i² = -1."
+     }
+    ],
+    "tip": {
+     "zh": "複數乘法的最後一步一定是「把 $i^{2}$ 換成 $-1$」。少了這一步，實部的數值一定錯。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-q06": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "EPH WS05 Q26 · [HKDSE 2012 Paper 2 Q35]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 先化簡 $i^{7}$",
+       "en": "Step 1 · Reduce i⁷"
+      },
+      "math": "i^{7}=-i",
+      "zh": "$7\\div4$ 餘 $3$，所以 $i^{7}=i^{3}=-i$。",
+      "en": "Remainder 3 gives -i."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 展開",
+       "en": "Step 2 · Expand"
+      },
+      "math": "=(-i)(\\alpha i-6)=-\\alpha i^{2}+6i",
+      "zh": "逐項相乘：$(-i)\\times\\alpha i=-\\alpha i^{2}$；$(-i)\\times(-6)=+6i$。",
+      "en": "Multiply term by term."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 用 $i^{2}=-1$ 化簡",
+       "en": "Step 3 · Simplify"
+      },
+      "math": "=-\\alpha(-1)+6i=\\alpha+6i",
+      "zh": "$-\\alpha i^{2}=-\\alpha(-1)=\\alpha$，所以答案是 $\\alpha+6i$，選 A。",
+      "en": "α + 6i. Answer: A.",
+      "highlight": [
+       "\\alpha+6i"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$\\alpha-6i$ 是 $(-i)\\times(-6)$ 算成 $-6i$（兩個負號相乘應該是正）。",
+      "en": "Two negatives make a positive."
+     },
+     {
+      "opt": "D",
+      "zh": "$-\\alpha-6i$ 同時犯了兩個符號錯：把 $-\\alpha i^{2}$ 當成 $-\\alpha$（忘記 $i^{2}=-1$ 會把符號反轉），又把 $(-i)\\times(-6)$ 算成 $-6i$。",
+      "en": "Two sign errors at once."
+     }
+    ],
+    "tip": {
+     "zh": "先算出 $i^{7}=-i$ 才開始展開；展開時逐項寫，讓 $i^{2}$ 那一項有機會被換成 $-1$。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-q07": {
+   "answer": "D",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "EPH WS05 Q27 · [HKDSE Practice Paper 2 Q34]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 逐項展開",
+       "en": "Step 1 · Expand"
+      },
+      "math": "(k-4i)(4-i)=4k-ki-16i+4i^{2}",
+      "zh": "$k\\times4=4k$、$k\\times(-i)=-ki$、$-4i\\times4=-16i$、$-4i\\times(-i)=+4i^{2}$。",
+      "en": "Four products."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 整理成 $a+bi$",
+       "en": "Step 2 · Write as a + bi"
+      },
+      "math": "=4k-4+(-k-16)i",
+      "zh": "$4i^{2}=4(-1)=-4$，併入實部：實部 $=4k-4$，虛部 $=-k-16$。",
+      "en": "Real part 4k − 4."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 讀出實部",
+       "en": "Step 3 · Read off the real part"
+      },
+      "math": "\\text{real part}=4k-4",
+      "zh": "題目只問實部，所以答案是 $4k-4$，選 D。",
+      "en": "4k - 4. Answer: D.",
+      "highlight": [
+       "4k-4"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "zh": "$4k+4$ 是把 $4i^{2}$ 當成 $+4$（忘記 $i^{2}=-1$，符號應該變負）。",
+      "en": "4i² = -4, not +4."
+     },
+     {
+      "opt": "A",
+      "zh": "$4k$ 是只讀了 $k\\times4$ 這一項，沒有把 $4i^{2}$ 得來的常數項併入。",
+      "en": "Only one term was collected."
+     }
+    ],
+    "tip": {
+     "zh": "「求 real part／imaginary part」的題，先把整個乘積整理成 $a+bi$，再讀你要的那一個，不要只算一半。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-q08": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "EPH WS05 Q31 · [HKDSE 2013 Paper 2 Q36]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 化四個次方",
+       "en": "Step 1 · Reduce the four powers"
+      },
+      "math": "i^{18}=-1,\\quad i^{19}=-i,\\quad i^{20}=1,\\quad i^{21}=i",
+      "zh": "$18,19,20,21$ 除以 $4$ 的餘數是 $2,3,0,1$，所以對應 $-1$、$-i$、$1$、$i$。",
+      "en": "Remainders 2, 3, 0, 1."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 代入並整理成 $a+bi$",
+       "en": "Step 2 · Substitute and collect"
+      },
+      "math": "=3(-1)+2(-i)-3(1)-5(i)=-3-2i-3-5i=-6-7i",
+      "zh": "實部 $-3-3=-6$；虛部 $-2-5=-7$。所以 $z=-6-7i$。",
+      "en": "z = -6 - 7i."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 讀出實部",
+       "en": "Step 3 · Read off the real part"
+      },
+      "math": "\\text{real part}=-6",
+      "zh": "題目問實部，所以答案是 $-6$，選 B。",
+      "en": "-6. Answer: B.",
+      "highlight": [
+       "-6"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$-7$ 是虛部的數值，看錯了題目問實部還是虛部。",
+      "en": "That is the imaginary part."
+     },
+     {
+      "opt": "D",
+      "zh": "$6$ 是實部正負號掉轉（$3i^{18}=-3$ 與 $-3i^{20}=-3$ 都是負數）。",
+      "en": "Real part sign flipped."
+     }
+    ],
+    "tip": {
+     "zh": "先寫下四個 $i^{n}$ 的值，逐項代入之後把實部、虛部分成兩堆；題目問哪一堆就讀哪一堆。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-q09": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "EPH WS05 Q34 · [HKDSE 2015 Paper 2 Q35]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 化 $i$ 的次方",
+       "en": "Step 1 · Reduce the powers of i"
+      },
+      "math": "i^{11}=-i,\\qquad i^{14}=-1",
+      "zh": "$11\\div4$ 餘 $3$ → $i^{11}=-i$；$14\\div4$ 餘 $2$ → $i^{14}=-1$。",
+      "en": "Remainders 3 and 2."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 整理成 $a+bi$",
+       "en": "Step 2 · Write z as a + bi"
+      },
+      "math": "z=(k-4)(-i)+(k-9)(-1)=9-k+(4-k)i",
+      "zh": "展開：實部 $=-(k-9)=9-k$；虛部 $=-(k-4)=4-k$。要寫成 $a+bi$ 才能判斷 $z$ 是不是實數。",
+      "en": "Real part 9 − k, imaginary part 4 − k."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 「$z$ 是實數」＝ 虛部為 0",
+       "en": "Step 3 · z real means imaginary part 0"
+      },
+      "math": "4-k=0\\ \\Rightarrow\\ k=4",
+      "zh": "實數的虛部等於 $0$，所以 $4-k=0$，得 $k=4$，答案選 C。",
+      "en": "k = 4. Answer: C.",
+      "highlight": [
+       "k=4"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$-4$ 是把 $-(k-4)$ 展開成 $-k-4$（括號內每一項都要變號），再令 $k+4=0$ 得出的值。",
+      "en": "Expansion sign error."
+     },
+     {
+      "opt": "A",
+      "zh": "$-9$ 是誤用「實部 $=0$」（那是純虛數的條件），而且展開 $-(k-9)$ 時寫成 $-k-9$，令 $-k-9=0$ 得 $k=-9$。",
+      "en": "Used the condition for a purely imaginary number."
+     }
+    ],
+    "tip": {
+     "zh": "「$z$ 是實數」→ 虛部 $=0$；「$z$ 是純虛數」→ 實部 $=0$。兩個條件不要調換。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-q10": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "EPH WS05 Q36 · [HKDSE 2022 Paper 2 Q35]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 化四個次方",
+       "en": "Step 1 · Reduce the powers"
+      },
+      "math": "i^{7}=-i,\\quad i^{20}=1,\\quad i^{28}=1,\\quad i^{30}=-1",
+      "zh": "餘數：$7\\to3$、$20\\to0$、$28\\to0$、$30\\to2$，對應 $-i$、$1$、$1$、$-1$。",
+      "en": "Remainders 3, 0, 0, 2."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 整理成 $a+bi$",
+       "en": "Step 2 · Write z as a + bi"
+      },
+      "math": "z=9i+3k(-i)+2(1)+2k(1)+3(-1)=(2k-1)+(9-3k)i",
+      "zh": "逐項代入：$3ki^{7}=-3ki$、$2i^{20}=2$、$2ki^{28}=2k$、$3i^{30}=-3$。實部 $=2+2k-3=2k-1$；虛部 $=9-3k$。",
+      "en": "Real part 2k − 1, imaginary part 9 − 3k."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 令實部等於虛部求 $k$",
+       "en": "Step 3 · Equate real and imaginary parts"
+      },
+      "math": "2k-1=9-3k\\ \\Rightarrow\\ 5k=10\\ \\Rightarrow\\ k=2",
+      "zh": "把 $-3k$ 移到左邊、$-1$ 移到右邊：$2k+3k=9+1$，所以 $5k=10$，$k=2$。",
+      "en": "k = 2."
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · 代回去取實部",
+       "en": "Step 4 · Find the real part"
+      },
+      "math": "\\text{real part}=2(2)-1=3",
+      "zh": "題目問的是實部，記得把 $k=2$ 代回去：$2(2)-1=3$，答案選 C。求出 $k$ 就停手是最常見的失分。",
+      "en": "3. Answer: C.",
+      "highlight": [
+       "3"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$2$ 是 $k$ 的數值 —— 「real part = imaginary part」只是求出 $k$ 的中途步驟，還要代回去才拿到實部。",
+      "en": "That is k, not the real part."
+     },
+     {
+      "opt": "A",
+      "zh": "$-1$ 是只算了常數部分 $2-3$（漏掉 $2k$ 那一項就代入）。",
+      "en": "The 2k term was dropped."
+     }
+    ],
+    "tip": {
+     "zh": "這種題有兩層答案：先求 $k$，再求題目指定的量。選項裡幾乎一定會放「$k$ 的值」來引你上釣。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-q11": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "WS05 補充題（自編）· 複數除法（乘分母的共軛）",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 認出分母的共軛",
+       "en": "Step 1 · Multiply by the conjugate"
+      },
+      "math": "\\frac{3+2i}{1-i}=\\frac{3+2i}{1-i}\\times\\frac{1+i}{1+i}",
+      "zh": "分母是 $1-i$，它的共軛是 $1+i$（只把虛部的符號掉轉）。分子、分母同時乘 $1+i$：等於乘 $1$，值不變，但分母的 $i$ 會消失。分子一定要一齊乘，只乘分母就改變了整個數。",
+      "en": "Multiply top and bottom by 1 + i."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 分母直接用 $c^{2}+d^{2}$",
+       "en": "Step 2 · The denominator becomes real"
+      },
+      "math": "(1-i)(1+i)=1^{2}+1^{2}=2",
+      "zh": "分母 $(1-i)(1+i)$ 是平方差，$i^{2}=-1$ 之後 $i$ 全部消失。不用逐項展開，直接用 $c^{2}+d^{2}=1^{2}+1^{2}=2$ 這條捷徑更快，而且不會掉符號。",
+      "en": "Denominator = 1² + 1² = 2."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 展開分子",
+       "en": "Step 3 · Expand the numerator"
+      },
+      "math": "(3+2i)(1+i)=3+3i+2i+2i^{2}=3+5i-2=1+5i",
+      "zh": "逐項相乘：$3\\times1=3$、$3\\times i=3i$、$2i\\times1=2i$、$2i\\times i=2i^{2}$。最後一項 $2i^{2}=2(-1)=-2$，所以實部是 $3-2=1$，虛部是 $3i+2i=5i$。",
+      "en": "Numerator = 1 + 5i."
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · 整個分子都要除",
+       "en": "Step 4 · Divide both parts"
+      },
+      "math": "\\frac{1+5i}{2}=\\frac{1}{2}+\\frac{5}{2}i",
+      "zh": "分母是 $2$，實部與虛部都要一齊除 $2$：$\\frac{1}{2}+\\frac{5}{2}i$，即 $a=\\frac{1}{2}$、$b=\\frac{5}{2}$，答案選 B。只除實部、或者完全忘記除，是這一題最常見的失分。",
+      "en": "Answer: 1/2 + 5/2 i  → B.",
+      "highlight": [
+       "\\frac{1}{2}+\\frac{5}{2}i"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 5 步 · 驗算",
+       "en": "Step 5 · Check by multiplying back"
+      },
+      "math": "\\left(\\frac{1}{2}+\\frac{5}{2}i\\right)(1-i)=\\frac{(1+5i)(1-i)}{2}=\\frac{6+4i}{2}=3+2i",
+      "zh": "把答案乘回分母 $(1-i)$：$(1+5i)(1-i)=1-i+5i-5i^{2}=6+4i$，除以 $2$ 就得回分子 $3+2i$，所以答案正確。這個驗算只要幾秒，考試時值得做。",
+      "en": "Multiplying back gives the numerator."
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$1+5i$ 是展開分子之後忘記除以分母 $2$ —— 分子與分母都要一齊除。",
+      "en": "Forgot to divide by 2."
+     },
+     {
+      "opt": "C",
+      "zh": "$\\frac{5}{2}-\\frac{1}{2}i$ 是乘錯共軛：乘了 $1-i$（自己）而不是 $1+i$，分母的 $i$ 就消不掉。",
+      "en": "Multiplied by the wrong conjugate."
+     },
+     {
+      "opt": "D",
+      "zh": "$\\frac{5}{2}+\\frac{5}{2}i$ 是把 $2i^{2}$ 當成 $+2$（忘記 $i^{2}=-1$）：實部就由 $1$ 變成 $3+2=5$。",
+      "en": "Treated 2i² as +2."
+     }
+    ],
+    "tip": {
+     "zh": "複數除法只有一招：分子、分母同乘分母的共軛，分母之後直接用 $c^{2}+d^{2}$ 寫出。最後一步別忘記整個分子要逐項除。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-q12": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "WS05 補充題（自編）· 兩項共軛分母相加",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 第一項：乘共軛",
+       "en": "Step 1 · First term"
+      },
+      "math": "\\frac{1}{2+i}=\\frac{1\\cdot(2-i)}{(2+i)(2-i)}=\\frac{2-i}{2^{2}+1^{2}}=\\frac{2-i}{5}",
+      "zh": "先處理第一項。分母是 $2+i$，共軛是 $2-i$，分子分母同乘它。分母用 $c^{2}+d^{2}=2^{2}+1^{2}=5$ 直接寫出，所以 $\\frac{1}{2+i}=\\frac{2-i}{5}$。",
+      "en": "1/(2+i) = (2−i)/5."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 第二項：一樣做",
+       "en": "Step 2 · Second term"
+      },
+      "math": "\\frac{1}{2-i}=\\frac{1\\cdot(2+i)}{(2-i)(2+i)}=\\frac{2+i}{5}",
+      "zh": "第二項分母是 $2-i$，共軛是 $2+i$。分母一樣是 $2^{2}+1^{2}=5$ —— 一對共軛的分母，$c^{2}+d^{2}$ 是同一個數，不會一個 $5$ 一個 $-5$。",
+      "en": "1/(2−i) = (2+i)/5."
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 相加：留意 $i$ 會抵消",
+       "en": "Step 3 · Add them up"
+      },
+      "math": "\\frac{2-i}{5}+\\frac{2+i}{5}=\\frac{(2+2)+(-1+1)i}{5}=\\frac{4}{5}",
+      "zh": "分母相同，直接把分子相加：實部 $2+2=4$；虛部 $-1+1=0$ —— $i$ 完全抵消，答案是 $\\frac{4}{5}$，選 A。這是共軛分母相加最漂亮的地方：虛部一定抵消。",
+      "en": "The imaginary parts cancel; the answer is 4/5.",
+      "highlight": [
+       "\\frac{4}{5}"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · 寫成 $a+bi$ 的完整形式",
+       "en": "Step 4 · Write it as a + bi"
+      },
+      "math": "\\frac{4}{5}=\\frac{4}{5}+0i",
+      "zh": "$\\frac{4}{5}+0i$ 就是實數 $\\frac{4}{5}$（虛部 $=0$）。題目要「in the form $a+bi$」，$b=0$ 也是答案的一部分；相反，如果題目問「是實數嗎」，答「虛部 $=0$」就有分。",
+      "en": "b = 0, so it is a real number."
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$\\frac{2}{5}$ 是把兩個分母相加成 $10$（$5+5$）再約簡 —— 同分母相加時分母不變，只有分子相加。",
+      "en": "Added the denominators."
+     },
+     {
+      "opt": "C",
+      "zh": "$\\frac{4}{5}+\\frac{2}{5}i$ 是沒有把兩項的 $i$ 合併：$-1$ 與 $+1$ 其實抵消了，虛部應該是 $0$。",
+      "en": "The imaginary parts cancel, so b = 0."
+     },
+     {
+      "opt": "D",
+      "zh": "$4$ 是只把兩個分子相加（$2+2$）就當答案是 $4$，完全忘記每一項都已經有分母 $5$。",
+      "en": "The denominator 5 was dropped."
+     }
+    ],
+    "tip": {
+     "zh": "見到 $\\frac{1}{a+bi}$ 就是「乘共軛」的訊號，分母會變成 $a^{2}+b^{2}$。兩項共軛分母相加時，虛部一定抵消 —— 答案是實數也不要覺得奇怪。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-q13": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "WS05 補充題（自編）· 純虛數條件（實部 = 0）",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 認清「純虛數」的條件",
+       "en": "Step 1 · The purely imaginary condition"
+      },
+      "math": "z=a+bi\\ \\text{是純虛數}\\ \\Leftrightarrow\\ a=0\\ \\text{而且}\\ b\\neq 0",
+      "zh": "純虛數（purely imaginary）＝ 整個複數只剩下 $i$ 的部分，也就是「實部 $=0$」。要留意：如果虛部同時也是 $0$，它就是實數 $0$，不算純虛數 —— 所以完整的條件是「實部 $=0$ 而且虛部 $\\neq 0$」。"
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 令實部等於 0",
+       "en": "Step 2 · Set the real part to 0"
+      },
+      "math": "3k-6=0\\ \\Rightarrow\\ 3k=6\\ \\Rightarrow\\ k=2",
+      "zh": "先看清哪一坨是實部：$z=(3k-6)+(2k+5)i$，實部就是 $3k-6$。純虛數要求實部 $=0$，所以 $3k-6=0$，移項得 $3k=6$，即 $k=2$。"
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 檢查虛部不是 0",
+       "en": "Step 3 · Check the imaginary part is not 0"
+      },
+      "math": "2(2)+5=9\\neq 0",
+      "zh": "把 $k=2$ 代入虛部：$2(2)+5=9\\neq 0$，符合「虛部不可以是 $0$」的要求，所以 $k=2$ 成立，答案選 A。出卷人特別喜歡用這一步來區分「實數」與「純虛數」，所以計完記得檢查另一部分。"
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "zh": "$-\\frac{5}{2}$ 是令虛部為 $0$（$2k+5=0$）得出來的 —— 那是「$z$ 是實數」的條件，不是純虛數。兩個條件剛剛好相反，這是這一題最大的陷阱。",
+      "en": "-5/2 comes from setting the imaginary part to 0 (the condition for a real number)."
+     },
+     {
+      "opt": "B",
+      "zh": "$-2$ 是解 $3k-6=0$ 時移項出錯（把 $3k=6$ 寫成 $3k=-6$）。",
+      "en": "Sign error when solving 3k − 6 = 0."
+     },
+     {
+      "opt": "D",
+      "zh": "$\\frac{5}{2}$ 也是解 $2k+5=0$ 時符號寫錯（得 $k=\\frac{5}{2}$）—— 而且那條方程根本不是純虛數的條件。",
+      "en": "5/2 comes from the wrong equation with a sign slip."
+     }
+    ],
+    "tip": {
+     "zh": "純虛數題：先令實部 $=0$ 求出 $k$，再檢查虛部是否 $\\neq 0$（若虛部也是 $0$，那就不是純虛數）。選項裡幾乎一定放「令虛部 $=0$」得出來的那個數引你上釣。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-ex02": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "WS05 Example 4 · [HKDSE 2022 Paper 2 Q35]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 逐個化簡 $i$ 的次方"
+      },
+      "math": "i^{9}=i,\\quad i^{14}=-1,\\quad i^{20}=1,\\quad i^{23}=-i",
+      "zh": "餘數分別是 $1$、$2$、$0$、$3$，所以對應 $i$、$-1$、$1$、$-i$。這一步錯了，後面全部都會錯。",
+      "marking": "(1M)"
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 整理成 $a+bi$"
+      },
+      "math": "z=19-k(i)+2k(-1)-6(1)-11(-i)=(13-2k)+(11-k)i",
+      "zh": "逐項代入：$-ki^{9}=-ki$、$2ki^{14}=-2k$、$-6i^{20}=-6$、$-11i^{23}=+11i$。實部 $=19-2k-6=13-2k$；虛部 $=-k+11=11-k$。",
+      "marking": "(1A)",
+      "highlight": [
+       "(13-2k)+(11-k)i"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 令實部等於虛部"
+      },
+      "math": "13-2k=11-k\\ \\Rightarrow\\ k=2",
+      "zh": "「實部與虛部相等」就是 $13-2k=11-k$。把 $-k$ 移到左邊、$13$ 移到右邊：$13-11=2k-k$，所以 $k=2$。",
+      "marking": "(1M)"
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · 代回去求實部"
+      },
+      "math": "\\text{real part}=13-2(2)=9",
+      "zh": "題目要的是實部，所以把 $k=2$ 代入：$13-2(2)=9$。原題的正確答案是 $9$（選項 D），而選項 C 的 $2$ 正是中途求出的 $k$ —— 官方題解特別寫上 “Do not forget to find the real part of $z$”，就是提醒大家不要在這裡停下。",
+      "marking": "(1A)",
+      "highlight": [
+       "9"
+      ]
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "看清楚題目要求：是要解未知數? 還是求其他數值，如實部 (real part)、虛部 (imaginary part)還是整個複數 (complex number)?"
+    }
+   }
+  },
+  "eph-ws05b-w01": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "WS05 過渡題（自編）· Level 1 記住 i² = −1",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 想起 $i$ 的定義",
+       "en": "Step 1 · Recall the definition of i"
+      },
+      "math": "i^{2}=-1",
+      "zh": "複數這一課只有一條定義要背：$i^{2}=-1$。$i$ 就是「平方之後等於 $-1$」的那個數（也寫成 $i=\\sqrt{-1}$）。",
+      "en": "By definition, i² = -1."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 直接讀出答案",
+       "en": "Step 2 · Read off the answer"
+      },
+      "math": "i^{2}=-1\\ \\Rightarrow\\ \\text{答案 A}",
+      "zh": "$i^{2}$ 是一個實數 $-1$，不是 $i$ 也不是 $-i$，所以答案選 A。",
+      "en": "-1. Answer: A.",
+      "highlight": [
+       "-1"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "zh": "$1$ 是 $i^{4}$ 的值（$i^{4}=(i^{2})^{2}=(-1)^{2}=1$），不是 $i^{2}$。",
+      "en": "That is the value of i⁴."
+     },
+     {
+      "opt": "C",
+      "zh": "$-i$ 是 $i^{3}=i^{2}\\cdot i=-i$ 的值。$i^{2}$ 已經沒有 $i$ 了。",
+      "en": "That is the value of i³."
+     }
+    ],
+    "tip": {
+     "zh": "四個值一定要背到滾瓜爛熟：$i^{1}=i$、$i^{2}=-1$、$i^{3}=-i$、$i^{4}=1$。之後所有 $i$ 的次方都由它們推出。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-w02": {
+   "answer": "C",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "WS05 過渡題（自編）· Level 2 用「÷ 4 餘數」求 i 的次方",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 指數除以 4，看餘數",
+       "en": "Step 1 · Divide the index by 4"
+      },
+      "math": "7\\div 4=1\\ \\text{餘}\\ 3",
+      "zh": "$i$ 的次方每 $4$ 次循環一次，所以第一步是把指數除以 $4$，看餘數是多少：$7\\div4=1$ 餘 $3$。",
+      "en": "7 divided by 4 leaves remainder 3."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 用餘數對照表",
+       "en": "Step 2 · Use the remainder"
+      },
+      "math": "i^{7}=i^{3}=-i",
+      "zh": "餘 $3$ 對應 $i^{3}=-i$，所以 $i^{7}=-i$，答案選 C。（核對：$i^{7}=i^{4}\\cdot i^{3}=1\\times(-i)=-i$ ✓）",
+      "en": "-i. Answer: C.",
+      "highlight": [
+       "-i"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "zh": "$i$ 是餘 $1$ 的結果（例如 $i^{5}=i$）；餘 $3$ 應該是 $-i$。",
+      "en": "Remainder 3 is -i, not i."
+     },
+     {
+      "opt": "D",
+      "zh": "$1$ 是餘 $0$（被 $4$ 整除）的結果，例如 $i^{8}=1$。",
+      "en": "Remainder 0 gives 1."
+     }
+    ],
+    "tip": {
+     "zh": "餘數對照表：餘 $1\\to i$、餘 $2\\to-1$、餘 $3\\to-i$、餘 $0\\to 1$。寫在題目旁邊再作答，錯的機會大減。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-w03": {
+   "answer": "B",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "WS05 過渡題（自編）· Level 3 認得實部與虛部",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 先寫成 $a+bi$ 的形態",
+       "en": "Step 1 · Write it as a + bi"
+      },
+      "math": "4-3i=4+(-3)i",
+      "zh": "把 $4-3i$ 寫成標準形態 $a+bi$：$a=4$、$b=-3$。看清楚「$+(-3)i$」這個寫法，負號是跟著 $3$ 的。",
+      "en": "a = 4 and b = -3."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 讀出虛部（不含 $i$）",
+       "en": "Step 2 · The imaginary part has no i"
+      },
+      "math": "\\text{實部}=4,\\qquad \\text{虛部}=-3",
+      "zh": "實部是 $4$；虛部是 $i$ 前面那個數，即 $-3$（負號要一齊寫）。答案選 B。",
+      "en": "-3. Answer: B.",
+      "highlight": [
+       "-3"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "zh": "$-3i$ 把 $i$ 也寫進答案了 —— 虛部只是 $i$ 前面的係數，不含 $i$。",
+      "en": "The imaginary part does not include i."
+     },
+     {
+      "opt": "A",
+      "zh": "$3$ 漏了負號：$4-3i$ 是寫成 $4+(-3)i$，所以虛部是 $-3$。",
+      "en": "The minus sign belongs to the imaginary part."
+     }
+    ],
+    "tip": {
+     "zh": "每次遇到「求實部／虛部」都先把它改寫成 $a+bi$（連正負號），再讀 $a$ 與 $b$，就不會出錯。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-w04": {
+   "answer": "A",
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "WS05 過渡題（自編）· Level 4 複數加法：實部還實部、虛部還虛部",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 分兩堆相加",
+       "en": "Step 1 · Add real parts and imaginary parts"
+      },
+      "math": "=(2+5)+(3+(-1))i",
+      "zh": "複數加法就是「分堆」：實部與實部相加（$2+5=7$），虛部與虛部相加（$3+(-1)=2$）。兩堆互不影響。",
+      "en": "Real with real, imaginary with imaginary."
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 寫成 $a+bi$",
+       "en": "Step 2 · Write the answer as a + bi"
+      },
+      "math": "=7+2i",
+      "zh": "所以答案是 $7+2i$，選 A。（逐項寫也可以：$2+3i+5-i=2+5+3i-i=7+2i$。）",
+      "en": "7 + 2i. Answer: A.",
+      "highlight": [
+       "7+2i"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "zh": "$3+2i$ 是實部算成 $2-5=-3$（把加法當減法）。",
+      "en": "Subtracted the real parts."
+     },
+     {
+      "opt": "D",
+      "zh": "$7-2i$ 是虛部算錯：$-i$ 的係數是 $-1$，$3+(-1)=2$，不是 $-2$。",
+      "en": "Wrong sign for the imaginary part."
+     }
+    ],
+    "tip": {
+     "zh": "加減法永遠是「實部一堆、虛部一堆」。先把兩堆分別寫好，再合成 $a+bi$，比心算安全。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-ex01": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "WS05 銜接示範（自編）· 三招各做一次",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "(a) 第 1 步 · 因式分解",
+       "en": ""
+      },
+      "math": "x^{2}-7x+12=(x-3)(x-4)=0",
+      "zh": "(a) 因式分解法：找兩個數相乘等於 $12$、相加等於 $-7$，即 $-3$ 與 $-4$（$(-3)\\times(-4)=12$、$-3-4=-7$），所以 $x^{2}-7x+12=(x-3)(x-4)$。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "(a) 第 2 步 · 令每個括號等於 0",
+       "en": ""
+      },
+      "math": "x-3=0\\ \\text{或}\\ x-4=0\\ \\Rightarrow\\ x=3\\ \\text{或}\\ x=4",
+      "zh": "兩個括號各自等於 $0$，得出 $x=3$ 或 $x=4$。驗算：$3^{2}-7(3)+12=9-21+12=0$ ✓。",
+      "en": "",
+      "highlight": [
+       "x=3",
+       "x=4"
+      ],
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "(b) 第 1 步 · 開平方根（寫 ±）",
+       "en": ""
+      },
+      "math": "(x-3)^{2}=16\\ \\Rightarrow\\ x-3=\\pm 4",
+      "zh": "(b) 取平方根法：右邊 $16=4^{2}$，開方後一定要寫 $\\pm$，即 $x-3=4$ 或 $x-3=-4$。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "(b) 第 2 步 · 移項求出兩個根",
+       "en": ""
+      },
+      "math": "x=3+4=7\\ \\text{或}\\ x=3-4=-1",
+      "zh": "兩邊加 $3$：$x=7$ 或 $x=-1$。開方一定要取正負兩個情況，否則會少一個根。",
+      "en": "",
+      "highlight": [
+       "x=7",
+       "x=-1"
+      ],
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "(c) 第 1 步 · 寫出判別式",
+       "en": ""
+      },
+      "math": "\\Delta=(-6)^{2}-4(1)c=36-4c",
+      "zh": "(c) 三個方程只有常數項不同，所以先寫出一般式：$a=1$、$b=-6$、$c$ 是常數項，$\\Delta=b^{2}-4ac=36-4c$。判別式只要看正負，就知道有幾個實根。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "(c) 第 2 步 · (i) 與 (ii) 的判斷",
+       "en": ""
+      },
+      "math": "(i)\\ \\Delta=36-4(1)=32>0;\\qquad (ii)\\ \\Delta=36-4(9)=0",
+      "zh": "(i) $c=1$：$\\Delta=32>0$ → 兩個相異實根。 (ii) $c=9$：$\\Delta=0$ → 兩個相等的實根（重根），因為 $x^{2}-6x+9=(x-3)^{2}$。",
+      "en": "",
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "(c) 第 3 步 · (iii) 的判斷",
+       "en": ""
+      },
+      "math": "(iii)\\ \\Delta=36-4(13)=-16<0\\ \\Rightarrow\\ \\text{沒有實根}",
+      "zh": "(iii) $c=13$：$\\Delta=-16<0$ → 沒有實根。三個方程只差一個常數項，根的數目卻完全不同 —— 這就是判別式的作用。",
+      "en": "",
+      "highlight": [
+       "沒有實根"
+      ],
+      "marking": "1A"
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "選方法看「形態」：可以分解就用因式分解；寫成「（一次式）$^{2}$ = 常數」就用取平方根；分解不出來就先算 $\\Delta$。這一頁三種都做了一次，之後每題先問自己「它像哪一種」。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-ex04": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "EPH WS05 暖身題 5",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 由「$a$ 是方程的根」寫出關係式",
+       "en": ""
+      },
+      "math": "3a^{2}-2a-4=0\\ \\Rightarrow\\ 3a^{2}-2a=4",
+      "zh": "「$a$ 是方程 $3x^{2}-2x-4=0$ 的根」，意思是把 $x$ 換成 $a$ 之後等式成立：$3a^{2}-2a-4=0$。把 $-4$ 移項，就得到一條非常有用的關係：$3a^{2}-2a=4$。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · (a) 把 $3a^{2}-2a$ 當成一整塊",
+       "en": ""
+      },
+      "math": "6a^{2}-4a=2(3a^{2}-2a)=2(4)=8",
+      "zh": "(a) 題目要的 $6a^{2}-4a$ 是什麼？就是 $3a^{2}-2a$ 的兩倍（$2\\times3a^{2}=6a^{2}$、$2\\times2a=4a$）。所以先抽 2 出來，再整塊換成 $4$，答案 $8$。千萬不要嘗試先求 $a$ —— $a$ 是無理數，求出來也用不到。",
+      "en": "",
+      "highlight": [
+       "8"
+      ],
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · (b) 這次抽 $-3$",
+       "en": ""
+      },
+      "math": "-9a^{2}+6a=-3(3a^{2}-2a)",
+      "zh": "(b) 的係數是 $-9$ 與 $6$，注意它們是 $3$ 與 $-2$ 的 $-3$ 倍（$-3\\times3a^{2}=-9a^{2}$、$-3\\times(-2a)=+6a$），所以抽出 $-3$ 之後，括號內仍然是 $3a^{2}-2a$ —— 同一整塊，可以再換成 $4$。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · 代入求值",
+       "en": ""
+      },
+      "math": "=-3(4)=-12",
+      "zh": "所以 (b) 的答案是 $-12$。兩小題的關鍵都是「認出整塊 $3a^{2}-2a$」—— 這是 DSE 常考的形態，認得出就 10 秒做完。",
+      "en": "",
+      "highlight": [
+       "-12"
+      ],
+      "marking": "1A"
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "看到「$\\alpha$（或 $a$、$b$）是方程的根」就想：① 代回方程得到一條等式；② 看看題目要的式子和這條等式相差幾倍 —— 通常只是抽出一個公因式，然後整塊替換。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-ex01": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "WS05 銜接示範（自編）· 複數入門三步",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "(a) 第 1 步 · 指數除以 4 看餘數"
+      },
+      "math": "23\\div 4=5\\ \\text{餘}\\ 3\\ \\Rightarrow\\ i^{23}=i^{3}=-i",
+      "zh": "(a) $i$ 的次方每 $4$ 次循環一次，所以先做除法：$23\\div4=5$ 餘 $3$。餘 $3$ 對應 $i^{3}=-i$，所以 $i^{23}=-i$。",
+      "marking": "(1M)"
+     },
+     {
+      "title": {
+       "zh": "(a) 第 2 步 · 用「4 的倍數 + 餘數」核對"
+      },
+      "math": "i^{23}=(i^{4})^{5}\\cdot i^{3}=1\\cdot(-i)=-i",
+      "zh": "把 $23$ 拆成 $4\\times5+3$：$(i^{4})^{5}=1$，剩下 $i^{3}=-i$，結果一致。DSE 的複數題第一步通常就是「把所有 $i$ 的高次方化成 $i$、$-1$、$-i$ 或 $1$」。",
+      "marking": "(1A)",
+      "highlight": [
+       "-i"
+      ]
+     },
+     {
+      "title": {
+       "zh": "(b) 第 1 步 · 寫成 $a+bi$ 再讀"
+      },
+      "math": "5-3i=5+(-3)i\\ \\Rightarrow\\ \\text{實部}=5,\\quad \\text{虛部}=-3",
+      "zh": "(b) 把 $5-3i$ 寫成標準形態 $a+bi$：$a=5$、$b=-3$。所以實部是 $5$，虛部是 $-3$（負號要一齊寫）。",
+      "marking": "(1A)",
+      "highlight": [
+       "5"
+      ]
+     },
+     {
+      "title": {
+       "zh": "(b) 第 2 步 · 虛部不含 $i$"
+      },
+      "math": "\\text{虛部}=-3\\ \\ (\\text{不是 }-3i)",
+      "zh": "最常見的錯是答「虛部 $=-3i$」。虛部是 $i$ 前面的那個數，不含 $i$。",
+      "marking": "(1A)",
+      "highlight": [
+       "-3"
+      ]
+     },
+     {
+      "title": {
+       "zh": "(c) 第 1 步 · 逐項相乘"
+      },
+      "math": "2i(3-4i)=6i-8i^{2}",
+      "zh": "(c) 用分配律逐項相乘：$2i\\times3=6i$、$2i\\times(-4i)=-8i^{2}$。",
+      "marking": "(1M)"
+     },
+     {
+      "title": {
+       "zh": "(c) 第 2 步 · 用 $i^{2}=-1$ 化簡"
+      },
+      "math": "=6i-8(-1)=6i+8=8+6i",
+      "zh": "$-8i^{2}=-8(-1)=+8$，所以答案是 $8+6i$（實部寫在前面，這是 $a+bi$ 的標準寫法）。",
+      "marking": "(1A)",
+      "highlight": [
+       "8+6i"
+      ]
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "複數題的固定三步：① 用「÷ 4 餘數」把所有 $i$ 的高次方化簡；② 把結果整理成 $a+bi$；③ 才看題目要什麼（實部、虛部、還是整個複數）。"
+    }
+   }
+  },
+  "eph-ws05a-ex02": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "WS05 Paper 1 Q2 · [HKCEE 2007 Paper 1 Q5]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 寫出「沒有實根」的條件",
+       "en": ""
+      },
+      "math": "\\Delta<0",
+      "zh": "題目說方程「沒有實根」，所以判別式小於 $0$：$\\Delta<0$。先把這個條件寫出來就拿到 (1M)。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 代入判別式",
+       "en": ""
+      },
+      "math": "6^{2}-4(15)(-k)<0",
+      "zh": "$a=15$、$b=6$、$c=-k$，代入 $\\Delta=b^{2}-4ac$：$6^{2}-4(15)(-k)<0$。這裡的 $c$ 是 $-k$，負號要一齊代入。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 化簡",
+       "en": ""
+      },
+      "math": "36+60k<0",
+      "zh": "$4(15)(-k)=-60k$，前面還有一個減號，所以是「減一個負數」變成 $+60k$：$36+60k<0$。(1A) 是給這一步化簡正確。",
+      "en": "",
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · 解不等式",
+       "en": ""
+      },
+      "math": "60k<-36\\ \\Rightarrow\\ k<-\\frac{3}{5}",
+      "zh": "$60k<-36$，兩邊同除 $60$（正數，不等號方向不變），得 $k<-\\frac{3}{5}$（即 $k<-0.6$）。驗算：取 $k=-1$，$\\Delta=36-60=-24<0$ ✓。",
+      "en": "",
+      "highlight": [
+       "k<-\\frac{3}{5}"
+      ],
+      "marking": "1A"
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "判別式題的第一分就是寫對條件：「沒有實根」＝ $\\Delta<0$、「有兩個相異實根」＝ $\\Delta>0$、「重根」＝ $\\Delta=0$。之後才是計算，不要一開始就亂代公式。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05a-ex05": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws05a",
+   "source": "WS05 Example 2 · [HKDSE 2023 Paper 1 Q16(a)]",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 用根的和",
+       "en": ""
+      },
+      "math": "p+4p=-a\\ \\Rightarrow\\ 5p=-a",
+      "zh": "兩個根是 $p$ 與 $4p$。用根的和：$p+4p=-a$，化簡得 $5p=-a$。官方評分是「和或積寫對任一項就給 (1M)」。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 用根的積",
+       "en": ""
+      },
+      "math": "p(4p)=b\\ \\Rightarrow\\ 4p^{2}=b",
+      "zh": "用根的積：$p\\times4p=b$，即 $4p^{2}=b$。這一步沒有額外分數，但它是消去 $p$ 的必要材料。",
+      "en": ""
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 消去 $p$，得出要證的關係",
+       "en": ""
+      },
+      "math": "p=-\\frac{a}{5}\\ \\Rightarrow\\ 4\\left(-\\frac{a}{5}\\right)^{2}=b\\ \\Rightarrow\\ \\frac{4a^{2}}{25}=b\\ \\Rightarrow\\ 4a^{2}=25b",
+      "zh": "目標式 $4a^{2}=25b$ 裡面沒有 $p$，所以關鍵一步是消去 $p$：由 $5p=-a$ 得 $p=-\\frac{a}{5}$，代入 $4p^{2}=b$ 得 $4\\left(\\frac{a^{2}}{25}\\right)=b$，即 $\\frac{4a^{2}}{25}=b$；兩邊乘 $25$ 就是 $4a^{2}=25b$。",
+      "en": "",
+      "highlight": [
+       "4a^{2}=25b"
+      ],
+      "marking": "1A"
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "證明題不用求出 $a$、$b$ 的數值，只要由已知條件推到題目要的關係式。第一步先看「目標式裡少了哪個字母」—— 那個字母就是要消去的對象。",
+     "en": ""
+    }
+   }
+  },
+  "eph-ws05b-ex03": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "WS05 Practice 4",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "第 1 步 · 化簡四個 $i$ 的次方"
+      },
+      "math": "i^{6}=-1,\\quad i^{8}=1,\\quad i^{13}=i,\\quad i^{19}=-i",
+      "zh": "餘數：$6\\to2$、$8\\to0$、$13\\to1$、$19\\to3$，所以四個次方分別是 $-1$、$1$、$i$、$-i$。這一步是複數題的固定起手式。",
+      "marking": "(1M)"
+     },
+     {
+      "title": {
+       "zh": "第 2 步 · 整理成 $a+bi$"
+      },
+      "math": "z=-6k-17(-1)+9(1)-7(i)-5k(-i)=26-6k+(-7+5k)i",
+      "zh": "逐項代入：$-17i^{6}=+17$、$9i^{8}=9$、$-7i^{13}=-7i$、$-5ki^{19}=+5ki$。實部 $=-6k+17+9=26-6k$；虛部 $=-7+5k$。",
+      "marking": "(1A)",
+      "highlight": [
+       "(26-6k)+(5k-7)i"
+      ]
+     },
+     {
+      "title": {
+       "zh": "第 3 步 · 令實部等於虛部求 $k$"
+      },
+      "math": "26-6k=-7+5k\\ \\Rightarrow\\ 33=11k\\ \\Rightarrow\\ k=3",
+      "zh": "把 $-6k$ 移到右邊、$-7$ 移到左邊：$26+7=5k+6k$，即 $33=11k$，所以 $k=3$。",
+      "marking": "(1M)"
+     },
+     {
+      "title": {
+       "zh": "第 4 步 · 代回去取實部"
+      },
+      "math": "\\text{real part}=26-6(3)=8",
+      "zh": "把 $k=3$ 代入實部：$26-18=8$，所以實部是 $8$。記住：求出 $k$ 只是中途站，題目問的是 real part。",
+      "marking": "(1A)",
+      "highlight": [
+       "8"
+      ]
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "與示範同一套路：化 $i$ 的次方 → 整理成 $a+bi$ → 用條件求 $k$ → 代回去取題目要的量。四步缺一不可。"
+    }
+   }
+  },
+  "eph-ws05b-ex04": {
+   "answer": null,
+   "verify": "checked",
+   "topic": "ws05b",
+   "source": "WS05 銜接示範（自編）· 複數除法（分母有理化）",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "zh": "(a) 第 1 步 · 分子分母同乘分母的共軛",
+       "en": ""
+      },
+      "math": "\\frac{4+2i}{1-i}=\\frac{4+2i}{1-i}\\times\\frac{1+i}{1+i}",
+      "zh": "(a) 分母有一個 $i$，要先把 $i$ 消掉。方法是分子、分母同時乘「分母的共軛」—— 把 $1-i$ 改成 $1+i$。為什麼用 $1+i$？因為 $(1-i)(1+i)$ 是平方差，$i$ 會消失。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "(a) 第 2 步 · 分別處理分子與分母",
+       "en": ""
+      },
+      "math": "=\\frac{(4+2i)(1+i)}{1^{2}-i^{2}}=\\frac{4+4i+2i+2i^{2}}{1-(-1)}=\\frac{2+6i}{2}",
+      "zh": "分母：$(1-i)(1+i)=1^{2}-i^{2}=1-(-1)=2$，變成一個實數（$i$ 成功消掉）。分子：$(4+2i)(1+i)=4+4i+2i+2i^{2}=4+6i-2=2+6i$。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "(a) 第 3 步 · 化成 $a+bi$",
+       "en": ""
+      },
+      "math": "=\\frac{2}{2}+\\frac{6}{2}i=1+3i",
+      "zh": "分母是 $2$，實部與虛部都要一齊除 $2$：$1+3i$。所以 $a=1$、$b=3$。驗算：$(1+3i)(1-i)=1-i+3i-3i^{2}=1+2i+3=4+2i$ ✓。",
+      "en": "",
+      "highlight": [
+       "1+3i"
+      ],
+      "marking": "1A"
+     },
+     {
+      "title": {
+       "zh": "(b) 第 1 步 · 用 (a) 的結果相乘",
+       "en": ""
+      },
+      "math": "(1+3i)(1-3i)",
+      "zh": "(b) 由 (a) 知道 $\\dfrac{4+2i}{1-i}=1+3i$，所以題目要的乘積就是 $(1+3i)(1-3i)$。這是「Hence」題：一定要用 (a) 的答案，不要再重算一次。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "(b) 第 2 步 · 用平方差展開",
+       "en": ""
+      },
+      "math": "=1^{2}-(3i)^{2}=1-9i^{2}=1-(-9)=10",
+      "zh": "兩個括號是共軛，用平方差最快：$1^{2}-(3i)^{2}$。留意 $(3i)^{2}=9i^{2}=-9$，所以是減一個負數：$1-(-9)=10$。",
+      "en": "",
+      "marking": "1M"
+     },
+     {
+      "title": {
+       "zh": "(b) 第 3 步 · 寫結論",
+       "en": ""
+      },
+      "math": "=10,\\ \\text{沒有 }i\\ \\Rightarrow\\ \\text{是實數}",
+      "zh": "結果 $10$ 完全沒有 $i$（虛部是 $0$），所以是實數，證畢。要做這一類「證明是實數」的題，最後一句一定要寫出「虛部 $=0$」或「答案沒有 $i$」。",
+      "en": "",
+      "highlight": [
+       "10"
+      ],
+      "marking": "1A"
+     }
+    ],
+    "traps": [],
+    "tip": {
+     "zh": "複數除法只有一招：分子分母同乘分母的共軛（$1-i\\to1+i$、$2+3i\\to2-3i$）。共軛相乘是平方差，$i$ 必然消失，分母一定變成實數。",
      "en": ""
     }
    }

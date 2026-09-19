@@ -256,6 +256,18 @@ def _dollars_ok(s) -> bool:
     return str(s or "").replace("\\$", "").count("$") % 2 == 0
 
 
+def _other_cmd_hints(topic_id) -> dict:
+    """其他課題的「題目字眼」（用來擋整組照抄別課）。回傳 {課題 id: [英文…]}。"""
+    lessons = load("lessons.json", {"topics": []})
+    out: dict = {}
+    for t in lessons.get("topics", []):
+        if t.get("id") == topic_id:
+            continue
+        out[str(t.get("id"))] = [str((h or {}).get("en") or "").strip()
+                                 for h in (t.get("cmdHints") or [])]
+    return out
+
+
 def _topic_bundle(topic_id: str) -> dict:
     """回傳某課題所有可編輯內容（給編輯器）。"""
     bank = load("bank.json", {"questions": []})
@@ -298,7 +310,8 @@ def _topic_bundle(topic_id: str) -> dict:
         "ok": True,
         "topic": {"id": topic.get("id"), "name": topic.get("name", {}),
                   "intro": topic.get("intro", {}), "source": topic.get("source"),
-                  "stage": topic.get("stage")},
+                  "stage": topic.get("stage"),
+                  "cmdHints": topic.get("cmdHints") or []},
         "cards": [cards_by_id[i] for i in card_ids if i in cards_by_id],
         "long": [x for x in (q_payload(i, "long") for i in long_ids) if x],
         "mc": [x for x in (q_payload(i, "mc") for i in mc_ids) if x],
@@ -321,6 +334,33 @@ def _validate(kind: str, patch: dict, ctx: dict) -> list[str]:
             if not (patch.get("name") or {}).get(k, "").strip():
                 errs.append("課題名稱（%s）不可留空" % k)
         check_pairs("課題簡介", [("intro.zh", patch.get("intro", {}).get("zh"))])
+        # 題目字眼（這一課的 DSE 字眼）：留空＝前端用預設那組；有填就要逐組有英文＋中文
+        hints = patch.get("cmdHints")
+        if hints is not None and hints:
+            hs = [h if isinstance(h, dict) else {} for h in hints]
+            if len(hs) < 2:
+                errs.append("題目字眼至少要 2 組（整個清空＝用預設那組；否則請寫 4–6 組）")
+            if len(hs) > 8:
+                errs.append("題目字眼最多 8 組（提示列放不下，學生亦睇唔完）")
+            seen: set[str] = set()
+            for i, h in enumerate(hs, 1):
+                en = str(h.get("en") or "").strip()
+                zh = str(h.get("zh") or "").strip()
+                if not en:
+                    errs.append("第 %d 組題目字眼缺少 English 字眼" % i)
+                if not zh:
+                    errs.append("第 %d 組題目字眼缺少中文解釋（弱生靠它才知題目要什麼）" % i)
+                if en in seen:
+                    errs.append("題目字眼「%s」重複了" % en)
+                seen.add(en)
+            check_pairs("題目字眼", [("第 %d 組 en" % i, h.get("en")) for i, h in enumerate(hs, 1)]
+                                    + [("第 %d 組 zh" % i, h.get("zh")) for i, h in enumerate(hs, 1)])
+            others = _other_cmd_hints(ctx.get("topicId"))
+            mine = {str(h.get("en") or "").strip() for h in hs}
+            twin = [t for t, ws in others.items() if ws and set(ws) == mine]
+            if twin:
+                errs.append("這一課的題目字眼與 %s 完全相同——每課要為該課而設"
+                            "（可以一兩個字眼相同，但不可整組照抄）" % "、".join(twin))
 
     elif kind == "card":
         t = patch.get("title") or {}
@@ -406,7 +446,7 @@ def apply_edit(kind: str, ident: str, patch: dict, run_fast_checks: bool = True)
         hit = next((t for t in doc.get("topics", []) if t.get("id") == ident), None)
         if hit is None:
             return {"ok": False, "errors": ["找不到課題 " + ident]}
-        ctx = {}
+        ctx = {"topicId": ident}
     elif kind == "card":
         doc = load("concepts.json", {"cards": []})
         hit = next((c for c in doc.get("cards", []) if c.get("id") == ident), None)
@@ -437,6 +477,8 @@ def apply_edit(kind: str, ident: str, patch: dict, run_fast_checks: bool = True)
     if kind == "topic":
         hit["name"] = patch.get("name", hit.get("name"))
         hit["intro"] = patch.get("intro", hit.get("intro"))
+        if "cmdHints" in patch:                       # 這一課的「題目字眼」（前端每頁常駐那條）
+            hit["cmdHints"] = patch["cmdHints"]
         save("lessons.json", doc)
     elif kind == "card":
         for k in ("title", "body", "math", "warn", "vocab"):
@@ -862,12 +904,14 @@ function field(label, id, value, rows){
 
 function editTopic(){
   const t = BUNDLE.topic;
-  $('editor').innerHTML = head('課題名稱／簡介', BUNDLE.files.lessons) +
+  $('editor').innerHTML = head('課題名稱／簡介／題目字眼', BUNDLE.files.lessons) +
     field('中文名稱', 'f_zh', (t.name||{}).zh) +
     field('English name', 'f_en', (t.name||{}).en, 2) +
     field('簡介（可含 $...$）', 'f_intro', (t.intro||{}).zh, 4) +
+    field('題目字眼（每行一組，格式：English | 中文解釋。這一課學生最常睇錯的 DSE 字眼，建議 4–6 組、至少 3 組是這一課獨有；留空＝用預設那組）',
+          'f_hints', (t.cmdHints||[]).map(h=>(h.en||'')+' | '+(h.zh||'')).join('\\n'), 6) +
     '<button class="primary" data-act="saveTopic">儲存</button>';
-  bindPreview([['f_intro','pv-f_intro','rich']]);
+  bindPreview([['f_intro','pv-f_intro','rich'], ['f_hints','pv-f_hints','rich']]);
 }
 
 function editCard(id){
@@ -963,7 +1007,8 @@ async function post(payload){
 }
 function saveTopic(){
   post({kind:'topic', id:BUNDLE.topic.id, patch:{
-    name:{zh:val('f_zh'), en:val('f_en')}, intro:{zh:val('f_intro')}}});
+    name:{zh:val('f_zh'), en:val('f_en')}, intro:{zh:val('f_intro')},
+    cmdHints: parsePairs(val('f_hints'),'|').map(p=>({en:p[0].trim(), zh:p.slice(1).join('|').trim()}))}});
 }
 function saveCard(id){
   post({kind:'card', id:id, patch:{
