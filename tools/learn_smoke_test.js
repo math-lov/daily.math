@@ -79,6 +79,9 @@ ok(pre.$$(".pre-go .pre-step").length === 3 && pre.$$(".pre-go .num").length ===
 ok(pre.$$(".pre-help .pre-step").length === 3, "the three-step help flow is listed");
 ok(/繁體中文/.test(pre.$("#prompt-text").textContent) && /DSE/.test(pre.$("#prompt-text").textContent),
    "the AI prompt template is ready to copy");
+// 「代入 x = 1 或 x = 0」只是舉例（例如…），不是硬性要求
+ok(/例如/.test(pre.$("#prompt-text").textContent),
+   "substituting numbers is phrased as an example, not a requirement");
 ok(pre.$("#prompt-text").textContent.indexOf("$") < 0,
    "the prompt template has no raw $ (this page does not load KaTeX)");
 ok(!!pre.$("#copy-prompt"), "there is a copy button for the AI prompt");
