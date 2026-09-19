@@ -87,7 +87,7 @@ window.LEARN_TOPIC_WS01 = {
       "en": "Method 2 · By Grouping Terms"
      },
      "body": {
-      "zh": "四項或以上的式子，先把它們分成兩組，每組各自抽公因式，令兩組出現「同一個括號」，再抽這個括號。\n例：$hk+1+h+k$。先調位（move the terms）：$hk+h+1+k$，然後分組：$h(k+1)+(k+1)$，此時 $(k+1)$ 是公因數，答案是 $(k+1)(h+1)$。\n分組的秘訣是：先觀察哪兩項有明顯共同的東西，把它們放在同一組；兩組之間通常相差一個負號，要小心變號。"
+      "zh": "四項或以上的式子，先把它們分成兩組，每組各自抽公因式，令兩組出現「同一個括號」，再抽這個括號。\n例：$hk+1+h+k$。先調位（move the terms）：$hk+h+1+k$，然後分組：$h(k+1)+(k+1)$，此時 $(k+1)$ 是公因式，答案是 $(k+1)(h+1)$。\n分組的秘訣是：先觀察哪兩項有明顯共同的東西，把它們放在同一組；兩組之間通常相差一個負號，要小心變號。"
      },
      "math": [
       "hk+1+h+k=h(k+1)+(k+1)=(k+1)(h+1)"
@@ -338,7 +338,7 @@ window.LEARN_TOPIC_WS01 = {
           "en": "Step 1 · Group the four terms"
          },
          "math": "pr+ps-qs-qr=p(r+s)-q(s+r)",
-         "zh": "四項用 grouping（併項分組）。前兩項 $pr+ps$ 有公因數 $p$，抽出來得 $p(r+s)$；後兩項 $-qs-qr$ 有公因數 $-q$，抽出來得 $-q(s+r)$。注意 $-qs-qr$ 抽 $-q$ 之後括號內是 $s+r$，不是 $-s-r$。",
+         "zh": "四項用 grouping（併項分組）。前兩項 $pr+ps$ 有公因式 $p$，抽出來得 $p(r+s)$；後兩項 $-qs-qr$ 有公因式 $-q$，抽出來得 $-q(s+r)$。注意 $-qs-qr$ 抽 $-q$ 之後括號內是 $s+r$，不是 $-s-r$。",
          "en": "Take $p$ out of the first pair and $-q$ out of the second: $p(r+s)-q(s+r)$.",
          "highlight": [
           "p(r+s)-q(s+r)"
@@ -350,7 +350,7 @@ window.LEARN_TOPIC_WS01 = {
           "en": "Step 2 · Take out the common bracket"
          },
          "math": "=(r+s)(p-q)",
-         "zh": "$r+s$ 與 $s+r$ 是同一個數（加法交換律），所以 $(r+s)$ 是兩項的公因數，抽出來剩下 $(p-q)$。答案是 A。",
+         "zh": "$r+s$ 與 $s+r$ 是同一個數（加法交換律），所以 $(r+s)$ 是兩項的公因式，抽出來剩下 $(p-q)$。答案是 A。",
          "en": "Since $r+s=s+r$, the common bracket $(r+s)$ comes out, leaving $(p-q)$. Answer: A.",
          "highlight": [
           "(r+s)(p-q)"
@@ -360,7 +360,7 @@ window.LEARN_TOPIC_WS01 = {
        "traps": [
         {
          "opt": "B",
-         "zh": "$(r+s)(q-p)$ 是把第二組的公因數抽成 $+q$ 而沒有變號。抽 $-q$ 出來時括號內必須是 $(s+r)$；若寫成 $+q(s+r)$，展開會變成 $+qs+qr$，與原式不符。",
+         "zh": "$(r+s)(q-p)$ 是把第二組的公因式抽成 $+q$ 而沒有變號。抽 $-q$ 出來時括號內必須是 $(s+r)$；若寫成 $+q(s+r)$，展開會變成 $+qs+qr$，與原式不符。",
          "en": "Sign error: taking out $-q$ keeps $(s+r)$ inside; $+q(s+r)$ would give $+qs+qr$."
         },
         {
@@ -370,7 +370,7 @@ window.LEARN_TOPIC_WS01 = {
         }
        ],
        "tip": {
-        "zh": "分組後要「兩組括號內一樣」才對。如果抽出公因數後兩個括號差一個負號（例如 $s+r$ 與 $-(s+r)$ 的關係），記得把負號留在外面或提出來，這樣才能繼續抽公因數。",
+        "zh": "分組後要「兩組括號內一樣」才對。如果抽出公因式後兩個括號差一個負號（例如 $s+r$ 與 $-(s+r)$ 的關係），記得把負號留在外面或提出來，這樣才能繼續抽公因式。",
         "en": "After grouping, both brackets must match (or differ only by a sign kept outside)."
        }
       },
@@ -414,7 +414,7 @@ window.LEARN_TOPIC_WS01 = {
         },
         {
          "title": {
-          "zh": "第 2 步 · 兩組各抽公因數",
+          "zh": "第 2 步 · 兩組各抽公因式",
           "en": "Step 2 · Factor each group"
          },
          "math": "=3y(2x-y)+2z(2x-y)",
@@ -430,7 +430,7 @@ window.LEARN_TOPIC_WS01 = {
           "en": "Step 3 · Take out the bracket"
          },
          "math": "=(2x-y)(3y+2z)",
-         "zh": "$(2x-y)$ 是兩項的公因數，抽出來得 $(2x-y)(3y+2z)$，答案是 B。",
+         "zh": "$(2x-y)$ 是兩項的公因式，抽出來得 $(2x-y)(3y+2z)$，答案是 B。",
          "en": "Factor out $(2x-y)$: the answer is $(2x-y)(3y+2z)$. Answer: B.",
          "highlight": [
           "(2x-y)(3y+2z)"
@@ -450,7 +450,7 @@ window.LEARN_TOPIC_WS01 = {
         }
        ],
        "tip": {
-        "zh": "四項分組的黃金組合是「2+2」：每組各抽公因數後，括號內必須一樣。若第一組抽完是 $(2x-y)$、第二組抽完是 $(y-2x)$，就把第二組的負號提出來，養成習慣。",
+        "zh": "四項分組的黃金組合是「2+2」：每組各抽公因式後，括號內必須一樣。若第一組抽完是 $(2x-y)$、第二組抽完是 $(y-2x)$，就把第二組的負號提出來，養成習慣。",
         "en": "Group in pairs; both brackets must match (adjust signs if needed)."
        }
       },
@@ -492,7 +492,7 @@ window.LEARN_TOPIC_WS01 = {
         },
         {
          "title": {
-          "zh": "第 2 步 · 抽公因數 $a$ 與 $b$",
+          "zh": "第 2 步 · 抽公因式 $a$ 與 $b$",
           "en": "Step 2 · Factor $a$ and $b$"
          },
          "math": "=a(x+y-z)-b(x+y-z)",
@@ -508,7 +508,7 @@ window.LEARN_TOPIC_WS01 = {
           "en": "Step 3 · Factor the common bracket"
          },
          "math": "=(x+y-z)(a-b)",
-         "zh": "$(x+y-z)$ 是公因數，抽出來得 $(x+y-z)(a-b)$，答案是 D。",
+         "zh": "$(x+y-z)$ 是公因式，抽出來得 $(x+y-z)(a-b)$，答案是 D。",
          "en": "$(x+y-z)(a-b)$. Answer: D.",
          "highlight": [
           "(x+y-z)(a-b)"
@@ -518,7 +518,7 @@ window.LEARN_TOPIC_WS01 = {
        "traps": [
         {
          "opt": "B",
-         "zh": "$(a+b)(x+y-z)$ 把第二組的公因數寫成 $+b$。後三項 $-bx-by+bz$ 抽 $-b$ 才會得到 $(x+y-z)$；若抽 $+b$ 會得到 $b(-x-y+z)$，括號與第一組不同，無法再抽。",
+         "zh": "$(a+b)(x+y-z)$ 把第二組的公因式寫成 $+b$。後三項 $-bx-by+bz$ 抽 $-b$ 才會得到 $(x+y-z)$；若抽 $+b$ 會得到 $b(-x-y+z)$，括號與第一組不同，無法再抽。",
          "en": "The second group must be $-b(x+y-z)$, not $+b(x+y-z)$."
         },
         {
@@ -528,7 +528,7 @@ window.LEARN_TOPIC_WS01 = {
         }
        ],
        "tip": {
-        "zh": "六項以上的題目看不出分組時，先把同字母的項寫在一起（例如所有含 $a$ 的、所有含 $b$ 的），通常就看見共同的括號了。抽負公因數時，記住「括號內每一項都要變號」。",
+        "zh": "六項以上的題目看不出分組時，先把同字母的項寫在一起（例如所有含 $a$ 的、所有含 $b$ 的），通常就看見共同的括號了。抽負公因式時，記住「括號內每一項都要變號」。",
         "en": "Rearrange by letter first; when you take out a negative factor, every term inside changes sign."
        }
       },
@@ -562,7 +562,7 @@ window.LEARN_TOPIC_WS01 = {
           "en": "Step 1 · Simplify the second product"
          },
          "math": "3u(10u-12v)=6u(5u-6v)",
-         "zh": "第二項 $3u(10u-12v)$ 的括號內有公因數 2，先抽出來：$3u\\cdot 2(5u-6v)=6u(5u-6v)$。這樣做是為了讓兩個括號都出現 $(5u-6v)$。",
+         "zh": "第二項 $3u(10u-12v)$ 的括號內有公因式 2，先抽出來：$3u\\cdot 2(5u-6v)=6u(5u-6v)$。這樣做是為了讓兩個括號都出現 $(5u-6v)$。",
          "en": "Write $3u(10u-12v)$ as $6u(5u-6v)$ so that both terms share the bracket $(5u-6v)$.",
          "highlight": [
           "6u(5u-6v)"
@@ -570,7 +570,7 @@ window.LEARN_TOPIC_WS01 = {
         },
         {
          "title": {
-          "zh": "第 2 步 · 抽公因數 $(5u-6v)$",
+          "zh": "第 2 步 · 抽公因式 $(5u-6v)$",
           "en": "Step 2 · Take out the common bracket"
          },
          "math": "=(5u-6v)(7u-4v)-6u(5u-6v)",
@@ -596,17 +596,17 @@ window.LEARN_TOPIC_WS01 = {
        "traps": [
         {
          "opt": "D",
-         "zh": "$(5u-6v)(13u-4v)$ 是忘記減去 $6u$：把 $(7u-4v)$ 與 $6u$ 加了而不是減（$7u+6u=13u$）。抽公因數後那個 $6u$ 前面是負號，要相減。",
+         "zh": "$(5u-6v)(13u-4v)$ 是忘記減去 $6u$：把 $(7u-4v)$ 與 $6u$ 加了而不是減（$7u+6u=13u$）。抽公因式後那個 $6u$ 前面是負號，要相減。",
          "en": "Adding instead of subtracting $6u$ gives the wrong $13u$."
         },
         {
          "opt": "A",
-         "zh": "$(5u+6v)(u+4v)$ 兩個括號的符號都錯了。$(5u-6v)$ 是整個式子的公因數，不會變成 $(5u+6v)$。",
+         "zh": "$(5u+6v)(u+4v)$ 兩個括號的符號都錯了。$(5u-6v)$ 是整個式子的公因式，不會變成 $(5u+6v)$。",
          "en": "The common bracket is $(5u-6v)$; it cannot change to $(5u+6v)$."
         }
        ],
        "tip": {
-        "zh": "看到「兩個括號差一個倍數」（例如 $10u-12v = 2(5u-6v)$），先調整成一樣，公因數就會自己浮出來。這是 MC 常見的包裝手法。",
+        "zh": "看到「兩個括號差一個倍數」（例如 $10u-12v = 2(5u-6v)$），先調整成一樣，公因式就會自己浮出來。這是 MC 常見的包裝手法。",
         "en": "If two brackets differ by a constant multiple, adjust them to match — then the common factor appears."
        }
       },
@@ -910,7 +910,7 @@ window.LEARN_TOPIC_WS01 = {
       "en": "Method 5 · Splitting the Middle Term"
      },
      "body": {
-      "zh": "很多同學覺得十字相乘法「要試很多組合」。澳洲課本教另一個方法 —— 拆項法（split the middle term）：步驟固定，不用試，把中間項拆成兩項，再分組抽公因數。\n以 $6x^{2}-13x-5$ 為例：\n第 1 步 · 首項係數 × 常數項：\n{{math:0}}\n第 2 步 · 找兩個數，相乘等於 $-30$、相加等於中間項係數 $-13$：\n{{math:1}}\n（$(-15)\\times 2=-30$ 而且 $(-15)+2=-13$ ✓，所以用 $-15$ 與 $2$。）\n第 3 步 · 把中間項 $-13x$ 拆成 $-15x+2x$，然後分組抽公因式：\n{{math:2}}\n「兩個數的次序不重要」：把次序對調也一樣做到結果：\n{{math:3}}\n兩種方法都可以用：十字相乘熟練後較快；拆項法步驟固定，首項係數較大時特別順手。"
+      "zh": "很多同學覺得十字相乘法「要試很多組合」。澳洲課本教另一個方法 —— 拆項法（split the middle term）：步驟固定，不用試，把中間項拆成兩項，再分組抽公因式。\n以 $6x^{2}-13x-5$ 為例：\n第 1 步 · 首項係數 × 常數項：\n{{math:0}}\n第 2 步 · 找兩個數，相乘等於 $-30$、相加等於中間項係數 $-13$：\n{{math:1}}\n（$(-15)\\times 2=-30$ 而且 $(-15)+2=-13$ ✓，所以用 $-15$ 與 $2$。）\n第 3 步 · 把中間項 $-13x$ 拆成 $-15x+2x$，然後分組抽公因式：\n{{math:2}}\n「兩個數的次序不重要」：把次序對調也一樣做到結果：\n{{math:3}}\n兩種方法都可以用：十字相乘熟練後較快；拆項法步驟固定，首項係數較大時特別順手。"
      },
      "math": [
       "6\\times(-5)=-30",
@@ -1020,7 +1020,7 @@ window.LEARN_TOPIC_WS01 = {
       {
        "label": "(b)",
        "text": "$9x-3y-15x^{2}-xy+2y^{2}$.",
-       "marks": 1
+       "marks": 2
       }
      ],
      "marks": 3,
@@ -1081,7 +1081,7 @@ window.LEARN_TOPIC_WS01 = {
       ],
       "traps": [],
       "tip": {
-       "zh": "DSE Paper 1 的因式分解題幾乎都是「(a) 先分解一個二次三項式，(b) 再用 (a) 的結果」。(b) 見到四項，先想「哪兩項可以抽公因式、哪三項是 (a) 的式子」，通常就通了。",
+       "zh": "DSE Paper 1 的因式分解題幾乎都是「(a) 先分解一個二次三項式，(b) 再用 (a) 的結果」。(b) 見到四項，先想「哪兩項可以抽公因式、哪三項是 (a) 的式子」，通常就通了。若 (a) 的十字相乘一時試不出組合，不要硬試：用計算機內置的二次方程程式求出兩個根、反推因式（見「方法四」概念卡），確定答案後再回頭把過程寫齊。",
        "en": "In Paper 1, part (b) almost always reuses part (a). Look for the group that matches (a) — and add brackets before taking out a minus sign."
       }
      },
@@ -1109,7 +1109,7 @@ window.LEARN_TOPIC_WS01 = {
       {
        "label": "(b)",
        "text": "$(5c+d)^{2}-16c^{2}+8c-1$.",
-       "marks": 1
+       "marks": 3
       }
      ],
      "marks": 4,
@@ -1136,8 +1136,7 @@ window.LEARN_TOPIC_WS01 = {
         },
         "math": "(5c+d)^{2}-16c^{2}+8c-1=(5c+d)^{2}-(16c^{2}-8c+1)",
         "zh": "後三項 $-16c^{2}+8c-1$ 與 (a) 的 $16c^{2}-8c+1$ 只差一個負號，所以要提出負號並加括號：$-(16c^{2}-8c+1)$。提出時每一項都要變號 —— 這是本題最容易失分的地方。",
-        "en": "Take out a minus sign with brackets: $-(16c^{2}-8c+1)$. Every term inside must change sign. (1M)",
-        "marking": "(1M)",
+        "en": "Take out a minus sign with brackets: $-(16c^{2}-8c+1)$. Every term inside must change sign.",
         "highlight": [
          "-(16c^{2}-8c+1)"
         ],
@@ -1155,6 +1154,7 @@ window.LEARN_TOPIC_WS01 = {
         "math": "=(5c+d)^{2}-(4c-1)^{2}",
         "zh": "把 (a) 的答案代回去，就得到「兩個平方相減」$A^{2}-B^{2}$ 的形式，其中 $A=5c+d$、$B=4c-1$。看到這個形式就要立刻想 $A^{2}-B^{2}\\equiv(A+B)(A-B)$。",
         "en": "Now it is $A^{2}-B^{2}$ with $A=5c+d$, $B=4c-1$ — apply the difference of two squares.",
+        "marking": "(1M: Use the result of (a).)",
         "highlight": [
          "A^{2}-B^{2}"
         ],
@@ -1169,9 +1169,9 @@ window.LEARN_TOPIC_WS01 = {
          "en": "Step 4 · Apply $A^{2}-B^{2}=(A+B)(A-B)$"
         },
         "math": "=(5c+d+4c-1)(5c+d-4c+1)=(9c+d-1)(c+d+1)",
-        "zh": "$A+B=(5c+d)+(4c-1)=9c+d-1$；$A-B=(5c+d)-(4c-1)=5c+d-4c+1$。注意減號後面整條 $4c-1$ 都要變號，寫成 $5c+d-4c+1$ 才會對。答案是 $(9c+d-1)(c+d+1)$，這步 1A。",
-        "en": "$A+B=9c+d-1$ and $A-B=c+d+1$, giving $(9c+d-1)(c+d+1)$. (1A)",
-        "marking": "(1A)",
+        "zh": "$A+B=(5c+d)+(4c-1)=9c+d-1$；$A-B=(5c+d)-(4c-1)=5c+d-4c+1$。注意減號後面整條 $4c-1$ 都要變號，寫成 $5c+d-4c+1$ 才會對。答案是 $(9c+d-1)(c+d+1)$，這步 1M + 1A。",
+        "en": "$A+B=9c+d-1$ and $A-B=c+d+1$, giving $(9c+d-1)(c+d+1)$. (1M) (1A)",
+        "marking": "(1M) (1A)",
         "highlight": [
          "(9c+d-1)(c+d+1)"
         ]
@@ -1228,7 +1228,7 @@ window.LEARN_TOPIC_WS01 = {
           "en": "Step 2 · Factor the remaining pair"
          },
          "math": "3x-15y=3(x-5y)",
-         "zh": "$3x-15y$ 抽公因數 $3$ 得 $3(x-5y)$ —— 關鍵是括號內 $x-5y$ 與第 1 步的其中一個因式相同。",
+         "zh": "$3x-15y$ 抽公因式 $3$ 得 $3(x-5y)$ —— 關鍵是括號內 $x-5y$ 與第 1 步的其中一個因式相同。",
          "en": "$3x-15y=3(x-5y)$ shares the factor $(x-5y)$.",
          "highlight": [
           "3(x-5y)"
@@ -1240,7 +1240,7 @@ window.LEARN_TOPIC_WS01 = {
           "en": "Step 3 · Factor out $(x-5y)$"
          },
          "math": "=(x-5y)(x+2y)+3(x-5y)=(x-5y)(x+2y+3)",
-         "zh": "$(x-5y)$ 是公因數，抽出來剩下 $(x+2y)+3$，答案是 A。",
+         "zh": "$(x-5y)$ 是公因式，抽出來剩下 $(x+2y)+3$，答案是 A。",
          "en": "$(x-5y)(x+2y+3)$. Answer: A.",
          "highlight": [
           "(x-5y)(x+2y+3)"
@@ -1652,7 +1652,7 @@ window.LEARN_TOPIC_WS01 = {
         }
        ],
        "tip": {
-        "zh": "抽公因數時要抽「整條括號」：$-3u-3v$ 抽的不只是 3，而是 $-3(u+v)$。判斷方法：把抽出來的東西乘回去，看能否還原。",
+        "zh": "抽公因式時要抽「整條括號」：$-3u-3v$ 抽的不只是 3，而是 $-3(u+v)$。判斷方法：把抽出來的東西乘回去，看能否還原。",
         "en": "Take out the whole bracket: $-3u-3v=-3(u+v)$."
        }
       },
@@ -1696,7 +1696,7 @@ window.LEARN_TOPIC_WS01 = {
         },
         {
          "title": {
-          "zh": "第 2 步 · 後兩項抽公因數",
+          "zh": "第 2 步 · 後兩項抽公因式",
           "en": "Step 2 · Factor the remaining pair"
          },
          "math": "-6m-4n=-2(3m+2n)",
@@ -1790,7 +1790,7 @@ window.LEARN_TOPIC_WS01 = {
           "en": "Step 3 · Factor out $(a-b)$"
          },
          "math": "=(a-b)(a+b+1)",
-         "zh": "$(a-b)$ 是公因數，抽出來後 $+(a-b)$ 剩下 $+1$。答案是 C。很多同學漏掉那個 1，就會寫成 $(a-b)(a+b)$。",
+         "zh": "$(a-b)$ 是公因式，抽出來後 $+(a-b)$ 剩下 $+1$。答案是 C。很多同學漏掉那個 1，就會寫成 $(a-b)(a+b)$。",
          "en": "$(a-b)(a+b+1)$. Answer: C.",
          "highlight": [
           "(a-b)(a+b+1)"
@@ -1810,7 +1810,7 @@ window.LEARN_TOPIC_WS01 = {
         }
        ],
        "tip": {
-        "zh": "「單獨一項」也可以是公因數的一部分：$+(a-b)$ 抽 $(a-b)$ 後剩下 $+1$。這個 1 是 MC 常見陷阱，記得寫上去。",
+        "zh": "「單獨一項」也可以是公因式的一部分：$+(a-b)$ 抽 $(a-b)$ 後剩下 $+1$。這個 1 是 MC 常見陷阱，記得寫上去。",
         "en": "Remember the hidden 1 when a whole term equals the common factor."
        }
       },

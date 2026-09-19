@@ -117,6 +117,10 @@ ok(t02mc.$$("#topic-body .opt").length === 12,
    "each question has 4 options (got " + t02mc.$$("#topic-body .opt").length + ")");
 ok(!/\\\$\\\$/.test(t02mc.$("#topic-body").textContent),
    "currency renders as $ without breaking the maths delimiters");
+// 純數字選項（如 "-2"，冇 $ 標籤）一樣會經 KaTeX 渲染 → 顯示數學減號，不是鍵盤 hyphen
+const q01opt = t02mc.$('.card[data-qid="eph-ws02-q01"] .opt .val');
+ok(!!q01opt && /katex/.test(q01opt.innerHTML),
+   "plain numeric options still go through KaTeX (minus sign, not hyphen)");
 
 // ws02-c2（代入法）也要把 4 條公式插在文字中間（不是全部排在最後）
 const t02c2 = boot("topic.html", "?t=ws02&p=0");

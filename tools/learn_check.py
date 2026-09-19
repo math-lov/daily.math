@@ -9,6 +9,7 @@
   S5 覆核：被課程引用但 review 未清的題目 → 錯誤（不得出站）
   S6 貨幣／定界符：文字欄位不准出現單數 $（會被當成數學定界符）
   S8 概念卡 vocab：每組要有 en／zh，中文欄不可被英文詞頭污染（english = 中文）
+  S10 術語一致性：代數語境用「公因式」，不可寫成「公因數」（純數字 H.C.F. 除外）
   R1 課程合規：角度一律用度（禁 rad／弧度／\\frac{\\pi}{n}）
   R2 主解法不得用坐標法或向量法（幾何題）
       → R1／R2 的樣式與 tools/syllabus_check.py 一致，重用同一套規則
@@ -209,6 +210,16 @@ def main(argv: list[str] | None = None) -> int:
             for i, pt in enumerate(q.get("parts") or [], 1):
                 if not str(pt.get("text") or "").strip():
                     err("S2", "%s：parts[%d] 沒有內容" % (qid, i))
+            # 分部分數加總必須等於總分（否則學生看到的計分欄位自相矛盾）
+            parts = q.get("parts") or []
+            if parts and q.get("marks") is not None:
+                try:
+                    part_sum = sum(int(p.get("marks") or 0) for p in parts)
+                except (TypeError, ValueError):
+                    part_sum = None
+                if part_sum is not None and part_sum != q.get("marks"):
+                    err("S2", "%s：parts 分數合計 %d ≠ 總分 %s"
+                        % (qid, part_sum, q.get("marks")))
             if s.get("answer") not in (None, ""):
                 warn("S4", "%s：long 題不需要 answer（現為 %r）" % (qid, s.get("answer")))
             if options:
@@ -246,6 +257,17 @@ def main(argv: list[str] | None = None) -> int:
             elif re.match(r"^[a-z]{2,}\s", zh):
                 err("S8", "%s：vocab 的中文欄以英文字開頭（en=%r, zh=%r）—— "
                           "疑似「english 中文」被空格拆散，請用「english = 中文」" % (cid, en, zh))
+
+    # ── S10：術語一致性（代數語境一律「公因式」）──────────────────────────
+    # 只有純數字才叫「公因數」（H.C.F.）；含字母或整條括號的一律「公因式」。
+    # 例外：「最大公因數」、概念卡釋義引號內的「公因數」、以及談係數 H.C.F. 的「係數的公因數」。
+    BAD_TERM = re.compile(r"(?<!最大)(?<!「)(?<!係數的)公因數")
+    for qid, s in sols.items():
+        if BAD_TERM.search(_text_of(s)):
+            warn("S10", "%s：題解用了「公因數」——代數語境應寫「公因式」（純數字 H.C.F. 除外）" % qid)
+    for cid, c in cards_by_id.items():
+        if BAD_TERM.search(_text_of(c)):
+            warn("S10", "%s：概念卡用了「公因數」——代數語境應寫「公因式」（純數字 H.C.F. 除外）" % cid)
 
     # ── S9：示意圖（SVG）安全檢查（概念卡同題目都用同一套）────────────────
     figures_doc = _load("figures.json", {"figures": {}})
