@@ -194,6 +194,26 @@ class Frame:
         if len(pts) >= 2:
             self.seg(pts[0][0], pts[0][1], pts[1][0], pts[1][1], color=color, width=width)
 
+    def curve(self, fn, x1: float, x2: float, color: str = INK, width: float = 1.8,
+              n: int = 140) -> None:
+        """畫一段函數曲線 y = fn(x)（x 由 x1 到 x2）。
+
+        只負責畫線；呼叫前要自己確保 y 落在畫面範圍內（否則會畫出畫布外）。
+        """
+        pts = []
+        for i in range(n + 1):
+            x = x1 + (x2 - x1) * i / float(n)
+            pts.append("%.1f,%.1f" % (self.px(x), self.py(fn(x))))
+        self.parts.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="%.1f" '
+                          'stroke-linejoin="round"/>' % (" ".join(pts), color, width))
+
+    def vline(self, x: float, label: str = "") -> None:
+        """垂直虛線（例如拋物線的對稱軸）。"""
+        self.seg(x, self.ymin, x, self.ymax, color=INK, width=1.4, dash="4 3")
+        if label:
+            self.parts.append('<text x="%.1f" y="%.1f" font-size="11" fill="%s" font-family="%s">%s</text>'
+                              % (self.px(x) + 5, self.py(self.ymax) + 14, INK, FONT, label))
+
     def svg(self) -> str:
         defs = ('<defs><marker id="ar-%s" viewBox="0 0 10 10" refX="9" refY="5" '
                 'markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">'
@@ -602,6 +622,81 @@ def bridge_ws04_w4() -> str:
     return f.svg()
 
 
+# ──────────────────────────────────────────────────────────────────────────
+# WS06（函數與圖像）：二次函數圖像 —— 開口方向、y 截距、x 截距與對稱軸、頂點
+#   拋物線用 curve() 畫；對稱軸用 vline() 畫成垂直虛線。
+#   標籤盡量少：一個圖形文字 ＋ 一個關鍵點標籤，其餘交給圖下面的說明。
+# ──────────────────────────────────────────────────────────────────────────
+def fig_ws06_c2_up() -> str:
+    """c2 圖一：a>0 開口向上，y 截距 = c"""
+    f = Frame(-4, 4, -3, 4, key="c2a")
+    f.curve(lambda x: 0.5 * x * x - 2, -3.2, 3.2)
+    f.point(0, -2, "c", dx=8, dy=16)
+    f.text(-3.6, 3.4, "a > 0")
+    return f.svg()
+
+
+def fig_ws06_c2_down() -> str:
+    """c2 圖二：a<0 開口向下，y 截距 = c"""
+    f = Frame(-4, 4, -4, 4, key="c2b")
+    f.curve(lambda x: -0.5 * x * x + 2, -3.2, 3.2)
+    f.point(0, 2, "c", dx=8, dy=-12)
+    f.text(-3.6, 3.4, "a &lt; 0")
+    return f.svg()
+
+
+def fig_ws06_c3() -> str:
+    """c3：兩個 x 截距 α、β → 對稱軸 x = (α+β)/2、頂點在中間"""
+    f = Frame(-1, 7, -5, 7, key="c3")
+    f.curve(lambda x: (x - 1) * (x - 5), 0.2, 5.8)
+    f.vline(3)
+    f.point(1, 0, "α")
+    f.point(5, 0, "β")
+    f.point(3, -4, "vertex", dx=8, dy=-10)
+    f.text(3.2, 6.4, "x = 3")
+    return f.svg()
+
+
+def fig_ws06_c4() -> str:
+    """c4：頂點式 y = a(x−h)²+k，頂點 (h, k)、對稱軸 x = h"""
+    f = Frame(-2, 6, -5, 5, key="c4")
+    f.curve(lambda x: 0.8 * (x - 2) ** 2 - 4, -1.3, 5.3)
+    f.vline(2)
+    f.point(2, -4, "(h, k)", dx=8, dy=-10)
+    f.text(2.3, 4.4, "x = h")
+    return f.svg()
+
+
+def fig_ws06_c6() -> str:
+    """c6：a<0 時的最大值 k（頂點的 y 座標）"""
+    f = Frame(-2, 6, -5, 5, key="c6")
+    f.curve(lambda x: -0.8 * (x - 2) ** 2 + 4, -1.32, 5.32)
+    f.vline(2)
+    f.point(2, 4, "(h, k)", dx=8, dy=-10)
+    f.text(-1.6, 4.2, "max. = k")
+    return f.svg()
+
+
+def fig_ws06_q06() -> str:
+    """q06：y=(x+h)²+k，頂點在第四象限 → h<0、k<0"""
+    f = Frame(0, 7, -5, 6, key="w6q6")
+    f.curve(lambda x: (x - 3) ** 2 - 4, 0.3, 5.7)
+    f.vline(3)
+    f.point(3, -4, "vertex", dx=8, dy=-10)
+    f.text(0.35, 5.4, "y = (x + h)² + k")
+    return f.svg()
+
+
+def fig_ws06_q13() -> str:
+    """q13：y=p(x+q)² 開口向下、頂點在 y 軸左邊 → p<0、q>0"""
+    f = Frame(-5, 3, -6, 4, key="w6q13")
+    f.curve(lambda x: -0.5 * (x + 2) ** 2, -5, 1)
+    f.vline(-2)
+    f.point(-2, 0, "vertex", dx=8, dy=16)
+    f.text(-4.8, 3.4, "y = p(x + q)²")
+    return f.svg()
+
+
 FIGURES = {
     "ws04-c1": [(fig_translation_left, "A(−7, 3) 向左 6 單位 → A′(−13, 3)"),
                 (fig_translation_up, "B(−2, −6) 向上 3 單位 → B′(−2, −3)")],
@@ -677,6 +772,15 @@ FIGURES = {
     "eph-ws04-w02": [(bridge_ws04_w2, "對 x 軸反射：x 不變、y 變號（−4, 7）→ (−4, −7)")],
     "eph-ws04-w03": [(bridge_ws04_w3, "逆時針 90°：(x, y) → (−y, x)，(2, 5) → R(−5, 2)")],
     "eph-ws04-w04": [(bridge_ws04_w4, "180° 旋轉：(x, y) → (−x, −y)，(−6, 1) → S(6, −1)")],
+
+    # ── WS06（函數與圖像）：概念卡 4 幅 ＋ MC 2 幅 ──
+    "ws06-c2": [(fig_ws06_c2_up, "$a>0$：開口向上；與 $y$ 軸交於 $c$（這裡 $c<0$）"),
+                (fig_ws06_c2_down, "$a<0$：開口向下；$y$ 截距仍是 $c$（這裡 $c>0$）")],
+    "ws06-c3": [(fig_ws06_c3, "兩個 $x$ 截距 $\\alpha$、$\\beta$ 的中間就是對稱軸：$x=3$（$\\frac{1+5}{2}$）")],
+    "ws06-c4": [(fig_ws06_c4, "頂點式：對稱軸 $x=h$、頂點 $(h,\\ k)$（圖中 $h=2$、$k=-4$）")],
+    "ws06-c6": [(fig_ws06_c6, "開口向下（$a<0$）→ 函數的最大值就是頂點的 $y$ 座標 $k$")],
+    "eph-ws06-q06": [(fig_ws06_q06, "頂點在右下方（第四象限）：$x$ 座標 $>0$ → $-h>0$；$y$ 座標 $<0$ → $k<0$")],
+    "eph-ws06-q13": [(fig_ws06_q13, "開口向下（$p<0$）；頂點在 $y$ 軸左邊（$-q<0$）→ $q>0$")],
 }
 
 

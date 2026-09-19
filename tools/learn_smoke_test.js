@@ -365,8 +365,8 @@ ok(!!optA13 && optA13.querySelector(".cur") && optA13.textContent.indexOf("\\$")
 
 /* ── 2c. 第 3、4 課 ───────────────────────────────────────────────────── */
 console.log("\n— 課題 3、4 —");
-ok(home.$$(".topic-btn").length === 6,
-   "home lists all six topics (got " + home.$$(".topic-btn").length + ")");
+ok(home.$$(".topic-btn").length === 7,
+   "home lists all seven topics (got " + home.$$(".topic-btn").length + ")");
 const t03 = boot("topic.html", "?t=ws03&p=0");
 ok((t03.$("#topic-name").textContent || "").indexOf("主項") >= 0,
    "ws03 name rendered (" + t03.$("#topic-name").textContent + ")");
@@ -578,7 +578,7 @@ ok(mc5.length === 17, "ws05a carries 17 MC questions (got " + mc5.length + ")");
 ok(mc6.length === 17, "ws05b carries 17 MC questions (got " + mc6.length + ")");
 
 // 審閱修正（第三方審核 ＋ 自行核實）：題幹不可以「未完成」；步驟分要加得起來等於該題分數
-const allPayloads = ["WS01", "WS02", "WS03", "WS04", "WS05A", "WS05B"]
+const allPayloads = ["WS01", "WS02", "WS03", "WS04", "WS05A", "WS05B", "WS06"]
   .map((k) => t05.ctx.window["LEARN_TOPIC_" + k]);
 const allDemoQs = allPayloads.reduce(
   (a, p) => a.concat(p.lessons.reduce((b, l) => b.concat(l.long), [])), []);
@@ -651,6 +651,94 @@ ok(/一元二次方程/.test(w05.$("#wrong-body").textContent) &&
    /複數/.test(w05.$("#wrong-body").textContent),
    "each group is labelled with its own course name");
 
+/* ── 2e. 第 7 課：函數與圖像（WS06）───────────────────────────────────── */
+console.log("\n— 課題 7：函數與圖像（二次函數）—");
+const t07 = boot("topic.html", "?t=ws06&p=0");
+ok((t07.$("#topic-name").textContent || "").indexOf("函數") >= 0,
+   "ws06 name rendered (" + t07.$("#topic-name").textContent + ")");
+ok(t07.$$("#pagenav .pg").length === 12,
+   "ws06 = two lessons (1+2+3 and 1+2+3 pages) = 12 pages (got " + t07.$$("#pagenav .pg").length + ")");
+ok(t07.$$("#pagenav .pg-lesson").length === 2 &&
+   t07.$$("#pagenav .pg-lesson")[0].textContent === "第 1 節" &&
+   t07.$$("#pagenav .pg-lesson")[1].textContent === "第 2 節",
+   "ws06 is split into two lessons with separators (got " + t07.$$("#pagenav .pg-lesson").length + ")");
+ok(!!t07.$(".concept-body") && t07.$$(".formula .katex").length >= 2,
+   "ws06 concept card renders formulas");
+// 這課是「圖像」課 → 概念卡一定要有圖（第一節 4 張卡共 5 幅：c2 有兩幅）
+const t07fig = boot("topic.html", "?t=ws06&p=0");
+let c7fig = 0, f7 = 0, cap7 = 0, g7 = 0;
+while (g7 < 10) {
+  const n = t07fig.$$(".fig svg").length;
+  if (n) c7fig++;
+  f7 += n;
+  cap7 += t07fig.$$(".fig-cap").length;
+  const b = t07fig.$$(".card .row .btn").filter((x) => /下一張/.test(x.textContent))[0];
+  if (!b) break;
+  b.click();
+  g7++;
+}
+ok(c7fig === 3 && f7 === 4 && cap7 === 4,
+   "ws06 lesson 1 shows 4 graphs over 3 cards (the opening-direction card has two): " +
+   c7fig + " cards / " + f7 + " figures");
+ok(t07fig.$$(".fig svg polyline").length >= 1,
+   "the graphs are real curves (SVG polyline), not placeholders");
+const payload7 = t07.ctx.window.LEARN_TOPIC_WS06;
+ok(payload7.lessons.length === 2 && payload7.lessons[0].id === "ws06-1" &&
+   payload7.lessons[1].id === "ws06-2",
+   "ws06 lesson ids (" + payload7.lessons.map((l) => l.id).join(", ") + ")");
+ok(payload7.lessons[0].cards.length === 4 && payload7.lessons[1].cards.length === 2,
+   "lesson 1 takes the four graph cards, lesson 2 the two algebra cards (" +
+   payload7.lessons.map((l) => l.cards.length).join(" / ") + ")");
+const pages7 = payload7.lessons.map((l) => l.pages.map((p) => p.length));
+ok(JSON.stringify(pages7) === JSON.stringify([[3, 3, 3], [3, 3, 2]]),
+   "ws06 MC pages stay 3 per page with a 2-question closer: " + JSON.stringify(pages7));
+ok(payload7.lessons[0].long.length === 2 && payload7.lessons[1].long.length === 2,
+   "each ws06 lesson carries two demos (" +
+   payload7.lessons.map((l) => l.long.length).join(" / ") + ")");
+
+// 示範頁：每節只有 2 條示範 → 一條一頁，所以沒有「示範 1 / N」切換器
+const d7 = boot("topic.html", "?t=ws06&p=1");
+ok(!d7.$(".demo-count"), "a lesson with two demos has no demo switcher");
+ok(!d7.$$("#topic-body .opt").length, "the ws06 demo page holds no MC options");
+ok(/WS6-EX1/.test(d7.$("#topic-body").textContent),
+   "the first ws06 demo is the bridging one (WS6-EX1)");
+const d7b = boot("topic.html", "?t=ws06&p=8");
+ok(/WS6-EX4/.test(d7b.$("#topic-body").textContent) && /48/.test(d7b.$("#topic-body").textContent),
+   "lesson 2 closes with the rope / maximum-area application (WS6-EX4, HKDSE 2013)");
+
+// 過渡題頁：第一個練習頁全部是 Bridging 題（求值 → 代入式 → y 截距）
+const t07mc = boot("topic.html", "?t=ws06&p=3");
+const b7 = t07mc.$$("#topic-body .card[data-qid]");
+ok(b7.length >= 1 && b7.every((c) => /-w0\d$/.test(c.getAttribute("data-qid"))),
+   "ws06 first MC page is all bridging questions (" +
+   b7.map((c) => c.querySelector(".q-code").textContent).join(", ") + ")");
+ok(t07mc.$$("#topic-body .opt").length === 12,
+   "ws06 MC page has 3 questions × 4 options (got " + t07mc.$$("#topic-body .opt").length + ")");
+
+// MC 的圖要放喺答案欄：作答前唔可以見到（讀圖題 q06、q13）
+const t07q = boot("topic.html", "?t=ws06&p=5");
+const q7 = t07q.$$("#topic-body .card[data-qid]");
+ok(t07q.$$("#topic-body .fig").length === 0, "ws06 reveals no figure before answering (no spoiler)");
+q7.forEach((c) => c.querySelector(".opt").click());
+const q7fig = q7.map((c) => c.querySelectorAll(".fig svg").length);
+ok(q7fig[2] >= 1 && q7fig[0] === 0,
+   "only the graph-reading question (q06) shows a figure after answering (" + q7fig.join(", ") + ")");
+
+const mc7 = payload7.lessons.reduce(
+  (a, l) => a.concat(l.pages.reduce((b, r) => b.concat(r), [])), []);
+ok(mc7.length === 17, "ws06 carries 17 MC questions (got " + mc7.length + ")");
+ok(mc7.every((q) => ["A", "B", "C", "D"].includes(q.answer)),
+   "every ws06 MC has a real answer key");
+ok(mc7.filter((q) => (q.solution.traps || []).length >= 2).length === mc7.length,
+   "every ws06 MC explains at least two real distractors");
+ok(mc7.every((q) => q.solution.tip && q.solution.tip.zh),
+   "every ws06 MC carries a takeaway tip");
+const hasStem = (re) => mc7.some((q) => re.test(q.stem.text));
+ok(hasStem(/completing the square/) || hasStem(/vertex/),
+   "ws06 practises completing the square / reading the vertex");
+ok(hasStem(/cut the \$x\$-axis/), "ws06 practises the discriminant (does the graph cut the x-axis?)");
+ok(hasStem(/figure shows the graph/), "ws06 includes graph-reading questions backed by figures");
+
 
 // 未作答但按「看完整解答」＝放棄作答 → 圖都要出場
 const t04q2 = boot("topic.html", "?t=ws04&p=6");
@@ -708,7 +796,7 @@ ok(/徹底分解/.test(tHint.$(".cmd-hints").textContent), "the hints are glosse
 //   ① 每課 4–6 個；② 至少 3 個是自己獨有；③ 任兩課最多重覆 2 個；④ 不可整組照抄另一課
 const hintWords = {};
 const hintTexts = {};
-["ws01", "ws02", "ws03", "ws04", "ws05a", "ws05b"].forEach((hid) => {
+["ws01", "ws02", "ws03", "ws04", "ws05a", "ws05b", "ws06"].forEach((hid) => {
   const hp = boot("topic.html", "?t=" + hid + "&p=0");
   hintWords[hid] = Array.prototype.map.call(
     hp.$$(".cmd-hints .ch-chip"), (c) => c.querySelector("b").textContent.trim());
@@ -748,9 +836,12 @@ ok(/Solve the simultaneous equations/.test(hintTexts.ws02),
    "ws02 carries the simultaneous-equation vocabulary");
 ok(!/real roots/.test(hintTexts.ws01) && !/imaginary/.test(hintTexts.ws01),
    "ws01 does not re-use other courses' words");
-ok(new Set(Object.values(hintTexts)).size === 6,
-   "all six courses carry a different set of command words (got " +
+ok(new Set(Object.values(hintTexts)).size === 7,
+   "all seven courses carry a different set of command words (got " +
    new Set(Object.values(hintTexts)).size + ")");
+ok(/the coordinates of the vertex/.test(hintTexts.ws06) &&
+   /completing the square/.test(hintTexts.ws06),
+   "ws06 carries the function / graph vocabulary (" + hintTexts.ws06.slice(0, 40) + " …)");
 const tHint5 = boot("topic.html", "?t=ws05a&p=0");
 ok(!!tHint5.$(".cmd-hints .katex"), "the command-word glosses are typeset by KaTeX");
 ok(!/\$/.test((tHint5.$(".cmd-hints") || {}).textContent || ""),

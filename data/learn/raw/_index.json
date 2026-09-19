@@ -1,49 +1,49 @@
 {
  "_comment": "extract_eph.py 抽取總表（草稿層，禁手改）",
- "generatedAt": "2026-09-19T06:41:41Z",
+ "generatedAt": "2026-09-19T09:36:24Z",
  "files": [
   {
-   "code": "WS05",
+   "code": "WS06",
    "variant": "question",
-   "file": "EPH_DSEL5_WS05_e.docx",
-   "out": "WS05.json",
+   "file": "EPH_DSEL5_WS06_e.docx",
+   "out": "WS06.json",
    "stats": {
-    "blocks": 683,
-    "dups": 219,
-    "images": 93,
+    "blocks": 965,
+    "dups": 286,
+    "images": 35,
     "images_inline": 0,
-    "sup": 192,
-    "embedFig": 4,
+    "sup": 149,
+    "embedFig": 2,
     "numEq": 0,
-    "marks": 9,
-    "marking": 2,
+    "marks": 29,
+    "marking": 0,
     "examples": 12,
-    "practices": 4,
+    "practices": 2,
     "solutions": 0,
-    "noise": 22,
-    "tables": 11
+    "noise": 24,
+    "tables": 9
    }
   },
   {
-   "code": "WS05",
+   "code": "WS06",
    "variant": "solution",
-   "file": "EPH_DSEL5_WS05_e_sol.docx",
-   "out": "WS05-sol.json",
+   "file": "EPH_DSEL5_WS06_e_sol.docx",
+   "out": "WS06-sol.json",
    "stats": {
-    "blocks": 1514,
-    "dups": 472,
-    "images": 259,
+    "blocks": 2174,
+    "dups": 761,
+    "images": 96,
     "images_inline": 0,
-    "sup": 451,
-    "embedFig": 89,
+    "sup": 729,
+    "embedFig": 20,
     "numEq": 0,
-    "marks": 9,
-    "marking": 50,
+    "marks": 29,
+    "marking": 160,
     "examples": 12,
-    "practices": 8,
+    "practices": 6,
     "solutions": 0,
-    "noise": 22,
-    "tables": 11
+    "noise": 24,
+    "tables": 9
    }
   }
  ]

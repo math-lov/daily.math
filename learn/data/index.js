@@ -148,16 +148,39 @@ window.LEARN_INDEX = {
    "lessonIds": [
     "ws05b-1"
    ]
+  },
+  {
+   "id": "ws06",
+   "stage": 1,
+   "unit": 2,
+   "name": {
+    "zh": "函數與圖像",
+    "en": "Functions and Graphs"
+   },
+   "intro": {
+    "zh": "這一課把「函數」與「二次函數圖像」補回來：① 函數記號與求值（$f(-2)$、$f(2x+1)$）；② 二次函數圖像的特徵（開口方向、$y$ 截距、$x$ 截距、對稱軸、頂點）；③ 配方法與最大最小值。\nDSE 幾乎年年考：Paper 2 愛考「函數求值」與「由圖判斷符號」，Paper 1 則常出「用配方法求頂點」與「面積最大」的應用題。\n這一課分兩節：第一節「函數記號與二次函數圖像」先看懂圖；第二節「配方法、頂點與最大最小值」再把它算出來。"
+   },
+   "source": "EPH All-Round L5 · Worksheet 6",
+   "stats": {
+    "mc": 17,
+    "long": 4,
+    "cards": 6,
+    "pages": 6
+   },
+   "lessonIds": [
+    "ws06-1",
+    "ws06-2"
+   ]
   }
  ],
  "assessments": [],
- "generatedAt": "2026-09-19T08:18:35Z",
+ "generatedAt": "2026-09-19T09:44:31Z",
  "counts": {
-  "topics": 6,
+  "topics": 7,
   "held": 0,
-  "mc": 110,
-  "long": 19,
-  "cards": 36,
+  "mc": 127,
+  "long": 23,
+  "cards": 42,
   "blocked": 0
  }
 };

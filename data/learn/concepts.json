@@ -1163,6 +1163,207 @@
    "warn": {
     "zh": "求出未知數 $k$ 通常只是中途步驟。看清題目問的是 $k$ 本身、實部、虛部還是整個複數，否則極易選中考評局安排的誘餌選項。"
    }
+  },
+  {
+   "id": "ws06-c1",
+   "topic": "ws06",
+   "title": {
+    "zh": "函數記號與求值",
+    "en": "Function Notation and Evaluation"
+   },
+   "body": {
+    "zh": "函數 $f$ 是一條「輸入 → 輸出」的規則：寫 $f(x)$ 就是把輸入 $x$ 交進去，得到輸出。\n\n① 求 $f(a)$：把函數裡每一個 $x$ 都換成 $a$，再化簡。\n{{math:0}}\n\n② 代入負數時，整個負數要用括號包住 —— 這樣才不會把 $(-k)^{2}$ 寫成 $-k^{2}$：\n{{math:1}}\n\n③ 代入式（例如 $2x+1$）時，整個括號先包住，再展開：\n{{math:2}}\n\n最常錯的三件事：代入負數忘記括號、只換一部分 $x$、展開 $(ax+b)^{2}$ 時漏了中間項 $2ab$。"
+   },
+   "math": [
+    "f(x)=x^{3}+5x^{2}-1\\ \\Rightarrow\\ f(-2)=(-2)^{3}+5(-2)^{2}-1=-8+20-1=11",
+    "f(x)=-x^{2}-8x\\ \\Rightarrow\\ f(-k)=-(-k)^{2}-8(-k)=-k^{2}+8k",
+    "g(x)=3x^{2}-6x+1\\ \\Rightarrow\\ g(2x+1)=3(2x+1)^{2}-6(2x+1)+1=12x^{2}-2"
+   ],
+   "vocab": [
+    {
+     "en": "function",
+     "zh": "函數"
+    },
+    {
+     "en": "substitute",
+     "zh": "代入"
+    },
+    {
+     "en": "coefficient",
+     "zh": "係數"
+    }
+   ],
+   "warn": {
+    "zh": "$f(-2)$ 的 $(-2)^{2}=4$（不是 $-4$）；$(2x)^{2}$ 要平方整個 $2x$，得 $4x^{2}$，不是 $2x^{2}$。「把 $x$ 換成 $2x$」時，係數 $2$ 也要一齊平方。"
+   }
+  },
+  {
+   "id": "ws06-c2",
+   "topic": "ws06",
+   "title": {
+    "zh": "二次函數圖像：開口方向與 $y$ 截距",
+    "en": "Opening and y-intercept"
+   },
+   "body": {
+    "zh": "二次函數 $y=ax^{2}+bx+c$（$a\\ne0$）的圖像是一條拋物線（parabola）。只看兩個地方，已經可以拿到大部分分數：\n\n① 開口方向由 $a$ 決定：\n{{math:0}}\n\n② $y$ 截距＝令 $x=0$ 得到的值，就是常數項 $c$：\n{{math:1}}\n\n$c>0$ 代表圖像與 $y$ 軸交於原點上方；$c<0$ 就在原點下方。"
+   },
+   "math": [
+    "a>0:\\ \\text{the graph opens upwards}\\qquad a<0:\\ \\text{the graph opens downwards}",
+    "y=ax^{2}+bx+c\\ \\xrightarrow{\\ x=0\\ }\\ y=c"
+   ],
+   "vocab": [
+    {
+     "en": "direction of opening",
+     "zh": "開口方向"
+    },
+    {
+     "en": "y-intercept",
+     "zh": "y 截距"
+    },
+    {
+     "en": "parabola",
+     "zh": "拋物線"
+    }
+   ],
+   "warn": {
+    "zh": "$y$ 截距是常數項 $c$，不是 $a$、也不是 $b$。「開口向上」只代表 $a>0$，並不代表圖像一定完全在 $x$ 軸上方（可能穿過 $x$ 軸）。"
+   }
+  },
+  {
+   "id": "ws06-c3",
+   "topic": "ws06",
+   "title": {
+    "zh": "$x$ 截距、對稱軸、頂點與判別式",
+    "en": "x-intercepts, Axis of Symmetry and Vertex"
+   },
+   "body": {
+    "zh": "$x$ 截距＝圖像與 $x$ 軸相交的點，即令 $y=0$ 解方程 $ax^{2}+bx+c=0$。\n\n① 如果兩個 $x$ 截距是 $\\alpha$ 和 $\\beta$，拋物線左右對稱，對稱軸就在正中間，頂點的 $x$ 座標與它相同：\n{{math:0}}\n\n② 有幾個 $x$ 截距，由判別式 $\\Delta=b^{2}-4ac$ 決定：\n{{math:1}}\n{{math:2}}"
+   },
+   "math": [
+    "\\text{axis of symmetry: }x=\\frac{\\alpha+\\beta}{2}\\qquad (\\text{vertex }x\\text{-coordinate the same})",
+    "\\Delta=b^{2}-4ac>0:\\ \\text{two }x\\text{-intercepts}",
+    "\\Delta=0:\\ \\text{one }x\\text{-intercept (the graph touches the }x\\text{-axis)}\\qquad \\Delta<0:\\ \\text{no }x\\text{-intercept}"
+   ],
+   "vocab": [
+    {
+     "en": "x-intercept",
+     "zh": "x 截距"
+    },
+    {
+     "en": "axis of symmetry",
+     "zh": "對稱軸"
+    },
+    {
+     "en": "vertex",
+     "zh": "頂點"
+    },
+    {
+     "en": "discriminant",
+     "zh": "判別式"
+    }
+   ],
+   "warn": {
+    "zh": "對稱軸是兩個 $x$ 截距的平均 $\\frac{\\alpha+\\beta}{2}$，不要只取其中一個。$\\Delta<0$ 代表圖像完全在 $x$ 軸上方或下方，所以沒有 $x$ 截距。"
+   }
+  },
+  {
+   "id": "ws06-c4",
+   "topic": "ws06",
+   "title": {
+    "zh": "頂點式 $y=a(x-h)^{2}+k$",
+    "en": "Vertex Form"
+   },
+   "body": {
+    "zh": "同一個二次函數可以寫成頂點式：把所有 $x$ 集中成一個完全平方。\n{{math:0}}\n\n從這個寫法可以直接讀出兩個資料：\n{{math:1}}\n{{math:2}}\n\n注意頂點是 $(h,\\ k)$，括號內是 $x-h$：看到 $(x+3)^{2}$ 就是 $h=-3$（符號相反）。"
+   },
+   "math": [
+    "y=a(x-h)^{2}+k\\qquad (a\\ne0)",
+    "\\text{axis of symmetry: }x=h",
+    "\\text{vertex: }(h,\\ k)"
+   ],
+   "vocab": [
+    {
+     "en": "vertex form",
+     "zh": "頂點式"
+    },
+    {
+     "en": "vertex",
+     "zh": "頂點"
+    },
+    {
+     "en": "axis of symmetry",
+     "zh": "對稱軸"
+    }
+   ],
+   "warn": {
+    "zh": "$(x+3)^{2}-5$ 的頂點是 $(-3,\\ -5)$，不是 $(3,\\ -5)$：括號內是 $x-h$，所以「$+3$」代表 $h=-3$。頂點是 $(h,k)$，$k$ 是括號外那個數。"
+   }
+  },
+  {
+   "id": "ws06-c5",
+   "topic": "ws06",
+   "title": {
+    "zh": "配方法：把 $ax^{2}+bx+c$ 寫成 $a(x-h)^{2}+k$",
+    "en": "Completing the Square"
+   },
+   "body": {
+    "zh": "要把 $ax^{2}+bx+c$ 變成頂點式，用配方法（completing the square），固定三步：\n\n① 抽出 $a$：$ax^{2}+bx=a\\left(x^{2}+\\frac{b}{a}x\\right)$。\n② 括號內「加一半的平方、再減同一個數」：\n{{math:0}}\n③ 把前三項寫成完全平方，餘下的數合併：\n{{math:1}}\n\n例（抽出負係數）：\n{{math:2}}\n例（含 $k$）：\n{{math:3}}"
+   },
+   "math": [
+    "x^{2}+\\frac{b}{a}x=x^{2}+\\frac{b}{a}x+\\left(\\frac{b}{2a}\\right)^{2}-\\left(\\frac{b}{2a}\\right)^{2}",
+    "=a\\left(x+\\frac{b}{2a}\\right)^{2}+\\left(c-\\frac{b^{2}}{4a}\\right)",
+    "-3x^{2}+24x+25=-3(x^{2}-8x)+25=-3[(x-4)^{2}-16]+25=-3(x-4)^{2}+73",
+    "2x^{2}+8kx+9k^{2}+3=2[(x+2k)^{2}-4k^{2}]+9k^{2}+3=2(x+2k)^{2}+k^{2}+3"
+   ],
+   "vocab": [
+    {
+     "en": "complete the square",
+     "zh": "配方法"
+    },
+    {
+     "en": "vertex",
+     "zh": "頂點"
+    },
+    {
+     "en": "coefficient",
+     "zh": "係數"
+    }
+   ],
+   "warn": {
+    "zh": "「加一半的平方」之後一定要減回同一個數，否則式子的值就變了。抽出來的 $a$ 要乘回括號內每一項 —— 例如 $-3[(x-4)^{2}-16]+25$ 裡的 $-3\\times(-16)=+48$，最容易漏。"
+   }
+  },
+  {
+   "id": "ws06-c6",
+   "topic": "ws06",
+   "title": {
+    "zh": "最大／最小值",
+    "en": "Maximum and Minimum Values"
+   },
+   "body": {
+    "zh": "$(x-h)^{2}$ 永遠大於或等於 $0$，所以頂點式 $y=a(x-h)^{2}+k$ 的最大／最小值一看就知：\n\n{{math:0}}\n{{math:1}}\n\n當 $a>0$，$a(x-h)^{2}\\ge0$，$y$ 最小是 $k$；當 $a<0$，$a(x-h)^{2}\\le0$，$y$ 最大是 $k$。兩者都在 $x=h$（頂點）取到。\n應用題（面積最大、最高點）問的就是這個 $k$。"
+   },
+   "math": [
+    "a>0:\\ \\text{minimum value}=k\\ \\text{at }x=h",
+    "a<0:\\ \\text{maximum value}=k\\ \\text{at }x=h"
+   ],
+   "vocab": [
+    {
+     "en": "maximum value",
+     "zh": "最大值"
+    },
+    {
+     "en": "minimum value",
+     "zh": "最小值"
+    },
+    {
+     "en": "vertex",
+     "zh": "頂點"
+    }
+   ],
+   "warn": {
+    "zh": "最大值／最小值是 $k$（頂點的 $y$ 座標），不是 $h$。開口向上（$a>0$）只有最小值，開口向下（$a<0$）只有最大值 —— 兩者不會同時出現。"
+   }
   }
  ]
 }

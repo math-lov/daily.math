@@ -600,6 +600,113 @@
      "zh": "由此／證明（要用上一小題的結果）"
     }
    ]
+  },
+  {
+   "id": "ws06",
+   "stage": 1,
+   "unit": 2,
+   "subtopic": "functions-and-graphs",
+   "source": "EPH All-Round L5 · Worksheet 6",
+   "name": {
+    "zh": "函數與圖像",
+    "en": "Functions and Graphs"
+   },
+   "intro": {
+    "zh": "這一課把「函數」與「二次函數圖像」補回來：① 函數記號與求值（$f(-2)$、$f(2x+1)$）；② 二次函數圖像的特徵（開口方向、$y$ 截距、$x$ 截距、對稱軸、頂點）；③ 配方法與最大最小值。\nDSE 幾乎年年考：Paper 2 愛考「函數求值」與「由圖判斷符號」，Paper 1 則常出「用配方法求頂點」與「面積最大」的應用題。\n這一課分兩節：第一節「函數記號與二次函數圖像」先看懂圖；第二節「配方法、頂點與最大最小值」再把它算出來。"
+   },
+   "lessons": [
+    {
+     "id": "ws06-1",
+     "title": {
+      "zh": "函數記號與二次函數圖像",
+      "en": "Function Notation & Graphs of Quadratic Functions"
+     },
+     "conceptCards": [
+      "ws06-c1",
+      "ws06-c2",
+      "ws06-c3",
+      "ws06-c4"
+     ],
+     "longQuestionIds": [
+      "eph-ws06-ex01",
+      "eph-ws06-ex02"
+     ],
+     "mcPages": [
+      [
+       "eph-ws06-w01",
+       "eph-ws06-w02",
+       "eph-ws06-w03"
+      ],
+      [
+       "eph-ws06-q01",
+       "eph-ws06-q02",
+       "eph-ws06-q03"
+      ],
+      [
+       "eph-ws06-q04",
+       "eph-ws06-q05",
+       "eph-ws06-q06"
+      ]
+     ]
+    },
+    {
+     "id": "ws06-2",
+     "title": {
+      "zh": "配方法、頂點與最大最小值",
+      "en": "Completing the Square, Vertex & Max/Min"
+     },
+     "conceptCards": [
+      "ws06-c5",
+      "ws06-c6"
+     ],
+     "longQuestionIds": [
+      "eph-ws06-ex03",
+      "eph-ws06-ex04"
+     ],
+     "mcPages": [
+      [
+       "eph-ws06-w04",
+       "eph-ws06-q07",
+       "eph-ws06-q08"
+      ],
+      [
+       "eph-ws06-q09",
+       "eph-ws06-q10",
+       "eph-ws06-q11"
+      ],
+      [
+       "eph-ws06-q12",
+       "eph-ws06-q13"
+      ]
+     ]
+    }
+   ],
+   "cmdHints": [
+    {
+     "en": "the graph opens upwards / downwards",
+     "zh": "圖像開口方向（$a>0$ 向上、$a<0$ 向下）"
+    },
+    {
+     "en": "the $y$-intercept of the graph",
+     "zh": "$y$ 截距（令 $x=0$，就是常數項 $c$）"
+    },
+    {
+     "en": "the $x$-intercepts of the graph",
+     "zh": "$x$ 截距（令 $y=0$ 解方程；數目看 $\\Delta$）"
+    },
+    {
+     "en": "the equation of the axis of symmetry",
+     "zh": "對稱軸（$x=h$，也就是頂點的 $x$ 座標）"
+    },
+    {
+     "en": "the coordinates of the vertex",
+     "zh": "頂點 $(h,\\ k)$（配方後括號外那個數就是 $k$）"
+    },
+    {
+     "en": "Using the method of completing the square",
+     "zh": "配方法（把 $ax^{2}+bx+c$ 寫成 $a(x-h)^{2}+k$）"
+    }
+   ]
   }
  ],
  "assessments": []
