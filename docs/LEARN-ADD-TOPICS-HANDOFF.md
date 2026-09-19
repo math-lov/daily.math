@@ -4,10 +4,10 @@
 > ws01–ws04 的內容翻新已完成並上線，結構已獲老師確認「很好很滿意」→
 > **不要改結構，照下面既有的 pattern 加內容就好。**
 >
-> 最後更新：2026-09-19 · 狀態：**WS05（拆兩課 ws05a／ws05b）＋「每課自己的題目字眼」已完成，
-> 全部檢查綠燈**（`learn_check`／`learn_figure_check`／`learn_katex_check`／`learn_smoke_test`／
-> `learn_panel_test`）→ **待發佈（工作區未 commit）**。
-> 對上一次已上線的版本是 `main` ＝ `origin/main`（HEAD `b580877`）。
+> 最後更新：2026-09-19 · 狀態：**已 push 並上線**（`main` ＝ `origin/main`，HEAD `9e31015`）——
+> WS05（`ws05a` 拆成兩節／`ws05b` 複數）＋ 每課自己的題目字眼 ＋ 共軛補強 ＋ 審閱修正 ＋ ws03／ws04 步驟分修訂，
+> 全部檢查綠燈（`learn_check` 0 錯誤 0 警告／`learn_figure_check`／`learn_katex_check`／`learn_smoke_test`／`learn_panel_test`）。
+> 對上一次的版本是 `c4ff68e`（交接文件）與 `b580877`（ws01–ws04 內容）。
 
 ---
 
@@ -39,7 +39,7 @@
 
 * 「示範頁」＝ 學生按分頁列的那一格。**同一節 ≥4 條示範會自動收成一頁**（用「下一條」切換），
   2–3 條仍是一條一頁；所以 ws05b 的 4 條示範在分頁列只佔 1 格，而 ws05a 兩節各有 2／3 條 → 一條一頁。
-* 網址：`https://math-lov.github.io/daily.math/learn/`（現時線上仍是 ws01–ws04 版）
+* 網址：`https://math-lov.github.io/daily.math/learn/`（現時線上已是 ws01–ws05b 版：6 個課題）
 * 每日三題站（`site/`、`data/bank.json`、`data/solutions.json`）**與自學站完全分開**，這一輪沒有動它。
 
 ---
@@ -485,8 +485,8 @@ ok(t06.$$("#pagenav .pg").length === 7,  "ws05b = 1 card page + 1 demo page (4 d
   `learn_smoke_test.js` 的加總斷言已由 ws05a／ws05b 擴展到**全部六課 19 個示範**。
   同時清掉 ws03／ws04 共 28 處 **Markdown `**粗體**`**（前端不支援，會原樣顯示），並加斷言防再犯。
   ⚠️ 只改 `marking`、無增刪步驟 —— ws04-ex02／ex03 的示意圖綁定題解步數（`figures.json` 的 `step`）。
-* **未發佈**：本輪（WS05＋題目字眼）已完成並全綠，但**工作區尚未 commit**；
-  已上線的仍是 `HEAD b580877`（ws01–ws04 版）。
+* **已發佈**：本輪（WS05＋題目字眼＋審閱修正）已 commit 並 push（HEAD `9e31015`，`main` ＝ `origin/main`）；
+  工作區乾淨。GitHub Pages 部署約 1 分鐘，**更新已存在的檔案**受 CDN 快取影響最多 10 分鐘（用無痕／Ctrl+F5）。
 * `learn_check.py` 的 S7 概念卡檢查寫在 `for q in questions:` 迴圈內（會重複執行同一批卡片檢查）。
   **無害、未修**；如要整理請連測試一齊改。
 * `learn/data/*.js` 是生成檔但**屬 git 追蹤**（部署時整份 `learn/` 上 Pages），
