@@ -8,7 +8,7 @@ window.BANK = {
    "nameZh": "",
    "lang": "en",
    "sourcePdf": null,
-   "questions": 9
+   "questions": 12
   },
   {
    "id": "2026-p2",
@@ -79,6 +79,35 @@ window.BANK = {
    }
   },
   {
+   "id": "2025-p2-q03",
+   "code": "25-P2Q03",
+   "no": 3,
+   "paper": "2025-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2025-p2-q03.png"
+   ],
+   "topic": {
+    "unit": 4,
+    "en": "More about Polynomials",
+    "zh": "多項式續論"
+   },
+   "difficulty": 2,
+   "timeSec": 90,
+   "stem": {
+    "text": "If a and b are constants such that (x+8)(x+a)+b \\equiv x^{2}+5a(x+3), then b =",
+    "html": "If a and b are constants such that $(x+8)(x+a)+b \\equiv x^{2}+5a(x+3)$, then $b =$",
+    "latex": "(x+8)(x+a)+b \\equiv x^{2}+5a(x+3)"
+   },
+   "figure": null,
+   "options": {
+    "A": "-14",
+    "B": "-2",
+    "C": "2",
+    "D": "14"
+   }
+  },
+  {
    "id": "2025-p2-q04",
    "code": "25-P2Q04",
    "no": 4,
@@ -105,6 +134,35 @@ window.BANK = {
     "B": "\\frac{3d+4}{7d-12}",
     "C": "\\frac{7d-12}{3d+4}",
     "D": "\\frac{7d+12}{3d-4}"
+   }
+  },
+  {
+   "id": "2025-p2-q05",
+   "code": "25-P2Q05",
+   "no": 5,
+   "paper": "2025-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2025-p2-q05.png"
+   ],
+   "topic": {
+    "unit": 1,
+    "en": "Quadratic Equations in One Unknown",
+    "zh": "一元二次方程"
+   },
+   "difficulty": 2,
+   "timeSec": 90,
+   "stem": {
+    "text": "Let k be a constant. Solve the equation x^{2}+4x=k^{2}-2k-3.",
+    "html": "Let k be a constant. Solve the equation $x^{2}+4x=k^{2}-2k-3$.",
+    "latex": "x^{2}+4x=k^{2}-2k-3"
+   },
+   "figure": null,
+   "options": {
+    "A": "x=k-3 \\text{ or } x=-k-1",
+    "B": "x=k-3 \\text{ or } x=-k+1",
+    "C": "x=k+3 \\text{ or } x=-k-1",
+    "D": "x=k+3 \\text{ or } x=-k+1"
    }
   },
   {
@@ -192,6 +250,35 @@ window.BANK = {
     "B": "-3",
     "C": "3",
     "D": "6"
+   }
+  },
+  {
+   "id": "2025-p2-q09",
+   "code": "25-P2Q09",
+   "no": 9,
+   "paper": "2025-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2025-p2-q09.png"
+   ],
+   "topic": {
+    "unit": 4,
+    "en": "More about Polynomials",
+    "zh": "多項式續論"
+   },
+   "difficulty": 2,
+   "timeSec": 90,
+   "stem": {
+    "text": "Let p(x)=nx^{3}-3nx+36, where n is a constant. If x+3 is a factor of p(x), then p(3)=",
+    "html": "Let $p(x)=nx^{3}-3nx+36$, where n is a constant. If $x+3$ is a factor of p(x), then $p(3)=$",
+    "latex": "p(x)=nx^{3}-3nx+36"
+   },
+   "figure": null,
+   "options": {
+    "A": "-2",
+    "B": "0",
+    "C": "2",
+    "D": "72"
    }
   },
   {

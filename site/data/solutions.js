@@ -158,6 +158,84 @@ window.SOLUTIONS = {
     }
    }
   },
+  "2025-p2-q03": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Expand the left-hand side",
+       "zh": "第 1 步 · 展開左邊"
+      },
+      "math": "(x+8)(x+a)+b = x^{2}+(8+a)x+(8a+b)",
+      "en": "Multiply out the two brackets, then add $b$ to the constant term.",
+      "zh": "先把兩個括號相乘，再把 $b$ 加進常數項。",
+      "highlight": [
+       "x^{2}+(8+a)x+(8a+b)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Compare the x-coefficients",
+       "zh": "第 2 步 · 比較 x 的係數"
+      },
+      "math": "8+a = 5a \\;\\Rightarrow\\; a = 2",
+      "en": "The right-hand side is $x^{2}+5ax+15a$, so the coefficients of $x$ must agree.",
+      "zh": "右邊是 $x^{2}+5ax+15a$，所以 $x$ 的係數要相等。",
+      "highlight": [
+       "a = 2"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Compare the constant terms",
+       "zh": "第 3 步 · 比較常數項"
+      },
+      "math": "8a+b = 15a \\;\\Rightarrow\\; b = 7a = 14",
+      "en": "Substitute $a=2$: $b=7(2)=14$.",
+      "zh": "代入 $a=2$：$b=7(2)=14$。",
+      "highlight": [
+       "b = 7a",
+       "b = 14"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "b = 14",
+      "en": "Option D.",
+      "zh": "選項 D。",
+      "highlight": [
+       "14"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "$2$ — that is the value of $a$. The question asks for $b$, so you must go one step further.",
+      "zh": "$2$ —— 那是 $a$ 的值。題目問的是 $b$，要再走一步。"
+     },
+     {
+      "opt": "B",
+      "en": "$-2$ — $a$ with the sign flipped.",
+      "zh": "$-2$ —— 把 $a$ 的符號弄反。"
+     },
+     {
+      "opt": "A",
+      "en": "$-14$ — a sign slip when moving $8a$ across: $b=15a-8a$ gives $+14$, not $-14$.",
+      "zh": "$-14$ —— 移項時符號出錯：$b=15a-8a$ 得 $+14$，不是 $-14$。"
+     }
+    ],
+    "tip": {
+     "en": "In a polynomial identity, equate the coefficients of each power separately — then re-read which unknown is being asked.",
+     "zh": "多項式恆等式要「同次項係數相等」逐項比較；最後再看清題目問哪個未知數。"
+    }
+   }
+  },
   "2025-p2-q04": {
    "answer": "A",
    "verify": "checked",
@@ -232,6 +310,96 @@ window.SOLUTIONS = {
     "tip": {
      "en": "To change the subject: expand, gather every term containing the wanted letter, factorise it out, then divide.",
      "zh": "更換主項：展開 → 把含目標字母的項集中 → 抽公因數 → 相除。"
+    }
+   }
+  },
+  "2025-p2-q05": {
+   "answer": "A",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Move everything to one side",
+       "zh": "第 1 步 · 移項整理"
+      },
+      "math": "x^{2} + 4x - (k^{2} - 2k - 3) = 0",
+      "en": "Bring the right-hand side over so the equation is in standard form.",
+      "zh": "把右邊移過來，寫成標準形式。",
+      "highlight": [
+       "-(k^{2}-2k-3)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Complete the square on both parts",
+       "zh": "第 2 步 · 兩邊配方"
+      },
+      "math": "x^{2}+4x+4 = k^{2}-2k+1 \\;\\Rightarrow\\; (x+2)^{2} = (k-1)^{2}",
+      "en": "Add $4$ to both sides: the left becomes $(x+2)^{2}$, and the right is a perfect square in $k$.",
+      "zh": "兩邊加 $4$：左邊成 $(x+2)^{2}$，右邊正好是關於 $k$ 的完全平方。",
+      "highlight": [
+       "(x+2)^{2} = (k-1)^{2}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Take square roots (both signs!)",
+       "zh": "第 3 步 · 開方（正負都要）"
+      },
+      "math": "x+2 = \\pm(k-1)",
+      "en": "Do not drop the negative root — that is where most of the marks are lost.",
+      "zh": "千萬不要漏掉負根——這是最常見的失分位。",
+      "highlight": [
+       "\\pm"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 4 · Solve the two cases",
+       "zh": "第 4 步 · 分兩個情況解"
+      },
+      "math": "x = k-3 \\quad \\text{or} \\quad x = -k-1",
+      "en": "Positive case: $x=k-1-2=k-3$. Negative case: $x=-(k-1)-2=-k-1$.",
+      "zh": "取正：$x=k-1-2=k-3$；取負：$x=-(k-1)-2=-k-1$。",
+      "highlight": [
+       "x = k-3",
+       "x = -k-1"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "x=k-3 \\;\\text{or}\\; x=-k-1",
+      "en": "Option A.",
+      "zh": "選項 A。",
+      "highlight": [
+       "x=k-3"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "en": "$x=-k+1$ — the sign of the constant was flipped when expanding $-(k-1)$.",
+      "zh": "$x=-k+1$ —— 展開 $-(k-1)$ 時符號寫反。"
+     },
+     {
+      "opt": "C",
+      "en": "$x=k+3$ — a sign slip on the $-2$ after taking the positive root.",
+      "zh": "$x=k+3$ —— 取正根後 $-2$ 的符號出錯。"
+     },
+     {
+      "opt": "D",
+      "en": "$x=k+3$ or $x=-k+1$ — both sign errors at once.",
+      "zh": "$x=k+3$ 或 $x=-k+1$ —— 兩個符號錯誤同時出現。"
+     }
+    ],
+    "tip": {
+     "en": "$x^{2}+bx=(\\text{something})^{2}$ is solved fastest by completing the square — and always keep $\\pm$.",
+     "zh": "見到 $x^{2}+bx=(\\text{某式})^{2}$，配方最快——而且一定要保留 $\\pm$。"
     }
    }
   },
@@ -451,6 +619,83 @@ window.SOLUTIONS = {
     "tip": {
      "en": "For $f(a)+f(-a)$ with an even power and a linear term, the linear parts partly cancel — substitute carefully first, simplify second.",
      "zh": "遇到 $f(a)+f(-a)$（含偶次方與一次項），一次項通常會部分抵消——先老實代入，再化簡。"
+    }
+   }
+  },
+  "2025-p2-q09": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Use the factor theorem",
+       "zh": "第 1 步 · 用因式定理"
+      },
+      "math": "p(-3) = n(-3)^{3} - 3n(-3) + 36 = 0",
+      "en": "$x+3$ is a factor, so $p(-3)=0$.",
+      "zh": "$x+3$ 是因式，所以 $p(-3)=0$。",
+      "highlight": [
+       "p(-3) = 0"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Find n",
+       "zh": "第 2 步 · 求 n"
+      },
+      "math": "-27n + 9n + 36 = 0 \\;\\Rightarrow\\; -18n = -36 \\;\\Rightarrow\\; n = 2",
+      "en": "Collect the $n$ terms.",
+      "zh": "合併 $n$ 的項。",
+      "highlight": [
+       "n = 2"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Evaluate p(3)",
+       "zh": "第 3 步 · 計算 $p(3)$"
+      },
+      "math": "p(3) = 2(27) - 3(2)(3) + 36 = 54 - 18 + 36 = 72",
+      "en": "Substitute $n=2$ and $x=3$.",
+      "zh": "代入 $n=2$、$x=3$。",
+      "highlight": [
+       "72"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "p(3) = 72",
+      "en": "Option D.",
+      "zh": "選項 D。",
+      "highlight": [
+       "72"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "$2$ — that is the value of $n$, not of $p(3)$.",
+      "zh": "$2$ —— 那是 $n$ 的值，不是 $p(3)$。"
+     },
+     {
+      "opt": "B",
+      "en": "$0$ — that is $p(-3)$, the factor condition. The question asks for $p(3)$.",
+      "zh": "$0$ —— 那是因式條件 $p(-3)$，題目問的是 $p(3)$。"
+     },
+     {
+      "opt": "A",
+      "en": "$-2$ — $n$ with the sign flipped ($-18n=-36$ gives $n=+2$).",
+      "zh": "$-2$ —— $n$ 的符號弄反（$-18n=-36$ 得 $n=+2$）。"
+     }
+    ],
+    "tip": {
+     "en": "The factor theorem gives an equation for the unknown coefficient; check what the question actually asks for afterwards.",
+     "zh": "因式定理只是拿來求未知係數的方程；求完之後要看清題目問的究竟是什麼。"
     }
    }
   },

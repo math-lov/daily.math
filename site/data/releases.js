@@ -1,7 +1,7 @@
 // 自動生成，請勿手改（來源：data/；重新生成：python tools/make_site_data.py）
 window.RELEASES = {
  "version": 1,
- "asOf": "2026-09-18",
+ "asOf": "2026-09-19",
  "releases": [
   {
    "date": "2026-09-16",
@@ -42,6 +42,20 @@ window.RELEASES = {
     "2025-p2-q02",
     "2025-p2-q07",
     "2025-p2-q12"
+   ],
+   "status": "published"
+  },
+  {
+   "date": "2026-09-19",
+   "batch": 4,
+   "title": {
+    "en": "Equations & polynomials",
+    "zh": "方程與多項式"
+   },
+   "ids": [
+    "2025-p2-q05",
+    "2025-p2-q03",
+    "2025-p2-q09"
    ],
    "status": "published"
   }
