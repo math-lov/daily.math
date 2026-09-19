@@ -264,7 +264,9 @@ ok(t04.$$("#pagenav .pg").length === 10, "ws04 = 1 card page + 3 demos + 6 MC pa
 | 常駐「題目字眼」提示 | `.cmd-hints`（app.js `appendCommandHints`） | 每頁最頂：Factorize completely／Hence／Show that／Write down |
 | 完成一頁的微成就 | `#page-done`（`refreshPageDone`） | 完成該頁 → 「✓ 這一頁 3 題完成了　本課完成 X%」 |
 | 答錯的重新框架 | `.trap-head`、`.answer-line.miss` | 「差一點 —— 掉進了出卷人的陷阱」＋仍然顯示正確答案 |
-| 心理安全卡 | `.safety-note`（index.html） | 「這裡沒有老師打分，也沒有排名…」 |
+| 心理安全卡 | `.safety-note`（index.html） | 「這裡沒有老師打分，也沒有排名…」＋通往 `start.html` 的按鈕 |
+| 前言／使用指南 | `learn/start.html`（純靜態，不載入 app.js） | 顏色框（`.pre-block` / `.pre-ok` / `.pre-go` / `.pre-help`）＋編號徽章 `.pre-step`；含可複製的 AI 提問範本（`#prompt-text`、`#copy-prompt`）。**不要**把它做成學習卡（會干擾進度計算） |
+| 練習頁求助連結 | `.help-link`（app.js） | 每個練習頁底部連去 `start.html` |
 | 弱點升級庫 | `wrong.html` | **前稱「錯題本」**，全站已改名 |
 | 多節課題分節標籤 | `.pagenav .pg-lesson` | 自動插入「第 N 節」；題目列顯示「第 N 節 · 第 X / Y 頁」 |
 | ⚠️「完成」標記 | app.js `navPageBtn()` | **一定要用 `.pg` 清單索引**，不可用 `nav.children[i]`（分節標籤會令索引錯位） |

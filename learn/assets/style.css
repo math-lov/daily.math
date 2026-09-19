@@ -313,6 +313,49 @@ body {
   background: #F0FFF4; border: 1px solid #C6F6D5; font-size: 14px; color: #22543D;
 }
 .safety-note b { color: var(--ok); }
+.safety-note .pre-actions { margin-top: 10px; }
+
+/* ── 「開始之前」前言頁（顏色框＋編號徽章）────────────────────────────── */
+.pre-hero { margin: 0 0 14px; }
+.pre-hero h1 { margin: 0 0 8px; font-size: 22px; line-height: 1.35; }
+.pre-hero p { margin: 0; font-size: 15px; }
+.pre-block {
+  border-radius: var(--radius-sm); padding: 14px 16px; margin: 0 0 12px;
+  border-left: 5px solid var(--primary); background: #EBF8FF; font-size: 15px;
+}
+.pre-block h2 { margin: 0 0 8px; font-size: 17px; color: var(--primary-dark); }
+.pre-block p { margin: 0 0 8px; }
+.pre-block p:last-child { margin-bottom: 0; }
+.pre-block ul { margin: 8px 0 0; padding-left: 20px; }
+.pre-block li { margin: 5px 0; }
+.pre-block.pre-ok { border-left-color: var(--ok); background: var(--ok-soft); }
+.pre-block.pre-ok h2 { color: #22543D; }
+.pre-block.pre-help { border-left-color: #DD6B20; background: #FFFAF0; }
+.pre-block.pre-help h2 { color: #7B341E; }
+.pre-step { display: flex; gap: 10px; margin: 12px 0 0; }
+.pre-step .num {
+  flex: none; width: 26px; height: 26px; border-radius: 999px; display: grid; place-items: center;
+  background: #DD6B20; color: #fff; font-weight: 700; font-size: 14px;
+}
+.pre-step .num.num-go { background: var(--primary); }
+.pre-step .body { flex: 1; min-width: 0; }
+.pre-step .body > b { display: block; margin-bottom: 2px; }
+.pre-step .muted.small { display: block; margin-top: 3px; }
+.prompt-box {
+  white-space: pre-wrap; word-break: break-word; font: inherit; font-size: 14px;
+  background: #fff; border: 1px dashed #F6AD55; border-radius: var(--radius-sm);
+  padding: 10px 12px; margin: 8px 0 0; color: var(--text);
+}
+.quote-box {
+  background: #fff; border-left: 3px solid #F6AD55; border-radius: var(--radius-sm);
+  padding: 8px 10px; margin: 6px 0; font-size: 14px;
+}
+.pre-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.pre-actions.center { justify-content: center; margin: 6px 0 4px; }
+
+/* 練習頁底部的求助連結（在真正卡住時才出現，不干擾作答） */
+.help-link { margin: 16px 0 4px; font-size: 13px; color: var(--muted); text-align: center; }
+.help-link a { color: var(--primary); font-weight: 600; }
 
 .demo-try {
   display: flex; gap: 10px; align-items: center; flex-wrap: wrap;

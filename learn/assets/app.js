@@ -418,6 +418,11 @@
     if (p.kind === "cards") renderCards(body, p, pages, cur, tid);
     else if (p.kind === "long") renderLong(body, p, pages, cur, tid);
     else renderMcPage(body, p, pages, cur, tid, focusQid);
+
+    // 卡住時才需要的東西：放在頁尾，不干擾作答
+    var help = el("div", "help-link");
+    help.innerHTML = '卡住了？看看<a href="start.html">「開始之前」的三步求助法</a>。';
+    body.appendChild(help);
   }
 
   /* ── 概念卡：正文與公式交錯 ─────────────────────────────────────────── */

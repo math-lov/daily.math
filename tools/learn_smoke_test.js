@@ -66,6 +66,30 @@ const ring = home.$(".topic-btn .ring");
 ok(!!ring && /%$/.test(ring.getAttribute("data-label")), "topic shows a progress ring with a percentage");
 ok(/練習 \d+ 題/.test(home.$(".topic-btn .t-meta").textContent), "topic shows its item counts");
 
+/* ── 1b. 開始之前（前言頁）───────────────────────────────────────────── */
+console.log("\n— 開始之前（前言）—");
+const pre = boot("start.html", "");
+ok(!!pre.$(".pre-hero h1"), "the preface page has a hero heading");
+ok(pre.$$(".pre-block").length >= 4,
+   "the preface is split into colour blocks (got " + pre.$$(".pre-block").length + ")");
+ok(!!pre.$(".pre-ok") && /沒有分數排名/.test(pre.$(".pre-ok").textContent),
+   "the 'no pressure' block states there is no ranking");
+ok(pre.$$(".pre-go .pre-step").length === 3 && pre.$$(".pre-go .num").length === 3,
+   "the three study habits are numbered steps");
+ok(pre.$$(".pre-help .pre-step").length === 3, "the three-step help flow is listed");
+ok(/繁體中文/.test(pre.$("#prompt-text").textContent) && /DSE/.test(pre.$("#prompt-text").textContent),
+   "the AI prompt template is ready to copy");
+ok(pre.$("#prompt-text").textContent.indexOf("$") < 0,
+   "the prompt template has no raw $ (this page does not load KaTeX)");
+ok(!!pre.$("#copy-prompt"), "there is a copy button for the AI prompt");
+ok(pre.$$('.pre-help a[href="wrong.html"]').length >= 1,
+   "the help flow links to the weak-point library");
+ok(!!pre.$('.pre-actions a[href="index.html"]'), "the page ends with a 'start learning' button");
+// 入口：首頁要有連結，練習頁底部也要有（卡住時才找得到）
+ok(!!home.$('.safety-note a[href="start.html"]'), "the home page links to the preface");
+ok(!!boot("topic.html", "?t=ws01&p=0").$('.help-link a[href="start.html"]'),
+   "topic pages link back to the three-step help flow");
+
 /* ── 2. 課題頁：頁數導覽列 ───────────────────────────────────────────── */
 console.log("\n— 課題頁：頁數導覽列 —");
 const t0 = boot("topic.html", "?t=ws01&p=0");
