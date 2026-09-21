@@ -156,6 +156,32 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
      "the command words are sent as en + zh pairs (" +
      JSON.stringify(tPayload.patch.cmdHints && tPayload.patch.cmdHints[0]) + ")");
 
+  // 6) 長題示範的「常見錯誤」：長題沒有選項 → 用 label（不可用 MC 的 opt）
+  //    儲存時若誤用 opt，會變成 "UNDEFINED" 而把標籤毀掉
+  const sel = $("#topicSel");
+  sel.value = "ws06";
+  sel.dispatchEvent(new dom.window.Event("change"));
+  await sleep(500);
+  const exBtn = $$("#list [data-act=q]").find((b) => b.getAttribute("data-id") === "eph-ws06-ex01");
+  ok(!!exBtn, "the ws06 demo shows up in the list after switching topics");
+  exBtn.click();
+  await sleep(200);
+  const trapField = $("#f_traps");
+  ok(!!trapField, "long-question form has the traps field");
+  ok(/^漏平方係數\|/.test(trapField.value),
+     "long-question traps are prefilled as 'label | explanation' (" + trapField.value.split("\n")[0] + ")");
+  ok(!/undefined/i.test(trapField.value), "no 'undefined' leaks into the traps field");
+  const beforeLong = posted.length;
+  $$("button[data-act=saveQ]")[0].click();
+  await sleep(300);
+  const longPosts = posted.slice(beforeLong).map((p) => JSON.parse(p.body));
+  const solPost = longPosts.filter((p) => p.kind === "solution")[0];
+  ok(!!solPost, "saving a long question POSTs its solution");
+  ok(!!solPost && Array.isArray(solPost.patch.traps) &&
+     solPost.patch.traps[0].label === "漏平方係數" && solPost.patch.traps[0].opt === undefined,
+     "long-question traps are saved with 'label', not the MC 'opt' (" +
+     JSON.stringify(solPost && solPost.patch.traps && solPost.patch.traps[0]) + ")");
+
   console.log("\n" + (fails ? fails + " test(s) FAILED" : "all editor tests passed"));
   process.exit(fails ? 1 : 0);
 })().catch((e) => {

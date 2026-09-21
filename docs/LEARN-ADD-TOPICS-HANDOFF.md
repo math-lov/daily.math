@@ -460,6 +460,9 @@ ok(t07.$$("#pagenav .pg").length === 12, "ws06 = two lessons (1+2+3 and 1+2+3 pa
 * `tools/learn_panel.py` 的英文生字輸入格式＝ **`english = 中文`**（等號分隔）——**不要改回空格**。
 * `tools/learn_panel.py` **課題編輯器會一併儲存 `cmdHints`**（`apply_edit` kind `topic`）；
   驗證錯誤訊息是中文、直接講清楚要改什麼（「至少 3 組是這一課獨有」這類要求寫在欄位標籤裡）。
+* `tools/learn_panel.py` 的題目編輯器：`traps` 按題型分流 —— **MC 用 `opt`**（指向選項、不可指正確答案）、
+  **長題用 `label`**（自由標籤，例：`漏中間項`）。儲存時若把長題的 label 當成 `opt`，會寫成 `"UNDEFINED"` 把標籤毀掉；
+  `learn_editor_test.js` 已加 6 條斷言把關（欄位預填格式、無 `undefined`、POST 的是 `label`）。
 
 ---
 
