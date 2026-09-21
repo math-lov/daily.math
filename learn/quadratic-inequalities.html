@@ -413,15 +413,15 @@
 
             <!-- Root Input Fields -->
             <div id="quizRootsInputContainer" class="p-4 bg-slate-950 rounded-xl border border-slate-800 space-y-3">
-              <span class="text-xs text-slate-400 block">Enter boundary values ($x_1 < x_2$):</span>
+              <span class="text-xs text-slate-400 block">Enter boundary values ($x_1 < x_2$): <span class="text-slate-500 italic">(if necessary, correct your answer to 2 sig. figs.)</span></span>
               <div class="grid grid-cols-2 gap-4">
                 <div>
                   <label class="text-xs text-slate-400">Root $x_1$ (smaller):</label>
-                  <input type="number" id="quizValX1" step="0.1" placeholder="e.g. -1" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-sm text-blue-300 font-mono mt-1 focus:border-blue-500 outline-none">
+                  <input type="number" id="quizValX1" step="any" placeholder="e.g. -1" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-sm text-blue-300 font-mono mt-1 focus:border-blue-500 outline-none">
                 </div>
                 <div>
                   <label class="text-xs text-slate-400">Root $x_2$ (larger):</label>
-                  <input type="number" id="quizValX2" step="0.1" placeholder="e.g. 4" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-sm text-blue-300 font-mono mt-1 focus:border-blue-500 outline-none">
+                  <input type="number" id="quizValX2" step="any" placeholder="e.g. 4" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-sm text-blue-300 font-mono mt-1 focus:border-blue-500 outline-none">
                 </div>
               </div>
             </div>
@@ -1212,11 +1212,23 @@
         op = ops[Math.floor(Math.random() * ops.length)];
       }
 
+      let quizSol = solveQuadraticInequality(a, b, c, op);
+      // Δ = 0 touches the axis, so "x ≠ r" / "x = r" appear for two of the four
+      // operators — neither is one of the six answer structures.  Switch to the
+      // operator that yields a structure the quiz can mark (a > 0: ≥ all real /
+      // < no solution;  a < 0: ≤ all real / > no solution).
+      if (intervalPatternOf(quizSol) === null) {
+        op = (a > 0)
+          ? (op === 'gt' ? 'lt' : 'gte')
+          : (op === 'gte' ? 'lte' : 'gt');
+        quizSol = solveQuadraticInequality(a, b, c, op);
+      }
+
       quizState.a = a;
       quizState.b = b;
       quizState.c = c;
       quizState.op = op;
-      quizState.correctSolution = solveQuadraticInequality(a, b, c, op);
+      quizState.correctSolution = quizSol;
 
       const quadTex = formatQuadraticTeX(a, b, c);
       const opTex = getOpTeX(op);
@@ -1237,21 +1249,28 @@
       renderMath([qDisplay]);
     }
 
+    /* Canonical answer structure implied by the graph.
+       union vs single comes from which intervals actually satisfy the
+       inequality (independent of the sign of a); open vs closed comes from
+       whether the operator is strict.  Keying this off the operator alone is
+       wrong when a < 0 (downward parabola): e.g. -x^2 - 3x - 2 > 0 → -2 < x < -1. */
+    function intervalPatternOf(sol) {
+      const strictOp = (sol.op === 'gt' || sol.op === 'lt');
+      if (sol.solutionType === 'interval_union') return strictOp ? 'union_open' : 'union_closed';
+      if (sol.solutionType === 'interval_single') return strictOp ? 'single_open' : 'single_closed';
+      if (sol.solutionType === 'all_real') return 'all_real';
+      if (sol.solutionType === 'empty') return 'empty';
+      return null; // Δ = 0 with > / ≤ gives "x ≠ r" / "x = r": no matching option
+    }
+
     function checkQuizAnswer() {
       const selectedPattern = document.querySelector('input[name="quizPattern"]:checked').value;
       const valX1 = parseFloat(document.getElementById('quizValX1').value);
       const valX2 = parseFloat(document.getElementById('quizValX2').value);
 
       const sol = quizState.correctSolution;
-      let isPatternCorrect = false;
+      const isPatternCorrect = (selectedPattern === intervalPatternOf(sol));
       let areRootsCorrect = false;
-
-      if (selectedPattern === 'union_open' && sol.solutionType === 'interval_union' && (sol.op === 'gt')) isPatternCorrect = true;
-      if (selectedPattern === 'union_closed' && sol.solutionType === 'interval_union' && (sol.op === 'gte')) isPatternCorrect = true;
-      if (selectedPattern === 'single_open' && sol.solutionType === 'interval_single' && (sol.op === 'lt')) isPatternCorrect = true;
-      if (selectedPattern === 'single_closed' && sol.solutionType === 'interval_single' && (sol.op === 'lte')) isPatternCorrect = true;
-      if (selectedPattern === 'all_real' && sol.solutionType === 'all_real') isPatternCorrect = true;
-      if (selectedPattern === 'empty' && sol.solutionType === 'empty') isPatternCorrect = true;
 
       if (sol.roots.length === 2) {
         const [r1, r2] = sol.roots;
