@@ -55,6 +55,38 @@ function boot(page, search, storage) {
   };
 }
 
+/* 獨立頁（二次不等式探索器）：自己一個 inline <script>，app.js 不管它 →
+   一樣手動執行；頁面初始化掛在 window 'load'，而 jsdom 交還時文件已解析完，
+   故補派發一次 load。 */
+function bootQuiz() {
+  const file = "quadratic-inequalities.html";
+  const html = fs.readFileSync(path.join(learn, file), "utf8");
+  const dom = new JSDOM(html, {
+    url: "https://example.test/learn/" + file,
+    pretendToBeVisual: true, runScripts: "outside-only",
+  });
+  const ctx = dom.getInternalVMContext();
+  // jsdom 沒有 canvas：給一個「什麼都收、什麼都回函數」的假 2D context，
+  // resizeCanvas() 才不會因為 ctx 是 null 而拋錯（繪圖不影響判分）
+  const fake2d = new Proxy({}, {
+    get: (t, k) => (k === "canvas" ? null : () => fake2d),
+    set: () => true,
+  });
+  ctx.window.HTMLCanvasElement.prototype.getContext = () => fake2d;
+  vm.runInContext(katexJs, ctx, { filename: "katex.min.js" });
+  vm.runInContext(autoRenderJs, ctx, { filename: "auto-render.min.js" });
+  const doc = dom.window.document;
+  Array.prototype.slice.call(doc.querySelectorAll("script:not([src])"))
+    .forEach((s, i) => vm.runInContext(s.textContent, ctx, { filename: file + "#inline" + i }));
+  dom.window.dispatchEvent(new dom.window.Event("load"));
+  return {
+    dom, ctx, doc,
+    $: (s) => doc.querySelector(s),
+    $$: (s) => Array.prototype.slice.call(doc.querySelectorAll(s)),
+    run: (code) => vm.runInContext(code, ctx),
+  };
+}
+
 /* ── 1. 首頁 ─────────────────────────────────────────────────────────── */
 console.log("\n— 首頁：課題按鈕牆 —");
 const home = boot("index.html", "");
@@ -964,6 +996,60 @@ ok(retryPage.store().mc[retryQid].correct === true, "correct retry is recorded (
 console.log("\n— 弱點升級庫（乾淨）—");
 const w2 = boot("wrong.html", "", JSON.stringify({ mc: {}, long: {}, cards: {} }));
 ok(/空的/.test(w2.$("#wrong-body").textContent), "empty state explains there is nothing to review");
+
+/* ── 8. 二次不等式探索器（獨立頁，不在課題流程內）───────────────────── */
+console.log("\n— 二次不等式探索器（獨立頁）—");
+const tQuiz = bootQuiz();
+ok(!!tQuiz.$("#quizQuestionMath") && !!tQuiz.$("#quizValX1") && !!tQuiz.$("#quizValX2"),
+   "the explorer page boots with a question and two answer boxes");
+ok(/3 sig\. figs\./.test(tQuiz.$("#quizRootsInputContainer").textContent),
+   "the answer boxes spell out the 3 sig. figs. allowance for irrational roots");
+ok(tQuiz.$("#quizValX1").getAttribute("step") === "any" &&
+   tQuiz.$("#quizValX2").getAttribute("step") === "any",
+   "the answer boxes accept any decimal (a 3 s.f. value like 0.382 is not on a 0.1 grid)");
+
+// 回歸（老師回報）：-x^2 - 3x - 2 > 0 的解是 -2 < x < -1。
+// a < 0（開口向下）時「> 0」的解本身就是單一有界區間，舊寫法要求 single_open 必須
+// op === 'lt'，所以這一類題目即使答對也永遠被判錯。
+tQuiz.run("quizState.correctSolution = solveQuadraticInequality(-1, -3, -2, 'gt');");
+ok(tQuiz.run("intervalPatternOf(quizState.correctSolution)") === "single_open",
+   "a downward parabola with > gives the single-bounded-interval structure");
+ok(tQuiz.run("quizState.correctSolution.inequalityStr") === "-2 < x < -1",
+   "its solution reads -2 < x < -1 (" + tQuiz.run("quizState.correctSolution.inequalityStr") + ")");
+tQuiz.$('input[name="quizPattern"][value="single_open"]').click();
+tQuiz.$("#quizValX1").value = "-2";
+tQuiz.$("#quizValX2").value = "-1";
+tQuiz.run("checkQuizAnswer()");
+ok(/Excellent/.test(tQuiz.$("#feedbackTitle").textContent),
+   "answering -2 < x < -1 is accepted (" + tQuiz.$("#feedbackTitle").textContent + ")");
+ok(tQuiz.$("#quizCorrectInequality").textContent.replace(/\s+/g, "").length > 0,
+   "the correct-solution line is filled in after checking");
+// 反向：結構錯就要照樣判錯（修正不可以變成「什麼都對」）
+tQuiz.$('input[name="quizPattern"][value="union_open"]').click();
+tQuiz.run("checkQuizAnswer()");
+ok(/Not quite right/.test(tQuiz.$("#feedbackTitle").textContent),
+   "the opposite structure (two outer rays) is still rejected");
+
+// 生成器的退化題：Δ = 0（重根）時「> 」的解是 x ≠ r、「≤」的解是 x = r，
+// 六個答案結構都表達不到 → 學生怎樣答都錯、也見不到正確答案。生成器要改寫成等價可答題。
+const randOrig = tQuiz.ctx.window.Math.random;
+const poor = [];
+let delta0 = 0;
+["easy", "medium", "hard"].forEach((d) => {
+  for (let i = 0; i < 10; i++) {
+    const v = i / 10;
+    tQuiz.ctx.window.Math.random = () => v;      // 固定隨機值 → 可重現地逼出重根個案
+    tQuiz.run("generateQuiz('" + d + "')");
+    if (Math.abs(tQuiz.run("quizState.correctSolution.delta")) < 1e-7) delta0++;
+    if (!tQuiz.run("intervalPatternOf(quizState.correctSolution)")) poor.push(d + "@" + v);
+  }
+});
+tQuiz.ctx.window.Math.random = randOrig;
+ok(delta0 >= 1,
+   "the sweep really produces repeated-root questions, so the guard is exercised (" + delta0 + ")");
+ok(poor.length === 0,
+   "every generated question has a structure the six answer options can express" +
+   (poor.length ? " (" + poor.join(", ") + ")" : ""));
 
 console.log("\n" + (fails ? fails + " test(s) FAILED" : "all learn smoke tests passed"));
 process.exit(fails ? 1 : 0);
