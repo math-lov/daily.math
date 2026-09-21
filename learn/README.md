@@ -17,6 +17,7 @@
 | `index.html` | 首頁：Stage 分組的課題按鈕牆、進度環、「繼續學習」、弱點升級庫入口、清除進度；另有「無打分、無排名」的安心提示＋前往 `start.html` 的按鈕 |
 | `topic.html?t=<topicId>&p=<頁碼>` | 課題頁：**頁數導覽列**（學習／示範／練習；**多節課題會插入「第 N 節」分隔**，避免兩個「學習」分不清）＋常駐「← 回到主目錄」＋頁頂「題目字眼」提示（Factorize completely／Hence…）；題目列會顯示「第 N 節 · 第 X / Y 頁」 |
 | `wrong.html` | 弱點升級庫（前稱錯題本）：只收答錯的 MC，答對就移出 |
+| `quadratic-inequalities.html` | **二次不等式探索器**（獨立互動頁，不載入 app.js）：拖係數 slider 即時看拋物線、解集陰影、x 軸解集與五步詳解；另一分頁是隨機生成的練習（自評分，不寫入進度）。所有資源自托管（`vendor/tailwind`、`vendor/fontawesome`、`vendor/katex`） |
 
 每課固定節奏：**① 概念卡（2–6 張）→ ② 長題目示範 → ③ MC 每頁 3 題**。
 頁面切換用 query param（不用 hash），所有資源路徑都是**相對路徑**（因為掛在 `/learn/` 子目錄）。
@@ -149,3 +150,8 @@ git add -A; git commit -m "Learn: add WS02"; git push  # 5. 發佈（GitHub Page
 * 一堂課的概念卡如果太多（≥7 張）或 MC 太多（≥18 題），要拆成兩節（例：ws01-1 基礎／ws01-2 進階），
   避免弱生一次過面對太多內容而放棄。
 * KaTeX 為自托管（`learn/vendor/katex`），**不要改用 CDN**（學校網絡／離線要能用）。
+* 獨立互動頁（`quadratic-inequalities.html`）的所有前端資源同樣要自托管：
+  `vendor/tailwind/tailwind.min.js`（Tailwind Play CDN 的離線副本）、
+  `vendor/fontawesome/all.min.css` ＋ `webfonts/fa-solid-900.*`。
+  **新增這類頁面時，`learn/*.html` 內不可以再出現任何 `https://` 的 `<script src>`／`<link href>`。**
+  數學一律用站內 KaTeX（`renderMathInElement`，定界符 `$$…$$`、`\[…\]`、`\(…\)`、`$…$`），不要用 MathJax。

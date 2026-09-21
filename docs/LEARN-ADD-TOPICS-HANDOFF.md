@@ -479,6 +479,14 @@ ok(t07.$$("#pagenav .pg").length === 12, "ws06 = two lessons (1+2+3 and 1+2+3 pa
   （恆等變形用數值等價核對；EX4 的 $A=24x-\frac{3}{2}x^{2}$、最大值 $96$ 亦重新推導過）。
   註：`unit 2`（Functions and Graphs）本身在 `COORD_NATIVE_UNITS` 之內，所以 R2「不用坐標當主解法」不適用，
   `learn_check` 不會因「coordinates of the vertex」而報錯。
+* **新增獨立互動頁 `learn/quadratic-inequalities.html`（二次不等式探索器）**：老師提供的單頁工具
+  （Canvas 畫拋物線＋解集陰影＋五步詳解＋隨機練習）。
+  原檔依賴 **3 個 CDN**（Tailwind／FontAwesome／MathJax）→ 已全部改為自托管
+  （`learn/vendor/tailwind/`、`learn/vendor/fontawesome/`、站內 KaTeX），否則校網一擋 CDN 就會整頁走樣（`learn/README.md` §8）。
+  順手修好原檔兩個問題：① 步驟 4「區間測試表」的區間名（例如 `(-\infty, 2)`）是**裸 LaTeX、沒有定界符** →
+  永遠不會被渲染；已包上 `$…$`。② MathJax 是 CDN ＋ `async`，首次載入時 `updateAll()` 可能早過它 →
+  初次進站可能完全冇數學；改用站內 KaTeX 後同步即時渲染。
+  驗證：用 jsdom ＋ 真 KaTeX 跑一次（canvas 用假 context），26 項斷言全過（含拖 slider、換題、答對）。
 * **ws05b 補充過一次**：共軛（最難的一步）由 c3 一句帶過 → 獨立成卡 `ws05b-c4`
   （共軛是甚麼／為甚麼乘共軛有效／$(a+bi)/(c+di)$ 公式／$c^{2}+d^{2}$ 捷徑／完整例題／驗算），
   並加 2 題除法練習 `eph-ws05b-q11`（$\frac{3+2i}{1-i}$）、`-q12`（$\frac{1}{2+i}+\frac{1}{2-i}$，虛部抵消）。
