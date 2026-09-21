@@ -33,3 +33,10 @@ data/ai/_test_*
 # 自學追上站：EPH docx 抽取出的媒體與轉圖（可由 docx → extract_eph.py → wmf_to_png.py 重建）
 data/learn/raw/media/
 data/learn/raw/digest/
+
+# 來源收件匣（唯讀，不進 git；*.docx / *.pdf 已在上方忽略）
+inbox_learn/
+
+# 其他 AI 的輸出／暫存：不進 git。特別注意 learn/ 是**部署目錄**，
+# 放在裡面＝公開可下載（曾經被 git add -A 誤加過）。
+learn/From Other AI/
