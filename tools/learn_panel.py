@@ -419,13 +419,15 @@ def _validate(kind: str, patch: dict, ctx: dict) -> list[str]:
                 errs.append("第 %d 步用坐標／向量（%s）——主解法要在課程內（坐標法請放 alt）"
                             % (i, m2.group(0)))
         for tr in patch.get("traps") or []:
+            # MC 用 opt（要對得上選項）；長題沒有選項，用 label
             opt = tr.get("opt")
+            label = tr.get("label")
             opts = (ctx.get("question") or {}).get("options") or {}
             if opts and opt not in opts:
                 errs.append("干擾選項 %r 不是有效選項" % opt)
             if opt and opt == patch.get("answer"):
                 errs.append("干擾選項 %r 就是正確答案" % opt)
-            check_pairs("干擾選項 " + str(opt), [("zh", tr.get("zh"))])
+            check_pairs("干擾選項 " + str(opt or label), [("zh", tr.get("zh"))])
         check_pairs("技巧", [("tip.zh", (patch.get("tip") or {}).get("zh"))])
     return errs
 
@@ -959,8 +961,11 @@ function editQ(id){
     <textarea id="f_steps" rows="12" style="width:100%;font:inherit;font-size:14px;padding:10px;
       border-radius:8px;border:1px solid #E2E8F0">${esc(stepsToText(q.steps||[]))}</textarea>
     <div class="card" id="pv-f_steps" style="margin:6px 0 0;background:#F7FAFF"></div>`;
-  html += field('干擾選項解說（每行：選項|解說，例：B| $x$ 的符號錯了）', 'f_traps',
-    (q.traps||[]).map(t=>`${t.opt}| ${t.zh}`).join('\\n'), 3);
+  html += field(isMc
+      ? '干擾選項解說（每行：選項|解說，例：B| $x$ 的符號錯了）'
+      : '常見錯誤（每行：標籤|解說，例：漏中間項| 展開 $(x-1)^{2}$ 時漏了 $-2x$。長題沒有選項，所以用標籤）',
+    'f_traps',
+    (q.traps||[]).map(t=>`${isMc ? (t.opt||'') : (t.label||t.opt||'')}| ${t.zh}`).join('\\n'), 3);
   html += field('帶得走的技巧', 'f_tip', (q.tip||{}).zh, 3);
   html += '<button class="primary" data-act="saveQ" data-id="' + esc(id) + '">儲存</button>';
   $('editor').innerHTML = html;
@@ -1034,7 +1039,12 @@ function saveQ(id){
   const steps = textToSteps(val('f_steps'));
   const solution = {
     steps: steps,
-    traps: parsePairs(val('f_traps'),'|').map(p=>({opt:p[0].toUpperCase(), zh:p.slice(1).join('|').trim()})),
+    // MC 的 traps 指向選項（opt）；長題沒有選項，用自由標籤（label）
+    traps: parsePairs(val('f_traps'),'|').map(p=>{
+      const tag = p[0].trim();
+      const zh = p.slice(1).join('|').trim();
+      return isMc ? {opt: tag.toUpperCase(), zh: zh} : {label: tag, zh: zh};
+    }),
     tip: {zh: val('f_tip')}
   };
   (async function(){

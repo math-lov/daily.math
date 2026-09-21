@@ -552,73 +552,61 @@
         "steps": [
           {
             "title": {
-              "en": "Step 1 · Substitute $x=4$",
-              "zh": "第 1 步 · 代入 $x=4$"
+              "en": "Step 1 · Understand the function notation and calculate f(4)",
+              "zh": "第 1 步 · 認識函數代入，先計算 f(4)"
             },
-            "math": "f(4) = 4^{2} + 7(4) + k = 44 + k",
-            "en": "$16+28=44$.",
-            "zh": "$16+28=44$。",
-            "highlight": [
-              "44 + k"
-            ]
+            "math": "f(4) = (4)^2 + 7(4) + k = 16 + 28 + k = 44 + k",
+            "en": "Substitute x = 4 into every x in the formula. First calculate 4 squared to get 16, then 7 times 4 to get 28. Adding 16 and 28 gives 44, so we get 44 + k.",
+            "zh": "函數符號 $f(4)$ 的意思，就是把算式中所有的 $x$ 都換成數字 $4$。我們先算 $4^2 = 16$，再加上 $7 \\times 4 = 28$。把常數加起來：$16 + 28 = 44$，因此 $f(4) = 44 + k$。注意未知的 $k$ 要原封不動保留。"
           },
           {
             "title": {
-              "en": "Step 2 · Substitute $x=-4$",
-              "zh": "第 2 步 · 代入 $x=-4$"
+              "en": "Step 2 · Calculate f(-4) with careful attention to negative signs",
+              "zh": "第 2 步 · 小心負號，計算 f(-4)"
             },
-            "math": "f(-4) = (-4)^{2} + 7(-4) + k = -12 + k",
-            "en": "$(-4)^{2}=+16$, and $7(-4)=-28$.",
-            "zh": "$(-4)^{2}=+16$，而 $7(-4)=-28$。",
-            "highlight": [
-              "-12 + k"
-            ]
+            "math": "f(-4) = (-4)^2 + 7(-4) + k = 16 - 28 + k = -12 + k",
+            "en": "Substitute x = -4 with brackets. A negative number squared is positive, so (-4)^2 = 16. However, 7 times -4 is -28. Subtracting 28 from 16 gives -12, so we obtain -12 + k.",
+            "zh": "這是同學最容易出錯的地方。代入負數時，一定要加上括號：$x^2$ 會變成 $(-4)^2$。因為負負得正，$(-4)^2 = +16$；而後面一項是 $7 \\times (-4) = -28$。計算常數：$16 - 28 = -12$，因此 $f(-4) = -12 + k$。"
           },
           {
             "title": {
-              "en": "Step 3 · Add and solve",
-              "zh": "第 3 步 · 相加求解"
+              "en": "Step 3 · Form the equation and collect like terms slowly",
+              "zh": "第 3 步 · 按照題目條件列式並逐步合併同類項"
             },
-            "math": "(44+k) + (-12+k) = 38 \\;\\Rightarrow\\; 2k + 32 = 38",
-            "en": "The two $k$ terms combine to $2k$.",
-            "zh": "兩個 $k$ 合併成 $2k$。",
-            "highlight": [
-              "2k + 32 = 38"
-            ]
+            "math": "(44 + k) + (-12 + k) = 38 \\implies (44 - 12) + (k + k) = 38 \\implies 32 + 2k = 38",
+            "en": "The problem states f(4) + f(-4) = 38. We place the two results side by side. Group the numbers together: 44 - 12 = 32. Group the variables together: k + k = 2k (not k). The equation becomes 32 + 2k = 38.",
+            "zh": "題目的條件是 $f(4) + f(-4) = 38$。我們把剛才算出的兩個結果相加：$(44 + k) + (-12 + k) = 38$。先合併數字部分：$44 - 12 = 32$；再合併字母部分：$k + k = 2k$（很多同學會粗心寫成 $k$，千萬別漏掉）。整條方程化簡成 $32 + 2k = 38$。"
           },
           {
             "title": {
-              "en": "Step 4 · Finish",
-              "zh": "第 4 步 · 得解"
+              "en": "Step 4 · Solve for k step-by-step",
+              "zh": "第 4 步 · 移項並解出 k"
             },
-            "math": "2k = 6 \\;\\Rightarrow\\; k = 3",
-            "en": "Option C.",
-            "zh": "選項 C。",
-            "highlight": [
-              "k = 3"
-            ]
+            "math": "2k = 38 - 32 \\implies 2k = 6 \\implies k = 3",
+            "en": "Move 32 across the equals sign to subtract it from 38, giving 2k = 6. Finally, divide both sides by 2 to get k = 3. This matches Option C.",
+            "zh": "把左邊的 $+32$ 移到右邊變成減法：$2k = 38 - 32$，算出 $2k = 6$。最後兩邊同除以 $2$，得到 $k = 3$。對應答案選項 C。"
           }
         ],
         "traps": [
           {
             "opt": "D",
-            "en": "$6$ — you forgot the two $k$'s add up to $2k$ and solved $k+32=38$.",
-            "zh": "$6$ —— 忘記兩個 $k$ 相加是 $2k$，直接當成 $k+32=38$。"
+            "en": "6 — Missed adding the two k variables together, mistakenly writing k + 32 = 38, which directly gives k = 6.",
+            "zh": "6 —— 同學合併時忘了 $k + k = 2k$，誤寫成 $k + 32 = 38$，結果直接算出 $k = 6$。"
           },
           {
             "opt": "B",
-            "en": "$-3$ — $32$ was subtracted from the wrong side ($32-38=-6$).",
-            "zh": "$-3$ —— $32$ 減錯方向（$32-38=-6$）。"
+            "en": "-3 — Sign error during transposition, mistakenly calculating 32 - 38 = -6, leading to 2k = -6 and k = -3.",
+            "zh": "-3 —— 移項時正負號弄反，把右邊算成 $32 - 38 = -6$，導致解出 $2k = -6$ 及 $k = -3$。"
           },
           {
             "opt": "A",
-            "en": "$-6$ — a sign error on the constant term on top of the $2k$ slip.",
-            "zh": "$-6$ —— 常數項符號與 $2k$ 兩處同時出錯。"
+            "en": "-6 — Made two mistakes at the same time: treated k + k as k, and made a sign slip during transposition.",
+            "zh": "-6 —— 同時犯了兩個失誤：把兩個 $k$ 當作一個，而且移項時正負號又弄錯。"
           }
         ],
         "tip": {
-          "en": "For $f(a)+f(-a)$ with an even power and a linear term, the linear parts partly cancel — substitute carefully first, simplify second.",
-          "zh": "遇到 $f(a)+f(-a)$（含偶次方與一次項），一次項通常會部分抵消——先老實代入，再化簡。"
+          "en": "Always put brackets around negative numbers when substituting into functions! For f(4) and f(-4), the x^2 parts are identical (both 16), while the linear parts +7(4) and +7(-4) cancel each other out completely.",
+          "zh": "函數代入負數時「一定要加括號」！其實觀察式子會發現：$x^2$ 在代入 $4$ 和 $-4$ 時數值完全一樣（都是 $16$），而一次項 $+7(4)$ 與 $+7(-4)$ 剛好一正一負完全抵消。"
         }
       }
     },
@@ -4065,57 +4053,61 @@
         "steps": [
           {
             "title": {
-              "en": "Step 1 · Substitute $x=1+d$",
-              "zh": "第 1 步 · 代入 $x=1+d$"
+              "en": "Step 1 · Substitute the expression x = 1 + d into each bracket",
+              "zh": "第 1 步 · 把整個式子 (1 + d) 當作 x 代入每一項"
             },
-            "math": "f(1+d)=(1+2d)(d-1)+9(1+d)",
-            "en": "Put $x=1+d$ into $f(x)=(x+d)(x-2)+9x$: the first factor becomes $1+d+d=1+2d$, the second $1+d-2=d-1$.",
-            "zh": "把 $x=1+d$ 代入 $f(x)=(x+d)(x-2)+9x$：第一個因式是 $1+d+d=1+2d$，第二個是 $1+d-2=d-1$。",
-            "highlight": [
-              "1+2d",
-              "d-1"
-            ]
+            "math": "f(1+d) = [(1+d) + d][(1+d) - 2] + 9(1+d)",
+            "en": "When x is an expression 1 + d, replace every occurrence of x with (1 + d). First bracket: (1 + d) + d = 1 + 2d. Second bracket: (1 + d) - 2 = d - 1. Third term: 9(1 + d).",
+            "zh": "很多同學看到代入的是含有字母的式子便會退縮。其實做法完全一樣：把算式裡的每一個 $x$ 都換成括號 $(1 + d)$。第一個括號變成 $[(1 + d) + d] = (1 + 2d)$；第二個括號變成 $[(1 + d) - 2] = (d - 1)$；最後一項則是 $9(1 + d)$。"
           },
           {
             "title": {
-              "en": "Step 2 · Expand and set to 0",
-              "zh": "第 2 步 · 展開並令為 0"
+              "en": "Step 2 · Expand both parts carefully",
+              "zh": "第 2 步 · 分開小心展開兩個部分"
             },
-            "math": "(2d^{2}-d-1)+(9+9d)=2d^{2}+8d+8",
-            "en": "$(1+2d)(d-1)=2d^{2}-d-1$; adding $9+9d$ gives $2d^{2}+8d+8=0$.",
-            "zh": "$(1+2d)(d-1)=2d^{2}-d-1$，再加上 $9+9d$，得 $2d^{2}+8d+8=0$。",
-            "highlight": [
-              "2d^{2}+8d+8=0"
-            ]
+            "math": "(1+2d)(d-1) = d - 1 + 2d^2 - 2d = 2d^2 - d - 1, \\quad 9(1+d) = 9 + 9d",
+            "en": "Expand the first part using FOIL: (1+2d)(d-1) = 2d^2 - d - 1. Expand the second part by distributing 9: 9(1+d) = 9 + 9d.",
+            "zh": "我們先展開前面相乘的兩個括號：$(1 + 2d)(d - 1) = 1(d) - 1(1) + 2d(d) - 2d(1) = 2d^2 - d - 1$。接著展開後面的乘法：$9 \\times (1 + d) = 9 + 9d$。"
           },
           {
             "title": {
-              "en": "Answer",
-              "zh": "答案"
+              "en": "Step 3 · Combine all terms and set equal to 0",
+              "zh": "第 3 步 · 合併同類項並列出二次方程"
             },
-            "math": "d^{2}+4d+4=0 \\Rightarrow (d+2)^{2}=0 \\Rightarrow d=-2",
-            "en": "Divide by 2 and complete the square — option A.",
-            "zh": "兩邊除以 2 後配方，得 $d=-2$，選 A。",
-            "highlight": [
-              "d=-2"
-            ]
+            "math": "(2d^2 - d - 1) + (9 + 9d) = 0 \\implies 2d^2 + (-d + 9d) + (-1 + 9) = 0 \\implies 2d^2 + 8d + 8 = 0",
+            "en": "Add the two expanded parts together. Group the d terms: -d + 9d = +8d. Group the constant terms: -1 + 9 = +8. Since f(1+d) = 0, we have 2d^2 + 8d + 8 = 0.",
+            "zh": "因為題目指明 $f(1 + d) = 0$，我們把展開後的兩式相加並令其等於 $0$。按二次項、一次項、常數項分類整理：二次項只有 $2d^2$；一次項是 $-d + 9d = +8d$；常數項是 $-1 + 9 = +8$。合併後得到二次方程：$2d^2 + 8d + 8 = 0$。"
+          },
+          {
+            "title": {
+              "en": "Step 4 · Simplify by dividing by 2 and solve",
+              "zh": "第 4 步 · 兩邊同除以 2 化簡，因式分解求出 d"
+            },
+            "math": "\\frac{2d^2 + 8d + 8}{2} = \\frac{0}{2} \\implies d^2 + 4d + 4 = 0 \\implies (d + 2)^2 = 0 \\implies d = -2",
+            "en": "Every coefficient is divisible by 2. Dividing both sides gives d^2 + 4d + 4 = 0. Recognise this as a perfect square: (d + 2)^2 = 0, which yields d = -2. Matches Option A.",
+            "zh": "觀察方程各項都是偶數，兩邊同時除以 $2$ 化簡：$d^2 + 4d + 4 = 0$。此時認出完全平方式 $(d + 2)^2 = 0$（或者利用計算機求根），即 $d + 2 = 0$，解得 $d = -2$。對應答案選項 A。"
           }
         ],
         "traps": [
           {
             "opt": "C",
-            "en": "Ignoring the $+9x$ term leaves $(1+2d)(d-1)=0$, giving $d=1$ — keep every term when substituting.",
-            "zh": "漏掉 $+9x$ 那一項會只剩 $(1+2d)(d-1)=0$，得 $d=1$ —— 代入時每一項都要保留。"
+            "en": "1 — Dropped the +9x term at the very end when substituting, leaving only (1+2d)(d-1) = 0, which gives d = 1 or d = -1/2.",
+            "zh": "1 —— 代入時粗心漏掉了題目算式最後的 $+9x$，只算了前面的乘積 $(1+2d)(d-1) = 0$，從而誤算出 $d = 1$。"
           },
           {
             "opt": "D",
-            "en": "Getting $(d+2)^{2}=0$ but dropping the minus sign reads off $d=2$.",
-            "zh": "解到 $(d+2)^{2}=0$ 卻漏掉負號，就會讀成 $d=2$。"
+            "en": "2 — Factored successfully into (d+2)^2 = 0, but made a sign slip when solving the linear root, mistakenly writing d = 2.",
+            "zh": "2 —— 成功分解出 $(d+2)^2 = 0$，但在最後一步移項時弄錯負號，把 $d + 2 = 0$ 寫成 $d = 2$。"
+          },
+          {
+            "opt": "B",
+            "en": "-1 — Made an arithmetic mistake when expanding (1+d)-2 or in the middle term during collection.",
+            "zh": "-1 —— 在展開第二個括號 $(1+d)-2$ 或合併一次項時出現計算失誤。"
           }
         ],
         "tip": {
-          "en": "For $f(\\text{expression})=0$ questions, substitute first and simplify last — do not expand $f$ with unknown $d$ before substituting.",
-          "zh": "遇到 $f(\\text{某式})=0$，先代入、後化簡；不要帶著未知的 $d$ 先把 $f$ 展開。"
+          "en": "Do not expand the original function formula f(x) before substituting! Substitute (1+d) directly into each bracket first to keep expressions clean. After forming the equation, always divide by common numeric factors before factoring.",
+          "zh": "面對這類代入多項式的題目，千萬不要一開始就急著把原本的 $f(x)$ 乘開！直接把 $(1+d)$ 填入各個括號內再化簡會清楚得多。列出二次方程後，記得先除以公因數（此處除以 $2$），數字變小就不容易算錯。"
         }
       }
     },

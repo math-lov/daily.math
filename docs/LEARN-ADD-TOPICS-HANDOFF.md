@@ -164,6 +164,13 @@ $py = "C:\Users\t073\.workbuddy\binaries\python\envs\default\Scripts\python.exe"
 
 **長題的步驟分要能加起來等於該部分的分數**。範例（EX2，官方＝(a) 1A、(b) 1M+1M+1A）：
 `step1 (1A)` → `step2 無` → `step3 (1M: Use the result of (a).)` → `step4 (1M) (1A)`。
+一步要拿兩分就寫成 `"(1M + 1A)"`（`markSum` 會加起來）。
+
+`traps` 的兩種用法：
+
+* **MC**：`{ "opt": "B", "zh": "…" }` —— `opt` 必須是真的選項，而且不可指向正確答案（`learn_check` S4 會擋）。
+* **長題示範**：長題沒有選項，所以改用**自由標籤 `label`**：`{ "label": "漏平方係數", "zh": "…" }`。
+  前端會在「看完示範」之後，用琥珀色列出（不是「你答錯」的紅色，因為學生未作答）。
 
 ### 3.3 概念卡 → `data/learn/concepts.json`
 
@@ -437,6 +444,7 @@ ok(t07.$$("#pagenav .pg").length === 12, "ws06 = two lessons (1+2+3 and 1+2+3 pa
 | 多節課題分節標籤 | `.pagenav .pg-lesson` | 自動插入「第 N 節」；題目列顯示「第 N 節 · 第 X / Y 頁」 |
 | ⚠️「完成」標記 | app.js `navPageBtn()` | **一定要用 `.pg` 清單索引**，不可用 `nav.children[i]`（分節標籤會令索引錯位） |
 | 長題示範逐步出圖 | `figures.json` 的 `step` | 圖跟題解第 N 步出場（`renderLong` 內 `drawStep`） |
+| 長題示範「常見錯誤」 | `.traps.long-traps`（app.js `appendLongTraps`） | 看完所有步驟後列出 `solution.traps`；長題用 `label`（不是 MC 的 `opt`）；琥珀色＝「做完後檢查自己有沒有踩中」，不是「你答錯」 |
 | (a)→(b) 打包替換高亮 | `solution.steps[].link` | 橙色「用 (a) 的答案」區塊 |
 | 面板改「題目字眼」 | `learn_panel.py` 課題編輯器 | 欄位 **`f_hints`**，每行一組、格式 **`English | 中文解釋`**；驗證：組數 2–8、每組要有中英、字眼不可重複、不可整組照抄別課 |
 
@@ -487,6 +495,13 @@ ok(t07.$$("#pagenav .pg").length === 12, "ws06 = two lessons (1+2+3 and 1+2+3 pa
   永遠不會被渲染；已包上 `$…$`。② MathJax 是 CDN ＋ `async`，首次載入時 `updateAll()` 可能早過它 →
   初次進站可能完全冇數學；改用站內 KaTeX 後同步即時渲染。
   驗證：用 jsdom ＋ 真 KaTeX 跑一次（canvas 用假 context），26 項斷言全過（含拖 slider、換題、答對）。
+* **WS06 題解升級（採納老師提供的審閱建議）**：17 題 MC ＋ 4 條長題示範的解說全面改寫（把「為什麼」講得更透：
+  代入負數要包括號、$(2x)^{2}$ 連係數要平方、$-3(x-1)$ 負負得正、兩點 $y$ 坐標相同＝水平線…），
+  並修正 3 處：① `eph-ws06-ex02` 合併步驟要補回「面積公式」的 1M（否則步驟分 5 ≠ 6，`markSum` 會 FAIL）；
+  ② ex04 的「抽出公因數」改寫（`learn_check` S10 會對「公因數」出警告，全站要保持 0 警告）；
+  ③ 刪掉多餘的 `title.en`（全站 `title.en` 皆空，面板儲存亦會清掉）。
+  同時新增前端功能 **長題示範的「常見錯誤」**（見 §7）：`solution.traps` 用 `label`，看完示範後顯示；
+  目前只有 ws06 的 4 條示範有。`learn_smoke_test.js` 新增 10 條斷言（含「只有 ws06 有」與「沒有 traps 的示範不會出空框」）。
 * **ws05b 補充過一次**：共軛（最難的一步）由 c3 一句帶過 → 獨立成卡 `ws05b-c4`
   （共軛是甚麼／為甚麼乘共軛有效／$(a+bi)/(c+di)$ 公式／$c^{2}+d^{2}$ 捷徑／完整例題／驗算），
   並加 2 題除法練習 `eph-ws05b-q11`（$\frac{3+2i}{1-i}$）、`-q12`（$\frac{1}{2+i}+\frac{1}{2-i}$，虛部抵消）。

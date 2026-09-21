@@ -510,6 +510,28 @@
 
   /* 步驟附加內容：(a)→(b) 的「整塊打包替換」提示 + 高亮答案。
      長題示範與 MC 提示共用，避免兩處各寫一次。 */
+  /* 長題示範的「常見錯誤」：資料在 solution.traps。
+     長題沒有選項，所以用 label（不是 MC 的 opt）；學生也未作答，
+     所以語氣是「做完之後，檢查自己有沒有踩中」，不是「你答錯了」。 */
+  function appendLongTraps(host, sol) {
+    var traps = (sol && sol.traps) || [];
+    if (!traps.length) return;
+    var box = el("div", "traps long-traps");
+    traps.forEach(function (tr) {
+      var t = el("div", "trap");
+      var tag = tr.label || tr.opt || "";
+      if (tag) t.appendChild(el("b", null, tag + "："));
+      var sp = el("span");
+      richInto(sp, tr.zh || "");
+      autoRender(sp);
+      t.appendChild(sp);
+      box.appendChild(t);
+    });
+    host.appendChild(el("div", "trap-head",
+      "做完之後，檢查自己有沒有踩中這幾個常見錯誤："));
+    host.appendChild(box);
+  }
+
   function appendStepExtras(box, st) {
     if (st.link && st.link.math) {
       var lk = el("div", "step-link");
@@ -779,6 +801,7 @@
       boxt.appendChild(t);
       endRow.appendChild(boxt);
       endRow.classList.remove("hidden");
+      appendLongTraps(endRow, sol);       // 常見錯誤（只有標了 traps 的示範才有）
       var row = el("div", "row");
       if (opt && opt.prev) {
         var pb = el("button", "btn", "← 上一條");

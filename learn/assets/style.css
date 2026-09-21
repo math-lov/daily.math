@@ -260,6 +260,10 @@ body {
   padding: 10px 12px; border-left: 4px solid var(--err);
 }
 .trap b { color: var(--err); }
+/* 長題示範的「常見錯誤」：學生未作答，所以用琥珀色，不是「你答錯」的紅色 */
+.traps.long-traps { margin-top: 14px; }
+.traps.long-traps .trap { background: #FFFAF0; border-left-color: #DD6B20; }
+.traps.long-traps .trap b { color: #9C4221; }
 .tip {
   margin-top: 12px; font-size: 15px; background: var(--accent-soft);
   border-radius: var(--radius-sm); padding: 12px 14px; border-left: 4px solid var(--accent);

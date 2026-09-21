@@ -739,6 +739,34 @@ ok(hasStem(/completing the square/) || hasStem(/vertex/),
 ok(hasStem(/cut the \$x\$-axis/), "ws06 practises the discriminant (does the graph cut the x-axis?)");
 ok(hasStem(/figure shows the graph/), "ws06 includes graph-reading questions backed by figures");
 
+// 長題示範的「常見錯誤」（solution.traps）：看完所有步驟才出現，跟 MC 的干擾項解說一樣是「事後檢討」
+const longQs = allPayloads.reduce(
+  (a, p) => a.concat(p.lessons.reduce((b, l) => b.concat(l.long), [])), []);
+const withTraps = longQs.filter((q) => (q.solution.traps || []).length);
+ok(withTraps.length === 4 && withTraps.every((q) => /^eph-ws06-/.test(q.id)),
+   "only the four ws06 demos carry a 'common mistakes' list (got " + withTraps.map((q) => q.code).join(", ") + ")");
+ok(withTraps.every((q) => q.solution.traps.every((t) => t.label && t.zh && !t.opt)),
+   "every long-question trap uses 'label' (not the MC 'opt') and explains itself in Chinese");
+
+const d7t = boot("topic.html", "?t=ws06&p=1");
+ok(!d7t.$(".long-traps"), "the common-mistakes list stays hidden before the demo is finished");
+d7t.$(".demo-try .btn").click();
+d7t.$$(".card .row .btn").filter((b) => /全部顯示/.test(b.textContent))[0].click();
+ok(!!d7t.$(".long-traps"), "finishing the demo reveals the common-mistakes list");
+ok(/常見錯誤/.test(d7t.$("#topic-body").textContent), "the list is introduced in Chinese as '常見錯誤'");
+ok(d7t.$$(".long-traps .trap").length === 3,
+   "WS6-EX1 lists three common mistakes (got " + d7t.$$(".long-traps .trap").length + ")");
+ok(/漏平方係數/.test(d7t.$(".long-traps .trap b").textContent || ""),
+   "each mistake carries a short label (" + d7t.$(".long-traps .trap b").textContent + ")");
+ok(!!d7t.$(".long-traps .katex"), "the mistake explanations are typeset by KaTeX");
+ok(!/\$/.test(d7t.$(".long-traps").textContent), "no raw $ leaks into the common-mistakes list");
+ok(!!d7t.$$(".btn").filter((b) => /下一頁/.test(b.textContent)).length,
+   "the navigation row still follows the common-mistakes list");
+const d1t = boot("topic.html", "?t=ws01&p=5");
+d1t.$(".demo-try .btn").click();
+d1t.$$(".card .row .btn").filter((b) => /全部顯示/.test(b.textContent))[0].click();
+ok(!d1t.$(".long-traps"), "a demo without traps shows no empty common-mistakes box");
+
 
 // 未作答但按「看完整解答」＝放棄作答 → 圖都要出場
 const t04q2 = boot("topic.html", "?t=ws04&p=6");
