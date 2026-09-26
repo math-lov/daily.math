@@ -1,7 +1,7 @@
 // 自動生成，請勿手改（來源：data/；重新生成：python tools/make_site_data.py）
 window.RELEASES = {
  "version": 1,
- "asOf": "2026-09-24",
+ "asOf": "2026-09-26",
  "releases": [
   {
    "date": "2026-09-16",
@@ -126,6 +126,34 @@ window.RELEASES = {
     "2025-p2-q21",
     "2025-p2-q32",
     "2025-p2-q33"
+   ],
+   "status": "published"
+  },
+  {
+   "date": "2026-09-25",
+   "batch": 10,
+   "title": {
+    "en": "Junior Math · Exponential and Logarithmic Functions · Inequalities and Linear Programming",
+    "zh": "初中數學 · 指數與對數函數 · 不等式與線性規劃"
+   },
+   "ids": [
+    "2025-p2-q17",
+    "2025-p2-q34",
+    "2025-p2-q36"
+   ],
+   "status": "published"
+  },
+  {
+   "date": "2026-09-26",
+   "batch": 11,
+   "title": {
+    "en": "Junior Math · Arithmetic and Geometric Sequences · Basic Properties of Circles",
+    "zh": "初中數學 · 等差等比數列 · 圓的基本性質"
+   },
+   "ids": [
+    "2025-p2-q18",
+    "2025-p2-q37",
+    "2025-p2-q38"
    ],
    "status": "published"
   }

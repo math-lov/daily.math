@@ -8,7 +8,7 @@ window.BANK = {
    "nameZh": "",
    "lang": "en",
    "sourcePdf": null,
-   "questions": 27
+   "questions": 33
   },
   {
    "id": "2026-p2",
@@ -485,6 +485,64 @@ window.BANK = {
    }
   },
   {
+   "id": "2025-p2-q17",
+   "code": "25-P2Q17",
+   "no": 17,
+   "paper": "2025-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2025-p2-q17.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "In the figure, ABCD is a parallelogram. Let E, F and G be points lying on AB, AD and CD respectively such that BE=3AE, 2DF=3AF and DG=2CG. It is given that BC produced and EG produced meet at the point H. If the area of \\Delta CGH is 16\\text{ cm}^{2}, then the area of the quadrilateral DFEG is",
+    "html": "In the figure, ABCD is a parallelogram. Let E, F and G be points lying on AB, AD and CD respectively such that $BE=3AE, 2DF=3AF$ and $DG=2CG$. It is given that BC produced and EG produced meet at the point H. If the area of $\\Delta$ CGH is $16\\text{ cm}^{2}$, then the area of the quadrilateral DFEG is",
+    "latex": "BE=3AE,\\quad 2DF=3AF,\\quad DG=2CG"
+   },
+   "figure": "Parallelogram ABCD with vertices labeled counterclockwise starting from bottom-left: A (bottom-left), B (bottom-right), C (top-right), D (top-left). E lies on side AB with BE > AE. F lies on AD with DF > AF. G lies on CD with DG > CG. Line segments FE and EG are drawn inside ABCD. Segment EG is extended beyond G and side BC is extended beyond C, intersecting outside the parallelogram at point H.",
+   "options": {
+    "A": "46\\text{ cm}^{2}",
+    "B": "49\\text{ cm}^{2}",
+    "C": "105\\text{ cm}^{2}",
+    "D": "115\\text{ cm}^{2}"
+   }
+  },
+  {
+   "id": "2025-p2-q18",
+   "code": "25-P2Q18",
+   "no": 18,
+   "paper": "2025-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2025-p2-q18.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "The figure shows the triangle WXY. Let Z be a point lying on WY such that WY:XY=XY:YZ. If WX=65\\text{ cm}, WZ=25\\text{ cm} and XZ=60\\text{ cm}, then XY=",
+    "html": "The figure shows the triangle WXY. Let Z be a point lying on WY such that WY:XY=XY:YZ. If $WX=65\\text{ cm}, WZ=25\\text{ cm}$ and $XZ=60\\text{ cm}$, then XY=",
+    "latex": "WY:XY=XY:YZ,\\quad WX=65\\text{ cm},\\quad WZ=25\\text{ cm},\\quad XZ=60\\text{ cm}"
+   },
+   "figure": "Triangle WXY with horizontal base WY, vertex X above WY. Z lies on WY between W and Y. A vertical segment XZ connects vertex X to point Z on base WY. Segment WZ is shorter than ZY.",
+   "options": {
+    "A": "131\\text{ cm}",
+    "B": "144\\text{ cm}",
+    "C": "156\\text{ cm}",
+    "D": "169\\text{ cm}"
+   }
+  },
+  {
    "id": "2025-p2-q20",
    "code": "25-P2Q20",
    "no": 20,
@@ -801,6 +859,122 @@ window.BANK = {
     "B": "-4",
     "C": "-3",
     "D": "-1"
+   }
+  },
+  {
+   "id": "2025-p2-q34",
+   "code": "25-P2Q34",
+   "no": 34,
+   "paper": "2025-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2025-p2-q34.png"
+   ],
+   "topic": {
+    "unit": 3,
+    "en": "Exponential and Logarithmic Functions",
+    "zh": "指數與對數函數"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "On the same rectangular coordinate system, the graph of y=\\log_{a}x cuts the graph of y=a^{x} and the x-axis at the points P and Q respectively, where a is a positive constant. Denote the origin by O. Which of the following are true?\nI. a < 1\nII. OQ > a\nIII. \\angle POQ = 45^{\\circ}",
+    "html": "On the same rectangular coordinate system, the graph of $y=\\log_{a}x$ cuts the graph of $y=a^{x}$ and the x-axis at the points P and Q respectively, where a is a positive constant. Denote the origin by O. Which of the following are true?<br>I. a &lt; 1<br>II. OQ &gt; a<br>III. $\\angle$ POQ $= 45^{\\circ}$",
+    "latex": "y=\\log_{a}x,\\quad y=a^{x}"
+   },
+   "figure": null,
+   "options": {
+    "A": "\\text{I and II only}",
+    "B": "\\text{I and III only}",
+    "C": "\\text{II and III only}",
+    "D": "\\text{I, II and III}"
+   }
+  },
+  {
+   "id": "2025-p2-q36",
+   "code": "25-P2Q36",
+   "no": 36,
+   "paper": "2025-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2025-p2-q36.png"
+   ],
+   "topic": {
+    "unit": 8,
+    "en": "Inequalities and Linear Programming",
+    "zh": "不等式與線性規劃"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "Consider the following system of inequalities:\n\\begin{cases}x \\le 11 \\\\ 4x+5y-19 \\ge 0 \\\\ 7x-6y+11 \\le 0\\end{cases}\nLet D be the region which represents the solution of the above system of inequalities. If (x, y) is a point lying in D, then the greatest value of 8x-6y+11 is",
+    "html": "Consider the following system of inequalities:<br>$x \\le 11$ <br> $4x+5y-19 \\ge 0$ <br> $7x-6y+11 \\le 0$<br>Let D be the region which represents the solution of the above system of inequalities. If (x, y) is a point lying in D, then the greatest value of $8x-6y+11$ is",
+    "latex": "\\begin{cases}x \\le 11 \\\\ 4x+5y-19 \\ge 0 \\\\ 7x-6y+11 \\le 0\\end{cases},\\quad 8x-6y+11"
+   },
+   "figure": null,
+   "options": {
+    "A": "1",
+    "B": "11",
+    "C": "15",
+    "D": "129"
+   }
+  },
+  {
+   "id": "2025-p2-q37",
+   "code": "25-P2Q37",
+   "no": 37,
+   "paper": "2025-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2025-p2-q37.png"
+   ],
+   "topic": {
+    "unit": 7,
+    "en": "Arithmetic and Geometric Sequences",
+    "zh": "等差等比數列"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "Let p, q and r be non-zero real numbers. If p, q, r is an arithmetic sequence, which of the following must be true?\nI. 3^{p}, 3^{q}, 3^{r} is a geometric sequence.\nII. \\frac{5}{p}, \\frac{5}{q}, \\frac{5}{r} is a geometric sequence.\nIII. p-q, q-r, r-p is an arithmetic sequence.",
+    "html": "Let p, q and r be non-zero real numbers. If p, q, r is an arithmetic sequence, which of the following must be true?<br>I. $3^{p}, 3^{q}, 3^{r}$ is a geometric sequence.<br>II. $\\frac{5}{p}, \\frac{5}{q}, \\frac{5}{r}$ is a geometric sequence.<br>III. p-q, q-r, r-p is an arithmetic sequence.",
+    "latex": null
+   },
+   "figure": null,
+   "options": {
+    "A": "\\text{I only}",
+    "B": "\\text{II only}",
+    "C": "\\text{I and III only}",
+    "D": "\\text{II and III only}"
+   }
+  },
+  {
+   "id": "2025-p2-q38",
+   "code": "25-P2Q38",
+   "no": 38,
+   "paper": "2025-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2025-p2-q38.png"
+   ],
+   "topic": {
+    "unit": 11,
+    "en": "Basic Properties of Circles",
+    "zh": "圓的基本性質"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "In the figure, AC is a diameter of the circle ABCD. Denote the point of intersection of AC and BD by E. It is given that TD is the tangent to the circle at D. If \\angle BEC=96^{\\circ} and \\angle CDT=41^{\\circ}, then \\angle CDE=",
+    "html": "In the figure, AC is a diameter of the circle ABCD. Denote the point of intersection of AC and BD by E. It is given that TD is the tangent to the circle at D. If $\\angle BEC=96^{\\circ}$ and $\\angle CDT=41^{\\circ}$, then $\\angle$ CDE=",
+    "latex": "\\angle BEC=96^{\\circ},\\quad \\angle CDT=41^{\\circ}"
+   },
+   "figure": "Circle ABCD with diameter AC passing across the circle. Chord BD intersects AC at point E inside the circle. Line TD is tangent to the circle at point D, extending outward to the right. Chord CD is drawn. An arc indicates \\angle CDE at vertex D.",
+   "options": {
+    "A": "47^{\\circ}",
+    "B": "48^{\\circ}",
+    "C": "52^{\\circ}",
+    "D": "55^{\\circ}"
    }
   }
  ]

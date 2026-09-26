@@ -1325,6 +1325,183 @@ window.SOLUTIONS = {
     }
    }
   },
+  "2025-p2-q17": {
+   "answer": "B",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Similar triangles at $H$",
+       "zh": "第 1 步 · 以 $H$ 為頂點的相似三角形"
+      },
+      "math": "EB:GC=\\frac34 AB:\\frac13 AB=9:4",
+      "en": "$BE=3AE\\Rightarrow EB=\\frac34 AB$, and $DG=2CG\\Rightarrow GC=\\frac13 DC=\\frac13 AB$ (because $DC=AB$). With $EB\\parallel GC$ and $E,G,H$ collinear, $\\Delta EBH\\sim\\Delta GCH$.",
+      "zh": "$BE=3AE\\Rightarrow EB=\\frac34 AB$；$DG=2CG\\Rightarrow GC=\\frac13 DC=\\frac13 AB$（因 $DC=AB$）。又 $EB\\parallel GC$、$E,G,H$ 共線，故 $\\Delta EBH\\sim\\Delta GCH$。",
+      "highlight": [
+       "EB:GC=9:4"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · How far $H$ is beyond $C$",
+       "zh": "第 2 步 · $H$ 在 $C$ 之外多遠"
+      },
+      "math": "BH:CH=9:4,\\quad BH=BC+CH\\;\\Rightarrow\\;CH=\\frac45 BC",
+      "en": "The same similarity gives $BH:CH=9:4$. Since $B,C,H$ are collinear with $C$ between $B$ and $H$, $BH=BC+CH$, so $\\dfrac{BC+CH}{CH}=\\dfrac94$ and $CH=\\dfrac45 BC$.",
+      "zh": "同一組相似給出 $BH:CH=9:4$。$B,C,H$ 共線且 $C$ 在 $B,H$ 之間，$BH=BC+CH$，故 $\\frac{BC+CH}{CH}=\\frac94$，得 $CH=\\frac45 BC$。",
+      "highlight": [
+       "CH=\\frac45 BC"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Area of the parallelogram",
+       "zh": "第 3 步 · 平行四邊形的面積"
+      },
+      "math": "[\\Delta GCH]=\\frac{CH}{CB}\\times\\frac{GC}{DC}\\times\\frac12[ABCD]=\\frac{2}{15}[ABCD]",
+      "en": "The diagonal gives $[\\Delta DCB]=\\frac12[ABCD]$; $\\Delta GCB$ shares the height from $B$ to $DC$, so $[\\Delta GCB]=\\frac{GC}{DC}[\\Delta DCB]$. Then $\\Delta GCH$ has its base on the same line $BC$, so multiply by $\\frac{CH}{CB}$. Hence $\\frac{2}{15}[ABCD]=16$ and $[ABCD]=120$ cm².",
+      "zh": "對角線給出 $[\\Delta DCB]=\\frac12[ABCD]$；$\\Delta GCB$ 與 $\\Delta DCB$ 同高（由 $B$ 到 $DC$），故 $[\\Delta GCB]=\\frac{GC}{DC}[\\Delta DCB]$；$\\Delta GCH$ 的底在同一條線 $BC$ 上，再乘 $\\frac{CH}{CB}$。故 $\\frac{2}{15}[ABCD]=16$，得 $[ABCD]=120$ cm²。",
+      "highlight": [
+       "[ABCD]=120\\text{ cm}^{2}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 4 · Split $DFEG$ along $DE$",
+       "zh": "第 4 步 · 用 $DE$ 把 $DFEG$ 分成兩塊"
+      },
+      "math": "[\\Delta DEG]=\\frac13[ABCD],\\quad[\\Delta DEF]=\\frac{3}{40}[ABCD]",
+      "en": "$DE$ splits $DFEG$ into $\\Delta DEF+\\Delta DEG$. For $\\Delta DEG$: $[\\Delta DEC]=\\frac12[ABCD]$ (same base $DC$, same height), so $[\\Delta DEG]=\\frac{DG}{DC}[\\Delta DEC]=\\frac13[ABCD]$. For $\\Delta DEF$: $[\\Delta ADE]=\\frac{AE}{AB}[\\Delta ADB]=\\frac14\\cdot\\frac12[ABCD]=\\frac18[ABCD]$ and $[\\Delta AFE]=\\frac{AF}{AD}[\\Delta ADE]=\\frac25\\cdot\\frac18[ABCD]=\\frac{1}{20}[ABCD]$, so $[\\Delta DEF]=\\frac18-\\frac{1}{20}=\\frac{3}{40}[ABCD]$.",
+      "zh": "$DE$ 把 $DFEG$ 分成 $\\Delta DEF+\\Delta DEG$。$\\Delta DEG$：$[\\Delta DEC]=\\frac12[ABCD]$（同底 $DC$、等高），故 $[\\Delta DEG]=\\frac{DG}{DC}[\\Delta DEC]=\\frac13[ABCD]$。$\\Delta DEF$：$[\\Delta ADE]=\\frac{AE}{AB}[\\Delta ADB]=\\frac14\\cdot\\frac12[ABCD]=\\frac18[ABCD]$，$[\\Delta AFE]=\\frac{AF}{AD}[\\Delta ADE]=\\frac25\\cdot\\frac18[ABCD]=\\frac{1}{20}[ABCD]$，故 $[\\Delta DEF]=\\frac18-\\frac{1}{20}=\\frac{3}{40}[ABCD]$。",
+      "highlight": [
+       "[\\Delta DEG]=\\frac13[ABCD]",
+       "[\\Delta DEF]=\\frac{3}{40}[ABCD]"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "[DFEG]=\\left(\\frac{3}{40}+\\frac13\\right)\\times120=49\\text{ cm}^{2}",
+      "en": "$[DFEG]=\\frac{49}{120}[ABCD]=\\frac{49}{120}\\times120=49$ cm² — option B.",
+      "zh": "$[DFEG]=\\frac{49}{120}[ABCD]=\\frac{49}{120}\\times120=49$ cm² —— 答案 B。",
+      "highlight": [
+       "49\\text{ cm}^{2}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "en": "$46\\text{ cm}^{2}$ — you dropped one of the two pieces: $DFEG$ needs **both** $\\Delta DEF=\\frac{3}{40}[ABCD]$ and $\\Delta DEG=\\frac13[ABCD]$.",
+      "zh": "$46\\text{ cm}^{2}$ —— 漏了兩塊的其中一塊：$DFEG$ 要同時加 $\\Delta DEF=\\frac{3}{40}[ABCD]$ 與 $\\Delta DEG=\\frac13[ABCD]$。"
+     },
+     {
+      "opt": "C",
+      "en": "$105\\text{ cm}^{2}$ — you subtracted instead of using ratios: $120-16=104$ looks tempting, but $DFEG$ is not the parallelogram minus $\\Delta CGH$ alone.",
+      "zh": "$105\\text{ cm}^{2}$ —— 用「大減小」代替比例：$120-16=104$ 很誘人，但 $DFEG$ 不是平行四邊形只減去 $\\Delta CGH$。"
+     },
+     {
+      "opt": "D",
+      "en": "$115\\text{ cm}^{2}$ — stopping after one subtraction (e.g. $120-\\frac{1}{20}\\times120=114$) leaves the other pieces unaccounted for.",
+      "zh": "$115\\text{ cm}^{2}$ —— 只減了一塊就停手（例如 $120-\\frac{1}{20}\\times120=114$），其餘幾塊沒有按比例算。"
+     }
+    ],
+    "tip": {
+     "en": "Area-ratio questions never need real lengths: find one **similar pair** to get a length ratio, then every triangle area is «(fraction of a base) × (fraction of a height) × $\\frac12$» of the parallelogram. Add the pieces that make up the quadrilateral.",
+     "zh": "面積比題目不需要真實邊長：先找**一組相似三角形**取得長度比，之後每個三角形面積都是「底的比例 × 高的比例 × $\\frac12$」個平行四邊形；最後把要問的圖形拆成幾塊相加。"
+    },
+    "alt": [
+     {
+      "name": {
+       "en": "Coordinate method (beyond the syllabus)",
+       "zh": "坐標法（超出必修）"
+      },
+      "en": "Because only ratios matter, take $A(0,0),B(4,0),D(0,5),C(4,5)$; then $E(1,0),F(0,2),G(\\frac83,5)$, so $H=(4,9)$ and the shoelace formula gives $[DFEG]:[\\Delta CGH]=49:16$ — hence $\\frac{49}{16}\\times16=49$ cm².",
+      "zh": "既然只在乎比值，可直接取 $A(0,0),B(4,0),D(0,5),C(4,5)$，得 $E(1,0),F(0,2),G(\\frac83,5)$、$H=(4,9)$，用鞋帶公式得 $[DFEG]:[\\Delta CGH]=49:16$，故 $\\frac{49}{16}\\times16=49$ cm²。"
+     }
+    ]
+   }
+  },
+  "2025-p2-q18": {
+   "answer": "C",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Spot the right angle",
+       "zh": "第 1 步 · 認出直角"
+      },
+      "math": "25^{2}+60^{2}=625+3600=4225=65^{2}",
+      "en": "So $\\angle XZW=90^{\\circ}$ (converse of Pythagoras) and $WX$ is the hypotenuse.",
+      "zh": "故 $\\angle XZW=90^{\\circ}$（勾股定理逆定理），$WX$ 是斜邊。",
+      "highlight": [
+       "\\angle XZW=90^{\\circ}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Use the given ratio",
+       "zh": "第 2 步 · 用題給的比例"
+      },
+      "math": "\\frac{WY}{XY}=\\frac{XY}{YZ} \\;\\Rightarrow\\; XY^{2}=WY\\cdot YZ",
+      "en": "$XY$ is the geometric mean of $WY$ and $YZ$.",
+      "zh": "$XY$ 是 $WY$ 與 $YZ$ 的等比中項。",
+      "highlight": [
+       "XY^{2}=WY\\cdot YZ"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Let $YZ=z$ and solve",
+       "zh": "第 3 步 · 設 $YZ=z$ 求解"
+      },
+      "math": "XY^{2}=3600+z^{2}=(25+z)z \\;\\Rightarrow\\; 3600=25z",
+      "en": "$XY^{2}=XZ^{2}+YZ^{2}$ from the right triangle, and $WY=25+z$.",
+      "zh": "由直角三角形 $XY^{2}=XZ^{2}+YZ^{2}$，而 $WY=25+z$。",
+      "highlight": [
+       "z=144"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 4 · Find $XY$",
+       "zh": "第 4 步 · 求 $XY$"
+      },
+      "math": "XY=\\sqrt{3600+144^{2}}=\\sqrt{24336}=156\\text{ cm}",
+      "en": "Check: $WY=169$, and $169\\times144=156^{2}$ ✓ — option C.",
+      "zh": "驗算：$WY=169$，$169\\times144=156^{2}$ ✓ —— 答案 C。",
+      "highlight": [
+       "156\\text{ cm}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "en": "$144$ — that is $YZ$, not $XY$. The question asks for $XY$.",
+      "zh": "$144$ —— 這是 $YZ$ 而非 $XY$。題目要的是 $XY$。"
+     },
+     {
+      "opt": "D",
+      "en": "$169$ — that is $WY=25+144$. A correct intermediate value, but not the answer.",
+      "zh": "$169$ —— 這是 $WY=25+144$，算對了但答錯了題。"
+     },
+     {
+      "opt": "A",
+      "en": "$131$ — from writing $XY^2=65^2+144^2$ (treating $65$ as a leg) or from $60+65+6$ style errors.",
+      "zh": "$131$ —— 把 $65$ 當成直角邊，用了 $XY^{2}=65^{2}+144^{2}$ 之類的錯誤。"
+     }
+    ],
+    "tip": {
+     "en": "When a question gives three sides of a triangle, test Pythagoras first — a right angle usually unlocks the rest. Setters often hide $3$-$4$-$5$ families: here $25$-$60$-$65=\\times5$ of $5$-$12$-$13$.",
+     "zh": "題目給了三角形三邊，先驗勾股定理 —— 直角一出現後面就通了。留意 $3$-$4$-$5$ 的倍數：本例 $25$-$60$-$65$ 正是 $5$-$12$-$13$ 的 5 倍。"
+    }
+   }
+  },
   "2025-p2-q20": {
    "answer": "D",
    "verify": "checked",
@@ -2152,6 +2329,339 @@ window.SOLUTIONS = {
     "tip": {
      "en": "When a 'linear function' question mixes bases $5$ and $25$, convert everything to one base first: $\\log_{25}x=\\frac12\\log_{5}x$. The power of $x$ is the slope **after** that conversion.",
      "zh": "題目混用 $5$ 與 $25$ 底時，先全部化成同底：$\\log_{25}x=\\frac12\\log_{5}x$。$x$ 的指數就是換底**之後**的斜率。"
+    }
+   }
+  },
+  "2025-p2-q34": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · When do the two graphs meet?",
+       "zh": "第 1 步 · 兩圖何時相交"
+      },
+      "math": "y=a^{x}\\ \\text{and}\\ y=\\log_{a}x\\ \\text{meet} \\iff 0<a<1",
+      "en": "For $a>1$ the curves never meet; for $0<a<1$ they do.",
+      "zh": "$a>1$ 時兩曲線不相交；$0<a<1$ 時相交。",
+      "highlight": [
+       "0<a<1"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Statement I",
+       "zh": "第 2 步 · 命題 I"
+      },
+      "math": "a<1",
+      "en": "Since $P$ exists, $a<1$ — **true**.",
+      "zh": "既然 $P$ 存在，必有 $a<1$ —— **正確**。",
+      "highlight": [
+       "a<1"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Statement II",
+       "zh": "第 3 步 · 命題 II"
+      },
+      "math": "\\log_{a}x=0 \\;\\Rightarrow\\; x=1 \\;\\Rightarrow\\; Q(1,0),\\; OQ=1>a",
+      "en": "The $x$-intercept of $y=\\log_a x$ is always $1$, and $0<a<1$ — **true**.",
+      "zh": "$y=\\log_a x$ 的 $x$ 截距恆為 $1$，而 $0<a<1$ —— **正確**。",
+      "highlight": [
+       "OQ=1>a"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 4 · Statement III",
+       "zh": "第 4 步 · 命題 III"
+      },
+      "math": "P\\ \\text{lies on}\\ y=x \\;\\Rightarrow\\; \\angle POQ=45^{\\circ}",
+      "en": "$y=a^{x}$ and $y=\\log_{a}x$ are inverse functions, so their intersections lie on $y=x$ — **true**.",
+      "zh": "$y=a^{x}$ 與 $y=\\log_{a}x$ 互為反函數，交點必在 $y=x$ 上 —— **正確**。",
+      "highlight": [
+       "\\angle POQ=45^{\\circ}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\text{I, II and III}",
+      "en": "All three — option D.",
+      "zh": "三項皆正確 —— 答案 D。",
+      "highlight": [
+       "\\text{D}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "en": "$\\text{I and II only}$ — you doubted III; but a point on the line $y=x$ seen from the origin is always at $45^{\\circ}$ to both axes.",
+      "zh": "$\\text{I 與 II}$ —— 對 III 存疑；但只要 $P$ 在 $y=x$ 上，由原點看過去就與 $x$ 軸成 $45^{\\circ}$。"
+     },
+     {
+      "opt": "B",
+      "en": "$\\text{I and III only}$ — you missed $OQ>a$: $OQ=1$ and $a<1$, so it always holds.",
+      "zh": "$\\text{I 與 III}$ —— 漏了 $OQ>a$：$OQ=1$、$a<1$，恆成立。"
+     },
+     {
+      "opt": "C",
+      "en": "$\\text{II and III only}$ — dropping I, usually by thinking the curves can also meet for $a>1$.",
+      "zh": "$\\text{II 與 III}$ —— 漏了 I，通常誤以為 $a>1$ 時兩曲線也相交。"
+     }
+    ],
+    "tip": {
+     "en": "Two facts kill this question: (1) $a^{x}$ and $\\log_{a}x$ are inverses, so their intersections lie on $y=x$; (2) they intersect only for $0<a<1$. The $x$-intercept of $\\log_{a}x$ is always $(1,0)$.",
+     "zh": "兩個事實可解此題：(1) $a^{x}$ 與 $\\log_{a}x$ 互為反函數 ⇒ 交點在 $y=x$ 上；(2) 只有 $0<a<1$ 才相交。而 $\\log_{a}x$ 的 $x$ 截距恆為 $(1,0)$。"
+    }
+   }
+  },
+  "2025-p2-q36": {
+   "answer": "B",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Rewrite the two lines",
+       "zh": "第 1 步 · 改寫兩條直線"
+      },
+      "math": "y\\ge\\frac{19-4x}{5},\\quad y\\ge\\frac{7x+11}{6},\\quad x\\le11",
+      "en": "Both inequalities force $y$ to be *above* a line; the third cuts off large $x$.",
+      "zh": "兩個不等式都要求 $y$ 在某直線**之上**，第三個限制 $x$ 不可太大。",
+      "highlight": [
+       "y\\ge\\frac{7x+11}{6}",
+       "x\\le11"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Where the two lines cross",
+       "zh": "第 2 步 · 兩線交點"
+      },
+      "math": "\\frac{19-4x}{5}=\\frac{7x+11}{6} \\;\\Rightarrow\\; x=1,\\;y=3",
+      "en": "For $x<1$ the first line is higher; for $x>1$ the second is.",
+      "zh": "$x<1$ 時第一條較高；$x>1$ 時第二條較高。",
+      "highlight": [
+       "(1,3)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · On the relevant boundary the objective simplifies",
+       "zh": "第 3 步 · 在相關邊界上目標式化簡"
+      },
+      "math": "8x-6y+11=(7x-6y+11)+x=x",
+      "en": "Because the region's boundary for $x>1$ is exactly $7x-6y+11=0$.",
+      "zh": "因為 $x>1$ 時區域的邊界正是 $7x-6y+11=0$。",
+      "highlight": [
+       "8x-6y+11=x"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\max(8x-6y+11)=x_{\\max}=11",
+      "en": "$x\\le11$ gives the greatest value $11$ (at the intersection of $7x-6y+11=0$ with $x=11$) — option B.",
+      "zh": "由 $x\\le11$ 得最大值 $11$（在 $7x-6y+11=0$ 與 $x=11$ 的交點取得）—— 答案 B。",
+      "highlight": [
+       "11"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "D",
+      "en": "$129$ — evaluating the objective at a point that does **not** satisfy all three inequalities (e.g. $x=11$ with $y$ too small).",
+      "zh": "$129$ —— 把目標式代到**不滿足全部三個不等式**的點（例如 $x=11$ 但 $y$ 太小）。"
+     },
+     {
+      "opt": "C",
+      "en": "$15$ — from treating the corner as $(11,-5)$ (the first line's $x=11$ point), which violates $7x-6y+11\\le0$.",
+      "zh": "$15$ —— 把角點取成 $(11,-5)$（第一條線的 $x=11$ 點），但該點違反 $7x-6y+11\\le0$。"
+     },
+     {
+      "opt": "A",
+      "en": "$1$ — the value at the corner $(1,3)$; that is the **smallest** value on that edge, not the greatest.",
+      "zh": "$1$ —— 角點 $(1,3)$ 的值；那是該邊上的**最小**值，不是最大。"
+     }
+    ],
+    "tip": {
+     "en": "Linear programming: draw the boundary, then test the **corners**. If the objective comes out as a simple multiple of $x$ or $y$, the optimum is at the extreme value of that variable.",
+     "zh": "線性規劃：先畫邊界，再測**角點**。若目標式化簡後只是 $x$ 或 $y$ 的倍數，最佳值就在該變數的極端值。"
+    }
+   }
+  },
+  "2025-p2-q37": {
+   "answer": "A",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Write the arithmetic condition",
+       "zh": "第 1 步 · 寫出等差條件"
+      },
+      "math": "p=q-d,\\quad r=q+d",
+      "en": "A common difference $d$ makes the algebra mechanical.",
+      "zh": "設公差為 $d$，代數就變成機械操作。",
+      "highlight": [
+       "p=q-d,\\;r=q+d"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Statement I",
+       "zh": "第 2 步 · 命題 I"
+      },
+      "math": "3^{q}\\div3^{p}=3^{d}=3^{r}\\div3^{q}",
+      "en": "Equal ratios $\\Rightarrow$ geometric — **true** (I).",
+      "zh": "公比相等 $\\Rightarrow$ 等比 —— **正確**（I）。",
+      "highlight": [
+       "3^{d}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Statement II",
+       "zh": "第 3 步 · 命題 II"
+      },
+      "math": "\\left(\\frac{5}{q}\\right)^{2}=\\frac{5}{p}\\cdot\\frac{5}{r} \\iff q^{2}=pr \\iff d=0",
+      "en": "Only true when the sequence is constant (e.g. $p,q,r=1,2,3$ fails) — **false**.",
+      "zh": "只有當數列為常數（$d=0$）才成立（例：$p,q,r=1,2,3$ 就不成立）—— **錯誤**。",
+      "highlight": [
+       "q^{2}=pr\\ \\text{only if}\\ d=0"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 4 · Statement III",
+       "zh": "第 4 步 · 命題 III"
+      },
+      "math": "p-q=-d,\\;q-r=-d,\\;r-p=2d",
+      "en": "For an AP we need $(-d)-(-d)=(2d)-(-d)$, i.e. $0=3d$ — **false** unless $d=0$.",
+      "zh": "要成等差須 $(-d)-(-d)=(2d)-(-d)$，即 $0=3d$ —— 除非 $d=0$，否則**錯誤**。",
+      "highlight": [
+       "0=3d"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\text{I only}",
+      "en": "Only I must be true — option A.",
+      "zh": "只有 I 必然成立 —— 答案 A。",
+      "highlight": [
+       "\\text{A}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "$\\text{I and III only}$ — III looks like it should work (the terms are all multiples of $d$), but $r-p=2d$ breaks the pattern; try $p,q,r=1,2,3$.",
+      "zh": "$\\text{I 與 III}$ —— III 看似合理（各項都是 $d$ 的倍數），但 $r-p=2d$ 破壞等差；用 $p,q,r=1,2,3$ 一試即知。"
+     },
+     {
+      "opt": "B",
+      "en": "$\\text{II only}$ — II is the classic false statement: reciprocal-type sequences ($\\frac{5}{p}$ etc.) are geometric only for special values.",
+      "zh": "$\\text{II 只有}$ —— II 是典型錯誤命題：倒數型數列（$\\frac{5}{p}$ 等）只在特殊值下才等比。"
+     },
+     {
+      "opt": "D",
+      "en": "$\\text{II and III only}$ — both of the false ones.",
+      "zh": "$\\text{II 與 III}$ —— 兩個錯誤命題的組合。"
+     }
+    ],
+    "tip": {
+     "en": "Substitute $p=q-d$, $r=q+d$ and test numerically with $(1,2,3)$: an exponential of an AP **is** a GP, but reciprocals and differences usually are not.",
+     "zh": "代 $p=q-d$、$r=q+d$，再用 $(1,2,3)$ 實測：等差的指數序列**是**等比，但倒數與差一般不成立。"
+    }
+   }
+  },
+  "2025-p2-q38": {
+   "answer": "A",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Tangent–chord angle",
+       "zh": "第 1 步 · 切線與弦的夾角"
+      },
+      "math": "\\angle CDT=41^{\\circ} \\;\\Rightarrow\\; \\angle DAC=41^{\\circ}",
+      "en": "The angle between the tangent $TD$ and the chord $DC$ equals the angle in the alternate segment.",
+      "zh": "切線 $TD$ 與弦 $DC$ 的夾角等於另一弓形內的圓周角。",
+      "highlight": [
+       "\\angle DAC=41^{\\circ}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · $AC$ is a diameter",
+       "zh": "第 2 步 · $AC$ 是直徑"
+      },
+      "math": "\\angle ADC=90^{\\circ} \\;\\Rightarrow\\; \\angle ACD=180^{\\circ}-90^{\\circ}-41^{\\circ}=49^{\\circ}",
+      "en": "Angle in a semicircle is a right angle.",
+      "zh": "半圓上的圓周角是直角。",
+      "highlight": [
+       "\\angle ACD=49^{\\circ}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Angles at $E$",
+       "zh": "第 3 步 · $E$ 處的角"
+      },
+      "math": "\\angle CED=180^{\\circ}-\\angle BEC=180^{\\circ}-96^{\\circ}=84^{\\circ}",
+      "en": "$B$, $E$, $D$ are collinear, so the two angles at $E$ are supplementary.",
+      "zh": "$B$、$E$、$D$ 共線，故 $E$ 處兩角互補。",
+      "highlight": [
+       "\\angle CED=84^{\\circ}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\angle CDE=180^{\\circ}-49^{\\circ}-84^{\\circ}=47^{\\circ}",
+      "en": "Angles in $\\Delta CDE$ sum to $180^{\\circ}$ — option A.",
+      "zh": "$\\Delta CDE$ 內角和 $180^{\\circ}$ —— 答案 A。",
+      "highlight": [
+       "47^{\\circ}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "$52^{\\circ}$ — using $\\angle CED=96^{\\circ}$ directly (forgetting that $\\angle BEC$ and $\\angle CED$ are supplementary).",
+      "zh": "$52^{\\circ}$ —— 直接把 $\\angle CED$ 當成 $96^{\\circ}$（忘記與 $\\angle BEC$ 互補）。"
+     },
+     {
+      "opt": "B",
+      "en": "$48^{\\circ}$ — from $\\angle ACD=42^{\\circ}$, i.e. mis-applying the tangent–chord angle to the wrong chord ($\\angle ADT$ instead of $\\angle CDT$).",
+      "zh": "$48^{\\circ}$ —— 把切弦角對錯了弦（取了 $\\angle ADT$ 而非 $\\angle CDT$）。"
+     },
+     {
+      "opt": "D",
+      "en": "$55^{\\circ}$ — dropping the right angle at $D$ (not using $AC$ as a diameter).",
+      "zh": "$55^{\\circ}$ —— 忘了 $AC$ 是直徑（即漏了 $\\angle ADC=90^{\\circ}$）。"
+     }
+    ],
+    "tip": {
+     "en": "Circle toolkit: tangent–chord = alternate segment; diameter ⇒ right angle at the circumference; two chords meeting inside ⇒ vertical/supplementary angles. Chain them from the tangent inwards.",
+     "zh": "圓的三大工具：切弦角 = 另一弓形的圓周角；直徑 ⇒ 圓周角為直角；兩弦相交 ⇒ 對頂角／互補。由切線往內逐層推。"
     }
    }
   }
