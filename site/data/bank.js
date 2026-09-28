@@ -8,7 +8,7 @@ window.BANK = {
    "nameZh": "",
    "lang": "en",
    "sourcePdf": null,
-   "questions": 33
+   "questions": 39
   },
   {
    "id": "2026-p2",
@@ -543,6 +543,35 @@ window.BANK = {
    }
   },
   {
+   "id": "2025-p2-q19",
+   "code": "25-P2Q19",
+   "no": 19,
+   "paper": "2025-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2025-p2-q19.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "In the figure, ABCD is a square. Let E be a point such that CDEF is a rhombus, where F is a point lying on AC produced. DF is produced to the point G such that AF // BG. Which of the following are true?\nI. DF = FG\nII. \\Delta BFG \\sim \\Delta DEF\nIII. \\angle ABG + \\angle BFD = 180^{\\circ}",
+    "html": "In the figure, ABCD is a square. Let E be a point such that CDEF is a rhombus, where F is a point lying on AC produced. DF is produced to the point G such that AF // BG. Which of the following are true?<br>I. DF $=$ FG<br>II. $\\Delta$ BFG $\\sim \\Delta$ DEF<br>III. $\\angle$ ABG + $\\angle$ BFD $= 180^{\\circ}$",
+    "latex": null
+   },
+   "figure": "Square ABCD shown in perspective (square face ABCD on the front-right with vertices A bottom-right, B bottom-left, C top-left, D top-right). Diagonal AC is extended outward to point F. Rhombus CDEF is constructed sharing side CD, with F lying on AC produced and E lying above CD. Diagonal DF is drawn and extended further to point G. Line segments BF, BG, and diagonal AC (extended to F) are drawn. Line AF is parallel to BG.",
+   "options": {
+    "A": "\\text{I and II only}",
+    "B": "\\text{I and III only}",
+    "C": "\\text{II and III only}",
+    "D": "\\text{I, II and III}"
+   }
+  },
+  {
    "id": "2025-p2-q20",
    "code": "25-P2Q20",
    "no": 20,
@@ -656,6 +685,35 @@ window.BANK = {
     "B": "\\tan\\angle ACB=\\frac{AB}{CD}",
     "C": "\\tan\\angle ADC=\\frac{BC}{AD}",
     "D": "\\tan\\angle ADC=\\frac{BC}{CD}"
+   }
+  },
+  {
+   "id": "2025-p2-q24",
+   "code": "25-P2Q24",
+   "no": 24,
+   "paper": "2025-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2025-p2-q24.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "The polar coordinates of the points X, Y and Z are (1, 20^{\\circ}), (2, 80^{\\circ}) and (r, \\theta) respectively, where 20^{\\circ} < \\theta < 80^{\\circ}. If \\Delta XYZ is an equilateral triangle, find r.",
+    "html": "The polar coordinates of the points X, Y and Z are (1, $20^{\\circ})$, (2, $80^{\\circ})$ and (r, $\\theta)$ respectively, where $20^{\\circ}$ &lt; $\\theta$ &lt; $80^{\\circ}$. If $\\Delta$ XYZ is an equilateral triangle, find r.",
+    "latex": "(1, 20^{\\circ}),\\quad (2, 80^{\\circ}),\\quad (r, \\theta)"
+   },
+   "figure": null,
+   "options": {
+    "A": "\\sqrt{3}",
+    "B": "\\sqrt{5}",
+    "C": "\\sqrt{7}",
+    "D": "\\sqrt{10}"
    }
   },
   {
@@ -975,6 +1033,122 @@ window.BANK = {
     "B": "48^{\\circ}",
     "C": "52^{\\circ}",
     "D": "55^{\\circ}"
+   }
+  },
+  {
+   "id": "2025-p2-q39",
+   "code": "25-P2Q39",
+   "no": 39,
+   "paper": "2025-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2025-p2-q39.png"
+   ],
+   "topic": {
+    "unit": 14,
+    "en": "More about Trigonometry",
+    "zh": "三角學續論"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "For 90^{\\circ} < \\theta < 270^{\\circ}, how many roots does the equation \\tan^{3}\\theta=2\\tan\\theta have?",
+    "html": "For $90^{\\circ}$ &lt; $\\theta$ &lt; $270^{\\circ}$, how many roots does the equation $\\tan^{3}\\theta=2\\tan\\theta$ have?",
+    "latex": "\\tan^{3}\\theta=2\\tan\\theta"
+   },
+   "figure": null,
+   "options": {
+    "A": "2",
+    "B": "3",
+    "C": "4",
+    "D": "5"
+   }
+  },
+  {
+   "id": "2025-p2-q40",
+   "code": "25-P2Q40",
+   "no": 40,
+   "paper": "2025-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2025-p2-q40.png"
+   ],
+   "topic": {
+    "unit": 14,
+    "en": "More about Trigonometry",
+    "zh": "三角學續論"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "PQRS is a regular tetrahedron. Find the angle between PQ and \\Delta QRS correct to the nearest degree.",
+    "html": "PQRS is a regular tetrahedron. Find the angle between PQ and $\\Delta$ QRS correct to the nearest degree.",
+    "latex": null
+   },
+   "figure": null,
+   "options": {
+    "A": "35^{\\circ}",
+    "B": "55^{\\circ}",
+    "C": "60^{\\circ}",
+    "D": "71^{\\circ}"
+   }
+  },
+  {
+   "id": "2025-p2-q41",
+   "code": "25-P2Q41",
+   "no": 41,
+   "paper": "2025-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2025-p2-q41.png"
+   ],
+   "topic": {
+    "unit": 10,
+    "en": "Equations of Straight Lines",
+    "zh": "直線方程"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "Denote the origin by O. The coordinates of the point U are (20, 0). Let V be a point lying on the positive y-axis such that the x-coordinate of the in-centre of \\Delta OUV is 6. Find the area of \\Delta OUV.",
+    "html": "Denote the origin by O. The coordinates of the point U are (20, 0). Let V be a point lying on the positive y-axis such that the x-coordinate of the in-centre of $\\Delta$ OUV is 6. Find the area of $\\Delta$ OUV.",
+    "latex": "(20, 0)"
+   },
+   "figure": null,
+   "options": {
+    "A": "70",
+    "B": "87",
+    "C": "210",
+    "D": "250"
+   }
+  },
+  {
+   "id": "2025-p2-q42",
+   "code": "25-P2Q42",
+   "no": 42,
+   "paper": "2025-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2025-p2-q42.png"
+   ],
+   "topic": {
+    "unit": 15,
+    "en": "Permutations and Combinations",
+    "zh": "排列與組合"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "A committee is formed by 2 managers, 4 officers and 12 clerks. If 7 members are selected from the committee to form a working group consisting of at least 1 manager, how many different working groups can be formed?",
+    "html": "A committee is formed by 2 managers, 4 officers and 12 clerks. If 7 members are selected from the committee to form a working group consisting of at least 1 manager, how many different working groups can be formed?",
+    "latex": null
+   },
+   "figure": null,
+   "options": {
+    "A": "16\\,016",
+    "B": "20\\,384",
+    "C": "22\\,880",
+    "D": "31\\,824"
    }
   }
  ]

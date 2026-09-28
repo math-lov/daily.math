@@ -1502,6 +1502,119 @@ window.SOLUTIONS = {
     }
    }
   },
+  "2025-p2-q19": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Two $135^{\\circ}$ angles and two $22.5^{\\circ}$ ones",
+       "zh": "第 1 步 · 兩個 $135^{\\circ}$ 與兩個 $22.5^{\\circ}$"
+      },
+      "math": "\\angle BCF=\\angle DCF=135^{\\circ}\\;\\Rightarrow\\;\\angle CFD=\\angle CDF=22.5^{\\circ}",
+      "en": "The square's diagonal bisects the right angle, so $\\angle BCA=\\angle ACD=45^{\\circ}$. As $A,C,F$ are collinear, $\\angle BCF=\\angle DCF=180^{\\circ}-45^{\\circ}=135^{\\circ}$. And $CDEF$ is a rhombus, so $CF=CD$: $\\Delta CDF$ is isosceles and its base angles are $\\frac{180^{\\circ}-135^{\\circ}}{2}=22.5^{\\circ}$.",
+      "zh": "正方形的對角線平分直角，故 $\\angle BCA=\\angle ACD=45^{\\circ}$。因 $A,C,F$ 共線，$\\angle BCF=\\angle DCF=180^{\\circ}-45^{\\circ}=135^{\\circ}$。又 $CDEF$ 是菱形，$CF=CD$，故 $\\Delta CDF$ 等腰，底角為 $\\frac{180^{\\circ}-135^{\\circ}}{2}=22.5^{\\circ}$。",
+      "highlight": [
+       "\\angle DCF=135^{\\circ}",
+       "\\angle CFD=22.5^{\\circ}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Statement I — $\\Delta CDF\\cong\\Delta CBF$",
+       "zh": "第 2 步 · 命題 I —— $\\Delta CDF\\cong\\Delta CBF$"
+      },
+      "math": "CD=CB,\\;CF\\text{ 共用},\\;\\angle DCF=\\angle BCF\\;\\Rightarrow\\;DF=BF",
+      "en": "$CD=CB$ (square), $CF$ is common and $\\angle DCF=\\angle BCF=135^{\\circ}$, so $\\Delta CDF\\cong\\Delta CBF$ (SAS) and $DF=BF$. Also $\\Delta BCF$ is isosceles ($BC=CF$) with $\\angle BCF=135^{\\circ}$, so $\\angle CBF=\\angle BFC=22.5^{\\circ}$.",
+      "zh": "$CD=CB$（正方形）、$CF$ 共用、$\\angle DCF=\\angle BCF=135^{\\circ}$，故 $\\Delta CDF\\cong\\Delta CBF$（SAS），得 $DF=BF$。又 $\\Delta BCF$ 等腰（$BC=CF$）且 $\\angle BCF=135^{\\circ}$，故 $\\angle CBF=\\angle BFC=22.5^{\\circ}$。",
+      "highlight": [
+       "DF=BF"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Finish statement I with $AF\\parallel BG$",
+       "zh": "第 3 步 · 用 $AF\\parallel BG$ 完成命題 I"
+      },
+      "math": "\\angle BGF=\\angle DFA=22.5^{\\circ},\\quad\\angle BFG=180^{\\circ}-45^{\\circ}=135^{\\circ}",
+      "en": "Because $AF\\parallel BG$, the transversal $DFG$ gives $\\angle BGF=\\angle DFA=22.5^{\\circ}$ (and $\\angle DFA=\\angle CFD$ as $A,C,F$ are collinear). With $D,F,G$ collinear, $\\angle BFG=180^{\\circ}-\\angle BFD$. So in $\\Delta BFG$ the angles at $B$ and $G$ are equal — $BF=FG$. Together with $DF=BF$: $DF=FG$ — statement I is **true**.",
+      "zh": "因 $AF\\parallel BG$，截線 $DFG$ 給出 $\\angle BGF=\\angle DFA=22.5^{\\circ}$（而 $A,C,F$ 共線故 $\\angle DFA=\\angle CFD$）。$D,F,G$ 共線時 $\\angle BFG=180^{\\circ}-\\angle BFD$，故 $\\Delta BFG$ 中 $B$、$G$ 兩角相等，得 $BF=FG$。配合 $DF=BF$，即 $DF=FG$ —— 命題 I **正確**。",
+      "highlight": [
+       "DF=FG"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 4 · Statement III — the two angles add to $180^{\\circ}$",
+       "zh": "第 4 步 · 命題 III —— 兩角相加為 $180^{\\circ}$"
+      },
+      "math": "\\angle ABG=180^{\\circ}-\\angle BAF=135^{\\circ},\\quad\\angle BFD=22.5^{\\circ}+22.5^{\\circ}=45^{\\circ}",
+      "en": "$\\angle BAF=\\angle BAC=45^{\\circ}$, and $AF\\parallel BG$ makes $\\angle ABG$ and $\\angle BAF$ co-interior: $\\angle ABG=180^{\\circ}-45^{\\circ}=135^{\\circ}$. Since $FC$ lies between $FB$ and $FD$, $\\angle BFD=\\angle BFC+\\angle CFD=22.5^{\\circ}+22.5^{\\circ}=45^{\\circ}$. Hence $135^{\\circ}+45^{\\circ}=180^{\\circ}$ — statement III is **true**.",
+      "zh": "$\\angle BAF=\\angle BAC=45^{\\circ}$，而 $AF\\parallel BG$ 使 $\\angle ABG$ 與 $\\angle BAF$ 同旁內角互補：$\\angle ABG=180^{\\circ}-45^{\\circ}=135^{\\circ}$。又 $FC$ 在 $FB$ 與 $FD$ 之間，$\\angle BFD=\\angle BFC+\\angle CFD=22.5^{\\circ}+22.5^{\\circ}=45^{\\circ}$。故 $135^{\\circ}+45^{\\circ}=180^{\\circ}$ —— 命題 III **正確**。",
+      "highlight": [
+       "\\angle ABG=135^{\\circ}",
+       "\\angle BFD=45^{\\circ}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 5 · Statement II — two pairs of equal angles",
+       "zh": "第 5 步 · 命題 II —— 兩組相等角"
+      },
+      "math": "\\Delta BFG:\\;135^{\\circ},22.5^{\\circ},22.5^{\\circ}\\;\\sim\\;\\Delta DEF:\\;135^{\\circ},22.5^{\\circ},22.5^{\\circ}",
+      "en": "In the rhombus, $CDEF$'s opposite angles are equal, so $\\angle DEF=\\angle DCF=135^{\\circ}$; with $DE=EF$, $\\angle EDF=\\angle DFE=22.5^{\\circ}$. And $\\Delta BFG$ has $\\angle BFG=135^{\\circ}$ with $\\angle FBG=\\angle BGF=22.5^{\\circ}$. The two triangles match in angles (AA), so $\\Delta BFG\\sim\\Delta DEF$ — statement II is **true**.",
+      "zh": "菱形 $CDEF$ 的對角相等，故 $\\angle DEF=\\angle DCF=135^{\\circ}$；又 $DE=EF$，得 $\\angle EDF=\\angle DFE=22.5^{\\circ}$。而 $\\Delta BFG$ 有 $\\angle BFG=135^{\\circ}$、$\\angle FBG=\\angle BGF=22.5^{\\circ}$。兩三角形三角對應相等（AA），故 $\\Delta BFG\\sim\\Delta DEF$ —— 命題 II **正確**。",
+      "highlight": [
+       "\\Delta BFG\\sim\\Delta DEF"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\text{I, II and III}",
+      "en": "All three statements are true — option D.",
+      "zh": "三項皆成立 —— 答案 D。",
+      "highlight": [
+       "\\text{I, II and III}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "en": "$\\text{I and II only}$ — you guessed III is false. $AF\\parallel BG$ forces $\\angle ABG=135^{\\circ}$, and $\\angle BFD=22.5^{\\circ}+22.5^{\\circ}=45^{\\circ}$; they **do** add to $180^{\\circ}$.",
+      "zh": "$\\text{I 與 II}$ —— 憑感覺否定 III。$AF\\parallel BG$ 逼出 $\\angle ABG=135^{\\circ}$，而 $\\angle BFD=22.5^{\\circ}+22.5^{\\circ}=45^{\\circ}$，兩者**確實**相加為 $180^{\\circ}$。"
+     },
+     {
+      "opt": "B",
+      "en": "$\\text{I and III only}$ — you doubted the similarity. Both triangles have angles $135^{\\circ},22.5^{\\circ},22.5^{\\circ}$ ($\\angle DEF$ equals $\\angle DCF$ as opposite angles of the rhombus).",
+      "zh": "$\\text{I 與 III}$ —— 對相似有疑問。兩個三角形的角都是 $135^{\\circ},22.5^{\\circ},22.5^{\\circ}$（菱形對角相等，$\\angle DEF=\\angle DCF$）。"
+     },
+     {
+      "opt": "C",
+      "en": "$\\text{II and III only}$ — you dropped I, usually by forgetting that $\\angle DCF=\\angle BCF$ lets you use SAS for $\\Delta CDF\\cong\\Delta CBF$, so $DF=BF=FG$.",
+      "zh": "$\\text{II 與 III}$ —— 漏了 I，通常是忘了 $\\angle DCF=\\angle BCF$ 可用 SAS 證 $\\Delta CDF\\cong\\Delta CBF$，從而 $DF=BF=FG$。"
+     }
+    ],
+    "tip": {
+     "en": "Square + rhombus on a diagonal: the diagonal bisects $90^{\\circ}$ into $45^{\\circ}$, and the rhombus's equal sides make an isosceles triangle — so base angles are $\\frac{180^{\\circ}-135^{\\circ}}{2}=22.5^{\\circ}$. Two $22.5^{\\circ}$ angles add to the $45^{\\circ}$ you need; a parallel line then hands you the $135^{\\circ}$.",
+     "zh": "正方形加菱形共用對角線：對角線把 $90^{\\circ}$ 平分成 $45^{\\circ}$，菱形的等邊造出等腰三角形，底角就是 $\\frac{180^{\\circ}-135^{\\circ}}{2}=22.5^{\\circ}$。兩個 $22.5^{\\circ}$ 相加正是要用的 $45^{\\circ}$；平行線再給你 $135^{\\circ}$，兩者互補。"
+    },
+    "alt": [
+     {
+      "name": {
+       "en": "Coordinate + vector method (beyond the syllabus)",
+       "zh": "坐標與向量法（超出必修）"
+      },
+      "en": "Take $B(0,0),A(1,0),C(0,1),D(1,1)$. Then $F=(-\\frac{1}{\\sqrt2},1+\\frac{1}{\\sqrt2})$ and $BG\\parallel AF$ gives $G=(-(1+\\sqrt2),1+\\sqrt2)$ with $\\overrightarrow{DG}=2\\overrightarrow{DF}$ (so $DF=FG$). Sides: $BF=FG=\\sqrt{2+\\sqrt2}$, $BG=2+\\sqrt2$ and $DE=EF=1$, $DF=\\sqrt{2+\\sqrt2}$ — hence the triangles are similar; and $\\angle ABG=135^{\\circ}$, $\\angle BFD=45^{\\circ}$.",
+      "zh": "取 $B(0,0),A(1,0),C(0,1),D(1,1)$，得 $F=(-\\frac{1}{\\sqrt2},1+\\frac{1}{\\sqrt2})$；由 $BG\\parallel AF$ 得 $G=(-(1+\\sqrt2),1+\\sqrt2)$，且 $\\overrightarrow{DG}=2\\overrightarrow{DF}$（故 $DF=FG$）。邊長：$BF=FG=\\sqrt{2+\\sqrt2}$、$BG=2+\\sqrt2$，而 $DE=EF=1$、$DF=\\sqrt{2+\\sqrt2}$，故兩三角形相似；又 $\\angle ABG=135^{\\circ}$、$\\angle BFD=45^{\\circ}$。"
+     }
+    ]
+   }
+  },
   "2025-p2-q20": {
    "answer": "D",
    "verify": "checked",
@@ -1855,6 +1968,95 @@ window.SOLUTIONS = {
       "zh": "取 $A(0,0)$、$C(0,-h)$、$B(b,0)$、$D(-d,-h)$（兩個直角定出此形狀）。則 $\\tan\\angle ABC=\\frac{h}{b}$、$\\tan\\angle ADC=\\frac{h}{d}$，互餘給出 $h^{2}=bd$；再算 $\\frac{BC}{AD}=\\sqrt{\\frac{b}{d}}=\\frac{h}{d}$，可見只有 C 普遍成立。"
      }
     ]
+   }
+  },
+  "2025-p2-q24": {
+   "answer": "C",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Length $XY$ by the cosine rule",
+       "zh": "第 1 步 · 用餘弦定理求 $XY$"
+      },
+      "math": "XY^{2}=1^{2}+2^{2}-2(1)(2)\\cos60^{\\circ}=3",
+      "en": "$\\angle XOY=80^{\\circ}-20^{\\circ}=60^{\\circ}$.",
+      "zh": "$\\angle XOY=80^{\\circ}-20^{\\circ}=60^{\\circ}$。",
+      "highlight": [
+       "XY=\\sqrt{3}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Spot the right angle",
+       "zh": "第 2 步 · 認出直角"
+      },
+      "math": "1^{2}+XY^{2}=1+3=4=OY^{2} \\;\\Rightarrow\\; OX\\perp XY",
+      "en": "Since $OX=1$, $XY=\\sqrt3$ and $OY=2$, Pythagoras' converse gives $\\angle OXY=90^{\\circ}$.",
+      "zh": "由 $OX=1$、$XY=\\sqrt3$、$OY=2$，勾股逆定理得 $\\angle OXY=90^{\\circ}$。",
+      "highlight": [
+       "\\angle OXY=90^{\\circ}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Which side is the equilateral triangle on?",
+       "zh": "第 3 步 · 等邊三角形在哪一側"
+      },
+      "math": "\\angle OXZ=90^{\\circ}+60^{\\circ}=150^{\\circ}",
+      "en": "The other equilateral vertex is at $140^{\\circ}$, outside the given range, so $Z$ is the one on the other side of $XY$: $XO$ and $XZ$ open $90^{\\circ}+60^{\\circ}$ apart.",
+      "zh": "另一個等邊頂點在 $140^{\\circ}$，超出題目範圍；故 $Z$ 在 $XY$ 的另一側，$XO$ 與 $XZ$ 張開 $90^{\\circ}+60^{\\circ}=150^{\\circ}$。",
+      "highlight": [
+       "\\angle OXZ=150^{\\circ}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 4 · Cosine rule in $\\Delta OXZ$",
+       "zh": "第 4 步 · 在 $\\Delta OXZ$ 用餘弦定理"
+      },
+      "math": "r^{2}=1^{2}+3-2(1)(\\sqrt{3})\\cos150^{\\circ}=4+3=7",
+      "en": "$OX=1$, $XZ=\\sqrt3$ and $\\cos150^{\\circ}=-\\frac{\\sqrt3}{2}$, so $r=\\sqrt7$.",
+      "zh": "$OX=1$、$XZ=\\sqrt3$，而 $\\cos150^{\\circ}=-\\frac{\\sqrt3}{2}$，故 $r=\\sqrt{7}$。",
+      "highlight": [
+       "r=\\sqrt{7}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "r=\\sqrt{7}",
+      "en": "Option C.",
+      "zh": "答案 C。",
+      "highlight": [
+       "\\sqrt{7}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "en": "$\\sqrt3$ — that is the side $XY$, not $r=OZ$.",
+      "zh": "$\\sqrt3$ —— 那是邊長 $XY$，不是 $r=OZ$。"
+     },
+     {
+      "opt": "B",
+      "en": "$\\sqrt5$ — from adding $1+4$ (the two radii) instead of the actual side lengths.",
+      "zh": "$\\sqrt5$ —— 把兩個極徑平方相加（$1+4$）當成 $OZ^{2}$。"
+     },
+     {
+      "opt": "D",
+      "en": "$\\sqrt{10}$ — from $OX^{2}+XY^{2}+XZ^{2}$ style double counting, i.e. using the outer equilateral vertex.",
+      "zh": "$\\sqrt{10}$ —— 反覆加邊長平方（用了外側那個不合題意的頂點）。"
+     }
+    ],
+    "tip": {
+     "en": "Polar questions: when the two points come as a radius plus a polar angle, the included angle is just the **difference of the polar angles** — write it down first, then use the cosine rule for the distance and test the converse of Pythagoras; setters often hide a right angle here.",
+     "zh": "極坐標題：兩點以極徑＋極角給出時，**夾角就是兩個極角之差**（先寫下來）；接着用餘弦定理求距離，再試勾股逆定理 —— 這類題常在這裡暗藏一個直角。"
+    }
    }
   },
   "2025-p2-q25": {
@@ -2662,6 +2864,307 @@ window.SOLUTIONS = {
     "tip": {
      "en": "Circle toolkit: tangent–chord = alternate segment; diameter ⇒ right angle at the circumference; two chords meeting inside ⇒ vertical/supplementary angles. Chain them from the tangent inwards.",
      "zh": "圓的三大工具：切弦角 = 另一弓形的圓周角；直徑 ⇒ 圓周角為直角；兩弦相交 ⇒ 對頂角／互補。由切線往內逐層推。"
+    }
+   }
+  },
+  "2025-p2-q39": {
+   "answer": "B",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Factorise",
+       "zh": "第 1 步 · 因式分解"
+      },
+      "math": "\\tan^{3}\\theta-2\\tan\\theta=\\tan\\theta\\,(\\tan^{2}\\theta-2)=0",
+      "en": "Do not divide by $\\tan\\theta$ — you would lose the $\\tan\\theta=0$ solutions.",
+      "zh": "不要直接除以 $\\tan\\theta$，否則會丟掉 $\\tan\\theta=0$ 的解。",
+      "highlight": [
+       "\\tan\\theta(\\tan^{2}\\theta-2)=0"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Two families",
+       "zh": "第 2 步 · 兩類解"
+      },
+      "math": "\\tan\\theta=0 \\quad\\text{or}\\quad \\tan\\theta=\\pm\\sqrt{2}",
+      "en": "$\\tan\\theta=0$ gives $\\theta=180^{\\circ}$; $\\tan\\theta=\\pm\\sqrt2$ gives $\\theta\\approx54.7^{\\circ}+180n$ or $125.3^{\\circ}+180n$.",
+      "zh": "$\\tan\\theta=0$ 給 $\\theta=180^{\\circ}$；$\\tan\\theta=\\pm\\sqrt2$ 給 $\\theta\\approx54.7^{\\circ}+180n$ 或 $125.3^{\\circ}+180n$。",
+      "highlight": [
+       "\\tan\\theta=0",
+       "\\tan\\theta=\\pm\\sqrt{2}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Keep only $90^{\\circ}<\\theta<270^{\\circ}$",
+       "zh": "第 3 步 · 只取 $90^{\\circ}<\\theta<270^{\\circ}$"
+      },
+      "math": "125.3^{\\circ},\\;180^{\\circ},\\;234.7^{\\circ}",
+      "en": "$54.7^{\\circ}$ is too small and $54.7^{\\circ}+180^{\\circ}=234.7^{\\circ}$ ✓; $125.3^{\\circ}$ ✓; $305.3^{\\circ}$ is too big.",
+      "zh": "$54.7^{\\circ}$ 太小，$234.7^{\\circ}$ ✓；$125.3^{\\circ}$ ✓；$305.3^{\\circ}$ 太大。",
+      "highlight": [
+       "125.3^{\\circ}",
+       "180^{\\circ}",
+       "234.7^{\\circ}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "3\\ \\text{roots}",
+      "en": "Three roots — option B.",
+      "zh": "共三個根 —— 答案 B。",
+      "highlight": [
+       "3"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "en": "$2$ — counting only the $\\tan\\theta=\\pm\\sqrt2$ family and throwing away $\\theta=180^{\\circ}$ (the classic division-by-$\\tan\\theta$ error).",
+      "zh": "$2$ —— 只算了 $\\tan\\theta=\\pm\\sqrt2$ 的一族，丟了 $\\theta=180^{\\circ}$（典型的「直接除以 $\\tan\\theta$」錯誤）。"
+     },
+     {
+      "opt": "C",
+      "en": "$4$ — forgetting that $\\tan\\theta$ has period $180^{\\circ}$, so each of $\\pm\\sqrt2$ gives exactly one solution in the $180^{\\circ}$-wide interval.",
+      "zh": "$4$ —— 忘了 $\\tan\\theta$ 的週期是 $180^{\\circ}$，誤以為 $\\pm\\sqrt2$ 各給兩個解。"
+     },
+     {
+      "opt": "D",
+      "en": "$5$ — counting outside the given range (e.g. including $54.7^{\\circ}$ or $305.3^{\\circ}$).",
+      "zh": "$5$ —— 把範圍外的解也數進去（例如 $54.7^{\\circ}$ 或 $305.3^{\\circ}$）。"
+     }
+    ],
+    "tip": {
+     "en": "Number-of-roots questions: factorise (never divide), then test each branch against the interval. In any $180^{\\circ}$ window, $\\tan\\theta=k$ has exactly **one** solution.",
+     "zh": "問「根的數目」：先分解（切勿直接除），再逐族對區間測試。任何一個 $180^{\\circ}$ 寬的區間內，$\\tan\\theta=k$ 恰有**一**個解。"
+    }
+   }
+  },
+  "2025-p2-q40": {
+   "answer": "B",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · The projection of $P$",
+       "zh": "第 1 步 · $P$ 的投影"
+      },
+      "math": "G=\\text{centroid of }\\Delta QRS,\\quad PG\\perp\\Delta QRS",
+      "en": "In a regular tetrahedron the foot of the perpendicular from $P$ is the centre of the opposite face.",
+      "zh": "正四面體中，由 $P$ 向對面作的垂足就是該面的中心。",
+      "highlight": [
+       "PG\\perp\\Delta QRS"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · The angle we need",
+       "zh": "第 2 步 · 所求的角"
+      },
+      "math": "\\text{angle}=(PQ,\\Delta QRS)=\\angle PQG",
+      "en": "The angle between a line and a plane is measured between the line and its projection $QG$.",
+      "zh": "直線與平面的夾角，就是直線與其投影 $QG$ 的夾角。",
+      "highlight": [
+       "\\angle PQG"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Compute $QG$ (edge $=1$)",
+       "zh": "第 3 步 · 算 $QG$（邊長 $=1$）"
+      },
+      "math": "QG=\\frac{2}{3}\\times\\frac{\\sqrt{3}}{2}=\\frac{\\sqrt{3}}{3}",
+      "en": "Centroid divides each median in $2:1$; the median of an equilateral triangle is $\\frac{\\sqrt3}{2}$.",
+      "zh": "重心把中線分成 $2:1$；等邊三角形中線為 $\\frac{\\sqrt3}{2}$。",
+      "highlight": [
+       "QG=\\frac{\\sqrt{3}}{3}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\cos\\angle PQG=\\frac{QG}{PQ}=\\frac{\\sqrt{3}}{3} \\;\\Rightarrow\\; \\angle PQG\\approx54.7^{\\circ}",
+      "en": "Correct to the nearest degree: $55^{\\circ}$ — option B.",
+      "zh": "取至最接近的度數：$55^{\\circ}$ —— 答案 B。",
+      "highlight": [
+       "55^{\\circ}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "$60^{\\circ}$ — that is the angle **inside a face** (e.g. $\\angle PQR$), not the angle between $PQ$ and the plane.",
+      "zh": "$60^{\\circ}$ —— 那是**面內**的角（例如 $\\angle PQR$），不是線與平面的夾角。"
+     },
+     {
+      "opt": "D",
+      "en": "$71^{\\circ}$ — the dihedral angle between two faces (its cosine is $\\frac13$, giving $70.5^{\\circ}$), a different angle entirely.",
+      "zh": "$71^{\\circ}$ —— 那是兩個面之間的二面角（餘弦為 $\\frac13$，即 $70.5^{\\circ}$），並非本題所求。"
+     },
+     {
+      "opt": "A",
+      "en": "$35^{\\circ}$ — using $\\frac{PG}{PQ}$ instead of $\\cos$: $\\frac{\\sqrt{6}}{3}$ would be $\\sin$ of the angle.",
+      "zh": "$35^{\\circ}$ —— 用了 $\\frac{PG}{PQ}$；那是角的正弦而非餘弦。"
+     }
+    ],
+    "tip": {
+     "en": "Regular tetrahedron numbers to memorise: face angle $60^{\\circ}$, line-to-face angle $\\cos^{-1}\\frac{\\sqrt3}{3}\\approx54.7^{\\circ}$, face-to-face (dihedral) $\\cos^{-1}\\frac13\\approx70.5^{\\circ}$.",
+     "zh": "正四面體要記的三個數：面內角 $60^{\\circ}$、線面角 $\\cos^{-1}\\frac{\\sqrt3}{3}\\approx54.7^{\\circ}$、二面角 $\\cos^{-1}\\frac13\\approx70.5^{\\circ}$。"
+    }
+   }
+  },
+  "2025-p2-q41": {
+   "answer": "C",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Set up the triangle",
+       "zh": "第 1 步 · 設三角形"
+      },
+      "math": "O(0,0),\\;U(20,0),\\;V(0,h)",
+      "en": "The $x$-coordinate of the in-centre is the in-radius $r=6$ only if the right angle is at the origin — which it is here.",
+      "zh": "當直角在原點時，內心的 $x$ 坐標正是內切圓半徑 $r=6$（本例正是如此）。",
+      "highlight": [
+       "O(0,0)",
+       "U(20,0)",
+       "V(0,h)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · In-radius of a right triangle",
+       "zh": "第 2 步 · 直角三角形的內切圓半徑"
+      },
+      "math": "r=\\frac{a+b-c}{2}=\\frac{20+h-\\sqrt{400+h^{2}}}{2}=6",
+      "en": "$a,b$ are the legs, $c$ the hypotenuse.",
+      "zh": "$a,b$ 為兩直角邊，$c$ 為斜邊。",
+      "highlight": [
+       "\\frac{a+b-c}{2}=6"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Solve for $h$",
+       "zh": "第 3 步 · 解出 $h$"
+      },
+      "math": "\\sqrt{400+h^{2}}=8+h \\;\\Rightarrow\\; 400=64+16h \\;\\Rightarrow\\; h=21",
+      "en": "Square both sides; the $h^{2}$ terms cancel.",
+      "zh": "兩邊平方，$h^{2}$ 相消。",
+      "highlight": [
+       "h=21"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "[\\Delta OUV]=\\frac{1}{2}\\times20\\times21=210",
+      "en": "Check: $r=\\frac{20+21-29}{2}=6$ ✓ — option C.",
+      "zh": "驗算：$r=\\frac{20+21-29}{2}=6$ ✓ —— 答案 C。",
+      "highlight": [
+       "210"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "D",
+      "en": "$250$ — using area $=r\\times s$ with the wrong semi-perimeter, or $h=25$.",
+      "zh": "$250$ —— 用 $r\\times s$ 時半周界取錯，或取了 $h=25$。"
+     },
+     {
+      "opt": "B",
+      "en": "$87$ — from guessing $h\\approx8.7$ instead of solving the equation.",
+      "zh": "$87$ —— 沒有解方程，只是估了 $h$ 的值。"
+     },
+     {
+      "opt": "A",
+      "en": "$70$ — treating the in-centre's $x$-coordinate as the height or halving the wrong quantity.",
+      "zh": "$70$ —— 把內心的 $x$ 坐標當成高，或把錯的量減半。"
+     }
+    ],
+    "tip": {
+     "en": "Right triangle with legs $a,b$: $r=\\frac{a+b-c}{2}$ and area $=rs$ where $s=\\frac{a+b+c}{2}$. With the right angle at the origin the in-centre is simply $(r,r)$.",
+     "zh": "兩直角邊 $a,b$ 的直角三角形：$r=\\frac{a+b-c}{2}$，面積 $=rs$（$s=\\frac{a+b+c}{2}$）。直角在原點時內心就是 $(r,r)$。"
+    }
+   }
+  },
+  "2025-p2-q42": {
+   "answer": "B",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Count everyone",
+       "zh": "第 1 步 · 全部人數"
+      },
+      "math": "2+4+12=18,\\quad \\binom{18}{7}=31824",
+      "en": "Choose $7$ out of $18$ with no restriction.",
+      "zh": "不加限制地從 $18$ 人中選 $7$ 人。",
+      "highlight": [
+       "\\binom{18}{7}=31824"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Subtract the forbidden case",
+       "zh": "第 2 步 · 減去不合條件者"
+      },
+      "math": "\\binom{16}{7}=11440",
+      "en": "'At least $1$ manager' ⇒ exclude the groups with **no** manager (chosen from the other $16$).",
+      "zh": "「至少 $1$ 位經理」⇒ 排除**沒有**經理的情況（只從其餘 $16$ 人中選）。",
+      "highlight": [
+       "\\binom{16}{7}=11440"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "31824-11440=20384",
+      "en": "Option B.",
+      "zh": "答案 B。",
+      "highlight": [
+       "20384"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "D",
+      "en": "$31824$ — the unrestricted total; you forgot to remove the groups with no manager.",
+      "zh": "$31824$ —— 那是未加限制的總數，忘了剔走沒有經理的情況。"
+     },
+     {
+      "opt": "A",
+      "en": "$16016$ — subtracting $\\binom{16}{8}$ or $\\binom{17}{7}$-style wrong counts.",
+      "zh": "$16016$ —— 減錯了數（例如減了 $\\binom{16}{8}$）。"
+     },
+     {
+      "opt": "C",
+      "en": "$22880$ — adding instead of subtracting ($31824-2\\times11440$); remember 'at least one' means *exclude none*.",
+      "zh": "$22880$ —— 用加而非減；「至少一個」的意思是「排除一個都沒有」。"
+     }
+    ],
+    "tip": {
+     "en": "'At least one of $X$' is nearly always total − (none of $X$): $\\binom{18}{7}-\\binom{16}{7}$. Complementary counting beats case-splitting.",
+     "zh": "「$X$ 至少一個」幾乎都寫成「總數 − $X$ 一個都沒有」：$\\binom{18}{7}-\\binom{16}{7}$。用互補計數比分類討論快。"
     }
    }
   }

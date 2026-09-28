@@ -1,7 +1,7 @@
 // 自動生成，請勿手改（來源：data/；重新生成：python tools/make_site_data.py）
 window.RELEASES = {
  "version": 1,
- "asOf": "2026-09-26",
+ "asOf": "2026-09-28",
  "releases": [
   {
    "date": "2026-09-16",
@@ -154,6 +154,34 @@ window.RELEASES = {
     "2025-p2-q18",
     "2025-p2-q37",
     "2025-p2-q38"
+   ],
+   "status": "published"
+  },
+  {
+   "date": "2026-09-27",
+   "batch": 12,
+   "title": {
+    "en": "Junior Math · More about Trigonometry · Equations of Straight Lines",
+    "zh": "初中數學 · 三角學續論 · 直線方程"
+   },
+   "ids": [
+    "2025-p2-q19",
+    "2025-p2-q39",
+    "2025-p2-q41"
+   ],
+   "status": "published"
+  },
+  {
+   "date": "2026-09-28",
+   "batch": 13,
+   "title": {
+    "en": "Junior Math · More about Trigonometry · Permutations and Combinations",
+    "zh": "初中數學 · 三角學續論 · 排列與組合"
+   },
+   "ids": [
+    "2025-p2-q24",
+    "2025-p2-q40",
+    "2025-p2-q42"
    ],
    "status": "published"
   }
