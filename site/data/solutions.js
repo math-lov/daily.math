@@ -2380,6 +2380,161 @@ window.SOLUTIONS = {
     }
    }
   },
+  "2025-p2-q30": {
+   "answer": "B",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · The mean gives $\\alpha+\\beta$",
+       "zh": "第 1 步 · 平均數給出 $\\alpha+\\beta$"
+      },
+      "math": "\\frac{\\alpha+\\beta+(-4)+(-3)+1+1+1+4}{8}=0 \\;\\Rightarrow\\; \\alpha+\\beta=0",
+      "en": "The eight known numbers other than $\\alpha,\\beta$ add up to $0$.",
+      "zh": "除 $\\alpha,\\beta$ 外，其餘八個數相加為 $0$。",
+      "highlight": [
+       "\\alpha+\\beta=0"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · The range pins them down",
+       "zh": "第 2 步 · 全距定出數值"
+      },
+      "math": "\\text{range}=10,\\;\\alpha+\\beta=0 \\;\\Rightarrow\\; \\{\\alpha,\\beta\\}=\\{5,-5\\}",
+      "en": "The known part already spans $-4$ to $4$; with $\\alpha=-\\beta$ the pair must be $\\pm5$ (if it were $\\pm6$ the range would be $12$).",
+      "zh": "已知部分已跨 $-4$ 至 $4$；又 $\\alpha=-\\beta$，故兩數必為 $\\pm5$（若是 $\\pm6$ 全距會變成 $12$）。",
+      "highlight": [
+       "\\{5,-5\\}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Mode and median",
+       "zh": "第 3 步 · 眾數與中位數"
+      },
+      "math": "-5,\\,-4,\\,-3,\\,1,\\,1,\\,1,\\,4,\\,5",
+      "en": "Sorting: the middle two are both $1$, so $t=1$; and $1$ appears three times, so $s=1$.",
+      "zh": "排序後：中間兩個都是 $1$，故 $t=1$；而 $1$ 出現三次，故 $s=1$。",
+      "highlight": [
+       "s=1",
+       "t=1"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\text{I and III only}",
+      "en": "I ($s=1$) ✓, II ($t=-1$) ✗, III ($\\alpha+\\beta=0$) ✓ — option B.",
+      "zh": "I（$s=1$）✓、II（$t=-1$）✗、III（$\\alpha+\\beta=0$）✓ —— 答案 B。",
+      "highlight": [
+       "\\text{B}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "D",
+      "en": "$\\text{I, II and III}$ — statement II is the trap: with $8$ numbers the median is the **average of the 4th and 5th**, not the 4th. Here both are $1$, so $t=1$.",
+      "zh": "$\\text{I, II, III}$ —— II 是陷阱：8 個數的中位數是**第 4、5 個的平均**，不是第 4 個。這裡兩者都是 $1$，故 $t=1$。"
+     },
+     {
+      "opt": "A",
+      "en": "$\\text{I and II only}$ — you accepted $t=-1$ by treating $-3$ and $1$ as the middle pair, and forgot III.",
+      "zh": "$\\text{I, II}$ —— 把 $-3$、$1$ 當成中間一對而接受 $t=-1$，同時漏了 III。"
+     },
+     {
+      "opt": "C",
+      "en": "$\\text{II and III only}$ — you got III right but still mis-read the median.",
+      "zh": "$\\text{II, III}$ —— III 對，但中位數仍讀錯。"
+     }
+    ],
+    "tip": {
+     "en": "For $n$ numbers with $n$ **even**, median $=\\frac{1}{2}(\\text{4th}+\\text{5th})$ when $n=8$. And 'range $=10$' plus 'mean $=0$' usually forces the two unknowns to be $\\pm5$.",
+     "zh": "$n=8$（**偶數**）時，中位數 $=\\frac{1}{2}(\\text{第4個}+\\text{第5個})$。「全距 $=10$」加上「平均數 $=0$」通常逼出未知數為 $\\pm5$。"
+    }
+   }
+  },
+  "2025-p2-q31": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Count the digits",
+       "zh": "第 1 步 · 數位數"
+      },
+      "math": "3\\text{E}\\underbrace{00\\ldots0}_{12}\\Rightarrow 62\\times16^{12}",
+      "en": "$3\\text{E}_{16}=62$ and twelve zeros means twelve factors of $16=2^{4}$.",
+      "zh": "$3\\text{E}_{16}=62$，後面十二個 0 代表 $16^{12}=2^{48}$。",
+      "highlight": [
+       "62\\times2^{48}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Write $62$ in binary",
+       "zh": "第 2 步 · 把 $62$ 寫成 2 的冪"
+      },
+      "math": "62=32+16+8+4+2=2^{5}+2^{4}+2^{3}+2^{2}+2^{1}",
+      "en": "Five consecutive powers of $2$ from $2^{5}$ down to $2^{1}$.",
+      "zh": "由 $2^{5}$ 到 $2^{1}$ 連續五個 2 的冪。",
+      "highlight": [
+       "2^{5}+2^{4}+2^{3}+2^{2}+2^{1}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Add the exponents",
+       "zh": "第 3 步 · 指數相加"
+      },
+      "math": "62\\times2^{48}=2^{53}+2^{52}+2^{51}+2^{50}+2^{49}",
+      "en": "Multiplying by $2^{48}$ shifts every exponent up by $48$.",
+      "zh": "乘 $2^{48}$ 即每個指數加 $48$。",
+      "highlight": [
+       "2^{53}+\\cdots+2^{49}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "2^{53}+2^{52}+2^{51}+2^{50}+2^{49}",
+      "en": "Option D.",
+      "zh": "答案 D。",
+      "highlight": [
+       "\\text{D}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "$2^{52}+\\cdots+2^{48}$ — treating $3\\text{E}$ as $31$ (ignoring $\\text{E}=14$): $31\\times2^{48}$.",
+      "zh": "$2^{52}+\\cdots+2^{48}$ —— 把 $3\\text{E}$ 當成 $31$（忘記 $\\text{E}=14$），即 $31\\times2^{48}$。"
+     },
+     {
+      "opt": "B",
+      "en": "$2^{17}+\\cdots+2^{13}$ — using $2^{12}$ instead of $16^{12}$ (forgetting that each hex digit is $4$ bits).",
+      "zh": "$2^{17}+\\cdots+2^{13}$ —— 用了 $2^{12}$ 而非 $16^{12}$（忘記每個十六進位位 = 4 個二進位位）。"
+     },
+     {
+      "opt": "A",
+      "en": "$2^{16}+\\cdots+2^{12}$ — two mistakes at once: $31$ instead of $62$, and $2^{12}$ instead of $2^{48}$.",
+      "zh": "$2^{16}+\\cdots+2^{12}$ —— 同時錯兩處：$31$ 而非 $62$，以及 $2^{12}$ 而非 $2^{48}$。"
+     }
+    ],
+    "tip": {
+     "en": "Hexadecimal: $3\\text{E}=3\\times16+14=62$, and each trailing hex $0$ adds $2^{4}$ to the exponent.",
+     "zh": "十六進位：$3\\text{E}=3\\times16+14=62$；每個末尾的十六進位 $0$ 等於指數加 $4$。"
+    }
+   }
+  },
   "2025-p2-q32": {
    "answer": "C",
    "verify": "checked",
@@ -2620,6 +2775,83 @@ window.SOLUTIONS = {
     "tip": {
      "en": "Two facts kill this question: (1) $a^{x}$ and $\\log_{a}x$ are inverses, so their intersections lie on $y=x$; (2) they intersect only for $0<a<1$. The $x$-intercept of $\\log_{a}x$ is always $(1,0)$.",
      "zh": "兩個事實可解此題：(1) $a^{x}$ 與 $\\log_{a}x$ 互為反函數 ⇒ 交點在 $y=x$ 上；(2) 只有 $0<a<1$ 才相交。而 $\\log_{a}x$ 的 $x$ 截距恆為 $(1,0)$。"
+    }
+   }
+  },
+  "2025-p2-q35": {
+   "answer": "A",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · The cycle of $i$",
+       "zh": "第 1 步 · $i$ 的週期"
+      },
+      "math": "i,\\,-1,\\,-i,\\,1,\\;i,\\,-1,\\,-i,\\,1,\\ldots",
+      "en": "Powers of $i$ repeat every four terms, and each block of four sums to $0$.",
+      "zh": "$i$ 的冪每四項重複一次，而每四個一組的和為 $0$。",
+      "highlight": [
+       "i+(-1)+(-i)+1=0"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · How many terms?",
+       "zh": "第 2 步 · 共有多少項"
+      },
+      "math": "999-9+1=991=4\\times247+3",
+      "en": "From $i^{9}$ to $i^{999}$ inclusive.",
+      "zh": "由 $i^{9}$ 到 $i^{999}$（含頭尾）。",
+      "highlight": [
+       "991=4\\times247+3"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Drop the whole cycles",
+       "zh": "第 3 步 · 去掉完整週期"
+      },
+      "math": "247\\times0=0",
+      "en": "Only the last three terms matter.",
+      "zh": "只剩最後三項。",
+      "highlight": [
+       "247\\times0=0"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 4 · Add the remainder",
+       "zh": "第 4 步 · 加餘下三項"
+      },
+      "math": "i^{997}+i^{998}+i^{999}=i+(-1)+(-i)=-1",
+      "en": "$997\\equiv1$, $998\\equiv2$, $999\\equiv3 \\pmod 4$ — option A.",
+      "zh": "$997\\equiv1$、$998\\equiv2$、$999\\equiv3 \\pmod 4$ —— 答案 A。",
+      "highlight": [
+       "-1"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "en": "$0$ — assuming the terms split into whole cycles; $991$ is not a multiple of $4$.",
+      "zh": "$0$ —— 誤以為剛好分成整數個週期；$991$ 不是 $4$ 的倍數。"
+     },
+     {
+      "opt": "C",
+      "en": "$1$ — starting the counting at $i^{8}$ (a shift of one) so the remainder becomes $1+(-1)+(-i)+i$…",
+      "zh": "$1$ —— 由 $i^{8}$ 起算（整體移位一次），餘項變成另一組。"
+     },
+     {
+      "opt": "D",
+      "en": "$i$ — adding only the first of the three leftover terms.",
+      "zh": "$i$ —— 只加了餘下三項的第一項。"
+     }
+    ],
+    "tip": {
+     "en": "Cyclic sums: number of terms $=b-a+1$, then take the remainder mod $4$ and add only those terms. Watch the *first* term's index ($i^{9}=i$), not the last.",
+     "zh": "週期和：先算項數 $=b-a+1$，取 $\\bmod 4$ 的餘數，只加餘下幾項。注意由**首項**的指數（$i^{9}=i$）開始數，不是由末項。"
     }
    }
   },
@@ -3165,6 +3397,253 @@ window.SOLUTIONS = {
     "tip": {
      "en": "'At least one of $X$' is nearly always total − (none of $X$): $\\binom{18}{7}-\\binom{16}{7}$. Complementary counting beats case-splitting.",
      "zh": "「$X$ 至少一個」幾乎都寫成「總數 − $X$ 一個都沒有」：$\\binom{18}{7}-\\binom{16}{7}$。用互補計數比分類討論快。"
+    }
+   }
+  },
+  "2025-p2-q43": {
+   "answer": "C",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Total ways",
+       "zh": "第 1 步 · 總取法"
+      },
+      "math": "\\binom{13}{6}=1716",
+      "en": "$9$ apple $+4$ grape $=13$ cans, choose $6$.",
+      "zh": "$9$ 罐蘋果 $+4$ 罐葡萄 $=13$ 罐，取 $6$ 罐。",
+      "highlight": [
+       "\\binom{13}{6}=1716"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Count the complementary event (easier)",
+       "zh": "第 2 步 · 算對立事件（較快）"
+      },
+      "math": "P(4\\text{ grape})=\\frac{\\binom{4}{4}\\binom{9}{2}}{1716}=\\frac{36}{1716}",
+      "en": "'At most $3$ grape' is the complement of 'exactly $4$ grape' (there are only $4$ grape cans).",
+      "zh": "「最多 $3$ 罐葡萄」的對立事件是「剛好 $4$ 罐葡萄」（葡萄只有 $4$ 罐）。",
+      "highlight": [
+       "\\frac{36}{1716}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Subtract",
+       "zh": "第 3 步 · 相減"
+      },
+      "math": "1-\\frac{36}{1716}=\\frac{1680}{1716}",
+      "en": "Or add the four cases $k=0,1,2,3$: $84+504+756+336=1680$ — the same number.",
+      "zh": "也可把 $k=0,1,2,3$ 四種情況相加：$84+504+756+336=1680$，結果相同。",
+      "highlight": [
+       "\\frac{1680}{1716}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\frac{1680}{1716}=\\frac{140}{143}",
+      "en": "Divide top and bottom by $12$ — option C.",
+      "zh": "分子分母同除 $12$ —— 答案 C。",
+      "highlight": [
+       "\\frac{140}{143}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "en": "$\\frac{133}{143}$ — an arithmetic slip inside the complement ($\\binom{9}{2}=36$, not $\\binom{9}{2}+$…); $143-133=10$, i.e. $120/1716$ instead of $36/1716$.",
+      "zh": "$\\frac{133}{143}$ —— 對立事件的組合數算錯（$\\binom{9}{2}=36$，不是別的數）。"
+     },
+     {
+      "opt": "D",
+      "en": "$\\frac{714}{715}$ — that is $\\frac{1716-6}{1716}$-style (using $\\binom{4}{4}$ with a wrong second factor, or $1-\\frac{6}{1716}$).",
+      "zh": "$\\frac{714}{715}$ —— 相當於只減了 $6/1716$（第二個組合數取錯）。"
+     },
+     {
+      "opt": "A",
+      "en": "$\\frac{9}{13}$ — the ratio of apples to total cans, not a probability of this experiment.",
+      "zh": "$\\frac{9}{13}$ —— 那是蘋果佔比，不是本實驗的概率。"
+     }
+    ],
+    "tip": {
+     "en": "When the favourable event has many cases, use the complement. With $4$ grape cans, 'at most $3$' = $1-$'all $4$ grape' — one combination instead of four.",
+     "zh": "有利情況很多時用對立事件。葡萄只有 $4$ 罐，「最多 $3$ 罐」= $1-$「$4$ 罐全葡萄」—— 只需算一個組合，而非四個。"
+    }
+   }
+  },
+  "2025-p2-q44": {
+   "answer": "A",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · What a standard score means",
+       "zh": "第 1 步 · 標準分的意義"
+      },
+      "math": "z=\\frac{x-\\bar{x}}{\\sigma},\\quad \\sigma=2",
+      "en": "One standard-score unit is worth $2$ marks in this test.",
+      "zh": "在本測驗中，標準分相差 $1$ 即相差 $2$ 分。",
+      "highlight": [
+       "\\sigma=2"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Turn marks into standard-score units",
+       "zh": "第 2 步 · 把分差換成標準分差"
+      },
+      "math": "\\text{gap}=\\frac{6}{2}=3",
+      "en": "The two raw scores differ by $6$ marks, i.e. $3$ standard-deviation units.",
+      "zh": "兩人原始分相差 $6$ 分，即 $3$ 個標準差單位。",
+      "highlight": [
+       "\\text{gap}=3"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Solve",
+       "zh": "第 3 步 · 求解"
+      },
+      "math": "|z-(-2)|=3 \\;\\Rightarrow\\; z=1 \\quad\\text{or}\\quad z=-5",
+      "en": "The girl's standard score is $3$ units away from the boy's $-2$; we are not told who scored higher, so two answers.",
+      "zh": "女生的標準分與男生的 $-2$ 相差 $3$ 個單位；因未說明誰較高分，故有兩個可能。",
+      "highlight": [
+       "z=1",
+       "z=-5"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "z=-5 \\quad\\text{or}\\quad z=1",
+      "en": "That is option A.",
+      "zh": "即選項 A。",
+      "highlight": [
+       "\\text{A}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "en": "$-5$ or $3$ — the two values are $8$ and $2$ units from $-2$; they should be equally far from the boy's score.",
+      "zh": "$-5$ 或 $3$ —— 兩值與 $-2$ 分別相差 $8$ 與 $2$ 個單位，應該等距。"
+     },
+     {
+      "opt": "C",
+      "en": "$-3$ or $1$ — a gap of $2$ instead of $3$: dividing $6$ by $3$, or using $\\sigma=3$.",
+      "zh": "$-3$ 或 $1$ —— 間距取成 $2$ 而不是 $3$（把 $6$ 除了 $3$，或誤用 $\\sigma=3$）。"
+     },
+     {
+      "opt": "D",
+      "en": "$-3$ or $3$ — treating the two standard scores as symmetric about $0$, ignoring the boy's own standard score.",
+      "zh": "$-3$ 或 $3$ —— 以為兩人的標準分關於 $0$ 對稱，忽略了男生自己的標準分。"
+     }
+    ],
+    "tip": {
+     "en": "Standard score: raw-score difference $=\\sigma\\times$ (standard-score difference). Divide the marks by $\\sigma$ **first**, then set $|z-z_{\\text{boy}}|=$ that gap.",
+     "zh": "標準分：原始分差 $=\\sigma\\times$（標準分差）。先把分數除以 $\\sigma$，再寫 $|z-z_{\\text{男生}}|=$ 該間距。"
+    }
+   }
+  },
+  "2025-p2-q45": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Effect of $\\times2$ and $+3$",
+       "zh": "第 1 步 · 乘 $2$ 與加 $3$ 的影響"
+      },
+      "math": "m_{2}=2m_{1},\\;r_{2}=2r_{1},\\;v_{2}=4v_{1}",
+      "en": "Doubling multiplies mean and range by $2$, and variance by $2^{2}$.",
+      "zh": "乘 $2$ 令平均數與全距乘 $2$，方差乘 $2^{2}$。",
+      "highlight": [
+       "m_{2}=2m_{1}",
+       "v_{2}=4v_{1}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Effect of $+3$",
+       "zh": "第 2 步 · 加 $3$ 的影響"
+      },
+      "math": "m_{3}=m_{1}+3,\\;r_{3}=r_{1},\\;v_{3}=v_{1}",
+      "en": "Shifting every value does not change range or variance.",
+      "zh": "整體平移不改變全距與方差。",
+      "highlight": [
+       "r_{3}=r_{1}",
+       "v_{3}=v_{1}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Statement I",
+       "zh": "第 3 步 · 命題 I"
+      },
+      "math": "m_{1}+m_{3}=2m_{1}+3>2m_{1}=m_{2}",
+      "en": "True, since $3>0$.",
+      "zh": "因 $3>0$，恆成立。",
+      "highlight": [
+       "2m_{1}+3>2m_{1}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 4 · Statements II and III",
+       "zh": "第 4 步 · 命題 II 與 III"
+      },
+      "math": "r_{1}+r_{3}=2r_{1}=r_{2};\\quad v_{1}+v_{3}=2v_{1}<4v_{1}=v_{2}",
+      "en": "II is true for every data set; III needs $v_{1}>0$, which holds because $a,b,c,d$ are distinct.",
+      "zh": "II 對任何數據都成立；III 需要 $v_{1}>0$，而 $a,b,c,d$ 互異故成立。",
+      "highlight": [
+       "r_{1}+r_{3}=r_{2}",
+       "v_{1}+v_{3}<v_{2}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\text{I, II and III}",
+      "en": "All three — option D.",
+      "zh": "三項皆正確 —— 答案 D。",
+      "highlight": [
+       "\\text{D}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "$\\text{II and III only}$ — you rejected I; but $m_{2}=2m_{1}$ while $m_{1}+m_{3}=2m_{1}+3$, so I always holds.",
+      "zh": "$\\text{II 與 III}$ —— 誤否 I；實際上 $m_{2}=2m_{1}$ 而 $m_{1}+m_{3}=2m_{1}+3$，故 I 恆成立。"
+     },
+     {
+      "opt": "B",
+      "en": "$\\text{I and III only}$ — you thought adding $3$ changes the range; $r_{3}=r_{1}$ (shift-invariant).",
+      "zh": "$\\text{I 與 III}$ —— 誤以為加 $3$ 會改變全距；其實 $r_{3}=r_{1}$（平移不變）。"
+     },
+     {
+      "opt": "A",
+      "en": "$\\text{I and II only}$ — you doubted III by assuming $v_{1}$ could be $0$; but 'distinct' guarantees $v_{1}>0$.",
+      "zh": "$\\text{I 與 II}$ —— 懷疑 III 是因為以為 $v_{1}$ 可能為 $0$；但「互異」保證 $v_{1}>0$。"
+     }
+    ],
+    "tip": {
+     "en": "Transformation rules: $\\times k$ scales mean and range by $k$ and variance by $k^{2}$; $+c$ changes only the mean. So range never grows by shifting, and variance never grows by shifting.",
+     "zh": "變換規則：$\\times k$ 令平均數、全距乘 $k$、方差乘 $k^{2}$；$+c$ 只改變平均數。故平移不會令全距或方差變大。"
     }
    }
   }

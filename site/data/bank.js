@@ -8,7 +8,7 @@ window.BANK = {
    "nameZh": "",
    "lang": "en",
    "sourcePdf": null,
-   "questions": 39
+   "questions": 45
   },
   {
    "id": "2026-p2",
@@ -862,6 +862,64 @@ window.BANK = {
    }
   },
   {
+   "id": "2025-p2-q30",
+   "code": "25-P2Q30",
+   "no": 30,
+   "paper": "2025-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2025-p2-q30.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "Consider the following data:\n\\alpha, \\beta, -4, -3, 1, 1, 1, 4\nDenote the mode and the median of the above data by s and t respectively. If the mean and the range of the above data are 0 and 10 respectively, which of the following are true?\nI. s = 1\nII. t = -1\nIII. \\alpha + \\beta = 0",
+    "html": "Consider the following data:<br>$\\alpha, \\beta, -4, -3$, 1, 1, 1, 4<br>Denote the mode and the median of the above data by s and t respectively. If the mean and the range of the above data are 0 and 10 respectively, which of the following are true?<br>I. $s = 1$<br>II. $t = -1$<br>III. $\\alpha$ + $\\beta = 0$",
+    "latex": "\\alpha,\\quad \\beta,\\quad -4,\\quad -3,\\quad 1,\\quad 1,\\quad 1,\\quad 4"
+   },
+   "figure": null,
+   "options": {
+    "A": "\\text{I and II only}",
+    "B": "\\text{I and III only}",
+    "C": "\\text{II and III only}",
+    "D": "\\text{I, II and III}"
+   }
+  },
+  {
+   "id": "2025-p2-q31",
+   "code": "25-P2Q31",
+   "no": 31,
+   "paper": "2025-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2025-p2-q31.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": null,
+    "html": null,
+    "latex": "3\\text{E}00000000000016_{16}="
+   },
+   "figure": null,
+   "options": {
+    "A": "2^{16}+2^{15}+2^{14}+2^{13}+2^{12}",
+    "B": "2^{17}+2^{16}+2^{15}+2^{14}+2^{13}",
+    "C": "2^{52}+2^{51}+2^{50}+2^{49}+2^{48}",
+    "D": "2^{53}+2^{52}+2^{51}+2^{50}+2^{49}"
+   }
+  },
+  {
    "id": "2025-p2-q32",
    "code": "25-P2Q32",
    "no": 32,
@@ -946,6 +1004,35 @@ window.BANK = {
     "B": "\\text{I and III only}",
     "C": "\\text{II and III only}",
     "D": "\\text{I, II and III}"
+   }
+  },
+  {
+   "id": "2025-p2-q35",
+   "code": "25-P2Q35",
+   "no": 35,
+   "paper": "2025-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2025-p2-q35.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": null,
+    "html": null,
+    "latex": "i^{9}+i^{10}+i^{11}+\\dots+i^{999}="
+   },
+   "figure": null,
+   "options": {
+    "A": "-1",
+    "B": "0",
+    "C": "1",
+    "D": "i"
    }
   },
   {
@@ -1149,6 +1236,93 @@ window.BANK = {
     "B": "20\\,384",
     "C": "22\\,880",
     "D": "31\\,824"
+   }
+  },
+  {
+   "id": "2025-p2-q43",
+   "code": "25-P2Q43",
+   "no": 43,
+   "paper": "2025-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2025-p2-q43.png"
+   ],
+   "topic": {
+    "unit": 16,
+    "en": "More about Probability",
+    "zh": "概率續論"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "There are 9 cans of apple juice and 4 cans of grape juice in a bag. If 6 cans are randomly chosen from the bag at the same time, find the probability that at most 3 cans of grape juice are chosen.",
+    "html": "There are 9 cans of apple juice and 4 cans of grape juice in a bag. If 6 cans are randomly chosen from the bag at the same time, find the probability that at most 3 cans of grape juice are chosen.",
+    "latex": null
+   },
+   "figure": null,
+   "options": {
+    "A": "\\frac{9}{13}",
+    "B": "\\frac{133}{143}",
+    "C": "\\frac{140}{143}",
+    "D": "\\frac{714}{715}"
+   }
+  },
+  {
+   "id": "2025-p2-q44",
+   "code": "25-P2Q44",
+   "no": 44,
+   "paper": "2025-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2025-p2-q44.png"
+   ],
+   "topic": {
+    "unit": 17,
+    "en": "Measures of Dispersion",
+    "zh": "離差的度量"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "The standard scores of a boy and a girl in a Mathematics test are -2 and z respectively. The standard deviation of the scores of the Mathematics test is 2 marks. If the difference of the test score of the boy and the test score of the girl is 6 marks, find z.",
+    "html": "The standard scores of a boy and a girl in a Mathematics test are $-2$ and z respectively. The standard deviation of the scores of the Mathematics test is 2 marks. If the difference of the test score of the boy and the test score of the girl is 6 marks, find z.",
+    "latex": null
+   },
+   "figure": null,
+   "options": {
+    "A": "-5 \\text{ or } 1",
+    "B": "-5 \\text{ or } 3",
+    "C": "-3 \\text{ or } 1",
+    "D": "-3 \\text{ or } 3"
+   }
+  },
+  {
+   "id": "2025-p2-q45",
+   "code": "25-P2Q45",
+   "no": 45,
+   "paper": "2025-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2025-p2-q45.png"
+   ],
+   "topic": {
+    "unit": 17,
+    "en": "Measures of Dispersion",
+    "zh": "離差的度量"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "It is given that a, b, c and d are four distinct real numbers. Let m_{1}, r_{1} and v_{1} be the mean, the range and the variance of the group of numbers \\{a, b, c, d\\} respectively while m_{2}, r_{2} and v_{2} be the mean, the range and the variance of the group of numbers \\{2a, 2b, 2c, 2d\\} respectively. Denote the mean, the range and the variance of the group of numbers \\{a+3, b+3, c+3, d+3\\} by m_{3}, r_{3} and v_{3} respectively. Which of the following are true?\nI. m_{1}+m_{3} > m_{2}\nII. r_{1}+r_{3} = r_{2}\nIII. v_{1}+v_{3} < v_{2}",
+    "html": "It is given that a, b, c and d are four distinct real numbers. Let $m_{1}, r_{1}$ and $v_{1}$ be the mean, the range and the variance of the group of numbers $\\{a, b, c, d\\}$ respectively while $m_{2}, r_{2}$ and $v_{2}$ be the mean, the range and the variance of the group of numbers $\\{2a, 2b, 2c, 2d\\}$ respectively. Denote the mean, the range and the variance of the group of numbers $\\{a+3, b+3, c+3, d+3\\}$ by $m_{3}, r_{3}$ and $v_{3}$ respectively. Which of the following are true?<br>I. $m_{1}+m_{3}$ &gt; $m_{2}$<br>II. $r_{1}+r_{3} = r_{2}$<br>III. $v_{1}+v_{3}$ &lt; $v_{2}$",
+    "latex": "\\{a, b, c, d\\},\\quad \\{2a, 2b, 2c, 2d\\},\\quad \\{a+3, b+3, c+3, d+3\\}"
+   },
+   "figure": null,
+   "options": {
+    "A": "\\text{I and II only}",
+    "B": "\\text{I and III only}",
+    "C": "\\text{II and III only}",
+    "D": "\\text{I, II and III}"
    }
   }
  ]

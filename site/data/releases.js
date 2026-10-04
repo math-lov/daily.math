@@ -1,7 +1,7 @@
 // 自動生成，請勿手改（來源：data/；重新生成：python tools/make_site_data.py）
 window.RELEASES = {
  "version": 1,
- "asOf": "2026-09-28",
+ "asOf": "2026-10-05",
  "releases": [
   {
    "date": "2026-09-16",
@@ -182,6 +182,34 @@ window.RELEASES = {
     "2025-p2-q24",
     "2025-p2-q40",
     "2025-p2-q42"
+   ],
+   "status": "published"
+  },
+  {
+   "date": "2026-09-29",
+   "batch": 14,
+   "title": {
+    "en": "Junior Math · More about Probability · Measures of Dispersion",
+    "zh": "初中數學 · 概率續論 · 離差的度量"
+   },
+   "ids": [
+    "2025-p2-q30",
+    "2025-p2-q43",
+    "2025-p2-q44"
+   ],
+   "status": "published"
+  },
+  {
+   "date": "2026-09-30",
+   "batch": 15,
+   "title": {
+    "en": "Junior Math · Measures of Dispersion",
+    "zh": "初中數學 · 離差的度量"
+   },
+   "ids": [
+    "2025-p2-q31",
+    "2025-p2-q45",
+    "2025-p2-q35"
    ],
    "status": "published"
   }
