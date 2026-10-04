@@ -196,6 +196,71 @@
     "2025-p2-q45",
     "2025-p2-q35"
    ]
+  },
+  {
+   "date": "2026-10-06",
+   "batch": 16,
+   "title": {
+    "en": "Junior Math · More about Trigonometry · Loci",
+    "zh": "初中數學 · 三角學續論 · 軌跡"
+   },
+   "ids": [
+    "2026-p2-q01",
+    "2026-p2-q16",
+    "2026-p2-q26"
+   ]
+  },
+  {
+   "date": "2026-10-07",
+   "batch": 17,
+   "title": {
+    "en": "Junior Math · Equations of Circles · Measures of Dispersion",
+    "zh": "初中數學 · 圓的方程 · 離差的度量"
+   },
+   "ids": [
+    "2026-p2-q02",
+    "2026-p2-q25",
+    "2026-p2-q29"
+   ]
+  },
+  {
+   "date": "2026-10-08",
+   "batch": 18,
+   "title": {
+    "en": "Junior Math · Equations of Circles · Measures of Dispersion",
+    "zh": "初中數學 · 圓的方程 · 離差的度量"
+   },
+   "ids": [
+    "2026-p2-q03",
+    "2026-p2-q27",
+    "2026-p2-q30"
+   ]
+  },
+  {
+   "date": "2026-10-09",
+   "batch": 19,
+   "title": {
+    "en": "Junior Math · More about Probability · More about Polynomials",
+    "zh": "初中數學 · 概率續論 · 多項式續論"
+   },
+   "ids": [
+    "2026-p2-q04",
+    "2026-p2-q28",
+    "2026-p2-q32"
+   ]
+  },
+  {
+   "date": "2026-10-10",
+   "batch": 20,
+   "title": {
+    "en": "More about Polynomials · Junior Math · Arithmetic and Geometric Sequences",
+    "zh": "多項式續論 · 初中數學 · 等差等比數列"
+   },
+   "ids": [
+    "2026-p2-q05",
+    "2026-p2-q17",
+    "2026-p2-q33"
+   ]
   }
  ]
 }
