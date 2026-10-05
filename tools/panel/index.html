@@ -406,7 +406,9 @@
   $("btnCheck").onclick = function(){ action("check", {}, "檢查中…"); };
   $("btnPick").onclick = function(){ action("pick", {}, "挑選下一批…"); };
   $("btnPickGaps").onclick = function(){
-    if (!confirm("把排程中「由首批到最後一天」之間缺少的日子補上（會用到題池的題目）？")) return;
+    if (!confirm("把排程中「由首批到最後一天」之間缺少的日子補上（會用到題池的題目），"
+                 + "並把批次編號按日期重排（編號＝第 N 天）？\n\n"
+                 + "沒有缺日時，這顆按鈕只會重排編號，不會新增批次。")) return;
     action("pick-gaps", {}, "補回缺日…");
   };
   $("btnPublish").onclick = function(){

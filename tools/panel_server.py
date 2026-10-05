@@ -757,8 +757,9 @@ ACTIONS = {
         py_tool("git_publish.py", "--message", f"發布：批次 {p.get('batch') or ''}（本機面板）".strip()),
     ],
     "pick": lambda p: [py_tool("pick_batch.py", "--apply")],
-    # 補回排程中間的缺日（預設的「自動挑下一批」只會往最後一天之後排）
-    "pick-gaps": lambda p: [py_tool("pick_batch.py", "--apply", "--fill-gaps")],
+    # 補回排程中間的缺日（預設的「自動挑下一批」只會往最後一天之後排），
+    # 並把批次編號按日期重排（編號＝第 N 天，學生端顯示的 "Batch N of M" 才正確）
+    "pick-gaps": lambda p: [py_tool("pick_batch.py", "--apply", "--fill-gaps", "--renumber")],
     "review": lambda p: [py_tool("review_sheet.py", "--open")],
     "queue": lambda p: [],          # 由 handler 直接處理
     # ── 發布管理：收回／恢復／改期／換題之後「套用」──

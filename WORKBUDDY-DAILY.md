@@ -33,6 +33,7 @@ $node = "C:\Users\t073\.workbuddy\binaries\node\versions\22.22.2-3\node.exe"
 & $py tools\pick_batch.py --apply   # 自動挑 1 易 1 中 1 難（不同單元）→ 寫入 releases.json
 & $py tools\pick_batch.py --apply --fill-gaps   # 排程中間有缺日（停發／發佈失敗後）→ 全部補回
 & $py tools\pick_batch.py --apply --date 2026-10-01   # 也可以指定某一天
+& $py tools\pick_batch.py --apply --renumber  # 批次編號按日期重排（編號＝第 N 天；單獨用＝只重排）
 & $py tools\make_site_data.py       # data/*.json → site/data/*.js
 & $node tools\site_check.js         # 資料完整性 + JS 語法
 & $node tools\katex_check.js        # 逐條用 KaTeX 解析所有數學式（CI 也會跑）
@@ -48,9 +49,10 @@ git push                            # GitHub Pages 1 分鐘後自動上線
 面板的「一鍵發佈」等於上面 4 個檢查指令 + git push，任何一步失敗就中止。
 
 > **「自動挑下一批」只會往後排**（例：已有 10-10，下一次就是 10-11），不會補中間的日子。
-> 要補回缺日（例如某幾天忘了發佈、或假期後復課）→ 按面板的 **「補回缺日」**，
-> 或跑 `python tools\pick_batch.py --apply --fill-gaps`；補出的批次編號接在最後，
-> 日期排序後仍會顯示在正確的日子。
+> 要補回缺日（例如某幾天忘了發佈、或假期後復課）→ 按面板的 **「補回缺日」**
+> （等於 `pick_batch.py --apply --fill-gaps --renumber`：補完會把批次編號按日期重排，
+> 令「批次 N」＝第 N 天，學生端顯示的 “Batch N of M” 才對得上）。
+> 只想重排編號、不補日子 → `python tools\pick_batch.py --apply --renumber`。
 
 ### 發布邊界（重要）
 

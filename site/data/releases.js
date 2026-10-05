@@ -215,7 +215,7 @@ window.RELEASES = {
   },
   {
    "date": "2026-10-01",
-   "batch": 22,
+   "batch": 16,
    "title": {
     "en": "Functions and Graphs · Junior Math · Exponential and Logarithmic Functions",
     "zh": "函數與圖像 · 初中數學 · 指數與對數函數"
@@ -229,7 +229,7 @@ window.RELEASES = {
   },
   {
    "date": "2026-10-02",
-   "batch": 23,
+   "batch": 17,
    "title": {
     "en": "Junior Math · Inequalities and Linear Programming",
     "zh": "初中數學 · 不等式與線性規劃"
@@ -243,7 +243,7 @@ window.RELEASES = {
   },
   {
    "date": "2026-10-03",
-   "batch": 24,
+   "batch": 18,
    "title": {
     "en": "Junior Math · Basic Properties of Circles",
     "zh": "初中數學 · 圓的基本性質"
@@ -257,7 +257,7 @@ window.RELEASES = {
   },
   {
    "date": "2026-10-04",
-   "batch": 25,
+   "batch": 19,
    "title": {
     "en": "Junior Math · More about Trigonometry",
     "zh": "初中數學 · 三角學續論"
@@ -271,7 +271,7 @@ window.RELEASES = {
   },
   {
    "date": "2026-10-05",
-   "batch": 26,
+   "batch": 20,
    "title": {
     "en": "Exponential and Logarithmic Functions · Junior Math · More about Trigonometry",
     "zh": "指數與對數函數 · 初中數學 · 三角學續論"

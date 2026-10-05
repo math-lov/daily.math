@@ -6,6 +6,7 @@ r"""自動挑選下一天的 3 題（1 易 1 中 1 難、盡量不同單元）�
     python tools/pick_batch.py --apply --days 5         # 一次排 5 天（接在最後一批之後）
     python tools/pick_batch.py --apply --fill-gaps      # 補回排程中間的缺日（全部，由早到晚）
     python tools/pick_batch.py --apply --date 2026-10-01  # 指定某一天
+    python tools/pick_batch.py --apply --renumber       # 把批次編號按日期重排（編號＝第 N 天）
 
 設計：
   * 只從「已有解答、且尚未排進任何 release」的題池挑（學生不會看到「解答待更新」）
@@ -74,6 +75,20 @@ def title_of(batch: list[dict], lang: str) -> str:
     return " · ".join(names[:3]) or ("Daily practice" if lang == "en" else "每日練習")
 
 
+def renumber(releases: list[dict]) -> list[tuple[dict, object, int]]:
+    """把批次編號按日期重排（最早 = 1），使「批次 N」＝第 N 天。
+
+    回傳 [(entry, 舊編號, 新編號)]；entry 是原字典（就地修改）。
+    """
+    changed: list[tuple[dict, object, int]] = []
+    for i, r in enumerate(sorted(releases, key=lambda x: x["date"]), 1):
+        old = r.get("batch")
+        r["batch"] = i
+        if old != i:
+            changed.append((r, old, i))
+    return changed
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="自動挑選下一批每日三題")
     ap.add_argument("--apply", action="store_true", help="寫入 data/releases.json")
@@ -81,6 +96,8 @@ def main() -> int:
     ap.add_argument("--fill-gaps", action="store_true",
                     help="補回排程中間的缺日（首批日期 ~ 已排最後日期／今天之間，由早到晚全部補）")
     ap.add_argument("--date", default="", help="指定日期 YYYY-MM-DD（該日不可已有批次）")
+    ap.add_argument("--renumber", action="store_true",
+                    help="把批次編號按日期重排（最早 = 1）；可單獨使用，或用來修正補缺日後的編號")
     args = ap.parse_args()
 
     bank = load(BANK, {"questions": []})
@@ -92,10 +109,6 @@ def main() -> int:
     pool = [q for q in bank["questions"] if q["id"] in solutions and q["id"] not in released]
     print(f"題池：{len(pool)} 題可排（已解答且未發佈）；已排 {len(releases)} 批")
 
-    if not pool:
-        print("[停止] 沒有可排的題目——請先補新試卷或先解題。")
-        return 1
-
     today = datetime.date.today()
     used_dates = {r.get("date") for r in releases if r.get("date")}
     known = sorted(used_dates)
@@ -103,7 +116,10 @@ def main() -> int:
     first_date = datetime.date.fromisoformat(known[0]) if known else None
 
     # ── 決定這次要排哪些日期 ──
-    if args.date:
+    if args.renumber and not (args.fill_gaps or args.date):
+        plan = []                       # --renumber 單獨使用＝只重編號，不排新批次
+        print("（--renumber 單獨使用：只重排批次編號，不排新批次）")
+    elif args.date:
         if not DATE_RE.match(args.date):
             print("[停止] --date 格式應為 YYYY-MM-DD")
             return 1
@@ -119,16 +135,22 @@ def main() -> int:
         span = (end - first).days
         plan = [(first + datetime.timedelta(days=i)).isoformat() for i in range(span + 1)]
         plan = [d for d in plan if d not in used_dates]
-        if not plan:
+        if not plan and not args.renumber:
             print("[完成] 排程由首批到最後一天連續，沒有缺日 —— 不需要補。")
             return 0
-        print(f"缺日 {len(plan)} 天：{'、'.join(plan)}")
+        if plan:
+            print(f"缺日 {len(plan)} 天：{'、'.join(plan)}")
     else:
         start = max(today, last_date) if last_date else today
         plan = [(start + datetime.timedelta(days=i + 1)).isoformat() for i in range(args.days)]
 
+    if plan and not pool:
+        print("[停止] 沒有可排的題目——請先補新試卷或先解題。")
+        return 1
+
     next_batch = max((r.get("batch") or 0 for r in releases), default=0)
-    print(f"本次排定：{'、'.join(plan)}")
+    if plan:
+        print(f"本次排定：{'、'.join(plan)}")
 
     made = []
     for date in plan:
@@ -151,12 +173,23 @@ def main() -> int:
             print("  （題池已空）")
             break
 
-    if args.fill_gaps and len(made) > 1:
+    if args.renumber:
+        # 先算出重排後的編號（dry run 只印不動檔）
+        changes = renumber(releases + made)
+        if changes:
+            print(f"批次編號按日期重排（最早 = 1）：{len(changes)} 個變更")
+            for r, old, new in changes:
+                print(f"  {r['date']}  批次 {old} → {new}")
+        else:
+            print("批次編號已經是按日期順序（最早 = 1），無需變更。")
+    elif args.fill_gaps and len(made) > 1:
         print(f"註：補回的批次編號接在最後（{made[0]['batch']}~{made[-1]['batch']}），"
               "日期排序後仍會顯示在正確的日子。")
 
     if args.apply:
         releases.extend(made)
+        if args.renumber:
+            renumber(releases)
         releases.sort(key=lambda r: r["date"])
         with open(RELEASES, "w", encoding="utf-8") as f:
             json.dump(doc, f, ensure_ascii=False, indent=1)

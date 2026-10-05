@@ -199,7 +199,7 @@
   },
   {
    "date": "2026-10-01",
-   "batch": 22,
+   "batch": 16,
    "title": {
     "en": "Functions and Graphs · Junior Math · Exponential and Logarithmic Functions",
     "zh": "函數與圖像 · 初中數學 · 指數與對數函數"
@@ -212,7 +212,7 @@
   },
   {
    "date": "2026-10-02",
-   "batch": 23,
+   "batch": 17,
    "title": {
     "en": "Junior Math · Inequalities and Linear Programming",
     "zh": "初中數學 · 不等式與線性規劃"
@@ -225,7 +225,7 @@
   },
   {
    "date": "2026-10-03",
-   "batch": 24,
+   "batch": 18,
    "title": {
     "en": "Junior Math · Basic Properties of Circles",
     "zh": "初中數學 · 圓的基本性質"
@@ -238,7 +238,7 @@
   },
   {
    "date": "2026-10-04",
-   "batch": 25,
+   "batch": 19,
    "title": {
     "en": "Junior Math · More about Trigonometry",
     "zh": "初中數學 · 三角學續論"
@@ -251,7 +251,7 @@
   },
   {
    "date": "2026-10-05",
-   "batch": 26,
+   "batch": 20,
    "title": {
     "en": "Exponential and Logarithmic Functions · Junior Math · More about Trigonometry",
     "zh": "指數與對數函數 · 初中數學 · 三角學續論"
@@ -264,7 +264,7 @@
   },
   {
    "date": "2026-10-06",
-   "batch": 16,
+   "batch": 21,
    "title": {
     "en": "Junior Math · More about Trigonometry · Loci",
     "zh": "初中數學 · 三角學續論 · 軌跡"
@@ -277,7 +277,7 @@
   },
   {
    "date": "2026-10-07",
-   "batch": 17,
+   "batch": 22,
    "title": {
     "en": "Junior Math · Equations of Circles · Measures of Dispersion",
     "zh": "初中數學 · 圓的方程 · 離差的度量"
@@ -290,7 +290,7 @@
   },
   {
    "date": "2026-10-08",
-   "batch": 18,
+   "batch": 23,
    "title": {
     "en": "Junior Math · Equations of Circles · Measures of Dispersion",
     "zh": "初中數學 · 圓的方程 · 離差的度量"
@@ -303,7 +303,7 @@
   },
   {
    "date": "2026-10-09",
-   "batch": 19,
+   "batch": 24,
    "title": {
     "en": "Junior Math · More about Probability · More about Polynomials",
     "zh": "初中數學 · 概率續論 · 多項式續論"
@@ -316,7 +316,7 @@
   },
   {
    "date": "2026-10-10",
-   "batch": 20,
+   "batch": 25,
    "title": {
     "en": "More about Polynomials · Junior Math · Arithmetic and Geometric Sequences",
     "zh": "多項式續論 · 初中數學 · 等差等比數列"
@@ -329,7 +329,7 @@
   },
   {
    "date": "2026-10-11",
-   "batch": 21,
+   "batch": 26,
    "title": {
     "en": "Junior Math · Exponential and Logarithmic Functions",
     "zh": "初中數學 · 指數與對數函數"
