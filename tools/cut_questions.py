@@ -147,18 +147,52 @@ def cut(pdf_path: str, paper: str, out_dir: str, dry_run: bool = False) -> dict:
     doc.close()
     if os.path.exists(tmp_path):
         os.unlink(tmp_path)
-    return {"ok": True, "paper": paper, "pdf": os.path.basename(pdf_path), "questions": items}
+    return {"ok": True, "paper": paper, "pdf": stored_pdf_path(pdf_path), "questions": items}
+
+
+def find_pdf(arg: str) -> str | None:
+    """--pdf 可給完整路徑、專案相對路徑或單純檔名（自動往 inbox/ 找），回傳絕對路徑。"""
+    if os.path.isabs(arg):
+        return arg if os.path.isfile(arg) else None
+    for cand in (arg, os.path.join(BASE, arg), os.path.join(BASE, "inbox", arg),
+                 os.path.join(BASE, "inbox", os.path.basename(arg))):
+        if os.path.isfile(cand):
+            return os.path.abspath(cand)
+    return None
+
+
+def stored_pdf_path(path: str) -> str:
+    """記進 cut_index.json 的 PDF 路徑：專案內存 BASE 相對路徑，否則只留檔名。
+
+    面板上載的試卷在 inbox/，但舊版只記檔名（如 "2026 paper 2 eng.pdf"），
+    面板會去專案根目錄找而失敗；存相對路徑後工作台才找得到原卷。
+    """
+    for abs_path in (os.path.abspath(path), os.path.abspath(os.path.join(BASE, path))):
+        try:
+            rel = os.path.relpath(abs_path, BASE)
+        except ValueError:
+            continue
+        if not rel.startswith(".."):
+            return rel.replace("\\", "/")
+    return os.path.basename(path)
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="PDF → 每題裁剪圖")
-    ap.add_argument("--pdf", required=True, help="試卷 PDF 路徑")
+    ap.add_argument("--pdf", required=True, help="試卷 PDF 路徑（或 inbox/ 內的檔名）")
     ap.add_argument("--paper", required=True, help="試卷 id（如 2025-p2），用於命名")
     ap.add_argument("--out", default=os.path.join(BASE, "data", "cut_index.json"))
     ap.add_argument("--dry-run", action="store_true", help="只偵測題號不裁圖")
     args = ap.parse_args()
 
-    result = cut(args.pdf, args.paper, os.path.join(BASE, "images", "questions"), args.dry_run)
+    pdf = find_pdf(args.pdf)
+    if not pdf:
+        print(f"[拒絕] 找不到 PDF：{args.pdf}")
+        print(f"        也找過 {os.path.join(BASE, 'inbox', os.path.basename(args.pdf))}")
+        print("        面板上載的試卷會放在 inbox/，請確認檔名是否一致（或先按「上載 PDF」）")
+        return 2
+
+    result = cut(pdf, args.paper, os.path.join(BASE, "images", "questions"), args.dry_run)
     with open(args.out, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
 

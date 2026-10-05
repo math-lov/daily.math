@@ -318,7 +318,20 @@ def main() -> int:
         if not name.lower().endswith(".json"):
             continue
         paper_id = os.path.splitext(name)[0]          # 檔名 = 試卷 id，如 2025-p2
-        src = json.load(open(os.path.join(TRANSCRIPTS, name), encoding="utf-8"))
+        path = os.path.join(TRANSCRIPTS, name)
+        try:
+            # 用 utf-8-sig：容許 UTF-8 BOM。面板上載時已去掉 BOM，但手動放進來的
+            # 轉寫檔（Notepad／PowerShell 5.1 存檔）常帶 BOM —— 舊版用 utf-8 會
+            # 在「合併入庫」整個崩潰（Unexpected UTF-8 BOM）。
+            src = json.load(open(path, encoding="utf-8-sig"))
+        except Exception as e:  # noqa: BLE001
+            print(f"[ERROR] 讀不到 {os.path.relpath(path, BASE)}：{e}")
+            print("        轉寫檔必須是 UTF-8 的 JSON（存成 UTF-16／ANSI 會讀不到）；"
+                  "請用面板「上載 JSON」重新上載。")
+            return 1
+        if not isinstance(src.get("questions"), list) or not src["questions"]:
+            print(f"[ERROR] {os.path.relpath(path, BASE)} 缺少 questions 陣列（整卷題目清單）")
+            return 1
         papers.append((paper_id, src))
 
     # 老師在面板的修訂（data/question_edits.json）：覆寫轉寫內容；轉寫檔本身永不改動
@@ -334,7 +347,11 @@ def main() -> int:
     for paper_id, src in papers:
         prefix = paper_prefix(paper_id, src)
         for q in src.get("questions", []):
-            no = int(q["question_number"])
+            try:
+                no = int(q["question_number"])
+            except (KeyError, TypeError, ValueError):
+                print(f"[ERROR] {paper_id}：有題目缺少有效的 question_number（1、2、3…）")
+                return 1
             qid = f"{paper_id}-q{no:02d}"
             e = edits.get(qid) or {}
             qq = dict(q)

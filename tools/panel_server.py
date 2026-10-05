@@ -119,6 +119,35 @@ def cut_index() -> dict:
     return load("cut_index.json", {"pdf": "p2.pdf", "questions": []})
 
 
+def resolve_pdf(name: str) -> str | None:
+    """把 cut_index.json 記的 pdf 還原成真實路徑。
+
+    舊資料只記檔名（PDF 可能在專案根目錄或 inbox/），新資料記 BASE 相對路徑
+    （如 inbox/2026 paper 2 eng.pdf）。面板上載一律寫到 inbox/，所以舊資料若
+    只在根目錄找不到就直接往 inbox/ 找 —— 否則工作台會「找不到 PDF」。
+    """
+    name = str(name or "").strip()
+    if not name:
+        return None
+    if os.path.isabs(name):
+        return name if os.path.exists(name) else None
+    for cand in (os.path.join(BASE, name), os.path.join(INBOX, name),
+                 os.path.join(BASE, "inbox", os.path.basename(name))):
+        if os.path.isfile(cand):
+            return os.path.normpath(cand)
+    stem = os.path.splitext(os.path.basename(name))[0].lower()
+    if not stem:
+        return None
+    for root in (BASE, INBOX):                      # 最後手段：同名 PDF 全專案搜一次
+        for dirpath, dirs, files in os.walk(root):
+            dirs[:] = [d for d in dirs if d not in (".git", "node_modules", "site", "build",
+                                                    "__pycache__")]
+            for fn in files:
+                if fn.lower().endswith(".pdf") and os.path.splitext(fn)[0].lower() == stem:
+                    return os.path.join(dirpath, fn)
+    return None
+
+
 def find_cut(qid: str) -> dict | None:
     return next((q for q in cut_index().get("questions", []) if q["id"] == qid), None)
 
@@ -153,10 +182,16 @@ def recrop(qid: str, box: list[float], figure: list[float] | None = None) -> dic
     item = find_cut(qid)
     if not item:
         return {"ok": False, "error": f"cut_index.json 找不到 {qid}"}
-    pdf = os.path.join(BASE, cut_index().get("pdf") or "p2.pdf")
-    if not os.path.exists(pdf):
-        return {"ok": False, "error": f"找不到 PDF：{pdf}"}
-    doc = fitz.open(pdf)
+    pdf = resolve_pdf(cut_index().get("pdf") or "p2.pdf")
+    if not pdf:
+        return {"ok": False, "error": "找不到原卷 PDF（cut_index.json 記的是 "
+                                      f"{cut_index().get('pdf')!r}）——請確認該檔在 inbox/ 或專案根目錄，"
+                                      "或重新在「新增試卷」上載一次"}
+    try:
+        doc = fitz.open(pdf)
+    except Exception as e:  # noqa: BLE001
+        return {"ok": False, "error": f"開不到 PDF（{os.path.relpath(pdf, BASE)}）：{e}"
+                                      "——檔案可能上載不完整，請重新上載"}
     page = doc[item["page"]]
     z = 3.125
     x0, y0, x1, y1 = [float(v) for v in box]
@@ -311,8 +346,13 @@ def page_png(qid: str) -> tuple[bytes, float, float] | None:
     item = find_cut(qid)
     if not item:
         return None
-    pdf = os.path.join(BASE, cut_index().get("pdf") or "p2.pdf")
-    doc = fitz.open(pdf)
+    pdf = resolve_pdf(cut_index().get("pdf") or "p2.pdf")
+    if not pdf:
+        return None
+    try:
+        doc = fitz.open(pdf)
+    except Exception:  # noqa: BLE001
+        return None
     page = doc[item["page"]]
     pix = page.get_pixmap(matrix=fitz.Matrix(1.5, 1.5))
     data = pix.tobytes("png")
@@ -587,31 +627,97 @@ def status() -> dict:
     }
 
 
-def save_upload(parsed, body: bytes) -> dict:
+BAD_NAME_CHARS = '<>:"/\\|?*'
+MAX_UPLOAD = 120 * 1024 * 1024      # 單檔上限：掃描卷通常 < 30 MB，超過就別讓面板硬吃
+
+
+def safe_name(raw: str) -> str:
+    """檔名清洗：去掉任何路徑與 Windows 非法字元，避免 open() 失敗或寫到目錄外。"""
+    name = os.path.basename(str(raw or "").replace("\\", "/")).strip()
+    name = "".join(ch for ch in name if ch not in BAD_NAME_CHARS and ord(ch) >= 32)
+    name = name.strip(" .")
+    if not name or name in (".", ".."):
+        return ""
+    return name[:120]
+
+
+def transcript_problem(text: str) -> str | None:
+    """轉寫檔結構驗證 —— 在上載時就擋住，不要留到 build_bank.py 才崩潰。
+
+    build_bank.py 需要：物件、questions 陣列、每題有整數 question_number。
+    """
+    try:
+        doc = json.loads(text)
+    except Exception as e:  # noqa: BLE001
+        return f"JSON 解析失敗：{e}"
+    if not isinstance(doc, dict):
+        return "JSON 最外層必須是物件（{ ... }）"
+    qs = doc.get("questions")
+    if not isinstance(qs, list) or not qs:
+        return "缺少 questions 陣列（整卷題目清單）"
+    for i, q in enumerate(qs, 1):
+        if not isinstance(q, dict):
+            return f"questions 第 {i} 項不是物件"
+        try:
+            int(q["question_number"])
+        except (KeyError, TypeError, ValueError):
+            return f"questions 第 {i} 項缺少有效的 question_number（1、2、3…）"
+    return None
+
+
+def save_upload(parsed, body: bytes, declared: int = 0) -> dict:
     q = urllib.parse.parse_qs(parsed.query)
     kind = (q.get("kind") or [""])[0]
-    name = os.path.basename((q.get("name") or [""])[0])
+    raw_name = (q.get("name") or [""])[0]
+    name = safe_name(raw_name)
     if not name:
-        return {"ok": False, "error": "缺少 name 參數"}
+        return {"ok": False, "error": f"檔名不合法或缺少 name 參數：{raw_name!r}"}
+    # 上載完整性：瀏覽器／代理若沒送 Content-Length（chunked）或中途斷線，
+    # 舊版會照樣寫檔並回報成功（0-byte PDF 之後才在「切題」爆掉），這裡直接擋。
+    if declared and len(body) != declared:
+        return {"ok": False, "error": f"上載不完整（收到 {len(body)} / 應為 {declared} bytes），請重試"}
+    if not body:
+        return {"ok": False, "error": "收到的內容是空的（0 bytes）—— 請重試；"
+                                      "若一直如此，請改用其他瀏覽器，或以指令上載"}
+    if len(body) > MAX_UPLOAD:
+        return {"ok": False, "error": f"檔案過大（{len(body) / 1048576:.1f} MB > "
+                                      f"{MAX_UPLOAD // 1048576} MB）"}
+
     if kind == "pdf":
+        if not name.lower().endswith(".pdf"):
+            return {"ok": False, "error": "試卷必須是 .pdf"}
+        if not body[:1024].lstrip().startswith(b"%PDF"):
+            return {"ok": False, "error": "這不是 PDF 檔（缺少 %PDF 檔頭），請確認選對檔案"}
         os.makedirs(INBOX, exist_ok=True)
         dst = os.path.join(INBOX, name)
     elif kind == "transcript":
         if not name.lower().endswith(".json"):
             return {"ok": False, "error": "轉寫檔必須是 .json"}
+        try:
+            text = body.decode("utf-8-sig")             # 容許 UTF-8 BOM
+        except UnicodeDecodeError as e:  # noqa: BLE001
+            return {"ok": False, "error": f"轉寫檔必須是 UTF-8 編碼（PowerShell 5.1 的 > 預設會存成 "
+                                          f"UTF-16，Notepad 可能存成 ANSI）：{e}"}
+        problem = transcript_problem(text)
+        if problem:
+            return {"ok": False, "error": problem}
+        body = text.encode("utf-8")                     # 去 BOM 再存：build_bank.py 用 utf-8 讀
         os.makedirs(os.path.join(DATA, "transcripts"), exist_ok=True)
         dst = os.path.join(DATA, "transcripts", name)
-        try:
-            json.loads(body.decode("utf-8-sig"))
-        except Exception as e:  # noqa: BLE001
-            return {"ok": False, "error": f"JSON 解析失敗：{e}"}
     elif kind == "figures":
         os.makedirs(os.path.join(INBOX, "figures"), exist_ok=True)
         dst = os.path.join(INBOX, "figures", name)
     else:
         return {"ok": False, "error": f"未知的 kind：{kind}"}
-    with open(dst, "wb") as f:
-        f.write(body)
+
+    try:
+        with open(dst, "wb") as f:
+            f.write(body)
+    except PermissionError:
+        return {"ok": False, "error": f"無法寫入 {os.path.relpath(dst, BASE)}：檔案被其他程式鎖住"
+                                      "（例如 PDF 還在閱讀器中開啟）或沒有寫入權限，請關掉再試"}
+    except OSError as e:  # noqa: BLE001
+        return {"ok": False, "error": f"寫入 {os.path.relpath(dst, BASE)} 失敗：{e}"}
     return {"ok": True, "saved": os.path.relpath(dst, BASE), "bytes": len(body)}
 
 
@@ -796,7 +902,7 @@ class Handler(BaseHTTPRequestHandler):
         q = urllib.parse.parse_qs(parsed.query)
 
         if parsed.path == "/api/upload":
-            return self._send(save_upload(parsed, body))
+            return self._send(save_upload(parsed, body, length))
 
         if parsed.path in ("/api/qtext", "/api/qsol", "/api/qcrop"):
             qid = (q.get("qid") or [""])[0]

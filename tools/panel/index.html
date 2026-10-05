@@ -321,6 +321,7 @@
   function fileBody(el){
     return el.files && el.files[0] ? el.files[0] : null;
   }
+  var lastPdf = null;   // 上次成功上載到 inbox/ 的 PDF 檔名（切題讀的就是這一份）
   async function upload(kind, el, forcedName){
     var f = fileBody(el);
     if (!f){ alert("請先選擇檔案"); return null; }
@@ -331,7 +332,16 @@
                           {method:"POST", body:f});
       showSteps([{cmd:"上載 → " + kind + " · " + name, code: res.ok ? 0 : -1,
                   out: res.ok ? ("已存到 " + res.saved + "（" + res.bytes + " bytes）") : res.error}]);
+      if (res.ok && kind === "pdf") lastPdf = name;
+      if (!res.ok) alertBox("上載失敗：" + res.error);
       return res;
+    } catch(e){
+      // 連線層失敗（面板關了／中途斷線）：舊版會靜靜結束，老師看不到任何訊息
+      var msg = "無法連線到本機面板（" + (e && e.message ? e.message : e) + "）。"
+        + "請確認 start-panel.bat 的視窗仍在執行，再重試。";
+      showSteps([{cmd:"上載 → " + kind + " · " + name, code:-1, out: msg}]);
+      alertBox("上載失敗：" + msg);
+      return null;
     } finally { setBusy(false); }
   }
 
@@ -363,6 +373,11 @@
     var pid = $("paperId").value.trim();
     var f = fileBody($("jsonFile"));
     if (!pid){ alert("請先填試卷 id（如 2026-p2）"); return; }
+    if (!/^[A-Za-z0-9._-]+$/.test(pid)){
+      alert("試卷 id 只能用英文字母、數字、點、底線與連字號（例：2026-p2、mock-a），"
+            + "不要有空格或中文 —— 它會變成轉寫檔名與題目 id。");
+      return;
+    }
     if (!f){ alert("請先選擇 JSON 檔"); return; }
     var res = await upload("transcript", $("jsonFile"), pid + ".json");
     if (!res || !res.ok) return;
@@ -374,8 +389,16 @@
     var pid = $("paperId").value.trim();
     var f = fileBody($("pdfFile"));
     if (!pid){ alert("請先填試卷 id"); return; }
-    if (!f){ alert("請先選擇 PDF"); return; }
-    action("cut", {paper: pid, pdf: "inbox/" + f.name}, "切題中（OCR 需數分鐘）…");
+    // 切題讀的是「已上載到 inbox/ 的那一份」，不是檔案框現在選的檔（否則會找不到 PDF）
+    if (!lastPdf){
+      alert(f ? "這份 PDF 還沒上載。請先按「上載 PDF」，再按「切題」。"
+              : "請先選擇 PDF 並按「上載 PDF」，再按「切題」。");
+      return;
+    }
+    if (f && f.name !== lastPdf
+        && !confirm("檔案框現在選的是「" + f.name + "」，但已上載的是「" + lastPdf + "」。\n"
+                    + "要繼續用已上載的那一份切題嗎？（要換檔請先按「上載 PDF」）")) return;
+    action("cut", {paper: pid, pdf: "inbox/" + lastPdf}, "切題中（OCR 需數分鐘）…");
   };
 
   $("btnIngest").onclick = function(){ action("ingest", {}, "合併入庫…"); };
