@@ -175,6 +175,7 @@
       <tbody id="relBody"></tbody></table>
     <div class="row" style="margin-top:14px">
       <button id="btnPick">自動挑下一批（1 易 1 中 1 難）</button>
+      <button id="btnPickGaps">補回缺日</button>
       <button id="btnCheck">檢查全部</button>
       <button class="primary" id="btnPublish">一鍵發佈（檢查＋git push）</button>
     </div>
@@ -196,7 +197,7 @@
 
   function setBusy(on, label){
     busy = on;
-    ["btnRefresh","btnUpPdf","btnUpJson","btnCut","btnIngest","btnQueue","btnPrompt","btnPick","btnCheck","btnPublish"]
+    ["btnRefresh","btnUpPdf","btnUpJson","btnCut","btnIngest","btnQueue","btnPrompt","btnPick","btnPickGaps","btnCheck","btnPublish"]
       .forEach(function(id){ $(id).disabled = on; });
     $("jobState").innerHTML = on ? '<span class="spin"></span>' + (label || "執行中…") : "閒置";
   }
@@ -404,6 +405,10 @@
   $("btnIngest").onclick = function(){ action("ingest", {}, "合併入庫…"); };
   $("btnCheck").onclick = function(){ action("check", {}, "檢查中…"); };
   $("btnPick").onclick = function(){ action("pick", {}, "挑選下一批…"); };
+  $("btnPickGaps").onclick = function(){
+    if (!confirm("把排程中「由首批到最後一天」之間缺少的日子補上（會用到題池的題目）？")) return;
+    action("pick-gaps", {}, "補回缺日…");
+  };
   $("btnPublish").onclick = function(){
     if (!confirm("確定要發佈嗎？會執行檢查並 git push 到 GitHub Pages。")) return;
     action("publish", {}, "發佈中…");

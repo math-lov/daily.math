@@ -212,6 +212,76 @@ window.RELEASES = {
     "2025-p2-q35"
    ],
    "status": "published"
+  },
+  {
+   "date": "2026-10-01",
+   "batch": 22,
+   "title": {
+    "en": "Functions and Graphs · Junior Math · Exponential and Logarithmic Functions",
+    "zh": "函數與圖像 · 初中數學 · 指數與對數函數"
+   },
+   "ids": [
+    "2026-p2-q07",
+    "2026-p2-q20",
+    "2026-p2-q36"
+   ],
+   "status": "published"
+  },
+  {
+   "date": "2026-10-02",
+   "batch": 23,
+   "title": {
+    "en": "Junior Math · Inequalities and Linear Programming",
+    "zh": "初中數學 · 不等式與線性規劃"
+   },
+   "ids": [
+    "2026-p2-q08",
+    "2026-p2-q21",
+    "2026-p2-q37"
+   ],
+   "status": "published"
+  },
+  {
+   "date": "2026-10-03",
+   "batch": 24,
+   "title": {
+    "en": "Junior Math · Basic Properties of Circles",
+    "zh": "初中數學 · 圓的基本性質"
+   },
+   "ids": [
+    "2026-p2-q09",
+    "2026-p2-q22",
+    "2026-p2-q38"
+   ],
+   "status": "published"
+  },
+  {
+   "date": "2026-10-04",
+   "batch": 25,
+   "title": {
+    "en": "Junior Math · More about Trigonometry",
+    "zh": "初中數學 · 三角學續論"
+   },
+   "ids": [
+    "2026-p2-q10",
+    "2026-p2-q23",
+    "2026-p2-q40"
+   ],
+   "status": "published"
+  },
+  {
+   "date": "2026-10-05",
+   "batch": 26,
+   "title": {
+    "en": "Exponential and Logarithmic Functions · Junior Math · More about Trigonometry",
+    "zh": "指數與對數函數 · 初中數學 · 三角學續論"
+   },
+   "ids": [
+    "2026-p2-q11",
+    "2026-p2-q24",
+    "2026-p2-q41"
+   ],
+   "status": "published"
   }
  ]
 };

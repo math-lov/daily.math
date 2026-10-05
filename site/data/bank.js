@@ -16,7 +16,7 @@ window.BANK = {
    "nameZh": "",
    "lang": "en",
    "sourcePdf": null,
-   "questions": 0
+   "questions": 15
   }
  ],
  "questions": [
@@ -1323,6 +1323,441 @@ window.BANK = {
     "B": "\\text{I and III only}",
     "C": "\\text{II and III only}",
     "D": "\\text{I, II and III}"
+   }
+  },
+  {
+   "id": "2026-p2-q07",
+   "code": "26-P2Q07",
+   "no": 7,
+   "paper": "2026-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2026-p2-q07.png"
+   ],
+   "topic": {
+    "unit": 2,
+    "en": "Functions and Graphs",
+    "zh": "函數與圖像"
+   },
+   "difficulty": 1,
+   "timeSec": 60,
+   "stem": {
+    "text": "Let $f(x)=(x+d)(x-2)+9x$, where d is a constant. If $f(1+d)=0$, then $d=$",
+    "html": "Let $f(x)=(x+d)(x-2)+9x$, where d is a constant. If $f(1+d)=0$, then $d=$",
+    "latex": "f(x)=(x+d)(x-2)+9x,\\quad f(1+d)=0"
+   },
+   "figure": null,
+   "options": {
+    "A": "-2.",
+    "B": "-1.",
+    "C": "1.",
+    "D": "2."
+   }
+  },
+  {
+   "id": "2026-p2-q08",
+   "code": "26-P2Q08",
+   "no": 8,
+   "paper": "2026-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2026-p2-q08.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 1,
+   "timeSec": 60,
+   "stem": {
+    "text": "Let $g(x)=hx^{3}+2x^{2}+kx-5$, where h and k are constants. If $g(x)$ is divisible by $x-4,$ find the remainder when $g(x)$ is divided by $x+4$.",
+    "html": "Let $g(x)=hx^{3}+2x^{2}+kx-5$, where h and k are constants. If $g(x)$ is divisible by $x-4,$ find the remainder when $g(x)$ is divided by $x+4$.",
+    "latex": "g(x)=hx^{3}+2x^{2}+kx-5"
+   },
+   "figure": null,
+   "options": {
+    "A": "-27",
+    "B": "-10",
+    "C": "0",
+    "D": "54"
+   }
+  },
+  {
+   "id": "2026-p2-q09",
+   "code": "26-P2Q09",
+   "no": 9,
+   "paper": "2026-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2026-p2-q09.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 1,
+   "timeSec": 60,
+   "stem": {
+    "text": "The solution of $x-1>\\frac{2x-9}{3}$ or $3x+12\\ge0$ is",
+    "html": "The solution of $x-1&gt;\\frac{2x-9}{3}$ or $3x+12\\ge0$ is",
+    "latex": "x-1>\\frac{2x-9}{3} \\text{ or } 3x+12\\ge0"
+   },
+   "figure": null,
+   "options": {
+    "A": "$x\\le-4$.",
+    "B": "$x\\ge-4$.",
+    "C": "$x<-6$.",
+    "D": "$x>-6$."
+   }
+  },
+  {
+   "id": "2026-p2-q10",
+   "code": "26-P2Q10",
+   "no": 10,
+   "paper": "2026-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2026-p2-q10.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 1,
+   "timeSec": 60,
+   "stem": {
+    "text": "The costs of rice of brand S and rice of brand T are $\\$12/kg$ and $\\$18/kg$ respectively. If s kg of rice of brand S and t kg of rice of brand T are mixed so that the cost of the mixture is $\\$16/kg$, then $s:t=$",
+    "html": "The costs of rice of brand S and rice of brand T are &dollar;\\&dollar;12/kg&dollar; and &dollar;\\&dollar;18/kg&dollar; respectively. If s kg of rice of brand S and t kg of rice of brand T are mixed so that the cost of the mixture is &dollar;\\&dollar;16/kg&dollar;, then &dollar;s:t=&dollar;",
+    "latex": "s:t="
+   },
+   "figure": null,
+   "options": {
+    "A": "1:2.",
+    "B": "2:1.",
+    "C": "2:3.",
+    "D": "3:2."
+   }
+  },
+  {
+   "id": "2026-p2-q11",
+   "code": "26-P2Q11",
+   "no": 11,
+   "paper": "2026-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2026-p2-q11.png"
+   ],
+   "topic": {
+    "unit": 3,
+    "en": "Exponential and Logarithmic Functions",
+    "zh": "指數與對數函數"
+   },
+   "difficulty": 1,
+   "timeSec": 60,
+   "stem": {
+    "text": "A sum of $P$ is deposited at an interest rate of 4% per annum for 5 years, compounded quarterly. If the amount is $80000, find P correct to the nearest integer.",
+    "html": "A sum of &dollar;P&dollar; is deposited at an interest rate of 4% per annum for 5 years, compounded quarterly. If the amount is &dollar;80000, find P correct to the nearest integer.",
+    "latex": "P(1+\\frac{4\\%}{4})^{20}=80000"
+   },
+   "figure": null,
+   "options": {
+    "A": "65 520",
+    "B": "65 564",
+    "C": "65 754",
+    "D": "66 667"
+   }
+  },
+  {
+   "id": "2026-p2-q20",
+   "code": "26-P2Q20",
+   "no": 20,
+   "paper": "2026-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2026-p2-q20.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 2,
+   "timeSec": 90,
+   "stem": {
+    "text": "In the figure, ABCD is a rectangle. Let E be a point lying on BC. AB produced and DE produced meet at the point F. If $AB=3~cm$, $BE=12~cm$ and $CE=4~cm$, then $EF=$",
+    "html": "In the figure, ABCD is a rectangle. Let E be a point lying on BC. AB produced and DE produced meet at the point F. If $AB=3~cm$, $BE=12~cm$ and $CE=4~cm$, then $EF=$",
+    "latex": "AB=3,\\quad BE=12,\\quad CE=4"
+   },
+   "figure": "長方形 ABCD 中，E 在 BC 上，CE=4，EB=12，AB=3，延長 AB 與延長 DE 交於 F，形成直角三角形 DCE 與 FBE 相似。",
+   "options": {
+    "A": "13 cm.",
+    "B": "15 cm",
+    "C": "16 cm",
+    "D": "20 cm"
+   }
+  },
+  {
+   "id": "2026-p2-q21",
+   "code": "26-P2Q21",
+   "no": 21,
+   "paper": "2026-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2026-p2-q21.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 2,
+   "timeSec": 90,
+   "stem": {
+    "text": "It is given that WXYZ is a quadrilateral, where $\\angle WXY=\\angle YWZ$ and $\\angle WYX=\\angle WZY$. If $WX=9$, $WY=40~cm$ and $XY=41~cm$, find the perimeter of the quadrilateral WXYZ.",
+    "html": "It is given that WXYZ is a quadrilateral, where $\\angle WXY=\\angle YWZ$ and $\\angle WYX=\\angle WZY$. If $WX=9$, $WY=40~cm$ and $XY=41~cm$, find the perimeter of the quadrilateral WXYZ.",
+    "latex": "\\angle WXY=\\angle YWZ,\\quad \\angle WYX=\\angle WZY"
+   },
+   "figure": null,
+   "options": {
+    "A": "100 cm",
+    "B": "180 cm",
+    "C": "410 cm",
+    "D": "490 cm"
+   }
+  },
+  {
+   "id": "2026-p2-q22",
+   "code": "26-P2Q22",
+   "no": 22,
+   "paper": "2026-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2026-p2-q22.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 2,
+   "timeSec": 90,
+   "stem": {
+    "text": "According to the figure, which of the following must be true?",
+    "html": "According to the figure, which of the following must be true?",
+    "latex": "p+r=q \\text{ or related}"
+   },
+   "figure": "一個具有兩個直角的五邊形/折線圖，上下兩邊與左垂直邊垂直（互相平行），折角頂點處內角分別標記為 p, q, r。",
+   "options": {
+    "A": "p=r",
+    "B": "q=90^{\\circ}",
+    "C": "p+r=q",
+    "D": "p+q+r=180^{\\circ}"
+   }
+  },
+  {
+   "id": "2026-p2-q23",
+   "code": "26-P2Q23",
+   "no": 23,
+   "paper": "2026-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2026-p2-q23.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 2,
+   "timeSec": 90,
+   "stem": {
+    "text": "It is given that ABCDEF is a regular 6-sided polygon. If AC and BF intersect at the point $G,$ which of the following are true?\nI. BG//CE\nII. $\\Delta ABG\\sim\\Delta BDC$\nIII. $\\Delta AGF\\cong\\Delta BGC$",
+    "html": "It is given that ABCDEF is a regular 6-sided polygon. If AC and BF intersect at the point $G,$ which of the following are true?<br>I. BG//CE<br>II. $\\Delta ABG\\sim\\Delta BDC$<br>III. $\\Delta AGF\\cong\\Delta BGC$",
+    "latex": "\\text{Regular hexagon } ABCDEF"
+   },
+   "figure": null,
+   "options": {
+    "A": "I and II only",
+    "B": "I and III only",
+    "C": "II and III only",
+    "D": "I, II and III"
+   }
+  },
+  {
+   "id": "2026-p2-q24",
+   "code": "26-P2Q24",
+   "no": 24,
+   "paper": "2026-p2",
+   "section": "A",
+   "images": [
+    "images/questions/2026-p2-q24.png"
+   ],
+   "topic": {
+    "unit": 0,
+    "en": "Junior Math",
+    "zh": "初中數學"
+   },
+   "difficulty": 2,
+   "timeSec": 90,
+   "stem": {
+    "text": "The point (3,1) is translated leftwards by 5 units to the point U. U is then rotated anticlockwise about the origin through $270^{\\circ}$ to the point V. Find the y-coordinate of V.",
+    "html": "The point (3,1) is translated leftwards by 5 units to the point U. U is then rotated anticlockwise about the origin through $270^{\\circ}$ to the point V. Find the y-coordinate of V.",
+    "latex": "(3,1) \\to U \\to V"
+   },
+   "figure": null,
+   "options": {
+    "A": "-2",
+    "B": "-1",
+    "C": "1",
+    "D": "2"
+   }
+  },
+  {
+   "id": "2026-p2-q36",
+   "code": "26-P2Q36",
+   "no": 36,
+   "paper": "2026-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2026-p2-q36.png"
+   ],
+   "topic": {
+    "unit": 3,
+    "en": "Exponential and Logarithmic Functions",
+    "zh": "指數與對數函數"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "It is given that $\\log y$ is a linear function of x. The intercepts on the vertical axis and on the horizontal axis of the graph of the linear function are 2 and 1 respectively. If $y=ab^{x}$, find a.",
+    "html": "It is given that $\\log y$ is a linear function of x. The intercepts on the vertical axis and on the horizontal axis of the graph of the linear function are 2 and 1 respectively. If $y=ab^{x}$, find a.",
+    "latex": "y=ab^x, \\text{ vertical intercept of } \\log y \\text{ vs } x \\text{ is } 2"
+   },
+   "figure": null,
+   "options": {
+    "A": "0.01",
+    "B": "0.1",
+    "C": "10",
+    "D": "100"
+   }
+  },
+  {
+   "id": "2026-p2-q37",
+   "code": "26-P2Q37",
+   "no": 37,
+   "paper": "2026-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2026-p2-q37.png"
+   ],
+   "topic": {
+    "unit": 8,
+    "en": "Inequalities and Linear Programming",
+    "zh": "不等式與線性規劃"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "Consider the following system of inequalities:\n$\\begin{cases}y\\le7\\\\ 3x-4y\\le2\\\\ 6x+13y\\ge25\\end{cases}$\nLet R be the region which represents the solution of the above system of inequalities. If (x, y) is a point lying in R, then the least value of $5x+4y+28$ is",
+    "html": "Consider the following system of inequalities:<br>$y\\le7<br> 3x-4y\\le2<br> 6x+13y\\ge25$<br>Let R be the region which represents the solution of the above system of inequalities. If (x, y) is a point lying in R, then the least value of $5x+4y+28$ is",
+    "latex": "\\begin{cases}y\\le7\\\\ 3x-4y\\le2\\\\ 6x+13y\\ge25\\end{cases},\\quad \\min(5x+4y+28)"
+   },
+   "figure": null,
+   "options": {
+    "A": "1.",
+    "B": "19.",
+    "C": "42.",
+    "D": "106."
+   }
+  },
+  {
+   "id": "2026-p2-q38",
+   "code": "26-P2Q38",
+   "no": 38,
+   "paper": "2026-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2026-p2-q38.png"
+   ],
+   "topic": {
+    "unit": 11,
+    "en": "Basic Properties of Circles",
+    "zh": "圓的基本性質"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "In the figure, ABCD is a circle. AC and BD intersect at the point E. BD is produced to the point T such that TC is tangent to the circle. It is given that $AB//TC$. If $\\angle AED=85^{\\circ}$ and $\\angle CTE=23^{\\circ}$, then $\\angle ADE=$",
+    "html": "In the figure, ABCD is a circle. AC and BD intersect at the point E. BD is produced to the point T such that TC is tangent to the circle. It is given that $AB//TC$. If $\\angle AED=85^{\\circ}$ and $\\angle CTE=23^{\\circ}$, then $\\angle ADE=$",
+    "latex": "AB//TC, \\angle AED=85^{\\circ}, \\angle CTE=23^{\\circ}"
+   },
+   "figure": "圓 ABCD 中對角線 AC 與 BD 交於 E，延長 BD 至 T，TC 為圓切線，TC//AB，已知角 AED=85 度，角 CTE=23 度，求角 ADE。",
+   "options": {
+    "A": "$39^{\\circ}$.",
+    "B": "$56^{\\circ}$.",
+    "C": "$62^{\\circ}$.",
+    "D": "$72^{\\circ}$."
+   }
+  },
+  {
+   "id": "2026-p2-q40",
+   "code": "26-P2Q40",
+   "no": 40,
+   "paper": "2026-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2026-p2-q40.png"
+   ],
+   "topic": {
+    "unit": 14,
+    "en": "More about Trigonometry",
+    "zh": "三角學續論"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "The figure shows the right prism ABCDEF, where $AB:AC:AE=1:1:2$. Let $\\theta$ be the angle between the plane ABC and the plane BCE. If $\\angle BAC=90^{\\circ}$, find $\\sin\\theta$.",
+    "html": "The figure shows the right prism ABCDEF, where $AB:AC:AE=1:1:2$. Let $\\theta$ be the angle between the plane ABC and the plane BCE. If $\\angle BAC=90^{\\circ}$, find $\\sin\\theta$.",
+    "latex": "AB:AC:AE=1:1:2,\\quad \\angle BAC=90^{\\circ}"
+   },
+   "figure": "直三棱柱 ABCDEF，底面 ABC 為等腰直角三角形（BAC=90度），側棱 AE 垂直底面，求底面 ABC 與截面 BCE 的線面交角正弦值。",
+   "options": {
+    "A": "\\frac{1}{3}",
+    "B": "\\frac{2}{3}",
+    "C": "\\frac{\\sqrt{2}}{4}",
+    "D": "\\frac{2\\sqrt{2}}{3}"
+   }
+  },
+  {
+   "id": "2026-p2-q41",
+   "code": "26-P2Q41",
+   "no": 41,
+   "paper": "2026-p2",
+   "section": "B",
+   "images": [
+    "images/questions/2026-p2-q41.png"
+   ],
+   "topic": {
+    "unit": 14,
+    "en": "More about Trigonometry",
+    "zh": "三角學續論"
+   },
+   "difficulty": 3,
+   "timeSec": 120,
+   "stem": {
+    "text": "For $90^{\\circ}\\le\\theta\\le360^{\\circ}$, how many roots does the equation $6\\sin^{4}\\theta-5\\sin^{2}\\theta+1=0$ have?",
+    "html": "For $90^{\\circ}\\le\\theta\\le360^{\\circ}$, how many roots does the equation $6\\sin^{4}\\theta-5\\sin^{2}\\theta+1=0$ have?",
+    "latex": "6\\sin^4\\theta - 5\\sin^2\\theta + 1 = 0,\\quad 90^\\circ\\le\\theta\\le360^\\circ"
+   },
+   "figure": null,
+   "options": {
+    "A": "2",
+    "B": "4",
+    "C": "6",
+    "D": "8"
    }
   }
  ]

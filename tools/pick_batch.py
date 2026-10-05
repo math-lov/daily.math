@@ -1,15 +1,20 @@
 r"""自動挑選下一天的 3 題（1 易 1 中 1 難、盡量不同單元），寫入 data/releases.json。
 
 用法：
-    python tools/pick_batch.py                 # 只建議（dry run）
-    python tools/pick_batch.py --apply         # 實際寫入 releases.json
-    python tools/pick_batch.py --apply --days 5  # 一次排 5 天
+    python tools/pick_batch.py                          # 只建議（dry run）
+    python tools/pick_batch.py --apply                  # 實際寫入 releases.json
+    python tools/pick_batch.py --apply --days 5         # 一次排 5 天（接在最後一批之後）
+    python tools/pick_batch.py --apply --fill-gaps      # 補回排程中間的缺日（全部，由早到晚）
+    python tools/pick_batch.py --apply --date 2026-10-01  # 指定某一天
 
 設計：
   * 只從「已有解答、且尚未排進任何 release」的題池挑（學生不會看到「解答待更新」）
   * 優先 1 易 / 1 中 / 1 難；某個難度沒貨時，用最近的難度補上（並在輸出提醒）
   * 同一天盡量不要三個同單元
   * 日期接在已有排程之後（若全部已過期，就從今天開始）
+  * **缺日**：預設模式只會往後排（例：已有 10-10，下一次就是 10-11），中間的
+    10-01~10-05 要靠 --fill-gaps 或 --date 才會補回。補出的批次編號接在最後
+    （日期排序後仍會顯示在正確的日子）。
 """
 from __future__ import annotations
 
@@ -18,7 +23,10 @@ import datetime
 import io
 import json
 import os
+import re
 import sys
+
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
@@ -69,7 +77,10 @@ def title_of(batch: list[dict], lang: str) -> str:
 def main() -> int:
     ap = argparse.ArgumentParser(description="自動挑選下一批每日三題")
     ap.add_argument("--apply", action="store_true", help="寫入 data/releases.json")
-    ap.add_argument("--days", type=int, default=1, help="要排幾天（預設 1）")
+    ap.add_argument("--days", type=int, default=1, help="要排幾天（預設 1；--fill-gaps 時忽略）")
+    ap.add_argument("--fill-gaps", action="store_true",
+                    help="補回排程中間的缺日（首批日期 ~ 已排最後日期／今天之間，由早到晚全部補）")
+    ap.add_argument("--date", default="", help="指定日期 YYYY-MM-DD（該日不可已有批次）")
     args = ap.parse_args()
 
     bank = load(BANK, {"questions": []})
@@ -85,19 +96,47 @@ def main() -> int:
         print("[停止] 沒有可排的題目——請先補新試卷或先解題。")
         return 1
 
-    last_date = max((r.get("date") for r in releases), default=None)
     today = datetime.date.today()
-    start = max(today, datetime.date.fromisoformat(last_date)) if last_date else today
+    used_dates = {r.get("date") for r in releases if r.get("date")}
+    known = sorted(used_dates)
+    last_date = datetime.date.fromisoformat(known[-1]) if known else None
+    first_date = datetime.date.fromisoformat(known[0]) if known else None
+
+    # ── 決定這次要排哪些日期 ──
+    if args.date:
+        if not DATE_RE.match(args.date):
+            print("[停止] --date 格式應為 YYYY-MM-DD")
+            return 1
+        d0 = datetime.date.fromisoformat(args.date)
+        plan = [(d0 + datetime.timedelta(days=i)).isoformat() for i in range(max(1, args.days))]
+        clash = [d for d in plan if d in used_dates]
+        if clash:
+            print(f"[停止] {'、'.join(clash)} 已經有批次，不能重複排")
+            return 1
+    elif args.fill_gaps:
+        end = max(today, last_date or today)
+        first = first_date or today
+        span = (end - first).days
+        plan = [(first + datetime.timedelta(days=i)).isoformat() for i in range(span + 1)]
+        plan = [d for d in plan if d not in used_dates]
+        if not plan:
+            print("[完成] 排程由首批到最後一天連續，沒有缺日 —— 不需要補。")
+            return 0
+        print(f"缺日 {len(plan)} 天：{'、'.join(plan)}")
+    else:
+        start = max(today, last_date) if last_date else today
+        plan = [(start + datetime.timedelta(days=i + 1)).isoformat() for i in range(args.days)]
+
     next_batch = max((r.get("batch") or 0 for r in releases), default=0)
+    print(f"本次排定：{'、'.join(plan)}")
 
     made = []
-    for d in range(args.days):
+    for date in plan:
         batch = pick_day(pool)
         if len(batch) < 3:
-            print(f"[警告] 只夠挑 {len(batch)} 題（題池快用完）")
+            print(f"[警告] {date} 只夠挑 {len(batch)} 題（題池快用完）")
         for q in batch:
             pool.remove(q)
-        date = (start + datetime.timedelta(days=d + 1)).isoformat()
         next_batch += 1
         entry = {
             "date": date,
@@ -111,6 +150,10 @@ def main() -> int:
         if not pool:
             print("  （題池已空）")
             break
+
+    if args.fill_gaps and len(made) > 1:
+        print(f"註：補回的批次編號接在最後（{made[0]['batch']}~{made[-1]['batch']}），"
+              "日期排序後仍會顯示在正確的日子。")
 
     if args.apply:
         releases.extend(made)

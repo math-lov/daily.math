@@ -3646,6 +3646,931 @@ window.SOLUTIONS = {
      "zh": "變換規則：$\\times k$ 令平均數、全距乘 $k$、方差乘 $k^{2}$；$+c$ 只改變平均數。故平移不會令全距或方差變大。"
     }
    }
+  },
+  "2026-p2-q07": {
+   "answer": "A",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Substitute the expression x = 1 + d into each bracket",
+       "zh": "第 1 步 · 把整個式子 (1 + d) 當作 x 代入每一項"
+      },
+      "math": "f(1+d) = [(1+d) + d][(1+d) - 2] + 9(1+d)",
+      "en": "When x is an expression 1 + d, replace every occurrence of x with (1 + d). First bracket: (1 + d) + d = 1 + 2d. Second bracket: (1 + d) - 2 = d - 1. Third term: 9(1 + d).",
+      "zh": "很多同學看到代入的是含有字母的式子便會退縮。其實做法完全一樣：把算式裡的每一個 $x$ 都換成括號 $(1 + d)$。第一個括號變成 $[(1 + d) + d] = (1 + 2d)$；第二個括號變成 $[(1 + d) - 2] = (d - 1)$；最後一項則是 $9(1 + d)$。"
+     },
+     {
+      "title": {
+       "en": "Step 2 · Expand both parts carefully",
+       "zh": "第 2 步 · 分開小心展開兩個部分"
+      },
+      "math": "(1+2d)(d-1) = d - 1 + 2d^2 - 2d = 2d^2 - d - 1, \\quad 9(1+d) = 9 + 9d",
+      "en": "Expand the first part using FOIL: (1+2d)(d-1) = 2d^2 - d - 1. Expand the second part by distributing 9: 9(1+d) = 9 + 9d.",
+      "zh": "我們先展開前面相乘的兩個括號：$(1 + 2d)(d - 1) = 1(d) - 1(1) + 2d(d) - 2d(1) = 2d^2 - d - 1$。接著展開後面的乘法：$9 \\times (1 + d) = 9 + 9d$。"
+     },
+     {
+      "title": {
+       "en": "Step 3 · Combine all terms and set equal to 0",
+       "zh": "第 3 步 · 合併同類項並列出二次方程"
+      },
+      "math": "(2d^2 - d - 1) + (9 + 9d) = 0 \\implies 2d^2 + (-d + 9d) + (-1 + 9) = 0 \\implies 2d^2 + 8d + 8 = 0",
+      "en": "Add the two expanded parts together. Group the d terms: -d + 9d = +8d. Group the constant terms: -1 + 9 = +8. Since f(1+d) = 0, we have 2d^2 + 8d + 8 = 0.",
+      "zh": "因為題目指明 $f(1 + d) = 0$，我們把展開後的兩式相加並令其等於 $0$。按二次項、一次項、常數項分類整理：二次項只有 $2d^2$；一次項是 $-d + 9d = +8d$；常數項是 $-1 + 9 = +8$。合併後得到二次方程：$2d^2 + 8d + 8 = 0$。"
+     },
+     {
+      "title": {
+       "en": "Step 4 · Simplify by dividing by 2 and solve",
+       "zh": "第 4 步 · 兩邊同除以 2 化簡，因式分解求出 d"
+      },
+      "math": "\\frac{2d^2 + 8d + 8}{2} = \\frac{0}{2} \\implies d^2 + 4d + 4 = 0 \\implies (d + 2)^2 = 0 \\implies d = -2",
+      "en": "Every coefficient is divisible by 2. Dividing both sides gives d^2 + 4d + 4 = 0. Recognise this as a perfect square: (d + 2)^2 = 0, which yields d = -2. Matches Option A.",
+      "zh": "觀察方程各項都是偶數，兩邊同時除以 $2$ 化簡：$d^2 + 4d + 4 = 0$。此時認出完全平方式 $(d + 2)^2 = 0$（或者利用計算機求根），即 $d + 2 = 0$，解得 $d = -2$。對應答案選項 A。"
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "1 — Dropped the +9x term at the very end when substituting, leaving only (1+2d)(d-1) = 0, which gives d = 1 or d = -1/2.",
+      "zh": "1 —— 代入時粗心漏掉了題目算式最後的 $+9x$，只算了前面的乘積 $(1+2d)(d-1) = 0$，從而誤算出 $d = 1$。"
+     },
+     {
+      "opt": "D",
+      "en": "2 — Factored successfully into (d+2)^2 = 0, but made a sign slip when solving the linear root, mistakenly writing d = 2.",
+      "zh": "2 —— 成功分解出 $(d+2)^2 = 0$，但在最後一步移項時弄錯負號，把 $d + 2 = 0$ 寫成 $d = 2$。"
+     },
+     {
+      "opt": "B",
+      "en": "-1 — Made an arithmetic mistake when expanding (1+d)-2 or in the middle term during collection.",
+      "zh": "-1 —— 在展開第二個括號 $(1+d)-2$ 或合併一次項時出現計算失誤。"
+     }
+    ],
+    "tip": {
+     "en": "Do not expand the original function formula f(x) before substituting! Substitute (1+d) directly into each bracket first to keep expressions clean. After forming the equation, always divide by common numeric factors before factoring.",
+     "zh": "面對這類代入多項式的題目，千萬不要一開始就急著把原本的 $f(x)$ 乘開！直接把 $(1+d)$ 填入各個括號內再化簡會清楚得多。列出二次方程後，記得先除以公因數（此處除以 $2$），數字變小就不容易算錯。"
+    }
+   }
+  },
+  "2026-p2-q08": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Divisibility by $x-4$",
+       "zh": "第 1 步 · 被 $x-4$ 整除"
+      },
+      "math": "g(4)=64h+32+4k-5=0 \\Rightarrow 64h+4k=-27",
+      "en": "By the factor theorem, $g(4)=0$, which gives one equation linking $h$ and $k$.",
+      "zh": "由因式定理 $g(4)=0$，得到一個關於 $h$、$k$ 的方程。",
+      "highlight": [
+       "64h+4k=-27"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Remainder when divided by $x+4$",
+       "zh": "第 2 步 · 除以 $x+4$ 的餘數"
+      },
+      "math": "g(-4)=-64h+32-4k-5=-(64h+4k)+27",
+      "en": "The remainder is $g(-4)$. Group the $h,k$ terms: they appear again as $64h+4k$, but with the opposite sign.",
+      "zh": "餘數是 $g(-4)$。把 $h,k$ 的項併起來，正好又出現 $64h+4k$，只是變了號。",
+      "highlight": [
+       "-(64h+4k)+27"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "g(-4)=27+27=54",
+      "en": "Substitute $64h+4k=-27$: $g(-4)=27+27=54$ — no need to find $h$ and $k$ separately.",
+      "zh": "代入 $64h+4k=-27$：$g(-4)=27+27=54$ —— 不必分別求出 $h$ 與 $k$。",
+      "highlight": [
+       "54"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "Answering 0 because $g$ is divisible by $x-4$ — the divisor here is $x+4$, not $x-4$.",
+      "zh": "因為「$g$ 可被 $x-4$ 整除」就直接答 0 —— 但題目除的是 $x+4$，不是 $x-4$。"
+     },
+     {
+      "opt": "A",
+      "en": "Getting $g(-4)=-(64h+4k)=-(-27)=27$ and stopping, forgetting to add the constant part $+27$.",
+      "zh": "算出 $-(64h+4k)=27$ 就停手，忘了再加油常數部分 $+27$。"
+     }
+    ],
+    "tip": {
+     "en": "Two remainders from one condition usually share the same combination of unknowns — compare $g(4)$ and $g(-4)$ and cancel instead of solving.",
+     "zh": "同一條件下的兩個餘數，通常會共用同一組未知數組合 —— 比較 $g(4)$ 與 $g(-4)$ 直接消去，不必解方程。"
+    }
+   }
+  },
+  "2026-p2-q09": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Solve the first inequality",
+       "zh": "第 1 步 · 解第一條不等式"
+      },
+      "math": "x-1>\\frac{2x-9}{3} \\Rightarrow 3x-3>2x-9 \\Rightarrow x>-6",
+      "en": "Multiply both sides by 3 (positive, so the inequality sign is unchanged), then collect terms.",
+      "zh": "兩邊乘 3（正數，不等號方向不變），再合併同類項。",
+      "highlight": [
+       "x>-6"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Solve the second inequality",
+       "zh": "第 2 步 · 解第二條不等式"
+      },
+      "math": "3x+12\\ge0 \\Rightarrow x\\ge-4",
+      "en": "The second condition gives $x\\ge-4$, a smaller set than $x>-6$.",
+      "zh": "第二式得 $x\\ge-4$，這個範圍比 $x>-6$ 窄。",
+      "highlight": [
+       "x\\ge-4"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\{x>-6\\}\\cup\\{x\\ge-4\\}=\\{x>-6\\}",
+      "en": "'or' means union: every number satisfying either one. Since $x\\ge-4$ is inside $x>-6$, the union is just $x>-6$ — option D.",
+      "zh": "「or」代表聯集：滿足其中之一即可。因 $x\\ge-4$ 完全包含在 $x>-6$ 內，聯集就是 $x>-6$，選 D。",
+      "highlight": [
+       "x>-6"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "en": "Treating 'or' as 'and' (intersection) gives $x\\ge-4$ — read the connective carefully.",
+      "zh": "把「or」當成「and」（交集）就會得到 $x\\ge-4$ —— 要看清楚連接詞。"
+     },
+     {
+      "opt": "A",
+      "en": "Writing $x\\le-4$ means the inequality sign was flipped when it should not have been (dividing by a positive number).",
+      "zh": "寫成 $x\\le-4$ 表示不等號被誤轉向（除以正數時方向不變）。"
+     }
+    ],
+    "tip": {
+     "en": "Solve each inequality separately, draw both on a number line, then take union for 'or' and intersection for 'and'.",
+     "zh": "每條不等式分別解出，畫在同一條數線上：『or』取聯集、『and』取交集。"
+    }
+   }
+  },
+  "2026-p2-q10": {
+   "answer": "A",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Total cost = total weight × unit cost",
+       "zh": "第 1 步 · 總成本＝總重量 × 每公斤成本"
+      },
+      "math": "12s+18t=16(s+t)",
+      "en": "The mixture costs 16 per kg and weighs $s+t$ kg, which must equal the sum of the two costs.",
+      "zh": "混合物每公斤 16，共 $s+t$ 公斤，其總成本必等於兩種米的成本之和。",
+      "highlight": [
+       "12s+18t=16(s+t)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Simplify",
+       "zh": "第 2 步 · 化簡"
+      },
+      "math": "12s+18t=16s+16t \\Rightarrow 2t=4s \\Rightarrow t=2s",
+      "en": "Expand the right side and collect: $18t-16t=16s-12s$.",
+      "zh": "展開右邊再合併：$18t-16t=16s-12s$，得 $t=2s$。",
+      "highlight": [
+       "t=2s"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "s:t=1:2",
+      "en": "When $t=2s$, taking $s=1$ gives $t=2$ — option A. (Check: 12 + 36 = 48 for 3 kg, i.e. 16 per kg.)",
+      "zh": "當 $t=2s$，取 $s=1$ 得 $t=2$，選 A。（驗算：1 公斤 S 與 2 公斤 T 共 12+36=48，除以 3 公斤正是 16。）",
+      "highlight": [
+       "1:2"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "en": "2:1 is the ratio $t:s$, not $s:t$ — check which quantity is asked first.",
+      "zh": "2:1 是 $t:s$，不是題目問的 $s:t$ —— 要看清楚哪個量在前面。"
+     },
+     {
+      "opt": "C",
+      "en": "Averaging the two prices (12 and 18 and 16) without weighting gives the wrong split.",
+      "zh": "把 12、18 與 16 直接取平均而沒有按重量加權，就會得到錯誤的比例。"
+     }
+    ],
+    "tip": {
+     "en": "Mixture problems: write 'total cost = total weight × unit cost' as one equation, then the ratio follows from the simplified relation.",
+     "zh": "混合問題：先把「總成本＝總重量 × 每單位成本」寫成一條方程，化簡後比例自然出現。"
+    }
+   }
+  },
+  "2026-p2-q11": {
+   "answer": "B",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Quarterly rate and number of periods",
+       "zh": "第 1 步 · 每季利率與期數"
+      },
+      "math": "\\frac{4\\%}{4}=1\\%,\\quad 5\\times4=20",
+      "en": "Compounded quarterly: the rate per period is 4%/4 = 1% and there are $5\\times4=20$ periods.",
+      "zh": "每季複利：每期利率為 4%/4 = 1%，期數為 $5\\times4=20$。",
+      "highlight": [
+       "1\\%",
+       "20"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Set up the equation",
+       "zh": "第 2 步 · 立式"
+      },
+      "math": "P(1.01)^{20}=80000",
+      "en": "The amount after 20 periods at 1% per period is 80000.",
+      "zh": "本金 $P$ 經 20 期、每期 1% 後為 80000。",
+      "highlight": [
+       "(1.01)^{20}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "P=\\frac{80000}{1.01^{20}}\\approx 65\\,563.7 \\Rightarrow 65\\,564",
+      "en": "$1.01^{20}\\approx1.22019$, so $P\\approx65\\,563.7$, i.e. 65 564 to the nearest integer — option B.",
+      "zh": "$1.01^{20}\\approx1.22019$，故 $P\\approx65\\,563.7$，取整為 65 564，選 B。",
+      "highlight": [
+       "65\\,564"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "Using 4% per year (once a year) instead of quarterly gives $80000/1.04^{5}\\approx65\\,754$.",
+      "zh": "把「每季複利」當成「每年複利 4%」會得到 $80000/1.04^{5}\\approx65\\,754$。"
+     },
+     {
+      "opt": "D",
+      "en": "Simple interest $80000/(1+4\\%\\times5)=66\\,667$ ignores compounding altogether.",
+      "zh": "用單利 $80000/(1+4\\%\\times5)=66\\,667$，完全忽略了複利。"
+     }
+    ],
+    "tip": {
+     "en": "'Compounded quarterly' means divide the annual rate by 4 and multiply the years by 4 — fix both numbers before touching the calculator.",
+     "zh": "「每季複利」＝年利率 ÷ 4、年數 × 4；先把這兩個數字定好再按計算機。"
+    }
+   }
+  },
+  "2026-p2-q20": {
+   "answer": "B",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Length $DE$ in $\\Delta DCE$",
+       "zh": "第 1 步 · 在 $\\Delta DCE$ 求 $DE$"
+      },
+      "math": "DC=AB=3,\\ CE=4 \\Rightarrow DE=5",
+      "en": "Opposite sides of a rectangle are equal, so $DC=3$; the right angle at $C$ gives the 3-4-5 triangle.",
+      "zh": "長方形對邊相等，故 $DC=3$；$C$ 是直角，得 3-4-5 直角三角形。",
+      "highlight": [
+       "DE=5"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Similar triangles",
+       "zh": "第 2 步 · 相似三角形"
+      },
+      "math": "\\Delta FBE\\sim\\Delta DCE,\\quad \\frac{FE}{DE}=\\frac{BE}{CE}=\\frac{12}{4}=3",
+      "en": "$FB\\parallel DC$ (both along $AB$/$DC$) and $FE$ is the same line as $DE$, so the two triangles are similar; the ratio of corresponding sides is $BE:CE$.",
+      "zh": "$FB\\parallel DC$（同在 $AB$／$DC$ 方向）且 $FE$ 與 $DE$ 同線，故兩三角形相似；對應邊比為 $BE:CE$。",
+      "highlight": [
+       "\\frac{FE}{DE}=3"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "EF=3\\times5=15",
+      "en": "So $EF$ is three times $DE$ — option B.",
+      "zh": "故 $EF$ 是 $DE$ 的三倍，得 15，選 B。",
+      "highlight": [
+       "15"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "16 is $BC=BE+CE$ — that is the side of the rectangle, not $EF$.",
+      "zh": "16 是 $BC=BE+CE$（長方形的邊），不是 $EF$。"
+     },
+     {
+      "opt": "A",
+      "en": "13 comes from using the wrong pair of corresponding sides (e.g. adding the height $DC$ to $BE-CE$).",
+      "zh": "13 來自用錯對應邊（例如把高 $DC$ 誤加在 $BE-CE$ 上）。"
+     }
+    ],
+    "tip": {
+     "en": "When two lines are produced to meet, look for similar triangles first; match the vertices by the parallel lines, then use the ratio of the known collinear segments.",
+     "zh": "題目把線延長交於一點時，先找相似三角形：用平行線配對頂點，再用共線段的比例求長。"
+    }
+   }
+  },
+  "2026-p2-q21": {
+   "answer": "C",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Is there a right angle?",
+       "zh": "第 1 步 · 有沒有直角？"
+      },
+      "math": "9^{2}+40^{2}=81+1600=1681=41^{2}",
+      "en": "$WX=9$, $WY=40$, $XY=41$ satisfy Pythagoras, so $\\angle XWY=90^{\\circ}$.",
+      "zh": "$WX=9$、$WY=40$、$XY=41$ 符合畢氏定理，故 $\\angle XWY=90^{\\circ}$。",
+      "highlight": [
+       "\\angle XWY=90^{\\circ}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Similar triangles",
+       "zh": "第 2 步 · 相似三角形"
+      },
+      "math": "\\angle WXY=\\angle YWZ,\\ \\angle WYX=\\angle WZY \\Rightarrow \\Delta WXY\\sim\\Delta WZY",
+      "en": "Two pairs of equal angles give the similarity; the correspondence is $X\\leftrightarrow W$, $Y\\leftrightarrow Z$, $W\\leftrightarrow Y$.",
+      "zh": "兩對角相等即相似；對應關係是 $X\\leftrightarrow W$、$Y\\leftrightarrow Z$、$W\\leftrightarrow Y$。",
+      "highlight": [
+       "\\Delta WXY\\sim\\Delta WZY"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\frac{WY}{WX}=\\frac{40}{9} \\Rightarrow ZY=\\frac{40}{9}(40),\\ WZ=\\frac{40}{9}(41)",
+      "en": "Sides in the ratio $40:9$; perimeter $=9+41+\\frac{1600}{9}+\\frac{1640}{9}=50+360=410$ cm — option C.",
+      "zh": "對應邊比為 $40:9$；周長 $=9+41+\\frac{1600}{9}+\\frac{1640}{9}=50+360=410$ cm，選 C。",
+      "highlight": [
+       "410"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "en": "100 treats the quadrilateral as if $WZ=XY$ and $ZY=WX$ (i.e. a parallelogram) — the correct sides come from the similarity ratio $40:9$.",
+      "zh": "100 等於把四邊形當成平行四邊形（$WZ=XY$、$ZY=WX$）—— 正確的是用相似比 $40:9$ 求邊。"
+     },
+     {
+      "opt": "B",
+      "en": "Using the ratio $\\frac{WX}{WY}=\\frac{9}{40}$ the wrong way round shrinks the sides instead of enlarging them.",
+      "zh": "把比例 $\\frac{WX}{WY}=\\frac{9}{40}$ 用反了，會把邊縮小而不是放大。"
+     }
+    ],
+    "tip": {
+     "en": "Match similar-triangle vertices by the equal angles first, then every side ratio follows; when the perimeter is a neat number, expect fractions along the way.",
+     "zh": "相似三角形先用等角配對頂點，之後所有邊比自然出現；周長是整數時，中途分數通常會互相抵消。"
+    }
+   }
+  },
+  "2026-p2-q23": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · $BCEF$ is a rectangle",
+       "zh": "第 1 步 · $BCEF$ 是長方形"
+      },
+      "math": "BC\\parallel EF,\\ BC=EF \\Rightarrow BF\\parallel CE",
+      "en": "In a regular hexagon opposite sides are parallel and equal, so $BC\\parallel EF$ and $BC=EF$; hence $BCEF$ is a parallelogram, giving $BF\\parallel CE$ (and $BC\\perp BF$). Since $G$ lies on $BF$, $BG\\parallel CE$: statement I is true.",
+      "zh": "正六邊形對邊平行且相等，故 $BC\\parallel EF$、$BC=EF$，$BCEF$ 為平行四邊形，得 $BF\\parallel CE$（且 $BC\\perp BF$）。$G$ 在 $BF$ 上，故 $BG\\parallel CE$，命題 I 成立。",
+      "highlight": [
+       "BG\\parallel CE"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Compare the sides of the two triangles",
+       "zh": "第 2 步 · 比較兩三角形的邊"
+      },
+      "math": "AB=1,\\ BF=\\sqrt{3},\\ BG=AG=\\frac{\\sqrt{3}}{3}",
+      "en": "$\\Delta ABF$ has $AB=AF=1$, $BF=\\sqrt3$ (since $\\angle BAF=120^{\\circ}$), so $\\angle ABF=30^{\\circ}$; with $\\angle ABC=120^{\\circ}$ we get $\\angle CBF=90^{\\circ}$. In the 30-60-90 triangle $BCG$ ($BC=1$), $BG=\\frac{1}{\\sqrt3}$ and $CG=\\frac{2}{\\sqrt3}$, so $AG=AC-CG=\\sqrt3-\\frac{2}{\\sqrt3}=\\frac{1}{\\sqrt3}$. Thus $\\Delta ABG$ has sides $1:\\frac{1}{\\sqrt3}:\\frac{1}{\\sqrt3}$, and $\\Delta BDC$ has $BD=\\sqrt3$, $DC=BC=1$, i.e. the same ratio: statement II is true.",
+      "zh": "$\\Delta ABF$ 中 $AB=AF=1$、$BF=\\sqrt3$（因 $\\angle BAF=120^{\\circ}$），故 $\\angle ABF=30^{\\circ}$；配合 $\\angle ABC=120^{\\circ}$ 得 $\\angle CBF=90^{\\circ}$。在 30-60-90 的 $\\Delta BCG$（$BC=1$）中，$BG=\\frac{1}{\\sqrt3}$、$CG=\\frac{2}{\\sqrt3}$，故 $AG=AC-CG=\\sqrt3-\\frac{2}{\\sqrt3}=\\frac{1}{\\sqrt3}$。於是 $\\Delta ABG$ 三邊比為 $1:\\frac{1}{\\sqrt3}:\\frac{1}{\\sqrt3}$，而 $\\Delta BDC$ 的 $BD=\\sqrt3$、$DC=BC=1$ 比值相同，命題 II 成立。",
+      "highlight": [
+       "\\Delta ABG\\sim\\Delta BDC"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "AG=BG=\\frac{\\sqrt{3}}{3},\\ GF=GC=\\frac{2\\sqrt{3}}{3},\\ AF=BC=1",
+      "en": "From Step 2, $GF=BF-BG=\\sqrt3-\\frac{\\sqrt3}{3}=\\frac{2\\sqrt3}{3}=GC$, and $AF=BC$; with $AG=BG$ the two triangles are congruent (SSS): statement III is true. All three hold — option D.",
+      "zh": "由第 2 步，$GF=BF-BG=\\sqrt3-\\frac{\\sqrt3}{3}=\\frac{2\\sqrt3}{3}=GC$，且 $AF=BC$；配合 $AG=BG$，兩三角形 SSS 全等，命題 III 成立。三個都對，選 D。",
+      "highlight": [
+       "\\Delta AGF\\cong\\Delta BGC",
+       "\\text{D}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "C",
+      "en": "Judging from the picture that $BG$ and $CE$ are not parallel — but $BCEF$ is a parallelogram, so they are.",
+      "zh": "憑圖覺得 $BG$ 與 $CE$ 不平行 —— 但 $BCEF$ 是平行四邊形，它們確實平行。"
+     },
+     {
+      "opt": "B",
+      "en": "Comparing the wrong pairs of sides in II (e.g. $AB$ with $BC$) makes the ratio look unequal.",
+      "zh": "比較 II 時配錯對應邊（例如把 $AB$ 對上 $BC$），比例就會看起來不相等。"
+     }
+    ],
+    "tip": {
+     "en": "In a regular hexagon, remember $\\angle ABC=120^{\\circ}$, opposite sides parallel and equal, and the two-step diagonal $=\\sqrt3\\times$ side; these three facts settle most such questions.",
+     "zh": "正六邊形記住三件事：內角 $120^{\\circ}$、對邊平行且相等、跨兩邊的對角線 $=\\sqrt3\\times$ 邊長；多數題目用這三點就解得完。"
+    }
+   }
+  },
+  "2026-p2-q24": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Translate",
+       "zh": "第 1 步 · 平移"
+      },
+      "math": "U=(3-5,\\ 1)=(-2,\\ 1)",
+      "en": "'Leftwards by 5 units' subtracts 5 from the $x$-coordinate only.",
+      "zh": "「向左移 5 單位」只把 $x$ 坐標減 5。",
+      "highlight": [
+       "U=(-2,1)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Rotation anticlockwise through $270^{\\circ}$",
+       "zh": "第 2 步 · 逆時針旋轉 $270^{\\circ}$"
+      },
+      "math": "(x,y)\\mapsto(y,-x)",
+      "en": "Anticlockwise $270^{\\circ}$ = clockwise $90^{\\circ}$, and a clockwise quarter turn sends $(x,y)$ to $(y,-x)$.",
+      "zh": "逆時針 $270^{\\circ}$ 等於順時針 $90^{\\circ}$；順時針轉 90° 把 $(x,y)$ 變成 $(y,-x)$。",
+      "highlight": [
+       "(x,y)\\mapsto(y,-x)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "V=(1,\\ 2) \\Rightarrow y\\text{-coordinate}=2",
+      "en": "Applying it to $U(-2,1)$ gives $(1,2)$ — option D.",
+      "zh": "對 $U(-2,1)$ 應用後得 $(1,2)$，y 坐標為 2，選 D。",
+      "highlight": [
+       "2"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "en": "Rotating only $90^{\\circ}$ anticlockwise (rule $(x,y)\\mapsto(-y,x)$) gives $y=-2$.",
+      "zh": "只轉 $90^{\\circ}$（規則 $(x,y)\\mapsto(-y,x)$）會得到 y 坐標 $-2$。"
+     },
+     {
+      "opt": "B",
+      "en": "Rotating $180^{\\circ}$ instead of $270^{\\circ}$ gives $y=-1$.",
+      "zh": "轉 $180^{\\circ}$ 而不是 $270^{\\circ}$，會得到 y 坐標 $-1$。"
+     }
+    ],
+    "tip": {
+     "en": "Memorise the quarter turns: anticlockwise $90^{\\circ}$ $(x,y)\\to(-y,x)$ and clockwise $90^{\\circ}$ $(x,y)\\to(y,-x)$; any multiple of $90^{\\circ}$ follows from these.",
+     "zh": "記住 90° 旋轉：逆時針 $(x,y)\\to(-y,x)$、順時針 $(x,y)\\to(y,-x)$，其他 $90^{\\circ}$ 倍數都可由此推出。"
+    }
+   }
+  },
+  "2026-p2-q36": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Take logarithms",
+       "zh": "第 1 步 · 取對數"
+      },
+      "math": "y=ab^{x} \\Rightarrow \\log y=\\log a+x\\log b",
+      "en": "So $\\log y$ is linear in $x$ with vertical intercept $\\log a$ and slope $\\log b$.",
+      "zh": "故 $\\log y$ 是 $x$ 的線性函數，縱軸截距為 $\\log a$、斜率為 $\\log b$。",
+      "highlight": [
+       "\\log a+x\\log b"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Read the vertical intercept",
+       "zh": "第 2 步 · 讀縱軸截距"
+      },
+      "math": "\\log a=2",
+      "en": "The graph of $\\log y$ against $x$ has vertical intercept 2, and that intercept is $\\log a$.",
+      "zh": "以 $x$ 為橫軸、$\\log y$ 為縱軸的圖，其縱軸截距是 2，而該截距等於 $\\log a$。",
+      "highlight": [
+       "\\log a=2"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "a=10^{2}=100",
+      "en": "Base 10 logarithms (as used in DSE) give $a=100$ — option D.",
+      "zh": "以 10 為底（DSE 常用）得 $a=10^{2}=100$，選 D。",
+      "highlight": [
+       "100"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "en": "$0.01=10^{-2}$ reverses the sign — the intercept 2 means $\\log a=+2$.",
+      "zh": "$0.01=10^{-2}$ 把符號弄反了 —— 截距是 2，即 $\\log a=+2$。"
+     },
+     {
+      "opt": "C",
+      "en": "Taking $a=10$ (i.e. $\\log a=1$) ignores the actual intercept value 2.",
+      "zh": "取 $a=10$（即 $\\log a=1$）忽略了真正的截距 2。"
+     }
+    ],
+    "tip": {
+     "en": "For $y=ab^{x}$, the vertical intercept of the $\\log y$ vs $x$ graph is $\\log a$ and the slope is $\\log b$ — memorise this pair.",
+     "zh": "對 $y=ab^{x}$：$\\log y$ 對 $x$ 的圖，縱軸截距是 $\\log a$、斜率是 $\\log b$ —— 這兩點要背熟。"
+    }
+   }
+  },
+  "2026-p2-q37": {
+   "answer": "A",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Find the vertices of $R$",
+       "zh": "第 1 步 · 求 $R$ 的頂點"
+      },
+      "math": "(10,7),\\quad(-11,7),\\quad(2,1)",
+      "en": "The three boundary lines meet in pairs: $y=7$ with $3x-4y=2$ gives $(10,7)$; $y=7$ with $6x+13y=25$ gives $(-11,7)$; the last two give $(2,1)$. All three satisfy the remaining inequality.",
+      "zh": "三條邊界線兩兩相交：$y=7$ 與 $3x-4y=2$ 得 $(10,7)$；$y=7$ 與 $6x+13y=25$ 得 $(-11,7)$；另兩線得 $(2,1)$。三點都滿足其餘不等式。",
+      "highlight": [
+       "(10,7)",
+       "(-11,7)",
+       "(2,1)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Evaluate at each vertex",
+       "zh": "第 2 步 · 逐個頂點求值"
+      },
+      "math": "106,\\quad 1,\\quad 42",
+      "en": "$5x+4y+28$ equals $106$ at $(10,7)$, $1$ at $(-11,7)$ and $42$ at $(2,1)$.",
+      "zh": "$5x+4y+28$ 在 $(10,7)$ 為 106、在 $(-11,7)$ 為 1、在 $(2,1)$ 為 42。",
+      "highlight": [
+       "106",
+       "1",
+       "42"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\min=1",
+      "en": "A linear function on a polygon takes its extreme values at vertices, so the least value is 1 — option A.",
+      "zh": "線性函數在多邊形上的極值必在頂點取得，故最小值為 1，選 A。",
+      "highlight": [
+       "1"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "D",
+      "en": "106 is the **maximum** (at $(10,7)$) — the question asks for the least value.",
+      "zh": "106 是**最大值**（在 $(10,7)$ 取得）—— 題目問的是最小值。"
+     },
+     {
+      "opt": "C",
+      "en": "42 is the value at $(2,1)$; testing only one vertex misses the true minimum.",
+      "zh": "42 是 $(2,1)$ 處的值；只試一個頂點會錯過真正的最小值。"
+     }
+    ],
+    "tip": {
+     "en": "Linear programming: sketch the region, list **all** vertices, evaluate the objective at each; the extreme values sit at vertices.",
+     "zh": "線性規劃：畫出可行區域，列出**所有**頂點，逐個代入目標函數；極值必在頂點。"
+    }
+   }
+  },
+  "2026-p2-q38": {
+   "answer": "B",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Read the arcs from $AB\\parallel TC$",
+       "zh": "第 1 步 · 由 $AB\\parallel TC$ 得弧"
+      },
+      "math": "\\angle ABD=\\angle CTD=23^{\\circ} \\Rightarrow \\text{arc }AD=46^{\\circ}",
+      "en": "$AB\\parallel TC$ and $T,B,D$ are collinear, so the angle $\\angle CTD=23^{\\circ}$ equals $\\angle ABD$. An inscribed angle is half its arc, so arc $AD=46^{\\circ}$.",
+      "zh": "$AB\\parallel TC$ 且 $T,B,D$ 共線，故 $\\angle CTD=23^{\\circ}$ 等於 $\\angle ABD$；圓周角是所對弧的一半，故弧 $AD=46^{\\circ}$。",
+      "highlight": [
+       "\\text{arc }AD=46^{\\circ}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Use the angle between the chords",
+       "zh": "第 2 步 · 用弦交角"
+      },
+      "math": "85^{\\circ}=\\frac{1}{2}(\\text{arc }AD+\\text{arc }BC)=\\frac{1}{2}(46^{\\circ}+\\text{arc }BC)",
+      "en": "The angle between two chords equals half the sum of the arcs cut off by the angle and its vertical angle; hence arc $BC=124^{\\circ}$ (so $\\angle CDB=62^{\\circ}$).",
+      "zh": "兩弦的夾角等於「該角與其對頂角所截兩弧之和」的一半，故弧 $BC=124^{\\circ}$（即 $\\angle CDB=62^{\\circ}$）。",
+      "highlight": [
+       "\\text{arc }BC=124^{\\circ}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\angle TCD=\\angle CBD=\\frac{c}{2},\\quad 23^{\\circ}=\\angle CDB-\\angle TCD",
+      "en": "In $\\Delta CTD$, $\\angle TDC=180^{\\circ}-\\angle CDB$ and the angle sum gives $\\frac{c}{2}=62^{\\circ}-23^{\\circ}=39^{\\circ}$, so arc $CD=78^{\\circ}$. Then arc $AB=360^{\\circ}-(46+124+78)^{\\circ}=112^{\\circ}$, and $\\angle ADE=\\angle ADB=\\frac{112^{\\circ}}{2}=56^{\\circ}$ — option B.",
+      "zh": "在 $\\Delta CTD$ 中 $\\angle TDC=180^{\\circ}-\\angle CDB$，由內角和得 $\\frac{c}{2}=62^{\\circ}-23^{\\circ}=39^{\\circ}$，故弧 $CD=78^{\\circ}$。於是弧 $AB=360^{\\circ}-(46+124+78)^{\\circ}=112^{\\circ}$，$\\angle ADE=\\angle ADB=\\frac{112^{\\circ}}{2}=56^{\\circ}$，選 B。",
+      "highlight": [
+       "56^{\\circ}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "en": "39° is only half of arc $CD$ (the angle $\\angle TCD$); the question asks for $\\angle ADE$, which subtends arc $AB$.",
+      "zh": "39° 只是弧 $CD$ 的一半（即 $\\angle TCD$）；題目問的 $\\angle ADE$ 所對的是弧 $AB$。"
+     },
+     {
+      "opt": "C",
+      "en": "62° is $\\angle CDB=\\frac12$ arc $BC$; do not stop one step early.",
+      "zh": "62° 是 $\\angle CDB=\\frac12$ 弧 $BC$；不要提早一步作答。"
+     }
+    ],
+    "tip": {
+     "en": "Turn every given angle into an arc degree ($\\times2$ for an inscribed angle, tangent–chord and chord–chord also give half-arcs), then use 'arcs add to $360^{\\circ}$'.",
+     "zh": "把每個已知角換成弧的度數（圓周角 ×2；切線－弦、弦－弦也都是半弧），再用「三弧之和為 $360^{\\circ}$」收尾。"
+    }
+   }
+  },
+  "2026-p2-q40": {
+   "answer": "D",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Set up the dimensions",
+       "zh": "第 1 步 · 定出尺寸"
+      },
+      "math": "AB=AC=1,\\ AE=2,\\ BC=\\sqrt{2}",
+      "en": "From $AB:AC:AE=1:1:2$ take $AB=AC=1$, $AE=2$. The right angle at $A$ gives $BC=\\sqrt{1^{2}+1^{2}}=\\sqrt2$.",
+      "zh": "由 $AB:AC:AE=1:1:2$ 取 $AB=AC=1$、$AE=2$；$A$ 為直角，故 $BC=\\sqrt{1^{2}+1^{2}}=\\sqrt2$。",
+      "highlight": [
+       "BC=\\sqrt{2}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · The angle between the two planes",
+       "zh": "第 2 步 · 線面交角"
+      },
+      "math": "AM=\\frac{BC}{2}=\\frac{\\sqrt{2}}{2},\\quad EM=\\sqrt{AE^{2}+AM^{2}}=\\sqrt{\\frac{9}{2}}",
+      "en": "The two planes meet along $BC$. Let $M$ be the midpoint of $BC$: since $AB=AC$, $AM\\perp BC$; and as $AE\\perp$ the base, $EM\\perp BC$ too. So the angle between the planes is $\\angle AME$, and $\\Delta EAM$ is right-angled at $A$.",
+      "zh": "兩平面沿 $BC$ 相交。設 $M$ 為 $BC$ 中點：因 $AB=AC$，$AM\\perp BC$；又 $AE\\perp$ 底面，故 $EM\\perp BC$。因此兩平面的夾角就是 $\\angle AME$，而 $\\Delta EAM$ 在 $A$ 為直角。",
+      "highlight": [
+       "AM\\perp BC",
+       "EM\\perp BC"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\cos\\theta=\\frac{AM}{EM}=\\frac{\\frac{\\sqrt2}{2}}{\\frac{3}{\\sqrt2}}=\\frac{1}{3} \\Rightarrow \\sin\\theta=\\frac{2\\sqrt{2}}{3}",
+      "en": "$EM=\\sqrt{4+\\frac12}=\\frac{3}{\\sqrt2}$, so $\\cos\\theta=\\frac13$ and $\\sin\\theta=\\sqrt{1-\\frac19}=\\frac{2\\sqrt2}{3}$ — option D.",
+      "zh": "$EM=\\sqrt{4+\\frac12}=\\frac{3}{\\sqrt2}$，故 $\\cos\\theta=\\frac13$，$\\sin\\theta=\\sqrt{1-\\frac19}=\\frac{2\\sqrt2}{3}$，選 D。",
+      "highlight": [
+       "\\frac{2\\sqrt{2}}{3}"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "en": "$\\frac13$ is $\\cos\\theta$, not $\\sin\\theta$ — check which ratio the question asks for.",
+      "zh": "$\\frac13$ 是 $\\cos\\theta$ 而不是 $\\sin\\theta$ —— 看清楚題目問哪一個比值。"
+     },
+     {
+      "opt": "C",
+      "en": "Using $AM=AB=\\sqrt2$ instead of the median length $\\frac{\\sqrt2}{2}$ inflates the angle's cosine.",
+      "zh": "把 $AM$ 當成 $AB=\\sqrt2$（而不是中線長 $\\frac{\\sqrt2}{2}$），會使餘弦值變大。"
+     }
+    ],
+    "tip": {
+     "en": "Angle between two planes: find their line of intersection, then drop perpendiculars from a convenient point to that line in each plane — the angle between those two perpendiculars is the answer.",
+     "zh": "兩平面的夾角：先找交線，再在兩個平面內各作交線的垂線 —— 這兩條垂線的夾角就是所求。"
+    }
+   }
+  },
+  "2026-p2-q41": {
+   "answer": "C",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Substitute $s=\\sin^{2}\\theta$",
+       "zh": "第 1 步 · 令 $s=\\sin^{2}\\theta$"
+      },
+      "math": "6s^{2}-5s+1=0 \\Rightarrow (3s-1)(2s-1)=0",
+      "en": "The equation is quadratic in $\\sin^{2}\\theta$, so $\\sin^{2}\\theta=\\frac13$ or $\\frac12$, i.e. $\\sin\\theta=\\pm\\frac{1}{\\sqrt3}$ or $\\pm\\frac{1}{\\sqrt2}$.",
+      "zh": "方程對 $\\sin^{2}\\theta$ 是二次式，得 $\\sin^{2}\\theta=\\frac13$ 或 $\\frac12$，即 $\\sin\\theta=\\pm\\frac{1}{\\sqrt3}$ 或 $\\pm\\frac{1}{\\sqrt2}$。",
+      "highlight": [
+       "\\sin^{2}\\theta=\\frac13,\\ \\frac12"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Count the roots for $\\frac{1}{\\sqrt2}$",
+       "zh": "第 2 步 · 數 $\\frac{1}{\\sqrt2}$ 的解"
+      },
+      "math": "\\sin\\theta=\\frac{1}{\\sqrt2}:135^{\\circ};\\quad \\sin\\theta=-\\frac{1}{\\sqrt2}:225^{\\circ},315^{\\circ}",
+      "en": "Within $90^{\\circ}\\le\\theta\\le360^{\\circ}$: 45° is too small, so only 135°; the negative value gives both 225° and 315° — 3 roots.",
+      "zh": "在 $90^{\\circ}\\le\\theta\\le360^{\\circ}$ 內：45° 不在範圍內，只有 135°；負值則有 225° 與 315°，共 3 個解。",
+      "highlight": [
+       "3\\ \\text{roots}"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "\\sin\\theta=\\frac{1}{\\sqrt3}:144.7^{\\circ};\\quad -\\frac{1}{\\sqrt3}:215.3^{\\circ},324.7^{\\circ}",
+      "en": "$\\sin\\theta=\\frac{1}{\\sqrt3}$ gives $35.3^{\\circ}$ (rejected) and $144.7^{\\circ}$; its negative gives $215.3^{\\circ}$ and $324.7^{\\circ}$ — another 3 roots. Total $3+3=6$ — option C.",
+      "zh": "$\\sin\\theta=\\frac{1}{\\sqrt3}$ 給出 $35.3^{\\circ}$（不合）與 $144.7^{\\circ}$；負值給出 $215.3^{\\circ}$ 與 $324.7^{\\circ}$，又是 3 個解。合共 $3+3=6$，選 C。",
+      "highlight": [
+       "6"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "B",
+      "en": "4 roots means only $\\sin\\theta=\\pm\\frac{1}{\\sqrt2}$ was used — the case $\\sin^{2}\\theta=\\frac13$ was dropped.",
+      "zh": "4 個解表示只用了 $\\sin\\theta=\\pm\\frac{1}{\\sqrt2}$，漏掉 $\\sin^{2}\\theta=\\frac13$ 這個情況。"
+     },
+     {
+      "opt": "A",
+      "en": "2 roots counts only one angle for each sine value, forgetting that $\\sin\\theta=k$ has two solutions in a full turn.",
+      "zh": "2 個解是每個正弦值只算了一個角，忘了在整圈內 $\\sin\\theta=k$ 一般有兩個解。"
+     }
+    ],
+    "tip": {
+     "en": "For trigonometric equations, list every value $\\sin^{2}\\theta$ can take, then for each $\\pm$ value sketch the sine curve and count the solutions inside the given interval.",
+     "zh": "三角方程：先列出 $\\sin^{2}\\theta$ 的所有可能值，再對每個 $\\pm$ 值畫正弦圖形，數出在指定區間內的解。"
+    }
+   }
+  },
+  "2026-p2-q22": {
+   "answer": "C",
+   "verify": "checked",
+   "solution": {
+    "steps": [
+     {
+      "title": {
+       "en": "Step 1 · Draw the auxiliary line",
+       "zh": "第 1 步 · 作輔助線"
+      },
+      "math": "\\ell \\parallel BC \\parallel EA",
+      "en": "$\\angle EAB=\\angle ABC=90^{\\circ}$, both taken with $AB$, so $EA\\parallel BC$. Draw through the inner vertex $D$ a straight line $\\ell$ parallel to $BC$ — it is then also parallel to $EA$.",
+      "zh": "$\\angle EAB$ 與 $\\angle ABC$ 同與 $AB$ 成直角，故 $EA\\parallel BC$。過內凹頂點 $D$ 作直線 $\\ell$ 平行於 $BC$，它同時平行於 $EA$。",
+      "highlight": [
+       "\\ell\\parallel BC\\parallel EA"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 2 · Split the angle at $D$",
+       "zh": "第 2 步 · 把 $D$ 處的角切開"
+      },
+      "math": "q=\\angle CDE=\\angle(CD,\\ell)+\\angle(\\ell,DE)",
+      "en": "The line $\\ell$ passes through $D$ and lies between $DC$ and $DE$, so the angle $q$ is the sum of the two parts it makes.",
+      "zh": "直線 $\\ell$ 過 $D$ 且落在 $DC$ 與 $DE$ 之間，故角 $q$ 等於它所切出的兩部分之和。",
+      "highlight": [
+       "q=\\angle(CD,\\ell)+\\angle(\\ell,DE)"
+      ]
+     },
+     {
+      "title": {
+       "en": "Step 3 · Alternate angles give $p$ and $r$",
+       "zh": "第 3 步 · 內錯角給出 $p$ 與 $r$"
+      },
+      "math": "\\angle(\\ell,DE)=p,\\qquad \\angle(CD,\\ell)=r",
+      "en": "$EA\\parallel\\ell$ with transversal $ED$: the alternate angles are equal, so the angle between $\\ell$ and $DE$ equals $p$ at $E$. Likewise $BC\\parallel\\ell$ with transversal $CD$ gives $\\angle(CD,\\ell)=r$.",
+      "zh": "$EA\\parallel\\ell$、$ED$ 為截線：內錯角相等，故 $\\ell$ 與 $DE$ 的夾角等於 $E$ 處的 $p$。同理 $BC\\parallel\\ell$、$CD$ 為截線，得 $\\angle(CD,\\ell)=r$。",
+      "highlight": [
+       "\\angle(\\ell,DE)=p",
+       "\\angle(CD,\\ell)=r"
+      ]
+     },
+     {
+      "title": {
+       "en": "Answer",
+       "zh": "答案"
+      },
+      "math": "q=p+r",
+      "en": "Adding the two parts gives $q=p+r$ — option C. (Check with the pentagon angle sum: $90^{\\circ}+90^{\\circ}+r+(360^{\\circ}-q)+p=540^{\\circ}$ gives the same relation.)",
+      "zh": "兩部分相加得 $q=p+r$，選 C。（也可用五邊形內角和驗證：$90^{\\circ}+90^{\\circ}+r+(360^{\\circ}-q)+p=540^{\\circ}$，得同一關係。）",
+      "highlight": [
+       "q=p+r"
+      ]
+     }
+    ],
+    "traps": [
+     {
+      "opt": "A",
+      "en": "$p=r$ only holds in the special case where the figure is symmetric (e.g. when $D$ is directly below the midpoint of $BC$); moving $D$ changes $p$ and $r$ independently.",
+      "zh": "$p=r$ 只在圖形對稱的特例成立（例如 $D$ 正好在 $BC$ 中點的正下方）；移動 $D$ 時 $p$ 與 $r$ 各自改變。"
+     },
+     {
+      "opt": "D",
+      "en": "With $q=p+r$, the sum $p+q+r=2q$, which equals $180^{\\circ}$ only when $q=90^{\\circ}$ — that is option B, and it is not forced.",
+      "zh": "由 $q=p+r$ 得 $p+q+r=2q$，只有當 $q=90^{\\circ}$ 時才等於 $180^{\\circ}$（即選項 B），而 $q$ 不必然為直角。"
+     }
+    ],
+    "tip": {
+     "en": "When a broken line joins two parallel lines, draw a parallel line through the turning point: alternate angles then turn the whole problem into one addition. Never guess equal angles from the picture.",
+     "zh": "折線夾在兩條平行線之間時，過轉折點作平行線：內錯角會把問題化為一條加法。不要憑圖猜「看起來相等」的角。"
+    }
+   }
   }
  }
 };
